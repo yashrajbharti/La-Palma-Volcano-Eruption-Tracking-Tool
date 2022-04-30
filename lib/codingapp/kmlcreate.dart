@@ -3,9 +3,7 @@ import 'dart:io';
 import 'dart:developer';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 
-String X = '''<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
-  <Document>''';
+String X = "";
 
 kmlcreate(
     List<Map<String, dynamic>> volcanicData,
@@ -18,27 +16,45 @@ kmlcreate(
     X = X +
         "\n" +
         '''
-      <Icon>
-          <href>http://lg1:81/a.kml</href>
+    <Style id="normal-$i">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>https://i.ibb.co/KVcBqHd/earthquake.png</href>
         </Icon>
+        <hotSpot 
+          x="0.0" 
+          y="0.0" 
+          xunits="fraction" 
+          yunits="fraction"
+        />
+      </IconStyle>
+    </Style>
+    <StyleMap id="$i">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>normal-$i</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>high-$i</styleUrl>
+      </Pair>
+    </StyleMap>
     <Placemark>
       <name>${volcanicData[i]["title"]}</name>
-        <description>
-          <![CDATA[
+      <description> 
+        <![CDATA[
             <h1>Seismic Data</h1>
-            <p><font color="red">Magnitude of Earthquake ${magnitude[i]["title"]} mbLg.</font></p>
+            <p><font color="orange">Magnitude of Earthquake ${magnitude[i]["title"]} mbLg.</font></p>
           ]]>
-        </description>
-        <Point>
-          <coordinates>${longitude[i]["title"]},${latitude[i]["title"]}</coordinates>
-        </Point>
+      </description>
+      <styleUrl>$i</styleUrl>
+       <Point>
+        <gx:drawOrder>1</gx:drawOrder>
+        <coordinates>${longitude[i]["title"]},${latitude[i]["title"]}</coordinates>
+      </Point>
     </Placemark>''';
   }
-  X = X +
-      "\n" +
-      '''
-  </Document>
-</kml>''';
 
   await file.writeAsString("$X");
   log(await file.readAsString());

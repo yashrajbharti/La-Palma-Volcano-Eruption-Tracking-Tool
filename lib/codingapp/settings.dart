@@ -131,8 +131,8 @@ class _SettingsState extends State<Settings> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0, top: 10),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 10.0, top: 10),
                   child: Text(
                     'Liquid Galaxy Connection',
                     textAlign: TextAlign.start,
@@ -145,7 +145,7 @@ class _SettingsState extends State<Settings> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Status: ',
                         textAlign: TextAlign.start,
                         style: TextStyle(
@@ -153,15 +153,15 @@ class _SettingsState extends State<Settings> {
                       ),
                       Text(
                         connectionStatus ? 'CONNECTED' : 'DISCONNECTED',
-                        style: TextStyle(fontSize: 17),
+                        style: const TextStyle(fontSize: 17),
                       ),
                       connectionStatus
-                          ? Icon(
+                          ? const Icon(
                               Icons.check_circle,
                               color: Colors.green,
                               size: 20,
                             )
-                          : Icon(
+                          : const Icon(
                               Icons.cancel,
                               color: Colors.red,
                               size: 20,
@@ -174,7 +174,7 @@ class _SettingsState extends State<Settings> {
                   child: TextFormField(
                     controller: ipAddress,
                     keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       filled: true,
                       hintText: 'eg. 192.168.0.115',
                       labelText: 'Master machine IP Address',
@@ -189,7 +189,7 @@ class _SettingsState extends State<Settings> {
                     hintText: 'eg. the-passw0rd-0f-my-LG',
                     labelText: 'Master machine Password',
                     suffixIcon: IconButton(
-                      icon: Icon(Icons.remove_red_eye),
+                      icon: const Icon(Icons.remove_red_eye),
                       onPressed: () {
                         setState(() {
                           obscurePassword = !obscurePassword;

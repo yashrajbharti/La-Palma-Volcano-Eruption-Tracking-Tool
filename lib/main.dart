@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:splashscreen/splashscreen.dart';
 import 'package:webscrapperapp/codingapp/layout.dart';
+import 'package:webscrapperapp/codingapp/mainpage.dart';
+import 'package:webscrapperapp/codingapp/splash.dart';
 
 import 'codingapp/data.dart';
 
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Scrapper",
-      home: Layout(),
+      home: Splash(),
     );
   }
 }
