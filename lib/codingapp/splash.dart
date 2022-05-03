@@ -5,7 +5,7 @@ import 'package:splashscreen/splashscreen.dart';
 import 'package:webscrapperapp/codingapp/mainpage.dart';
 
 class Splash extends StatefulWidget {
-  Splash({Key? key}) : super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   @override
   _SplashState createState() => _SplashState();
@@ -15,17 +15,19 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 2,
+      seconds: 5,
       navigateAfterSeconds: First(),
-      title: Text('scrapping tool'),
-      styleTextUnderTheLoader: TextStyle(
-        color: Colors.white,
-        fontSize: 20,
+      title: const Text(
+        'La Palma Volcano Tracker',
+        style: TextStyle(
+          fontSize: 40,
+          color: Color.fromARGB(255, 204, 204, 204),
+        ),
       ),
-      image: Image.asset("assets/pin.png"),
-      backgroundColor: Colors.black,
+      image: Image.asset("assets/volcano.png"),
+      backgroundColor: const Color.fromARGB(255, 43, 43, 43),
       photoSize: 100.0,
-      loaderColor: Colors.white,
+      loaderColor: const Color.fromARGB(255, 204, 204, 204),
     );
   }
 }

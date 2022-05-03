@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:webscrapperapp/codingapp/data.dart';
-import 'package:webscrapperapp/codingapp/sendtoLG.dart';
-import 'package:webscrapperapp/codingapp/settings.dart';
+import 'package:webscrapperapp/codingapp/Tabs/Info_Tab.dart';
+import 'package:webscrapperapp/codingapp/Tabs/Track_Tab.dart';
+import 'package:webscrapperapp/codingapp/Tabs/Map_Tab.dart';
+
+import 'package:webscrapperapp/codingapp/menuOptions/settings.dart';
 
 class Layout extends StatefulWidget {
   Layout({Key? key}) : super(key: key);
@@ -22,13 +24,13 @@ class _LayoutState extends State<Layout> {
           title: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text("Seismic Activity"),
+                child: Text("Track"),
               ),
               Tab(
-                child: Text("Settings"),
+                child: Text("Map"),
               ),
               Tab(
-                child: Text("Visualize"),
+                child: Text("Info"),
               ),
             ],
             indicatorColor: Colors.white,
@@ -36,9 +38,9 @@ class _LayoutState extends State<Layout> {
         ),
         body: TabBarView(
           children: [
-            const Seismicdata(),
-            Settings(),
             SendtoLG(),
+            MyMap(),
+            Seismicdata(),
           ],
         ),
       ),

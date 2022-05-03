@@ -87,29 +87,6 @@ class _SendtoLGState extends State<SendtoLG> {
             }),
         ElevatedButton(
             child: const Text(
-              'View in LG!',
-              style: TextStyle(fontSize: 25),
-            ),
-            onPressed: () {
-              // send to LG
-
-              LGConnection().sendToLG(kml.mount(), projectname).then((value) {
-                LGConnection().buildOrbit(kml.mount());
-                setState(() {
-                  isOpen = true;
-                });
-              }).catchError((onError) {
-                print('oh no $onError');
-                if (onError == 'nogeodata') {
-                  showAlertDialog('No GeoData',
-                      'It looks like you haven\'t added any geodata to this project.');
-                }
-                showAlertDialog('Error launching!',
-                    'An error occurred while trying to connect to LG');
-              });
-            }),
-        ElevatedButton(
-            child: const Text(
               'Download KML!',
               style: TextStyle(fontSize: 25),
             ),
@@ -162,6 +139,36 @@ class _SendtoLGState extends State<SendtoLG> {
                     'An error occurred while trying to connect to LG');
               });
             }),
+        ElevatedButton(
+            child: const Text(
+              'Visualize in LG!',
+              style: TextStyle(fontSize: 25),
+            ),
+            style: ButtonStyle(
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                ),
+              ),
+            ),
+            onPressed: () {
+              // send to LG
+
+              LGConnection().sendToLG(kml.mount(), projectname).then((value) {
+                LGConnection().buildOrbit(kml.mount());
+                setState(() {
+                  isOpen = true;
+                });
+              }).catchError((onError) {
+                print('oh no $onError');
+                if (onError == 'nogeodata') {
+                  showAlertDialog('No GeoData',
+                      'It looks like you haven\'t added any geodata to this project.');
+                }
+                showAlertDialog('Error launching!',
+                    'An error occurred while trying to connect to LG');
+              });
+            }),
       ],
     );
   }
@@ -173,7 +180,7 @@ class LGConnection {
 
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
-      port: 2222,
+      port: int.parse('${credencials['port']}'),
       username: "lg",
       passwordOrKey: '${credencials['pass']}',
     );
@@ -220,7 +227,7 @@ class LGConnection {
 
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
-      port: 2222,
+      port: int.parse('${credencials['port']}'),
       username: "lg",
       passwordOrKey: '${credencials['pass']}',
     );
@@ -239,10 +246,12 @@ class LGConnection {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     String ipAddress = preferences.getString('master_ip') ?? '';
     String password = preferences.getString('master_password') ?? '';
+    String portNumber = preferences.getString('master_portNumber') ?? '';
 
     return {
       "ip": ipAddress,
       "pass": password,
+      "port": portNumber,
     };
   }
 
@@ -275,7 +284,7 @@ class LGConnection {
 
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
-      port: 2222,
+      port: int.parse('${credencials['port']}'),
       username: "lg",
       passwordOrKey: '${credencials['pass']}',
     );
@@ -322,7 +331,7 @@ class LGConnection {
 
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
-      port: 2222,
+      port: int.parse('${credencials['port']}'),
       username: "lg",
       passwordOrKey: '${credencials['pass']}',
     );
@@ -352,7 +361,7 @@ class LGConnection {
 
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
-      port: 2222,
+      port: int.parse('${credencials['port']}'),
       username: "lg",
       passwordOrKey: '${credencials['pass']}',
     );
@@ -371,7 +380,7 @@ class LGConnection {
 
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
-      port: 2222,
+      port: int.parse('${credencials['port']}'),
       username: "lg",
       passwordOrKey: '${credencials['pass']}',
     );

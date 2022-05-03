@@ -16,18 +16,19 @@ class _SettingsState extends State<Settings> {
   bool loaded = false;
   TextEditingController ipAddress = TextEditingController();
   TextEditingController password = TextEditingController();
+  TextEditingController portNumber = TextEditingController();
 
-  bool _isSigningOut = false;
   bool connectionStatus = false;
 
   connect() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     await preferences.setString('master_ip', ipAddress.text);
     await preferences.setString('master_password', password.text);
+    await preferences.setString('master_portNumber', portNumber.text);
 
     SSHClient client = SSHClient(
       host: ipAddress.text,
-      port: 2222,
+      port: int.parse(portNumber.text),
       username: "lg",
       passwordOrKey: password.text,
     );
@@ -53,10 +54,11 @@ class _SettingsState extends State<Settings> {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     await preferences.setString('master_ip', ipAddress.text);
     await preferences.setString('master_password', password.text);
+    await preferences.setString('master_portNumber', portNumber.text);
 
     SSHClient client = SSHClient(
       host: ipAddress.text,
-      port: 2222,
+      port: int.parse(portNumber.text),
       username: "lg",
       passwordOrKey: password.text,
     );
@@ -105,6 +107,7 @@ class _SettingsState extends State<Settings> {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     ipAddress.text = preferences.getString('master_ip') ?? '';
     password.text = preferences.getString('master_password') ?? '';
+    portNumber.text = preferences.getString('master_portNumber') ?? '';
 
     await checkConnectionStatus();
 
@@ -181,12 +184,24 @@ class _SettingsState extends State<Settings> {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: TextFormField(
+                    controller: portNumber,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      filled: true,
+                      hintText: 'eg. 22',
+                      labelText: 'Master machine Port Number',
+                    ),
+                  ),
+                ),
                 TextFormField(
                   controller: password,
                   obscureText: obscurePassword,
                   decoration: InputDecoration(
                     filled: true,
-                    hintText: 'eg. the-passw0rd-0f-my-LG',
+                    hintText: 'eg. the-password-of-my-LG',
                     labelText: 'Master machine Password',
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.remove_red_eye),
@@ -201,14 +216,17 @@ class _SettingsState extends State<Settings> {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blue,
-                      side: BorderSide(color: Colors.blue, width: 1),
-                    ),
+                    child: const Text('CONNECT To LG'),
                     onPressed: () {
                       connect();
                     },
-                    child: Text('CONNECT'),
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Divider(
@@ -232,13 +250,6 @@ class _SettingsState extends State<Settings> {
                 Divider(
                   color: Colors.grey,
                   thickness: 1,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0, top: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [],
-                  ),
                 ),
               ],
             ),

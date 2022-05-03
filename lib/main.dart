@@ -4,7 +4,7 @@ import 'package:webscrapperapp/codingapp/layout.dart';
 import 'package:webscrapperapp/codingapp/mainpage.dart';
 import 'package:webscrapperapp/codingapp/splash.dart';
 
-import 'codingapp/data.dart';
+import 'codingapp/Tabs/Info_Tab.dart';
 
 void main() {
   runApp(const MyApp());
