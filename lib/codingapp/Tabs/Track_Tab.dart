@@ -75,101 +75,161 @@ class _SendtoLGState extends State<SendtoLG> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ElevatedButton(
-            child: const Text(
-              'Read KML',
-              style: TextStyle(fontSize: 25),
-            ),
-            onPressed: () {
-              _read();
-            }),
-        ElevatedButton(
-            child: const Text(
-              'Download KML!',
-              style: TextStyle(fontSize: 25),
-            ),
-            onPressed: () async {
-              var status = await Permission.storage.status;
-
-              if (status.isGranted) {
-                try {
-                  await KMLGenerator.generateKML(kml.mount(), "a");
-                  showAlertDialog('Success!',
-                      'You can find a KML containing the map data of the project in your Downloads folder');
-                } catch (e) {
-                  print('error $e');
-                  showAlertDialog('Oops!',
-                      'You have to enable storage managing permissions to download the project KML');
-                }
-              } else {
-                var isGranted = await Permission.storage.request().isGranted;
-                if (isGranted) {
-                  // download kml
-                  try {
-                    await KMLGenerator.generateKML(kml.mount(), "a");
-                    showAlertDialog('Success!',
-                        'You can find a KML containing the map data of the project in your Downloads folder');
-                  } catch (e) {
-                    print('error $e');
-                    showAlertDialog('Oops!',
-                        'You have to enable storage managing permissions to download the project KML');
-                  }
-                } else {
-                  showAlertDialog('Oops!',
-                      'You have to enable storage managing permissions to download the project KML');
-                }
-              }
-            }),
-        ElevatedButton(
-            child: const Text(
-              'Clean KML',
-              style: TextStyle(fontSize: 25),
-            ),
-            onPressed: () {
-              // send to LG
-              LGConnection().cleanVisualization().then((value) {
-                setState(() {
-                  isOpen = false;
-                });
-              }).catchError((onError) {
-                print('oh no $onError');
-                showAlertDialog('Error launching!',
-                    'An error occurred while trying to connect to LG');
-              });
-            }),
-        ElevatedButton(
-            child: const Text(
-              'Visualize in LG!',
-              style: TextStyle(fontSize: 25),
-            ),
-            style: ButtonStyle(
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                ),
+    return Container(
+      margin: const EdgeInsets.only(top: 40.0),
+      child: Column(
+        children: [
+          SizedBox(
+            width: 500,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                elevation: 0.0,
+                shadowColor: Colors.transparent,
+                primary: ui.Color.fromARGB(255, 220, 220, 220),
+                padding: EdgeInsets.all(15),
+              ),
+              onPressed: null,
+              child: Wrap(
+                children: const <Widget>[
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("  Lava Flow Map  ", style: TextStyle(fontSize: 40)),
+                  Icon(
+                    Icons.location_on_sharp,
+                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    size: 45.0,
+                  ),
+                ],
               ),
             ),
-            onPressed: () {
-              // send to LG
+          ),
+          SizedBox(height: 10),
+          SizedBox(
+            width: 500,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15)),
+              onPressed: null,
+              child: Wrap(
+                children: const <Widget>[
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("  Temperature Map  ", style: TextStyle(fontSize: 40)),
+                  Icon(
+                    Icons.location_on_sharp,
+                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    size: 45.0,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 10),
+          SizedBox(
+            width: 500,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15)),
+              onPressed: null,
+              child: Wrap(
+                children: const <Widget>[
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("  Affected Areas Map  ",
+                      style: TextStyle(fontSize: 40)),
+                  Icon(
+                    Icons.location_on_sharp,
+                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    size: 45.0,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 10),
+          SizedBox(
+            width: 500,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15)),
+              onPressed: () {
+                _read();
+              },
+              child: Wrap(
+                children: const <Widget>[
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("  Located Events Map  ",
+                      style: TextStyle(fontSize: 40)),
+                  Icon(
+                    Icons.location_on_sharp,
+                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    size: 45.0,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 15),
+          SizedBox(
+            width: 360,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15),
+                  shape: StadiumBorder(),
+                ),
+                child: Wrap(
+                  children: const <Widget>[
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("Visualize in LG", style: TextStyle(fontSize: 35)),
+                    Icon(
+                      Icons.location_on_sharp,
+                      color: ui.Color.fromARGB(255, 243, 36, 21),
+                      size: 45.0,
+                    ),
+                  ],
+                ),
+                onPressed: () {
+                  // send to LG
 
-              LGConnection().sendToLG(kml.mount(), projectname).then((value) {
-                LGConnection().buildOrbit(kml.mount());
-                setState(() {
-                  isOpen = true;
-                });
-              }).catchError((onError) {
-                print('oh no $onError');
-                if (onError == 'nogeodata') {
-                  showAlertDialog('No GeoData',
-                      'It looks like you haven\'t added any geodata to this project.');
-                }
-                showAlertDialog('Error launching!',
-                    'An error occurred while trying to connect to LG');
-              });
-            }),
-      ],
+                  LGConnection()
+                      .sendToLG(kml.mount(), projectname)
+                      .then((value) {
+                    LGConnection().buildOrbit(kml.mount());
+                    setState(() {
+                      isOpen = true;
+                    });
+                  }).catchError((onError) {
+                    print('oh no $onError');
+                    if (onError == 'nogeodata') {
+                      showAlertDialog('No GeoData',
+                          'It looks like you haven\'t added any geodata to this project.');
+                    }
+                    showAlertDialog('Error launching!',
+                        'An error occurred while trying to connect to LG');
+                  });
+                }),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -181,7 +241,7 @@ class LGConnection {
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
       port: int.parse('${credencials['port']}'),
-      username: "lg",
+      username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
 
@@ -228,7 +288,7 @@ class LGConnection {
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
       port: int.parse('${credencials['port']}'),
-      username: "lg",
+      username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
 
@@ -247,11 +307,13 @@ class LGConnection {
     String ipAddress = preferences.getString('master_ip') ?? '';
     String password = preferences.getString('master_password') ?? '';
     String portNumber = preferences.getString('master_portNumber') ?? '';
+    String username = preferences.getString('master_username') ?? '';
 
     return {
       "ip": ipAddress,
       "pass": password,
       "port": portNumber,
+      "username": username,
     };
   }
 
@@ -285,7 +347,7 @@ class LGConnection {
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
       port: int.parse('${credencials['port']}'),
-      username: "lg",
+      username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
 
@@ -332,7 +394,7 @@ class LGConnection {
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
       port: int.parse('${credencials['port']}'),
-      username: "lg",
+      username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
 
@@ -362,7 +424,7 @@ class LGConnection {
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
       port: int.parse('${credencials['port']}'),
-      username: "lg",
+      username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
 
@@ -381,7 +443,7 @@ class LGConnection {
     SSHClient client = SSHClient(
       host: '${credencials['ip']}',
       port: int.parse('${credencials['port']}'),
-      username: "lg",
+      username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
 

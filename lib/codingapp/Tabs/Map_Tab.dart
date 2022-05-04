@@ -13,7 +13,7 @@ class MyMap extends StatefulWidget {
 class _MyMapState extends State<MyMap> {
   Completer<GoogleMapController> _controller = Completer();
 
-  static const LatLng _center = const LatLng(28.7099744, -17.8984565);
+  static const LatLng _center = const LatLng(28.6599744, -17.8984565);
 
   final Set<Marker> _markers = {};
 
@@ -60,7 +60,7 @@ class _MyMapState extends State<MyMap> {
           onMapCreated: _onMapCreated,
           initialCameraPosition: CameraPosition(
             target: _center,
-            zoom: 11.0,
+            zoom: 10.8,
           ),
           mapType: _currentMapType,
           markers: _markers,
@@ -75,14 +75,14 @@ class _MyMapState extends State<MyMap> {
                 FloatingActionButton(
                   onPressed: _onMapTypeButtonPressed,
                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                  backgroundColor: Colors.green,
+                  backgroundColor: Color.fromARGB(255, 147, 220, 148),
                   child: const Icon(Icons.map, size: 36.0),
                 ),
                 SizedBox(height: 16.0),
                 FloatingActionButton(
                   onPressed: _onAddMarkerButtonPressed,
                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                  backgroundColor: Colors.green,
+                  backgroundColor: Color.fromARGB(255, 147, 220, 148),
                   child: const Icon(Icons.add_location, size: 36.0),
                 ),
               ],

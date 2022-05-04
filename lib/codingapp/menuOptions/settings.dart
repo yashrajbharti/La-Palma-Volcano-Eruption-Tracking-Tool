@@ -14,6 +14,7 @@ class _SettingsState extends State<Settings> {
   bool isLoggedIn = false;
   bool obscurePassword = true;
   bool loaded = false;
+  TextEditingController username = TextEditingController();
   TextEditingController ipAddress = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController portNumber = TextEditingController();
@@ -23,13 +24,14 @@ class _SettingsState extends State<Settings> {
   connect() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     await preferences.setString('master_ip', ipAddress.text);
+    await preferences.setString('master_username', username.text);
     await preferences.setString('master_password', password.text);
     await preferences.setString('master_portNumber', portNumber.text);
 
     SSHClient client = SSHClient(
       host: ipAddress.text,
       port: int.parse(portNumber.text),
-      username: "lg",
+      username: username.text,
       passwordOrKey: password.text,
     );
 
@@ -58,8 +60,8 @@ class _SettingsState extends State<Settings> {
 
     SSHClient client = SSHClient(
       host: ipAddress.text,
-      port: int.parse(portNumber.text),
-      username: "lg",
+      port: int.tryParse(portNumber.text),
+      username: username.text,
       passwordOrKey: password.text,
     );
 
@@ -91,7 +93,7 @@ class _SettingsState extends State<Settings> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.close,
                     color: Colors.red,
                   ),
@@ -106,6 +108,7 @@ class _SettingsState extends State<Settings> {
   init() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     ipAddress.text = preferences.getString('master_ip') ?? '';
+    username.text = preferences.getString('master_username') ?? '';
     password.text = preferences.getString('master_password') ?? '';
     portNumber.text = preferences.getString('master_portNumber') ?? '';
 
@@ -120,13 +123,12 @@ class _SettingsState extends State<Settings> {
 
     return Scaffold(
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
+          preferredSize: Size.fromHeight(50),
           child: AppBar(),
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -134,7 +136,7 @@ class _SettingsState extends State<Settings> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [],
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(bottom: 10.0, top: 10),
                   child: Text(
                     'Liquid Galaxy Connection',
@@ -143,12 +145,12 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0, top: 10),
+                  padding: EdgeInsets.only(bottom: 10.0, top: 10),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         'Status: ',
                         textAlign: TextAlign.start,
                         style: TextStyle(
@@ -156,15 +158,15 @@ class _SettingsState extends State<Settings> {
                       ),
                       Text(
                         connectionStatus ? 'CONNECTED' : 'DISCONNECTED',
-                        style: const TextStyle(fontSize: 17),
+                        style: TextStyle(fontSize: 17),
                       ),
                       connectionStatus
-                          ? const Icon(
+                          ? Icon(
                               Icons.check_circle,
                               color: Colors.green,
                               size: 20,
                             )
-                          : const Icon(
+                          : Icon(
                               Icons.cancel,
                               color: Colors.red,
                               size: 20,
@@ -173,11 +175,23 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  padding: EdgeInsets.only(bottom: 0.0),
+                  child: TextFormField(
+                    controller: username,
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      filled: true,
+                      hintText: 'eg. lg',
+                      labelText: 'Master machine Username',
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20.0),
                   child: TextFormField(
                     controller: ipAddress,
                     keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       filled: true,
                       hintText: 'eg. 192.168.0.115',
                       labelText: 'Master machine IP Address',
@@ -185,11 +199,11 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
+                  padding: EdgeInsets.only(bottom: 20.0),
                   child: TextFormField(
                     controller: portNumber,
                     keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       filled: true,
                       hintText: 'eg. 22',
                       labelText: 'Master machine Port Number',
@@ -204,7 +218,7 @@ class _SettingsState extends State<Settings> {
                     hintText: 'eg. the-password-of-my-LG',
                     labelText: 'Master machine Password',
                     suffixIcon: IconButton(
-                      icon: const Icon(Icons.remove_red_eye),
+                      icon: Icon(Icons.remove_red_eye),
                       onPressed: () {
                         setState(() {
                           obscurePassword = !obscurePassword;
@@ -214,9 +228,9 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  padding: EdgeInsets.symmetric(vertical: 20.0),
                   child: ElevatedButton(
-                    child: const Text('CONNECT To LG'),
+                    child: Text('CONNECT To LG'),
                     onPressed: () {
                       connect();
                     },

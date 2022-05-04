@@ -52,32 +52,44 @@ class _SeismicdataState extends State<Seismicdata> {
     return SafeArea(
       child: volcanicData == null
           ? const Center(
-              child:
-                  CircularProgressIndicator(), // Loads Circular Loading Animation
+              child: CircularProgressIndicator(
+                color: Color.fromARGB(255, 149, 149, 149),
+              ), // Loads Circular Loading Animation
             )
           : ListView.builder(
               itemCount: volcanicData!.length,
               itemBuilder: (BuildContext context, int index) {
                 // Attributes are in the form of List<Map<String, dynamic>>.
                 String region = volcanicData![index]["title"];
-                return Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          child: Text("Magnitude recorded: " +
-                              magnitude[index]["title"] +
-                              "\n" +
-                              "At location: " +
-                              region +
-                              "\n" "Coordinates: " +
-                              latitude[index]["title"] +
-                              "," +
-                              longitude[index]["title"]),
-                          margin: const EdgeInsets.only(bottom: 10.0),
+                return Container(
+                  alignment: Alignment.center,
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    child: Card(
+                      child: Container(
+                        color: Color.fromARGB(255, 220, 220, 220),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                child: Text(
+                                    "Magnitude recorded: " +
+                                        magnitude[index]["title"] +
+                                        "\n" +
+                                        "At location: " +
+                                        region +
+                                        "\n" "Coordinates: " +
+                                        latitude[index]["title"] +
+                                        "," +
+                                        longitude[index]["title"],
+                                    style: TextStyle(fontSize: 24)),
+                                margin: const EdgeInsets.only(bottom: 10.0),
+                              ),
+                            ],
+                          ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 );

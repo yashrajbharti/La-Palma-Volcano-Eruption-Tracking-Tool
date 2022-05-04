@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:webscrapperapp/codingapp/menuOptions/help.dart';
+import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/settings.dart';
-
 import 'package:webscrapperapp/codingapp/menuOptions/about.dart';
 
 class Drawers extends StatefulWidget {
@@ -17,29 +18,41 @@ class _DrawersState extends State<Drawers> {
         width: MediaQuery.of(context).size.width * 1.0,
         child: Drawer(
           child: Container(
-            color: Colors.black45,
+            color: Color.fromARGB(255, 204, 204, 204),
             child: ListView(
-              padding: EdgeInsets.zero,
+              padding: const EdgeInsets.only(left: 100),
               children: [
                 DrawerHeader(
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const Text(
-                        "Liquid Galaxy Menu",
-                        style: TextStyle(color: Colors.white),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                        child: const Text(
+                          "Liquid Galaxy Menu",
+                          style: TextStyle(color: Colors.black, fontSize: 46),
+                        ),
                       ),
                       const Spacer(),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: ElevatedButton(
-                          child: const Icon(
-                            Icons.close,
-                            color: Colors.white,
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 36, 58),
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                elevation: 0.0,
+                                shadowColor: Colors.transparent,
+                                primary: Color.fromARGB(255, 204, 204, 204),
+                                padding: EdgeInsets.all(15)),
+                            child: const Icon(
+                              Icons.close,
+                              color: Color.fromARGB(255, 84, 84, 84),
+                              size: 60,
+                            ),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
                           ),
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
                         ),
                       ),
                     ],
@@ -48,16 +61,19 @@ class _DrawersState extends State<Drawers> {
                 ListTile(
                   title: const Text(
                     'Help',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black, fontSize: 40),
                   ),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => HelpScreen(),
+                    ),
+                  ),
                 ),
+                SizedBox(height: 24),
                 ListTile(
                   title: const Text(
                     'About',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black, fontSize: 40),
                   ),
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(
@@ -65,23 +81,23 @@ class _DrawersState extends State<Drawers> {
                     ),
                   ),
                 ),
+                SizedBox(height: 24),
                 ListTile(
                   title: const Text(
                     'LG Tasks',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black, fontSize: 40),
                   ),
-                  // leading: const Icon(
-                  //   Icons.garage,
-                  //   color: Colors.white,
-                  // ),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => LGtasks(),
+                    ),
+                  ),
                 ),
+                SizedBox(height: 24),
                 ListTile(
                   title: const Text(
                     'Connection Manager',
-                    style: TextStyle(color: Color.fromARGB(255, 223, 206, 206)),
+                    style: TextStyle(color: Colors.black, fontSize: 40),
                   ),
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(

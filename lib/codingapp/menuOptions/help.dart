@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-class AboutScreen extends StatefulWidget {
-  AboutScreen({Key? key}) : super(key: key);
+class HelpScreen extends StatefulWidget {
+  HelpScreen({Key? key}) : super(key: key);
 
   @override
-  _AboutScreenState createState() => _AboutScreenState();
+  _HelpScreenState createState() => _HelpScreenState();
 }
 
-class _AboutScreenState extends State<AboutScreen> {
+class _HelpScreenState extends State<HelpScreen> {
   _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -44,7 +44,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
                 child: Text(
-                  'About Page \n La Palma Volcano Eruption Tracking Tool ',
+                  'Help Page',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -52,21 +52,21 @@ class _AboutScreenState extends State<AboutScreen> {
                       color: Colors.black),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15.0),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0),
                 child: Text(
-                  '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."  ',
+                  'Start with filling in the credentials in the connection manager in order to establish connection with the Liquid Galaxy. \n Then Proceed to info tab and update the seismic / volcanic data \n Lastly go to the Track tab where you have the Various options to choose from and enjoy the visualization in the Liquid Galaxy',
                   style: TextStyle(fontSize: 17),
                   textAlign: TextAlign.center,
                 ),
               ),
-              Text(
-                'Learn more',
+              const Text(
+                'Get Support',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
-              Text(
-                '\nTo get to know more about Liquid Galaxy Projects you can check out their website and github. \n',
+              const Text(
+                '\nTo get more support on Liquid Galaxy Projects you can check out their website and github. \n',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 17),
               ),
@@ -74,7 +74,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 onTap: () {
                   _launchURL('https://www.liquidgalaxy.eu/');
                 },
-                child: Text(
+                child: const Text(
                   'Liquid Galaxy website \n',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 17, color: Colors.blue),
@@ -84,7 +84,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 onTap: () {
                   _launchURL('https://github.com/LiquidGalaxyLAB/');
                 },
-                child: Text(
+                child: const Text(
                   'Liquid Galaxy GitHub\n',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 17, color: Colors.blue),

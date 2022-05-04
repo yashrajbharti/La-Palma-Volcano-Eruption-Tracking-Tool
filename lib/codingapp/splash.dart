@@ -20,7 +20,8 @@ class _SplashState extends State<Splash> {
       title: const Text(
         'La Palma Volcano Tracker',
         style: TextStyle(
-          fontSize: 40,
+          fontFamily: 'OldStandard',
+          fontSize: 55,
           color: Color.fromARGB(255, 204, 204, 204),
         ),
       ),
