@@ -190,7 +190,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 style: ElevatedButton.styleFrom(
                   elevation: 0.0,
                   shadowColor: Colors.transparent,
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  primary: Colors.white,
                   padding: EdgeInsets.all(15),
                   shape: StadiumBorder(),
                 ),

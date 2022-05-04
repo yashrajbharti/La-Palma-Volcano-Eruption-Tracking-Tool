@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webscrapperapp/codingapp/mainpage.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/help.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/settings.dart';
@@ -50,7 +51,11 @@ class _DrawersState extends State<Drawers> {
                               size: 60,
                             ),
                             onPressed: () {
-                              Navigator.pop(context);
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (BuildContext context) => First(),
+                                ),
+                              );
                             },
                           ),
                         ),

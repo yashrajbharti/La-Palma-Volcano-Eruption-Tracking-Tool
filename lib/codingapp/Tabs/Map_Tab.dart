@@ -75,14 +75,14 @@ class _MyMapState extends State<MyMap> {
                 FloatingActionButton(
                   onPressed: _onMapTypeButtonPressed,
                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                  backgroundColor: Color.fromARGB(255, 147, 220, 148),
+                  backgroundColor: Color.fromARGB(255, 30, 163, 98),
                   child: const Icon(Icons.map, size: 36.0),
                 ),
                 SizedBox(height: 16.0),
                 FloatingActionButton(
                   onPressed: _onAddMarkerButtonPressed,
                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                  backgroundColor: Color.fromARGB(255, 147, 220, 148),
+                  backgroundColor: Color.fromARGB(255, 30, 163, 98),
                   child: const Icon(Icons.add_location, size: 36.0),
                 ),
               ],
