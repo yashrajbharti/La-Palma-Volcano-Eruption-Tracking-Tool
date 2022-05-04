@@ -46,7 +46,7 @@ class _AboutScreenState extends State<AboutScreen> {
       backgroundColor: Color.fromARGB(255, 204, 204, 204),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

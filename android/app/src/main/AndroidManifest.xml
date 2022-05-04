@@ -4,9 +4,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
    <application
         
-        android:label="webscrapperapp"
+        android:label="VolTrac"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/launcher_icon"
         android:requestLegacyExternalStorage="true">
          <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCDwPQxMBBAt3FiuUMLvDJKUUYlQMP5v4M"/>

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:webscrapperapp/codingapp/drawer.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -122,13 +123,29 @@ class _SettingsState extends State<Settings> {
     if (!loaded) init();
 
     return Scaffold(
+        backgroundColor: Color.fromARGB(255, 204, 204, 204),
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(50),
-          child: AppBar(),
+          child: AppBar(
+            elevation: 0,
+            leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back,
+                size: 50.0,
+              ),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => Drawers(),
+                  ),
+                );
+              },
+            ),
+          ),
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 120.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -139,9 +156,9 @@ class _SettingsState extends State<Settings> {
                 Padding(
                   padding: EdgeInsets.only(bottom: 10.0, top: 10),
                   child: Text(
-                    'Liquid Galaxy Connection',
-                    textAlign: TextAlign.start,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    'Connection Manager',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Padding(
@@ -183,6 +200,8 @@ class _SettingsState extends State<Settings> {
                       filled: true,
                       hintText: 'eg. lg',
                       labelText: 'Master machine Username',
+                      labelStyle:
+                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),
@@ -195,6 +214,8 @@ class _SettingsState extends State<Settings> {
                       filled: true,
                       hintText: 'eg. 192.168.0.115',
                       labelText: 'Master machine IP Address',
+                      labelStyle:
+                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),
@@ -207,6 +228,8 @@ class _SettingsState extends State<Settings> {
                       filled: true,
                       hintText: 'eg. 22',
                       labelText: 'Master machine Port Number',
+                      labelStyle:
+                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),
@@ -217,6 +240,8 @@ class _SettingsState extends State<Settings> {
                     filled: true,
                     hintText: 'eg. the-password-of-my-LG',
                     labelText: 'Master machine Password',
+                    labelStyle:
+                        TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
                     suffixIcon: IconButton(
                       icon: Icon(Icons.remove_red_eye),
                       onPressed: () {
@@ -229,39 +254,49 @@ class _SettingsState extends State<Settings> {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
-                  child: ElevatedButton(
-                    child: Text('CONNECT To LG'),
-                    onPressed: () {
-                      connect();
-                    },
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                        ),
+                  child: SizedBox(
+                    width: 100,
+                    child: ElevatedButton(
+                      child: Wrap(
+                        children: const <Widget>[
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text("Connect To LG", style: TextStyle(fontSize: 25)),
+                        ],
+                      ),
+                      onPressed: () {
+                        connect();
+                      },
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        shadowColor: Colors.transparent,
+                        primary: Colors.white,
+                        padding: EdgeInsets.all(15),
+                        shape: StadiumBorder(),
                       ),
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   color: Colors.grey,
                   thickness: 1,
                 ),
                 ListTile(
-                  leading: Text(
+                  leading: const Text(
                     '🇺🇸',
                     style: TextStyle(fontSize: 20),
                   ),
-                  title: Text('English (US)'),
+                  title: const Text('English (US)'),
                   trailing: IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.language,
                       color: Colors.grey,
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   color: Colors.grey,
                   thickness: 1,
                 ),

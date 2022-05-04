@@ -46,7 +46,7 @@ class _DrawersState extends State<Drawers> {
                                 primary: Color.fromARGB(255, 204, 204, 204),
                                 padding: EdgeInsets.all(15)),
                             child: const Icon(
-                              Icons.close,
+                              Icons.clear_rounded,
                               color: Color.fromARGB(255, 84, 84, 84),
                               size: 60,
                             ),
