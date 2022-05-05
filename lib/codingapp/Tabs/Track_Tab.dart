@@ -76,9 +76,36 @@ class _SendtoLGState extends State<SendtoLG> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 40.0),
+      margin: const EdgeInsets.only(top: 30.0),
       child: Column(
         children: [
+          SizedBox(
+            width: 500,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                elevation: 0.0,
+                shadowColor: Colors.transparent,
+                primary: ui.Color.fromARGB(255, 220, 220, 220),
+                padding: EdgeInsets.all(15),
+              ),
+              onPressed: null,
+              child: Wrap(
+                children: const <Widget>[
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("  Historic Track Map  ",
+                      style: TextStyle(fontSize: 40)),
+                  Icon(
+                    Icons.location_on_sharp,
+                    color: ui.Color.fromARGB(255, 228, 6, 9),
+                    size: 45.0,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 10),
           SizedBox(
             width: 500,
             child: ElevatedButton(
@@ -97,7 +124,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   Text("  Lava Flow Map  ", style: TextStyle(fontSize: 40)),
                   Icon(
                     Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    color: ui.Color.fromARGB(255, 228, 6, 9),
                     size: 45.0,
                   ),
                 ],
@@ -122,7 +149,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   Text("  Temperature Map  ", style: TextStyle(fontSize: 40)),
                   Icon(
                     Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    color: ui.Color.fromARGB(255, 228, 6, 9),
                     size: 45.0,
                   ),
                 ],
@@ -148,7 +175,7 @@ class _SendtoLGState extends State<SendtoLG> {
                       style: TextStyle(fontSize: 40)),
                   Icon(
                     Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    color: ui.Color.fromARGB(255, 228, 6, 9),
                     size: 45.0,
                   ),
                 ],
@@ -176,7 +203,7 @@ class _SendtoLGState extends State<SendtoLG> {
                       style: TextStyle(fontSize: 40)),
                   Icon(
                     Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 243, 36, 21),
+                    color: ui.Color.fromARGB(255, 228, 6, 9),
                     size: 45.0,
                   ),
                 ],
@@ -202,7 +229,7 @@ class _SendtoLGState extends State<SendtoLG> {
                     Text("Visualize in LG", style: TextStyle(fontSize: 35)),
                     Icon(
                       Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 243, 36, 21),
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
                       size: 45.0,
                     ),
                   ],
