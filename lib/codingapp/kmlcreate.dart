@@ -1,7 +1,6 @@
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'dart:developer';
-import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 
 String X = "";
 
@@ -57,5 +56,4 @@ kmlcreate(
   }
 
   await file.writeAsString("$X");
-  log(await file.readAsString());
 }

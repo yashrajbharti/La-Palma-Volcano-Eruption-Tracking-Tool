@@ -1,0 +1,3192 @@
+          <Style id="normal-0">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="0">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-0</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-0</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 3.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>0</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6724,35.5034</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-1">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="1">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-1</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-1</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SE BELLVER DE CERDANYA.L</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>1</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>1.7896,42.3563</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-2">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="2">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-2</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-2</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE CHAUCHINA.GR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>2</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.7513,37.2232</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-3">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="3">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-3</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-3</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ATLÁNTICO-CANARIAS</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>3</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-15.9203,28.1319</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-4">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="4">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-4</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-4</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW ESTREMERA.M</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>4</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.1256,40.2016</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-5">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="5">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-5</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-5</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>E MONREAL DEL LLANO.CU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>5</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.7363,39.5629</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-6">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="6">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-6</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-6</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE CÁRCHELES.J</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>6</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6240,37.6746</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-7">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="7">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-7</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-7</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>7</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6601,35.5436</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-8">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="8">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-8</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-8</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ATLÁNTICO-CANARIAS</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>8</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-16.8919,28.6509</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-9">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="9">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-9</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-9</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN NORTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>9</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.0289,36.6153</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-10">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="10">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-10</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-10</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW ALHUCEMAS.MAC</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>10</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.9896,35.2124</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-11">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="11">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-11</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-11</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ATLÁNTICO-CANARIAS</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>11</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-16.2052,28.1756</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-12">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="12">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-12</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-12</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>12</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6428,35.4887</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-13">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="13">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-13</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-13</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>GOLFO DE CÁDIZ</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>13</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-7.6668,36.5429</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-14">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="14">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-14</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-14</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>14</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6696,35.4763</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-15">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="15">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-15</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-15</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW CABO DE SAN VICENTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 3.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>15</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-9.7422,36.7675</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-16">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="16">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-16</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-16</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>16</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6693,35.4249</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-17">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="17">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-17</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-17</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN NORTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>17</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.4416,36.1897</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-18">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="18">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-18</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-18</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>18</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6438,35.4734</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-19">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="19">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-19</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-19</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.1  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>19</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6332,35.3813</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-20">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="20">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-20</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-20</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>GOLFO DE CÁDIZ</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>20</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-7.2392,36.5442</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-21">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="21">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-21</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-21</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW CARBONERAS.AL</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.0  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>21</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.0167,36.9379</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-22">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="22">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-22</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-22</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW FUENCALIENTE DE LA PALMA.IL</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>22</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-17.8965,28.5531</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-23">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="23">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-23</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-23</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE FORCAREI.PO</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>23</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.3425,42.6193</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-24">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="24">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-24</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-24</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE ALCONABA.SO</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>24</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.3691,41.7447</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-25">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="25">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-25</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-25</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>25</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.7769,35.4151</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-26">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="26">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-26</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-26</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>S EL PASO.ILP</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>26</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-17.8913,28.5889</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-27">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="27">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-27</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-27</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>GOLFO DE CÁDIZ</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>27</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.1089,36.2106</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-28">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="28">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-28</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-28</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>28</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6564,35.5087</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-29">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="29">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-29</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-29</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW CABO DE SAN VICENTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>29</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-9.8323,36.6207</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-30">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="30">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-30</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-30</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW QUINTELA DE LEIRADO.OU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>30</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.1228,42.0875</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-31">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="31">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-31</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-31</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ATLÁNTICO-MADEIRA</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 3.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>31</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-15.7294,32.8156</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-32">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="32">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-32</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-32</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE ALCONABA.SO</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.1  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>32</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.3669,41.7317</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-33">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="33">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-33</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-33</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW PEAL DE BECERRO.J</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>33</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.2235,37.8565</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-34">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="34">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-34</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-34</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.3  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>34</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.5416,35.4998</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-35">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="35">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-35</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-35</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ATLÁNTICO</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 4.0  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>35</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-13.6995,38.2864</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-36">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="36">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-36</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-36</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW LOS GALLARDOS.AL</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>36</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-1.9803,37.1464</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-37">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="37">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-37</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-37</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW BARALLA.LU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>37</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-7.2855,42.9070</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-38">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="38">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-38</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-38</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW FRONTERA.IHI</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>38</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-18.0791,27.7136</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-39">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="39">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-39</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-39</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW BELMONTE.CU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.0  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>39</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.7097,39.5662</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-40">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="40">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-40</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-40</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW CABO DE SAN VICENTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>40</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-10.9307,36.4162</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-41">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="41">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-41</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-41</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>AZORES-CABO DE SAN VICENTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 3.3  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>41</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-13.7429,37.0863</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-42">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="42">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-42</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-42</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW TORREVIEJA.A</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>42</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-0.7159,37.9976</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-43">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="43">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-43</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-43</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW YAIZA.ILZ</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>43</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-13.9003,28.8495</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-44">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="44">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-44</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-44</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.0  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>44</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6469,35.4586</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-45">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="45">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-45</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-45</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>N VIMIANZO.C</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>45</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-9.0264,43.1460</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-46">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="46">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-46</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-46</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW ALCUBILLAS.CR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>46</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.1635,38.8127</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-47">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="47">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-47</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-47</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>47</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6613,35.4616</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-48">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="48">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-48</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-48</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>48</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6462,35.4393</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-49">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="49">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-49</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-49</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE TURRILLAS.AL</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>49</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.2573,37.0419</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-50">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="50">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-50</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-50</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>S PADRENDA.OU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>50</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.1578,42.0802</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-51">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="51">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-51</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-51</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW MASIDE.OU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>51</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.0319,42.4140</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-52">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="52">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-52</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-52</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 3.0  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>52</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.7075,35.4697</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-53">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="53">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-53</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-53</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW CABO DE SAN VICENTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>53</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-11.0822,36.9231</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-54">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="54">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-54</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-54</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>W PRADES.FRA</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>54</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>2.1363,42.5871</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-55">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="55">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-55</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-55</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NW COVELO.PO</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>55</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.3904,42.2455</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-56">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="56">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-56</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-56</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW EL PASO.ILP</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>56</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-17.8948,28.6041</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-57">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="57">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-57</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-57</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SE QUINTELA DE LEIRADO.OU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>57</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.0809,42.1218</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-58">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="58">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-58</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-58</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN OESTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>58</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-4.6159,35.6785</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-59">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="59">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-59</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-59</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.8  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>59</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6989,35.5563</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-60">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="60">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-60</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-60</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN NORTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>60</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6452,36.4971</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-61">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="61">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-61</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-61</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>61</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6731,35.5122</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-62">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="62">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-62</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-62</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.3  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>62</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6195,35.4821</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-63">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="63">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-63</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-63</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>E VIATOR.AL</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>63</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.3022,36.8847</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-64">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="64">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-64</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-64</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ATLÁNTICO-CANARIAS</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>64</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-16.3009,28.1532</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-65">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="65">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-65</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-65</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE VILLANUEVA DEL TRABUCO.MA</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>65</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-4.2927,37.0821</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-66">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="66">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-66</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-66</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW CABO DE SAN VICENTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>66</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-9.6296,36.7458</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-67">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="67">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-67</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-67</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE MONREAL DEL LLANO.CU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.7  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>67</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.7420,39.5747</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-68">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="68">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-68</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-68</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE ARGEL.ARG</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 3.2  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>68</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>3.1822,36.9089</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-69">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="69">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-69</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-69</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>69</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6470,35.4471</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-70">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="70">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-70</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-70</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>SW CABO DE SAN VICENTE</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.3  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>70</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-10.5933,36.1058</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-71">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="71">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-71</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-71</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE COVELO.PO</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>71</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-8.3442,42.2501</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-72">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="72">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-72</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-72</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.1  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>72</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6122,35.5950</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-73">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="73">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-73</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-73</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE BELMONTE.CU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.6  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>73</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.6945,39.5736</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-74">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="74">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-74</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-74</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>NE MONREAL DEL LLANO.CU</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>74</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-2.7587,39.5802</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-75">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="75">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-75</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-75</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 1.9  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>75</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6994,35.4996</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-76">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="76">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-76</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-76</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.1  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>76</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6534,35.5051</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-77">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="77">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-77</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-77</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>77</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6192,35.4811</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-78">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="78">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-78</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-78</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.4  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>78</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.5368,35.4631</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-79">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="79">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-79</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-79</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>79</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6513,35.4556</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-80">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="80">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-80</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-80</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.0  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>80</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6675,35.4258</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-81">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="81">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-81</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-81</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>81</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.7174,35.4657</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-82">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="82">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-82</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-82</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.0  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>82</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6944,35.5524</coordinates>
+            </Point>
+          </Placemark>
+          <Style id="normal-83">
+            <IconStyle>
+              <scale>1</scale>
+              <Icon>
+                <href>https://i.postimg.cc/htGhGTxq/earthquake.png</href>
+              </Icon>
+              <hotSpot 
+                x="0.0" 
+                y="0.0" 
+                xunits="fraction" 
+                yunits="fraction"
+              />
+            </IconStyle>
+          </Style>
+          <StyleMap id="83">
+            <Pair>
+              <key>normal</key>
+              <styleUrl>normal-83</styleUrl>
+            </Pair>
+            <Pair>
+              <key>highlight</key>
+              <styleUrl>high-83</styleUrl>
+            </Pair>
+          </StyleMap>
+          <Placemark>
+            <name>ALBORÁN SUR</name>
+            <description> 
+              <![CDATA[
+                  <h1>Seismic Data</h1>
+                  <p><font color="orange">Magnitude of Earthquake 2.5  mbLg.</font></p>
+                ]]>
+            </description>
+            <styleUrl>83</styleUrl>
+             <Point>
+              <gx:drawOrder>1</gx:drawOrder>
+              <coordinates>-3.6813,35.4477</coordinates>
+            </Point>
+          </Placemark>

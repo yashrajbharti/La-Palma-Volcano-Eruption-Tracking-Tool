@@ -1,25 +1,16 @@
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:webscrapperapp/codingapp/kmlcreate.dart';
-import 'package:webscrapperapp/codingapp/kml/kml.dart';
-import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
-
 import 'package:flutter/services.dart';
-
-import 'package:webscrapperapp/codingapp/kml/flyto.dart';
-import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
-import 'package:webscrapperapp/codingapp/kml/Placemark.dart';
-import 'package:webscrapperapp/codingapp/kml/imageprocessing.dart';
-
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
+import 'dart:async' show Future;
 import 'dart:developer';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:permission_handler/permission_handler.dart';
+
+import 'package:webscrapperapp/codingapp/kml/kml.dart';
+import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 
 class SendtoLG extends StatefulWidget {
   SendtoLG({Key? key}) : super(key: key);
@@ -31,14 +22,16 @@ class SendtoLG extends StatefulWidget {
 String kmltext = "";
 String localpath = "";
 bool isOpen = false;
-String projectname = "a";
+String projectname = "Located_Events";
 
 Future<String> _read() async {
   try {
     final Directory directory = await getApplicationDocumentsDirectory();
-    final File file = File('${directory.path}/kmls.txt');
-    localpath = '${directory.path}/kmls.txt';
-    kmltext = await file.readAsString();
+    localpath = '${directory.path}/Located_Events.txt';
+
+    kmltext =
+        await rootBundle.loadString('assets/kml_files/Located_Events.txt');
+    log(kmltext);
   } catch (e) {
     print("Couldn't read file");
   }
@@ -240,7 +233,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   LGConnection()
                       .sendToLG(kml.mount(), projectname)
                       .then((value) {
-                    LGConnection().buildOrbit(kml.mount());
+                    //LGConnection().buildOrbit(kml.mount());
                     setState(() {
                       isOpen = true;
                     });
@@ -354,7 +347,6 @@ class LGConnection {
     String localPath = await _localPath;
     File localFile = File('$localPath/$projectname.kml');
     localFile.writeAsString(kml);
-
     return _uploadToLG('$localPath/$projectname.kml', projectname);
   }
 
@@ -401,6 +393,7 @@ class LGConnection {
 
       await client.execute(
           'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
+
       return await client.execute(
           'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
     } catch (e) {

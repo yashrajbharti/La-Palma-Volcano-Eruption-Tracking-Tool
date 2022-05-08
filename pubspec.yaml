@@ -85,6 +85,7 @@ flutter:
     - assets/pin.png
     - assets/volcano.png
     - assets/menu.png
+    - assets/kml_files/Located_Events.txt
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

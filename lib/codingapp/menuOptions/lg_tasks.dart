@@ -124,7 +124,9 @@ class _LGtasksState extends State<LGtasks> {
                                     style: TextStyle(fontSize: 45)),
                               ],
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              LGConnection().LGrelaunch();
+                            },
                           ),
                         ),
                         Spacer(),
@@ -311,6 +313,26 @@ class LGConnection {
     try {
       await client.connect();
       return await client.execute('echo "exittour=true" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  LGrelaunch() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute(
+          'sshpass -p ${credencials['pass']} ssh lg1 "sudo -S <<< "${credencials['pass']}" lg-relaunch"');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
