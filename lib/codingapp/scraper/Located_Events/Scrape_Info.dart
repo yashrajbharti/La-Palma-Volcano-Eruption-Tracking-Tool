@@ -4,7 +4,7 @@ import 'package:web_scraper/web_scraper.dart';
 import 'package:webscrapperapp/codingapp/scraper/Located_Events/kmlcreate.dart';
 
 class Seismicdata extends StatefulWidget {
-  const Seismicdata({Key? key}) : super(key: key);
+  const Seismicdata();
 
   @override
   _SeismicdataState createState() => _SeismicdataState();
