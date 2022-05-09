@@ -11,6 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
+import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
 
 class SendtoLG extends StatefulWidget {
   SendtoLG({Key? key}) : super(key: key);
@@ -175,6 +176,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15)),
               onPressed: () {
+                savekml_Task("Affected_Areas");
                 _read(3);
               },
               child: Wrap(
@@ -203,6 +205,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15)),
               onPressed: () {
+                savekml_Task(projectname[4]);
                 _read(4);
               },
               child: Wrap(
@@ -363,6 +366,8 @@ class LGConnection {
     String localPath = await _localPath;
     File localFile = File('$localPath/$projectname.kml');
     localFile.writeAsString(kml);
+    File localFile2 = File('$localPath/kmls.txt');
+    localFile2.writeAsString(kml);
     return _uploadToLG('$localPath/$projectname.kml', projectname);
   }
 

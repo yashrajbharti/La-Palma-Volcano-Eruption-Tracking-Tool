@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
@@ -19,21 +20,21 @@ class LGtasks extends StatefulWidget {
 String kmltext = "";
 String localpath = "";
 bool isOpen = false;
-String projectname = "a";
-
-Future<String> _read() async {
+String projectname = "";
+KML kml = KML("", "");
+Future savekml_Task(String kmlname) async {
   try {
+    projectname = kmlname;
     final Directory directory = await getApplicationDocumentsDirectory();
-    final File file = File('${directory.path}/kmls.txt');
-    localpath = '${directory.path}/kmls.txt';
-    kmltext = await file.readAsString();
+    // final File file = File('${directory.path}/$kmlname.txt');
+    localpath = '${directory.path}/$kmlname.txt';
+    kmltext = await rootBundle.loadString('assets/kml_files/$kmlname.txt');
+    ;
   } catch (e) {
     print("Couldn't read file");
   }
-  return kmltext;
+  kml = KML(projectname, kmltext);
 }
-
-KML kml = KML(projectname, kmltext);
 
 class _LGtasksState extends State<LGtasks> {
   showAlertDialog(String title, String msg) {
@@ -182,7 +183,7 @@ class _LGtasksState extends State<LGtasks> {
                               if (status.isGranted) {
                                 try {
                                   await KMLGenerator.generateKML(
-                                      kml.mount(), "a");
+                                      kml.mount(), projectname);
                                   showAlertDialog('Success!',
                                       'You can find a KML containing the map data of the project in your Downloads folder');
                                 } catch (e) {
