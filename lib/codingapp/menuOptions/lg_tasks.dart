@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
-import 'package:flutter/services.dart';
-import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 // ignore: import_of_legacy_library_into_null_safe
@@ -332,7 +330,7 @@ class LGConnection {
     try {
       await client.connect();
       return await client.execute(
-          'sshpass -p ${credencials['pass']} ssh lg1 "sudo -S <<< "${credencials['pass']}" lg-relaunch"');
+          'sshpass -p ${credencials['pass']} ssh lg1 "sudo -S <<< ${credencials['pass']} sudo lg-relaunch"');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);

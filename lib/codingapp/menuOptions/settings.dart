@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
 
 class Settings extends StatefulWidget {

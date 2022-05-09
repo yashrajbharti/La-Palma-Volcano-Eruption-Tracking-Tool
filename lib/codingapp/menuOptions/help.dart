@@ -106,6 +106,18 @@ class _HelpScreenState extends State<HelpScreen> {
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
               ),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/help/Affected-areas-legend.png',
+                      fit: BoxFit.contain,
+                    ),
+                  ],
+                ),
+                height: 500,
+              ),
             ],
           ),
         ),

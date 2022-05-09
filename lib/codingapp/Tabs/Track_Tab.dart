@@ -19,26 +19,42 @@ class SendtoLG extends StatefulWidget {
   State<SendtoLG> createState() => _SendtoLGState();
 }
 
-String kmltext = "";
+List<String> kmltext = ['', '', '', '', ''];
 String localpath = "";
 bool isOpen = false;
-String projectname = "Located_Events";
+List<String> projectname = [
+  "Historic_Track",
+  "Lava_Flow",
+  "Temperature",
+  "Affected_Areas",
+  "Located_Events"
+];
+List<String> localimages = [
+  "vent.png",
+  "red_sq.png",
+  "yellow_sq.png",
+  "black_sq.png"
+];
 
-Future<String> _read() async {
+String finalname = "";
+String finaltext = "";
+KML kml = KML("", "");
+Future<String> _read(int i) async {
   try {
     final Directory directory = await getApplicationDocumentsDirectory();
-    localpath = '${directory.path}/Located_Events.txt';
-
-    kmltext =
-        await rootBundle.loadString('assets/kml_files/Located_Events.txt');
-    log(kmltext);
+    localpath = '${directory.path}/${projectname[i]}.txt';
+    finalname = projectname[i];
+    kmltext[i] =
+        await rootBundle.loadString('assets/kml_files/${projectname[i]}.txt');
+    finaltext = kmltext[i];
+    log(finalname);
   } catch (e) {
     print("Couldn't read file");
+    print(e);
   }
-  return kmltext;
+  kml = KML(finalname, finaltext);
+  return kmltext[i];
 }
-
-KML kml = KML(projectname, kmltext);
 
 class _SendtoLGState extends State<SendtoLG> {
   showAlertDialog(String title, String msg) {
@@ -158,7 +174,9 @@ class _SendtoLGState extends State<SendtoLG> {
                   shadowColor: Colors.transparent,
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15)),
-              onPressed: null,
+              onPressed: () {
+                _read(3);
+              },
               child: Wrap(
                 children: const <Widget>[
                   SizedBox(
@@ -185,7 +203,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15)),
               onPressed: () {
-                _read();
+                _read(4);
               },
               child: Wrap(
                 children: const <Widget>[
@@ -230,9 +248,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 onPressed: () {
                   // send to LG
 
-                  LGConnection()
-                      .sendToLG(kml.mount(), projectname)
-                      .then((value) {
+                  LGConnection().sendToLG(kml.mount(), finalname).then((value) {
                     //LGConnection().buildOrbit(kml.mount());
                     setState(() {
                       isOpen = true;
@@ -371,9 +387,9 @@ class LGConnection {
     );
 
     LookAt flyto = LookAt(
-      -17.8914,
-      28.5951,
-      '64492.665945696469',
+      -17.895486,
+      28.610478,
+      '10569.665945696469',
       '35',
       '0',
     );
@@ -391,6 +407,11 @@ class LGConnection {
         },
       );
 
+      for (int k = 0; k < localimages.length; k++) {
+        String imgPath = await _createLocalImage(
+            localimages[k], "assets/icons/${localimages[k]}");
+        await client.sftpUpload(path: imgPath, toPath: '/var/www/html');
+      }
       await client.execute(
           'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
 

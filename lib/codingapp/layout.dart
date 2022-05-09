@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:webscrapperapp/codingapp/Tabs/Info_Tab.dart';
+import 'package:webscrapperapp/codingapp/scraper/Located_Events/Scrape_Info.dart';
 import 'package:webscrapperapp/codingapp/Tabs/Track_Tab.dart';
 import 'package:webscrapperapp/codingapp/Tabs/Map_Tab.dart';
-
-import 'package:webscrapperapp/codingapp/menuOptions/settings.dart';
 
 class Layout extends StatefulWidget {
   Layout({Key? key}) : super(key: key);

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/layout.dart';
-import 'package:webscrapperapp/codingapp/splash.dart';
 
 class Mainpage extends StatefulWidget {
   Mainpage({Key? key}) : super(key: key);

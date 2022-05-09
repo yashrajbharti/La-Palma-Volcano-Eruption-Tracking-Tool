@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
-import 'package:webscrapperapp/codingapp/layout.dart';
-import 'package:webscrapperapp/codingapp/mainpage.dart';
-import 'package:webscrapperapp/codingapp/splash.dart';
 
-import 'codingapp/Tabs/Info_Tab.dart';
+import 'package:webscrapperapp/codingapp/splash.dart';
 
 void main() {
   runApp(const MyApp());
