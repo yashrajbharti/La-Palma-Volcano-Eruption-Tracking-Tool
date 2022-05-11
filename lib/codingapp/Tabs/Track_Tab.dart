@@ -84,11 +84,11 @@ class _SendtoLGState extends State<SendtoLG> {
     );
   }
 
-  void _showToast() {
+  void _showToast(String x) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          "Ready to Visualize!",
+          "$x",
           style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.normal,
@@ -215,7 +215,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   onPressed: () async {
                     savekml_Task("Affected_Areas");
                     await _read(3);
-                    _showToast();
+                    _showToast("Ready to Visualize!");
                   },
                   child: Wrap(
                     children: const <Widget>[
@@ -301,7 +301,7 @@ class _SendtoLGState extends State<SendtoLG> {
               onPressed: () async {
                 savekml_Task(projectname[4]);
                 await _read(4);
-                _showToast();
+                _showToast("Ready to Visualize!");
               },
               child: Wrap(
                 children: const <Widget>[
@@ -345,8 +345,8 @@ class _SendtoLGState extends State<SendtoLG> {
                 ),
                 onPressed: () {
                   // send to LG
-
                   LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+                    _showToast("Visualizing KML");
                     //LGConnection().buildOrbit(kml.mount());
                     setState(() {
                       isOpen = true;
