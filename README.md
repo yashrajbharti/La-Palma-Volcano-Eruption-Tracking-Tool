@@ -1,5 +1,4 @@
 # VolTrac
-![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
 
 Allows Visualization of various Tracks such as Historic, Lava Flow, Affected Areas Maps for La Palmas onto the Liquid Galaxy. 
 
