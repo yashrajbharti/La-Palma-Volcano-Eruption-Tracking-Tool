@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_const
-
 import 'package:flutter/material.dart';
 
 import 'package:webscrapperapp/codingapp/drawer.dart';
@@ -82,14 +80,14 @@ class First extends StatelessWidget {
 const MaterialColor myColour = const MaterialColor(
   0xFFCCCCCC,
   const <int, Color>{
-    50: const Color.fromARGB(255, 204, 204, 204),
-    100: const Color.fromARGB(255, 204, 204, 204),
-    200: const Color.fromARGB(255, 204, 204, 204),
-    300: const Color.fromARGB(255, 204, 204, 204),
-    400: const Color.fromARGB(255, 204, 204, 204),
-    500: const Color.fromARGB(255, 204, 204, 204),
-    600: const Color.fromARGB(255, 204, 204, 204),
-    700: const Color.fromARGB(255, 204, 204, 204),
+    50: Color.fromARGB(255, 204, 204, 204),
+    100: Color.fromARGB(255, 204, 204, 204),
+    200: Color.fromARGB(255, 204, 204, 204),
+    300: Color.fromARGB(255, 204, 204, 204),
+    400: Color.fromARGB(255, 204, 204, 204),
+    500: Color.fromARGB(255, 204, 204, 204),
+    600: Color.fromARGB(255, 204, 204, 204),
+    700: Color.fromARGB(255, 204, 204, 204),
     800: Color.fromARGB(255, 204, 204, 204),
     900: Color.fromARGB(255, 204, 204, 204),
   },

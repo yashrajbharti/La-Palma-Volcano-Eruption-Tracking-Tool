@@ -1,6 +1,3 @@
-import 'package:webscrapperapp/codingapp/kml/Placemark.dart';
-import 'package:webscrapperapp/codingapp/kml/polygon.dart';
-
 class KML {
   String name;
   String content;
