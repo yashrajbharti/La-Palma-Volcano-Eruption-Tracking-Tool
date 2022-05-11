@@ -14,9 +14,9 @@ jobs:
       with:
         flutter-version: '2.10.4'
     - run: flutter pub get
-    - run: flutter test
+    - run: flutter test --no-sound-null-safety
     - run: flutter build apk --no-shrink --no-sound-null-safety
-    - run: flutter build appbundle
+    - run: flutter build appbundle --no-sound-null-safety
     - name: Create a Release APK
       uses: ncipollo/release-action@v1
       with:
