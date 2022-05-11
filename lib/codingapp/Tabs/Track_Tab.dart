@@ -319,7 +319,7 @@ class _SendtoLGState extends State<SendtoLG> {
               ),
             ),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 20),
           SizedBox(
             width: 360,
             child: ElevatedButton(
