@@ -60,87 +60,235 @@ Future<String> _read(int i) async {
 class _SendtoLGState extends State<SendtoLG> {
   showAlertDialog(String title, String msg) {
     showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('$title'),
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  icon: Icon(
-                    Icons.close,
-                    color: Colors.red,
-                  ),
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('$title'),
+              IconButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                icon: Icon(
+                  Icons.close,
+                  color: Colors.red,
                 ),
-              ],
-            ),
-            content: Text('$msg'),
-          );
-        });
+              ),
+            ],
+          ),
+          content: Text('$msg'),
+        );
+      },
+    );
+  }
+
+  void _showToast() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          "Ready to Visualize!",
+          style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.normal,
+              fontFamily: "OldStandard"),
+        ),
+        duration: Duration(seconds: 3),
+        backgroundColor: ui.Color.fromARGB(250, 43, 43, 43),
+        width: 500.0,
+        padding: const EdgeInsets.fromLTRB(
+          35,
+          20,
+          15,
+          20,
+        ),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        action: SnackBarAction(
+          textColor: Colors.red,
+          label: "Close",
+          onPressed: () {},
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 30.0),
+      margin: const EdgeInsets.fromLTRB(90, 30, 90, 0),
       child: Column(
         children: [
-          SizedBox(
-            width: 500,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                elevation: 0.0,
-                shadowColor: Colors.transparent,
-                primary: ui.Color.fromARGB(255, 220, 220, 220),
-                padding: EdgeInsets.all(15),
-              ),
-              onPressed: null,
-              child: Wrap(
-                children: const <Widget>[
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("  Historic Track Map  ",
-                      style: TextStyle(fontSize: 40)),
-                  Icon(
-                    Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 228, 6, 9),
-                    size: 45.0,
-                  ),
-                ],
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            SizedBox(
+              width: 500,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15),
+                ),
+                onPressed: null,
+                child: Wrap(
+                  children: const <Widget>[
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("  Historic Track Map  ",
+                        style: TextStyle(fontSize: 40)),
+                    Icon(
+                      Icons.location_on_sharp,
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                      size: 45.0,
+                    ),
+                  ],
+                ),
               ),
             ),
+            SizedBox(
+              width: 500,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15),
+                ),
+                onPressed: null,
+                child: Wrap(
+                  children: const <Widget>[
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("  Lava Flow Map  ", style: TextStyle(fontSize: 40)),
+                    Icon(
+                      Icons.location_on_sharp,
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                      size: 45.0,
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ]),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                width: 500,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 0.0,
+                      shadowColor: Colors.transparent,
+                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      padding: EdgeInsets.all(15)),
+                  onPressed: null,
+                  child: Wrap(
+                    children: const <Widget>[
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text("  Temperature Map  ",
+                          style: TextStyle(fontSize: 40)),
+                      Icon(
+                        Icons.location_on_sharp,
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
+                        size: 45.0,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 500,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 0.0,
+                      shadowColor: Colors.transparent,
+                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      padding: EdgeInsets.all(15)),
+                  onPressed: () async {
+                    savekml_Task("Affected_Areas");
+                    await _read(3);
+                    _showToast();
+                  },
+                  child: Wrap(
+                    children: const <Widget>[
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text("  Affected Areas Map  ",
+                          style: TextStyle(fontSize: 40)),
+                      Icon(
+                        Icons.location_on_sharp,
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
+                        size: 45.0,
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
           ),
           SizedBox(height: 10),
-          SizedBox(
-            width: 500,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                elevation: 0.0,
-                shadowColor: Colors.transparent,
-                primary: ui.Color.fromARGB(255, 220, 220, 220),
-                padding: EdgeInsets.all(15),
-              ),
-              onPressed: null,
-              child: Wrap(
-                children: const <Widget>[
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("  Lava Flow Map  ", style: TextStyle(fontSize: 40)),
-                  Icon(
-                    Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 228, 6, 9),
-                    size: 45.0,
-                  ),
-                ],
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            SizedBox(
+              width: 500,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15),
+                ),
+                onPressed: null,
+                child: Wrap(
+                  children: const <Widget>[
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("  Landscape Map  ", style: TextStyle(fontSize: 40)),
+                    Icon(
+                      Icons.location_on_sharp,
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                      size: 45.0,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
+            SizedBox(
+              width: 500,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  padding: EdgeInsets.all(15),
+                ),
+                onPressed: null,
+                child: Wrap(
+                  children: const <Widget>[
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("  SO\u2082 Emissions Map  ",
+                        style: TextStyle(fontSize: 40)),
+                    Icon(
+                      Icons.location_on_sharp,
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                      size: 45.0,
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ]),
           SizedBox(height: 10),
           SizedBox(
             width: 500,
@@ -150,63 +298,10 @@ class _SendtoLGState extends State<SendtoLG> {
                   shadowColor: Colors.transparent,
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15)),
-              onPressed: null,
-              child: Wrap(
-                children: const <Widget>[
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("  Temperature Map  ", style: TextStyle(fontSize: 40)),
-                  Icon(
-                    Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 228, 6, 9),
-                    size: 45.0,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(height: 10),
-          SizedBox(
-            width: 500,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
-                  padding: EdgeInsets.all(15)),
-              onPressed: () {
-                savekml_Task("Affected_Areas");
-                _read(3);
-              },
-              child: Wrap(
-                children: const <Widget>[
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("  Affected Areas Map  ",
-                      style: TextStyle(fontSize: 40)),
-                  Icon(
-                    Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 228, 6, 9),
-                    size: 45.0,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(height: 10),
-          SizedBox(
-            width: 500,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
-                  padding: EdgeInsets.all(15)),
-              onPressed: () {
+              onPressed: () async {
                 savekml_Task(projectname[4]);
-                _read(4);
+                await _read(4);
+                _showToast();
               },
               child: Wrap(
                 children: const <Widget>[
@@ -394,7 +489,9 @@ class LGConnection {
     LookAt flyto = LookAt(
       -17.895486,
       28.610478,
-      '10569.665945696469',
+      projectname == "Located_Events"
+          ? '40569.665945696469'
+          : '10569.665945696469',
       '35',
       '0',
     );

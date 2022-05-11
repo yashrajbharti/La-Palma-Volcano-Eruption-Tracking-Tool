@@ -25,7 +25,7 @@ class _LayoutState extends State<Layout> {
             title: Container(
               alignment: Alignment.topCenter,
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.8,
+                width: MediaQuery.of(context).size.width * 0.82,
                 child: Container(
                   color: const Color.fromARGB(255, 149, 149, 149),
                   padding: const EdgeInsets.symmetric(vertical: 50.0),

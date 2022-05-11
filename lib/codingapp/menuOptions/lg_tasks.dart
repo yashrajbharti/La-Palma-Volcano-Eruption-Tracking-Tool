@@ -99,13 +99,15 @@ class _LGtasksState extends State<LGtasks> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.all(140.0),
+                margin: const EdgeInsets.symmetric(
+                    vertical: 80.0, horizontal: 160.0),
                 child: Column(
                   children: [
                     Row(
                       children: [
                         SizedBox(
                           width: 360,
+                          height: 200,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               elevation: 0.0,
@@ -131,6 +133,7 @@ class _LGtasksState extends State<LGtasks> {
                         Spacer(),
                         SizedBox(
                           width: 360,
+                          height: 200,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               elevation: 0.0,
@@ -160,6 +163,7 @@ class _LGtasksState extends State<LGtasks> {
                       children: [
                         SizedBox(
                           width: 360,
+                          height: 200,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               elevation: 0.0,
@@ -218,6 +222,7 @@ class _LGtasksState extends State<LGtasks> {
                         Spacer(),
                         SizedBox(
                           width: 360,
+                          height: 200,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 elevation: 0.0,

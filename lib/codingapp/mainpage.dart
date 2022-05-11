@@ -70,6 +70,9 @@ class First extends StatelessWidget {
         scaffoldBackgroundColor: myColour,
         primarySwatch: myColour,
         fontFamily: 'OldStandard',
+        textTheme: TextTheme(
+          button: TextStyle(fontSize: 24.0),
+        ),
       ),
       home: Mainpage(),
     );
