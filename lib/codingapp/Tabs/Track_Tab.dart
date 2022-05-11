@@ -175,7 +175,7 @@ class _SendtoLGState extends State<SendtoLG> {
               ),
             )
           ]),
-          SizedBox(height: 10),
+          SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -235,7 +235,7 @@ class _SendtoLGState extends State<SendtoLG> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 16),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             SizedBox(
               width: 500,
@@ -289,7 +289,7 @@ class _SendtoLGState extends State<SendtoLG> {
               ),
             )
           ]),
-          SizedBox(height: 10),
+          SizedBox(height: 16),
           SizedBox(
             width: 500,
             child: ElevatedButton(
