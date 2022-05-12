@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
 
 import 'package:webscrapperapp/codingapp/scraper/Located_Events/Scrape_Info.dart';
 import 'package:webscrapperapp/codingapp/Tabs/Track_Tab.dart';
@@ -29,23 +31,23 @@ class _LayoutState extends State<Layout> {
                 child: Container(
                   color: const Color.fromARGB(255, 149, 149, 149),
                   padding: const EdgeInsets.symmetric(vertical: 50.0),
-                  child: const TabBar(
+                  child: TabBar(
                     tabs: <Widget>[
                       Tab(
                         child: Text(
-                          " Track ",
+                          translate('tabs.track'),
                           style: TextStyle(fontSize: 40),
                         ),
                       ),
                       Tab(
                         child: Text(
-                          " Map ",
+                          translate('tabs.map'),
                           style: TextStyle(fontSize: 40),
                         ),
                       ),
                       Tab(
                         child: Text(
-                          " Info ",
+                          translate('tabs.info'),
                           style: TextStyle(fontSize: 40),
                         ),
                       ),

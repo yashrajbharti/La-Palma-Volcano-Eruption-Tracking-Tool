@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_translate/flutter_translate.dart';
 
 import 'package:webscrapperapp/codingapp/mainpage.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/help.dart';
@@ -30,8 +31,8 @@ class _DrawersState extends State<Drawers> {
                   children: [
                     Container(
                       padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
-                      child: const Text(
-                        "Liquid Galaxy Menu",
+                      child: Text(
+                        translate("drawer.menu"),
                         style: TextStyle(color: Colors.black, fontSize: 46),
                       ),
                     ),
@@ -65,8 +66,8 @@ class _DrawersState extends State<Drawers> {
                 ),
               ),
               ListTile(
-                title: const Text(
-                  'Help',
+                title: Text(
+                  translate("drawer.help"),
                   style: TextStyle(color: Colors.black, fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
@@ -77,8 +78,8 @@ class _DrawersState extends State<Drawers> {
               ),
               SizedBox(height: 24),
               ListTile(
-                title: const Text(
-                  'About',
+                title: Text(
+                  translate("drawer.about"),
                   style: TextStyle(color: Colors.black, fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
@@ -89,8 +90,8 @@ class _DrawersState extends State<Drawers> {
               ),
               SizedBox(height: 24),
               ListTile(
-                title: const Text(
-                  'LG Tasks',
+                title: Text(
+                  translate("drawer.task"),
                   style: TextStyle(color: Colors.black, fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
@@ -101,8 +102,8 @@ class _DrawersState extends State<Drawers> {
               ),
               SizedBox(height: 24),
               ListTile(
-                title: const Text(
-                  'Connection Manager',
+                title: Text(
+                  translate("drawer.settings"),
                   style: TextStyle(color: Colors.black, fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(

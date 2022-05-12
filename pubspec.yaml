@@ -42,6 +42,10 @@ dependencies:
   url_launcher: ^6.0.20
   beautiful_soup_dart: ^0.2.0
   ssh: ^0.0.7
+  flutter_translate: ^2.0.0
+  flutter_localizations: 
+    sdk: flutter
+    version: ^0.0.0
 
 
   
@@ -94,6 +98,11 @@ flutter:
     - assets/icons/red_sq.png
     - assets/icons/black_sq.png
     - assets/help/Affected-areas-legend.png
+    - assets/i18n/
+    - assets/i18n/en.json
+    - assets/i18n/ar.json
+    - assets/i18n/es.json
+    - assets/i18n/ru.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

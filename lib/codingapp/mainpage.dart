@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
 
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/layout.dart';
@@ -24,11 +26,11 @@ class _MainpageState extends State<Mainpage> {
             // here the desired height
             child: AppBar(
               elevation: 0,
-              title: const Padding(
+              title: Padding(
                 // change left :
                 padding: EdgeInsets.only(left: 120),
                 child: Text(
-                  "La Palma Volcano Tracker",
+                  translate('title.name'),
                   style: TextStyle(
                     fontSize: 50,
                     color: Color.fromARGB(255, 0, 0, 0),

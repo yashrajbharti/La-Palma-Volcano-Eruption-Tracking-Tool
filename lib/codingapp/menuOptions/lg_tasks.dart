@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
@@ -29,7 +31,6 @@ Future savekml_Task(String kmlname) async {
     // final File file = File('${directory.path}/$kmlname.txt');
     localpath = '${directory.path}/$kmlname.txt';
     kmltext = await rootBundle.loadString('assets/kml_files/$kmlname.txt');
-    ;
   } catch (e) {
     print("Couldn't read file");
   }
@@ -39,27 +40,42 @@ Future savekml_Task(String kmlname) async {
 class _LGtasksState extends State<LGtasks> {
   showAlertDialog(String title, String msg) {
     showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+            backgroundColor: Color.fromARGB(255, 43, 43, 43),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('$title'),
+                Text(
+                  '$title',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Color.fromARGB(255, 204, 204, 204),
+                  ),
+                ),
                 IconButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                   icon: Icon(
-                    Icons.close,
-                    color: Colors.red,
+                    Icons.clear_rounded,
+                    color: Color.fromARGB(255, 228, 6, 9),
+                    size: 32,
                   ),
+                  padding: EdgeInsets.only(bottom: 10),
                 ),
               ],
             ),
-            content: Text('$msg'),
-          );
-        });
+            content: Text(
+              '$msg',
+              style: TextStyle(
+                fontSize: 18,
+                color: Color.fromARGB(255, 204, 204, 204),
+              ),
+            ));
+      },
+    );
   }
 
   @override
@@ -91,8 +107,8 @@ class _LGtasksState extends State<LGtasks> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                "Liquid Galaxy Tasks",
+              Text(
+                translate("Tasks.LG"),
                 style: TextStyle(
                   fontSize: 50,
                   color: Color.fromARGB(255, 0, 0, 0),
@@ -117,11 +133,11 @@ class _LGtasksState extends State<LGtasks> {
                               shape: StadiumBorder(),
                             ),
                             child: Wrap(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text("Relaunch \n     LG",
+                                Text(translate("Tasks.Relaunch"),
                                     style: TextStyle(fontSize: 45)),
                               ],
                             ),
@@ -143,11 +159,11 @@ class _LGtasksState extends State<LGtasks> {
                               shape: StadiumBorder(),
                             ),
                             child: Wrap(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text("Shutdown \n     LG",
+                                Text(translate("Tasks.Shutdown"),
                                     style: TextStyle(fontSize: 45)),
                               ],
                             ),
@@ -173,11 +189,11 @@ class _LGtasksState extends State<LGtasks> {
                               shape: StadiumBorder(),
                             ),
                             child: Wrap(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text("Save \nKML",
+                                Text(translate("Tasks.Save"),
                                     style: TextStyle(fontSize: 45)),
                               ],
                             ),
@@ -188,12 +204,12 @@ class _LGtasksState extends State<LGtasks> {
                                 try {
                                   await KMLGenerator.generateKML(
                                       kml.mount(), projectname);
-                                  showAlertDialog('Success!',
-                                      'You can find a KML containing the map data of the project in your Downloads folder');
+                                  showAlertDialog(translate("Tasks.alert"),
+                                      translate("Tasks.alert2"));
                                 } catch (e) {
                                   print('error $e');
-                                  showAlertDialog('Oops!',
-                                      'You have to enable storage managing permissions to download the project KML');
+                                  showAlertDialog(translate("Tasks.alert3"),
+                                      translate("Tasks.alert4"));
                                 }
                               } else {
                                 var isGranted = await Permission.storage
@@ -203,17 +219,17 @@ class _LGtasksState extends State<LGtasks> {
                                   // download kml
                                   try {
                                     await KMLGenerator.generateKML(
-                                        kml.mount(), "a");
-                                    showAlertDialog('Success!',
-                                        'You can find a KML containing the map data of the project in your Downloads folder');
+                                        kml.mount(), projectname);
+                                    showAlertDialog(translate("Tasks.alert"),
+                                        translate("Tasks.alert2"));
                                   } catch (e) {
                                     print('error $e');
-                                    showAlertDialog('Oops!',
-                                        'You have to enable storage managing permissions to download the project KML');
+                                    showAlertDialog(translate("Tasks.alert3"),
+                                        translate("Tasks.alert4"));
                                   }
                                 } else {
-                                  showAlertDialog('Oops!',
-                                      'You have to enable storage managing permissions to download the project KML');
+                                  showAlertDialog(translate("Tasks.alert3"),
+                                      translate("Tasks.alert4"));
                                 }
                               }
                             },
@@ -232,11 +248,11 @@ class _LGtasksState extends State<LGtasks> {
                                 shape: StadiumBorder(),
                               ),
                               child: Wrap(
-                                children: const <Widget>[
+                                children: <Widget>[
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Text("Clean \nKML",
+                                  Text(translate("Tasks.Clean"),
                                       style: TextStyle(fontSize: 45)),
                                 ],
                               ),
@@ -250,8 +266,8 @@ class _LGtasksState extends State<LGtasks> {
                                   });
                                 }).catchError((onError) {
                                   print('oh no $onError');
-                                  showAlertDialog('Error launching!',
-                                      'An error occurred while trying to connect to LG');
+                                  showAlertDialog(translate("Tasks.alert5"),
+                                      translate("Tasks.alert6"));
                                 });
                               }),
                         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:splashscreen/splashscreen.dart';
 
 import 'package:webscrapperapp/codingapp/mainpage.dart';
@@ -17,8 +19,8 @@ class _SplashState extends State<Splash> {
     return SplashScreen(
       seconds: 5,
       navigateAfterSeconds: First(),
-      title: const Text(
-        'La Palma Volcano Tracker',
+      title: Text(
+        translate('title.name'),
         style: TextStyle(
           fontFamily: 'OldStandard',
           fontSize: 55,

@@ -1,0 +1,83 @@
+{
+	"button": {
+		"cancel": "Cancelar"
+	},
+	"language": {
+		"name": {
+			"en": "Inglés (Estados Unidos)",
+			"es": "Español",
+			"ar": "Arábica",
+			"ru": "Ruso"
+		},
+		"flag": "🇪🇸",
+		"selected_message": "El idioma seleccionado actualmente es {language}",
+		"selection": {
+			"message": "Por favor seleccione un idioma de la lista",
+			"title": "Selección de idioma"
+		}
+	},
+	"Track": {
+		"hist": "Mapa de vías históricas",
+		"lava": " Mapa de flujo de lava ",
+		"temp": " Mapa de temperatura ",
+		"aff": "Zonas afectadas",
+		"land": " Mapa del paisaje ",
+		"So2": "SO\u2082 Emisiones",
+		"located": "Eventos localizados",
+		"visual": "Visualizar en LG",
+		"ready": "Listo para visualizar!",
+		"Visualize": "Visualización de KML",
+		"alert": "Sin geodatos",
+		"alert2": "Parece que no ha agregado datos geográficos a este proyecto.",
+		"alert3": "¡Error de lanzamiento!",
+		"alert4": "Ocurrió un error al intentar conectarse a LG",
+		"close": "Cerrar"
+	},
+	"title": {
+		"name": "Rastreador de volcanes de La Palma"
+	},
+	"tabs": {
+		"track": " Pista ",
+		"map": " Mapa ",
+		"info": "Información"
+	},
+	"drawer": {
+		"menu": "Menú de galaxia líquida",
+		"help": "Ayudar",
+		"about": "Acerca de",
+		"task": "Tareas LG",
+		"settings": "Administrador de conexión"
+	},
+	"Tasks": {
+		"LG": "Tareas de Liquid Galaxy",
+		"Relaunch": "Relanzamiento\n      de LG",
+		"Shutdown": "Apagar \n   LG",
+		"Save": "Guardar \n  KML",
+		"Clean": "Limpio \n  KML",
+		"alert": "¡Éxito!",
+		"alert2": "Puede encontrar un KML que contenga los datos del mapa del proyecto en su carpeta de Descargas",
+		"alert3": "¡Ups!",
+		"alert4": "Debe habilitar los permisos de administración de almacenamiento para descargar el archivo KML del proyecto.",
+		"alert5": "¡Error de lanzamiento!",
+		"alert6": "Ocurrió un error al intentar conectarse a LG"
+	},
+	"Settings": {
+		"alert": "¡Conectado!",
+		"alert2": "El anfitrión es alcanzable",
+		"alert3": "¡Ups!",
+		"alert4": "El anfitrión no es accesible. Compruebe si la información proporcionada es correcta y si se puede contactar con el host",
+		"title": "Administrador de conexión",
+		"Status": "Estado: ",
+		"connect": "CONECTADO ",
+		"disconnect": "DESCONECTADO ",
+		"placeholder": "p.ej. lg",
+		"label": "Nombre de usuario de la máquina maestra",
+		"placeholder2": "p.ej. 192.168.0.115",
+		"label2": "Dirección IP de la máquina maestra",
+		"placeholder3": "p.ej. 22",
+		"label3": "Número de puerto de la máquina maestra",
+		"placeholder4": "p.ej. la-contraseña-de-mi-LG",
+		"label4": "Contraseña de la máquina maestra",
+		"button": "Conectar a LG"
+	}
+}

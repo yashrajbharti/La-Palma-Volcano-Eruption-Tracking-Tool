@@ -1,6 +1,8 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'dart:async' show Future;
@@ -63,23 +65,37 @@ class _SendtoLGState extends State<SendtoLG> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('$title'),
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                icon: Icon(
-                  Icons.close,
-                  color: Colors.red,
+            backgroundColor: Color.fromARGB(255, 43, 43, 43),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '$title',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Color.fromARGB(255, 204, 204, 204),
+                  ),
                 ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(
+                    Icons.clear_rounded,
+                    color: Color.fromARGB(255, 228, 6, 9),
+                    size: 32,
+                  ),
+                  padding: EdgeInsets.only(bottom: 5),
+                ),
+              ],
+            ),
+            content: Text(
+              '$msg',
+              style: TextStyle(
+                fontSize: 18,
+                color: Color.fromARGB(255, 204, 204, 204),
               ),
-            ],
-          ),
-          content: Text('$msg'),
-        );
+            ));
       },
     );
   }
@@ -109,7 +125,7 @@ class _SendtoLGState extends State<SendtoLG> {
         ),
         action: SnackBarAction(
           textColor: Colors.red,
-          label: "Close",
+          label: translate('Track.close'),
           onPressed: () {},
         ),
       ),
@@ -134,11 +150,11 @@ class _SendtoLGState extends State<SendtoLG> {
                 ),
                 onPressed: null,
                 child: Wrap(
-                  children: const <Widget>[
+                  children: <Widget>[
                     SizedBox(
                       width: 10,
                     ),
-                    Text("  Historic Track Map  ",
+                    Text(translate('Track.hist'),
                         style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
@@ -160,11 +176,12 @@ class _SendtoLGState extends State<SendtoLG> {
                 ),
                 onPressed: null,
                 child: Wrap(
-                  children: const <Widget>[
+                  children: <Widget>[
                     SizedBox(
                       width: 10,
                     ),
-                    Text("  Lava Flow Map  ", style: TextStyle(fontSize: 40)),
+                    Text(translate('Track.lava'),
+                        style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
                       color: ui.Color.fromARGB(255, 228, 6, 9),
@@ -189,11 +206,11 @@ class _SendtoLGState extends State<SendtoLG> {
                       padding: EdgeInsets.all(15)),
                   onPressed: null,
                   child: Wrap(
-                    children: const <Widget>[
+                    children: <Widget>[
                       SizedBox(
                         width: 10,
                       ),
-                      Text("  Temperature Map  ",
+                      Text(translate('Track.temp'),
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
@@ -215,14 +232,14 @@ class _SendtoLGState extends State<SendtoLG> {
                   onPressed: () async {
                     savekml_Task("Affected_Areas");
                     await _read(3);
-                    _showToast("Ready to Visualize!");
+                    _showToast(translate('Track.ready'));
                   },
                   child: Wrap(
-                    children: const <Widget>[
+                    children: <Widget>[
                       SizedBox(
                         width: 10,
                       ),
-                      Text("  Affected Areas Map  ",
+                      Text(translate('Track.aff'),
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
@@ -248,11 +265,12 @@ class _SendtoLGState extends State<SendtoLG> {
                 ),
                 onPressed: null,
                 child: Wrap(
-                  children: const <Widget>[
+                  children: <Widget>[
                     SizedBox(
                       width: 10,
                     ),
-                    Text("  Landscape Map  ", style: TextStyle(fontSize: 40)),
+                    Text(translate('Track.land'),
+                        style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
                       color: ui.Color.fromARGB(255, 228, 6, 9),
@@ -273,11 +291,11 @@ class _SendtoLGState extends State<SendtoLG> {
                 ),
                 onPressed: null,
                 child: Wrap(
-                  children: const <Widget>[
+                  children: <Widget>[
                     SizedBox(
                       width: 10,
                     ),
-                    Text("  SO\u2082 Emissions Map  ",
+                    Text(translate('Track.So2'),
                         style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
@@ -301,14 +319,14 @@ class _SendtoLGState extends State<SendtoLG> {
               onPressed: () async {
                 savekml_Task(projectname[4]);
                 await _read(4);
-                _showToast("Ready to Visualize!");
+                _showToast(translate('Track.ready'));
               },
               child: Wrap(
-                children: const <Widget>[
+                children: <Widget>[
                   SizedBox(
                     width: 10,
                   ),
-                  Text("  Located Events Map  ",
+                  Text(translate('Track.located'),
                       style: TextStyle(fontSize: 40)),
                   Icon(
                     Icons.location_on_sharp,
@@ -331,11 +349,12 @@ class _SendtoLGState extends State<SendtoLG> {
                   shape: StadiumBorder(),
                 ),
                 child: Wrap(
-                  children: const <Widget>[
+                  children: <Widget>[
                     SizedBox(
                       width: 10,
                     ),
-                    Text("Visualize in LG", style: TextStyle(fontSize: 35)),
+                    Text(translate('Track.visual'),
+                        style: TextStyle(fontSize: 35)),
                     Icon(
                       Icons.location_on_sharp,
                       color: ui.Color.fromARGB(255, 228, 6, 9),
@@ -346,7 +365,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 onPressed: () {
                   // send to LG
                   LGConnection().sendToLG(kml.mount(), finalname).then((value) {
-                    _showToast("Visualizing KML");
+                    _showToast(translate('Track.Visualize'));
                     //LGConnection().buildOrbit(kml.mount());
                     setState(() {
                       isOpen = true;
@@ -354,11 +373,11 @@ class _SendtoLGState extends State<SendtoLG> {
                   }).catchError((onError) {
                     print('oh no $onError');
                     if (onError == 'nogeodata') {
-                      showAlertDialog('No GeoData',
-                          'It looks like you haven\'t added any geodata to this project.');
+                      showAlertDialog(
+                          translate('Track.alert'), translate('Track.alert2'));
                     }
-                    showAlertDialog('Error launching!',
-                        'An error occurred while trying to connect to LG');
+                    showAlertDialog(
+                        translate('Track.alert3'), translate('Track.alert4'));
                   });
                 }),
           ),

@@ -1,0 +1,83 @@
+{
+	"button": {
+		"cancel": "Cancel"
+	},
+	"language": {
+		"name": {
+			"en": "English (US)",
+			"es": "Spanish",
+			"ar": "Arabic",
+			"ru": "Russian"
+		},
+		"flag": "🇺🇸",
+		"selected_message": "Currently selected language is {language}",
+		"selection": {
+			"message": "Please select a language from the list",
+			"title": "Language Selection"
+		}
+	},
+	"Track": {
+		"hist": "  Historic Track Map  ",
+		"lava": "  Lava Flow Map  ",
+		"temp": "  Temperature Map  ",
+		"aff": "  Affected Areas Map  ",
+		"land": "  Landscape Map  ",
+		"So2": "  SO\u2082 Emissions Map  ",
+		"located": "  Located Events Map  ",
+		"visual": "Visualize in LG",
+		"ready": "Ready to Visualize!",
+		"Visualize": "Visualizing KML",
+		"alert": "No GeoData",
+		"alert2": "It looks like you haven't added any geodata to this project.",
+		"alert3": "Error launching!",
+		"alert4": "An error occurred while trying to connect to LG",
+		"close": "Close"
+	},
+	"title": {
+		"name": "La Palma Volcano Tracker"
+	},
+	"tabs": {
+		"track": " Track ",
+		"map": " Map ",
+		"info": " Info "
+	},
+	"drawer": {
+		"menu": "Liquid Galaxy Menu",
+		"help": "Help",
+		"about": "About",
+		"task": "LG Tasks",
+		"settings": "Connection Manager"
+	},
+	"Tasks": {
+		"LG": "Liquid Galaxy Tasks",
+		"Relaunch": "Relaunch \n     LG",
+		"Shutdown": "Shutdown \n     LG",
+		"Save": "Save \nKML",
+		"Clean": "Clean \nKML",
+		"alert": "Success!",
+		"alert2": "You can find a KML containing the map data of the project in your Downloads folder",
+		"alert3": "Oops!",
+		"alert4": "You have to enable storage managing permissions to download the project KML",
+		"alert5": "Error launching!",
+		"alert6": "An error occurred while trying to connect to LG"
+	},
+	"Settings": {
+		"alert": "Connected!",
+		"alert2": "Host is reachable",
+		"alert3": "Oops!",
+		"alert4": "Host is not reachable. Check if the information given is correct and if the host can be reached",
+		"title": "Connection Manager",
+		"Status": "Status: ",
+		"connect": "CONNECTED ",
+		"disconnect": "DISCONNECTED ",
+		"placeholder": "eg. lg",
+		"label": "Master machine Username",
+		"placeholder2": "eg. 192.168.0.115",
+		"label2": "Master machine IP Address",
+		"placeholder3": "eg. 22",
+		"label3": "Master machine Port Number",
+		"placeholder4": "eg. the-password-of-my-LG",
+		"label4": "Master machine Password",
+		"button": "Connect To LG"
+	}
+}

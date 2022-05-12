@@ -1537,7 +1537,7 @@
 		</StyleMap>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 3.2  mbLg.</font></p>]]></description>
 			<styleUrl>#0</styleUrl>
 			<Point>
@@ -1547,7 +1547,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SE BELLVER DE CERDANYA.L</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.7  mbLg.</font></p>]]></description>
 			<styleUrl>#1</styleUrl>
 			<Point>
@@ -1557,7 +1557,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE CHAUCHINA.GR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.6  mbLg.</font></p>]]></description>
 			<styleUrl>#2</styleUrl>
 			<Point>
@@ -1567,7 +1567,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ATLÁNTICO-CANARIAS</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#3</styleUrl>
 			<Point>
@@ -1577,7 +1577,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW ESTREMERA.M</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.7  mbLg.</font></p>]]></description>
 			<styleUrl>#4</styleUrl>
 			<Point>
@@ -1587,7 +1587,7 @@
 		</Placemark>
 		<Placemark>
 			<name>E MONREAL DEL LLANO.CU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#5</styleUrl>
 			<Point>
@@ -1597,7 +1597,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE CÁRCHELES.J</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.5  mbLg.</font></p>]]></description>
 			<styleUrl>#6</styleUrl>
 			<Point>
@@ -1607,7 +1607,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#7</styleUrl>
 			<Point>
@@ -1617,7 +1617,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ATLÁNTICO-CANARIAS</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.2  mbLg.</font></p>]]></description>
 			<styleUrl>#8</styleUrl>
 			<Point>
@@ -1627,7 +1627,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN NORTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#9</styleUrl>
 			<Point>
@@ -1637,7 +1637,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW ALHUCEMAS.MAC</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#10</styleUrl>
 			<Point>
@@ -1647,7 +1647,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ATLÁNTICO-CANARIAS</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#11</styleUrl>
 			<Point>
@@ -1657,7 +1657,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#12</styleUrl>
 			<Point>
@@ -1667,7 +1667,7 @@
 		</Placemark>
 		<Placemark>
 			<name>GOLFO DE CÁDIZ</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#13</styleUrl>
 			<Point>
@@ -1677,7 +1677,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#14</styleUrl>
 			<Point>
@@ -1687,7 +1687,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW CABO DE SAN VICENTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 3.2  mbLg.</font></p>]]></description>
 			<styleUrl>#15</styleUrl>
 			<Point>
@@ -1697,7 +1697,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.2  mbLg.</font></p>]]></description>
 			<styleUrl>#16</styleUrl>
 			<Point>
@@ -1707,7 +1707,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN NORTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.5  mbLg.</font></p>]]></description>
 			<styleUrl>#17</styleUrl>
 			<Point>
@@ -1717,7 +1717,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#18</styleUrl>
 			<Point>
@@ -1727,7 +1727,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.1  mbLg.</font></p>]]></description>
 			<styleUrl>#19</styleUrl>
 			<Point>
@@ -1737,7 +1737,7 @@
 		</Placemark>
 		<Placemark>
 			<name>GOLFO DE CÁDIZ</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#20</styleUrl>
 			<Point>
@@ -1747,7 +1747,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW CARBONERAS.AL</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.0  mbLg.</font></p>]]></description>
 			<styleUrl>#21</styleUrl>
 			<Point>
@@ -1757,7 +1757,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW FUENCALIENTE DE LA PALMA.IL</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#22</styleUrl>
 			<Point>
@@ -1767,7 +1767,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE FORCAREI.PO</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#23</styleUrl>
 			<Point>
@@ -1777,7 +1777,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE ALCONABA.SO</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.6  mbLg.</font></p>]]></description>
 			<styleUrl>#24</styleUrl>
 			<Point>
@@ -1787,7 +1787,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.2  mbLg.</font></p>]]></description>
 			<styleUrl>#25</styleUrl>
 			<Point>
@@ -1797,7 +1797,7 @@
 		</Placemark>
 		<Placemark>
 			<name>S EL PASO.ILP</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#26</styleUrl>
 			<Point>
@@ -1807,7 +1807,7 @@
 		</Placemark>
 		<Placemark>
 			<name>GOLFO DE CÁDIZ</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#27</styleUrl>
 			<Point>
@@ -1817,7 +1817,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#28</styleUrl>
 			<Point>
@@ -1827,7 +1827,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW CABO DE SAN VICENTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.7  mbLg.</font></p>]]></description>
 			<styleUrl>#29</styleUrl>
 			<Point>
@@ -1837,7 +1837,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW QUINTELA DE LEIRADO.OU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.5  mbLg.</font></p>]]></description>
 			<styleUrl>#30</styleUrl>
 			<Point>
@@ -1847,7 +1847,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ATLÁNTICO-MADEIRA</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 3.4  mbLg.</font></p>]]></description>
 			<styleUrl>#31</styleUrl>
 			<Point>
@@ -1857,7 +1857,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE ALCONABA.SO</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.1  mbLg.</font></p>]]></description>
 			<styleUrl>#32</styleUrl>
 			<Point>
@@ -1867,7 +1867,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW PEAL DE BECERRO.J</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.7  mbLg.</font></p>]]></description>
 			<styleUrl>#33</styleUrl>
 			<Point>
@@ -1877,7 +1877,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.3  mbLg.</font></p>]]></description>
 			<styleUrl>#34</styleUrl>
 			<Point>
@@ -1887,7 +1887,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ATLÁNTICO</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 4.0  mbLg.</font></p>]]></description>
 			<styleUrl>#35</styleUrl>
 			<Point>
@@ -1897,7 +1897,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW LOS GALLARDOS.AL</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#36</styleUrl>
 			<Point>
@@ -1907,7 +1907,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW BARALLA.LU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.7  mbLg.</font></p>]]></description>
 			<styleUrl>#37</styleUrl>
 			<Point>
@@ -1917,7 +1917,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW FRONTERA.IHI</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.5  mbLg.</font></p>]]></description>
 			<styleUrl>#38</styleUrl>
 			<Point>
@@ -1927,7 +1927,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW BELMONTE.CU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.0  mbLg.</font></p>]]></description>
 			<styleUrl>#39</styleUrl>
 			<Point>
@@ -1937,7 +1937,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW CABO DE SAN VICENTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.6  mbLg.</font></p>]]></description>
 			<styleUrl>#40</styleUrl>
 			<Point>
@@ -1947,7 +1947,7 @@
 		</Placemark>
 		<Placemark>
 			<name>AZORES-CABO DE SAN VICENTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 3.3  mbLg.</font></p>]]></description>
 			<styleUrl>#41</styleUrl>
 			<Point>
@@ -1957,7 +1957,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW TORREVIEJA.A</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.4  mbLg.</font></p>]]></description>
 			<styleUrl>#42</styleUrl>
 			<Point>
@@ -1967,7 +1967,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW YAIZA.ILZ</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#43</styleUrl>
 			<Point>
@@ -1977,7 +1977,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.0  mbLg.</font></p>]]></description>
 			<styleUrl>#44</styleUrl>
 			<Point>
@@ -1987,7 +1987,7 @@
 		</Placemark>
 		<Placemark>
 			<name>N VIMIANZO.C</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#45</styleUrl>
 			<Point>
@@ -1997,7 +1997,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW ALCUBILLAS.CR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#46</styleUrl>
 			<Point>
@@ -2007,7 +2007,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#47</styleUrl>
 			<Point>
@@ -2017,7 +2017,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#48</styleUrl>
 			<Point>
@@ -2027,7 +2027,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE TURRILLAS.AL</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#49</styleUrl>
 			<Point>
@@ -2037,7 +2037,7 @@
 		</Placemark>
 		<Placemark>
 			<name>S PADRENDA.OU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.6  mbLg.</font></p>]]></description>
 			<styleUrl>#50</styleUrl>
 			<Point>
@@ -2047,7 +2047,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW MASIDE.OU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.9  mbLg.</font></p>]]></description>
 			<styleUrl>#51</styleUrl>
 			<Point>
@@ -2057,7 +2057,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 3.0  mbLg.</font></p>]]></description>
 			<styleUrl>#52</styleUrl>
 			<Point>
@@ -2067,7 +2067,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW CABO DE SAN VICENTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#53</styleUrl>
 			<Point>
@@ -2077,7 +2077,7 @@
 		</Placemark>
 		<Placemark>
 			<name>W PRADES.FRA</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#54</styleUrl>
 			<Point>
@@ -2087,7 +2087,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NW COVELO.PO</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#55</styleUrl>
 			<Point>
@@ -2097,7 +2097,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW EL PASO.ILP</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.5  mbLg.</font></p>]]></description>
 			<styleUrl>#56</styleUrl>
 			<Point>
@@ -2107,7 +2107,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SE QUINTELA DE LEIRADO.OU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.7  mbLg.</font></p>]]></description>
 			<styleUrl>#57</styleUrl>
 			<Point>
@@ -2117,7 +2117,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN OESTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#58</styleUrl>
 			<Point>
@@ -2127,7 +2127,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.8  mbLg.</font></p>]]></description>
 			<styleUrl>#59</styleUrl>
 			<Point>
@@ -2137,7 +2137,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN NORTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.7  mbLg.</font></p>]]></description>
 			<styleUrl>#60</styleUrl>
 			<Point>
@@ -2147,7 +2147,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.2  mbLg.</font></p>]]></description>
 			<styleUrl>#61</styleUrl>
 			<Point>
@@ -2157,7 +2157,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.3  mbLg.</font></p>]]></description>
 			<styleUrl>#62</styleUrl>
 			<Point>
@@ -2167,7 +2167,7 @@
 		</Placemark>
 		<Placemark>
 			<name>E VIATOR.AL</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#63</styleUrl>
 			<Point>
@@ -2177,7 +2177,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ATLÁNTICO-CANARIAS</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#64</styleUrl>
 			<Point>
@@ -2187,7 +2187,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE VILLANUEVA DEL TRABUCO.MA</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.2  mbLg.</font></p>]]></description>
 			<styleUrl>#65</styleUrl>
 			<Point>
@@ -2197,7 +2197,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW CABO DE SAN VICENTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#66</styleUrl>
 			<Point>
@@ -2207,7 +2207,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE MONREAL DEL LLANO.CU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.7  mbLg.</font></p>]]></description>
 			<styleUrl>#67</styleUrl>
 			<Point>
@@ -2217,7 +2217,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE ARGEL.ARG</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 3.2  mbLg.</font></p>]]></description>
 			<styleUrl>#68</styleUrl>
 			<Point>
@@ -2227,7 +2227,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#69</styleUrl>
 			<Point>
@@ -2237,7 +2237,7 @@
 		</Placemark>
 		<Placemark>
 			<name>SW CABO DE SAN VICENTE</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.3  mbLg.</font></p>]]></description>
 			<styleUrl>#70</styleUrl>
 			<Point>
@@ -2247,7 +2247,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE COVELO.PO</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#71</styleUrl>
 			<Point>
@@ -2257,7 +2257,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.1  mbLg.</font></p>]]></description>
 			<styleUrl>#72</styleUrl>
 			<Point>
@@ -2267,7 +2267,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE BELMONTE.CU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.6  mbLg.</font></p>]]></description>
 			<styleUrl>#73</styleUrl>
 			<Point>
@@ -2277,7 +2277,7 @@
 		</Placemark>
 		<Placemark>
 			<name>NE MONREAL DEL LLANO.CU</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.9  mbLg.</font></p>]]></description>
 			<styleUrl>#74</styleUrl>
 			<Point>
@@ -2287,7 +2287,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 1.9  mbLg.</font></p>]]></description>
 			<styleUrl>#75</styleUrl>
 			<Point>
@@ -2297,7 +2297,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.1  mbLg.</font></p>]]></description>
 			<styleUrl>#76</styleUrl>
 			<Point>
@@ -2307,7 +2307,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#77</styleUrl>
 			<Point>
@@ -2317,7 +2317,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.4  mbLg.</font></p>]]></description>
 			<styleUrl>#78</styleUrl>
 			<Point>
@@ -2327,7 +2327,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.5  mbLg.</font></p>]]></description>
 			<styleUrl>#79</styleUrl>
 			<Point>
@@ -2337,7 +2337,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.0  mbLg.</font></p>]]></description>
 			<styleUrl>#80</styleUrl>
 			<Point>
@@ -2347,7 +2347,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.5  mbLg.</font></p>]]></description>
 			<styleUrl>#81</styleUrl>
 			<Point>
@@ -2357,7 +2357,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.0  mbLg.</font></p>]]></description>
 			<styleUrl>#82</styleUrl>
 			<Point>
@@ -2367,7 +2367,7 @@
 		</Placemark>
 		<Placemark>
 			<name>ALBORÁN SUR</name>
-			<description><![CDATA[<h5>Seismic Data</h5>
+			<description><![CDATA[<h4>Seismic Data</h4>
                   <p><font color="red">Magnitude of Earthquake 2.5  mbLg.</font></p>]]></description>
 			<styleUrl>#83</styleUrl>
 			<Point>
