@@ -1,0 +1,87 @@
+{
+	"button": {
+		"cancel": "取消"
+	},
+	"language": {
+		"name": {
+			"en": "英语 (美国)",
+			"es": "西班牙语",
+			"hi": "印地语",
+			"ar": "阿拉伯",
+			"ru": "俄语",
+			"ja": "日本人",
+			"zh": "简体中文",
+			"sq": "阿尔巴尼亚语"
+		},
+		"flag": "🇨🇳",
+		"selected_message": "当前选择的语言是 {language}",
+		"selection": {
+			"message": "请从列表中选择一种语言",
+			"title": "语言选择"
+		}
+	},
+	"Track": {
+		"hist": "  历史轨迹图  ",
+		"lava": "  熔岩流图  ",
+		"temp": "  温度图  ",
+		"aff": "  受影响地区地图  ",
+		"land": "  景观地图  ",
+		"So2": "  SO\u2082 排放图  ",
+		"located": "  定位活动地图  ",
+		"visual": "在 LG 中可视化",
+		"ready": "准备可视化!",
+		"Visualize": "可视化 KML",
+		"alert": "没有地理数据",
+		"alert2": "您似乎尚未向此项目添加任何地理数据。",
+		"alert3": "启动出错！",
+		"alert4": "尝试连接 LG 时出错",
+		"close": "关闭"
+	},
+	"title": {
+		"name": "拉帕尔马火山追踪器"
+	},
+	"tabs": {
+		"track": " 追踪 ",
+		"map": " 地图 ",
+		"info": " 信息 "
+	},
+	"drawer": {
+		"menu": "液态银河菜单",
+		"help": "帮助",
+		"about": "关于",
+		"task": "LG 任务",
+		"settings": "连接管理器"
+	},
+	"Tasks": {
+		"LG": "液态银河任务",
+		"Relaunch": "重新启动 \n     LG",
+		"Shutdown": "关闭 \n LG",
+		"Save": "保存 \nKML",
+		"Clean": "清洁 \nKML",
+		"alert": "成功!",
+		"alert2": "您可以在“下载”文件夹中找到包含项目地图数据的 KML",
+		"alert3": "哎呀!",
+		"alert4": "确保启用存储管理权限以下载项目 KML。还要检查您是否已阅读 KML 数据",
+		"alert5": "启动错误!",
+		"alert6": "尝试连接 LG 时出错"
+	},
+	"Settings": {
+		"alert": "连接的!",
+		"alert2": "主机可达",
+		"alert3": "哎呀!",
+		"alert4": "主机无法访问。检查提供的信息是否正确以及是否可以联系到主机",
+		"title": "连接管理器",
+		"Status": "地位: ",
+		"connect": "连接的 ",
+		"disconnect": "断开连接 ",
+		"placeholder": "例如。 lg",
+		"label": "主机用户名",
+		"placeholder2": "例如。 192.168.0.115",
+		"label2": "主机IP地址",
+		"placeholder3": "例如。 22",
+		"label3": "主机端口号",
+		"placeholder4": "例如。我的LG密码",
+		"label4": "主机密码",
+		"button": "连接到 LG"
+	}
+}

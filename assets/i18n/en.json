@@ -6,8 +6,12 @@
 		"name": {
 			"en": "English (US)",
 			"es": "Spanish",
+			"hi": "Hindi",
 			"ar": "Arabic",
-			"ru": "Russian"
+			"ru": "Russian",
+			"ja": "Japanese",
+			"zh": "Chinese (Simplified)",
+			"sq": "Albanian"
 		},
 		"flag": "🇺🇸",
 		"selected_message": "Currently selected language is {language}",
@@ -57,7 +61,7 @@
 		"alert": "Success!",
 		"alert2": "You can find a KML containing the map data of the project in your Downloads folder",
 		"alert3": "Oops!",
-		"alert4": "You have to enable storage managing permissions to download the project KML",
+		"alert4": "Make sure to enable storage managing permissions to download the project KML. Also check that you have read KML data",
 		"alert5": "Error launching!",
 		"alert6": "An error occurred while trying to connect to LG"
 	},

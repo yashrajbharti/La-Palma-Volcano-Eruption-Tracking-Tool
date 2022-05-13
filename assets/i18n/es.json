@@ -6,8 +6,12 @@
 		"name": {
 			"en": "Inglés (Estados Unidos)",
 			"es": "Español",
+			"hi": "Hindi",
 			"ar": "Arábica",
-			"ru": "Ruso"
+			"ru": "Ruso",
+			"ja": "Japonés",
+			"zh": "Chino (Simplificado)",
+			"sq": "Albanés"
 		},
 		"flag": "🇪🇸",
 		"selected_message": "El idioma seleccionado actualmente es {language}",
@@ -57,7 +61,7 @@
 		"alert": "¡Éxito!",
 		"alert2": "Puede encontrar un KML que contenga los datos del mapa del proyecto en su carpeta de Descargas",
 		"alert3": "¡Ups!",
-		"alert4": "Debe habilitar los permisos de administración de almacenamiento para descargar el archivo KML del proyecto.",
+		"alert4": "Asegúrese de habilitar los permisos de administración de almacenamiento para descargar el archivo KML del proyecto. También verifique que haya leído datos KML.",
 		"alert5": "¡Error de lanzamiento!",
 		"alert6": "Ocurrió un error al intentar conectarse a LG"
 	},

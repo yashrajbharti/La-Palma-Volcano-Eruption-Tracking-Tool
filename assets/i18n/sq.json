@@ -1,0 +1,87 @@
+{
+	"button": {
+		"cancel": "Anulo"
+	},
+	"language": {
+		"name": {
+			"en": "Anglisht (Shtetet e Bashkuara)",
+			"es": "Spanjisht",
+			"hi": "Hindi",
+			"ar": "Arabisht",
+			"ru": "Ruse",
+			"ja": "Japoneze",
+			"zh": "Kineze (e thjeshtuar)",
+			"sq": "Shqip"
+		},
+		"flag": "🇦🇱",
+		"selected_message": "Gjuha e zgjedhur aktualisht është {language}",
+		"selection": {
+			"message": "Ju lutemi zgjidhni një gjuhë nga lista",
+			"title": "Përzgjedhja e gjuhës"
+		}
+	},
+	"Track": {
+		"hist": " Pista historike ",
+		"lava": "Rrjedhja e llavës",
+		"temp": " Harta e temperaturës ",
+		"aff": " Zonat e prekura ",
+		"land": " Harta e peizazhit ",
+		"So2": " SO\u2082 Emetimet ",
+		"located": "Ngjarjet e vendosura",
+		"visual": "Shihni në LG",
+		"ready": "Gati për të vizualizuar!",
+		"Visualize": "Vizualizimi i KML",
+		"alert": "Nuk ka të dhëna gjeografike",
+		"alert2": "Me sa duket nuk ke shtuar asnjë të dhënë gjeografike në këtë projekt.",
+		"alert3": "Gabim në nisje!",
+		"alert4": "Ndodhi një gabim gjatë përpjekjes për t'u lidhur me LG",
+		"close": "Mbylle"
+	},
+	"title": {
+		"name": "Gjurmuesi i vullkanit La Palma"
+	},
+	"tabs": {
+		"track": " Pista ",
+		"map": " Harta ",
+		"info": "Informacion"
+	},
+	"drawer": {
+		"menu": "Menyja Liquid Galaxy",
+		"help": "Ndihmë",
+		"about": "Rreth",
+		"task": "LG Tasks",
+		"settings": "Menaxheri i lidhjes"
+	},
+	"Tasks": {
+		"LG": "Detyrat e Liquid Galaxy",
+		"Relaunch": "Rinis \n LG",
+		"Shutdown": "Mbyllja e \n     LG",
+		"Save": "Ruaj \nKML",
+		"Clean": "Pastroni \n   KML",
+		"alert": "Sukses!",
+		"alert2": "Mund të gjeni një KML që përmban të dhënat e hartës së projektit në dosjen tuaj Shkarkime",
+		"alert3": "Oops!",
+		"alert4": "Sigurohuni që të aktivizoni lejet e menaxhimit të hapësirës për të shkarkuar projektin KML. Kontrolloni gjithashtu që të keni lexuar të dhënat KML",
+		"alert5": "Gabim në nisje!",
+		"alert6": "Ndodhi një gabim gjatë përpjekjes për t'u lidhur me LG"
+	},
+	"Settings": {
+		"alert": "Lidhur!",
+		"alert2": "Pritësi është i arritshëm",
+		"alert3": "Oops!",
+		"alert4": "Pritësi nuk është i arritshëm. Kontrolloni nëse informacioni i dhënë është i saktë dhe nëse hosti mund të arrihet",
+		"title": "Menaxheri i lidhjes",
+		"Status": "Statusi: ",
+		"connect": "I LIDHUR ",
+		"disconnect": "SHKYQET ",
+		"placeholder": "p.sh. lg",
+		"label": "Emri i përdoruesit të makinës kryesore",
+		"placeholder2": "p.sh. 192.168.0.115",
+		"label2": "Adresa IP e makinës kryesore",
+		"placeholder3": "p.sh. 22",
+		"label3": "Numri i portës së makinës kryesore",
+		"placeholder4": "p.sh. fjalëkalimi-i-LG-së-sime",
+		"label4": "Fjalëkalimi kryesor i makinës",
+		"button": "Lidhu me LG"
+	}
+}

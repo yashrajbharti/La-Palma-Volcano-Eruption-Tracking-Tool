@@ -200,7 +200,7 @@ class _LGtasksState extends State<LGtasks> {
                             onPressed: () async {
                               var status = await Permission.storage.status;
 
-                              if (status.isGranted) {
+                              if (status.isGranted && projectname != "") {
                                 try {
                                   await KMLGenerator.generateKML(
                                       kml.mount(), projectname);
@@ -215,7 +215,7 @@ class _LGtasksState extends State<LGtasks> {
                                 var isGranted = await Permission.storage
                                     .request()
                                     .isGranted;
-                                if (isGranted) {
+                                if (isGranted && projectname != "") {
                                   // download kml
                                   try {
                                     await KMLGenerator.generateKML(

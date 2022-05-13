@@ -6,7 +6,8 @@ import 'package:webscrapperapp/codingapp/splash.dart';
 
 main() async {
   var delegate = await LocalizationDelegate.create(
-      fallbackLocale: 'en_US', supportedLocales: ['en_US', 'es', 'ar', 'ru']);
+      fallbackLocale: 'en_US',
+      supportedLocales: ['en_US', 'es', 'hi', 'ar', 'ru', 'ja', 'zh', 'sq']);
 
   runApp(LocalizedApp(delegate, MyApp()));
 }
