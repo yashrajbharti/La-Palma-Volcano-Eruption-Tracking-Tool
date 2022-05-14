@@ -97,6 +97,7 @@ flutter:
     - assets/icons/yellow_sq.png
     - assets/icons/red_sq.png
     - assets/icons/black_sq.png
+    - assets/icons/earthquake.png
     - assets/help/Affected-areas-legend.png
     - assets/i18n/
     - assets/i18n/en.json

@@ -326,7 +326,8 @@ class _SettingsState extends State<Settings> {
                   trailing: IconButton(
                     onPressed: () => onActionSheetPress(context),
                     icon: const Icon(
-                      Icons.language,
+                      Icons.translate_rounded,
+                      size: 32,
                       color: Color.fromARGB(255, 74, 74, 74),
                     ),
                   ),

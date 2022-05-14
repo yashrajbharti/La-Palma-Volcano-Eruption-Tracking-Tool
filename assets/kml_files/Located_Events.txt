@@ -23,7 +23,7 @@
 	<Style id="normal-79">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -41,7 +41,7 @@
 	<Style id="normal-77">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -49,7 +49,7 @@
 	<Style id="normal-76">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -87,7 +87,7 @@
 	<Style id="normal-72">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -105,7 +105,7 @@
 	<Style id="normal-70">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -123,7 +123,7 @@
 	<Style id="normal-68">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -131,7 +131,7 @@
 	<Style id="normal-67">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -139,7 +139,7 @@
 	<Style id="normal-66">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -157,7 +157,7 @@
 	<Style id="normal-64">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -165,7 +165,7 @@
 	<Style id="normal-75">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -183,7 +183,7 @@
 	<Style id="normal-63">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -191,7 +191,7 @@
 	<Style id="normal-62">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -199,7 +199,7 @@
 	<Style id="normal-73">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -207,7 +207,7 @@
 	<Style id="normal-61">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -225,7 +225,7 @@
 	<Style id="normal-60">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -243,7 +243,7 @@
 	<Style id="normal-59">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -251,7 +251,7 @@
 	<Style id="normal-82">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -259,7 +259,7 @@
 	<Style id="normal-58">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -277,7 +277,7 @@
 	<Style id="normal-56">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -285,7 +285,7 @@
 	<Style id="normal-55">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -303,7 +303,7 @@
 	<Style id="normal-54">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -321,7 +321,7 @@
 	<Style id="normal-53">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -329,7 +329,7 @@
 	<Style id="normal-52">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -367,7 +367,7 @@
 	<Style id="normal-49">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -395,7 +395,7 @@
 	<Style id="normal-69">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -413,7 +413,7 @@
 	<Style id="normal-46">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -421,7 +421,7 @@
 	<Style id="normal-45">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -449,7 +449,7 @@
 	<Style id="normal-71">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -457,7 +457,7 @@
 	<Style id="normal-51">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -475,7 +475,7 @@
 	<Style id="normal-23">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -483,7 +483,7 @@
 	<Style id="normal-39">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -491,7 +491,7 @@
 	<Style id="normal-40">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -519,7 +519,7 @@
 	<Style id="normal-78">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -527,7 +527,7 @@
 	<Style id="normal-38">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -545,7 +545,7 @@
 	<Style id="normal-3">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -563,7 +563,7 @@
 	<Style id="normal-37">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -581,7 +581,7 @@
 	<Style id="normal-36">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -589,7 +589,7 @@
 	<Style id="normal-1">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -597,7 +597,7 @@
 	<Style id="normal-35">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -615,7 +615,7 @@
 	<Style id="normal-34">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -633,7 +633,7 @@
 	<Style id="normal-44">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -641,7 +641,7 @@
 	<Style id="normal-80">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -649,7 +649,7 @@
 	<Style id="normal-33">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -667,7 +667,7 @@
 	<Style id="normal-32">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -705,7 +705,7 @@
 	<Style id="normal-31">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -723,7 +723,7 @@
 	<Style id="normal-81">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -761,7 +761,7 @@
 	<Style id="normal-47">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -769,7 +769,7 @@
 	<Style id="normal-65">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -777,7 +777,7 @@
 	<Style id="normal-30">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -805,7 +805,7 @@
 	<Style id="normal-48">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -833,7 +833,7 @@
 	<Style id="normal-17">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -871,7 +871,7 @@
 	<Style id="normal-43">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -879,7 +879,7 @@
 	<Style id="normal-28">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -887,7 +887,7 @@
 	<Style id="normal-27">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -895,7 +895,7 @@
 	<Style id="normal-25">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -933,7 +933,7 @@
 	<Style id="normal-41">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -951,7 +951,7 @@
 	<Style id="normal-21">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -979,7 +979,7 @@
 	<Style id="normal-13">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -987,7 +987,7 @@
 	<Style id="normal-22">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1015,7 +1015,7 @@
 	<Style id="normal-20">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1023,7 +1023,7 @@
 	<Style id="normal-42">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1031,7 +1031,7 @@
 	<Style id="normal-9">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1049,7 +1049,7 @@
 	<Style id="normal-83">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1067,7 +1067,7 @@
 	<Style id="normal-29">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1085,7 +1085,7 @@
 	<Style id="normal-24">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1093,7 +1093,7 @@
 	<Style id="normal-7">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1101,7 +1101,7 @@
 	<Style id="normal-6">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1119,7 +1119,7 @@
 	<Style id="normal-19">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1127,7 +1127,7 @@
 	<Style id="normal-16">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1195,7 +1195,7 @@
 	<Style id="normal-12">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1203,7 +1203,7 @@
 	<Style id="normal-0">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1221,7 +1221,7 @@
 	<Style id="normal-15">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1279,7 +1279,7 @@
 	<Style id="normal-10">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1287,7 +1287,7 @@
 	<Style id="normal-11">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1345,7 +1345,7 @@
 	<Style id="normal-26">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1353,7 +1353,7 @@
 	<Style id="normal-5">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1361,7 +1361,7 @@
 	<Style id="normal-74">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1369,7 +1369,7 @@
 	<Style id="normal-50">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1377,7 +1377,7 @@
 	<Style id="normal-18">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1385,7 +1385,7 @@
 	<Style id="normal-14">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1393,7 +1393,7 @@
 	<Style id="normal-57">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1401,7 +1401,7 @@
 	<Style id="normal-4">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1449,7 +1449,7 @@
 	<Style id="normal-8">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -1467,7 +1467,7 @@
 	<Style id="normal-2">
 		<IconStyle>
 			<Icon>
-				<href>https://cdn-icons-png.flaticon.com/512/1684/1684394.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
 			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
