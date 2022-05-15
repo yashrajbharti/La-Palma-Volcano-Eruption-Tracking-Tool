@@ -52,6 +52,14 @@ void onActionSheetPress(BuildContext context) {
               Navigator.of(context, rootNavigator: true).pop("hi");
             }),
         CupertinoActionSheetAction(
+            child: Text(translate('language.name.de') + " 🇩🇪",
+                style: TextStyle(
+                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+            onPressed: () {
+              changeLocale(context, "de");
+              Navigator.of(context, rootNavigator: true).pop("de");
+            }),
+        CupertinoActionSheetAction(
             child: Text(translate('language.name.ar') + " 🇦🇪",
                 style: TextStyle(
                     fontWeight: FontWeight.normal, fontFamily: "OldStandard")),

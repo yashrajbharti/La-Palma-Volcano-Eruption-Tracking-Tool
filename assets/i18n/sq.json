@@ -11,7 +11,8 @@
 			"ru": "Ruse",
 			"ja": "Japoneze",
 			"zh": "Kineze (e thjeshtuar)",
-			"sq": "Shqip"
+			"sq": "Shqip",
+			"de": "Gjermanisht"
 		},
 		"flag": "🇦🇱",
 		"selected_message": "Gjuha e zgjedhur aktualisht është {language}",

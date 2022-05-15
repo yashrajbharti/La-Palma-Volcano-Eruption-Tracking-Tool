@@ -11,7 +11,8 @@
 			"ru": "Russian",
 			"ja": "Japanese",
 			"zh": "Chinese (Simplified)",
-			"sq": "Albanian"
+			"sq": "Albanian",
+			"de": "German"
 		},
 		"flag": "🇺🇸",
 		"selected_message": "Currently selected language is {language}",

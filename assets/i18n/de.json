@@ -1,0 +1,88 @@
+{
+	"button": {
+		"cancel": "Absagen"
+	},
+	"language": {
+		"name": {
+			"en": "Englisch (Amerikanisches)",
+			"es": "Spanisch",
+			"hi": "Hindi",
+			"ar": "Arabisch",
+			"ru": "Russisch",
+			"ja": "Japanisch",
+			"zh": "Chinesisch (Vereinfachtes)",
+			"sq": "Albanisch",
+            "de": "Deutsch"
+		},
+		"flag": "🇩🇪",
+		"selected_message": "Aktuell ausgewählte Sprache ist {language}",
+		"selection": {
+			"message": "Bitte wählen Sie eine Sprache aus der Liste aus",
+			"title": "Sprachauswahl"
+		}
+	},
+	"Track": {
+		"hist": " Historische Strecke ",
+		"lava": "  Lavastromkarte  ",
+		"temp": "  Temperaturkarte  ",
+		"aff": "Betroffene Bereiche",
+		"land": " Landschaftskarte ",
+		"So2": "  SO\u2082 Emissionskarte  ",
+		"located": "Lokalisierte Ereignisse",
+		"visual": "Visuell in LG",
+		"ready": "Bereit zum Visualisieren!",
+		"Visualize": "Visualisierung von KML",
+		"alert": "Keine Geodaten",
+		"alert2": "Anscheinend haben Sie diesem Projekt keine Geodaten hinzugefügt.",
+		"alert3": "Fehler beim Starten!",
+		"alert4": "Beim Versuch, eine Verbindung zu LG herzustellen, ist ein Fehler aufgetreten",
+		"close": "Schließen"
+	},
+	"title": {
+		"name": "La Palma Vulkan Tracker"
+	},
+	"tabs": {
+		"track": " Schiene ",
+		"map": " Karte ",
+		"info": " Die Info "
+	},
+	"drawer": {
+		"menu": "Liquid Galaxy-Menü",
+		"help": "Hilfe",
+		"about": "Über",
+		"task": "LG-Aufgaben",
+		"settings": "Verbindungsmanager"
+	},
+	"Tasks": {
+		"LG": "Liquid Galaxy-Aufgaben",
+		"Relaunch": "Neustart \n    LG",
+		"Shutdown": "Abschalten \n      LG",
+		"Save": "Speichern \n   KML",
+		"Clean": "Sauber \n KML",
+		"alert": "Erfolg!",
+		"alert2": "In Ihrem Downloads-Ordner finden Sie eine KML-Datei mit den Kartendaten des Projekts",
+		"alert3": "Hoppla!",
+		"alert4": "Stellen Sie sicher, dass Sie die Speicherverwaltungsberechtigungen aktivieren, um die Projekt-KML herunterzuladen. Überprüfen Sie auch, ob Sie KML-Daten gelesen haben",
+		"alert5": "Fehler beim Starten!",
+		"alert6": "Beim Versuch, eine Verbindung zu LG herzustellen, ist ein Fehler aufgetreten"
+	},
+	"Settings": {
+		"alert": "In Verbindung gebracht!",
+		"alert2": "Gastgeber ist erreichbar",
+		"alert3": "Hoppla!",
+		"alert4": "Host ist nicht erreichbar. Überprüfen Sie, ob die angegebenen Informationen korrekt sind und ob der Host erreichbar ist",
+		"title": "Verbindungsmanager",
+		"Status": "Status: ",
+		"connect": "IN VERBINDUNG GEBRACHT ",
+		"disconnect": "GETRENNT ",
+		"placeholder": "z.B. lg",
+		"label": "Benutzername der Master-Maschine",
+		"placeholder2": "z.B. 192.168.0.115",
+		"label2": "IP-Adresse des Master-Maschine",
+		"placeholder3": "z.B. 22",
+		"label3": "Portnummer des Master-Maschine",
+		"placeholder4": "z.B. das-passwort-meines-LG",
+		"label4": "Kennwort des Master-Maschine",
+		"button": "Mit LG verbinden"
+	}
+}
