@@ -22,7 +22,7 @@ class SendtoLG extends StatefulWidget {
   State<SendtoLG> createState() => _SendtoLGState();
 }
 
-List<String> kmltext = ['', '', '', '', ''];
+List<String> kmltext = ['', '', '', '', '', '', ''];
 String localpath = "";
 bool isOpen = false;
 List<String> projectname = [
@@ -30,6 +30,8 @@ List<String> projectname = [
   "Lava_Flow",
   "Temperature",
   "Affected_Areas",
+  "Landscape",
+  "SO2_Emission",
   "Located_Events"
 ];
 List<String> localimages = [
@@ -148,7 +150,11 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
-                onPressed: null,
+                onPressed: () async {
+                  savekml_Task(projectname[0]);
+                  await _read(0);
+                  _showToast(translate('Track.ready'));
+                },
                 child: Wrap(
                   children: <Widget>[
                     SizedBox(
@@ -234,7 +240,7 @@ class _SendtoLGState extends State<SendtoLG> {
                       primary: ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
-                    savekml_Task("Affected_Areas");
+                    savekml_Task(projectname[3]);
                     await _read(3);
                     _showToast(translate('Track.ready'));
                   },
@@ -267,7 +273,11 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
-                onPressed: null,
+                onPressed: () async {
+                  savekml_Task(projectname[4]);
+                  await _read(4);
+                  _showToast(translate('Track.ready'));
+                },
                 child: Wrap(
                   children: <Widget>[
                     SizedBox(
@@ -321,8 +331,8 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15)),
               onPressed: () async {
-                savekml_Task(projectname[4]);
-                await _read(4);
+                savekml_Task(projectname[6]);
+                await _read(6);
                 _showToast(translate('Track.ready'));
               },
               child: Wrap(
@@ -516,7 +526,9 @@ class LGConnection {
           ? '40569.665945696469'
           : projectname == "Lava_Flow"
               ? '10569.665945696469'
-              : '15569.665945696469',
+              : projectname == "Affected_Areas"
+                  ? '15569.665945696469'
+                  : '30569.665945696469',
       '35',
       '0',
     );

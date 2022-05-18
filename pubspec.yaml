@@ -90,24 +90,10 @@ flutter:
     - assets/volcano.png
     - assets/menu.png
     - assets/kml_files/
-    - assets/kml_files/Located_Events.txt
-    - assets/kml_files/Affected_Areas.txt
     - assets/icons/
-    - assets/icons/vent.png
-    - assets/icons/yellow_sq.png
-    - assets/icons/red_sq.png
-    - assets/icons/black_sq.png
-    - assets/icons/earthquake.png
     - assets/help/Affected-areas-legend.png
     - assets/i18n/
-    - assets/i18n/en.json
-    - assets/i18n/ar.json
-    - assets/i18n/es.json
-    - assets/i18n/ru.json
-    - assets/i18n/hi.json
-    - assets/i18n/ja.json
-    - assets/i18n/zh.json
-    - assets/i18n/sq.json
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
