@@ -174,7 +174,11 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
-                onPressed: null,
+                onPressed: () async {
+                  savekml_Task(projectname[1]);
+                  await _read(1);
+                  _showToast(translate('Track.ready'));
+                },
                 child: Wrap(
                   children: <Widget>[
                     SizedBox(
@@ -510,7 +514,9 @@ class LGConnection {
       28.610478,
       projectname == "Located_Events"
           ? '40569.665945696469'
-          : '10569.665945696469',
+          : projectname == "Lava_Flow"
+              ? '10569.665945696469'
+              : '15569.665945696469',
       '35',
       '0',
     );

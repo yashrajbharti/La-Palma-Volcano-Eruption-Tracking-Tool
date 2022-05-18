@@ -4,13 +4,13 @@
 	},
 	"language": {
 		"name": {
-			"en": "Englisch (Amerikanisches)",
+			"en": "Englisch (AE)",
 			"es": "Spanisch",
 			"hi": "Hindi",
 			"ar": "Arabisch",
 			"ru": "Russisch",
 			"ja": "Japanisch",
-			"zh": "Chinesisch (Vereinfachtes)",
+			"zh": "Chinesisch (Vereinfacht)",
 			"sq": "Albanisch",
             "de": "Deutsch"
 		},
@@ -23,17 +23,17 @@
 	},
 	"Track": {
 		"hist": " Historische Strecke ",
-		"lava": "  Lavastromkarte  ",
+		"lava": "  Lavastrom karte  ",
 		"temp": "  Temperaturkarte  ",
 		"aff": "Betroffene Bereiche",
 		"land": " Landschaftskarte ",
 		"So2": "  SO\u2082 Emissionskarte  ",
-		"located": "Lokalisierte Ereignisse",
-		"visual": "Visuell in LG",
+		"located": " Lokale Ereignisse ",
+		"visual": "In LG Darstellen",
 		"ready": "Bereit zum Visualisieren!",
 		"Visualize": "Visualisierung von KML",
 		"alert": "Keine Geodaten",
-		"alert2": "Anscheinend haben Sie diesem Projekt keine Geodaten hinzugefügt.",
+		"alert2": "Anscheinend haben Sie diesem Projekt noch keine Geodaten hinzugefügt.",
 		"alert3": "Fehler beim Starten!",
 		"alert4": "Beim Versuch, eine Verbindung zu LG herzustellen, ist ein Fehler aufgetreten",
 		"close": "Schließen"
@@ -42,9 +42,9 @@
 		"name": "La Palma Vulkan Tracker"
 	},
 	"tabs": {
-		"track": " Schiene ",
+		"track": " Track ",
 		"map": " Karte ",
-		"info": " Die Info "
+		"info": " Info "
 	},
 	"drawer": {
 		"menu": "Liquid Galaxy-Menü",
@@ -58,31 +58,31 @@
 		"Relaunch": "Neustart \n    LG",
 		"Shutdown": "Abschalten \n      LG",
 		"Save": "Speichern \n   KML",
-		"Clean": "Sauber \n KML",
+		"Clean": "Löschen \n  KML",
 		"alert": "Erfolg!",
-		"alert2": "In Ihrem Downloads-Ordner finden Sie eine KML-Datei mit den Kartendaten des Projekts",
+		"alert2": "In Ihrem Download-Ordner finden Sie eine KML-Datei mit den Kartendaten des Projekts",
 		"alert3": "Hoppla!",
-		"alert4": "Stellen Sie sicher, dass Sie die Speicherverwaltungsberechtigungen aktivieren, um die Projekt-KML herunterzuladen. Überprüfen Sie auch, ob Sie KML-Daten gelesen haben",
+		"alert4": "Stellen sie sicher, dass Sie die Berechtigung für ihre Speicherverwaltung aktivieren, um die Projekt-KML-Datei herunterzuladen. Überprüfen Sie auch, ob sie die KML-Datei gelesen haben",
 		"alert5": "Fehler beim Starten!",
 		"alert6": "Beim Versuch, eine Verbindung zu LG herzustellen, ist ein Fehler aufgetreten"
 	},
 	"Settings": {
-		"alert": "In Verbindung gebracht!",
-		"alert2": "Gastgeber ist erreichbar",
+		"alert": "Verbindung hergestellt!",
+		"alert2": "Host erreicht",
 		"alert3": "Hoppla!",
 		"alert4": "Host ist nicht erreichbar. Überprüfen Sie, ob die angegebenen Informationen korrekt sind und ob der Host erreichbar ist",
 		"title": "Verbindungsmanager",
 		"Status": "Status: ",
-		"connect": "IN VERBINDUNG GEBRACHT ",
+		"connect": "VERBINDUNG HERGESTELLT ",
 		"disconnect": "GETRENNT ",
 		"placeholder": "z.B. lg",
 		"label": "Benutzername der Master-Maschine",
 		"placeholder2": "z.B. 192.168.0.115",
-		"label2": "IP-Adresse des Master-Maschine",
+		"label2": "IP-Adresse der Master-Maschine",
 		"placeholder3": "z.B. 22",
-		"label3": "Portnummer des Master-Maschine",
+		"label3": "Portnummer der Master-Maschine",
 		"placeholder4": "z.B. das-passwort-meines-LG",
-		"label4": "Kennwort des Master-Maschine",
+		"label4": "Kennwort der Master-Maschine",
 		"button": "Mit LG verbinden"
 	}
 }
