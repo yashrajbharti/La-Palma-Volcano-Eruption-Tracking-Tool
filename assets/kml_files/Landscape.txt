@@ -1,7 +1,7 @@
-<name>observed_event_a</name>
+	<name>Landscape</name>
 	<open>1</open>
 	<Snippet maxLines="0"></Snippet>
-	<Style id="__managed_style_0863D71F8F220BF82C13">
+	<Style id="__managed_style_1A86AE46442212CC8549">
 			<IconStyle>
 				<scale>0.9</scale>
 				<Icon>
@@ -19,98 +19,7 @@
 				<color>40ffffff</color>
 			</PolyStyle>
 			<BalloonStyle>
-				<displayMode>hide</displayMode>
-			</BalloonStyle>
-	</Style>
-	<Style id="__managed_style_18DF1F440F220BF82C12">
-			<IconStyle>
-				<scale>0.75</scale>
-				<Icon>
-					<href>https://earth.google.com/earth/rpc/cc/icon?color=5d4037&amp;id=2182&amp;scale=4</href>
-				</Icon>
-				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
-			</IconStyle>
-			<LabelStyle>
-			</LabelStyle>
-			<LineStyle>
-				<color>ff2dc0fb</color>
-				<width>4</width>
-			</LineStyle>
-			<PolyStyle>
-				<color>40ffffff</color>
-			</PolyStyle>
-			<BalloonStyle>
-				<displayMode>hide</displayMode>
-			</BalloonStyle>
-	</Style>
-	<StyleMap id="__managed_style_0F223EB190220BF82C12">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_18DF1F440F220BF82C12</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_0863D71F8F220BF82C13</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Style id="__managed_style_28A88B617C220BF8A8E9">
-			<IconStyle>
-				<scale>1.2</scale>
-				<Icon>
-					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-				</Icon>
-			</IconStyle>
-			<LabelStyle>
-				<color>00000000</color>
-				<scale>0</scale>
-			</LabelStyle>
-			<LineStyle>
-				<color>00f0f0f0</color>
-				<width>1.5</width>
-			</LineStyle>
-			<PolyStyle>
-				<color>c03a3d3a</color>
-			</PolyStyle>
-			<BalloonStyle>
-			</BalloonStyle>
-	</Style>
-	<Style id="__managed_style_103500F556220BF8A8E9">
-			<IconStyle>
-				<Icon>
-					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-				</Icon>
-			</IconStyle>
-			<LabelStyle>
-				<color>00000000</color>
-				<scale>0</scale>
-			</LabelStyle>
-			<LineStyle>
-				<color>00f0f0f0</color>
-			</LineStyle>
-			<PolyStyle>
-				<color>c03a3d3a</color>
-			</PolyStyle>
-			<BalloonStyle>
-			</BalloonStyle>
-	</Style>
-	<StyleMap id="__managed_style_00B8077730220BF8A8E9">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_103500F556220BF8A8E9</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_28A88B617C220BF8A8E9</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Folder id="FeatureLayer0">
-		<name>Lava Flow Delineation - Area Features</name>
-		<open>1</open>
-		<Snippet maxLines="0"></Snippet>
-		<Placemark id="ID_00000">
-			<name>Landscape</name>
-			<Snippet maxLines="0"></Snippet>
-			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 
 <head>
 
@@ -164,7 +73,7 @@
 
 <td>Comment</td>
 
-<td>Landscape due to Lava Flow</td>
+<td>Changed Landscape<br>due  to the Lava Flow</td>
 
 </tr>
 
@@ -194,8 +103,352 @@
 
 </body>
 
-</html>]]></description>
-			<styleUrl>#__managed_style_00B8077730220BF8A8E9</styleUrl>
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_03AD9E1AA62212CC8548">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_0A16A27D5C2212CC8549</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_1A86AE46442212CC8549</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_222421A2052212CC63BA">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>00f0f0f0</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c03a3d3a</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Landscape due to Lava Flow</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Event Type</td>
+
+<td>2-Volcanic Activity</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Object Description</td>
+
+<td>23</td>
+
+</tr>
+
+<tr>
+
+<td>Determination Method</td>
+
+<td>Photo-interpretation</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Comment</td>
+
+<td>Changed Landscape<br>due  to the Lava Flow</td>
+
+</tr>
+
+<tr>
+
+<td>Damage Source Identifier</td>
+
+<td>66</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Affected Area (ha)</td>
+
+<td>1022.848793</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_0A16A27D5C2212CC8549">
+			<IconStyle>
+				<scale>0.75</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=5d4037&amp;id=2182&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Landscape due to Lava Flow</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Event Type</td>
+
+<td>2-Volcanic Activity</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Object Description</td>
+
+<td>23</td>
+
+</tr>
+
+<tr>
+
+<td>Determination Method</td>
+
+<td>Photo-interpretation</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Comment</td>
+
+<td>Changed Landscape<br>due  to the Lava Flow</td>
+
+</tr>
+
+<tr>
+
+<td>Damage Source Identifier</td>
+
+<td>66</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Affected Area (ha)</td>
+
+<td>1022.848793</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_19BC2B04682212CC63BA">
+			<IconStyle>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>00f0f0f0</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c03a3d3a</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Landscape due to Lava Flow</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Event Type</td>
+
+<td>2-Volcanic Activity</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Object Description</td>
+
+<td>23</td>
+
+</tr>
+
+<tr>
+
+<td>Determination Method</td>
+
+<td>Photo-interpretation</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Comment</td>
+
+<td>Changed Landscape<br>due  to the Lava Flow</td>
+
+</tr>
+
+<tr>
+
+<td>Damage Source Identifier</td>
+
+<td>66</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Affected Area (ha)</td>
+
+<td>1022.848793</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_046F7AAF602212CC63BA">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_19BC2B04682212CC63BA</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_222421A2052212CC63BA</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder id="FeatureLayer0">
+		<name>Lava Flow Delineation - Area Features</name>
+		<open>1</open>
+		<Snippet maxLines="0"></Snippet>
+		<Placemark id="ID_00000">
+			<name>Landscape</name>
+			<Snippet maxLines="0"></Snippet>
+			<styleUrl>#__managed_style_046F7AAF602212CC63BA</styleUrl>
 			<MultiGeometry>
 				<Polygon>
 					<outerBoundaryIs>
@@ -313,7 +566,7 @@
 			<range>7320.008022773545</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		<styleUrl>#__managed_style_0F223EB190220BF82C12</styleUrl>
+		<styleUrl>#__managed_style_03AD9E1AA62212CC8548</styleUrl>
 		<Point>
 			<coordinates>-17.88596894764921,28.61540486014378,0</coordinates>
 		</Point>

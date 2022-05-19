@@ -1,7 +1,1071 @@
-<name>observed_event_a</name>
+	<name>Historic_Track</name>
 	<open>1</open>
 	<Snippet maxLines="0"></Snippet>
-	<Style id="__managed_style_2E772D38D3220BD4FE65">
+	<Style id="__managed_style_1BFD824C332212DE7485">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffc06b5c</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c0c06b5c</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1949</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1949 Jun 24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1949 Jul 30</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Evidence</td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> Activity Area or Unit </td>
+
+<td>San Juan <br> Llano del Banco <br> Hoyo Negro</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_020C0ED2B92212DF0141">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1A100606692212DF0141</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_21677EF3972212DF0141</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_04CFBFB72E2212EB01FD">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1949</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1949 Jun 24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1949 Jul 30</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>San Juan, <br>Llano del Banco, <br>Hoyo Negro</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+
+	</Style>
+	<Style id="__managed_style_14A2EE11572212EB01FC">
+
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1949</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1949 Jun 24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1949 Jul 30</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>San Juan, <br>Llano del Banco, <br>Hoyo Negro</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_052299217D2212EA9B90">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1D573AE4102212EA9B90</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2E42218FB82212EA9B90</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_2A3AE554972212DFB818">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1712</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1712 Oct 9</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1712 Dec 3</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>El Charco</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_2E42218FB82212EA9B90">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1646</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1646 Oct 2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1646 Dec 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>South flank of <br>San Martín (Tigalate)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_0ACE8156212212E8ED77">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1694AC2A922212E8ED77</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_27308D9BFA2212E8ED77</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_048CFE9EA42212EB01FC">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_14A2EE11572212EB01FC</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_04CFBFB72E2212EB01FD</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_194F10563A2212DFB818">
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1712</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1712 Oct 9</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1712 Dec 3</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>El Charco</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1D2D0070592212E04297">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff007cf5</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c00051f5</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1677</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1677 Nov 17</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1678 Jan 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Evidence</td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> Activity Area or Unit </td>
+
+<td>N & S flanks of San Antonio (Fuentecaliente)</td>
+
+</tr>
+
+</table>
+<br><br>
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1971</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1971 Oct 26</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1971 Nov 18</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Evidence</td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> Activity Area or Unit </td>
+
+<td> Teneguia </td>
+
+</tr>
+
+</table>
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_2F6FBC52112212EA260B">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1971</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1971 Oct 26</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1971 Nov 18</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> Teneguia </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_050095B0432212DFB818">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_194F10563A2212DFB818</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2A3AE554972212DFB818</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_1E518C841E2212EBB687">
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1430/40</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1430 ± 10 years</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>Unknown</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>Tacande (Montaña Quemada)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_004913DB562212EBB687">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1E518C841E2212EBB687</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2B3E05444E2212EBB687</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_0D815160742212EC1E54">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_12295C2FF92212EC1E54</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2052EF54062212EC1E54</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_231346B6FD2212DE748D">
 			<IconStyle>
 				<scale>1.2</scale>
 				<Icon>
@@ -20,45 +1084,7 @@
 				<color>c02f2fd3</color>
 			</PolyStyle>
 			<BalloonStyle>
-			</BalloonStyle>
-	</Style>
-	<Style id="__managed_style_1F152A286C220BD4FE65">
-			<IconStyle>
-				<Icon>
-					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-				</Icon>
-			</IconStyle>
-			<LabelStyle>
-				<color>00000000</color>
-				<scale>0</scale>
-			</LabelStyle>
-			<LineStyle>
-				<color>002f2fd3</color>
-			</LineStyle>
-			<PolyStyle>
-				<color>c02f2fd3</color>
-			</PolyStyle>
-			<BalloonStyle>
-			</BalloonStyle>
-	</Style>
-	<StyleMap id="__managed_style_09FF34AD11220BD4FE65">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1F152A286C220BD4FE65</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_2E772D38D3220BD4FE65</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Folder id="FeatureLayer0">
-		<name>Lava Flow Delineation - Area Features</name>
-		<open>1</open>
-		<Snippet maxLines="0"></Snippet>
-		<Placemark id="ID_00000">
-			<name>2021</name>
-			<Snippet maxLines="0"></Snippet>
-			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 
 <head>
 
@@ -74,7 +1100,7 @@
 
 <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
 
-<td>Not Applicable</td>
+<td>2021</td>
 
 </tr>
 
@@ -110,9 +1136,9 @@
 
 <tr bgcolor="#D4E4F3">
 
-<td>Comment</td>
+<td>Start & Stop Date</td>
 
-<td>Not Applicable</td>
+<td>Sep 19 to Dec 15 2021</td>
 
 </tr>
 
@@ -142,8 +1168,2543 @@
 
 </body>
 
-</html>]]></description>
-			<styleUrl>#__managed_style_09FF34AD11220BD4FE65</styleUrl>
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_09B07E14FE2212DE748D">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_11DA10F4892212DE748D</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_231346B6FD2212DE748D</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_29D8FEC24C2212EB67D5">
+			<IconStyle>
+				<scale>1.56</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff3c8e38</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c03c8e38</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1430/40</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1430 ± 10 years</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>Unknown</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>Tacande (Montaña Quemada)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_18CE40A2192212DE7483">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff5053ef</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c05053ef</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1712</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1712 Oct 9</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1712 Dec 3</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>El Charco</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_0B06DD00E12212EAC696">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1073D317A42212EAC696</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2877CE79802212EAC696</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_11DA10F4892212DE748D">
+			<IconStyle>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>002f2fd3</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c02f2fd3</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>2021</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Event Type</td>
+
+<td>2-Volcanic Activity</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Object Description</td>
+
+<td>23</td>
+
+</tr>
+
+<tr>
+
+<td>Determination Method</td>
+
+<td>Photo-interpretation</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Start & Stop Date</td>
+
+<td>Sep 19 to Dec 15 2021</td>
+
+</tr>
+
+<tr>
+
+<td>Damage Source Identifier</td>
+
+<td>24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Affected Area (ha)</td>
+
+<td>813.155494</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_2B3E05444E2212EBB687">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1430/40</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1430 ± 10 years</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>Unknown</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>Tacande (Montaña Quemada)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_225E4C74772212DE7485">
+			<IconStyle>
+				<scale>1.56</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffc06b5c</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c0c06b5c</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1949</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1949 Jun 24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1949 Jul 30</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Evidence</td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> Activity Area or Unit </td>
+
+<td>San Juan <br> Llano del Banco <br> Hoyo Negro</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_018236A99B2212EA572F">
+			<IconStyle>
+				<scale>1.56</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff58eeff</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c058eeff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1646</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1646 Oct 2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1646 Dec 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>South flank of <br>San Martín (Tigalate)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+
+	</Style>
+	<StyleMap id="__managed_style_084A6145802212DE7485">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1BFD824C332212DE7485</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_225E4C74772212DE7485</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_1AA1D8B2922212EA572E">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff58eeff</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c058eeff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1646</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1646 Oct 2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1646 Dec 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>South flank of <br>San Martín (Tigalate)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_2877CE79802212EAC696">
+			<IconStyle>
+				<scale>1.56</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffd27619</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c0d27619</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1949</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1949 Jun 24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1949 Jul 30</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>San Juan, <br>Llano del Banco, <br>Hoyo Negro</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1E6393D7432212EA260B">
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1971</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1971 Oct 26</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1971 Nov 18</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> Teneguia </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_065808C85F2212EA572E">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1AA1D8B2922212EA572E</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_018236A99B2212EA572F</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_0FA98564542212EA260B">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1E6393D7432212EA260B</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2F6FBC52112212EA260B</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_21677EF3972212DF0141">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1585</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1585 May 19</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1585 Aug 10</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> Tahuya </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1338E82A832212DE7482">
+			<IconStyle>
+				<scale>1.56</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff9aa626</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c09aa626</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1585</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1585 May 19</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1585 Aug 10</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> Tahuya </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_0C18F2B52C2212DE7482">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff9aa626</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c09aa626</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1585</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1585 May 19</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1585 Aug 10</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> Tahuya </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_2557C964262212E04297">
+			<IconStyle>
+				<scale>1.56</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff007cf5</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c00051f5</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1677</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1677 Nov 17</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1678 Jan 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Evidence</td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> Activity Area or Unit </td>
+
+<td>N & S flanks of San Antonio (Fuentecaliente)</td>
+
+</tr>
+
+</table>
+<br><br>
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1971</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1971 Oct 26</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1971 Nov 18</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Evidence</td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> Activity Area or Unit </td>
+
+<td> Teneguia </td>
+
+</tr>
+
+</table>
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1694AC2A922212E8ED77">
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1677</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1677 Nov 17</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1678 Jan 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> N & S flanks of <br>San Antonio <br>(Fuentecaliente) </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1073D317A42212EAC696">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffd27619</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c0d27619</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1949</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1949 Jun 24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1949 Jul 30</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>San Juan, <br>Llano del Banco, <br>Hoyo Negro</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_12295C2FF92212EC1E54">
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>2021</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Event Type</td>
+
+<td>2-Volcanic Activity</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Object Description</td>
+
+<td>23</td>
+
+</tr>
+
+<tr>
+
+<td>Determination Method</td>
+
+<td>Photo-interpretation</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Start & Stop Date</td>
+
+<td>Sep 19 to Dec 15 2021</td>
+
+</tr>
+
+<tr>
+
+<td>Damage Source Identifier</td>
+
+<td>24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Affected Area (ha)</td>
+
+<td>813.155494</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_075513BACF2212E04297">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1D2D0070592212E04297</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2557C964262212E04297</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_27308D9BFA2212E8ED77">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1677</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1677 Nov 17</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1678 Jan 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> N & S flanks of <br>San Antonio <br>(Fuentecaliente) </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1A5AD720BE2212EB67D5">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff3c8e38</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c03c8e38</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1430/40</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1430 ± 10 years</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>Unknown</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>Tacande (Montaña Quemada)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_0349CF93362212DE7483">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_18CE40A2192212DE7483</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0C33CBAF352212DE7484</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="__managed_style_0C33CBAF352212DE7484">
+			<IconStyle>
+				<scale>1.56</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff5053ef</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>c05053ef</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1712</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1712 Oct 9</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1712 Dec 3</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>El Charco</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1D573AE4102212EA9B90">
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1646</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1646 Oct 2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1646 Dec 21</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td>South flank of <br>San Martín (Tigalate)</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_1A100606692212DF0141">
+			<IconStyle>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1585</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1585 May 19</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1585 Aug 10</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td> Confirmed </td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>VEI</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td> Evidence </td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Activity Area or Unit</td>
+
+<td> Tahuya </td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<Style id="__managed_style_2052EF54062212EC1E54">
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>2021</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Event Type</td>
+
+<td>2-Volcanic Activity</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Object Description</td>
+
+<td>23</td>
+
+</tr>
+
+<tr>
+
+<td>Determination Method</td>
+
+<td>Photo-interpretation</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Start & Stop Date</td>
+
+<td>Sep 19 to Dec 15 2021</td>
+
+</tr>
+
+<tr>
+
+<td>Damage Source Identifier</td>
+
+<td>24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Affected Area (ha)</td>
+
+<td>813.155494</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_0C0D6A96362212EB67D5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1A5AD720BE2212EB67D5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_29D8FEC24C2212EB67D5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_0D3B68AAFC2212DE7481">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_0C18F2B52C2212DE7482</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_1338E82A832212DE7482</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder id="FeatureLayer0">
+		<name>Lava Flow Delineation - Area Features</name>
+		<open>1</open>
+		<Snippet maxLines="0"></Snippet>
+		<Placemark id="05F7EF4B472211F03148">
+			<name>1585</name>
+			<styleUrl>#__managed_style_0D3B68AAFC2212DE7481</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-17.88896972841855,28.57652476425365,0 -17.88819794650495,28.57657594541864,0 -17.88766329444353,28.57689788037467,0 -17.8871296872777,28.57754171423313,0 -17.88659447446635,28.57786404835423,0 -17.88570033720438,28.57786477334595,0 -17.88498502768173,28.57786535146867,0 -17.88409152307387,28.57818810386071,0 -17.88355518818659,28.5783496022408,0 -17.88266110147251,28.57867255190339,0 -17.88194559762643,28.57899549079493,0 -17.88122976179583,28.57899606078828,0 -17.88051386586795,28.57915786441531,0 -17.87961866811519,28.57948114204811,0 -17.87890214654803,28.57980441092775,0 -17.87800623125334,28.58012795380374,0 -17.87746857647963,28.58028984625227,0 -17.87675167884852,28.58045190966946,0 -17.87585603071953,28.58045260884703,0 -17.87496038090478,28.58045330560481,0 -17.87406472921099,28.58045399994296,0 -17.87316824252533,28.5806162308302,0 -17.87209334173087,28.58061705820137,0 -17.87119654790679,28.58077931814607,0 -17.87030183249838,28.58061842944729,0 -17.86940607440638,28.58061911145783,0 -17.86868946451662,28.58061965533362,0 -17.86782746887961,28.58085119227377,0 -17.86711413762231,28.58090738347457,0 -17.8657855537535,28.58069079408144,0 -17.86499787914796,28.58060948288493,0 -17.86394337839105,28.58061030174938,0 -17.86313566468293,28.58062381812647,0 -17.86259819143805,28.58062421606716,0 -17.86188358010982,28.58046320278607,0 -17.86135031256204,28.5801406160549,0 -17.86045696769556,28.57997983280931,0 -17.85974511547801,28.57965757206339,0 -17.8590633968721,28.57958604756396,0 -17.85830672966157,28.5795316465244,0 -17.85742742457042,28.57901409504969,0 -17.85671152192977,28.57901460983565,0 -17.85600088660607,28.5786927403352,0 -17.85547483064654,28.57804875726591,0 -17.85458884950138,28.57756647034384,0 -17.85370341634744,28.57708447697419,0 -17.85316715106817,28.57708485360726,0 -17.85227941447204,28.57676389575621,0 -17.85139515404748,28.57628239040459,0 -17.85086549717937,28.57596151005885,0 -17.85015746617809,28.57564088359293,0 -17.84944309896603,28.57564137351418,0 -17.84873211488977,28.57548135031801,0 -17.84820672125452,28.5750003817074,0 -17.84750319334475,28.57451982983032,0 -17.84696422100652,28.5746805031769,0 -17.84694634360178,28.5754825620042,0 -17.84700655352232,28.57634792509885,0 -17.84665706666211,28.5768699582615,0 -17.84614713569959,28.57713175802834,0 -17.84590218580914,28.57756852603656,0 -17.8454322701362,28.57826958363539,0 -17.84506992740499,28.57934527817488,0 -17.84559582762104,28.57982895623492,0 -17.84630851923021,28.579989880018,0 -17.84714241354589,28.57988755936717,0 -17.84809955599462,28.57998864203245,0 -17.84899506578979,28.57998801936285,0 -17.84971146400082,28.5799875194662,0 -17.8504246353296,28.58014846292038,0 -17.85113795203738,28.58030943975154,0 -17.85185449028463,28.58030893438063,0 -17.85257102413726,28.58030842745582,0 -17.8532875506727,28.58030791897922,0 -17.85400122635282,28.58046891924158,0 -17.85471227241679,28.5807915323384,0 -17.85542631516716,28.5809526287172,0 -17.85614050427757,28.58111375866637,0 -17.8566704563353,28.58159850775818,0 -17.85719822368827,28.58224543549177,0 -17.85772643436592,28.58289290720683,0 -17.85825990366959,28.58321664362074,0 -17.85879124373778,28.58370270324422,0 -17.85932291628951,28.5841890614208,0 -17.86003455837816,28.58467558973483,0 -17.86093059391699,28.58483734537548,0 -17.86182884924256,28.58483667663138,0 -17.86236780014954,28.58483627436953,0 -17.86326604646723,28.58483560224189,0 -17.86416428987075,28.58483492799754,0 -17.86506252752479,28.58483425163866,0 -17.86578111594251,28.58483370902727,0 -17.86649970035978,28.58483316506285,0 -17.86721828390676,28.58483261974305,0 -17.86788452602436,28.58458240960889,0 -17.86858727721472,28.58481194711514,0 -17.8694243354442,28.58486886675312,0 -17.87026579342971,28.58486818333829,0 -17.87117359144449,28.58434244707106,0 -17.87243068965233,28.58434147743739,0 -17.87296944410041,28.58434106059005,0 -17.87368622024039,28.58466523311229,0 -17.87458433090599,28.58466453452111,0 -17.87548303107501,28.58450145457479,0 -17.87620195622889,28.58433854324394,0 -17.87692116836072,28.5840133833744,0 -17.87763971209989,28.58385057172343,0 -17.87835810372183,28.58368779704717,0 -17.87889708578861,28.58336304720624,0 -17.87979442957165,28.5833623373589,0 -17.88067761284525,28.58328497441574,0 -17.8814759612987,28.58331403485214,0 -17.88236946621617,28.58342704102135,0 -17.88297220557735,28.58302898194236,0 -17.88386646700025,28.58302825377438,0 -17.88458264645772,28.58291433477281,0 -17.88535843973888,28.58257436898286,0 -17.88589280587488,28.58222339016848,0 -17.88660956779961,28.58206093897883,0 -17.88714560357228,28.58157508440031,0 -17.88786050501949,28.58108938660272,0 -17.88839580821351,28.58060413706913,0 -17.88928895624671,28.58011889613868,0 -17.88982439197273,28.5797956187416,0 -17.89036155352668,28.57979517687023,0 -17.88768199582131,28.58125120224091,0 -17.88839657789748,28.58076570769663,0 -17.88553767416997,28.58229221713087,0 -17.88559709883634,28.58229216866264,0 -17.88583501842004,28.58212310661983,0 -17.88607255451995,28.5820666790485,0 -17.88642860080386,28.58195400524067,0 -17.88684360066574,28.58184139445586,0 -17.88708059228666,28.58178510621701,0 -17.88725791021896,28.58167285606633,0 -17.88749394856383,28.58150471273342,0 -17.88773003204834,28.58139269132021,0 -17.88790628308498,28.58122501131198,0 -17.88814137473953,28.5810575318123,0 -17.88825800245085,28.58089039592211,0 -17.88849306842092,28.58077898058251,0 -17.88872726252434,28.58061215944182,0 -17.88890216900731,28.58044563275638,0 -17.8890179194291,28.58027939992228,0 -17.88925120807443,28.58011331620941,0 -17.88948497691496,28.58000266424506,0 -17.88971851612345,28.57989212149237,0 -17.8899518260421,28.57978168706562,0 -17.89018490727009,28.57967136079884,0 -17.89041986374431,28.57967116753955,0 -17.89065371064694,28.57961594787171,0 -17.89088744248674,28.57956075585977,0 -17.8911210603204,28.57950559004787,0 -17.89135456326789,28.57945045113085,0 -17.89158929037494,28.57945025751356,0 -17.89214976926162,28.57947099548232,0 -17.89304611325758,28.57963158528596,0 -17.89334797991234,28.57939388464661,0 -17.89410870723851,28.57933836105362,0 -17.8951711237311,28.57950223710914,0 -17.89606864722151,28.57988687096855,0 -17.89689712010234,28.57999653309135,0 -17.89782008944738,28.57992888255389,0 -17.8988011273015,28.580172918246,0 -17.8996803015061,28.58043318636956,0 -17.90021971987975,28.58059426613571,0 -17.90093842644997,28.58075522578207,0 -17.90190080996996,28.58087909275641,0 -17.90268907120328,28.58115697828198,0 -17.90345628638932,28.58139969274847,0 -17.90417329214232,28.58139907472286,0 -17.90524880460981,28.58139814485564,0 -17.90560472823854,28.58123612716328,0 -17.90667744136443,28.58107352112199,0 -17.90739153967744,28.58091125598176,0 -17.90810549102509,28.58074902475544,0 -17.90881929548415,28.58058682320061,0 -17.90989427185205,28.58058587718958,0 -17.91043176609551,28.58058540287711,0 -17.91078696643267,28.58042354632152,0 -17.91006123840042,28.57993976654268,0 -17.90987003618412,28.57929450795447,0 -17.90985793563668,28.57864963025099,0 -17.90949110516041,28.57816664002717,0 -17.90876976944717,28.57784523686123,0 -17.90840061063323,28.57720188008042,0 -17.90838628344125,28.57639804210746,0 -17.9085534309101,28.57575541431302,0 -17.90818771021674,28.57527422823152,0 -17.90746801567935,28.5749540268203,0 -17.90692438398592,28.57447349741763,0 -17.90621059715587,28.57447412839467,0 -17.90619744810789,28.57367312141196,0 -17.90618168974634,28.57271300800144,0 -17.90599303162193,28.5720737500333,0 -17.90562643943307,28.57143518075109,0 -17.90490909743176,28.57111656704337,0 -17.90436521250279,28.57047894412377,0 -17.90417759377324,28.56984153535011,0 -17.90363682355295,28.56936417644879,0 -17.90292315522642,28.5692055937709,0 -17.90257646417579,28.56984294543503,0 -17.90186919166664,28.57016228527585,0 -17.90152184522433,28.57080042556842,0 -17.90081597601716,28.57127976032329,0 -17.90010569055953,28.5714400167283,0 -17.89939717235731,28.57176000665946,0 -17.89868836184021,28.57208012633421,0 -17.89779931172048,28.57224069379417,0 -17.89691173508983,28.57256115868571,0 -17.89656630015519,28.57309414138384,0 -17.89602673752653,28.57377096449142,0 -17.89494421237592,28.57387630752456,0 -17.89456582234594,28.57445276847415,0 -17.89400907008942,28.57492688502003,0 -17.89318697889068,28.57480595896984,0 -17.89247666619618,28.57528775024865,0 -17.8917647885154,28.57560931031713,0 -17.89141198637307,28.57625193378711,0 -17.89069943932676,28.57657388875061,0 -17.88983486337808,28.57631022606644,0 -17.88896972841855,28.57652476425365,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="032713CA022211F03154">
+			<name>1712</name>
+			<styleUrl>#__managed_style_0349CF93362212DE7483</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-17.89820194927613,28.56618912016645,0 -17.8978763555536,28.56581833961958,0 -17.89765863026057,28.56554035190814,0 -17.89764728017383,28.5650769471906,0 -17.89763593869441,28.56461383155564,0 -17.8976246058114,28.56415100467542,0 -17.89782616351599,28.56378075505516,0 -17.89771177149726,28.56341098347632,0 -17.89748992988368,28.56294910205344,0 -17.89727046662927,28.56257984351864,0 -17.89704889410894,28.56211848046706,0 -17.89682967361868,28.56174963651218,0 -17.89650761477897,28.56147327135839,0 -17.89649667137837,28.56101240141438,0 -17.89648792260289,28.56064391142772,0 -17.89647917910862,28.56027560445175,0 -17.89626038424949,28.55990767830564,0 -17.89625387370089,28.55963170519087,0 -17.89603307551204,28.55917217625379,0 -17.89581456188589,28.5588047979766,0 -17.89549123641615,28.55843770087219,0 -17.89516597770108,28.55797901189974,0 -17.89515549209952,28.55752031202822,0 -17.89514501436656,28.5570618953256,0 -17.8949270430584,28.55669556401676,0 -17.89481602598057,28.55642088502553,0 -17.89459618051967,28.55596334677183,0 -17.89427176377668,28.55550619053762,0 -17.89405222713033,28.55504921810537,0 -17.89373018997057,28.55468398236779,0 -17.89330566598278,28.55441034592129,0 -17.89288130423891,28.55413681024534,0 -17.89266435263827,28.55377192650592,0 -17.89244750915569,28.55340722170316,0 -17.8923372180387,28.55313376360921,0 -17.89201604197201,28.55276947172785,0 -17.89190399847791,28.55240516452182,0 -17.89168568442989,28.55195010590371,0 -17.89146936255474,28.55158629924804,0 -17.89115058613817,28.55131371010772,0 -17.890934494968,28.55095021669909,0 -17.89072031874363,28.55067776313259,0 -17.8902975457421,28.55040560608844,0 -17.88987493338305,28.55013354743423,0 -17.88945420899055,28.54995235972304,0 -17.88913617518992,28.54968036995253,0 -17.88912765067969,28.5492267937856,0 -17.88880984024534,28.54895507114713,0 -17.88838959348168,28.54877417092289,0 -17.88797271624262,28.54877455461747,0 -17.88755584093246,28.54877493672717,0 -17.8872384290284,28.54850337797543,0 -17.88712949521764,28.54823172873292,0 -17.88712318388166,28.54786955907939,0 -17.88690862177808,28.54750775717033,0 -17.88679671167264,28.54705561077661,0 -17.88668642224422,28.54669411121891,0 -17.88636810316626,28.54633297982868,0 -17.88595043193285,28.54624303175591,0 -17.88553133849593,28.54606279084424,0 -17.88511090153778,28.54579231886459,0 -17.88479603618883,28.54561209229533,0 -17.88427329831319,28.54543209321735,0 -17.88385602513315,28.54534224857818,0 -17.88333618272344,28.54534271080731,0 -17.88312824609584,28.54534289497073,0 -17.8825044385165,28.54534344496315,0 -17.88177666813707,28.54534408188492,0 -17.88125562563815,28.54525432902302,0 -17.88073582530562,28.54525477833668,0 -17.88021831897454,28.54543564506529,0 -17.87970068635328,28.54561655291593,0 -17.87928583590132,28.54570715213384,0 -17.87876693922986,28.54579785052064,0 -17.87835301209771,28.54597875150934,0 -17.87804401744259,28.54624992010585,0 -17.87752583301922,28.54643101312411,0 -17.87700657471442,28.54652179020116,0 -17.87648633981786,28.54652221724666,0 -17.87607015236674,28.54652255704201,0 -17.87554992033784,28.54652297948353,0 -17.87523945564311,28.54670395807763,0 -17.874616699727,28.54688523009234,0 -17.87409634158993,28.54688564517339,0 -17.87378487441267,28.54697629530887,0 -17.87337000719131,28.5471574608275,0 -17.87285024429224,28.54724830508828,0 -17.87253862493945,28.54733899443269,0 -17.87201811003401,28.54733939915356,0 -17.87160108815622,28.54724927589801,0 -17.87118353234074,28.54706873790424,0 -17.87076608097412,28.54688824144657,0 -17.87034820144557,28.54661742110856,0 -17.86993149218432,28.54652737889566,0 -17.86982744873003,28.54652745755309,0 -17.86909868706582,28.54643765852137,0 -17.86847404791327,28.54634778950665,0 -17.86774546375776,28.54625800331151,0 -17.86722500546672,28.54616807124505,0 -17.86660060149526,28.54607822549362,0 -17.86608054808517,28.54607860139016,0 -17.86566474807211,28.54616920048025,0 -17.86535291996898,28.54625973716936,0 -17.86483318429148,28.54644076610318,0 -17.86452158972833,28.54671205896047,0 -17.86420957470527,28.54680265859884,0 -17.86379357872275,28.5469837419846,0 -17.86285717564418,28.54734610862251,0 -17.86254497028584,28.54752724942263,0 -17.86212860607348,28.54788951698139,0 -17.86171203159629,28.54834252869197,0 -17.86129519759009,28.54879581642832,0 -17.86087821399558,28.54906803409015,0 -17.86035683063262,28.54934041997725,0 -17.85993974216351,28.54943139787754,0 -17.85952232269092,28.54970384447021,0 -17.85889634650055,28.54988575802479,0 -17.85837450961144,28.55006764514313,0 -17.85785302933833,28.55006798276054,0 -17.85743557511223,28.5501590420996,0 -17.85701777266534,28.55034092327542,0 -17.85628687820532,28.55052304580851,0 -17.85566052267226,28.55061428638312,0 -17.85503408815929,28.55070553363628,0 -17.85440757408828,28.55079678995203,0 -17.85419793176075,28.5509786894442,0 -17.85388336973898,28.55125162255617,0 -17.85346376964999,28.55161568816433,0 -17.85315000767471,28.55170685960262,0 -17.85262622098172,28.55198018492078,0 -17.85231173693382,28.55216243551461,0 -17.85189332807773,28.5522537337758,0 -17.85147486607426,28.55234504070517,0 -17.85095120809421,28.55252750150008,0 -17.85053190496777,28.55270994534787,0 -17.85000872994108,28.55280136483022,0 -17.84969449056127,28.55289267401413,0 -17.84927492320832,28.55307520280667,0 -17.84875072048526,28.55325783507188,0 -17.84833260614925,28.55325807292374,0 -17.84780996160933,28.5532583681628,0 -17.84739184640497,28.55325860269247,0 -17.84697372821487,28.55325883574706,0 -17.84666013963199,28.55325900956883,0 -17.84624298946429,28.55316806787329,0 -17.84551132219825,28.55316846745756,0 -17.84519774798021,28.5531686373228,0 -17.84446823687021,28.55298671647317,0 -17.84384340234383,28.55280478123962,0 -17.8433220562853,28.55271393904851,0 -17.84290408125441,28.55271415697896,0 -17.84237918870761,28.55289667395171,0 -17.84185416226431,28.55307923411552,0 -17.84132772419699,28.55335302349076,0 -17.84111605962487,28.55353553417194,0 -17.84048340744192,28.55390079548773,0 -17.83985043395885,28.55426623631327,0 -17.83942780868275,28.5545404078375,0 -17.83910824960464,28.55490600526119,0 -17.83858061958636,28.55518046422168,0 -17.83836540659825,28.55554632587081,0 -17.83825628688395,28.55582081571833,0 -17.83814860433305,28.55600388228572,0 -17.83782539640647,28.55655335439746,0 -17.8376082716381,28.55701153399557,0 -17.83749737388657,28.55737825122558,0 -17.83738641786653,28.55774515019805,0 -17.83738029303616,28.55811217940634,0 -17.83737569696224,28.55838757019269,0 -17.83736649847521,28.55893865950705,0 -17.83735882661366,28.55939821386298,0 -17.83745616187437,28.55985800076107,0 -17.83744851130996,28.5603181253125,0 -17.83754745725013,28.56068637782354,0 -17.83754135529436,28.5610548661003,0 -17.83785363495377,28.56123901866615,0 -17.83827111653697,28.5614231623675,0 -17.8382637111187,28.56188425800033,0 -17.83825778268662,28.56225334108837,0 -17.83846226988602,28.56262249876791,0 -17.83866540126622,28.56308423081009,0 -17.83886865942651,28.56354624940902,0 -17.83918020564719,28.56382349855334,0 -17.83949327572115,28.56400833241653,0 -17.83991036454723,28.5642856955658,0 -17.84033031912797,28.5643780220556,0 -17.84075165309888,28.5643777952178,0 -17.84117428661252,28.56428501547434,0 -17.8415981374574,28.56409971784657,0 -17.84202188112761,28.56391446582763,0 -17.84244551593494,28.56372925908207,0 -17.84276496952261,28.56345170846438,0 -17.84318954625518,28.56317420321941,0 -17.84361281478643,28.56298917905724,0 -17.84403597480981,28.56280420015525,0 -17.84445902640915,28.5626192664784,0 -17.84487983763583,28.56261903013067,0 -17.84530064920012,28.56261879253325,0 -17.84582666079809,28.56261849378096,0 -17.84635169959159,28.56271053613735,0 -17.84677158511951,28.56280264820925,0 -17.84719152409648,28.56289477062013,0 -17.84771762791091,28.56289446445912,0 -17.84824287734541,28.56298653313965,0 -17.84866461164017,28.56289390847823,0 -17.84919071119707,28.56289359688319,0 -17.84971680815241,28.5628932833481,0 -17.85034812250505,28.56289290454429,0 -17.85087421680524,28.56289258673933,0 -17.85140030871158,28.56289226699426,0 -17.85182118190562,28.5628920098005,0 -17.85234727126403,28.56289168656223,0 -17.8526640734879,28.56270677412815,0 -17.85308653378088,28.56242952357688,0 -17.85340366810453,28.56215244078776,0 -17.85382582705895,28.56187539550039,0 -17.85424735164822,28.56169066775507,0 -17.85477300433527,28.56169033663537,0 -17.85519352645416,28.56169007030858,0 -17.85571917734535,28.56168973561239,0 -17.8562448277728,28.56168939892894,0 -17.85677047735794,28.56168906025848,0 -17.85729612616548,28.56168871960096,0 -17.8578217742602,28.56168837695638,0 -17.85834763717362,28.56159581768162,0 -17.85876831705225,28.56150333774924,0 -17.85929389724804,28.56150298964038,0 -17.85960910946296,28.56159498257833,0 -17.86013461900504,28.56168684571279,0 -17.86066026436922,28.56168649233734,0 -17.86108082378613,28.56159399379845,0 -17.86150131311211,28.56159370842312,0 -17.86192179263257,28.56150121918091,0 -17.86234221901599,28.56140873986968,0 -17.86265737772422,28.56113201826613,0 -17.86297234133848,28.56076328782813,0 -17.86328724208062,28.56048680557453,0 -17.86360202392283,28.56021042493995,0 -17.8639166869409,28.55993414704222,0 -17.86433621463534,28.55965789704931,0 -17.86454565697728,28.55938189613753,0 -17.86485976954958,28.55901403017298,0 -17.86506881344096,28.55864641933166,0 -17.86548752166496,28.55827884145131,0 -17.86580166815967,28.55809504584921,0 -17.8661154629184,28.55781954823269,0 -17.86653397156205,28.55754407736954,0 -17.86695264849862,28.55736038468933,0 -17.86726641515501,28.55717681257033,0 -17.86768452430025,28.55690157549558,0 -17.86810287405043,28.55671803826894,0 -17.86862630982664,28.55662605527441,0 -17.86904492026212,28.55653415826964,0 -17.86935920146542,28.55653392559096,0 -17.8700920022627,28.55644180349052,0 -17.87051101896096,28.55644148956279,0 -17.87103478977197,28.55644109518489,0 -17.87145380782488,28.55644077810692,0 -17.87187345955583,28.55653203585724,0 -17.87218774374538,28.55653179610179,0 -17.8727115516259,28.55653139476187,0 -17.87334012175953,28.55653091027119,0 -17.87396792840226,28.55643884623663,0 -17.87459646372585,28.55643835539183,0 -17.87522500019397,28.55643786139682,0 -17.87564402627642,28.55643753031579,0 -17.87616780938263,28.55643711449574,0 -17.87669159497294,28.55643669648665,0 -17.87721538134436,28.55643627628985,0 -17.8776334172947,28.55634437304474,0 -17.87805038002628,28.55616093605644,0 -17.87846724036116,28.55597754325425,0 -17.87888507045972,28.5558856924471,0 -17.87930394865513,28.55588534871062,0 -17.87972282635306,28.55588500356149,0 -17.88024411198117,28.55570158411049,0 -17.88066412452335,28.55579272306714,0 -17.88108298208353,28.55579237324454,0 -17.88150307811184,28.55588352089533,0 -17.88161153071264,28.55615799506031,0 -17.88151174265466,28.55652432558674,0 -17.88119866039213,28.55661617800542,0 -17.88077956604915,28.5566165274926,0 -17.88036280610475,28.55680008671792,0 -17.87984227916486,28.55707542168523,0 -17.87932155848914,28.55735085538558,0 -17.87911626532491,28.55771785706795,0 -17.87890871626139,28.55790151093298,0 -17.87859729478313,28.55817707664145,0 -17.87797308720259,28.55863666199967,0 -17.87755640058378,28.55891258114529,0 -17.87703364310615,28.55909677930283,0 -17.87650982971254,28.55918910265477,0 -17.87598595122687,28.55928143518414,0 -17.87556610877756,28.55928176578425,0 -17.875145425109,28.55919017781016,0 -17.87451570382886,28.55919066928422,0 -17.87399093690635,28.55919107655442,0 -17.87357260997208,28.55937524643759,0 -17.87325915707197,28.55955938045375,0 -17.87273564209112,28.55974371919158,0 -17.87242334743186,28.56011197013479,0 -17.87221528324264,28.56038825785628,0 -17.87179765640908,28.56075690594392,0 -17.87180018386048,28.56112541938151,0 -17.8720129479483,28.56149395720534,0 -17.87232963227159,28.56167813554521,0 -17.87264708279151,28.56195460769077,0 -17.87317283758846,28.56195420713502,0 -17.87369709029742,28.56176931844954,0 -17.8741160860862,28.56158455455434,0 -17.87453497809237,28.56139983506531,0 -17.874953764623,28.56121515994975,0 -17.87547753373818,28.56103044734122,0 -17.87579102601624,28.56084594329932,0 -17.87620949925779,28.560661400798,0 -17.87662974059897,28.56066106899918,0 -17.8769449214168,28.56066081929908,0 -17.87746824831953,28.56047623541486,0 -17.8778874251585,28.56038383364258,0 -17.87830550849648,28.56019939810493,0 -17.87882957730798,28.56010694281103,0 -17.87945971254782,28.56010643184598,0 -17.87998368011082,28.5600139831926,0 -17.88050876316507,28.56001355299322,0 -17.88092883185596,28.56001320735497,0 -17.88134766975188,28.55992085097816,0 -17.88165894759813,28.55964462927207,0 -17.8819701108344,28.55936850912707,0 -17.88238610944093,28.55909240316904,0 -17.88280327349069,28.55890827019879,0 -17.88322168462643,28.5588160432864,0 -17.8836414196803,28.55881568792771,0 -17.88405835398098,28.55863161904148,0 -17.88458009282492,28.55844750353767,0 -17.88489336477554,28.5583554171185,0 -17.88541787821358,28.55835496536996,0 -17.88594087374162,28.55826270616622,0 -17.88636046162542,28.55826234144569,0 -17.88677847819123,28.55817018118797,0 -17.88719804339933,28.55816981364408,0 -17.8876159866431,28.55807766170613,0 -17.88803387933106,28.55798551894903,0 -17.88845339760006,28.55798514709522,0 -17.88887291609043,28.55798477387899,0 -17.88940079167054,28.55816786173562,0 -17.8897224990484,28.55853482863391,0 -17.88972952853925,28.5589022588853,0 -17.88973832136432,28.55936180355373,0 -17.88932186740663,28.55954607542788,0 -17.88890360355957,28.55963841353196,0 -17.88869699408421,28.55982256449544,0 -17.88838866000934,28.56019091000119,0 -17.88787004426408,28.56055962066083,0 -17.88693398301967,28.56111315996199,0 -17.88640847246122,28.56111361358793,0 -17.88598806537576,28.56111397504088,0 -17.88546255993905,28.56111442504588,0 -17.88493559595168,28.56102272566429,0 -17.88430503671491,28.56102326074721,0 -17.88399395720418,28.5613000033299,0 -17.8836827630652,28.56157684785713,0 -17.88337145243263,28.56185379441097,0 -17.88295485288982,28.56213093073719,0 -17.88264197096765,28.56231577389414,0 -17.88222510694383,28.56259307931715,0 -17.88180682059494,28.56277812172199,0 -17.88138843025586,28.56296320853249,0 -17.88086469414358,28.56314842565384,0 -17.88023440604146,28.56324134965005,0 -17.87971042992521,28.56342663086251,0 -17.87918522377408,28.56351949928872,0 -17.87876629992072,28.56370476098831,0 -17.8783472715684,28.56389006728467,0 -17.87792813952339,28.56407541806075,0 -17.87750790740056,28.56416827681228,0 -17.87708665542228,28.56416860898456,0 -17.87656009289117,28.56416902249546,0 -17.8761388433579,28.56416935194179,0 -17.87571759574535,28.56416968017593,0 -17.8748751025963,28.56417033301063,0 -17.87445385699314,28.56417065761122,0 -17.87371668021951,28.56417122274683,0 -17.8731901263339,28.56417162414441,0 -17.87245295386568,28.56417218292087,0 -17.87203171297798,28.56417250055669,0 -17.871399853851,28.56417297473883,0 -17.87097861466989,28.56417328934682,0 -17.87055737700128,28.56417360274306,0 -17.87003082963248,28.56417399278614,0 -17.86960959280268,28.56417430345789,0 -17.86908304737618,28.5641746900947,0 -17.86834588527623,28.56417522820732,0 -17.86792503933357,28.56426807010016,0 -17.86750450266809,28.56445348128935,0 -17.86750595325862,28.56482383327598,0 -17.86740237952635,28.56528710893694,0 -17.86740451859535,28.56584333033024,0 -17.86761648569234,28.56612144543671,0 -17.86793439306357,28.56649240195813,0 -17.86835712901632,28.56667775846366,0 -17.86888502414951,28.56677022338815,0 -17.86941395545813,28.56704845311853,0 -17.86994153504732,28.56704806603255,0 -17.87046911548696,28.56704767716581,0 -17.87110221287326,28.56704720817529,0 -17.87162917116645,28.56695393198776,0 -17.87215672090039,28.56695353738499,0 -17.87257876220643,28.56695322041733,0 -17.87310631401274,28.56695282260219,0 -17.8735291020744,28.56704538661914,0 -17.87384795084719,28.5673238668578,0 -17.87406214191631,28.56769549665412,0 -17.87406448038396,28.56797446146735,0 -17.8740683801755,28.56843963580985,0 -17.87386098045726,28.56890526173667,0 -17.87365269430853,28.56927800392435,0 -17.8734420788454,28.56937133845676,0 -17.87323143685476,28.56946468405881,0 -17.87249500370436,28.56993134658815,0 -17.87217849084325,28.57002484011909,0 -17.8717568357465,28.57021170276104,0 -17.87122871425538,28.57030538645293,0 -17.87112474679843,28.57058540949362,0 -17.87080743408596,28.57058564359415,0 -17.8700680920507,28.57077287599998,0 -17.86943484960938,28.57105346000484,0 -17.86901255426853,28.57124057337031,0 -17.86869642321274,28.57152109976757,0 -17.86816927102571,28.57198887736806,0 -17.8677473083196,28.57236330994881,0 -17.86732442354603,28.57255074773524,0 -17.86679486631779,28.5725511256542,0 -17.86647743194487,28.5726449364634,0 -17.86573676364959,28.57292628732084,0 -17.86531346215045,28.57311386170536,0 -17.86488985436482,28.57320781497245,0 -17.8644661926201,28.57330177967385,0 -17.86404262189857,28.57348944552545,0 -17.86351295102716,28.57367723121926,0 -17.86319506555139,28.57377117852898,0 -17.8627711339351,28.57386520966832,0 -17.86224116580729,28.57405308639081,0 -17.86160504019612,28.57414729598347,0 -17.86118093632289,28.57414758540291,0 -17.86075709109195,28.57377284971728,0 -17.86043926387114,28.57358562346377,0 -17.85990945485607,28.573492278557,0 -17.85937956055789,28.57349263504707,0 -17.85895546540443,28.57358662219472,0 -17.85842532315102,28.5736806909023,0 -17.85800087186466,28.57386843883408,0 -17.85757684685667,28.57386871994367,0 -17.85704651357747,28.57396282046531,0 -17.8565161118817,28.57405693142378,0 -17.85609203108935,28.57405720925991,0 -17.85524303502759,28.57424532321465,0 -17.85471376390456,28.57405810557841,0 -17.85407911049014,28.57377726306926,0 -17.85365614153099,28.57359009161311,0 -17.85323328049355,28.57340296671966,0 -17.85291592206064,28.57330948890759,0 -17.8525991881024,28.57312236485436,0 -17.85228495161829,28.57256087202119,0 -17.85196908318214,28.57228038378809,0 -17.85154746001047,28.57200006745197,0 -17.85101809090865,28.57200039813038,0 -17.85059530517134,28.57190715743629,0 -17.85017183494431,28.57190741973317,0 -17.84974836279184,28.57190768101347,0 -17.84911315344601,28.57190807102626,0 -17.84858380966512,28.57190839428921,0 -17.84816033333914,28.57190865175534,0 -17.84784095204197,28.57209586538164,0 -17.84752058214531,28.57237667824362,0 -17.84719916071604,28.57275119533719,0 -17.84719637534793,28.57303206367731,0 -17.84697976073048,28.57350054108247,0 -17.84686997512681,28.57387549732877,0 -17.84676013476264,28.57425064272327,0 -17.84696843514362,28.57462578411399,0 -17.84717684113835,28.57500111477909,0 -17.84706699212636,28.57537682836546,0 -17.8470632345754,28.57575266711131,0 -17.84716564984783,28.57612863025254,0 -17.84737523777492,28.57641064644238,0 -17.84769201961208,28.57659860780755,0 -17.8482230567063,28.5765982806226,0 -17.84907271363063,28.5765977542078,0 -17.84981615883388,28.57659729064926,0 -17.85045267109693,28.57669098582456,0 -17.85098235414333,28.57687887731837,0 -17.85161840949344,28.57706674835554,0 -17.85214837382308,28.57725473110978,0 -17.85267788948721,28.57753696234466,0 -17.85331389988131,28.5778192291787,0 -17.85384434825026,28.57800739808059,0 -17.85426957257989,28.57800712237582,0 -17.85458986899602,28.57772416630442,0 -17.85491048188709,28.57734712702184,0 -17.8553367483778,28.57706435272124,0 -17.85576208276747,28.57696993204055,0 -17.85608113845046,28.57687559229518,0 -17.85671847922873,28.57687517264762,0 -17.85714337258197,28.5768748917688,0 -17.85778071194887,28.57687446877986,0 -17.85841805035404,28.57687404378619,0 -17.85884275464898,28.57696788964357,0 -17.85937374940401,28.57706167493539,0 -17.8597988211306,28.57696724629921,0 -17.86043628323011,28.57687268474666,0 -17.86096739621728,28.57687232376303,0 -17.86139226214073,28.57696616406103,0 -17.86181718515626,28.57715416795412,0 -17.86224221675041,28.57734221848586,0 -17.86266735709251,28.57753031691943,0 -17.86309252174146,28.57762423555853,0 -17.86362378747298,28.57752965533094,0 -17.86394231988456,28.57734104291446,0 -17.86426061164353,28.57705832638878,0 -17.86479121280505,28.5767755667591,0 -17.86510921978453,28.57649306197513,0 -17.86553376108206,28.57639869366932,0 -17.86595771297722,28.57611625546076,0 -17.86648855488025,28.57611588000188,0 -17.8670197323755,28.57620953793516,0 -17.86744479667529,28.57630328149639,0 -17.86786874603553,28.57611489714902,0 -17.86807906787299,28.57564475147004,0 -17.86839620325615,28.57536266945858,0 -17.86892677643586,28.57536228732409,0 -17.86924655266566,28.57564391088064,0 -17.86956694995187,28.57601965188604,0 -17.86999317615735,28.57630144734815,0 -17.87031281657359,28.5764893437997,0 -17.87073874989709,28.57667720991432,0 -17.87116359071547,28.57667689957003,0 -17.87158780543725,28.5765824951367,0 -17.87201196570878,28.57648810041064,0 -17.87254226406698,28.57639363879385,0 -17.87307321732905,28.57639324582301,0 -17.87349648257715,28.57620482571196,0 -17.87402580388502,28.57601637217766,0 -17.87444965130875,28.57592204368705,0 -17.87487260847129,28.57573373886859,0 -17.87529545768484,28.57554547978886,0 -17.87571998245608,28.57554515918335,0 -17.87614450734655,28.57554483765275,0 -17.87667516605692,28.57554443443678,0 -17.87720582557699,28.5755440297749,0 -17.87763035518139,28.57554370500324,0 -17.87794771991059,28.57544950880358,0 -17.87837010423759,28.57526131375591,0 -17.87889738722438,28.5749791893363,0 -17.87931951854447,28.57479111000708,0 -17.87963775674609,28.57479086259995,0 -17.8802706948967,28.57450882821862,0 -17.88079856688546,28.57432078000627,0 -17.88121903303357,28.57403908519593,0 -17.88153459238069,28.57385131940049,0 -17.88195736074871,28.573757243865,0 -17.8823800767324,28.57366317838192,0 -17.88280139781185,28.57347541969072,0 -17.88300931199612,28.57319420688983,0 -17.88332172293242,28.57281939320085,0 -17.88352806088801,28.5724448516684,0 -17.88373429468957,28.57207049784632,0 -17.88415641858534,28.57197663877913,0 -17.88457849223938,28.5718827902535,0 -17.88499903547213,28.57169547042781,0 -17.88542097848041,28.57160165460447,0 -17.885842867819,28.57150784929162,0 -17.88626314875395,28.57132061961098,0 -17.88668490954717,28.57122684691347,0 -17.88721244146365,28.57113299646899,0 -17.88763573772058,28.57113264414528,0 -17.88816150254447,28.57094541396507,0 -17.88868542726651,28.57066487535059,0 -17.8892126427235,28.57057108790785,0 -17.88963047356163,28.57029077484752,0 -17.8900481457919,28.57001056535007,0 -17.89035993714893,28.56973054944723,0 -17.89066977417511,28.56935744802593,0 -17.89076811002168,28.56898471383527,0 -17.89107954912272,28.56870508058143,0 -17.89150027915916,28.56861161816159,0 -17.8919190450945,28.56842509245988,0 -17.89233576650773,28.56814557282606,0 -17.89275429871111,28.56795916001252,0 -17.89307110804722,28.56795888179956,0 -17.89359508587538,28.56777241957484,0 -17.89411893834803,28.56758600155247,0 -17.89442946010666,28.56730688069034,0 -17.89484540515814,28.56702776874543,0 -17.89515779002739,28.56684171955403,0 -17.89557561124999,28.56665562057538,0 -17.89599332939088,28.56646956627517,0 -17.89641313815532,28.56637636443971,0 -17.89683511679391,28.56637598074106,0 -17.89725035788542,28.56609720610027,0 -17.89766771653384,28.56591128401207,0 -17.89798410526229,28.56591099309681,0 -17.89820194927613,28.56618912016645,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="01FCCA26E12211F0315A">
+			<name>1949</name>
+			<styleUrl>#__managed_style_084A6145802212DE7485</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-17.77101299630068,28.55791503699871,0 -17.77118693347949,28.55752814129423,0 -17.7709564345042,28.5586900585714,0 -17.77110237074623,28.55869005788023,0 -17.77165816379043,28.55907817950357,0 -17.77206846413348,28.559466711069,0 -17.77264366591624,28.55959630499636,0 -17.77322810913093,28.55959629328178,0 -17.77395866270691,28.55959627606748,0 -17.77438814955366,28.55972591249864,0 -17.77496394684789,28.55985558834546,0 -17.77553994372084,28.55998530773822,0 -17.77610760068982,28.56024490116143,0 -17.7766756566381,28.56050467499687,0 -17.77708940144612,28.56089469712729,0 -17.77765830415784,28.56115492536823,0 -17.77823578353164,28.5612850912468,0 -17.7788053892853,28.56154559053531,0 -17.77938337236456,28.56167588961778,0 -17.77995368261494,28.56193666048509,0 -17.78053216546522,28.56206709316739,0 -17.78111085504744,28.56219756980634,0 -17.78168974659302,28.56232809038649,0 -17.78226884027182,28.5624586549983,0 -17.78284076906892,28.56271996792259,0 -17.78341310206137,28.5629814636426,0 -17.78398583975533,28.56324314238556,0 -17.78456604840718,28.56337402190893,0 -17.78514646276515,28.56350494563264,0 -17.78572708052011,28.56363591372792,0 -17.78630790185382,28.56376692609921,0 -17.78688892693843,28.56389798283757,0 -17.78747015347265,28.56402908392777,0 -17.78804513470195,28.56429149034158,0 -17.7884670704369,28.56468549963143,0 -17.78873593717676,28.56521153496235,0 -17.78885787989469,28.56573833870447,0 -17.78881991226715,28.56652998408078,0 -17.7892498059365,28.56679418433777,0 -17.7898337402401,28.5669263048297,0 -17.79041182716287,28.56719076409759,0 -17.79099627800761,28.56732302196002,0 -17.79158093300355,28.56745532463525,0 -17.7921657972719,28.56758767302351,0 -17.7927508685393,28.56772006630165,0 -17.79333061196696,28.56798508250938,0 -17.79405857616871,28.56825026246634,0 -17.79463389538235,28.56864846747444,0 -17.79535779812366,28.56904707320887,0 -17.79564860309818,28.56918002769628,0 -17.79623052537587,28.56944607846896,0 -17.79681778486879,28.56957912237495,0 -17.79741006418013,28.56957901724089,0 -17.79799763658605,28.56971210570736,0 -17.79858541825544,28.56984523963736,0 -17.79917790526078,28.56984512957847,0 -17.79977038949096,28.56984501803046,0 -17.80051098972973,28.56984487650158,0 -17.80110346796274,28.56984476160303,0 -17.80154375584819,28.56997796399614,0 -17.80212841052317,28.5702445682539,0 -17.80285790108194,28.57064485976685,0 -17.80345846360743,28.57037772941166,0 -17.80375858178049,28.57024423591827,0 -17.80434780437167,28.57037754427489,0 -17.80508891665306,28.5703773874663,0 -17.80568180510447,28.5703772603644,0 -17.80627469151916,28.57037713179155,0 -17.80686446526189,28.57051048098788,0 -17.80744844130521,28.57091107551269,0 -17.80743038347867,28.57171382572331,0 -17.80771847672482,28.57211578391463,0 -17.80830704072491,28.57238390723397,0 -17.80890153043603,28.57238376990989,0 -17.80964725314229,28.57224944339087,0 -17.81024664153706,28.57198114165307,0 -17.81084559288615,28.57171303304655,0 -17.81174097469268,28.57144504383119,0 -17.81219056997513,28.57117735462153,0 -17.81278612369129,28.57104349105378,0 -17.81338146074238,28.57090967435594,0 -17.81412307800217,28.57090948899674,0 -17.81486469420791,28.57090930136738,0 -17.81545642789159,28.57104281922656,0 -17.81589408091252,28.57171177494406,0 -17.81633532953894,28.57211367918381,0 -17.8169282921871,28.57224762720704,0 -17.81752028163264,28.57251582101175,0 -17.81811378074115,28.57264991008182,0 -17.81870554755642,28.5730527854092,0 -17.81944930855761,28.57305258247342,0 -17.82019377203599,28.57291798404599,0 -17.82078926747156,28.57278347278929,0 -17.82153275701809,28.57278326393359,0 -17.82227657162129,28.57264875665677,0 -17.82287125500062,28.57264858630899,0 -17.82346604816577,28.57251416680364,0 -17.82406062360991,28.57251399369475,0 -17.82465498780063,28.57224546891029,0 -17.82510038527948,28.57197717937636,0 -17.82569394282516,28.57170903875798,0 -17.82643635554674,28.57170881565668,0 -17.82703028612346,28.57170863557176,0 -17.82777337000982,28.5718423661807,0 -17.82851591896192,28.57184213685276,0 -17.82911178390976,28.57211001208687,0 -17.82970706059246,28.57224392913823,0 -17.83045001576809,28.57224369412536,0 -17.83089578920957,28.57224355206217,0 -17.83149149910455,28.57237751246122,0 -17.83208887905133,28.57264576774477,0 -17.83253950295751,28.57304865803393,0 -17.83269451357877,28.57358666876646,0 -17.83270234782437,28.57426033652805,0 -17.83271019685441,28.5749352230707,0 -17.83331008827425,28.57520532552669,0 -17.83391041774141,28.57547562265445,0 -17.83450928505663,28.57561074599966,0 -17.83526174499566,28.57601675326574,0 -17.83571191867905,28.57615212023785,0 -17.83631166486539,28.57628748567163,0 -17.83661962570763,28.57683013944979,0 -17.83662878750115,28.57737368203851,0 -17.83648822916315,28.57791806484886,0 -17.83649958146538,28.57859959454262,0 -17.83665865948506,28.57914566115367,0 -17.83711815153965,28.57969242587293,0 -17.83728033894998,28.58037714011867,0 -17.8372924584815,28.5810631546384,0 -17.83760063999972,28.58147526382037,0 -17.83820763024768,28.58175012333287,0 -17.83896015619647,28.58174987179273,0 -17.83955933493733,28.58161211413602,0 -17.84015238863161,28.58119954782314,0 -17.84059751091313,28.58092473707389,0 -17.84119887721386,28.58092453099325,0 -17.84118317939459,28.58023876350922,0 -17.84116751143519,28.5795542455861,0 -17.84114874915866,28.57873446779467,0 -17.84113626474404,28.57818894424875,0 -17.8411206858372,28.57750815378224,0 -17.84051305979828,28.57710048253301,0 -17.83991187850114,28.57696482842185,0 -17.83931091976066,28.57682922346607,0 -17.83871285087123,28.57682942920184,0 -17.83825912489003,28.57655810714763,0 -17.83824878567088,28.57601574563308,0 -17.83823588363021,28.57533889875103,0 -17.83822557953294,28.57479830274145,0 -17.83865699160206,28.57398871956219,0 -17.83880058721771,28.5737192483159,0 -17.8387898973843,28.57318099205345,0 -17.83922800160532,28.57277765276794,0 -17.83981710641312,28.57250889687021,0 -17.84025425841354,28.57210628124386,0 -17.84024254092709,28.5715703492526,0 -17.84008248613435,28.57103524092082,0 -17.84021915866683,28.57050079575247,0 -17.84050377524031,28.56996706499201,0 -17.8400506963767,28.56956751018557,0 -17.8395953091816,28.56903538646475,0 -17.83914329749826,28.5686368341015,0 -17.83854919801622,28.5685042366672,0 -17.83795531562662,28.56837168589356,0 -17.83736404209023,28.56837189438945,0 -17.83707777946927,28.56890332699624,0 -17.83693913571944,28.56943546975982,0 -17.83680029227186,28.56996837713907,0 -17.83651075672492,28.57036862391065,0 -17.83622310348283,28.57090292340949,0 -17.83578448244271,28.5713042274774,0 -17.83549387191246,28.57170591444062,0 -17.8350543808926,28.57210808408933,0 -17.83460486588368,28.57184017260031,0 -17.83430228374113,28.57143854150046,0 -17.83370507197201,28.57117116053475,0 -17.83311156293722,28.57117135685679,0 -17.83236967802035,28.57117160022836,0 -17.83177338489167,28.57090440746116,0 -17.83103051268324,28.57077102522654,0 -17.83014073861263,28.57077130954211,0 -17.82939926163249,28.57077154396604,0 -17.82895437589325,28.57077168352706,0 -17.82821215197778,28.57063834168625,0 -17.82747019719942,28.57050504559961,0 -17.8267289915482,28.57050527182445,0 -17.82613602728822,28.57050545115422,0 -17.82539482249097,28.5705056732537,0 -17.82480185880536,28.57050584928322,0 -17.8240606544533,28.57050606725752,0 -17.82331931412675,28.57063980762504,0 -17.82272575683138,28.57090717293107,0 -17.82228014479574,28.57117468606335,0 -17.82183380517002,28.5715762533176,0 -17.82109152709615,28.57157646255489,0 -17.82049835133348,28.57144276590776,0 -17.81990463550288,28.57144293020594,0 -17.81916249035807,28.57144313356117,0 -17.81856976959033,28.57130948106543,0 -17.81797836508059,28.57104215779448,0 -17.81753568244898,28.570774984994,0 -17.81694636584312,28.57037456594691,0 -17.81635489958892,28.57024129161542,0 -17.8157636461769,28.5701080631469,0 -17.81517260541127,28.5699748813697,0 -17.81458177711605,28.56984174537544,0 -17.81399297994611,28.56957546522942,0 -17.81325270098946,28.56957564884815,0 -17.81266047551513,28.56957579405795,0 -17.81206608310998,28.56970912887974,0 -17.81146919791371,28.56997579674814,0 -17.81101771263458,28.5703760502555,0 -17.81042237482959,28.57050966898878,0 -17.80982939362032,28.57050980798809,0 -17.809387310714,28.5703764326521,0 -17.80864900258841,28.57024317196003,0 -17.80806201560243,28.56997658767818,0 -17.80747844738895,28.56957700073746,0 -17.80704041524949,28.56931085859366,0 -17.80645474410379,28.56904493778953,0 -17.80586949447005,28.56877920563506,0 -17.80527788938072,28.56877933113777,0 -17.80469327065217,28.56851378553564,0 -17.80410547279276,28.56838114430104,0 -17.80337008783284,28.56824857856102,0 -17.80277889982121,28.56824869685568,0 -17.80218771194821,28.56824881360685,0 -17.80159246956467,28.56838164537132,0 -17.80099701007068,28.5685145235487,0 -17.80040133326051,28.56864744861202,0 -17.7998098155728,28.56864755980263,0 -17.79922277179875,28.5685148565093,0 -17.79864051904443,28.56824948171281,0 -17.79805399739468,28.56811691698145,0 -17.79746289227988,28.56811702116753,0 -17.79688158135181,28.5678519244992,0 -17.7963006831918,28.5675870156455,0 -17.79572019979923,28.56732229350778,0 -17.79514013063352,28.56705775828265,0 -17.79455516892606,28.56692560783976,0 -17.79398123536773,28.56652924784719,0 -17.79340791391501,28.56613330978494,0 -17.7928239882486,28.56600148225334,0 -17.79224026875194,28.56586969968944,0 -17.79165093581175,28.56586978392309,0 -17.79106160176245,28.56586986653365,0 -17.79047829262035,28.56573812511867,0 -17.7902079872024,28.56521134510506,0 -17.78993806719456,28.56468531462629,0 -17.78981552665601,28.56416001342058,0 -17.78954627011628,28.56363547748573,0 -17.78897755255237,28.56324260831855,0 -17.78839668713828,28.56311179012013,0 -17.78780954261528,28.56311185736844,0 -17.78723556732594,28.56285028643187,0 -17.78666200044646,28.56258889848806,0 -17.7862422240264,28.5621971150398,0 -17.78567636953244,28.56180576072847,0 -17.78494372290795,28.56180583055649,0 -17.78436468830407,28.5616755052695,0 -17.78393233663469,28.56154521124598,0 -17.78336094282248,28.56128473323116,0 -17.782782591133,28.56115458581706,0 -17.7822193629191,28.56076432192621,0 -17.78149531995344,28.56063436382837,0 -17.78091780061111,28.56050443842414,0 -17.78033269215315,28.56050447667558,0 -17.7797475788942,28.56050451312846,0 -17.77916246076915,28.56050454778275,0 -17.77858544056165,28.56037465952197,0 -17.77817119941184,28.55998519467224,0 -17.77776563475296,28.55946654030652,0 -17.77719800670812,28.55920750237019,0 -17.7766307768546,28.55894864404405,0 -17.77604687952624,28.55894866447135,0 -17.77547161489452,28.55881931047392,0 -17.7749052847048,28.55856071758932,0 -17.77433052351801,28.5584314946343,0 -17.77375595606029,28.55830231511164,0 -17.77319062037774,28.55804407787522,0 -17.77277143108555,28.55778601813137,0 -17.77236170256812,28.55739926480808,0 -17.77178827944934,28.55727043840003,0 -17.77101299630068,28.55791503699871,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="053DBD3EEB2211F03151">
+			<name>1677 and 1971</name>
+			<styleUrl>#__managed_style_075513BACF2212E04297</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-17.86855009020431,28.48134827925243,0 -17.8686854783631,28.48121468635556,0 -17.86907608490175,28.48054832782479,0 -17.86933063746756,28.48001706271407,0 -17.8697263990611,28.47948734095858,0 -17.86969569006957,28.47895935698241,0 -17.86924791540099,28.47856455768935,0 -17.86867423706594,28.47843330614837,0 -17.86810804719361,28.47843350674981,0 -17.86766273271592,28.47803988722049,0 -17.86762152341422,28.47725499098827,0 -17.86787587464482,28.47673357360764,0 -17.86827719513543,28.47634345206282,0 -17.86852275129597,28.47569532927007,0 -17.8683468532813,28.47504975870832,0 -17.86817160840067,28.47440657493575,0 -17.86784362040432,28.4735101330294,0 -17.86755100007369,28.47325492836316,0 -17.8675173289351,28.4726183060606,0 -17.86748378277696,28.47198402022041,0 -17.86691503835593,28.47173116177001,0 -17.86634713198146,28.47147867351532,0 -17.86577400872824,28.47110053174287,0 -17.86589430501579,28.47072296712717,0 -17.86614027274283,28.47009551289571,0 -17.86612178964269,28.46972019936684,0 -17.86580949509587,28.46897213053311,0 -17.86522371746555,28.46822742156915,0 -17.86479451501445,28.46785633222419,0 -17.86450337176006,28.46748599945711,0 -17.86420745023949,28.46699343713928,0 -17.86404911335994,28.4665022489616,0 -17.86375470593841,28.46601252772525,0 -17.86332481893072,28.46552426535951,0 -17.8628961715485,28.46503740853555,0 -17.86233282095586,28.46455199755993,0 -17.86163091298901,28.46394719076156,0 -17.8610669733779,28.4633444970384,0 -17.86078782260187,28.46310404228061,0 -17.86023464022691,28.46274405130768,0 -17.85995276887939,28.46238473471194,0 -17.8594016674049,28.46202628050173,0 -17.85872034244884,28.46178784763465,0 -17.85803686843043,28.46143071235442,0 -17.85748938814815,28.46107428963185,0 -17.85708579281372,28.46107442984865,0 -17.85654249607779,28.46083729737907,0 -17.85599997292982,28.46060050013999,0 -17.85545602764044,28.46024583946033,0 -17.85491324103679,28.45989193065064,0 -17.85423769850534,28.45953881609847,0 -17.85356510843277,28.45930389563,0 -17.85289475070094,28.45918666831497,0 -17.85249344682889,28.45918679960005,0 -17.85195648015665,28.45895232763596,0 -17.85142178761805,28.45895249997684,0 -17.8508870953788,28.4589526708902,0 -17.85061785636928,28.45848445594086,0 -17.85048224871424,28.45790097514396,0 -17.8502134469552,28.45708756577742,0 -17.85007940141342,28.4566245440576,0 -17.84968021511999,28.45581742384238,0 -17.8495476190063,28.45558754866707,0 -17.84915080727138,28.45524339805947,0 -17.84888686564675,28.45489992518871,0 -17.84865169700515,28.45481841006816,0 -17.84825020746198,28.45466870878903,0 -17.84777047046296,28.45455685406342,0 -17.84722121806285,28.45455706805302,0 -17.84662118904918,28.45448277276089,0 -17.84581526271149,28.45444586868634,0 -17.8453356082523,28.45376097929679,0 -17.84555135746447,28.4539284433815,0 -17.84492604882663,28.45352654327722,0 -17.84466718165539,28.45298452439897,0 -17.84440241794628,28.45280550135059,0 -17.84400291254033,28.45248519812084,0 -17.84352355585742,28.45206623843515,0 -17.84287351366432,28.45184170934184,0 -17.84248344981127,28.45172957790091,0 -17.84196546925592,28.45150547658713,0 -17.84158144176379,28.45116979129762,0 -17.84106497619889,28.45094645775203,0 -17.84054621123413,28.45083497256003,0 -17.84003099154579,28.45061209314621,0 -17.83937944191786,28.45061226029755,0 -17.83889689601381,28.45078557494802,0 -17.83849534782999,28.45088784352631,0 -17.83789022993649,28.45095628708507,0 -17.83728424515873,28.45109330874704,0 -17.83686932070838,28.45150677861686,0 -17.83647287929919,28.45161895791077,0 -17.83618881426599,28.4521806059566,0 -17.83616610409173,28.45274413497483,0 -17.83604083289309,28.45334826161517,0 -17.8357818330999,28.45393198501134,0 -17.83514514362936,28.45426415184266,0 -17.83467885575971,28.45437555247475,0 -17.83411434512621,28.45456106508128,0 -17.83382357036433,28.45513293092995,0 -17.83350393210083,28.45523879885571,0 -17.83328583537614,28.45535273831465,0 -17.83289442501431,28.45550517096197,0 -17.83241810349696,28.45561991780387,0 -17.83193347154549,28.45585019210227,0 -17.83165633312482,28.45615906069662,0 -17.83144811416793,28.45670494127571,0 -17.83130690827557,28.45767327301748,0 -17.83098903330518,28.45860666392156,0 -17.83107110049282,28.45954524309577,0 -17.83199012634665,28.4598983823184,0 -17.83250254971348,28.46037055825087,0 -17.83261904145121,28.46072563079962,0 -17.8327298896594,28.4612002485622,0 -17.83311636491356,28.46155702527274,0 -17.83403226185119,28.46215328308262,0 -17.83470708830856,28.46215312104706,0 -17.83537694822088,28.4622725083293,0 -17.83577716171661,28.46239204533097,0 -17.83631277119409,28.46251163151894,0 -17.83685320750845,28.46251149601796,0 -17.83739789005714,28.46239163914888,0 -17.83793813117201,28.46239150107515,0 -17.83833548664579,28.46263092333978,0 -17.83859050593404,28.46311093333768,0 -17.83857516779408,28.46359238922393,0 -17.83855593260706,28.4641961494369,0 -17.83853662756434,28.46480207784365,0 -17.83851725228144,28.46541018624624,0 -17.83877465043238,28.46589817813791,0 -17.83903279292538,28.4663875782522,0 -17.83971615075472,28.46638739619522,0 -17.84026283707268,28.46638724916285,0 -17.84094619340318,28.46638706363934,0 -17.8413447237698,28.46687783876007,0 -17.84133032310028,28.46749344616937,0 -17.8411814475444,28.46798757634664,0 -17.84089462158651,28.46848318049006,0 -17.84088239331043,28.46898015101736,0 -17.84114299486573,28.46960332516466,0 -17.84099291869104,28.47010359985039,0 -17.84111914801666,28.47060526171828,0 -17.84166706280626,28.47085650909554,0 -17.8419332382907,28.47136033643388,0 -17.8417835504027,28.47186575925609,0 -17.84149433509469,28.47237270623605,0 -17.84134355733523,28.47288110657,0 -17.84161365797449,28.47326328261273,0 -17.84202395862987,28.47364626562042,0 -17.84272438432276,28.47351827521639,0 -17.84299419073574,28.47402993811947,0 -17.84298020235422,28.47480039057858,0 -17.84297084179267,28.4753159295925,0 -17.84295910153669,28.4759625066054,0 -17.84252995847283,28.4763517262247,0 -17.84196446178551,28.47648177802903,0 -17.84140441604852,28.47635204315748,0 -17.84127565239747,28.47583347402779,0 -17.84057323368511,28.47583366944,0 -17.83973032962598,28.47583390196751,0 -17.83888742434014,28.47583413234889,0 -17.83804451584035,28.47583436058468,0 -17.83748257679437,28.47583451154939,0 -17.83692063550618,28.47583466156071,0 -17.83634907257256,28.47609392414071,0 -17.83577665523903,28.47635357157605,0 -17.83520338269506,28.47661360476181,0 -17.8346292541272,28.47687402459593,0 -17.83419527685025,28.47713479497286,0 -17.83374904052422,28.47765739406399,0 -17.83331342864114,28.47791933393468,0 -17.83272952682614,28.4783129594696,0 -17.83270468052715,28.47883897469573,0 -17.83266726955495,28.4796309589524,0 -17.8324746730334,28.48069254050317,0 -17.83231942389962,28.48095896367717,0 -17.83229376565871,28.4814929423807,0 -17.83226158243276,28.48216268699929,0 -17.83266293956205,28.48224641229418,0 -17.83310758287889,28.48243106821144,0 -17.83368609881657,28.48229656230532,0 -17.8342584836818,28.48229640997496,0 -17.83496310685247,28.48256502780283,0 -17.83581211148445,28.48283401216047,0 -17.83638046170362,28.48296861750797,0 -17.83679633636768,28.48337339639452,0 -17.83748142848501,28.484145206155,0 -17.83765624456871,28.48427810590785,0 -17.83775722487788,28.48472945475407,0 -17.83832935313075,28.48486549666777,0 -17.83903827773269,28.48527452413498,0 -17.839608069664,28.485547701952,0 -17.83988969803171,28.48582137803863,0 -17.84046101386921,28.48609539019706,0 -17.84118415412138,28.48609518491409,0 -17.84190729330072,28.48609497867828,0 -17.84263297880197,28.4859576317214,0 -17.84335583921474,28.48595742368909,0 -17.84407869895333,28.48595721469619,0 -17.84494612975321,28.48595696263673,0 -17.84552441663268,28.48595679382857,0 -17.84598852772402,28.48568607412238,0 -17.84668432405557,28.48595776712163,0 -17.84725772746966,28.48623066749082,0 -17.84783590399526,28.48636784525382,0 -17.8485595941994,28.48636763014149,0 -17.84913838367455,28.4867801364469,0 -17.84957332358544,28.48705565336776,0 -17.85015338878749,28.48705547940545,0 -17.8507328960494,28.48691742883321,0 -17.85131117861535,28.48664181811893,0 -17.85188957557217,28.48650408308588,0 -17.8521747212801,28.48595480833739,0 -17.85245777928536,28.48527059426421,0 -17.85216587723107,28.4848614583361,0 -17.8517316130433,28.48458929342264,0 -17.85172694437333,28.48391036256975,0 -17.85157969474013,28.4833691167265,0 -17.85143289249317,28.4828295111377,0 -17.85157185128885,28.48215720137894,0 -17.85156751709651,28.48148747238173,0 -17.8516545743295,28.48089418052309,0 -17.85167812588782,28.48032554902716,0 -17.85182885495593,28.47969909217575,0 -17.85222200737292,28.47920187123592,0 -17.85278987071923,28.47895445983209,0 -17.85359661472277,28.47895416445555,0 -17.85422006961209,28.4788306664633,0 -17.85484240876787,28.47870738923271,0 -17.85564529981537,28.47889175186191,0 -17.85620356192636,28.47889154740851,0 -17.85694813100939,28.47882966746481,0 -17.85775442999917,28.47895264171991,0 -17.85850053798761,28.47913768761117,0 -17.85907132085508,28.47922678672575,0 -17.85964265066572,28.47935864431699,0 -17.86008056715542,28.47975523081242,0 -17.86080394378776,28.48015261798026,0 -17.86126387824259,28.4801963047143,0 -17.86180902440958,28.4804178675374,0 -17.86238333401948,28.48055061776336,0 -17.86310052802567,28.48068341967408,0 -17.86367033070563,28.48068322816905,0 -17.86397741697537,28.48121629671022,0 -17.86414255036154,28.48175102417522,0 -17.86430249163545,28.48215311942669,0 -17.86486286330727,28.48188473031072,0 -17.86543461376142,28.48188453722846,0 -17.86614930359634,28.48188429481149,0 -17.86672105888682,28.48188410002591,0 -17.86743575497449,28.48188385547972,0 -17.86800751543306,28.48188365899067,0 -17.8685719720047,28.48174951453537,0 -17.86825746594275,28.4812148349444,0 -17.86855009020431,28.48134827925243,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="0B5220B1042211F0314B">
+			<name>1646</name>
+			<styleUrl>#__managed_style_065808C85F2212EA572E</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-17.83196336067743,28.53866933746761,0 -17.83119075641821,28.53857432847214,0 -17.83071404502807,28.53857439634577,0 -17.83011815641097,28.53857447910236,0 -17.82964135388386,28.53847012746275,0 -17.82891144522374,28.53828110543969,0 -17.82852139979509,28.53803699637985,0 -17.82812958932335,28.53755040929335,0 -17.82797528650414,28.53711585031324,0 -17.82749984763175,28.53701194013346,0 -17.82702486829166,28.53680415741628,0 -17.82655018251294,28.53659650011167,0 -17.82607578984148,28.53638896943459,0 -17.82560168970517,28.53618156457118,0 -17.82512788228173,28.5359742853842,0 -17.824534293638,28.53597434612855,0 -17.82406019206193,28.53587077519578,0 -17.82370574115666,28.53566367034109,0 -17.82347185454302,28.53524979528312,0 -17.82300029076325,28.53493974744951,0 -17.82264862723209,28.53452676623388,0 -17.82205954272615,28.53421739011327,0 -17.82208795408869,28.53350744209148,0 -17.82179270364961,28.53309408003006,0 -17.82128379437478,28.53299095979036,0 -17.82108911742274,28.53268194067135,0 -17.82066315369759,28.53226436231152,0 -17.82079008070455,28.53154762531751,0 -17.82078066575746,28.53089969566362,0 -17.82099898395113,28.52977667280796,0 -17.80627366798528,28.52839200534331,0 -17.80580765999061,28.52829067400146,0 -17.80534179020704,28.52818937138578,0 -17.80475872592728,28.52808809221568,0 -17.80440671765909,28.52808807182962,0 -17.80394119950691,28.52798682475012,0 -17.80347581913876,28.52788560764575,0 -17.80301057852944,28.52778441785975,0 -17.80254951144755,28.52758216169944,0 -17.80208462005487,28.5274810595703,0 -17.80162404277852,28.52727898242692,0 -17.80128512376085,28.5269761219519,0 -17.80106785576836,28.52657275452996,0 -17.80061253134899,28.52627051972871,0 -17.800283316328,28.52576744066954,0 -17.799837756365,28.52526510655247,0 -17.79962191907656,28.52486379349956,0 -17.79964419817555,28.52436286471894,0 -17.79931215707488,28.52396262515849,0 -17.7988457014937,28.52396257129966,0 -17.79837924551731,28.5239625156045,0 -17.79781507338859,28.52356272179456,0 -17.79747976022712,28.52326320087285,0 -17.79749883477613,28.52286431571065,0 -17.79728038571622,28.52256543711762,0 -17.79682949838871,28.52226679388873,0 -17.79648054566088,28.52226674425193,0 -17.7960152737757,28.5222666764286,0 -17.79565119388,28.52256520452928,0 -17.79528678586743,28.52286400100844,0 -17.79492204518937,28.52316306885503,0 -17.79478485227835,28.52356229627024,0 -17.79453609770592,28.52386200890021,0 -17.79417045898282,28.52416197639509,0 -17.79368777543316,28.52446219325991,0 -17.79331599946875,28.52486294782601,0 -17.79341117355322,28.52526426264258,0 -17.79350646621506,28.52566605698752,0 -17.79360187337743,28.52606833830722,0 -17.79405921896749,28.52626972171274,0 -17.79451683957345,28.52647122423055,0 -17.79497990963485,28.5265720537978,0 -17.79554494282395,28.52697548753079,0 -17.79599846585704,28.52727838447628,0 -17.79656965516648,28.52758156798422,0 -17.79702405407499,28.52788500893264,0 -17.79759622640233,28.52818873473578,0 -17.79818303452102,28.52818879953225,0 -17.7986432101774,28.52839144228126,0 -17.79921200044933,28.5287970525814,0 -17.79955540404856,28.5290000461707,0 -17.80001655466616,28.52920317214009,0 -17.80047798443674,28.52940641906122,0 -17.80094398341317,28.52950810811619,0 -17.80152773331781,28.52960983519857,0 -17.80198989728911,28.52981332196608,0 -17.80257002302394,28.53001693815409,0 -17.80314653877906,28.53032257074791,0 -17.80371970593163,28.53073049690727,0 -17.80418331014163,28.5309346541508,0 -17.8046546645301,28.53093467841899,0 -17.80524021042163,28.53103681891665,0 -17.80571163273645,28.53103683931441,0 -17.80641529669186,28.5311390100919,0 -17.80688339372595,28.53124119916987,0 -17.80758416128955,28.53144566031406,0 -17.8082917144181,28.5314456771903,0 -17.80888133829209,28.53144568840114,0 -17.80935001956074,28.53154796261334,0 -17.80981294702521,28.53185495458075,0 -17.81004020005163,28.53216222361277,0 -17.81026478011292,28.53257235062375,0 -17.81013214637519,28.53308571185668,0 -17.81011761118715,28.53359985759946,0 -17.8096354427133,28.53390872025415,0 -17.80915894679608,28.53401173366915,0 -17.8086854347561,28.53401172843028,0 -17.8082119231455,28.53401172159429,0 -17.80774496027231,28.53380570843607,0 -17.80739991537748,28.53349692886817,0 -17.80693695594163,28.53318842888692,0 -17.80623455611994,28.53298290376113,0 -17.8055289734689,28.53288017488977,0 -17.80505624797917,28.53288015604824,0 -17.80470544055337,28.53277746682992,0 -17.804232784316,28.53277744502958,0 -17.80364196226522,28.53277741549046,0 -17.80305113708253,28.53277738340822,0 -17.80246030868685,28.53277734878284,0 -17.80186947500387,28.53277731161414,0 -17.80139680842186,28.53277728004823,0 -17.800924137645,28.53277724685448,0 -17.80045585326993,28.53267456953954,0 -17.79999662571484,28.53236679013284,0 -17.79965586169086,28.53205929948492,0 -17.79943339706249,28.53175209842068,0 -17.79909320200447,28.5314451664898,0 -17.79863077876247,28.5312406784619,0 -17.79816863607045,28.53103631256897,0 -17.79723545850458,28.53083201959406,0 -17.79664631200453,28.53083195588091,0 -17.79618504822543,28.53062782940624,0 -17.795606307632,28.53042380927345,0 -17.79526852224085,28.53011807410227,0 -17.7946852462725,28.53001616341139,0 -17.79421449026115,28.53001610211752,0 -17.793861422404,28.53001605503498,0 -17.7933961098,28.52991418457819,0 -17.79294196819269,28.52960888737407,0 -17.79284646222039,28.52920232529173,0 -17.79238186571125,28.52910069740737,0 -17.79212426794869,28.52950708352019,0 -17.79175437565621,28.52981217113792,0 -17.79127220289765,28.5300156806295,0 -17.79078973186028,28.53021931283063,0 -17.79053071411212,28.53062706036928,0 -17.7903892578592,28.531035321556,0 -17.79024167859759,28.53154635280045,0 -17.79009387106292,28.53205816294788,0 -17.78971557706722,28.53246813254615,0 -17.78933681525114,28.53287860411481,0 -17.7893124117173,28.53328963109961,0 -17.7895185942523,28.53380415774821,0 -17.78984958551645,28.53421636953157,0 -17.79019294221028,28.53442268854088,0 -17.79066683798432,28.53442275531953,0 -17.79125920026602,28.53442283655931,0 -17.79173308898991,28.53442289976501,0 -17.79231979373769,28.53452615614959,0 -17.79278816685811,28.53462942794824,0 -17.79337520224695,28.53473274352334,0 -17.79396782058822,28.53473281269557,0 -17.79432338783528,28.53473285301364,0 -17.7947922015239,28.53483617883956,0 -17.79526636027463,28.53483622946678,0 -17.79574051426898,28.53483627851634,0 -17.79620961013674,28.53493963190578,0 -17.79667386036332,28.53514638271843,0 -17.79725702097718,28.53535326860782,0 -17.79772187431373,28.5355602679654,0 -17.79807786408619,28.53556029788792,0 -17.79854781357777,28.5356638632964,0 -17.79913660319227,28.53576746751155,0 -17.79961139630282,28.53576750224483,0 -17.799967490573,28.53576752727499,0 -17.80056097542759,28.53576756704916,0 -17.80103576152596,28.53576759712026,0 -17.8015105433689,28.53576762563723,0 -17.80210817601465,28.53566410153734,0 -17.8024683031992,28.5355605948178,0 -17.80306159050602,28.5355606247115,0 -17.80377742831206,28.53545716505234,0 -17.8044892557286,28.53545719438059,0 -17.8049638028978,28.53545721198072,0 -17.80578708897222,28.5356642557384,0 -17.80625826314002,28.53576782534278,0 -17.80672958290071,28.535871423578,0 -17.80720104627124,28.53597505316477,0 -17.80825995745927,28.53628611741656,0 -17.80861629744917,28.53628612081643,0 -17.80909141738834,28.53628612400145,0 -17.80956352832838,28.53638987084093,0 -17.81003578349663,28.53649364915249,0 -17.81062417056195,28.53670129750697,0 -17.8112156741076,28.53680516566645,0 -17.81180469412142,28.5370129998716,0 -17.81215358125906,28.53732499655847,0 -17.81226475681207,28.53763728451726,0 -17.81261417902857,28.53794985481915,0 -17.81201882153099,28.53794986656027,0 -17.81154253609554,28.5379498742669,0 -17.81106067972339,28.53815842696042,0 -17.81069482648359,28.53847149044995,0 -17.81032863394025,28.53878484348852,0 -17.80995617923933,28.53930773976071,0 -17.80970855376673,28.53962186430621,0 -17.80945765536124,28.54004114970348,0 -17.80956499593577,28.54046095120069,0 -17.81015671224823,28.5406710411933,0 -17.81063206365571,28.54077613147926,0 -17.81122992554526,28.54077612202088,0 -17.81194735376629,28.54077610772807,0 -17.81254521004699,28.54077609336505,0 -17.81290392287082,28.54077608367713,0 -17.81350419148636,28.54067097006752,0 -17.81398473970594,28.54056589105142,0 -17.81458465154221,28.54046083867972,0 -17.81554285954617,28.54035580128022,0 -17.81602083806231,28.54035577950232,0 -17.81662024185774,28.54025078409694,0 -17.8172176197467,28.54025075267212,0 -17.81769375827684,28.54035569195905,0 -17.81840906764203,28.5404606467695,0 -17.81912305630611,28.5406706932133,0 -17.8199584858138,28.54077573005343,0 -17.82043541560942,28.54088082294019,0 -17.82115293069766,28.54088076740463,0 -17.82151168732429,28.54088073843539,0 -17.8219889317189,28.54098585838709,0 -17.82258494158943,28.54119622367932,0 -17.82318040878432,28.54151204006148,0 -17.82365667890642,28.54182815826846,0 -17.8241326286007,28.5422501204701,0 -17.82448642389654,28.54309567246009,0 -17.82448286234566,28.54362523142053,0 -17.82448000893625,28.54404947107094,0 -17.8244771518164,28.54447423800982,0 -17.82423369873248,28.54489955800277,0 -17.82435179028223,28.5452188653603,0 -17.82495355274241,28.54521880417112,0 -17.82555586168753,28.54511226815506,0 -17.82591686249674,28.54511222923174,0 -17.82663886404686,28.54511214916857,0 -17.82711989646383,28.54521856693308,0 -17.82760107970709,28.54532501672468,0 -17.82832330748223,28.54532492979678,0 -17.82880479295072,28.54532487020997,0 -17.82940665004132,28.54532479388724,0 -17.83000865803555,28.54543125488291,0 -17.83073126440723,28.54553773076723,0 -17.83133331182339,28.54553764797598,0 -17.8319358121827,28.54564416883861,0 -17.83265838382427,28.54564406441522,0 -17.83326052794717,28.54564397516222,0 -17.8338626730355,28.54564388387875,0 -17.83434438975731,28.54564380939003,0 -17.83506696645138,28.54564369522029,0 -17.83554868504714,28.54564361748272,0 -17.83603040446934,28.54564353844559,0 -17.83650978667682,28.54543027886293,0 -17.83699011361202,28.54532365711821,0 -17.83746897216837,28.54511059355784,0 -17.83782585984057,28.54479130786386,0 -17.83830118935363,28.54436605492397,0 -17.83853566635512,28.5439413725014,0 -17.83877288803692,28.54372920715925,0 -17.83912529594795,28.54319941209308,0 -17.83923734450772,28.54267048242843,0 -17.83934601010995,28.54193136581297,0 -17.83945767893387,28.54140439851422,0 -17.83933319515314,28.54108864577322,0 -17.83932680008654,28.5406680670907,0 -17.83920093580746,28.54024803108037,0 -17.83920093580746,28.54024803108037,0 -17.83919778260165,28.54003819641467,0 -17.83896506308888,28.54045804196119,0 -17.83872753847903,28.54056311822905,0 -17.83919463142884,28.53982849126226,0 -17.83954632292622,28.53940939824854,0 -17.83977832364921,28.53899084432498,0 -17.83989589751787,28.53888627458625,0 -17.84024840009463,28.53857275709007,0 -17.8402397311592,28.53805099141463,0 -17.84035007374748,28.53753000340913,0 -17.84089553397044,28.53728114900889,0 -17.84117207235434,28.53632810399201,0 -17.84091386736439,28.53576457659092,0 -17.841027011028,28.53545398123154,0 -17.84114005036548,28.53514367098175,0 -17.84101409949301,28.53473042767817,0 -17.84065144361459,28.53431773961191,0 -17.84046281170009,28.53381702936424,0 -17.84044475063997,28.53329935470824,0 -17.84052546429619,28.53268059776822,0 -17.84029959188891,28.53206452494127,0 -17.8398743519442,28.53155317058662,0 -17.83965406269161,28.53104363399708,0 -17.83933620429946,28.53063732532606,0 -17.83862523272384,28.53063737124303,0 -17.8381128319739,28.53052399740831,0 -17.83787191755856,28.53011641032284,0 -17.83774758456555,28.52960758590757,0 -17.83750593419724,28.52909955654769,0 -17.83726715904194,28.52879512686145,0 -17.83702738632583,28.52838963591157,0 -17.83678790669706,28.52798463433611,0 -17.8364314809077,28.52758014668711,0 -17.83596463659888,28.52778245386959,0 -17.83549750875688,28.52798488148445,0 -17.83502918579076,28.52808618421551,0 -17.83455988108043,28.52808626903448,0 -17.83408980852127,28.52798513607348,0 -17.83361918415993,28.52778287862408,0 -17.83326479973442,28.52737862804449,0 -17.83170276221733,28.52703250627575,0 -17.83260749925285,28.52732938453164,0 -17.83140094423106,28.52673621113867,0 -17.83115167100373,28.5262696297733,0 -17.8305664189404,28.52616905133731,0 -17.83033225105156,28.52606845081147,0 -17.83009767606635,28.52566624403929,0 -17.8299015801209,28.52516648176964,0 -17.82950416401848,28.5248741225992,0 -17.82910899869506,28.52429121224,0 -17.82851528673837,28.52400070145229,0 -17.82822006847269,28.52371077503751,0 -17.82823004485149,28.52346282192438,0 -17.82776401084841,28.52346288194037,0 -17.82706495988326,28.52346296850089,0 -17.8267157872268,28.52336318840952,0 -17.82636793481994,28.52296424400011,0 -17.8260195882125,28.52276497193134,0 -17.82555562906846,28.5224662757993,0 -17.82497519505351,28.52226732411605,0 -17.82451068952483,28.52216790800556,0 -17.82393083314338,28.52196912725391,0 -17.82346585309228,28.5219691700047,0 -17.82288462754119,28.52196922079781,0 -17.82253687411331,28.52186987605995,0 -17.82172327956772,28.52186993972937,0 -17.82125954242471,28.52177063201091,0 -17.82079718788785,28.52157206487444,0 -17.82033511246131,28.52137361462148,0 -17.81987883783457,28.52077891916388,0 -17.81953359495663,28.520580932876,0 -17.81907409234066,28.52028417274306,0 -17.81873245097635,28.51988888694508,0 -17.81862127297027,28.51959272743242,0 -17.81862753465029,28.5191982521945,0 -17.8185124299542,28.51877833839175,0 -17.81829842245821,28.51841229967985,0 -17.81816943164424,28.51800822345953,0 -17.81799949803058,28.51760690779856,0 -17.81770483647408,28.51689139574157,0 -17.81749641652279,28.51622359836077,0 -17.81729001822848,28.51595085435305,0 -17.81712581576407,28.51564070748961,0 -17.81679964335593,28.5151019392088,0 -17.81643352910348,28.51483445982215,0 -17.81607043998306,28.51445448522028,0 -17.81542254427939,28.51426548988666,0 -17.81497720918069,28.51419008554102,0 -17.81461913254317,28.51388931948616,0 -17.81411328102196,28.51318129276474,0 -17.81332044205533,28.51284903667858,0 -17.81269995224736,28.51233600373052,0 -17.81244517756668,28.51198441792734,0 -17.81198722212648,28.51198440654632,0 -17.81164891531588,28.51179160679781,0 -17.81119638920491,28.51159891516394,0 -17.81086390635874,28.51121389183612,0 -17.81052907575232,28.51092541741209,0 -17.81018895774939,28.51082930407473,0 -17.8099382680285,28.51064741148342,0 -17.80943194888641,28.51057671468377,0 -17.80892899016621,28.51047081743259,0 -17.80846623594057,28.51036511939391,0 -17.80789283537046,28.51018938935789,0 -17.80737635932455,28.50983955981944,0 -17.80674637043658,28.50949195526693,0 -17.80634271017264,28.50924993682536,0 -17.80590765624711,28.50910405791575,0 -17.80544473827653,28.50929522302366,0 -17.80509205711554,28.50958221709198,0 -17.80473906372787,28.50986946061711,0 -17.8042715806134,28.51015694652529,0 -17.80425691097065,28.51054071842561,0 -17.80412791488839,28.51092492935196,0 -17.80376251288609,28.51150207639942,0 -17.80351476141612,28.51198381731497,0 -17.80315205953059,28.51246625534258,0 -17.80291125149705,28.51275605585602,0 -17.80300654070385,28.51323968589934,0 -17.80322445846875,28.51353022340615,0 -17.80355359499145,28.51391801357728,0 -17.80378827718481,28.51437986324828,0 -17.80382007378481,28.51479746846072,0 -17.80385662748412,28.51517977091271,0 -17.80386140500785,28.51548745781889,0 -17.80395361698539,28.51610779662936,0 -17.80385301235859,28.51661677829098,0 -17.803746877595,28.51716994039732,0 -17.80376999045571,28.51768831402724,0 -17.80349901201362,28.51821133384586,0 -17.80309891104761,28.51873904858999,0 -17.80277599721876,28.51900076581136,0 -17.80234987489454,28.51898425857438,0 -17.80187459080613,28.51841017349314,0 -17.80142863163899,28.51801704380574,0 -17.80132968517584,28.51762441972055,0 -17.80110497768699,28.51728937686933,0 -17.80076915869306,28.51723220643702,0 -17.80040573550353,28.51762430837248,0 -17.80004187650835,28.51801687672085,0 -17.79967305978434,28.5182116639164,0 -17.79924015192337,28.51829257705613,0 -17.79881043787177,28.51861723461882,0 -17.79839180923305,28.51870486150446,0 -17.79805869361109,28.518409691637,0 -17.79760086531583,28.51831131155994,0 -17.79706620780129,28.51821187977431,0 -17.79662435456864,28.51833327435378,0 -17.79620358150125,28.51850775480629,0 -17.795841669591,28.51880290933124,0 -17.79593253165984,28.51929553019538,0 -17.79603345291447,28.5195914615605,0 -17.79659852476189,28.51980993181231,0 -17.79718478642834,28.51980990607785,0 -17.79751101433218,28.52018431018082,0 -17.79797481064813,28.52018437524857,0 -17.79842939481193,28.52038221262001,0 -17.79887970988733,28.52067916010595,0 -17.7992098481703,28.5210754644529,0 -17.79966098619322,28.52137302657846,0 -17.79999632022986,28.5216708425465,0 -17.80056877455609,28.52186957045029,0 -17.80091325832651,28.5219689851921,0 -17.80136994734169,28.52216787687931,0 -17.8017023253244,28.5225659530464,0 -17.80204326237664,28.52276518742963,0 -17.8023763473539,28.52316397725228,0 -17.80282637152332,28.52356325440924,0 -17.80328473255399,28.52376309220638,0 -17.80374337097075,28.52396304522384,0 -17.80419852350352,28.52426318341017,0 -17.8045410848344,28.5244634246701,0 -17.80499694090999,28.52476401024708,0 -17.8053364072498,28.52506485535881,0 -17.80567618311222,28.52536597088561,0 -17.80589935885943,28.52566735231725,0 -17.80648046792053,28.52576789930921,0 -17.80694145467358,28.52596904469625,0 -17.80740600607771,28.52606967238072,0 -17.80787391035407,28.52606969034245,0 -17.8083355253471,28.52627101159324,0 -17.80879434202714,28.52657321170323,0 -17.80913342932207,28.52697656039538,0 -17.80939279209601,28.52712543834645,0 -17.80939279209601,28.52712543834645,0 -17.80914347030788,28.52706174117673,0 -17.80889997898701,28.52693445858873,0 -17.8086568343573,28.52680735906062,0 -17.80840239636506,28.52680738347075,0 -17.80814795655927,28.52680740793195,0 -17.80788149522093,28.52693455685552,0 -17.8074049796708,28.52725320961444,0 -17.8074049796708,28.52725320961444,0 -17.80711209329483,28.52763707382426,0 -17.80688839673119,28.52795822194304,0 -17.80652251745475,28.52840977785672,0 -17.82151730514008,28.52981328775105,0 -17.82210333236085,28.53001680987569,0 -17.82245431450504,28.53022047288889,0 -17.82280741880809,28.53022044275234,0 -17.82339592591944,28.53022039041353,0 -17.82472114030186,28.53013207650492,0 -17.82401146244221,28.5301321304751,0 -17.82543440407796,28.52993001743337,0 -17.82563874366752,28.52982910738655,0 -17.82634766075142,28.52982905425953,0 -17.82675143471858,28.52992991883611,0 -17.82739751492814,28.53032185761185,0 -17.82786821137756,28.53042372221842,0 -17.82833905184219,28.53052561745838,0 -17.8288099638519,28.53083160578903,0 -17.82916346277013,28.53124005867438,0 -17.82951739505648,28.53164900948495,0 -17.82963570924427,28.53205848921347,0 -17.82999036587714,28.53246843533999,0 -17.8303452590061,28.53277621074346,0 -17.83081841500745,28.53298151574905,0 -17.83129186207353,28.53318694593604,0 -17.83176560039223,28.53339249876272,0 -17.83223864962021,28.5333924259626,0 -17.8327116996037,28.53339235155027,0 -17.83330301267116,28.53339225626772,0 -17.83389432667569,28.5333921584661,0 -17.83448564169851,28.53339205814538,0 -17.83484221153165,28.53359774691524,0 -17.83496414842386,28.53400960395565,0 -17.83508623565486,28.53442196619473,0 -17.83520942235042,28.53493813319106,0 -17.83556992251711,28.53590683599224,0 -17.83575723827859,28.53640290518828,0 -17.83430957799596,28.53779312049821,0 -17.83406858092166,28.53755009589839,0 -17.83383416465411,28.53746921539265,0 -17.83351994992968,28.53730763008635,0 -17.83313197368391,28.53722694133196,0 -17.83274689917817,28.53722695965263,0 -17.83243883981464,28.53722697465373,0 -17.8322053884493,28.5371463381337,0 -17.83189286781192,28.53698523898329,0 -17.83150822843744,28.5369852590498,0 -17.83112359062993,28.53698527958504,0 -17.83073895337481,28.53698530058909,0 -17.83035431695516,28.53698532206189,0 -17.83004182524773,28.53674412215485,0 -17.82973003450592,28.53650346108688,0 -17.82942165727025,28.53642337501234,0 -17.8291110267306,28.53618343258455,0 -17.82880221586633,28.53602377770641,0 -17.82841832132313,28.53594405326202,0 -17.82826244274609,28.5357051727303,0 -17.82825783850427,28.53530820657429,0 -17.82840659375031,28.53499168342207,0 -17.8285549085984,28.5346760973579,0 -17.82862890109473,28.53451865339911,0 -17.82824868149931,28.53451867872991,0 -17.82801889539928,28.53436149006817,0 -17.82793892267183,28.53396949686289,0 -17.82793495221181,28.53357894168933,0 -17.82800820093971,28.53334529150404,0 -17.82838632150894,28.53334526536386,0 -17.82868774957328,28.53326747951265,0 -17.82906693991465,28.53334521913553,0 -17.82929769305786,28.53357884933167,0 -17.82945587377031,28.53396939536779,0 -17.82961180866424,28.53420441061299,0 -17.82977103976162,28.53459727012627,0 -17.82985313888211,28.53491260839996,0 -17.83008648164169,28.53514971729172,0 -17.83032203118273,28.53546668768163,0 -17.83055650568992,28.53570503080391,0 -17.83078963988839,28.53586421911556,0 -17.83102507532274,28.53610345145268,0 -17.8314868741266,28.5361832940478,0 -17.83187007870175,28.53618327327548,0 -17.83240656606569,28.53618324492803,0 -17.83263649009649,28.53618323304114,0 -17.83301969699788,28.53618321357915,0 -17.83332345131543,28.53610332978214,0 -17.83362990451731,28.5361033147388,0 -17.83475482730814,28.53675123347974,0 -17.83425228590433,28.53634307051603,0 -17.83494467218903,28.53713718062916,0 -17.83538095522669,28.53696305791326,0 -17.83568480252629,28.53653962925247,0 -17.83565487896654,28.53656763026909,0 -17.83464226444481,28.53746792951088,0 -17.83436167567892,28.53780021073174,0 -17.834050260116,28.53846947361913,0 -17.8341686268237,28.53836506984975,0 -17.83393261302821,28.53867835803675,0 -17.83273240415432,28.53918080025316,0 -17.83381341581041,28.53867837726536,0 -17.83333795732266,28.53888744761027,0 -17.83196336067743,28.53866933746761,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="08B1CC4D372211F03145">
+			<name>1949</name>
+			<styleUrl>#__managed_style_0B06DD00E12212EAC696</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-17.91747731438347,28.58788037370072,0 -17.9168114737928,28.5884683756318,0 -17.91547824102201,28.58935066762895,0 -17.91414494623358,28.59023298934455,0 -17.91314602294591,28.59111508308105,0 -17.91156102434218,28.59197642518391,0 -17.91022620802192,28.59267782358344,0 -17.90933665404117,28.59320485334415,0 -17.90747198309012,28.59346969655908,0 -17.90647280706127,28.59435189528748,0 -17.90580803082207,28.59523389795981,0 -17.90413983789244,28.59611663031162,0 -17.9041901429079,28.5974531179458,0 -17.90092691538493,28.59775287341892,0 -17.90072942490817,28.5976936271392,0 -17.900797308194,28.59781241192053,0 -17.90119114839177,28.59787151609223,0 -17.90177605887022,28.59769273405485,0 -17.9020363604793,28.59763310710328,0 -17.90007877104649,28.59787246354788,0 -17.8994987114066,28.59834889807727,0 -17.89844793990722,28.59817122274496,0 -17.89712677630625,28.59847234956016,0 -17.89612091885174,28.59788519276322,0 -17.89735433290756,28.5971583983303,0 -17.89756517798574,28.59641229962146,0 -17.89878749392463,28.59582636314685,0 -17.89844664249807,28.59553210230201,0 -17.89703181384588,28.59593891758676,0 -17.8963600585624,28.59607479710131,0 -17.89471395556534,28.59621154338364,0 -17.89444557738438,28.59728337237857,0 -17.89287679002444,28.59728469029942,0 -17.89143531791459,28.5970064701004,0 -17.89009887944178,28.59730115335362,0 -17.88876127588675,28.5973019554983,0 -17.88789714255046,28.59655583555017,0 -17.88808212219085,28.59465776750728,0 -17.88740884829242,28.5934829543236,0 -17.88607149795432,28.59348375827271,0 -17.88609325775521,28.59446308723252,0 -17.88574612027136,28.59583446862117,0 -17.88541511313874,28.59671620023341,0 -17.88459873778683,28.59750852796169,0 -17.8827434013084,28.59759930833481,0 -17.8820778933488,28.59848131182202,0 -17.88107793976076,28.59936354372305,0 -17.87982749222604,28.60015685623307,0 -17.87889832317243,28.60075720687792,0 -17.87706732074596,28.5999534981738,0 -17.87572876801135,28.59966029161726,0 -17.87438928108596,28.5990731881721,0 -17.87354680600203,28.59853817303982,0 -17.87144551144916,28.59833541878604,0 -17.87024572774378,28.59820015217849,0 -17.86964004905369,28.59840495429401,0 -17.86896659974176,28.5982692459228,0 -17.86779506669554,28.59843958362613,0 -17.86490717846007,28.59873476629591,0 -17.86298449901875,28.59817354562383,0 -17.86236896175562,28.59757062246949,0 -17.86167918380216,28.59731611983377,0 -17.86034198996786,28.59731671668064,0 -17.85959082736073,28.59737108728306,0 -17.85928961136,28.59730429812831,0 -17.858989857267,28.59730443939397,0 -17.85861516371338,28.59730461547274,0 -17.85794203717197,28.59737186149,0 -17.85756860047365,28.59743897704663,0 -17.85734501427804,28.59750603491236,0 -17.85712388069243,28.59770706793682,0 -17.85674899977507,28.59770724087155,0 -17.8573341389271,28.59761186197848,0 -17.85599850254844,28.59820012466629,0 -17.85466206727196,28.59849453030775,0 -17.85332488681312,28.59849507235739,0 -17.85265845891106,28.5993769367181,0 -17.85439606097546,28.59971363159249,0 -17.85533517762624,28.60025751435739,0 -17.85667324318145,28.60055085975537,0 -17.86258160418542,28.60296558525965,0 -17.86250611249139,28.60296562009482,0 -17.86220244309735,28.60289785790627,0 -17.86189715432929,28.60276223153394,0 -17.861665779713,28.60255877377863,0 -17.86128528270789,28.60242330035496,0 -17.8611392253515,28.60262685870381,0 -17.86129662437589,28.60289827413064,0 -17.86145413428746,28.60316987892961,0 -17.8617595033025,28.60330564961651,0 -17.86206329197693,28.60337348350579,0 -17.86222116922179,28.60364542048185,0 -17.86207512717267,28.60384961830187,0 -17.86177281613777,28.60384975621096,0 -17.86131935288966,28.60384996262799,0 -17.86101384692402,28.60371400335802,0 -17.8607840000038,28.60357805547848,0 -17.86055111842885,28.6033062009706,0 -17.86039544130527,28.60310242646748,0 -17.86008584973544,28.602763060921,0 -17.85985495387529,28.60255960314608,0 -17.85954875022118,28.60235628786374,0 -17.85924270957156,28.60215307706606,0 -17.85893824219929,28.60201770965979,0 -17.85870787250891,28.60181464142887,0 -17.85855160488213,28.60154398191523,0 -17.85824614863787,28.60134119695857,0 -17.85801616341947,28.6011384826383,0 -17.8572580028252,28.60086856683407,0 -17.86242545882835,28.60276198787817,0 -17.86188879058978,28.60242302219115,0 -17.86158539006122,28.60235535466468,0 -17.86128042655143,28.6022199157173,0 -17.86097716098987,28.60215228336723,0 -17.86074621269065,28.60194914632268,0 -17.8604415576113,28.60181384876927,0 -17.8601370101326,28.60167860002965,0 -17.86234656138887,28.60262630265606,0 -17.86021237444545,28.60167856539827,0 -17.85990792226848,28.60154336195079,0 -17.859677437545,28.60134054292984,0 -17.85967006033007,28.6010025720683,0 -17.85973943671363,28.6007323712785,0 -17.85988251878032,28.6003948582299,0 -17.85987804427228,28.60019253324394,0 -17.86024957496617,28.59999013765356,0 -17.86062246823506,28.5998552068632,0 -17.86135149149762,28.59966718038491,0 -17.86268882917608,28.59966658569652,0 -17.86781703169025,28.59986727973585,0 -17.86735952866487,28.59980781366137,0 -17.86493028597711,28.59980976482759,0 -17.8687079688033,28.59995768690771,0 -17.87004541167857,28.59995704149198,0 -17.87138382987412,28.60025029333536,0 -17.87266655769574,28.60018632461865,0 -17.87390289066228,28.60099569556988,0 -17.87460573621913,28.60160395030655,0 -17.87553529827021,28.60168618565698,0 -17.87628729272841,28.60196082983154,0 -17.87703761811703,28.60244244054534,0 -17.8784706209264,28.60285514954748,0 -17.87975409835685,28.60318545843799,0 -17.88222396553478,28.60340697950968,0 -17.88242751747921,28.60259609097865,0 -17.88376420986477,28.60230139571887,0 -17.88460995843834,28.60207581350241,0 -17.88546687312338,28.60201482410705,0 -17.88685242363532,28.60129128634527,0 -17.88836598569793,28.60122990723326,0 -17.89109253383495,28.6014672737559,0 -17.89298529662304,28.60187841721924,0 -17.8941951205407,28.60194624927054,0 -17.89540737537993,28.60215182725078,0 -17.89681004792971,28.60258777978585,0 -17.89814938645305,28.60288093991424,0 -17.89982201013017,28.60287989504484,0 -17.9014946627727,28.60287883579347,0 -17.90283282108258,28.60287797802699,0 -17.90417100591362,28.60287711104977,0 -17.90550921760382,28.60287623486107,0 -17.90684745649124,28.60287534946009,0 -17.90644280509901,28.60278182577371,0 -17.90756060153933,28.60266004621547,0 -17.90828023560769,28.60247827087062,0 -17.90942286459684,28.60121218387686,0 -17.9081705165056,28.60115313835135,0 -17.90683770501517,28.60081745803425,0 -17.90549958220888,28.60081835731274,0 -17.90416148659306,28.60081924720762,0 -17.90282341782979,28.60082012771971,0 -17.90148537558112,28.60082099884978,0 -17.90014605163698,28.60052790760446,0 -17.89880807795243,28.60052876183255,0 -17.89747014105231,28.60052960664938,0 -17.89553098073921,28.60043401341533,0 -17.89469655567278,28.60009219296991,0 -17.8967973746325,28.59964822311762,0 -17.89813526059738,28.59964737752697,0 -17.89947057782831,28.59905867093281,0 -17.90080716909471,28.59876388758261,0 -17.90314719106378,28.59846842542028,0 -17.90515411036354,28.59846707427932,0 -17.90716249239302,28.59875962386557,0 -17.90945059577824,28.59755562208672,0 -17.90973086545913,28.5970120578946,0 -17.91049906224813,28.59699382388887,0 -17.91116375300502,28.59611168494012,0 -17.91316781948159,28.59552247342352,0 -17.91550634430277,28.59493299853609,0 -17.91651734121673,28.59640162659392,0 -17.91752546293836,28.59728257759225,0 -17.91954354271288,28.59933859933901,0 -17.92156050934857,28.60110093836396,0 -17.92323202666904,28.60080568003183,0 -17.92389488304147,28.59962925181604,0 -17.92522850351472,28.59874632846931,0 -17.92655718259305,28.59698164603485,0 -17.92688687954274,28.59609963989932,0 -17.92788408483014,28.59492325148401,0 -17.92787590766416,28.59345391208717,0 -17.92686739765687,28.59257321262104,0 -17.92652642104565,28.59139820151113,0 -17.92585098267424,28.59022356469648,0 -17.92450985909857,28.58963712414187,0 -17.92317040155989,28.58934446555693,0 -17.9219512513209,28.58895150249879,0 -17.92018232448289,28.58843442167258,0 -17.91943111350477,28.58762997992451,0 -17.918665123725,28.58774559997563,0 -17.91815041579251,28.58774609032177,0 -17.91747731438347,28.58788037370072,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="0A8A7AB43E2211F03142">
+			<name>1430/40</name>
+			<styleUrl>#__managed_style_0C0D6A96362212EB67D5</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-17.92742253685324,28.63141089601854,0 -17.92608049146699,28.63111706389755,0 -17.92440513770655,28.63111805315029,0 -17.92306488400019,28.63111883683377,0 -17.92172795341108,28.63170886271243,0 -17.92072768756484,28.63259334600167,0 -17.91972735601023,28.63347788045624,0 -17.91872536780837,28.63406777083232,0 -17.91772655092813,28.63524706547077,0 -17.91773136144797,28.63613119722137,0 -17.91739785767207,28.63642609875946,0 -17.91606062130155,28.63701626016514,0 -17.91472492781109,28.63790119082866,0 -17.91372426346128,28.6387859838483,0 -17.91272200746486,28.63937604327589,0 -17.91138458982068,28.63996627576921,0 -17.91071891698233,28.64085101246913,0 -17.91005470948257,28.6420306268909,0 -17.90905529626662,28.64321049242629,0 -17.90872464218247,28.64409525581648,0 -17.90738844158977,28.64498053788452,0 -17.90638585745444,28.64557079101208,0 -17.90504807351958,28.64616121595189,0 -17.90370879450943,28.64645672369486,0 -17.90236808270533,28.64645730038796,0 -17.90102739739799,28.64645787150909,0 -17.89968673824763,28.64645843705872,0 -17.89834747652053,28.6467539195526,0 -17.89700549705891,28.64645955144535,0 -17.89532844985641,28.64616532482065,0 -17.89398529052276,28.64557606826551,0 -17.89264222856304,28.64498684721893,0 -17.89196816712303,28.64410251415643,0 -17.89062402389825,28.64321852439462,0 -17.8889486884236,28.64321919981029,0 -17.88760599689349,28.64263008114555,0 -17.88626460521582,28.64233580528241,0 -17.88458942823272,28.64233646303158,0 -17.88291311938492,28.64204230733105,0 -17.88157305056067,28.6420428210451,0 -17.88023187240864,28.64174853423217,0 -17.87889075078252,28.6414542510266,0 -17.87788467600581,28.64115984682313,0 -17.87620867567945,28.64086570280052,0 -17.87520375057658,28.64086607069335,0 -17.87386386380615,28.64086655594067,0 -17.87218903522814,28.64086715401711,0 -17.87051423609915,28.64086774267014,0 -17.86917539385021,28.64116296246447,0 -17.8675025385598,28.64175307551643,0 -17.86616458612811,28.64234308883204,0 -17.86449069668795,28.64263841964454,0 -17.863151750925,28.64293364621139,0 -17.86181367180224,28.6435236798322,0 -17.86047467186264,28.64381890843796,0 -17.85913565853992,28.64411412783426,0 -17.85779662021874,28.64440935346182,0 -17.85645919474231,28.64529425848002,0 -17.85545426224874,28.64529454761452,0 -17.85411514710995,28.64558976890291,0 -17.85244027166631,28.64559023537237,0 -17.85110038467905,28.6455906022124,0 -17.84975978278769,28.64529612594101,0 -17.84841922968604,28.64500164483798,0 -17.84741228220581,28.64411743788988,0 -17.84607185397667,28.64382298607689,0 -17.84473015595622,28.64293894424285,0 -17.84338921672625,28.6423497370564,0 -17.84271688114958,28.6411708728433,0 -17.84204400070178,28.63969740668494,0 -17.84137121978635,28.63822410542891,0 -17.84069853242388,28.63675096837156,0 -17.84036132955748,28.63557252623087,0 -17.84002416607238,28.63439418806614,0 -17.8396870418706,28.63321595354608,0 -17.83968411476376,28.63174319390674,0 -17.83968119362572,28.63027059332509,0 -17.84034885372411,28.6293869242727,0 -17.84068117823799,28.62820894221222,0 -17.84134814578901,28.62703096577098,0 -17.84201565869231,28.62614750066434,0 -17.84234786428023,28.62496977910926,0 -17.84301529088897,28.62408643803348,0 -17.84334679987582,28.62261454569236,0 -17.84234174077073,28.6220261691992,0 -17.84100452755586,28.62261522909692,0 -17.83966725514879,28.62320430695091,0 -17.83832880383453,28.62320467802997,0 -17.83699199779874,28.62408812271178,0 -17.83565509820286,28.62497161176539,0 -17.83498739679611,28.62585498290377,0 -17.83432015748694,28.62703282921903,0 -17.83432272132351,28.62850506758124,0 -17.83331968080634,28.62909425669374,0 -17.83198238345613,28.62997802944609,0 -17.83164960825259,28.63115613264113,0 -17.83298897089264,28.63145034065979,0 -17.83399467439815,28.63233370466199,0 -17.83500046291301,28.63321713289674,0 -17.83567156763491,28.63410069211646,0 -17.83500414519661,28.63527924230698,0 -17.8346725017582,28.63704709937871,0 -17.83434133485818,28.63910987819542,0 -17.83400908219173,28.64058350388799,0 -17.83501525461718,28.64146748025784,0 -17.83635639968502,28.64235144545075,0 -17.83769709721093,28.64294067520628,0 -17.83870296153111,28.64353001541432,0 -17.84004261284351,28.64352969528733,0 -17.84104919548828,28.644413863398,0 -17.84205586309882,28.64529809871033,0 -17.84339629221614,28.64559260225591,0 -17.84473743126329,28.64618197105357,0 -17.84607933244231,28.64706623209061,0 -17.84708496809846,28.64736085962277,0 -17.84842563449088,28.64765540567124,0 -17.84976708059231,28.64824485942465,0 -17.85110786254423,28.64853941155164,0 -17.85244792662673,28.64853905466993,0 -17.85412302344659,28.64853860099498,0 -17.85546311920954,28.64853823199523,0 -17.85680157515739,28.64794803856904,0 -17.85814082340251,28.64765275208285,0 -17.85948005184351,28.64735746453703,0 -17.86082013721744,28.64735706939019,0 -17.86215845077502,28.64676689363162,0 -17.86349670562234,28.64617672636184,0 -17.86483584112995,28.64588143916744,0 -17.86617495864597,28.64558615048933,0 -17.86751213457502,28.64470116764355,0 -17.86851617579645,28.6444059971283,0 -17.87019120451486,28.64440543955421,0 -17.87153023642609,28.64411014937946,0 -17.87320529516528,28.64410957395828,0 -17.87454536588346,28.64410910714034,0 -17.87588652733911,28.64440347677079,0 -17.87722774433341,28.644697850117,0 -17.87856901723049,28.64499222725776,0 -17.87957080423046,28.64410730526578,0 -17.88057705709695,28.64440178256465,0 -17.88158450162695,28.6449911271975,0 -17.88292591219992,28.64528549888163,0 -17.88426738580898,28.64557986694536,0 -17.88560891722803,28.64587424683098,0 -17.88695050679137,28.64616863093676,0 -17.88829339356289,28.64675792865424,0 -17.8893012452593,28.64734737508541,0 -17.89064303768032,28.64764178992374,0 -17.8919861797585,28.64823115646107,0 -17.89332941321306,28.64882054340037,0 -17.89467274985573,28.64940996629128,0 -17.89601483769229,28.64970442529361,0 -17.89735562203646,28.64970389511246,0 -17.89903162950968,28.64970322493835,0 -17.90004146898222,28.65058782486201,0 -17.90138238349881,28.65058728447698,0 -17.9027218759766,28.65029172381376,0 -17.9037232466958,28.64940630788261,0 -17.90472600656859,28.64881591044086,0 -17.90640212866347,28.64881519637862,0 -17.90774156397425,28.64851963656984,0 -17.90908250944874,28.64851905185418,0 -17.91042041377863,28.64792851613077,0 -17.91142303979489,28.64733813699931,0 -17.91242407360541,28.64645283934725,0 -17.91342506110208,28.64556758087339,0 -17.91409076701474,28.6446825357618,0 -17.91441808806384,28.6432079483722,0 -17.91474696157609,28.64202836106217,0 -17.91574612539486,28.64084853898299,0 -17.91641165547117,28.63996376690456,0 -17.91774905232758,28.63937349525027,0 -17.91908641203122,28.63878322689542,0 -17.92042373504735,28.63819296933265,0 -17.92142752900794,28.63789767256862,0 -17.9227647968903,28.6373074281226,0 -17.9237635115556,28.63612791305719,0 -17.92375510475375,28.63465434907795,0 -17.9247570738323,28.63406439311355,0 -17.92609412571356,28.63347426572795,0 -17.92709431136297,28.63258967448847,0 -17.92742253685324,28.63141089601854,0 -17.92741909939379,28.63082163987618,0 -17.92742253685324,28.63141089601854,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="ID_00000">
+			<name>2021</name>
+			<Snippet maxLines="0"></Snippet>
+			<styleUrl>#__managed_style_09B07E14FE2212DE748D</styleUrl>
 			<MultiGeometry>
 				<Polygon>
 					<outerBoundaryIs>
@@ -224,3 +3785,156 @@
 			</MultiGeometry>
 		</Placemark>
 	</Folder>
+	<Placemark id="0431A5F1A02212327AFD">
+		<name>2021</name>
+		<LookAt>
+			<longitude>-17.84562488813836</longitude>
+			<latitude>28.5746245352565</latitude>
+			<altitude>1651.193824299996</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30</gx:fovy>
+			<range>27112.44519857224</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0D815160742212EC1E54</styleUrl>
+		<Point>
+			<coordinates>-17.89581103886936,28.61780811761596,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="026A1661C02212349496">
+		<name>1430/40</name>
+		<LookAt>
+			<longitude>-17.85244599868313</longitude>
+			<latitude>28.57991800160286</latitude>
+			<altitude>1458.244783104643</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30</gx:fovy>
+			<range>28283.98124833591</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_004913DB562212EBB687</styleUrl>
+		<Point>
+			<coordinates>-17.87644842162196,28.64233498449954,698.7999552155746</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09B696B9A72212357364">
+		<name>1712</name>
+		<LookAt>
+			<longitude>-17.83364422972535</longitude>
+			<latitude>28.56330935638814</latitude>
+			<altitude>1798.204739618452</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30</gx:fovy>
+			<range>25942.61502012145</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_050095B0432212DFB818</styleUrl>
+		<Point>
+			<coordinates>-17.88302880093448,28.55602488205319,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00A122AA6D2212361956">
+		<name>1646</name>
+		<LookAt>
+			<longitude>-17.83587278844845</longitude>
+			<latitude>28.56171290867504</latitude>
+			<altitude>1857.004513313606</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30</gx:fovy>
+			<range>22879.68451032182</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_052299217D2212EA9B90</styleUrl>
+		<Point>
+			<coordinates>-17.81686972964243,28.5284579621545,804.419018388809</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BFCBF81C7221236B373">
+		<name>1949</name>
+		<LookAt>
+			<longitude>-17.78593652598292</longitude>
+			<latitude>28.59833542334248</latitude>
+			<altitude>679.9828579877656</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>37199.10800152459</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_048CFE9EA42212EB01FC</styleUrl>
+		<Point>
+			<coordinates>-17.80624716300208,28.56976486208636,1000.859870126408</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0AFC17076D221237770E">
+		<name>1677</name>
+		<LookAt>
+			<longitude>-17.80928731033056</longitude>
+			<latitude>28.53651968692206</latitude>
+			<altitude>561.4567177312887</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>37317.63490707614</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0ACE8156212212E8ED77</styleUrl>
+		<Point>
+			<coordinates>-17.86084276412824,28.47811761133854,103.8992570024309</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BAC2E3126221237C87A">
+		<name>1971</name>
+		<LookAt>
+			<longitude>-17.80928731341156</longitude>
+			<latitude>28.53651969369268</latitude>
+			<altitude>561.4567176039703</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>37317.63490707614</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0FA98564542212EA260B</styleUrl>
+		<Point>
+			<coordinates>-17.8362393419824,28.45559341440788,-8.276668289944368</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="06B14565E522123847DC">
+		<name>1585</name>
+		<LookAt>
+			<longitude>-17.81239886819574</longitude>
+			<latitude>28.54534705515442</latitude>
+			<altitude>717.5827625546192</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>42014.15377044585</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_020C0ED2B92212DF0141</styleUrl>
+		<Point>
+			<coordinates>-17.90024251708221,28.57720356766007,543.8459442828797</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A5BFF21E722123A14F6">
+		<name>1949</name>
+		<LookAt>
+			<longitude>-17.8468725100166</longitude>
+			<latitude>28.58849320570402</latitude>
+			<altitude>1559.668666631741</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99168956296795</gx:fovy>
+			<range>38799.71073736902</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_048CFE9EA42212EB01FC</styleUrl>
+		<Point>
+			<coordinates>-17.85774236995162,28.6005073237975,18.18462187069778</coordinates>
+		</Point>
+	</Placemark>

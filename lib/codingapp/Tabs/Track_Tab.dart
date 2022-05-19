@@ -520,16 +520,18 @@ class LGConnection {
     );
 
     LookAt flyto = LookAt(
-      -17.895486,
-      28.610478,
+      projectname == "Historic_Track" ? -17.841486 : -17.895486,
+      projectname == "Historic_Track" ? 28.548478 : 28.610478,
       projectname == "Located_Events"
           ? '40569.665945696469'
           : projectname == "Lava_Flow"
               ? '10569.665945696469'
               : projectname == "Affected_Areas"
                   ? '15569.665945696469'
-                  : '30569.665945696469',
-      '35',
+                  : projectname == "Historic_Track"
+                      ? '50569.665945696469'
+                      : '30569.665945696469',
+      projectname == "Historic_Track" ? '15' : '35',
       '0',
     );
     try {

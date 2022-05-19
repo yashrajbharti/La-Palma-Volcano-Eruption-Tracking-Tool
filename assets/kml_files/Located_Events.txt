@@ -7,7 +7,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-83</styleUrl>
+			<styleUrl>#normal-83</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="81">
@@ -17,7 +17,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-81</styleUrl>
+			<styleUrl>#normal-81</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-79">
@@ -25,7 +25,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="78">
@@ -35,7 +35,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-78</styleUrl>
+			<styleUrl>#normal-78</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-77">
@@ -43,7 +43,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-76">
@@ -51,7 +51,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="74">
@@ -61,7 +61,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-74</styleUrl>
+			<styleUrl>#normal-74</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="73">
@@ -71,7 +71,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-73</styleUrl>
+			<styleUrl>#normal-73</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="72">
@@ -81,7 +81,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-72</styleUrl>
+			<styleUrl>#normal-72</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-72">
@@ -89,7 +89,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="71">
@@ -99,7 +99,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-71</styleUrl>
+			<styleUrl>#normal-71</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-70">
@@ -107,7 +107,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="70">
@@ -117,7 +117,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-70</styleUrl>
+			<styleUrl>#normal-70</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-68">
@@ -125,7 +125,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-67">
@@ -133,7 +133,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-66">
@@ -141,7 +141,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="65">
@@ -151,7 +151,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-65</styleUrl>
+			<styleUrl>#normal-65</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-64">
@@ -159,7 +159,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-75">
@@ -167,7 +167,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="64">
@@ -177,7 +177,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-64</styleUrl>
+			<styleUrl>#normal-64</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-63">
@@ -185,7 +185,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-62">
@@ -193,7 +193,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-73">
@@ -201,7 +201,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-61">
@@ -209,7 +209,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="63">
@@ -219,7 +219,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-63</styleUrl>
+			<styleUrl>#normal-63</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-60">
@@ -227,7 +227,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="60">
@@ -237,7 +237,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-60</styleUrl>
+			<styleUrl>#normal-60</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-59">
@@ -245,7 +245,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-82">
@@ -253,7 +253,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-58">
@@ -261,7 +261,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="57">
@@ -271,7 +271,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-57</styleUrl>
+			<styleUrl>#normal-57</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-56">
@@ -279,7 +279,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-55">
@@ -287,7 +287,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="55">
@@ -297,7 +297,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-55</styleUrl>
+			<styleUrl>#normal-55</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-54">
@@ -305,7 +305,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="54">
@@ -315,7 +315,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-54</styleUrl>
+			<styleUrl>#normal-54</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-53">
@@ -323,7 +323,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-52">
@@ -331,7 +331,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="52">
@@ -341,7 +341,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-52</styleUrl>
+			<styleUrl>#normal-52</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="51">
@@ -351,7 +351,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-51</styleUrl>
+			<styleUrl>#normal-51</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="50">
@@ -361,7 +361,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-50</styleUrl>
+			<styleUrl>#normal-50</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-49">
@@ -369,7 +369,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="49">
@@ -379,7 +379,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-49</styleUrl>
+			<styleUrl>#normal-49</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="47">
@@ -389,7 +389,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-47</styleUrl>
+			<styleUrl>#normal-47</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-69">
@@ -397,7 +397,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="28">
@@ -407,7 +407,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-28</styleUrl>
+			<styleUrl>#normal-28</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-46">
@@ -415,7 +415,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-45">
@@ -423,7 +423,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="21">
@@ -433,7 +433,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-21</styleUrl>
+			<styleUrl>#normal-21</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="42">
@@ -443,7 +443,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-42</styleUrl>
+			<styleUrl>#normal-42</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-71">
@@ -451,7 +451,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-51">
@@ -459,7 +459,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="41">
@@ -469,7 +469,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-41</styleUrl>
+			<styleUrl>#normal-41</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-23">
@@ -477,7 +477,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-39">
@@ -485,7 +485,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-40">
@@ -493,7 +493,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="40">
@@ -503,7 +503,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-40</styleUrl>
+			<styleUrl>#normal-40</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="39">
@@ -513,7 +513,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-39</styleUrl>
+			<styleUrl>#normal-39</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-78">
@@ -521,7 +521,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-38">
@@ -529,7 +529,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="26">
@@ -539,7 +539,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-26</styleUrl>
+			<styleUrl>#normal-26</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-3">
@@ -547,7 +547,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="38">
@@ -557,7 +557,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-38</styleUrl>
+			<styleUrl>#normal-38</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-37">
@@ -565,7 +565,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="68">
@@ -575,7 +575,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-68</styleUrl>
+			<styleUrl>#normal-68</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-36">
@@ -583,7 +583,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-1">
@@ -591,7 +591,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-35">
@@ -599,7 +599,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="43">
@@ -609,7 +609,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-43</styleUrl>
+			<styleUrl>#normal-43</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-34">
@@ -617,7 +617,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="75">
@@ -627,7 +627,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-75</styleUrl>
+			<styleUrl>#normal-75</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-44">
@@ -635,7 +635,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-80">
@@ -643,7 +643,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-33">
@@ -651,7 +651,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="80">
@@ -661,7 +661,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-80</styleUrl>
+			<styleUrl>#normal-80</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-32">
@@ -669,7 +669,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="2">
@@ -679,7 +679,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-2</styleUrl>
+			<styleUrl>#normal-2</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="32">
@@ -689,7 +689,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-32</styleUrl>
+			<styleUrl>#normal-32</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="61">
@@ -699,7 +699,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-61</styleUrl>
+			<styleUrl>#normal-61</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-31">
@@ -707,7 +707,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="37">
@@ -717,7 +717,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-37</styleUrl>
+			<styleUrl>#normal-37</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-81">
@@ -725,7 +725,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="79">
@@ -735,7 +735,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-79</styleUrl>
+			<styleUrl>#normal-79</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="31">
@@ -745,7 +745,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-31</styleUrl>
+			<styleUrl>#normal-31</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="66">
@@ -755,7 +755,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-66</styleUrl>
+			<styleUrl>#normal-66</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-47">
@@ -763,7 +763,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-65">
@@ -771,7 +771,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-30">
@@ -779,7 +779,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="62">
@@ -789,7 +789,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-62</styleUrl>
+			<styleUrl>#normal-62</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="30">
@@ -799,7 +799,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-30</styleUrl>
+			<styleUrl>#normal-30</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-48">
@@ -807,7 +807,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="36">
@@ -817,7 +817,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-36</styleUrl>
+			<styleUrl>#normal-36</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="35">
@@ -827,7 +827,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-35</styleUrl>
+			<styleUrl>#normal-35</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-17">
@@ -835,7 +835,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="29">
@@ -845,7 +845,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-29</styleUrl>
+			<styleUrl>#normal-29</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="53">
@@ -855,7 +855,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-53</styleUrl>
+			<styleUrl>#normal-53</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="1">
@@ -865,7 +865,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-1</styleUrl>
+			<styleUrl>#normal-1</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-43">
@@ -873,7 +873,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-28">
@@ -881,7 +881,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-27">
@@ -889,7 +889,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-25">
@@ -897,7 +897,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="82">
@@ -907,7 +907,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-82</styleUrl>
+			<styleUrl>#normal-82</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="25">
@@ -917,7 +917,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-25</styleUrl>
+			<styleUrl>#normal-25</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="11">
@@ -927,7 +927,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-11</styleUrl>
+			<styleUrl>#normal-11</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-41">
@@ -935,7 +935,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="7">
@@ -945,7 +945,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-7</styleUrl>
+			<styleUrl>#normal-7</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-21">
@@ -953,7 +953,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="23">
@@ -963,7 +963,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-23</styleUrl>
+			<styleUrl>#normal-23</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="69">
@@ -973,7 +973,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-69</styleUrl>
+			<styleUrl>#normal-69</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-13">
@@ -981,7 +981,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-22">
@@ -989,7 +989,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="34">
@@ -999,7 +999,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-34</styleUrl>
+			<styleUrl>#normal-34</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="15">
@@ -1009,7 +1009,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-15</styleUrl>
+			<styleUrl>#normal-15</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-20">
@@ -1017,7 +1017,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-42">
@@ -1025,7 +1025,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-9">
@@ -1033,7 +1033,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="20">
@@ -1043,7 +1043,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-20</styleUrl>
+			<styleUrl>#normal-20</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-83">
@@ -1051,7 +1051,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="17">
@@ -1061,7 +1061,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-17</styleUrl>
+			<styleUrl>#normal-17</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-29">
@@ -1069,7 +1069,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="12">
@@ -1079,7 +1079,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-12</styleUrl>
+			<styleUrl>#normal-12</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-24">
@@ -1087,7 +1087,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-7">
@@ -1095,7 +1095,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-6">
@@ -1103,7 +1103,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="58">
@@ -1113,7 +1113,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-58</styleUrl>
+			<styleUrl>#normal-58</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-19">
@@ -1121,7 +1121,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-16">
@@ -1129,7 +1129,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="16">
@@ -1139,7 +1139,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-16</styleUrl>
+			<styleUrl>#normal-16</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="33">
@@ -1149,7 +1149,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-33</styleUrl>
+			<styleUrl>#normal-33</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="19">
@@ -1159,7 +1159,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-19</styleUrl>
+			<styleUrl>#normal-19</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="27">
@@ -1169,7 +1169,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-27</styleUrl>
+			<styleUrl>#normal-27</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="67">
@@ -1179,7 +1179,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-67</styleUrl>
+			<styleUrl>#normal-67</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="4">
@@ -1189,7 +1189,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-4</styleUrl>
+			<styleUrl>#normal-4</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-12">
@@ -1197,7 +1197,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-0">
@@ -1205,7 +1205,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="77">
@@ -1215,7 +1215,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-77</styleUrl>
+			<styleUrl>#normal-77</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-15">
@@ -1223,7 +1223,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="6">
@@ -1233,7 +1233,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-6</styleUrl>
+			<styleUrl>#normal-6</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="59">
@@ -1243,7 +1243,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-59</styleUrl>
+			<styleUrl>#normal-59</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="24">
@@ -1253,7 +1253,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-24</styleUrl>
+			<styleUrl>#normal-24</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="8">
@@ -1263,7 +1263,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-8</styleUrl>
+			<styleUrl>#normal-8</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="13">
@@ -1273,7 +1273,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-13</styleUrl>
+			<styleUrl>#normal-13</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-10">
@@ -1281,7 +1281,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-11">
@@ -1289,7 +1289,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="46">
@@ -1299,7 +1299,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-46</styleUrl>
+			<styleUrl>#normal-46</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="76">
@@ -1309,7 +1309,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-76</styleUrl>
+			<styleUrl>#normal-76</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="9">
@@ -1319,7 +1319,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-9</styleUrl>
+			<styleUrl>#normal-9</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="14">
@@ -1329,7 +1329,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-14</styleUrl>
+			<styleUrl>#normal-14</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="45">
@@ -1339,7 +1339,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-45</styleUrl>
+			<styleUrl>#normal-45</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-26">
@@ -1347,7 +1347,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-5">
@@ -1355,7 +1355,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-74">
@@ -1363,7 +1363,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-50">
@@ -1371,7 +1371,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-18">
@@ -1379,7 +1379,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-14">
@@ -1387,7 +1387,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-57">
@@ -1395,7 +1395,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<Style id="normal-4">
@@ -1403,7 +1403,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="44">
@@ -1413,7 +1413,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-44</styleUrl>
+			<styleUrl>#normal-44</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="10">
@@ -1423,7 +1423,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-10</styleUrl>
+			<styleUrl>#normal-10</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="22">
@@ -1433,7 +1433,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-22</styleUrl>
+			<styleUrl>#normal-22</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="56">
@@ -1443,7 +1443,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-56</styleUrl>
+			<styleUrl>#normal-56</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-8">
@@ -1451,7 +1451,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="18">
@@ -1461,7 +1461,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-18</styleUrl>
+			<styleUrl>#normal-18</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="normal-2">
@@ -1469,7 +1469,7 @@
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/earthquake.png</href>
 			</Icon>
-			<hotSpot x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<hotSpot x="0.5" y="0.1" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
 	</Style>
 	<StyleMap id="48">
@@ -1479,7 +1479,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-48</styleUrl>
+			<styleUrl>#normal-48</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="3">
@@ -1489,7 +1489,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-3</styleUrl>
+			<styleUrl>#normal-3</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="5">
@@ -1499,7 +1499,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-5</styleUrl>
+			<styleUrl>#normal-5</styleUrl>
 		</Pair>
 	</StyleMap>
 	<StyleMap id="0">
@@ -1509,7 +1509,7 @@
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>high-0</styleUrl>
+			<styleUrl>#normal-0</styleUrl>
 		</Pair>
 	</StyleMap>
 	<NetworkLink id="07A6F40D4C21E8C79E2F">
@@ -1532,7 +1532,7 @@
 			</Pair>
 			<Pair>
 				<key>highlight</key>
-				<styleUrl>high-83</styleUrl>
+				<styleUrl>#normal-83</styleUrl>
 			</Pair>
 		</StyleMap>
 		<Placemark>
