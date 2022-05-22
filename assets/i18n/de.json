@@ -24,7 +24,7 @@
 	"Track": {
 		"hist": " Historische Strecke ",
 		"lava": "  Lavastrom karte  ",
-		"temp": "  Temperaturkarte  ",
+		"situation": "  Situationskarte  ",
 		"aff": "Betroffene Bereiche",
 		"land": " Landschaftskarte ",
 		"So2": "  SO\u2082 Emissionskarte  ",

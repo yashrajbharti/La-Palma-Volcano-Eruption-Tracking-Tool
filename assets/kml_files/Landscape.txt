@@ -571,3 +571,32 @@
 			<coordinates>-17.88596894764921,28.61540486014378,0</coordinates>
 		</Point>
 	</Placemark>
+	<Folder>
+    <name>Sentinel-Hub Overlays</name>
+    <description>Ground overlays</description>
+    <GroundOverlay>
+      <name>Sentinel-Hub overlay</name>
+        <Icon>
+          <href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/landscape.png</href>
+        </Icon>
+        <LatLonBox>
+          <north>28.728528360949777</north>
+          <south>28.511237566430875</south>
+          <east>-17.72129058837891</east>
+          <west>-18.21292877197266</west>
+        </LatLonBox>
+            <LookAt>
+
+            <longitude>-17.967109680175785</longitude>
+
+            <latitude>28.619882963690326</latitude>
+
+            <altitude>44991.17391272388</altitude>
+
+            <tilt>0</tilt>
+
+            <altitudeMode>relativeToGround</altitudeMode>
+
+        </LookAt>
+      </GroundOverlay>
+  </Folder>

@@ -28,7 +28,7 @@ bool isOpen = false;
 List<String> projectname = [
   "Historic_Track",
   "Lava_Flow",
-  "Temperature",
+  "Situation",
   "Affected_Areas",
   "Landscape",
   "SO2_Emission",
@@ -220,7 +220,7 @@ class _SendtoLGState extends State<SendtoLG> {
                       SizedBox(
                         width: 10,
                       ),
-                      Text(translate('Track.temp'),
+                      Text(translate('Track.situation'),
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
@@ -303,7 +303,11 @@ class _SendtoLGState extends State<SendtoLG> {
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
-                onPressed: null,
+                onPressed: () async {
+                  savekml_Task(projectname[5]);
+                  await _read(5);
+                  _showToast(translate('Track.ready'));
+                },
                 child: Wrap(
                   children: <Widget>[
                     SizedBox(
@@ -520,8 +524,20 @@ class LGConnection {
     );
 
     LookAt flyto = LookAt(
-      projectname == "Historic_Track" ? -17.841486 : -17.895486,
-      projectname == "Historic_Track" ? 28.548478 : 28.610478,
+      projectname == "Historic_Track"
+          ? -17.841486
+          : projectname == "Located_Events"
+              ? -17.834886
+              : projectname == "SO2_Emission"
+                  ? -7.561565
+                  : -17.895486,
+      projectname == "Historic_Track"
+          ? 28.548478
+          : projectname == "Located_Events"
+              ? 28.564986
+              : projectname == "SO2_Emission"
+                  ? 33.561245
+                  : 28.610478,
       projectname == "Located_Events"
           ? '40569.665945696469'
           : projectname == "Lava_Flow"
@@ -530,8 +546,14 @@ class LGConnection {
                   ? '15569.665945696469'
                   : projectname == "Historic_Track"
                       ? '50569.665945696469'
-                      : '30569.665945696469',
-      projectname == "Historic_Track" ? '15' : '35',
+                      : projectname == "SO2_Emission"
+                          ? '5000000.665945696469'
+                          : '30569.665945696469',
+      projectname == "Historic_Track"
+          ? '15'
+          : projectname == "SO2_Emission"
+              ? '25'
+              : '35',
       '0',
     );
     try {

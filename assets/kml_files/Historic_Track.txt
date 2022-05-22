@@ -974,7 +974,7 @@
 
 <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
 
-<td>1430/40</td>
+<td>1480</td>
 
 </tr>
 
@@ -988,7 +988,7 @@
 
 <td>Start Date</td>
 
-<td>1430 ± 10 years</td>
+<td>1480</td>
 
 </tr>
 
@@ -1214,7 +1214,7 @@
 
 <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
 
-<td>1430/40</td>
+<td>1480</td>
 
 </tr>
 
@@ -1228,7 +1228,7 @@
 
 <td>Start Date</td>
 
-<td>1430 ± 10 years</td>
+<td>1480</td>
 
 </tr>
 
@@ -1535,7 +1535,7 @@
 
 <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
 
-<td>1430/40</td>
+<td>1480</td>
 
 </tr>
 
@@ -1549,7 +1549,7 @@
 
 <td>Start Date</td>
 
-<td>1430 ± 10 years</td>
+<td>1480</td>
 
 </tr>
 
@@ -3086,7 +3086,7 @@
 
 <tr style="text-align:center;font-weight:bold;background:#9CBCE2">
 
-<td>1430/40</td>
+<td>1480</td>
 
 </tr>
 
@@ -3100,7 +3100,7 @@
 
 <td>Start Date</td>
 
-<td>1430 ± 10 years</td>
+<td>1480</td>
 
 </tr>
 
@@ -3688,7 +3688,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark id="0A8A7AB43E2211F03142">
-			<name>1430/40</name>
+			<name>1480</name>
 			<styleUrl>#__managed_style_0C0D6A96362212EB67D5</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -3803,7 +3803,7 @@
 		</Point>
 	</Placemark>
 	<Placemark id="026A1661C02212349496">
-		<name>1430/40</name>
+		<name>1480</name>
 		<LookAt>
 			<longitude>-17.85244599868313</longitude>
 			<latitude>28.57991800160286</latitude>

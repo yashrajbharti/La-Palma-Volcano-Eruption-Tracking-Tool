@@ -24,7 +24,7 @@
 	"Track": {
 		"hist": "Mapa de vías históricas",
 		"lava": " Mapa de flujo de lava ",
-		"temp": " Mapa de temperatura ",
+		"situation": " Mapa de situacion ",
 		"aff": "Zonas afectadas",
 		"land": " Mapa del paisaje ",
 		"So2": "SO\u2082 Emisiones",
