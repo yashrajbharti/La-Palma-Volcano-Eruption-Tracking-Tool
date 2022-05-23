@@ -577,7 +577,7 @@
     <GroundOverlay>
       <name>Sentinel-Hub overlay</name>
         <Icon>
-          <href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/landscape.png</href>
+          <href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/Landscape.png</href>
         </Icon>
         <LatLonBox>
           <north>28.728528360949777</north>

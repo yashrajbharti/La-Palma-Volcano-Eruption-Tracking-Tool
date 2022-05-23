@@ -22,16 +22,17 @@ class SendtoLG extends StatefulWidget {
   State<SendtoLG> createState() => _SendtoLGState();
 }
 
-List<String> kmltext = ['', '', '', '', '', '', ''];
+List<String> kmltext = ['', '', '', '', '', '', '', ''];
 String localpath = "";
 bool isOpen = false;
 List<String> projectname = [
   "Historic_Track",
   "Lava_Flow",
-  "Situation",
+  "Prehistoric_Track",
   "Affected_Areas",
   "Landscape",
   "SO2_Emission",
+  "Situation",
   "Located_Events"
 ];
 List<String> localimages = [
@@ -214,13 +215,17 @@ class _SendtoLGState extends State<SendtoLG> {
                       shadowColor: Colors.transparent,
                       primary: ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
-                  onPressed: null,
+                  onPressed: () async {
+                    savekml_Task(projectname[2]);
+                    await _read(2);
+                    _showToast(translate('Track.ready'));
+                  },
                   child: Wrap(
                     children: <Widget>[
                       SizedBox(
                         width: 10,
                       ),
-                      Text(translate('Track.situation'),
+                      Text(translate('Track.prehistoric'),
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
@@ -326,34 +331,68 @@ class _SendtoLGState extends State<SendtoLG> {
             )
           ]),
           SizedBox(height: 16),
-          SizedBox(
-            width: 500,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
-                  padding: EdgeInsets.all(15)),
-              onPressed: () async {
-                savekml_Task(projectname[6]);
-                await _read(6);
-                _showToast(translate('Track.ready'));
-              },
-              child: Wrap(
-                children: <Widget>[
-                  SizedBox(
-                    width: 10,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                width: 500,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 0.0,
+                      shadowColor: Colors.transparent,
+                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      padding: EdgeInsets.all(15)),
+                  onPressed: () async {
+                    savekml_Task(projectname[6]);
+                    await _read(6);
+                    _showToast(translate('Track.ready'));
+                  },
+                  child: Wrap(
+                    children: <Widget>[
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(translate('Track.situation'),
+                          style: TextStyle(fontSize: 40)),
+                      Icon(
+                        Icons.location_on_sharp,
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
+                        size: 45.0,
+                      ),
+                    ],
                   ),
-                  Text(translate('Track.located'),
-                      style: TextStyle(fontSize: 40)),
-                  Icon(
-                    Icons.location_on_sharp,
-                    color: ui.Color.fromARGB(255, 228, 6, 9),
-                    size: 45.0,
-                  ),
-                ],
+                ),
               ),
-            ),
+              SizedBox(
+                width: 500,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 0.0,
+                      shadowColor: Colors.transparent,
+                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      padding: EdgeInsets.all(15)),
+                  onPressed: () async {
+                    savekml_Task(projectname[7]);
+                    await _read(7);
+                    _showToast(translate('Track.ready'));
+                  },
+                  child: Wrap(
+                    children: <Widget>[
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(translate('Track.located'),
+                          style: TextStyle(fontSize: 40)),
+                      Icon(
+                        Icons.location_on_sharp,
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
+                        size: 45.0,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
           SizedBox(height: 20),
           SizedBox(
@@ -530,30 +569,38 @@ class LGConnection {
               ? -17.834886
               : projectname == "SO2_Emission"
                   ? -7.561565
-                  : -17.895486,
+                  : projectname == "Prehistoric_Track"
+                      ? -17.841486
+                      : -17.895486,
       projectname == "Historic_Track"
           ? 28.548478
           : projectname == "Located_Events"
               ? 28.564986
               : projectname == "SO2_Emission"
                   ? 33.561245
-                  : 28.610478,
+                  : projectname == "Prehistoric_Track"
+                      ? 28.548478
+                      : 28.610478,
       projectname == "Located_Events"
           ? '40569.665945696469'
           : projectname == "Lava_Flow"
-              ? '10569.665945696469'
+              ? '10669.665945696469'
               : projectname == "Affected_Areas"
                   ? '15569.665945696469'
                   : projectname == "Historic_Track"
                       ? '50569.665945696469'
                       : projectname == "SO2_Emission"
                           ? '5000000.665945696469'
-                          : '30569.665945696469',
+                          : projectname == "Prehistoric_Track"
+                              ? '50569.665945696469'
+                              : '30569.665945696469',
       projectname == "Historic_Track"
           ? '15'
           : projectname == "SO2_Emission"
               ? '25'
-              : '35',
+              : projectname == "Prehistoric_Track"
+                  ? '15'
+                  : '35',
       '0',
     );
     try {
