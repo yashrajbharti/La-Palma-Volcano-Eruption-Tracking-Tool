@@ -14,6 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
+import 'package:webscrapperapp/codingapp/Tabs/Info.dart';
 
 class SendtoLG extends StatefulWidget {
   SendtoLG({Key? key}) : super(key: key);
@@ -154,6 +155,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 onPressed: () async {
                   savekml_Task(projectname[0]);
                   await _read(0);
+                  jumpToPage(0);
                   _showToast(translate('Track.ready'));
                 },
                 child: Wrap(
@@ -184,6 +186,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 onPressed: () async {
                   savekml_Task(projectname[1]);
                   await _read(1);
+                  jumpToPage(1);
                   _showToast(translate('Track.ready'));
                 },
                 child: Wrap(
@@ -218,6 +221,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   onPressed: () async {
                     savekml_Task(projectname[2]);
                     await _read(2);
+                    jumpToPage(2);
                     _showToast(translate('Track.ready'));
                   },
                   child: Wrap(
@@ -247,6 +251,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   onPressed: () async {
                     savekml_Task(projectname[3]);
                     await _read(3);
+                    jumpToPage(3);
                     _showToast(translate('Track.ready'));
                   },
                   child: Wrap(
@@ -281,6 +286,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 onPressed: () async {
                   savekml_Task(projectname[4]);
                   await _read(4);
+                  jumpToPage(4);
                   _showToast(translate('Track.ready'));
                 },
                 child: Wrap(
@@ -311,6 +317,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 onPressed: () async {
                   savekml_Task(projectname[5]);
                   await _read(5);
+                  jumpToPage(5);
                   _showToast(translate('Track.ready'));
                 },
                 child: Wrap(
@@ -345,6 +352,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   onPressed: () async {
                     savekml_Task(projectname[6]);
                     await _read(6);
+                    jumpToPage(6);
                     _showToast(translate('Track.ready'));
                   },
                   child: Wrap(
@@ -374,6 +382,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   onPressed: () async {
                     savekml_Task(projectname[7]);
                     await _read(7);
+                    jumpToPage(7);
                     _showToast(translate('Track.ready'));
                   },
                   child: Wrap(

@@ -7,6 +7,11 @@ class VerticalCardPagerDemo extends StatefulWidget {
   _VerticalCardPagerDemoState createState() => _VerticalCardPagerDemoState();
 }
 
+int x = 0;
+void jumpToPage(int page) {
+  x = page;
+}
+
 class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
   _launchURL(String url) async {
     if (await canLaunch(url)) {
@@ -3214,12 +3219,14 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
         ),
       ),
     ];
+
     return Scaffold(
       body: Container(
           child: CarouselSlider(
         options: CarouselOptions(
           enlargeCenterPage: true,
           height: 700,
+          initialPage: x,
           scrollDirection: Axis.vertical,
           autoPlayInterval: const Duration(milliseconds: 5000),
           autoPlay: false,
