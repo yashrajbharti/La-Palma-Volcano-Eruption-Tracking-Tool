@@ -22,13 +22,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.8.2"
-  beautiful_soup_dart:
-    dependency: "direct main"
-    description:
-      name: beautiful_soup_dart
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -36,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  carousel_slider:
+    dependency: "direct dev"
+    description:
+      name: carousel_slider
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.1.1"
   characters:
     dependency: transitive
     description:
@@ -565,13 +565,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
-  web_scraper:
-    dependency: "direct main"
-    description:
-      name: web_scraper
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.4"
   win32:
     dependency: transitive
     description:

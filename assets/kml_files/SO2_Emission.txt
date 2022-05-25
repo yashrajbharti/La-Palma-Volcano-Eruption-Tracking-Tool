@@ -1,55 +1,178 @@
-<Folder>
-    <GroundOverlay>
-	<name>Sulphur Dioxide Emissions coming from La Palma</name>
-	<Icon>
-		<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2.png</href>
-		<viewBoundScale>0.75</viewBoundScale>
-	</Icon>
-	<LatLonBox>
-		<north>58.8269554848843</north>
-		<south>8.976158523579272</south>
-		<east>26.29673683634944</east>
-		<west>-93.77033943411359</west>
-		<rotation>1.079346537590027</rotation>
-	</LatLonBox>
-</GroundOverlay>
-  </Folder>
+<name>Cumbre Vieja.kml</name>
+	<description>Network link example 2</description>
+	<Style id="__managed_style_02B98F7500222E98BB65">
+			<IconStyle>
+				<scale>1.8</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/VO.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<!DOCTYPE html>
+<html>
+  <head></head>
+  <body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
 
-  <name>Cumbre Veija.kml</name>
-	<Style id="s_ylw-pushpin_hl">
-		<IconStyle>
-			<scale>1.4</scale>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/VO.png</href>
-			</Icon>
-			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
-		</IconStyle>
-		<ListStyle>
-		</ListStyle>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Cumbre Vieja</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+
+<td>Date</td>
+
+<td>26 September</td>
+
+</tr>
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2 (as of 26 September)</td>
+
+</tr>
+<tr>
+
+<td>Alert level</td>
+
+<td>Raised from Yellow to Red (on a four-level scale from Green to Red).</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>]]></text>
+			</BalloonStyle>
 	</Style>
-	<StyleMap id="m_ylw-pushpin">
+	<Style id="__managed_style_19BC12EAAB222E98BB64">
+			<IconStyle>
+				<scale>1.5</scale>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/VO.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+			</LineStyle>
+			<PolyStyle>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<!DOCTYPE html>
+<html>
+  <head></head>
+  <body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Cumbre Vieja</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+
+<td>Date</td>
+
+<td>26 September</td>
+
+</tr>
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2 (as of 26 September)</td>
+
+</tr>
+<tr>
+
+<td>Alert level</td>
+
+<td>The alert level of the volcano raised from Yellow to Red (on a four-level scale from Green to Red).</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
+	<StyleMap id="__managed_style_011DEA39E4222E98BB64">
 		<Pair>
 			<key>normal</key>
-			<styleUrl>#s_ylw-pushpin</styleUrl>
+			<styleUrl>#__managed_style_19BC12EAAB222E98BB64</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+			<styleUrl>#__managed_style_02B98F7500222E98BB65</styleUrl>
 		</Pair>
 	</StyleMap>
-	<Style id="s_ylw-pushpin">
-		<IconStyle>
-			<scale>1.2</scale>
+	<NetworkLink id="0F8228022E222E94F8E6">
+		<name>View Centered Placemark</name>
+		<visibility>0</visibility>
+		<description>The view-based refresh allows the remote server to calculate
+                the center of your screen and return a placemark.</description>
+		<Link>
+			<href>http://lg1/cgi-bin/viewCenteredPlacemark.py?</href>
+			<refreshInterval>2</refreshInterval>
+			<viewRefreshMode>onStop</viewRefreshMode>
+			<viewRefreshTime>1</viewRefreshTime>
+		</Link>
+	</NetworkLink>
+	<Folder id="0F12576415222E94F8E7">
+		<GroundOverlay>
+			<name>Sulphur Dioxide Emissions coming from La Palma</name>
 			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/VO.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
 			</Icon>
-			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
-		</IconStyle>
-		<ListStyle>
-		</ListStyle>
-	</Style>
-	<Placemark>
-		<name>Cumbre Veija</name>
+			<LatLonBox>
+				<north>58.8269554848843</north>
+				<south>8.976158523579272</south>
+				<east>26.29673683634944</east>
+				<west>-93.77033943411359</west>
+				<rotation>1.079346537590027</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+	</Folder>
+	<Placemark id="045C50F647222E94F8F0">
+		<name>Cumbre Vieja</name>
 		<LookAt>
 			<longitude>-17.55691708286384</longitude>
 			<latitude>28.74841697324626</latitude>
@@ -59,7 +182,7 @@
 			<range>436164.8848405922</range>
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
-		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<styleUrl>#__managed_style_011DEA39E4222E98BB64</styleUrl>
 		<Point>
 			<gx:drawOrder>1</gx:drawOrder>
 			<coordinates>-17.82113826289215,28.73510021618486,0</coordinates>
