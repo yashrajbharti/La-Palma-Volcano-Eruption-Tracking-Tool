@@ -64,44 +64,67 @@ class _AboutScreenState extends State<AboutScreen> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                      fontSize: 40,
                       color: Colors.black),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15.0),
-                child: Text(
-                  '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."  ',
-                  style: TextStyle(fontSize: 20),
-                  textAlign: TextAlign.center,
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'All about the VolTrac app:',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ],
                 ),
               ),
-              Text(
-                'Learn more',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0),
+                child: Text(
+                  '⬧ App is underconstruction come back later and check this page! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n⬧ App is underconstruction come back later and check this page! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                  style: TextStyle(fontSize: 18),
+                  textAlign: TextAlign.start,
+                ),
               ),
-              Text(
-                '\nTo get to know more about Liquid Galaxy Projects you can check out their website and github. \n',
+              const Text(
+                'Learn More',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0),
+                child: Text(
+                  'To learn more about Liquid Galaxy Projects you can check out their website and github.',
+                  style: TextStyle(fontSize: 18),
+                  textAlign: TextAlign.start,
+                ),
               ),
               GestureDetector(
                 onTap: () {
                   _launchURL('https://www.liquidgalaxy.eu/');
                 },
-                child: Text(
-                  'Liquid Galaxy website \n',
+                child: const Text(
+                  'Liquid Galaxy Website',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
+              ),
+              Text(
+                '\n',
+                style: TextStyle(fontSize: 4),
+                textAlign: TextAlign.start,
               ),
               GestureDetector(
                 onTap: () {
                   _launchURL('https://github.com/LiquidGalaxyLAB/');
                 },
-                child: Text(
-                  'Liquid Galaxy GitHub\n',
+                child: const Text(
+                  'Liquid Galaxy GitHub',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
