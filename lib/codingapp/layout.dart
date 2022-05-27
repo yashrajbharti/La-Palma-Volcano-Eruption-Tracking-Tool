@@ -20,7 +20,7 @@ class _LayoutState extends State<Layout> {
       length: 3,
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(60.0),
+          preferredSize: const Size.fromHeight(50.0),
           child: AppBar(
             elevation: 0,
             actions: const <Widget>[],
