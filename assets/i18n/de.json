@@ -57,6 +57,7 @@
 	"Tasks": {
 		"LG": "Liquid Galaxy-Aufgaben",
 		"Relaunch": "Neustart \n    LG",
+		"Reboot": "Neustart \n    LG",
 		"Shutdown": "Abschalten \n      LG",
 		"Save": "Speichern \n   KML",
 		"Clean": "Löschen \n  KML",

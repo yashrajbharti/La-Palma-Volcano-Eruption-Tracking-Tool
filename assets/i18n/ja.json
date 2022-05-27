@@ -57,6 +57,7 @@
 	"Tasks": {
 		"LG": "リキッドギャラクシータスク",
 		"Relaunch": "再起動 \n   LG",
+		"Reboot": "リブート \n    LG",
 		"Shutdown": "シャットダウン \n          LG",
 		"Save": "保存する \n   KML",
 		"Clean": "綺麗 \nKML",

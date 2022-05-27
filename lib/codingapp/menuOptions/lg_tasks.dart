@@ -110,20 +110,20 @@ class _LGtasksState extends State<LGtasks> {
               Text(
                 translate("Tasks.LG"),
                 style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 42,
                   color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
-                    vertical: 80.0, horizontal: 160.0),
+                    vertical: 30.0, horizontal: 140.0),
                 child: Column(
                   children: [
                     Row(
                       children: [
                         SizedBox(
-                          width: 360,
-                          height: 200,
+                          width: 340,
+                          height: 180,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               elevation: 0.0,
@@ -138,7 +138,7 @@ class _LGtasksState extends State<LGtasks> {
                                   width: 10,
                                 ),
                                 Text(translate("Tasks.Relaunch"),
-                                    style: TextStyle(fontSize: 45)),
+                                    style: TextStyle(fontSize: 42)),
                               ],
                             ),
                             onPressed: () {
@@ -157,8 +157,8 @@ class _LGtasksState extends State<LGtasks> {
                         ),
                         Spacer(),
                         SizedBox(
-                          width: 360,
-                          height: 200,
+                          width: 340,
+                          height: 180,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 elevation: 0.0,
@@ -173,7 +173,7 @@ class _LGtasksState extends State<LGtasks> {
                                     width: 10,
                                   ),
                                   Text(translate("Tasks.Shutdown"),
-                                      style: TextStyle(fontSize: 45)),
+                                      style: TextStyle(fontSize: 42)),
                                 ],
                               ),
                               onPressed: () {
@@ -191,51 +191,33 @@ class _LGtasksState extends State<LGtasks> {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 56,
-                    ),
-                    Row(
+                    Stack(
                       children: [
-                        SizedBox(
-                          width: 360,
-                          height: 200,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              elevation: 0.0,
-                              shadowColor: Colors.transparent,
-                              primary: Color.fromARGB(255, 240, 226, 103),
-                              padding: EdgeInsets.all(15),
-                              shape: StadiumBorder(),
-                            ),
-                            child: Wrap(
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(translate("Tasks.Save"),
-                                    style: TextStyle(fontSize: 45)),
-                              ],
-                            ),
-                            onPressed: () async {
-                              var status = await Permission.storage.status;
+                        Positioned(
+                          child: SizedBox(
+                            width: 340,
+                            height: 180,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                elevation: 0.0,
+                                shadowColor: Colors.transparent,
+                                primary: Color.fromARGB(255, 125, 164, 243),
+                                padding: EdgeInsets.all(15),
+                                shape: StadiumBorder(),
+                              ),
+                              child: Wrap(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(translate("Tasks.Save"),
+                                      style: TextStyle(fontSize: 42)),
+                                ],
+                              ),
+                              onPressed: () async {
+                                var status = await Permission.storage.status;
 
-                              if (status.isGranted && projectname != "") {
-                                try {
-                                  await KMLGenerator.generateKML(
-                                      kml.mount(), projectname);
-                                  showAlertDialog(translate("Tasks.alert"),
-                                      translate("Tasks.alert2"));
-                                } catch (e) {
-                                  print('error $e');
-                                  showAlertDialog(translate("Tasks.alert3"),
-                                      translate("Tasks.alert4"));
-                                }
-                              } else {
-                                var isGranted = await Permission.storage
-                                    .request()
-                                    .isGranted;
-                                if (isGranted && projectname != "") {
-                                  // download kml
+                                if (status.isGranted && projectname != "") {
                                   try {
                                     await KMLGenerator.generateKML(
                                         kml.mount(), projectname);
@@ -247,17 +229,71 @@ class _LGtasksState extends State<LGtasks> {
                                         translate("Tasks.alert4"));
                                   }
                                 } else {
-                                  showAlertDialog(translate("Tasks.alert3"),
-                                      translate("Tasks.alert4"));
+                                  var isGranted = await Permission.storage
+                                      .request()
+                                      .isGranted;
+                                  if (isGranted && projectname != "") {
+                                    // download kml
+                                    try {
+                                      await KMLGenerator.generateKML(
+                                          kml.mount(), projectname);
+                                      showAlertDialog(translate("Tasks.alert"),
+                                          translate("Tasks.alert2"));
+                                    } catch (e) {
+                                      print('error $e');
+                                      showAlertDialog(translate("Tasks.alert3"),
+                                          translate("Tasks.alert4"));
+                                    }
+                                  } else {
+                                    showAlertDialog(translate("Tasks.alert3"),
+                                        translate("Tasks.alert4"));
+                                  }
                                 }
-                              }
-                            },
+                              },
+                            ),
                           ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 340,
+                          height: 180,
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                elevation: 0.0,
+                                shadowColor: Colors.transparent,
+                                primary: Color.fromARGB(255, 240, 226, 103),
+                                padding: EdgeInsets.all(15),
+                                shape: StadiumBorder(),
+                              ),
+                              child: Wrap(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(translate("Tasks.Reboot"),
+                                      style: TextStyle(fontSize: 42)),
+                                ],
+                              ),
+                              onPressed: () {
+                                // send to LG
+                                LGConnection().rebootLG().then((value) {
+                                  setState(() {
+                                    isOpen = false;
+                                  });
+                                }).catchError((onError) {
+                                  print('oh no $onError');
+                                  showAlertDialog(translate("Tasks.alert5"),
+                                      translate("Tasks.alert6"));
+                                });
+                              }),
                         ),
                         Spacer(),
                         SizedBox(
-                          width: 360,
-                          height: 200,
+                          width: 340,
+                          height: 180,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 elevation: 0.0,
@@ -272,7 +308,7 @@ class _LGtasksState extends State<LGtasks> {
                                     width: 10,
                                   ),
                                   Text(translate("Tasks.Clean"),
-                                      style: TextStyle(fontSize: 45)),
+                                      style: TextStyle(fontSize: 42)),
                                 ],
                               ),
                               onPressed: () {
@@ -358,6 +394,26 @@ class LGConnection {
       await client.connect();
       await client.execute(
           "'/home/${credencials['username']}/bin/lg-poweroff' > /home/${credencials['username']}/log.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  Future rebootLG() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      await client.execute(
+          "'/home/${credencials['username']}/bin/lg-reboot' > /home/${credencials['username']}/log.txt");
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);

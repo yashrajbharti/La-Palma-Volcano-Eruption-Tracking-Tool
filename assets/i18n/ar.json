@@ -57,7 +57,8 @@
 	"Tasks": {
 		"LG": "مهام جالاكسي السائل",
 		"Relaunch": "أعد تشغيل \n    LG",
-		"Shutdown": "اغلاق \n  LG",
+		"Reboot": "اعادة التشغيل \n      LG",
+		"Shutdown": "اغلاق \n LG",
 		"Save": "احفظ ملف \n  KML",
 		"Clean": "ينظف \nKML",
 		"alert": "نجاح!",
