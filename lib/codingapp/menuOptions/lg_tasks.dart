@@ -142,7 +142,16 @@ class _LGtasksState extends State<LGtasks> {
                               ],
                             ),
                             onPressed: () {
-                              LGConnection().LGrelaunch();
+                              // send to LG
+                              LGConnection().relaunchLG().then((value) {
+                                setState(() {
+                                  isOpen = false;
+                                });
+                              }).catchError((onError) {
+                                print('oh no $onError');
+                                showAlertDialog(translate("Tasks.alert5"),
+                                    translate("Tasks.alert6"));
+                              });
                             },
                           ),
                         ),
@@ -151,24 +160,34 @@ class _LGtasksState extends State<LGtasks> {
                           width: 360,
                           height: 200,
                           child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              elevation: 0.0,
-                              shadowColor: Colors.transparent,
-                              primary: Color.fromARGB(255, 232, 108, 99),
-                              padding: EdgeInsets.all(15),
-                              shape: StadiumBorder(),
-                            ),
-                            child: Wrap(
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(translate("Tasks.Shutdown"),
-                                    style: TextStyle(fontSize: 45)),
-                              ],
-                            ),
-                            onPressed: () {},
-                          ),
+                              style: ElevatedButton.styleFrom(
+                                elevation: 0.0,
+                                shadowColor: Colors.transparent,
+                                primary: Color.fromARGB(255, 232, 108, 99),
+                                padding: EdgeInsets.all(15),
+                                shape: StadiumBorder(),
+                              ),
+                              child: Wrap(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(translate("Tasks.Shutdown"),
+                                      style: TextStyle(fontSize: 45)),
+                                ],
+                              ),
+                              onPressed: () {
+                                // send to LG
+                                LGConnection().shutdownLG().then((value) {
+                                  setState(() {
+                                    isOpen = false;
+                                  });
+                                }).catchError((onError) {
+                                  print('oh no $onError');
+                                  showAlertDialog(translate("Tasks.alert5"),
+                                      translate("Tasks.alert6"));
+                                });
+                              }),
                         ),
                       ],
                     ),
@@ -305,6 +324,46 @@ class LGConnection {
     }
   }
 
+  Future relaunchLG() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      await client.execute(
+          "'/home/${credencials['username']}/bin/lg-relaunch' > /home/${credencials['username']}/log.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  Future shutdownLG() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      await client.execute(
+          "'/home/${credencials['username']}/bin/lg-poweroff' > /home/${credencials['username']}/log.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
   _getCredentials() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     String ipAddress = preferences.getString('master_ip') ?? '';
@@ -333,26 +392,6 @@ class LGConnection {
     try {
       await client.connect();
       return await client.execute('echo "exittour=true" > /tmp/query.txt');
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  LGrelaunch() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-      return await client.execute(
-          'sshpass -p ${credencials['pass']} ssh lg1 "sudo -S <<< ${credencials['pass']} sudo lg-relaunch"');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
