@@ -60,7 +60,7 @@ class _LGtasksState extends State<LGtasks> {
                   },
                   icon: Icon(
                     Icons.clear_rounded,
-                    color: Color.fromARGB(255, 228, 6, 9),
+                    color: Color.fromARGB(255, 208, 0, 0),
                     size: 32,
                   ),
                   padding: EdgeInsets.only(bottom: 10),
