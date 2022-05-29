@@ -86,5 +86,25 @@
 		"placeholder4": "p.sh. fjalëkalimi-i-LG-së-sime",
 		"label4": "Fjalëkalimi kryesor i makinës",
 		"button": "Lidhu me LG"
+	},
+	"About": {
+		"aboutpage": "Rreth faqes \n Mjeti i gjurmimit të shpërthimeve të vullkanit La Palma ",
+		"all": "Gjithçka rreth aplikacionit VolTrac:",
+		"points": "⬧ Ky projekt u krijua gjatë verës së kodit të Google 2022 së bashku me organizatën Liquid Galaxy. \n⬧ Ky aplikacion është zhvilluar nga Yash Raj Bharti (email: yashrajbharti.met18@itbhu.ac.in) nën Liquid Galaxy, falë Programit Google Summer of Code 2022. \n⬧ Aplikacioni VolTrac shërben si një mjet gjurmimi për vizualizimin e gjurmëve të ndryshme bazuar në aktivitetet vullkanike të La Palma dhe i shfaq ato bukur me KML me ngjyra. \n⬧ Voltrac jo vetëm që vepron si një udhëzues, por ne mund ta përdorim aplikacionin tonë edhe për qëllime edukative dhe kërkimore, të tilla si studimi i fatkeqësive natyrore, aktiviteteve vullkanike dhe katastrofave nga shkatërrimi i shkaktuar nga vullkani La Palma. \n⬧ Disa gjurmë të të dhënave të ndryshme të hartës, si Harta Historike e Gjurmëve, Harta e Rrjedhjes së Lavës, Harta Parahistorike e Gjurmëve, Harta e Zonave të Ndikuara, Harta e Peizazhit, Harta e Emetimeve SO\u2082, Harta e Situatës dhe Ngjarjet e Vendndodhja janë të mundshme, falë të ndryshmeve burimet e përmendura në skedën Info. \n⬧ Përveç anglishtes, ky aplikacion mbështet edhe tetë gjuhë, përkatësisht spanjisht, hindisht, gjermanisht, arabisht, rusisht, japonisht, kinezisht (të thjeshtuar) dhe shqip, të cilat mund të ndryshohen nga opsioni i menusë \"Menaxheri i lidhjes\". \n⬧ Zhvilluar falë laboratorëve TIC të Parkut Shkencor të Lleidës, Liquid Galaxy LAB & LleidaDrone LAB, Shkollës Politeknike të Lleida, End Point Corp (NY), Wonderama LAB nga Western University (Sydney), Gigabyte, Benq, HP, Corsair, dhe Hemav Academics.",
+		"learn": "Mëso më shumë",
+		"check": "Për të ditur më shumë rreth aplikacionit, shikoni faqen e tij Github dhe Politikën e Privatësisë.",
+		"github": "VolTrac GitHub",
+		"privacy": "Politika e privatësisë"
+	},
+	"help": {
+		"helppage": "Faqja e Ndihmës",
+		"instruction": "Udhëzime për konfigurimin e vizualizimit:",
+		"points": "⬧ Së pari, shkoni te \"Menaxheri i lidhjes\", i cili mund të gjendet në meny dhe plotësoni kredencialet. Shembujt përmenden atje si mbajtës të vendeve. Gjithashtu, mund t'i ndërroni gjuhët atje sipas lehtësisë suaj. \n⬧ Më pas shkoni te skeda Track dhe trokitni lehtë mbi gjurmën që dëshironi të vizualizoni. Prisni që të shfaqet mesazhi \"Gati për të vizualizuar\" Toast dhe më pas shtypni butonin \"Visualize in LG\". Ju do të jeni në gjendje të shihni vizualizimin e dëshiruar në pajisjen Liquid Galaxy. \n⬧ Mund të lundroni nëpër LG nga skeda Harta, të mësoni se çfarë përfaqësojnë ikonat dhe poligonet me ngjyra nga \"Skeda e informacionit\" dhe Pastroni ose ruani vizualizimin me ndihmën e \"LG Tasks\" nga menu.",
+		"Troubleshooting": "Zgjidhja e problemeve",
+		"points2": "⬧ Nëse nuk mund të lidheni me pajisjen LG, fillimisht sigurohuni që të dy janë në të njëjtin rrjet; ose mund të lidheni me WiFi të një pajisjeje të tretë ose të lidhni LG-në me pikën kryesore të tabletit. Kontrolloni që kredencialet të jenë plotësuar saktë dhe provoni përsëri. \n⬧ Për të gjetur adresën IP të LG (ose të laptopit pritës në rast të konfigurimit të VM), shkruani \"ifconfig\" në terminal nëse jeni në Mac ose Linux dhe \"ipconfig\" për Windows.\n⬧ Për pajisjet e nivelit të ulët LG, ndonjëherë vizualizimi nuk shfaqet herën e parë. Klikoni edhe një herë butonin \"Vizualizo në LG\" për ta zgjidhur këtë.",
+		"support": "Merrni mbështetje",
+		"check": "Për të marrë më shumë mbështetje në Liquid Galaxy Projects, mund të shikoni uebsajtin dhe github-in e tyre.",
+		"website": "Faqja e internetit e Galaxy Liquid",
+		"github": "Galaxy GitHub i lëngshëm"
 	}
 }

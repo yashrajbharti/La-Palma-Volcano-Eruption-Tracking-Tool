@@ -167,7 +167,7 @@ class _SettingsState extends State<Settings> {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 120.0),
+            padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 120.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
@@ -46,21 +49,15 @@ class _AboutScreenState extends State<AboutScreen> {
       backgroundColor: Color.fromARGB(255, 204, 204, 204),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                ),
-                height: 10,
-              ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0),
                 child: Text(
-                  'About Page \n La Palma Volcano Eruption Tracking Tool ',
+                  translate("About.aboutpage"),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -73,7 +70,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      'All about the VolTrac app:',
+                      translate("About.all"),
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -83,33 +80,38 @@ class _AboutScreenState extends State<AboutScreen> {
                   ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 15.0),
-                child: Text(
-                  '⬧ App is underconstruction come back later and check this page! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n⬧ App is underconstruction come back later and check this page! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                  style: TextStyle(fontSize: 18),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10.0),
+                child: Linkify(
+                  onOpen: _onOpen,
+                  text: translate("About.points"),
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                  linkStyle: TextStyle(color: Colors.black, fontSize: 18),
                   textAlign: TextAlign.start,
                 ),
               ),
-              const Text(
-                'Learn More',
+              Text(
+                translate("About.learn"),
                 textAlign: TextAlign.center,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(vertical: 15.0),
                 child: Text(
-                  'To learn more about Liquid Galaxy Projects you can check out their website and github.',
+                  translate("About.check"),
                   style: TextStyle(fontSize: 18),
                   textAlign: TextAlign.start,
                 ),
               ),
               GestureDetector(
                 onTap: () {
-                  _launchURL('https://www.liquidgalaxy.eu/');
+                  _launchURL('https://github.com/LiquidGalaxyLAB/VolTrac');
                 },
-                child: const Text(
-                  'Liquid Galaxy Website',
+                child: Text(
+                  translate("About.github"),
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
@@ -121,10 +123,11 @@ class _AboutScreenState extends State<AboutScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  _launchURL('https://github.com/LiquidGalaxyLAB/');
+                  _launchURL(
+                      'https://github.com/LiquidGalaxyLAB/VolTrac/Privacy_Policy.md');
                 },
-                child: const Text(
-                  'Liquid Galaxy GitHub',
+                child: Text(
+                  translate("About.privacy"),
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
@@ -134,5 +137,13 @@ class _AboutScreenState extends State<AboutScreen> {
         ),
       ),
     );
+  }
+
+  Future<void> _onOpen(LinkableElement link) async {
+    if (await canLaunch(link.url)) {
+      await launch(link.url);
+    } else {
+      throw 'Could not launch $link';
+    }
   }
 }

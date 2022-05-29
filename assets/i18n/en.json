@@ -86,5 +86,25 @@
 		"placeholder4": "eg. the-password-of-my-LG",
 		"label4": "Master machine Password",
 		"button": "Connect To LG"
+	},
+	"About": {
+		"aboutpage": "About Page \n La Palma Volcano Eruption Tracking Tool ",
+		"all": "All about the VolTrac app:",
+		"points": "⬧ This project was created during the Google Summer of Code 2022 alongside the Liquid Galaxy organization. \n⬧ This app has been developed by Yash Raj Bharti (email: yashrajbharti.met18@itbhu.ac.in) under Liquid Galaxy, thanks to the Google Summer of Code 2022 Program. \n⬧ The VolTrac app serves as a Tracking Tool for Visualization of the various tracks based on the Volcanic activities of La Palma and displays them beautifully with colored KML. \n⬧ Voltrac not only acts as a guide, but we can also use our application for educational and research purposes, such as studying natural disasters, volcanic activities, and catastrophes from the destruction caused by La Palma Volcano. \n⬧ Several Tracks of different Map data such as Historic Track Map, Lava Flow Map, Pre-Historic Track Map, Affected Areas Map, Landscape Map, SO\u2082 Emissions Map, Situation Map and Located Events are possible, thanks to the various sources mentioned in the Info Tab. \n⬧ Besides English, this app also supports eight languages, namely Spanish, Hindi, German, Arabic, Russian, Japanese, Chinese (Simplified), and Albanian, which one can change from the Connection Manager menu option. \n⬧ Developed thanks to the TIC Laboratories of the Scientific Park of Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Polytechnic School of Lleida, End Point Corp (NY), Wonderama LAB from Western University (Sydney), Gigabyte, Benq, HP, Corsair, and Hemav Academics.",
+		"learn": "Learn More",
+		"check": "To know more about the app check out its Github page and Privacy Policy.",
+		"github": "VolTrac GitHub",
+		"privacy": "Privacy Policy"
+	},
+	"help": {
+		"helppage": "Help Page",
+		"instruction": "Instructions for Setting up the Visualization:",
+		"points": "⬧ First, go to Connection Manager, which can be found in the menu, and fill in the credentials. The examples are mentioned there as placeholders. Also, you can switch languages there at your convenience. \n⬧ Then go to the Track tab and tap on the Track you want to visualize. Wait for the \"Ready to visualize\" Toast message to appear, then hit the \"Visualize in LG\" button. You will be able to see the desired visualization in the Liquid Galaxy rig. \n⬧ You can navigate through the LG from the Map tab, learn what the icons and colored polygons stand for from the \"Info Tab\", and Clean or Save the visualization with the help of \"LG Tasks\" from the menu.",
+		"Troubleshooting": "Troubleshooting",
+		"points2": "⬧ If you can not connect to the LG rig, first make sure they are both on the same network; either you can connect to the WiFi of a third device or connect LG to the Tablet's hotspot. Check that the credentials are correctly filled in and try again. \n⬧ To find the IP address of the LG (or the host Laptop in case of VM setup), type \"ifconfig\" in the terminal if you're on Mac or Linux and \"ipconfig\" for Windows.\n⬧ For low-end LG rigs, sometimes the visualization doesn't appear the first time. Hit the \"Visualize in LG\" button once more to solve this.",
+		"support": "Get Support",
+		"check": "To get more support on Liquid Galaxy Projects you can check out their website and github.",
+		"website": "Liquid Galaxy Website",
+		"github": "Liquid Galaxy GitHub"
 	}
 }

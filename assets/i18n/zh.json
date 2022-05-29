@@ -86,5 +86,25 @@
 		"placeholder4": "例如。我的LG密码",
 		"label4": "主机密码",
 		"button": "连接到 LG"
+	},
+	"About": {
+		"aboutpage": "关于页面 \n 拉帕尔马火山喷发跟踪工具 ",
+		"all": "关于 VolTrac 应用程序的所有信息：",
+		"points": "⬧ 该项目是在 2022 年 Google Summer of Code 期间与 Liquid Galaxy 组织一起创建的。 \n⬧ 此应用由 Yash Raj Bharti（电子邮件：yashrajbharti.met18@itbhu.ac.in）在 Liquid Galaxy 下开发，感谢 Google Summer of Code 2022 计划。 \n⬧ VolTrac 应用程序用作跟踪工具，用于可视化基于拉帕尔马火山活动的各种轨迹，并用彩色 KML 精美地显示它们。 \n⬧ Voltrac 不仅可以作为指南，我们还可以将我们的应用程序用于教育和研究目的，例如研究自然灾害、火山活动以及拉帕尔马火山造成的破坏造成的灾难。 \n⬧ 不同地图数据的多个轨迹，例如历史轨迹图、熔岩流图、史前轨迹图、受影响区域图、景观图、SO\u2082 排放图、情况图和定位事件，这要归功于各种信息选项卡中提到的来源。 \n⬧ 除了英语，此应用程序还支持八种语言，即西班牙语、印地语、德语、阿拉伯语、俄语、日语、中文（简体）和阿尔巴尼亚语，可以从连接管理器菜单选项中更改其中一种。 \n⬧ 开发感谢 Lleida 科学园的 TIC 实验室、Liquid Galaxy LAB 和 LleidaDrone LAB、Lleida 理工学院、End Point Corp (NY)、Western University (Sydney) 的 Wonderama LAB、Gigabyte、Benq、HP、海盗船和 Hemav 学者。",
+		"learn": "学到更多",
+		"check": "要了解有关该应用程序的更多信息，请查看其 Github 页面和隐私政策。",
+		"github": "VolTrac GitHub",
+		"privacy": "隐私政策"
+	},
+	"help": {
+		"helppage": "帮助页面",
+		"instruction": "设置可视化的说明：",
+		"points": "⬧ 首先，转到可以在菜单中找到的连接管理器，然后填写凭据。这些示例在此处作为占位符被提及。此外，您可以在方便时切换语言。 \n⬧ 然后转到 Track 选项卡并点击要可视化的 Track。等待“准备可视化”Toast 消息出现，然后点击“在 LG 中可视化”按钮。您将能够在 Liquid Galaxy 装备中看到所需的可视化效果。 \n⬧ 您可以从“地图”选项卡浏览 LG，从“信息选项卡”了解图标和彩色多边形的含义，并在“LG 任务”的帮助下清理或保存可视化菜单。",
+		"Troubleshooting": "故障排除",
+		"points2": "⬧ 如果无法连接到 LG 钻机，首先确保它们都在同一个网络上；您可以连接到第三台设备的 WiFi 或将 LG 连接到平板电脑的热点。检查凭据是否正确填写，然后重试。 \n⬧ 要查找 LG（或设置 VM 时的主机笔记本电脑）的 IP 地址，如果您在 Mac 或 Linux 上，请在终端中键入 \"ifconfig\"，在 Windows 上键入 \"ipconfig\"。\n⬧ 对于低端 LG 装备，有时可视化不会第一次出现。再次点击“在 LG 中可视化”按钮来解决这个问题。",
+		"support": "得到支持",
+		"check": "要获得有关 Liquid Galaxy 项目的更多支持，您可以查看他们的网站和 github。",
+		"website": "液态银河网站",
+		"github": "液态银河 GitHub"
 	}
 }
