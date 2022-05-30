@@ -106,5 +106,74 @@
 		"check": "Për të marrë më shumë mbështetje në Liquid Galaxy Projects, mund të shikoni uebsajtin dhe github-in e tyre.",
 		"website": "Faqja e internetit e Galaxy Liquid",
 		"github": "Galaxy GitHub i lëngshëm"
+	},
+	"info": {
+		"description": "Përshkrim:",
+		"date": "Data e ngjarjes:",
+		"legend": "Legjenda:",
+		"sources": "Burimet:",
+		"hist": {
+			"description": "Kjo gjurmë përfaqëson rrjedhën e lavës gjatë viteve në ishullin La Palma. Historia e regjistruar i konfirmon këto ngjarje, me aktivitetin e parë vullkanik në 1480 pas Krishtit deri në shpërthimin e fundit nga Cumbre Vieja në 2021. Shumica e tyre kanë një Indeks të Shpërthimit Vullkanik (VEI) prej 2, por shpërthimi i fundit në 2021 kishte një VEI prej 3 .",
+			"date": "Vite të ndryshme midis 1480 dhe 2021",
+			"legend": "Të dhënat historike të rrjedhës së lavës për vitet në vijim:",
+			"and": "1677 dhe 1971",
+			"lava": "Simboli i llavës"
+		},
+		"lava": {
+			"description": "Harta e rrjedhës së lavës përfaqëson të dhënat e rrjedhës së lavës nga çdo 10-15 ditë. Këto të dhëna tregojnë evolucionin e rrjedhës së lavës, efektin e saj në terren dhe temperaturat e rrjedhës së lavës ndërsa përhapet në rajonin e La Palma dhe më në fund arrin në det. Shkalla e rrjedhës së lavës ishte 10 m/s, dhe temperatura më e lartë e lavës ishte rreth 1270°C.",
+			"date": "24 shtator deri më 18 dhjetor 2021",
+			"legend": "Legjenda për evolucionin e të dhënave të rrjedhës së lavës nga shtatori 2021 deri në dhjetor 2021:",
+			"vents": "Ventilimet"
+		},
+		"prehistoric": {
+			"description": "Këto aktivitete vullkanike janë nga koha në histori përpara se njerëzimi të shkruante ngjarjet. Shumica e tyre janë evidente nga testimi i radiokarbonit (të pakorrigjuar) dhe kalium-argonit. Të dhënat janë në Ka, që qëndron për kiloannus ose kiloannum (ka), një njësi kohore e barabartë me një mijë (10\u00B3) vjet.",
+			"date": "Vitet e ndryshme në rangun 6050 pes ± 1500 vjet deri në 1480 ± 10 vjet",
+			"legend": "Të dhënat parahistorike të rrjedhës së lavës për vitet e mëposhtme kalendarike:",
+			"lava": "Simboli i llavës"
+		},
+		"aff": {
+			"description": "Ky Track vizualizon të dhënat e objekteve të transportit, shtëpive dhe ndërtesave të shkatërruara dhe ndoshta të dëmtuara dhe efektin e dëmshëm të llavës në tokat natyrore dhe fermat e rajonit La Palma.",
+			"date": "Situata e 15 dhjetorit 2021",
+			"legend": "Të dhënat e zonave të prekura për klasifikimin e transportit, të ndërtuar dhe objekteve:",
+			"destroyed": "I shkaterruar  ",
+			"possible": "Mundësisht i \nshkatërruar  ",
+			"novisible": "Asnjë dëm i \ndukshëm",
+			"lava": "Rrjedhja e llavës ",
+			"vents": "Ventilimet  ",
+			"area": "Zona e interesit    ",
+			"hydro": "Hidrografia",
+			"roads": "Rrugët e \nshkatërruara  "
+		},
+		"land": {
+			"description": "Aktiviteti vullkanik Cumbre Vieja i vitit 2021 la gjurmë në rajonin e La Palma. Imazhi i Tokës Operacional (OLI) në Landsat 8 kapi këtë imazh me ngjyra natyrale duke treguar se sa në mënyrë drastike kanë ndryshuar zonat Todoque dhe El Paraíso që nga 15 dhjetori 2021.",
+			"date": "15 dhjetor 2021",
+			"legend": "Legjenda për peizazhin e ndryshuar të La Palma për shkak të rrjedhës së lavës:",
+			"landscape": "Peizazhi për shkak të rrjedhjes së lavës    ",
+			"infoicon": "Ikona e informacionit për Peizazhin e Ndryshuar të La Palmës    "
+		},
+		"So2": {
+			"description": "Shërbimi i Monitorimit Atmosferik gjurmon shtëllungat e dioksidit të squfurit nga shpërthimi vullkanik në La Palma. Vullkani La Palma nxjerr rreth 250,000 ton dioksid squfuri (të dhëna nga INVOLCAN) që kishte udhëtuar mbi Marok dhe Spanjë dhe kishte arritur në Francë periodikisht, duke sjellë shtëllunga në verilindje drejt Evropës.",
+			"date": "26 shtator 2021",
+			"legend": "SO\u2082 Të dhënat e emetimeve me matje në mol për metër katror (mol/m\u00B2):",
+			"volcano": "Vullkani Cumbre Vieja"
+		},
+		"situation": {
+			"description": "Ky Track jep një analizë të situatës së fillimit të shpërthimit vullkanik në La Palma. Mbrojtja Civile Spanjolle evakuoi >6,000 njerëz më 19 shtator. Rrjedha e lavës filloi më 20 shtator në orën 18:50 UTC dhe IGN raportoi 180 shtëpi të dëmtuara.",
+			"date": "19 shtator 2021 në orën 14.10 UTC (Dhe dridhje midis 11-21 shtator)",
+			"legend": "Legjenda për pasqyrën e situatës:",
+			"main": "Ngjarja kryesore \nshpërthyese   ",
+			"orange": "Alert Portokalli  ",
+			"maritime": "Zona e \nPërjashtimit Detare  ",
+			"closed": "Rruge te \nMbyllura    ",
+			"lava": "Rrjedhja e \nllavës ",
+			"Text": "  Teksti  ",
+			"municipality": "Bashkitë në evakuim \nurdhër/deklarim emergjence",
+			"data": " 21 shtator (dridhje)"
+		},
+		"located": {
+			"description": "Kjo gjurmë tregon të dhënat e tërmeteve të lëkundjeve që ndodhën gjatë gjithë periudhës së aktivitetit vullkanik, d.m.th., nga shtatori në dhjetor. Tërmeti matet në njësi mbLg, që është madhësia e valës së trupit duke përdorur valën Lg. Tërmetet që ndodhin gjatë gjithë aktivitetit vullkanik dhe rrjedhës së lavës janë përgjegjës për Evolucionin e Terrenit.",
+			"date": "12 shtator deri më 15 dhjetor 2021",
+			"legend": "Legjenda për kategorizimin e të dhënave sizmike bazuar në madhësinë:"
+		}
 	}
 }

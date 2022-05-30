@@ -106,5 +106,74 @@
 		"check": "To get more support on Liquid Galaxy Projects you can check out their website and github.",
 		"website": "Liquid Galaxy Website",
 		"github": "Liquid Galaxy GitHub"
+	},
+	"info": {
+		"description": "Description:",
+		"date": "Date of Event:",
+		"legend": "Legend:",
+		"sources": "Sources:",
+		"hist": {
+			"description": "This Track represents Lava Flow over the years on the La Palma island. Recorded history confirms these events, with the first volcanic activity in 1480 AD to the latest eruption from the Cumbre Vieja in 2021. Most of them have a Volcanic Explosivity Index (VEI) of 2, but the latest outbreak in 2021 had a VEI of 3.",
+			"date": "Various years between 1480 and 2021",
+			"legend": "Historical Lava Flow data of the following years:",
+			"and": "1677 & 1971",
+			"lava": "Lava symbol"
+		},
+		"lava": {
+			"description": "The Lava Flow map represents Lava flow data from every 10-15 days. This data shows the evolution of Lava Flow, it's effect on the terrain, and the Lava Flow temperatures as it spreads in the La Palma region and finally reaches the sea. The lava flow rate was 10m/s, and the highest temperature of Lava was around 1270°C.",
+			"date": "24 September to 18 December, 2021",
+			"legend": "Legend for the evolution of Lava Flow data from September 2021 to December 2021:",
+			"vents": "Vents"
+		},
+		"prehistoric": {
+			"description": "These Volcanic activities are from the time in history before humankind wrote down events. Most of these are evident from Radiocarbon (uncorrected) and Potassium-Argon testing. The data is in Ka, which stands for kiloannus or kiloannum (ka), a unit of time equal to one thousand (10\u00B3) years.",
+			"date": "Various years in the range 6050 BCE ± 1500 years to 1480 ± 10 years",
+			"legend": "Pre-Historical Lava Flow data of the following calender years:",
+			"lava": "Lava symbol"
+		},
+		"aff": {
+			"description": "This Track visualizes the data of the transportation facilities, houses, and buildings destroyed and possibly damaged and the harmful effect of lava on the natural lands and farms of the La Palma region.",
+			"date": "Situation of 15 December, 2021",
+			"legend": "Affected Areas data of Transportation, Built up, and Facilities grading:",
+			"destroyed": "Destroyed  ",
+			"possible": "Possibly Destroyed  ",
+			"novisible": "No Visible Damage",
+			"lava": "Lava Flow ",
+			"vents": "Vents  ",
+			"area": "Area of interest    ",
+			"hydro": "Hydrography",
+			"roads": "Roads Destroyed  "
+		},
+		"land": {
+			"description": "The Cumbre Vieja Volcanic activity of 2021 left a mark on the La Palma region. The Operational Land Imager (OLI) on Landsat 8 captured this natural-color image showing how drastically the Todoque and El Paraíso areas have changed as of 15 December, 2021.",
+			"date": "15 December, 2021",
+			"legend": "Legend for Changed landscape of La Palma due to Lava Flow:",
+			"landscape": "Landscape due to Lava Flow    ",
+			"infoicon": "Info icon for Changed Landscape of La Palma    "
+		},
+		"So2": {
+			"description": "Atmospheric Monitoring Service tracks sulfur dioxide plumes from the volcanic eruption on La Palma. La Palma volcano spews some 250,000 tons of Sulfur Dioxide (Data from INVOLCAN) that had traveled over Morocco and Spain and reached France periodically, bringing plumes northeast toward Europe.",
+			"date": "26 September, 2021",
+			"legend": "SO\u2082 Emissions data with measurements in mol per square meter (mol/ m\u00B2):",
+			"volcano": "Cumbre Vieja Volcano"
+		},
+		"situation": {
+			"description": "This Track gives a situational analysis of the start of the volcanic eruption at La Palma. Spanish Civil Protection evacuated >6,000 people on 19th Sep. Lava Flow began on 20th Sep at 18:50 UTC, and IGN reported 180 Damaged houses.",
+			"date": "19 September, 2021 at 14.10 UTC (And Tremors between 11-21 September)",
+			"legend": "Legend for the Situational Overview:",
+			"main": "Main Eruptive Event   ",
+			"orange": "Orange Alert  ",
+			"maritime": "Maritime Exclusion Zone  ",
+			"closed": "Closed Roads    ",
+			"lava": "Lava Flow ",
+			"Text": "  Text  ",
+			"municipality": "Municipalities under evacuation \norder / emergency declaration",
+			"data": " 21 Sep (Tremor)"
+		},
+		"located": {
+			"description": "This Track shows the Earthquake data of the tremors that happened throughout the volcanic activity period, i.e., from September to December. Earthquake is measured in mbLg units, which is the Body Wave Magnitude using the Lg wave. The Earthquakes that happen throughout the volcanic activity and the lava flow are responsible for the Evolution of Terrain.",
+			"date": "12 September to 15 December, 2021",
+			"legend": "Legend for Categorization of the Seismic data based on the magnitude:"
+		}
 	}
 }

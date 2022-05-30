@@ -86,7 +86,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   },
                   icon: Icon(
                     Icons.clear_rounded,
-                    color: Color.fromARGB(255, 208, 0, 0),
+                    color: Color.fromARGB(255, 228, 6, 9),
                     size: 32,
                   ),
                   padding: EdgeInsets.only(bottom: 5),
@@ -167,7 +167,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 208, 0, 0),
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
                       size: 45.0,
                     ),
                   ],
@@ -198,7 +198,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 208, 0, 0),
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
                       size: 45.0,
                     ),
                   ],
@@ -233,7 +233,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 208, 0, 0),
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
                         size: 45.0,
                       ),
                     ],
@@ -263,7 +263,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 208, 0, 0),
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
                         size: 45.0,
                       ),
                     ],
@@ -298,7 +298,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 208, 0, 0),
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
                       size: 45.0,
                     ),
                   ],
@@ -329,7 +329,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         style: TextStyle(fontSize: 40)),
                     Icon(
                       Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 208, 0, 0),
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
                       size: 45.0,
                     ),
                   ],
@@ -364,7 +364,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 208, 0, 0),
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
                         size: 45.0,
                       ),
                     ],
@@ -394,7 +394,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           style: TextStyle(fontSize: 40)),
                       Icon(
                         Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 208, 0, 0),
+                        color: ui.Color.fromARGB(255, 228, 6, 9),
                         size: 45.0,
                       ),
                     ],
@@ -423,7 +423,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         style: TextStyle(fontSize: 35)),
                     Icon(
                       Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 208, 0, 0),
+                      color: ui.Color.fromARGB(255, 228, 6, 9),
                       size: 45.0,
                     ),
                   ],

@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class VerticalCardPagerDemo extends StatefulWidget {
@@ -32,12 +34,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'Historic Track Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.hist'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -61,7 +66,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -76,9 +81,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'This Track represents Lava Flow over the years on the La Palma island. Recorded history confirms these events, with the first volcanic activity in 1480 AD to the latest eruption from the Cumbre Vieja in 2021. Most of them have a Volcanic Explosivity Index (VEI) of 2, but the latest outbreak in 2021 had a VEI of 3.',
+                        translate("info.hist.description"),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -113,7 +118,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -128,9 +133,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Various years between 1480 and 2021',
+                        translate("info.hist.date"),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -167,7 +172,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -181,11 +186,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text("Historical Lava Flow data of the following years:",
+                    Text(translate("info.hist.legend"),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 8,
@@ -203,9 +207,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text("1480    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -217,9 +220,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "1585   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -232,9 +234,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "1646   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -245,11 +246,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "1677 & 1971   ",
+                          translate("info.hist.and"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -270,9 +270,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text("1712    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -284,9 +283,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "1949   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -299,9 +297,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "1949   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -314,9 +311,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "2021   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -327,11 +323,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Lava symbol   ",
+                          translate("info.hist.lava"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -369,7 +364,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -391,18 +386,18 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         child: const Text(
                           'COPERNICUS',
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 20,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold),
+                            decoration: TextDecoration.underline,
+                            fontSize: 18.5,
+                            color: Colors.white70,
+                          ),
                         ),
                       ),
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white70,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 18.5,
+                          color: Colors.white70,
+                        ),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -412,18 +407,18 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         child: const Text(
                           'ResearchGate',
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 20,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold),
+                            decoration: TextDecoration.underline,
+                            fontSize: 18.5,
+                            color: Colors.white70,
+                          ),
                         ),
                       ),
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white70,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 18.5,
+                          color: Colors.white70,
+                        ),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -433,10 +428,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         child: const Text(
                           'Global Volcanism Program',
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 20,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold),
+                            decoration: TextDecoration.underline,
+                            fontSize: 18.5,
+                            color: Colors.white70,
+                          ),
                         ),
                       ),
                     ],
@@ -474,12 +469,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'Lava Flow Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.lava'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -503,7 +501,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -518,9 +516,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'The Lava Flow map represents Lava flow data from every 10-15 days. This data shows the evolution of Lava Flow, it\'s effect on the terrain, and the Lava Flow temperatures as it spreads in the La Palma region and finally reaches the sea. The lava flow rate was 10m/s, and the highest temperature of Lava was around 1270°C.',
+                        translate("info.lava.description"),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -555,7 +553,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -570,9 +568,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        '24 September to 18 December, 2021',
+                        translate("info.lava.date"),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -609,7 +607,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -623,12 +621,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                        "Legend for the evolution of Lava Flow data from September 2021 to December 2021:",
+                    Text(translate("info.lava.legend"),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 8,
@@ -646,9 +642,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text("24 Sep    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -660,9 +655,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "8 Oct   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -675,9 +669,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "21 Oct   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -690,9 +683,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "4 Nov   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -713,9 +705,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text("14 Nov    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -727,9 +718,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "21 Nov   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -742,9 +732,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "1 Dec   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -757,9 +746,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "18 Dec   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -770,11 +758,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Vents",
+                          translate("info.lava.vents"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -812,7 +799,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -834,18 +821,18 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         child: const Text(
                           'COPERNICUS',
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 20,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold),
+                            decoration: TextDecoration.underline,
+                            fontSize: 18.5,
+                            color: Colors.white70,
+                          ),
                         ),
                       ),
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white70,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 18.5,
+                          color: Colors.white70,
+                        ),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -855,10 +842,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         child: const Text(
                           'Wikipedia | Cumbre Vieja',
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 20,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold),
+                            decoration: TextDecoration.underline,
+                            fontSize: 18.5,
+                            color: Colors.white70,
+                          ),
                         ),
                       )
                     ],
@@ -895,12 +882,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'Pre-Historic Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.prehistoric'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -924,7 +914,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -939,9 +929,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'These Volcanic activities are from the time in history before humankind wrote down events. Most of these are evident from Radiocarbon (uncorrected) and Potassium-Argon testing. The data is in Ka, which stands for kiloannus or kiloannum (ka), a unit of time equal to one thousand (10\u00B3) years.',
+                        translate("info.prehistoric.description"),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -976,7 +966,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -991,9 +981,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Various years in the range 6050 BCE ± 1500 years to 1480 ± 10 years',
+                        translate("info.prehistoric.date"),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -1030,7 +1020,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1044,12 +1034,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                        "Pre-Historical Lava Flow data of the following calender years:",
+                    Text(translate("info.prehistoric.legend"),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 8,
@@ -1067,9 +1055,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text("6 ± 2 Ka    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -1081,9 +1068,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "3.2 ± 0.1 Ka   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -1096,9 +1082,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "3.2 ± 0.1 Ka   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -1119,9 +1104,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text("1.04 ± 0.009    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -1133,9 +1117,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "1480 AD   ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -1146,11 +1129,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Lava symbol   ",
+                          translate("info.prehistoric.lava"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -1188,7 +1170,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1210,18 +1192,18 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         child: const Text(
                           'ResearchGate',
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 20,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold),
+                            decoration: TextDecoration.underline,
+                            fontSize: 18.5,
+                            color: Colors.white70,
+                          ),
                         ),
                       ),
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white70,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 18.5,
+                          color: Colors.white70,
+                        ),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -1231,10 +1213,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         child: const Text(
                           'Global Volcanism Program',
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 20,
-                              color: Colors.white70,
-                              fontWeight: FontWeight.bold),
+                            decoration: TextDecoration.underline,
+                            fontSize: 18.5,
+                            color: Colors.white70,
+                          ),
                         ),
                       ),
                     ],
@@ -1271,12 +1253,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'Affected Areas Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.aff'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -1300,7 +1285,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1315,9 +1300,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'This Track visualizes the data of the transportation facilities, houses, and buildings destroyed and possibly damaged and the harmful effect of lava on the natural lands and farms of the La Palma region.',
+                        translate("info.aff.description"),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -1352,7 +1337,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1367,9 +1352,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Situation of 15 December, 2021',
+                        translate("info.aff.date"),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -1406,7 +1391,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1420,12 +1405,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                        "Affected Areas data of Transportation, Built up, and Facilities grading:",
+                    Text(translate("info.aff.legend"),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 8,
@@ -1442,11 +1425,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Destroyed  ",
+                          translate("info.aff.destroyed"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -1457,11 +1439,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Possibly Destroyed  ",
+                          translate("info.aff.possible"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -1472,11 +1453,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "No Visible Damage",
+                          translate("info.aff.novisible"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -1495,11 +1475,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                             onPressed: () => {},
                           ),
                         ),
-                        Text("Lava Flow ",
+                        Text(translate("info.aff.lava"),
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -1509,11 +1488,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Vents  ",
+                          translate("info.aff.vents"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         const Icon(
@@ -1522,27 +1500,24 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           size: 46,
                         ),
                         Text(
-                          "Area of interest    ",
+                          translate("info.aff.area"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
                           "▬▬  ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Color.fromARGB(255, 3, 95, 171),
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
-                          "Hydrography",
+                          translate("info.aff.hydro"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -1557,49 +1532,43 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         Text(
                           "▬▬  ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.red,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
-                          "Roads Destroyed  ",
+                          translate("info.aff.roads"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
                           "▬▬  ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Color.fromARGB(255, 249, 233, 82),
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
-                          "Possibly Destroyed  ",
+                          translate("info.aff.possible"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
                           "▬▬  ",
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Color.fromARGB(255, 0, 0, 0),
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
-                          "No Visible Damage",
+                          translate("info.aff.novisible"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -1640,7 +1609,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1663,7 +1632,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'COPERNICUS',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -1702,12 +1671,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'Landscape Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.land'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -1731,7 +1703,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1746,9 +1718,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'The Cumbre Vieja Volcanic activity of 2021 left a mark on the La Palma region. The Operational Land Imager (OLI) on Landsat 8 captured this natural-color image showing how drastically the Todoque and El Paraíso areas have changed as of 15 December, 2021.',
+                        translate('info.land.description'),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -1783,7 +1755,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1798,9 +1770,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        '15 December, 2021',
+                        translate('info.land.date'),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -1837,7 +1809,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1851,12 +1823,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                        "Legend for Changed landscape of La Palma due to Lava Flow:",
+                    Text(translate('info.land.legend'),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 8,
@@ -1872,11 +1842,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                             onPressed: () => {},
                           ),
                         ),
-                        Text("Landscape due to Lava Flow    ",
+                        Text(translate('info.land.landscape'),
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -1894,11 +1863,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                             onPressed: () => {},
                           ),
                         ),
-                        Text("Info icon for Changed Landscape of La Palma    ",
+                        Text(translate('info.land.infoicon'),
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -1935,7 +1903,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -1958,7 +1926,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'NASA Earth Observatory',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -1966,7 +1934,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18.5,
                             color: Colors.white70,
                             fontWeight: FontWeight.bold),
                       ),
@@ -1979,7 +1947,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'Sentinel Playground',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -1987,7 +1955,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18.5,
                             color: Colors.white70,
                             fontWeight: FontWeight.bold),
                       ),
@@ -2000,7 +1968,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'COPERNICUS',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -2039,12 +2007,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'SO\u2082 Emissions Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.So2'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -2068,7 +2039,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2083,9 +2054,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Atmospheric Monitoring Service tracks sulfur dioxide plumes from the volcanic eruption on La Palma. La Palma volcano spews some 250,000 tons of Sulfur Dioxide (Data from INVOLCAN) that had traveled over Morocco and Spain and reached France periodically, bringing plumes northeast toward Europe.',
+                        translate("info.So2.description"),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -2120,7 +2091,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2135,9 +2106,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        '26 September, 2021',
+                        translate("info.So2.date"),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -2174,7 +2145,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2188,12 +2159,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                        "SO\u2082 Emissions data with measurements in mol per square meter (mol/ m\u00B2):",
+                    Text(translate("info.So2.legend"),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 10,
@@ -2209,9 +2178,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 1E - 2    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.rectangle_rounded,
@@ -2220,9 +2188,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 8.75E - 3    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.rectangle_rounded,
@@ -2231,9 +2198,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 6.25E - 3    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.rectangle_rounded,
@@ -2242,9 +2208,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 3.75E - 3    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -2262,9 +2227,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 1.25E - 3    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.rectangle_rounded,
@@ -2273,9 +2237,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 0.0    ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -2285,11 +2248,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Cumbre Vieja Volcano",
+                          translate("info.So2.volcano"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -2327,7 +2289,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2350,7 +2312,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'Sentinel EO Browser',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -2358,7 +2320,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18.5,
                             color: Colors.white70,
                             fontWeight: FontWeight.bold),
                       ),
@@ -2371,7 +2333,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'GDACS',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -2379,7 +2341,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18.5,
                             color: Colors.white70,
                             fontWeight: FontWeight.bold),
                       ),
@@ -2392,7 +2354,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'Twitter | Platform ADAM',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -2431,12 +2393,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'Situation Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.situation'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -2460,7 +2425,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2475,9 +2440,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'This Track gives a situational analysis of the start of the volcanic eruption at La Palma. Spanish Civil Protection evacuated >6,000 people on 19th Sep. Lava Flow began on 20th Sep at 18:50 UTC, and IGN reported 180 Damaged houses.',
+                        translate("info.situation.description"),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -2512,7 +2477,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2527,9 +2492,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        '19 September, 2021 at 14.10 UTC (And Tremors between 11-21 September)',
+                        translate("info.situation.date"),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -2566,7 +2531,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2580,11 +2545,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text("Legend for the Situational Overview:",
+                    Text(translate("info.situation.legend"),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 5,
@@ -2602,11 +2566,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Main Eruptive Event   ",
+                          translate("info.situation.main"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -2617,11 +2580,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Orange Alert  ",
+                          translate("info.situation.orange"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Builder(
@@ -2631,11 +2593,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                             onPressed: () => {},
                           ),
                         ),
-                        Text("Maritime Exclusion Zone  ",
+                        Text(translate("info.situation.maritime"),
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -2653,11 +2614,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                             onPressed: () => {},
                           ),
                         ),
-                        Text("Closed Roads    ",
+                        Text(translate("info.situation.closed"),
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         Builder(
                           builder: (context) => IconButton(
@@ -2667,27 +2627,24 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           ),
                         ),
                         Text(
-                          "Lava Flow ",
+                          translate("info.situation.lava"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
-                          "  Text  ",
+                          translate("info.situation.Text"),
                           style: TextStyle(
                               fontSize: 23.0,
                               color: Color.fromARGB(255, 82, 61, 42),
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                         Text(
-                          "Municipalities under evacuation \norder / emergency declaration",
+                          translate("info.situation.municipality"),
                           style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 18.5,
                               color: Colors.white70,
-                              fontWeight: FontWeight.bold,
                               fontFamily: "OldStandard"),
                         ),
                       ],
@@ -2706,9 +2663,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 11-12  ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.circle_rounded,
@@ -2717,9 +2673,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 13-14  ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.circle_rounded,
@@ -2728,9 +2683,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 15-16  ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.circle_rounded,
@@ -2739,9 +2693,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 17-18  ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.circle_rounded,
@@ -2750,9 +2703,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 19  ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.circle_rounded,
@@ -2761,20 +2713,18 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 20  ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                         const Icon(
                           Icons.circle_rounded,
                           color: Color.fromARGB(255, 0, 0, 0),
                           size: 20,
                         ),
-                        Text(" 21 Sep (Tremor data)",
+                        Text(translate("info.situation.data"),
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -2811,7 +2761,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2834,7 +2784,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'Instituto Geográfico Nacional',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -2842,7 +2792,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18.5,
                             color: Colors.white70,
                             fontWeight: FontWeight.bold),
                       ),
@@ -2855,7 +2805,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'GDACS',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -2863,7 +2813,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       Text(
                         ' , ',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18.5,
                             color: Colors.white70,
                             fontWeight: FontWeight.bold),
                       ),
@@ -2876,7 +2826,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'ERCC Portal',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),
@@ -2915,12 +2865,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           Align(
             alignment: Alignment.center,
             child: Text(
-              'Located Events Map',
-              style: TextStyle(color: Colors.white, fontSize: 37.5),
+              translate('Track.located'),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 34.5,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           new Row(
             children: <Widget>[
@@ -2944,7 +2897,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Description:',
+                        translate("info.description"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -2959,9 +2912,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'This Track shows the Earthquake data of the tremors that happened throughout the volcanic activity period, i.e., from September to December. Earthquake is measured in mbLg units, which is the Body Wave Magnitude using the Lg wave. The Earthquakes that happen throughout the volcanic activity and the lava flow are responsible for the Evolution of Terrain.',
+                        translate("info.located.description"),
                         style: new TextStyle(
-                            fontSize: 20.0, color: Colors.white70),
+                            fontSize: 18.5, color: Colors.white70),
                       ),
                     ],
                   )),
@@ -2996,7 +2949,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Date of Event:',
+                        translate("info.date"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -3011,9 +2964,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        '12 September to 15 December, 2021',
+                        translate("info.located.date"),
                         style: new TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.5,
                           color: Colors.white70,
                         ),
                       ),
@@ -3050,7 +3003,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Legend:',
+                        translate("info.legend"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -3064,12 +3017,10 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                        "Legend for Categorization of the Seismic data based on the magnitude:",
+                    Text(translate("info.located.legend"),
                         style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.5,
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
                             fontFamily: "OldStandard")),
                     SizedBox(
                       height: 8,
@@ -3085,9 +3036,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 0 - 2 mbLg   ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -3105,9 +3055,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 2 - 4 mbLg   ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -3125,9 +3074,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                         ),
                         Text(" 4 - 6 mbLg   ",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 18.5,
                                 color: Colors.white70,
-                                fontWeight: FontWeight.bold,
                                 fontFamily: "OldStandard")),
                       ],
                     ),
@@ -3164,7 +3112,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Sources:',
+                        translate("info.sources"),
                         style: new TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
@@ -3187,7 +3135,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           'Instituto Geográfico Nacional',
                           style: TextStyle(
                               decoration: TextDecoration.underline,
-                              fontSize: 20,
+                              fontSize: 18.5,
                               color: Colors.white70,
                               fontWeight: FontWeight.bold),
                         ),

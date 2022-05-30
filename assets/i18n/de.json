@@ -106,5 +106,74 @@
 		"check": "Um mehr Unterstützung für Liquid Galaxy Projects zu erhalten, können Sie deren Website und Github besuchen.",
 		"website": "Liquid Galaxy-Website",
 		"github": "Liquid Galaxy GitHub"
+	},
+	"info": {
+		"description": "Beschreibung:",
+		"date": "Datum:",
+		"legend": "Legende:",
+		"sources": "Quellen:",
+		"hist": {
+			"description": "Dieser Track repräsentiert den Lavastrom im Laufe der Jahre auf der Insel La Palma. Die aufgezeichnete Geschichte bestätigt diese Ereignisse, mit der ersten vulkanischen Aktivität im Jahr 1480 n. Chr. Bis zum letzten Ausbruch der Cumbre Vieja im Jahr 2021. Die meisten von ihnen haben einen Volcanic Explosivity Index (VEI) von 2, aber der letzte Ausbruch im Jahr 2021 hatte einen VEI von 3 .",
+			"date": "Verschiedene Jahre zwischen 1480 und 2021",
+			"legend": "Historische Lavastromdaten der folgenden Jahre:",
+			"and": "1677 & 1971",
+			"lava": "Lava-Symbol"
+		},
+		"lava": {
+			"description": "Die Lavastromkarte stellt Lavastromdaten von allen 10-15 Tagen dar. Diese Daten zeigen die Entwicklung des Lavastroms, seine Auswirkungen auf das Gelände und die Lavastromtemperaturen, während er sich in der Region La Palma ausbreitet und schließlich das Meer erreicht. Die Lavaströmungsgeschwindigkeit betrug 10 m/s und die höchste Lavatemperatur lag bei etwa 1270 °C.",
+			"date": "24. September bis 18. Dezember 2021",
+			"legend": "Legende zur Entwicklung der Lavastromdaten von September 2021 bis Dezember 2021:",
+			"vents": "Lüftungsschlitze"
+		},
+		"prehistoric": {
+			"description": "Diese vulkanischen Aktivitäten stammen aus der Zeit in der Geschichte, bevor die Menschheit Ereignisse niederschrieb. Die meisten davon sind aus Radiokohlenstoff- (unkorrigierten) und Kalium-Argon-Tests ersichtlich. Die Daten sind in Ka angegeben, was für Kiloannus oder Kiloannum (ka) steht, eine Zeiteinheit, die eintausend (10\u00B3) Jahre entspricht.",
+			"date": "Verschiedene Jahre im Bereich 6050 v. Chr. ± 1500 Jahre bis 1480 ± 10 Jahre",
+			"legend": "Prähistorische Lavastromdaten der folgenden Kalenderjahre:",
+			"lava": "Lava-Symbol"
+		},
+		"aff": {
+			"description": "Dieser Track visualisiert die Daten der zerstörten und möglicherweise beschädigten Transporteinrichtungen, Häuser und Gebäude und die schädliche Wirkung der Lava auf die Naturlandschaften und Farmen der Region La Palma.",
+			"date": "Stand vom 15. Dezember 2021",
+			"legend": "Daten der betroffenen Gebiete von Transport, Bebauung und Einrichtungen Einstufung:",
+			"destroyed": "Zerstört  ",
+			"possible": "Möglicherweise zerstört  ",
+			"novisible": "Keine sichtbaren Schäden",
+			"lava": "Lavastrom ",
+			"vents": "Lüftungsschlitze  ",
+			"area": "Interessenbereich    ",
+			"hydro": "Hydrographie",
+			"roads": "Straßen zerstört  "
+		},
+		"land": {
+			"description": "Die vulkanische Aktivität der Cumbre Vieja im Jahr 2021 hinterließ Spuren in der Region La Palma. Der Operational Land Imager (OLI) auf Landsat 8 hat dieses Bild in natürlichen Farben aufgenommen, das zeigt, wie drastisch sich die Gebiete Todoque und El Paraíso seit dem 15. Dezember 2021 verändert haben.",
+			"date": "15. Dezember 2021",
+			"legend": "Legende zur veränderten Landschaft von La Palma durch Lavastrom:",
+			"landscape": "Landschaft durch Lavastrom    ",
+			"infoicon": "Info-Icon für Veränderte Landschaft von La Palma    "
+		},
+		"So2": {
+			"description": "Atmospheric Monitoring Service verfolgt Schwefeldioxidfahnen des Vulkanausbruchs auf La Palma. Der Vulkan La Palma stößt etwa 250.000 Tonnen Schwefeldioxid (Daten von INVOLCAN) aus, das über Marokko und Spanien gewandert war und regelmäßig Frankreich erreichte, wobei es Schwaden nach Nordosten nach Europa brachte.",
+			"date": "26. September 2021",
+			"legend": "SO\u2082 Emissionsdaten mit Messungen in Mol pro Quadratmeter (mol/m\u00B2):",
+			"volcano": "Vulkan Cumbre Vieja"
+		},
+		"situation": {
+			"description": "Dieser Track gibt eine Situationsanalyse zum Beginn des Vulkanausbruchs auf La Palma. Der spanische Zivilschutz evakuierte am 19. September über 6.000 Menschen. Der Lavastrom begann am 20. September um 18:50 UTC, und IGN meldete 180 beschädigte Häuser.",
+			"date": "19. September 2021 um 14:10 UTC (und Beben zwischen dem 11. und 21. September)",
+			"legend": "Legende zur Situationsübersicht:",
+			"main": "Wichtigstes eruptives Ereignis   ",
+			"orange": "Oranger Alarm  ",
+			"maritime": "Maritime Sperrzone  ",
+			"closed": "Gesperrte Straßen    ",
+			"lava": "Lavastrom ",
+			"Text": "  Text  ",
+			"municipality": "Gemeinden unter Evakuierung \norder / Notfallerklärung",
+			"data": " 21. September (Zittern)"
+		},
+		"located": {
+			"description": "Diese Spur zeigt die Erdbebendaten der Erschütterungen, die während der vulkanischen Aktivitätsperiode, d. h. von September bis Dezember, aufgetreten sind. Erdbeben werden in mbLg-Einheiten gemessen, was der Körperwellengröße unter Verwendung der Lg-Welle entspricht. Die Erdbeben, die während der vulkanischen Aktivität und des Lavastroms auftreten, sind für die Evolution des Geländes verantwortlich.",
+			"date": "12. September bis 15. Dezember 2021",
+			"legend": "Legende zur Kategorisierung der seismischen Daten nach Magnitude:"
+		}
 	}
 }

@@ -106,5 +106,74 @@
 		"check": "Para obtener más soporte en Liquid Galaxy Projects, puede consultar su sitio web y github.",
 		"website": "Sitio web de Liquid Galaxy",
 		"github": "Liquid Galaxy GitHub"
+	},
+	"info": {
+		"description": "Descripción:",
+		"date": "Fecha del evento:",
+		"legend": "Leyenda:",
+		"sources": "Fuentes:",
+		"hist": {
+			"description": "Esta pista representa el flujo de lava a lo largo de los años en la isla de La Palma. La historia registrada confirma estos eventos, con la primera actividad volcánica en 1480 d.C. hasta la última erupción de Cumbre Vieja en 2021. La mayoría de ellos tienen un Índice de Explosividad Volcánica (VEI) de 2, pero el último brote en 2021 tuvo un VEI de 3 .",
+			"date": "Varios años entre 1480 y 2021",
+			"legend": "Datos históricos de flujo de lava de los siguientes años:",
+			"and": "1677 y 1971",
+			"lava": "símbolo de lava"
+		},
+		"lava": {
+			"description": "El mapa de flujo de lava representa los datos de flujo de lava de cada 10 a 15 días. Estos datos muestran la evolución del flujo de lava, su efecto sobre el terreno y las temperaturas del flujo de lava a medida que se propaga en la región de La Palma y finalmente llega al mar. La tasa de flujo de lava fue de 10 m/s, y la temperatura más alta de Lava fue de alrededor de 1270°C.",
+			"date": "24 septiembre al 18 diciembre, 2021",
+			"legend": "Leyenda de la evolución de los datos de flujo de lava:",
+			"vents": "Respiraderos"
+		},
+		"prehistoric": {
+			"description": "Estas actividades volcánicas son del tiempo en la historia antes de que la humanidad escribiera eventos. La mayoría de estos son evidentes a partir de las pruebas de radiocarbono (sin corregir) y potasio-argón. Los datos están en Ka, que significa kiloannus o kiloannum (ka), una unidad de tiempo equivalente a mil (10\u00B3) años.",
+			"date": "Varios años en el rango 6050 a. C. ± 1500 años a 1480 ± 10 años",
+			"legend": "Datos prehistóricos de flujo de lava de los siguientes años calendario:",
+			"lava": "símbolo de lava"
+		},
+		"aff": {
+			"description": "Este Track visualiza los datos de las instalaciones de transporte, casas y edificios destruidos y posiblemente dañados y el efecto nocivo de la lava en los terrenos naturales y fincas de la región de La Palma.",
+			"date": "Situación a 15 de diciembre de 2021",
+			"legend": "Datos de Áreas Afectadas de Clasificación de Transporte, Construido e Instalaciones:",
+			"destroyed": "Destruido  ",
+			"possible": "Posiblemente destruido  ",
+			"novisible": "Sin daños visibles",
+			"lava": "Flujo de lava ",
+			"vents": "Respiraderos  ",
+			"area": "Area de interes    ",
+			"hydro": "Hidrografía",
+			"roads": "caminos destruidos  "
+		},
+		"land": {
+			"description": "La actividad volcánica Cumbre Vieja de 2021 dejó huella en la comarca de La Palma. Operational Land Imager (OLI) en Landsat 8 capturó esta imagen en color natural que muestra cuán drásticamente han cambiado las áreas de Todoque y El Paraíso a partir del 15 de diciembre de 2021.",
+			"date": "15 diciembre, 2021",
+			"legend": "Leyenda del cambio de paisaje de La Palma debido al flujo de lava:",
+			"landscape": "Paisaje por Flujo de Lava    ",
+			"infoicon": "Icono info de Paisaje Cambiado de La Palma    "
+		},
+		"So2": {
+			"description": "El Servicio de Monitoreo Atmosférico rastrea las columnas de dióxido de azufre de la erupción volcánica en La Palma. El volcán de La Palma arroja unas 250.000 toneladas de Dióxido de Azufre (Datos de INVOLCAN) que habían viajado por Marruecos y España y llegado a Francia periódicamente, trayendo penachos del noreste hacia Europa.",
+			"date": "26 septiembre, 2021",
+			"legend": "SO\u2082 Datos de emisiones con medidas en mol por metro cuadrado (mol/m\u00B2):",
+			"volcano": "Volcán Cumbre Vieja"
+		},
+		"situation": {
+			"description": "Este Track ofrece un análisis situacional del inicio de la erupción volcánica en La Palma. Protección Civil española evacuó a más de 6.000 personas el 19 de septiembre. El flujo de lava comenzó el 20 de septiembre a las 18:50 UTC e IGN informó de 180 casas dañadas.",
+			"date": "19 de septiembre de 2021 a las 14:10 UTC (y temblores entre el 11 y el 21 de septiembre)",
+			"legend": "Leyenda para el resumen situacional:",
+			"main": "Evento eruptivo   ",
+			"orange": "Alerta Naranja  ",
+			"maritime": "Zona de Exclusión Marítima  ",
+			"closed": "Carreteras \ncerradas    ",
+			"lava": "Flujo de lava ",
+			"Text": "  Texto  ",
+			"municipality": "Municipios bajo orden de evacuación \n/ declaratoria de emergencia",
+			"data": " 21 de sep (Temblor)"
+		},
+		"located": {
+			"description": "Este Track muestra los datos de terremotos de los temblores que ocurrieron durante todo el período de actividad volcánica, es decir, de septiembre a diciembre. El terremoto se mide en unidades mbLg, que es la magnitud de la onda corporal usando la onda Lg. Los Terremotos que ocurren a lo largo de la actividad volcánica y el flujo de lava son los responsables de la Evolución del Terreno.",
+			"date": "12 de septiembre al 15 de diciembre de 2021",
+			"legend": "Leyenda para Categorización de los datos Sísmicos en base a la magnitud:"
+		}
 	}
 }
