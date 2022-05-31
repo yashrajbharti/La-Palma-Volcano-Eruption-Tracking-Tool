@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 // ignore: import_of_legacy_library_into_null_safe
@@ -20,13 +22,13 @@ class _MyMapState extends State<MyMap> {
 
   final Set<Marker> _markers = {};
   GoogleMapController? mapController;
-  MapType _currentMapType = MapType.normal;
+  MapType _currentMapType = MapType.satellite;
 
   void _onMapTypeButtonPressed() {
     setState(() {
-      _currentMapType = _currentMapType == MapType.normal
-          ? MapType.satellite
-          : MapType.normal;
+      _currentMapType = _currentMapType == MapType.satellite
+          ? MapType.normal
+          : MapType.satellite;
     });
   }
 
@@ -94,6 +96,11 @@ class _MyMapState extends State<MyMap> {
     return Stack(
       children: <Widget>[
         GoogleMap(
+          gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>[
+            new Factory<OneSequenceGestureRecognizer>(
+              () => new EagerGestureRecognizer(),
+            ),
+          ].toSet(),
           onMapCreated: (controller) {
             //method called when map is created
             setState(() {
@@ -104,6 +111,7 @@ class _MyMapState extends State<MyMap> {
             target: _center,
             zoom: 10.8,
           ),
+          zoomGesturesEnabled: true,
           mapType: _currentMapType,
           markers: _markers,
           onCameraMove: _onCameraMove,
