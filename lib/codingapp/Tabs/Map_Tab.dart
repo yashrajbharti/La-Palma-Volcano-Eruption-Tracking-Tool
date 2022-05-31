@@ -2,6 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:ssh/ssh.dart';
+import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MyMap());
 
@@ -11,14 +16,10 @@ class MyMap extends StatefulWidget {
 }
 
 class _MyMapState extends State<MyMap> {
-  Completer<GoogleMapController> _controller = Completer();
-
   static const LatLng _center = const LatLng(28.6599744, -17.8984565);
 
   final Set<Marker> _markers = {};
-
-  LatLng _lastMapPosition = _center;
-
+  GoogleMapController? mapController;
   MapType _currentMapType = MapType.normal;
 
   void _onMapTypeButtonPressed() {
@@ -31,33 +32,74 @@ class _MyMapState extends State<MyMap> {
 
   void _onAddMarkerButtonPressed() {
     setState(() {
-      _markers.add(Marker(
-        // This marker id can be anything that uniquely identifies each marker.
-        markerId: MarkerId(_lastMapPosition.toString()),
-        position: _lastMapPosition,
-        infoWindow: InfoWindow(
-          title: 'Siesmic Data',
-          snippet: 'Volcanic Info',
+      _fixposition();
+      LatLng newlatlang = _center;
+      mapController?.animateCamera(
+        CameraUpdate.newCameraPosition(
+          CameraPosition(
+            target: newlatlang,
+            zoom: 10.8,
+          ),
         ),
-        icon: BitmapDescriptor.defaultMarker,
-      ));
+      );
     });
   }
 
-  void _onCameraMove(CameraPosition position) {
-    _lastMapPosition = position.target;
+  _getCredentials() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String ipAddress = preferences.getString('master_ip') ?? '';
+    String password = preferences.getString('master_password') ?? '';
+    String portNumber = preferences.getString('master_portNumber') ?? '';
+    String username = preferences.getString('master_username') ?? '';
+
+    return {
+      "ip": ipAddress,
+      "pass": password,
+      "port": portNumber,
+      "username": username,
+    };
   }
 
-  void _onMapCreated(GoogleMapController controller) {
-    _controller.complete(controller);
+  _fixposition() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    LookAt flyto = LookAt(
+      -17.8984565,
+      28.6599744,
+      '100569.665945696469',
+      '0',
+      '0',
+    );
+    try {
+      await client.connect();
+      await client.execute(
+          'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
   }
+
+  void _onCameraMove(CameraPosition position) {}
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         GoogleMap(
-          onMapCreated: _onMapCreated,
+          onMapCreated: (controller) {
+            //method called when map is created
+            setState(() {
+              mapController = controller;
+            });
+          },
           initialCameraPosition: CameraPosition(
             target: _center,
             zoom: 10.8,
@@ -73,6 +115,7 @@ class _MyMapState extends State<MyMap> {
             child: Column(
               children: <Widget>[
                 FloatingActionButton(
+                  heroTag: "btn1",
                   onPressed: _onMapTypeButtonPressed,
                   materialTapTargetSize: MaterialTapTargetSize.padded,
                   backgroundColor: Color.fromARGB(255, 75, 127, 82),
@@ -84,11 +127,12 @@ class _MyMapState extends State<MyMap> {
                 ),
                 SizedBox(height: 16.0),
                 FloatingActionButton(
+                  heroTag: "btn2",
                   onPressed: _onAddMarkerButtonPressed,
                   materialTapTargetSize: MaterialTapTargetSize.padded,
                   backgroundColor: Color.fromARGB(255, 75, 127, 82),
                   child: const Icon(
-                    Icons.add_location,
+                    Icons.gps_fixed_rounded,
                     size: 36.0,
                     color: Color.fromARGB(255, 204, 204, 204),
                   ),
