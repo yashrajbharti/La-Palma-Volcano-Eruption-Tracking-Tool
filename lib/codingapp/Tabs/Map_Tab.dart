@@ -299,12 +299,12 @@ class _MyMapState extends State<MyMap> {
           ),
         ),
         Positioned(
-          top: 70,
-          left: 20,
+          bottom: 80,
+          right: 20,
           child: Card(
             elevation: 0,
             child: Container(
-              color: Color.fromARGB(255, 78, 78, 78),
+              color: Color.fromARGB(255, 68, 68, 68),
               width: 59.5,
               height: 124.25,
               child: Column(

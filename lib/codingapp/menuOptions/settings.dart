@@ -94,7 +94,7 @@ class _SettingsState extends State<Settings> {
         return BackdropFilter(
           filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
           child: AlertDialog(
-            backgroundColor: Color.fromARGB(255, 43, 43, 43),
+            backgroundColor: Color.fromARGB(255, 33, 33, 33),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
