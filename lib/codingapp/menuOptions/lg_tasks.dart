@@ -377,7 +377,8 @@ class LGConnection {
 
     try {
       await client.connect();
-      await client.execute("'/home/lg/bin/lg-relaunch' > /home/lg/log.txt");
+      await client.execute(
+          "'/home/${credencials['username']}/bin/lg-relaunch' > /home/${credencials['username']}/log.txt");
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
@@ -396,7 +397,8 @@ class LGConnection {
 
     try {
       await client.connect();
-      await client.execute("'/home/lg/bin/lg-poweroff' > /home/lg/log.txt");
+      await client.execute(
+          "'/home/${credencials['username']}/bin/lg-poweroff' > /home/${credencials['username']}/log.txt");
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
@@ -415,7 +417,8 @@ class LGConnection {
 
     try {
       await client.connect();
-      await client.execute("'/home/lg/bin/lg-reboot' > /home/lg/log.txt");
+      await client.execute(
+          "'/home/${credencials['username']}/bin/lg-reboot' > /home/${credencials['username']}/log.txt");
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
