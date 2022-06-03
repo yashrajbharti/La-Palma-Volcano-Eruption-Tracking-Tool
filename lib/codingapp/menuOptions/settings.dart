@@ -4,7 +4,7 @@ import 'package:flutter_translate/flutter_translate.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'dart:ui' as ui;
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/translate.dart';
 
@@ -91,7 +91,9 @@ class _SettingsState extends State<Settings> {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return AlertDialog(
+        return BackdropFilter(
+          filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+          child: AlertDialog(
             backgroundColor: Color.fromARGB(255, 43, 43, 43),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -109,7 +111,7 @@ class _SettingsState extends State<Settings> {
                   },
                   icon: Icon(
                     Icons.clear_rounded,
-                    color: Color.fromARGB(255, 208, 0, 0),
+                    color: Color.fromARGB(255, 125, 164, 243),
                     size: 32,
                   ),
                   padding: EdgeInsets.only(bottom: 10),
@@ -122,7 +124,9 @@ class _SettingsState extends State<Settings> {
                 fontSize: 18,
                 color: Color.fromARGB(255, 204, 204, 204),
               ),
-            ));
+            ),
+          ),
+        );
       },
     );
   }

@@ -7,6 +7,7 @@ import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
+import 'dart:ui' as ui;
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -42,7 +43,9 @@ class _LGtasksState extends State<LGtasks> {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return AlertDialog(
+        return BackdropFilter(
+          filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+          child: AlertDialog(
             backgroundColor: Color.fromARGB(255, 43, 43, 43),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,7 +63,7 @@ class _LGtasksState extends State<LGtasks> {
                   },
                   icon: Icon(
                     Icons.clear_rounded,
-                    color: Color.fromARGB(255, 228, 6, 9),
+                    color: Color.fromARGB(255, 125, 164, 243),
                     size: 32,
                   ),
                   padding: EdgeInsets.only(bottom: 10),
@@ -73,7 +76,9 @@ class _LGtasksState extends State<LGtasks> {
                 fontSize: 18,
                 color: Color.fromARGB(255, 204, 204, 204),
               ),
-            ));
+            ),
+          ),
+        );
       },
     );
   }

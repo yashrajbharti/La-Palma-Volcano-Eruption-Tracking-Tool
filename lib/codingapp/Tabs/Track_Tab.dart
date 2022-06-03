@@ -68,7 +68,9 @@ class _SendtoLGState extends State<SendtoLG> {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return AlertDialog(
+        return BackdropFilter(
+          filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+          child: AlertDialog(
             backgroundColor: Color.fromARGB(255, 43, 43, 43),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,10 +88,10 @@ class _SendtoLGState extends State<SendtoLG> {
                   },
                   icon: Icon(
                     Icons.clear_rounded,
-                    color: Color.fromARGB(255, 228, 6, 9),
+                    color: Color.fromARGB(255, 125, 164, 243),
                     size: 32,
                   ),
-                  padding: EdgeInsets.only(bottom: 5),
+                  padding: EdgeInsets.only(bottom: 10),
                 ),
               ],
             ),
@@ -99,7 +101,9 @@ class _SendtoLGState extends State<SendtoLG> {
                 fontSize: 18,
                 color: Color.fromARGB(255, 204, 204, 204),
               ),
-            ));
+            ),
+          ),
+        );
       },
     );
   }
@@ -128,7 +132,7 @@ class _SendtoLGState extends State<SendtoLG> {
           borderRadius: BorderRadius.circular(10.0),
         ),
         action: SnackBarAction(
-          textColor: Colors.red,
+          textColor: Color.fromARGB(255, 125, 164, 243),
           label: translate('Track.close'),
           onPressed: () {},
         ),
