@@ -92,9 +92,11 @@
 		"all": "Alles über die VolTrac-App:",
 		"points": "⬧ Dieses Projekt wurde während des Google Summer of Code 2022 zusammen mit der Organisation Liquid Galaxy erstellt. \n⬧ Diese App wurde dank des Google Summer of Code 2022-Programms von Yash Raj Bharti (E-Mail: yashrajbharti.met18@itbhu.ac.in) unter Liquid Galaxy entwickelt. \n⬧ Die VolTrac-App dient als Tracking-Tool zur Visualisierung der verschiedenen Tracks basierend auf den vulkanischen Aktivitäten von La Palma und zeigt sie wunderschön mit farbigem KML an. \n⬧ Voltrac dient nicht nur als Leitfaden, sondern wir können unsere Anwendung auch für Bildungs- und Forschungszwecke verwenden, z. B. zum Studium von Naturkatastrophen, vulkanischen Aktivitäten und Katastrophen durch die Zerstörung durch den Vulkan La Palma. \n⬧ Mehrere Tracks mit unterschiedlichen Kartendaten wie historische Track-Karte, Lavastrom-Karte, prähistorische Track-Karte, Karte der betroffenen Gebiete, Landschaftskarte, SO\u2082-Emissionskarte, Situationskarte und lokalisierte Ereignisse sind möglich, dank der verschiedenen Quellen, die im Info-Tab erwähnt werden. \n⬧ Neben Englisch unterstützt diese App auch acht Sprachen, nämlich Spanisch, Hindi, Deutsch, Arabisch, Russisch, Japanisch, Chinesisch (vereinfacht) und Albanisch, die man über die Menüoption Connection Manager ändern kann. \n⬧ Entwickelt dank der TIC Laboratories of the Scientific Park of Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Polytechnic School of Lleida, End Point Corp (NY), Wonderama LAB der Western University (Sydney), Gigabyte, Benq, HP, Corsair und Hemav Academics.",
 		"learn": "Lern mehr",
-		"check": "Um mehr über die App zu erfahren, besuchen Sie die Github-Seite und die Datenschutzrichtlinie.",
+		"check": "Um mehr über die App zu erfahren, überprüfen Sie diese Links.",
 		"github": "VolTrac-GitHub",
-		"privacy": "Datenschutz-Bestimmungen"
+		"privacy": "Datenschutz-Bestimmungen",
+		"attribute": "Bildzuordnung",
+		"resource": "Die folgenden Ressourcen wurden für die Symbole verwendet."
 	},
 	"help": {
 		"helppage": "Hilfeseite",
@@ -103,9 +105,13 @@
 		"Troubleshooting": "Fehlerbehebung",
 		"points2": "⬧ Wenn Sie keine Verbindung zum LG-Rig herstellen können, stellen Sie zunächst sicher, dass sich beide im selben Netzwerk befinden. Entweder Sie können sich mit dem WLAN eines dritten Geräts verbinden oder LG mit dem Hotspot des Tablets verbinden. Überprüfen Sie, ob die Anmeldeinformationen korrekt ausgefüllt sind, und versuchen Sie es erneut. \n⬧ Um die IP-Adresse des LG (oder des Host-Laptops im Falle einer VM-Einrichtung) zu finden, geben Sie \"ifconfig\" in das Terminal ein, wenn Sie einen Mac oder Linux verwenden, und \"ipconfig\" für Windows.\n⬧ Bei Low-End-LG-Rigs erscheint die Visualisierung manchmal nicht beim ersten Mal. Klicken Sie erneut auf die Schaltfläche \"Visualize in LG\", um dieses Problem zu lösen.",
 		"support": "Hole dir Unterstützung",
-		"check": "Um mehr Unterstützung für Liquid Galaxy Projects zu erhalten, können Sie deren Website und Github besuchen.",
+		"check": "Um mehr Unterstützung für Liquid Galaxy Projects zu erhalten, überprüfen Sie diese Links.",
 		"website": "Liquid Galaxy-Website",
-		"github": "Liquid Galaxy GitHub"
+		"github": "Liquid Galaxy GitHub",
+		"icons": "Bedeutung von Symbolen",
+		"meanings": "Einige Symbole zusammen mit ihrer Bedeutung sind unten aufgeführt.",
+		"switch": "Wechseln Sie zwischen Satelliten- und Standardansicht",
+		"origin": "Kehren Sie zum ursprünglichen Ort zurück"
 	},
 	"info": {
 		"description": "Beschreibung:",

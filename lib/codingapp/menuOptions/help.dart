@@ -26,10 +26,12 @@ class _HelpScreenState extends State<HelpScreen> {
     // Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
           elevation: 0,
+          backgroundColor: Colors.transparent,
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
@@ -48,13 +50,13 @@ class _HelpScreenState extends State<HelpScreen> {
       backgroundColor: Color.fromARGB(255, 204, 204, 204),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+                padding: const EdgeInsets.only(
+                    left: 20.0, right: 20.0, bottom: 20, top: 50),
                 child: Text(
                   translate("help.helppage"),
                   textAlign: TextAlign.center,
@@ -110,43 +112,162 @@ class _HelpScreenState extends State<HelpScreen> {
                   textAlign: TextAlign.start,
                 ),
               ),
-              Text(
-                translate("help.support"),
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 15.0),
-                child: Text(
-                  translate("help.check"),
-                  style: TextStyle(fontSize: 18),
-                  textAlign: TextAlign.start,
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.40,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            translate("help.support"),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 24),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(vertical: 15.0),
+                            child: Text(
+                              translate("help.check"),
+                              style: TextStyle(fontSize: 18),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              _launchURL('https://www.liquidgalaxy.eu/');
+                            },
+                            child: Text(
+                              translate("help.website"),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Color.fromARGB(255, 97, 146, 245)),
+                            ),
+                          ),
+                          Text(
+                            '\n',
+                            style: TextStyle(fontSize: 4),
+                            textAlign: TextAlign.start,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              _launchURL('https://github.com/LiquidGalaxyLAB/');
+                            },
+                            child: Text(
+                              translate("help.github"),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Color.fromARGB(255, 97, 146, 245)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 180,
+                      child: VerticalDivider(
+                        color: Color.fromARGB(120, 74, 74, 74),
+                        thickness: 1,
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.40,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            translate("help.icons"),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 24),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(vertical: 15.0),
+                            child: Text(
+                              translate("help.meanings"),
+                              style: TextStyle(fontSize: 18),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                          new Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(
+                                width: 15,
+                              ),
+                              CircleAvatar(
+                                backgroundColor:
+                                    Color.fromARGB(255, 75, 127, 82),
+                                radius: 20,
+                                child: Icon(
+                                  Icons.map,
+                                  size: 32.0,
+                                  color: Color.fromARGB(255, 204, 204, 204),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.34,
+                                child: Text(
+                                  translate("help.switch"),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                      fontFamily: "OldStandard"),
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          new Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(
+                                width: 15,
+                              ),
+                              CircleAvatar(
+                                backgroundColor:
+                                    Color.fromARGB(255, 75, 127, 82),
+                                radius: 20,
+                                child: Icon(
+                                  Icons.gps_fixed_rounded,
+                                  size: 32.0,
+                                  color: Color.fromARGB(255, 204, 204, 204),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.34,
+                                child: Text(
+                                  translate("help.origin"),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                      fontFamily: "OldStandard"),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  _launchURL('https://www.liquidgalaxy.eu/');
-                },
-                child: Text(
-                  translate("help.website"),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20, color: Colors.blue),
-                ),
-              ),
-              Text(
-                '\n',
-                style: TextStyle(fontSize: 4),
-                textAlign: TextAlign.start,
-              ),
-              GestureDetector(
-                onTap: () {
-                  _launchURL('https://github.com/LiquidGalaxyLAB/');
-                },
-                child: Text(
-                  translate("help.github"),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20, color: Colors.blue),
-                ),
+              SizedBox(
+                height: 40,
               ),
             ],
           ),

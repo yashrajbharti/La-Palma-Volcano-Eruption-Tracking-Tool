@@ -92,9 +92,11 @@
 		"all": "Todo sobre la aplicación VolTrac:",
 		"points": "⬧ Este proyecto se creó durante el Google Summer of Code 2022 junto con la organización Liquid Galaxy. \n⬧ Esta aplicación ha sido desarrollada por Yash Raj Bharti (correo electrónico: yashrajbharti.met18@itbhu.ac.in) bajo Liquid Galaxy, gracias al programa Google Summer of Code 2022. \n⬧ La aplicación VolTrac sirve como una herramienta de seguimiento para la visualización de las diversas pistas basadas en las actividades volcánicas de La Palma y las muestra bellamente con KML de colores. \n⬧ Voltrac no solo actúa como una guía, sino que también podemos usar nuestra aplicación con fines educativos y de investigación, como estudiar desastres naturales, actividades volcánicas y catástrofes por la destrucción causada por el volcán La Palma. \n⬧ Varias pistas de diferentes datos de mapas, como el mapa de pistas históricas, el mapa de flujo de lava, el mapa de pistas prehistóricas, el mapa de áreas afectadas, el mapa de paisaje, el mapa de emisiones de SO\u2082, el mapa de situación y los eventos localizados son posibles, gracias a los diversos fuentes mencionadas en la pestaña Información. \n⬧ Además del inglés, esta aplicación también tiene soporte de 8 idiomas, a saber, español, hindi, alemán, árabe, ruso, japonés, chino (simplificado) y albanés, que se pueden cambiar desde la opción de menú Administrador de conexión. \n⬧ Desarrollado gracias a los Laboratorios TIC del Parque Científico de Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Escuela Politécnica Superior de Lleida, End Point Corp (NY), Wonderama LAB de Western University (Sydney), Gigabyte, Benq, HP, Corsair y Hemav Academics.",
 		"learn": "Aprende más",
-		"check": "Para saber más sobre la aplicación, consulte su página de Github y su Política de privacidad.",
+		"check": "Para saber más sobre la aplicación consulta estos enlaces.",
 		"github": "VolTrac GitHub",
-		"privacy": "Política de Privacidad"
+		"privacy": "Política de Privacidad",
+		"attribute": "Atribución de imagen",
+		"resource": "Para los iconos se utilizaron los siguientes recursos."
 	},
 	"help": {
 		"helppage": "Página de ayuda",
@@ -103,9 +105,13 @@
 		"Troubleshooting": "Solución de problemas",
 		"points2": "⬧ Si no puede conectarse a la plataforma LG, primero asegúrese de que ambos estén en la misma red; o puede conectarse al WiFi de un tercer dispositivo o conectar LG al punto de acceso de la tableta. Compruebe que las credenciales estén correctamente cumplimentadas y vuelva a intentarlo. \n⬧ Para encontrar la dirección IP del LG (o la computadora portátil host en caso de configuración de VM), escriba \"ifconfig\" en la terminal si está en Mac o Linux e \"ipconfig\" para Windows.\n⬧ Para equipos LG de gama baja, a veces la visualización no aparece la primera vez. Presiona el botón \"Visualizar en LG\" una vez más para resolver esto.",
 		"support": "Obtener apoyo",
-		"check": "Para obtener más soporte en Liquid Galaxy Projects, puede consultar su sitio web y github.",
+		"check": "Para obtener más soporte en Liquid Galaxy Projects, consulte estos enlaces.",
 		"website": "Sitio web de Liquid Galaxy",
-		"github": "Liquid Galaxy GitHub"
+		"github": "Liquid Galaxy GitHub",
+		"icons": "Significado de los iconos",
+		"meanings": "A continuación se enumeran algunos iconos junto con sus significados.",
+		"switch": "Cambiar entre Satélite y Vista predeterminada",
+		"origin": "Volver a la ubicación original"
 	},
 	"info": {
 		"description": "Descripción:",

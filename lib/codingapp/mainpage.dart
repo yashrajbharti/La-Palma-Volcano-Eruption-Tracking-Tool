@@ -28,11 +28,11 @@ class _MainpageState extends State<Mainpage> {
               elevation: 0,
               title: Padding(
                 // change left :
-                padding: EdgeInsets.only(left: 120),
+                padding: EdgeInsets.only(left: 120, top: 6),
                 child: Text(
                   translate('title.name'),
                   style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 48,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
