@@ -584,7 +584,9 @@ class LGConnection {
                   ? -7.561565
                   : projectname == "Prehistoric_Track"
                       ? -17.841486
-                      : -17.895486,
+                      : projectname == "Lava_Flow"
+                          ? -17.892286
+                          : -17.895486,
       projectname == "Historic_Track"
           ? 28.548478
           : projectname == "Located_Events"
@@ -593,20 +595,32 @@ class LGConnection {
                   ? 33.561245
                   : projectname == "Prehistoric_Track"
                       ? 28.548478
-                      : 28.610478,
+                      : projectname == "Lava_Flow"
+                          ? 28.616354
+                          : projectname == "Affected_Areas"
+                              ? 28.616354
+                              : projectname == "Situation"
+                                  ? 28.597354
+                                  : projectname == "Landscape"
+                                      ? 28.616354
+                                      : 28.610478,
       projectname == "Located_Events"
-          ? '40569.665945696469'
+          ? '20569.665945696469'
           : projectname == "Lava_Flow"
-              ? '10669.665945696469'
-              : projectname == "Affected_Areas"
-                  ? '15569.665945696469'
-                  : projectname == "Historic_Track"
-                      ? '50569.665945696469'
-                      : projectname == "SO2_Emission"
-                          ? '5000000.665945696469'
-                          : projectname == "Prehistoric_Track"
+              ? '6069.665945696469'
+              : projectname == "Landscape"
+                  ? '6069.665945696469'
+                  : projectname == "Affected_Areas"
+                      ? '6069.665945696469'
+                      : projectname == "Situation"
+                          ? '25069.665945696469'
+                          : projectname == "Historic_Track"
                               ? '50569.665945696469'
-                              : '30569.665945696469',
+                              : projectname == "SO2_Emission"
+                                  ? '3500000.665945696469'
+                                  : projectname == "Prehistoric_Track"
+                                      ? '50569.665945696469'
+                                      : '30569.665945696469',
       projectname == "Historic_Track"
           ? '15'
           : projectname == "SO2_Emission"
