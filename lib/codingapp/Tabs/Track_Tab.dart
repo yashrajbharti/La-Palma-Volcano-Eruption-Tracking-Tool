@@ -440,6 +440,7 @@ class _SendtoLGState extends State<SendtoLG> {
                     setState(() {
                       isOpen = true;
                     });
+                    DefaultTabController.of(context)?.animateTo(2);
                   }).catchError((onError) {
                     print('oh no $onError');
                     if (onError == 'nogeodata') {
