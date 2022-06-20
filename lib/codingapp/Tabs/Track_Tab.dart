@@ -36,12 +36,12 @@ List<String> projectname = [
   "Situation",
   "Located_Events"
 ];
-List<String> localimages = [
-  "vent.png",
-  "red_sq.png",
-  "yellow_sq.png",
-  "black_sq.png"
-];
+// List<String> localimages = [
+//   "vent.png",
+//   "red_sq.png",
+//   "yellow_sq.png",
+//   "black_sq.png"
+// ];
 
 String finalname = "";
 String finaltext = "";
@@ -556,15 +556,15 @@ class LGConnection {
     return _uploadToLG('$localPath/$projectname.kml', projectname);
   }
 
-  _createLocalImage(String imgName, String assetsUrl) async {
-    Directory directory = await getApplicationDocumentsDirectory();
-    String imgPath = '${directory.path}/$imgName';
-    ByteData data = await rootBundle.load(assetsUrl);
-    List<int> bytes =
-        data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-    await File(imgPath).writeAsBytes(bytes);
-    return imgPath;
-  }
+  // _createLocalImage(String imgName, String assetsUrl) async {
+  //   Directory directory = await getApplicationDocumentsDirectory();
+  //   String imgPath = '${directory.path}/$imgName';
+  //   ByteData data = await rootBundle.load(assetsUrl);
+  //   List<int> bytes =
+  //       data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+  //   await File(imgPath).writeAsBytes(bytes);
+  //   return imgPath;
+  // }
 
   _uploadToLG(String localPath, String projectname) async {
     dynamic credencials = await _getCredentials();
@@ -645,11 +645,11 @@ class LGConnection {
         },
       );
 
-      for (int k = 0; k < localimages.length; k++) {
-        String imgPath = await _createLocalImage(
-            localimages[k], "assets/icons/${localimages[k]}");
-        await client.sftpUpload(path: imgPath, toPath: '/var/www/html');
-      }
+      // for (int k = 0; k < localimages.length; k++) {
+      //   String imgPath = await _createLocalImage(
+      //       localimages[k], "assets/icons/${localimages[k]}");
+      //   await client.sftpUpload(path: imgPath, toPath: '/var/www/html');
+      // }
       await client.execute(
           'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
 

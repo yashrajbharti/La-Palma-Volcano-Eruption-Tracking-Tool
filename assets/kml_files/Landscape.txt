@@ -607,7 +607,7 @@
 	   <GroundOverlay>
       <name>Sentinel-Hub overlay</name>
 	   <TimeSpan>
-        <begin>2021-09-25</begin>
+        <begin>2021-09-22</begin>
         <end>2021-10-05</end>
       </TimeSpan>
         <Icon>
@@ -732,7 +732,7 @@
       <name>Sentinel-Hub overlay</name>
 	    <TimeSpan>
         <begin>2021-11-21</begin>
-        <end>2021-11-04</end>
+        <end>2021-12-04</end>
       </TimeSpan>
         <Icon>
           <href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/Landscape_4Dec.jpg</href>
@@ -762,8 +762,8 @@
     <GroundOverlay>
       <name>Sentinel-Hub overlay</name>
 	   <TimeSpan>
-        <begin>2021-11-04</begin>
-        <end>2021-11-15</end>
+        <begin>2021-12-04</begin>
+        <end>2021-12-15</end>
       </TimeSpan>
         <Icon>
           <href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/Landscape_15Dec.jpg</href>
