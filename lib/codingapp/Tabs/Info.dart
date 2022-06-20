@@ -2623,7 +2623,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           translate("info.situation.Text"),
                           style: TextStyle(
                               fontSize: 23.0,
-                              color: Color.fromARGB(255, 82, 61, 42),
+                              color: Color.fromARGB(255, 132, 95, 55),
                               fontFamily: "OldStandard"),
                         ),
                         Text(
