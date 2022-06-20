@@ -159,7 +159,7 @@
 		},
 		"So2": {
 			"description": "Atmospheric Monitoring Service tracks sulfur dioxide plumes from the volcanic eruption on La Palma. La Palma volcano spews some 250,000 tons of Sulfur Dioxide (Data from INVOLCAN) that had traveled over Morocco and Spain and reached France periodically, bringing plumes northeast toward Europe.",
-			"date": "26 September, 2021",
+			"date": "20 September to 27 September, 2021",
 			"legend": "SO\u2082 Emissions data with measurements in mol per square meter (mol/ m\u00B2):",
 			"volcano": "Cumbre Vieja Volcano"
 		},
