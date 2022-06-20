@@ -1,6 +1,6 @@
-<name>Cumbre Vieja.kml</name>
-	<description>Network link example 2</description>
-	<Style id="__managed_style_02B98F7500222E98BB65">
+		<name>Cumbre Vieja.kml</name>
+		<description>Network link example 2</description>
+		<Style id="__managed_style_02B98F7500222E98BB65">
 			<IconStyle>
 				<scale>1.8</scale>
 				<Icon>
@@ -66,8 +66,8 @@
 </body>
 </html>]]></text>
 			</BalloonStyle>
-	</Style>
-	<Style id="__managed_style_19BC12EAAB222E98BB64">
+		</Style>
+		<Style id="__managed_style_19BC12EAAB222E98BB64">
 			<IconStyle>
 				<scale>1.5</scale>
 				<Icon>
@@ -132,59 +132,171 @@
 </body>
 </html>]]></text>
 			</BalloonStyle>
-	</Style>
-	<StyleMap id="__managed_style_011DEA39E4222E98BB64">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_19BC12EAAB222E98BB64</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_02B98F7500222E98BB65</styleUrl>
-		</Pair>
-	</StyleMap>
-	<NetworkLink id="0F8228022E222E94F8E6">
-		<name>View Centered Placemark</name>
-		<visibility>0</visibility>
-		<description>The view-based refresh allows the remote server to calculate
+		</Style>
+		<StyleMap id="__managed_style_011DEA39E4222E98BB64">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#__managed_style_19BC12EAAB222E98BB64</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#__managed_style_02B98F7500222E98BB65</styleUrl>
+			</Pair>
+		</StyleMap>
+		<NetworkLink id="0F8228022E222E94F8E6">
+			<name>View Centered Placemark</name>
+			<visibility>0</visibility>
+			<description>The view-based refresh allows the remote server to calculate
                 the center of your screen and return a placemark.</description>
-		<Link>
-			<href>http://lg1/cgi-bin/viewCenteredPlacemark.py?</href>
-			<refreshInterval>2</refreshInterval>
-			<viewRefreshMode>onStop</viewRefreshMode>
-			<viewRefreshTime>1</viewRefreshTime>
-		</Link>
-	</NetworkLink>
-	<Folder id="0F12576415222E94F8E7">
-		<GroundOverlay>
-			<name>Sulphur Dioxide Emissions coming from La Palma</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2.png</href>
-				<viewBoundScale>0.75</viewBoundScale>
-			</Icon>
-			<LatLonBox>
-				<north>58.8269554848843</north>
-				<south>8.976158523579272</south>
-				<east>26.29673683634944</east>
-				<west>-93.77033943411359</west>
-				<rotation>1.079346537590027</rotation>
-			</LatLonBox>
-		</GroundOverlay>
-	</Folder>
-	<Placemark id="045C50F647222E94F8F0">
-		<name>Cumbre Vieja</name>
-		<LookAt>
-			<longitude>-17.55691708286384</longitude>
-			<latitude>28.74841697324626</latitude>
-			<altitude>0</altitude>
-			<heading>1.229276432898606</heading>
-			<tilt>0</tilt>
-			<range>436164.8848405922</range>
-			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
-		</LookAt>
-		<styleUrl>#__managed_style_011DEA39E4222E98BB64</styleUrl>
-		<Point>
-			<gx:drawOrder>1</gx:drawOrder>
-			<coordinates>-17.82113826289215,28.73510021618486,0</coordinates>
-		</Point>
-	</Placemark>
+			<Link>
+				<href>http://lg1/cgi-bin/viewCenteredPlacemark.py?</href>
+				<refreshInterval>2</refreshInterval>
+				<viewRefreshMode>onStop</viewRefreshMode>
+				<viewRefreshTime>1</viewRefreshTime>
+			</Link>
+		</NetworkLink>
+		<Folder id="0F12576415222E94F8E7">
+			<GroundOverlay>
+				<name>Sulphur Dioxide Emissions coming from La Palma</name>
+				<TimeSpan>
+					<begin>2021-09-20</begin>
+					<end>2021-09-21</end>
+				</TimeSpan>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2_21.png</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>72.28735073792694</north>
+					<south>-20.6818928783023</south>
+					<east>109.886018194226</east>
+					<west>-142.3209721810153</west>
+					<rotation>7.333856582641602</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+			<GroundOverlay>
+				<TimeSpan>
+					<begin>2021-09-21</begin>
+					<end>2021-09-22</end>
+				</TimeSpan>
+				<name>Sulphur Dioxide Emissions coming from La Palma</name>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2_22.png</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>72.28735073792694</north>
+					<south>-20.6818928783023</south>
+					<east>109.886018194226</east>
+					<west>-142.3209721810153</west>
+					<rotation>7.333856582641602</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+			<GroundOverlay>
+				<name>Sulphur Dioxide Emissions coming from La Palma</name>
+				<TimeSpan>
+					<begin>2021-09-22</begin>
+					<end>2021-09-23</end>
+				</TimeSpan>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2_23.png</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>72.28735073792694</north>
+					<south>-20.6818928783023</south>
+					<east>109.886018194226</east>
+					<west>-142.3209721810153</west>
+					<rotation>7.333856582641602</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+			<GroundOverlay>
+				<name>Sulphur Dioxide Emissions coming from La Palma</name>
+				<TimeSpan>
+					<begin>2021-09-23</begin>
+					<end>2021-09-24</end>
+				</TimeSpan>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2_24.png</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>72.28735073792694</north>
+					<south>-20.6818928783023</south>
+					<east>109.886018194226</east>
+					<west>-142.3209721810153</west>
+					<rotation>7.333856582641602</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+			<GroundOverlay>
+				<name>Sulphur Dioxide Emissions coming from La Palma</name>
+				<TimeSpan>
+					<begin>2021-09-24</begin>
+					<end>2021-09-25</end>
+				</TimeSpan>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2_25.png</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>72.28735073792694</north>
+					<south>-20.6818928783023</south>
+					<east>109.886018194226</east>
+					<west>-142.3209721810153</west>
+					<rotation>7.333856582641602</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+			<GroundOverlay>
+				<name>Sulphur Dioxide Emissions coming from La Palma</name>
+				<TimeSpan>
+					<begin>2021-09-25</begin>
+					<end>2021-09-26</end>
+				</TimeSpan>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2_26.png</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>72.28735073792694</north>
+					<south>-20.6818928783023</south>
+					<east>109.886018194226</east>
+					<west>-142.3209721810153</west>
+					<rotation>7.333856582641602</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+			<GroundOverlay>
+				<name>Sulphur Dioxide Emissions coming from La Palma</name>
+				<TimeSpan>
+					<begin>2021-09-26</begin>
+					<end>2021-09-27</end>
+				</TimeSpan>
+				<Icon>
+					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/SO2_27.png</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>72.28735073792694</north>
+					<south>-20.6818928783023</south>
+					<east>109.886018194226</east>
+					<west>-142.3209721810153</west>
+					<rotation>7.333856582641602</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+		</Folder>
+		<Placemark id="045C50F647222E94F8F0">
+			<name>Cumbre Vieja</name>
+			<LookAt>
+				<longitude>-17.86411856699994</longitude>
+				<latitude>28.61280666700003</latitude>
+				<altitude>0</altitude>
+				<heading>1.229276432898606</heading>
+				<tilt>0</tilt>
+				<range>436164.8848405922</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#__managed_style_011DEA39E4222E98BB64</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-17.82113826289215,28.73510021618486,0</coordinates>
+			</Point>
+		</Placemark>

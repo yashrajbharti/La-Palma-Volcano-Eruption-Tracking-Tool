@@ -1,4 +1,3 @@
-	<name>Historic_Track</name>
 	<open>1</open>
 	<Snippet maxLines="0"></Snippet>
 	<Style id="__managed_style_1BFD824C332212DE7485">
@@ -3607,6 +3606,9 @@
 		<Snippet maxLines="0"></Snippet>
 		<Placemark id="05F7EF4B472211F03148">
 			<name>1585</name>
+			  <TimeSpan>
+        <begin>1585</begin>
+      </TimeSpan>
 			<styleUrl>#__managed_style_0D3B68AAFC2212DE7481</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -3620,6 +3622,9 @@
 		</Placemark>
 		<Placemark id="032713CA022211F03154">
 			<name>1712</name>
+			  <TimeSpan>
+        <begin>1712</begin>
+      </TimeSpan>
 			<styleUrl>#__managed_style_0349CF93362212DE7483</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -3634,6 +3639,9 @@
 		</Placemark>
 		<Placemark id="01FCCA26E12211F0315A">
 			<name>1949</name>
+			      <TimeSpan>
+        <begin>1949</begin>
+      </TimeSpan>
 			<styleUrl>#__managed_style_084A6145802212DE7485</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -3649,6 +3657,9 @@
 		<Placemark id="053DBD3EEB2211F03151">
 			<name>1677 and 1971</name>
 			<styleUrl>#__managed_style_075513BACF2212E04297</styleUrl>
+			      <TimeSpan>
+        <begin>1677</begin>
+      </TimeSpan>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
@@ -3663,6 +3674,9 @@
 		<Placemark id="0B5220B1042211F0314B">
 			<name>1646</name>
 			<styleUrl>#__managed_style_065808C85F2212EA572E</styleUrl>
+			      <TimeSpan>
+        <begin>1646</begin>
+      </TimeSpan>
 			<Polygon>
 				<outerBoundaryIs>
 					<LinearRing>
@@ -3675,6 +3689,9 @@
 		</Placemark>
 		<Placemark id="08B1CC4D372211F03145">
 			<name>1949</name>
+			      <TimeSpan>
+        <begin>1949</begin>
+      </TimeSpan>
 			<styleUrl>#__managed_style_0B06DD00E12212EAC696</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -3690,6 +3707,9 @@
 		<Placemark id="0A8A7AB43E2211F03142">
 			<name>1480</name>
 			<styleUrl>#__managed_style_0C0D6A96362212EB67D5</styleUrl>
+			<TimeSpan>
+        <begin>1480</begin>
+      </TimeSpan>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
@@ -3705,6 +3725,9 @@
 			<name>2021</name>
 			<Snippet maxLines="0"></Snippet>
 			<styleUrl>#__managed_style_09B07E14FE2212DE748D</styleUrl>
+			<TimeSpan>
+        <begin>2021</begin>
+      </TimeSpan>
 			<MultiGeometry>
 				<Polygon>
 					<outerBoundaryIs>
@@ -3797,6 +3820,9 @@
 			<range>27112.44519857224</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		<TimeSpan>
+        <begin>2021</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_0D815160742212EC1E54</styleUrl>
 		<Point>
 			<coordinates>-17.89581103886936,28.61780811761596,0</coordinates>
@@ -3814,6 +3840,9 @@
 			<range>28283.98124833591</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+			<TimeSpan>
+        <begin>1480</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_004913DB562212EBB687</styleUrl>
 		<Point>
 			<coordinates>-17.87644842162196,28.64233498449954,698.7999552155746</coordinates>
@@ -3831,6 +3860,9 @@
 			<range>25942.61502012145</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		  <TimeSpan>
+        <begin>1712</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_050095B0432212DFB818</styleUrl>
 		<Point>
 			<coordinates>-17.88302880093448,28.55602488205319,0</coordinates>
@@ -3848,6 +3880,9 @@
 			<range>22879.68451032182</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		      <TimeSpan>
+        <begin>1646</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_052299217D2212EA9B90</styleUrl>
 		<Point>
 			<coordinates>-17.81686972964243,28.5284579621545,804.419018388809</coordinates>
@@ -3855,6 +3890,7 @@
 	</Placemark>
 	<Placemark id="0BFCBF81C7221236B373">
 		<name>1949</name>
+
 		<LookAt>
 			<longitude>-17.78593652598292</longitude>
 			<latitude>28.59833542334248</latitude>
@@ -3865,6 +3901,9 @@
 			<range>37199.10800152459</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		      <TimeSpan>
+        <begin>1949</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_048CFE9EA42212EB01FC</styleUrl>
 		<Point>
 			<coordinates>-17.80624716300208,28.56976486208636,1000.859870126408</coordinates>
@@ -3882,6 +3921,9 @@
 			<range>37317.63490707614</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		      <TimeSpan>
+        <begin>1677</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_0ACE8156212212E8ED77</styleUrl>
 		<Point>
 			<coordinates>-17.86084276412824,28.47811761133854,103.8992570024309</coordinates>
@@ -3899,6 +3941,9 @@
 			<range>37317.63490707614</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		      <TimeSpan>
+        <begin>1971</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_0FA98564542212EA260B</styleUrl>
 		<Point>
 			<coordinates>-17.8362393419824,28.45559341440788,-8.276668289944368</coordinates>
@@ -3916,6 +3961,9 @@
 			<range>42014.15377044585</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		  <TimeSpan>
+        <begin>1585</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_020C0ED2B92212DF0141</styleUrl>
 		<Point>
 			<coordinates>-17.90024251708221,28.57720356766007,543.8459442828797</coordinates>
@@ -3933,6 +3981,9 @@
 			<range>38799.71073736902</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
+		      <TimeSpan>
+        <begin>1949</begin>
+      </TimeSpan>
 		<styleUrl>#__managed_style_048CFE9EA42212EB01FC</styleUrl>
 		<Point>
 			<coordinates>-17.85774236995162,28.6005073237975,18.18462187069778</coordinates>
