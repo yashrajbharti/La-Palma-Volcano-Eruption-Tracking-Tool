@@ -1445,20 +1445,6 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                               color: Colors.white70,
                               fontFamily: "OldStandard"),
                         ),
-                        Builder(
-                          builder: (context) => IconButton(
-                            icon: Image.asset('assets/icons/black_sq.png'),
-                            iconSize: 20,
-                            onPressed: () => {},
-                          ),
-                        ),
-                        Text(
-                          translate("info.aff.novisible"),
-                          style: TextStyle(
-                              fontSize: 18.5,
-                              color: Colors.white70,
-                              fontFamily: "OldStandard"),
-                        ),
                       ],
                     ),
                     SizedBox(

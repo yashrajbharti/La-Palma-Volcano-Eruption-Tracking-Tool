@@ -141,7 +141,7 @@
 			"description": "This Track visualizes the data of the transportation facilities, houses, and buildings destroyed and possibly damaged and the harmful effect of lava on the natural lands and farms of the La Palma region.",
 			"date": "Situation of 15 December, 2021",
 			"legend": "Affected Areas data of Transportation, Built up, and Facilities grading:",
-			"destroyed": "Destroyed  ",
+			"destroyed": "Buildings & Houses Destroyed  ",
 			"possible": "Possibly Destroyed  ",
 			"novisible": "No Visible Damage",
 			"lava": "Lava Flow ",

@@ -141,7 +141,7 @@
 			"description": "Este Track visualiza los datos de las instalaciones de transporte, casas y edificios destruidos y posiblemente dañados y el efecto nocivo de la lava en los terrenos naturales y fincas de la región de La Palma.",
 			"date": "Situación a 15 de diciembre de 2021",
 			"legend": "Datos de Áreas Afectadas de Clasificación de Transporte, Construido e Instalaciones:",
-			"destroyed": "Destruido  ",
+			"destroyed": "Edificios y casas destruidos  ",
 			"possible": "Posiblemente destruido  ",
 			"novisible": "Sin daños visibles",
 			"lava": "Flujo de lava ",
