@@ -21750,7 +21750,7 @@
 			</MultiGeometry>
 		</Placemark>
 		<Placemark>
-			<name>21 Nov</name>
+			<name>21 Nov (~1000°C)</name>
 			<LookAt>
 				<longitude>-17.9113353539202</longitude>
 				<latitude>28.6116742817232</latitude>
@@ -21956,7 +21956,7 @@
 			</MultiGeometry>
 		</Placemark>
 		<Placemark>
-			<name>14 Nov</name>
+			<name>14 Nov (~1100°C)</name>
 			<LookAt>
 				<longitude>-17.90497311216184</longitude>
 				<latitude>28.61849874203702</latitude>
@@ -22162,7 +22162,7 @@
 			</MultiGeometry>
 		</Placemark>
 		<Placemark>
-			<name>4 Nov</name>
+			<name>4 Nov (~1200°C)</name>
 			<LookAt>
 				<longitude>-17.90895317440415</longitude>
 				<latitude>28.62328403549398</latitude>
@@ -22764,7 +22764,7 @@
 			</MultiGeometry>
 		</Placemark>
 		<Placemark>
-			<name>21 Oct</name>
+			<name>21 Oct (~1270°C)</name>
 			<LookAt>
 				<longitude>-17.90452945276184</longitude>
 				<latitude>28.61876376310034</latitude>
@@ -23320,7 +23320,7 @@
 			</MultiGeometry>
 		</Placemark>
 		<Placemark>
-			<name>8 Oct</name>
+			<name>8 Oct (~1240°C)</name>
 			<LookAt>
 				<longitude>-17.90452945276187</longitude>
 				<latitude>28.61876376310034</latitude>
@@ -23453,7 +23453,7 @@
 			</MultiGeometry>
 		</Placemark>
 		<Placemark>
-			<name>24 Sep</name>
+			<name>24 Sep (~1075°C)</name>
 			<Camera>
 				<longitude>-17.90685832806313</longitude>
 				<latitude>28.62019205671251</latitude>

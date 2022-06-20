@@ -610,7 +610,7 @@ class LGConnection {
           : projectname == "Lava_Flow"
               ? '6069.665945696469'
               : projectname == "Landscape"
-                  ? '6069.665945696469'
+                  ? '45069.665945696469'
                   : projectname == "Affected_Areas"
                       ? '6069.665945696469'
                       : projectname == "Situation"
