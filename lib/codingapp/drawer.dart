@@ -5,6 +5,7 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:webscrapperapp/codingapp/mainpage.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/help.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
+import 'package:webscrapperapp/codingapp/menuOptions/custom_builder.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/settings.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/about.dart';
 
@@ -86,6 +87,18 @@ class _DrawersState extends State<Drawers> {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) => AboutScreen(),
+                  ),
+                ),
+              ),
+              SizedBox(height: 24),
+              ListTile(
+                title: Text(
+                  translate("drawer.custom"),
+                  style: TextStyle(color: Colors.black, fontSize: 40),
+                ),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => CustomBuilder(),
                   ),
                 ),
               ),

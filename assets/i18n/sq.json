@@ -51,6 +51,7 @@
 		"menu": "Menyja Liquid Galaxy",
 		"help": "Ndihmë",
 		"about": "Rreth",
+		"custom": "Ndërtues me porosi",
 		"task": "LG Tasks",
 		"settings": "Menaxheri i lidhjes"
 	},
@@ -181,5 +182,8 @@
 			"date": "12 shtator deri më 15 dhjetor 2021",
 			"legend": "Legjenda për kategorizimin e të dhënave sizmike bazuar në madhësinë:"
 		}
+	},
+	"custombuilder": {
+		"range": "Filloni me zgjedhjen e intervalit të datave:"
 	}
 }

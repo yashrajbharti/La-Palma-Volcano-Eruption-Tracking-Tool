@@ -51,6 +51,7 @@
 		"menu": "Liquid Galaxy Menu",
 		"help": "Help",
 		"about": "About",
+		"custom": "Custom Builder",
 		"task": "LG Tasks",
 		"settings": "Connection Manager"
 	},
@@ -181,5 +182,8 @@
 			"date": "12 September to 15 December, 2021",
 			"legend": "Legend for Categorization of the Seismic data based on the magnitude:"
 		}
+	},
+	"custombuilder": {
+		"range": "Start with selecting Date Range:"
 	}
 }

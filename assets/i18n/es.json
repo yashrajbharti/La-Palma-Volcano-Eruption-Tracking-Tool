@@ -51,6 +51,7 @@
 		"menu": "Menú de galaxia líquida",
 		"help": "Ayudar",
 		"about": "Acerca de",
+		"custom": "Constructor personalizado",
 		"task": "Tareas LG",
 		"settings": "Administrador de conexión"
 	},
@@ -181,5 +182,8 @@
 			"date": "12 de septiembre al 15 de diciembre de 2021",
 			"legend": "Leyenda para Categorización de los datos Sísmicos en base a la magnitud:"
 		}
+	},
+	"custombuilder": {
+		"range": "Comience seleccionando Intervalo de fechas:"
 	}
 }
