@@ -1,7 +1,19 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
+
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:ssh/ssh.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
+import 'package:webscrapperapp/codingapp/kml/customkml.dart';
+import 'package:webscrapperapp/codingapp/kml/customkml2.dart';
+import 'package:webscrapperapp/codingapp/kml/kml.dart';
+import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 
 class CustomBuilder extends StatefulWidget {
   CustomBuilder({Key? key}) : super(key: key);
@@ -11,6 +23,8 @@ class CustomBuilder extends StatefulWidget {
 }
 
 class _CustomBuilderState extends State<CustomBuilder> {
+  List<String> kmltext = ['', '', '', '', '', '', '', '', '', '', '', ''];
+  KML kml = KML("", "");
   late final themeData;
   bool tremor = false;
   bool lavaflow = false;
@@ -24,6 +38,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool maineruptive = false;
   bool naturalland = false;
   bool physiography = false;
+  bool isOpen = false;
   late var start;
   late var end;
 
@@ -75,6 +90,82 @@ class _CustomBuilderState extends State<CustomBuilder> {
     setState(() {
       dateRange = newDateRange ?? dateRange;
     });
+  }
+
+  showAlertDialog(String title, String msg) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return BackdropFilter(
+          filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+          child: AlertDialog(
+            backgroundColor: Color.fromARGB(255, 33, 33, 33),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '$title',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Color.fromARGB(255, 204, 204, 204),
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(
+                    Icons.clear_rounded,
+                    color: Color.fromARGB(255, 125, 164, 243),
+                    size: 32,
+                  ),
+                  padding: EdgeInsets.only(bottom: 10),
+                ),
+              ],
+            ),
+            content: Text(
+              '$msg',
+              style: TextStyle(
+                fontSize: 18,
+                color: Color.fromARGB(255, 204, 204, 204),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void _showToast(String x) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          "$x",
+          style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.normal,
+              fontFamily: "OldStandard"),
+        ),
+        duration: Duration(seconds: 3),
+        backgroundColor: ui.Color.fromARGB(250, 43, 43, 43),
+        width: 500.0,
+        padding: const EdgeInsets.fromLTRB(
+          35,
+          20,
+          15,
+          20,
+        ),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        action: SnackBarAction(
+          textColor: Color.fromARGB(255, 125, 164, 243),
+          label: translate('Track.close'),
+          onPressed: () {},
+        ),
+      ),
+    );
   }
 
   DateTimeRange dateRange = DateTimeRange(
@@ -626,7 +717,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           width: 7,
                         ),
                         Text(translate('Track.visual'),
-                            style: TextStyle(fontSize: 25)),
+                            style: TextStyle(fontSize: 26)),
                         Icon(
                           Icons.location_on_sharp,
                           color: Color.fromARGB(255, 228, 6, 9),
@@ -636,6 +727,32 @@ class _CustomBuilderState extends State<CustomBuilder> {
                     ),
                     onPressed: () {
                       // send to LG
+                      String customDataFinal = '''<TimeSpan>
+        <begin>${start.toString().split(" ")[0]}</begin>
+         <end>${end.toString().split(" ")[0]}</end>
+</TimeSpan>
+      ''';
+                      for (int i = 0; i < 12; i++)
+                        customDataFinal += kmltext[i];
+                      kml = KML("custom", customDataFinal);
+
+                      LGConnection()
+                          .sendToLG(kml.mount(), "custom")
+                          .then((value) {
+                        _showToast(translate('Track.Visualize'));
+                        //LGConnection().buildOrbit(kml.mount());
+                        setState(() {
+                          isOpen = true;
+                        });
+                      }).catchError((onError) {
+                        print('oh no $onError');
+                        if (onError == 'nogeodata') {
+                          showAlertDialog(translate('Track.alert'),
+                              translate('Track.alert2'));
+                        }
+                        showAlertDialog(translate('Track.alert3'),
+                            translate('Track.alert4'));
+                      });
                     }),
               ),
             ],
@@ -672,52 +789,250 @@ class _CustomBuilderState extends State<CustomBuilder> {
       });
   void _onventsActive(bool? newValue) => setState(() {
         vents = newValue!;
-
-        if (vents) {
-        } else {}
+        if (vents == true) {
+          kmltext[4] == Vents().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[4] = "";
+        }
       });
   void _onhydrographyActive(bool? newValue) => setState(() {
         hydrography = newValue!;
-
-        if (hydrography) {
-        } else {}
+        if (hydrography == true) {
+          kmltext[5] == Hydrography().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[5] == "";
+        }
       });
 
   void _onmaritimeActive(bool? newValue) => setState(() {
         maritime = newValue!;
-
-        if (maritime) {
-        } else {}
+        if (maritime == true) {
+          kmltext[6] = Maritime().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[6] = "";
+        }
       });
   void _onclosedroadsActive(bool? newValue) => setState(() {
         closedroads = newValue!;
-
-        if (closedroads) {
-        } else {}
+        if (closedroads == true) {
+          kmltext[7] = ClosedRoads().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[7] = "";
+        }
       });
   void _onmunicipalitiesActive(bool? newValue) => setState(() {
         municipalities = newValue!;
-
-        if (municipalities) {
-        } else {}
+        if (municipalities == true) {
+          kmltext[8] = Municipalities().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[8] = "";
+        }
       });
 
   void _onmaineruptiveActive(bool? newValue) => setState(() {
         maineruptive = newValue!;
-
-        if (maineruptive) {
-        } else {}
+        if (maineruptive == true) {
+          kmltext[9] = MainEruptive().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[9] = "";
+        }
       });
   void _onnaturallandActive(bool? newValue) => setState(() {
         naturalland = newValue!;
-
-        if (naturalland) {
-        } else {}
+        if (naturalland == true) {
+          kmltext[10] = NaturalLand().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[10] = "";
+        }
       });
   void _onphysiographyActive(bool? newValue) => setState(() {
         physiography = newValue!;
-
-        if (physiography) {
-        } else {}
+        if (physiography == true) {
+          kmltext[11] = Physiography().generateTag();
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[11] = "";
+        }
       });
+}
+
+class LGConnection {
+  Future sendToLG(String kml, String projectname) async {
+    if (kml.isNotEmpty) {
+      return _createLocalFile(kml, projectname);
+    }
+    return Future.error('nogeodata');
+  }
+
+  Future cleanVisualization() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      stopOrbit();
+      return await client.execute('> /var/www/html/kmls.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  _getCredentials() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String ipAddress = preferences.getString('master_ip') ?? '';
+    String password = preferences.getString('master_password') ?? '';
+    String portNumber = preferences.getString('master_portNumber') ?? '';
+    String username = preferences.getString('master_username') ?? '';
+
+    return {
+      "ip": ipAddress,
+      "pass": password,
+      "port": portNumber,
+      "username": username,
+    };
+  }
+
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
+
+    return directory.path;
+  }
+
+  _createLocalFile(String kml, String projectname) async {
+    String localPath = await _localPath;
+    File localFile = File('$localPath/$projectname.kml');
+    localFile.writeAsString(kml);
+    File localFile2 = File('$localPath/kmls.txt');
+    localFile2.writeAsString(kml);
+    return _uploadToLG('$localPath/$projectname.kml', projectname);
+  }
+
+  _uploadToLG(String localPath, String projectname) async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    LookAt flyto = LookAt(
+      -17.895486,
+      28.610478,
+      '25069.665945696469',
+      '35',
+      '0',
+    );
+    try {
+      await client.connect();
+      await client.execute('> /var/www/html/kmls.txt');
+
+      // upload kml
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: localPath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+      await client.execute(
+          'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
+
+      return await client.execute(
+          'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  buildOrbit(String content) async {
+    dynamic credencials = await _getCredentials();
+
+    String localPath = await _localPath;
+    File localFile = File('$localPath/Orbit.kml');
+    localFile.writeAsString(content);
+
+    String filePath = '$localPath/Orbit.kml';
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: filePath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+
+      return await client.execute(
+          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  startOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  stopOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "exittour=true" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
 }
