@@ -184,6 +184,11 @@
 		}
 	},
 	"custombuilder": {
-		"range": "从选择日期范围开始："
+		"range": "从选择日期范围开始：",
+		"tremor": "震颤数据",
+		"buildings": "被摧毁和可能被摧毁的建筑物",
+		"roads": "道路被毁和可能被毁",
+		"natural": "自然土地",
+		"physiography": "生理学"
 	}
 }

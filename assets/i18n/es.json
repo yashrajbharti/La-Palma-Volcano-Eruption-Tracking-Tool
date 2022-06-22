@@ -184,6 +184,11 @@
 		}
 	},
 	"custombuilder": {
-		"range": "Comience seleccionando Intervalo de fechas:"
+		"range": "Comience seleccionando Intervalo de fechas:",
+		"tremor": "Datos de temblor",
+		"buildings": "Edificios destruidos y \nposiblemente destruidos",
+		"roads": "Carreteras destruidas y \nposiblemente destruidas",
+		"natural": "Tierra Natural",
+		"physiography": "Fisiografía"
 	}
 }

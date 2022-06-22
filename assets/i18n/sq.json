@@ -184,6 +184,11 @@
 		}
 	},
 	"custombuilder": {
-		"range": "Filloni me zgjedhjen e intervalit të datave:"
+		"range": "Filloni me zgjedhjen e intervalit të datave:",
+		"tremor": "Të dhënat e dridhjes",
+		"buildings": "Ndërtesat e shkatërruara dhe \nndoshta të shkatërruara",
+		"roads": "Rrugë të shkatërruara dhe \nndoshta të shkatërruara",
+		"natural": "Tokë natyrore",
+		"physiography": "Fiziografi"
 	}
 }

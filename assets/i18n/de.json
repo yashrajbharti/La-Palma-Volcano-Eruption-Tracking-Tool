@@ -12,7 +12,7 @@
 			"ja": "Japanisch",
 			"zh": "Chinesisch (Vereinfacht)",
 			"sq": "Albanisch",
-            "de": "Deutsch"
+			"de": "Deutsch"
 		},
 		"flag": "🇩🇪",
 		"selected_message": "Aktuell ausgewählte Sprache ist {language}",
@@ -184,6 +184,11 @@
 		}
 	},
 	"custombuilder": {
-		"range": "Beginnen Sie mit der Auswahl des Datumsbereichs:"
+		"range": "Beginnen Sie mit der Auswahl des Datumsbereichs:",
+		"tremor": "Tremor-Daten",
+		"buildings": "Gebäude zerstört und \nmöglicherweise zerstört",
+		"roads": "Straßen zerstört und \nmöglicherweise zerstört",
+		"natural": "Natürliches Land",
+		"physiography": "Physiographie"
 	}
 }
