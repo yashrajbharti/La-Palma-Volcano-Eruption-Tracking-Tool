@@ -174,7 +174,7 @@
 			"closed": "封闭的道路    ",
 			"lava": "熔岩流 ",
 			"Text": "  文本  ",
-			"municipality": "正在疏散的城市\norder/紧急声明",
+			"municipality": "接受疏散命令/\n紧急声明的城市",
 			"data": " 9 月 21 日（震颤）"
 		},
 		"located": {
@@ -189,6 +189,7 @@
 		"buildings": "被摧毁和可能被摧毁的建筑物",
 		"roads": "道路被毁和可能被毁",
 		"natural": "自然土地",
-		"physiography": "生理学"
+		"physiography": "生理学",
+		"closed": "封闭的道路"
 	}
 }

@@ -189,6 +189,7 @@
 		"buildings": "Buildings Destroyed & Possibly Destroyed",
 		"roads": "Roads Destroyed & Possibly Destroyed",
 		"natural": "Natural Land",
-		"physiography": "Physiography"
+		"physiography": "Physiography",
+		"closed": "Closed Roads"
 	}
 }

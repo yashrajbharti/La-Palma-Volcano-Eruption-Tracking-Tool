@@ -189,6 +189,7 @@
 		"buildings": "Edificios destruidos y \nposiblemente destruidos",
 		"roads": "Carreteras destruidas y \nposiblemente destruidas",
 		"natural": "Tierra Natural",
-		"physiography": "Fisiografía"
+		"physiography": "Fisiografía",
+		"closed": "Carreteras \ncerradas"
 	}
 }

@@ -139,7 +139,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                       textAlign: TextAlign.start,
                     ),
                     SizedBox(
-                      width: 100,
+                      width: 69,
                     ),
                     Container(
                       child: SizedBox(
@@ -208,7 +208,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           style: TextStyle(fontSize: 20.0),
                         ),
                         SizedBox(
-                          width: 4,
+                          width: 8,
                         ),
                         const Icon(
                           Icons.circle_rounded,
@@ -456,8 +456,11 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           ),
                         ),
                         Text(
-                          translate("info.situation.closed"),
+                          translate("custombuilder.closed"),
                           style: TextStyle(fontSize: 20.0),
+                        ),
+                        SizedBox(
+                          width: 4,
                         ),
                         Builder(
                           builder: (context) => IconButton(
