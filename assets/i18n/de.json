@@ -185,6 +185,7 @@
 	},
 	"custombuilder": {
 		"range": "Beginnen Sie mit der Auswahl des Datumsbereichs:",
+		"after": "Nachdem Sie den Datumsbereich ausgewählt haben, überprüfen Sie nun die Daten, die \nSie erstellen möchten:",
 		"tremor": "Tremor-Daten",
 		"buildings": "Gebäude zerstört und \nmöglicherweise zerstört",
 		"roads": "Straßen zerstört und \nmöglicherweise zerstört",

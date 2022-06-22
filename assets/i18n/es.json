@@ -185,6 +185,7 @@
 	},
 	"custombuilder": {
 		"range": "Comience seleccionando Intervalo de fechas:",
+		"after": "Después de seleccionar el rango de fechas, ahora verifique los datos que desea generar:",
 		"tremor": "Datos de temblor",
 		"buildings": "Edificios destruidos y \nposiblemente destruidos",
 		"roads": "Carreteras destruidas y \nposiblemente destruidas",

@@ -11,9 +11,10 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/kml/customkml.dart';
-import 'package:webscrapperapp/codingapp/kml/customkml2.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
+import 'package:permission_handler/permission_handler.dart';
+import '../kml/kmlgenerator.dart';
 
 class CustomBuilder extends StatefulWidget {
   CustomBuilder({Key? key}) : super(key: key);
@@ -89,6 +90,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
     );
     setState(() {
       dateRange = newDateRange ?? dateRange;
+      resetchecks();
     });
   }
 
@@ -273,7 +275,23 @@ class _CustomBuilderState extends State<CustomBuilder> {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    translate("custombuilder.after"),
+                    style: TextStyle(
+                      fontSize: 22,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -701,59 +719,124 @@ class _CustomBuilderState extends State<CustomBuilder> {
                 ],
               ),
               SizedBox(height: 50),
-              SizedBox(
-                width: 300,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      shadowColor: Colors.transparent,
-                      primary: Colors.white,
-                      padding: EdgeInsets.all(15),
-                      shape: StadiumBorder(),
-                    ),
-                    child: Wrap(
-                      children: <Widget>[
-                        SizedBox(
-                          width: 7,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 300,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          elevation: 0.0,
+                          shadowColor: Colors.transparent,
+                          primary: Colors.white,
+                          padding: EdgeInsets.all(15),
+                          shape: StadiumBorder(),
                         ),
-                        Text(translate('Track.visual'),
-                            style: TextStyle(fontSize: 26)),
-                        Icon(
-                          Icons.location_on_sharp,
-                          color: Color.fromARGB(255, 228, 6, 9),
-                          size: 30.0,
+                        child: Wrap(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 7,
+                            ),
+                            Text(translate('Track.visual'),
+                                style: TextStyle(fontSize: 26)),
+                            Icon(
+                              Icons.location_on_sharp,
+                              color: Color.fromARGB(255, 228, 6, 9),
+                              size: 30.0,
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    onPressed: () {
-                      // send to LG
-                      String customDataFinal = '''<TimeSpan>
+                        onPressed: () {
+                          // send to LG
+                          String customDataFinal = '''<TimeSpan>
         <begin>${start.toString().split(" ")[0]}</begin>
          <end>${end.toString().split(" ")[0]}</end>
 </TimeSpan>
       ''';
-                      for (int i = 0; i < 12; i++)
-                        customDataFinal += kmltext[i];
-                      kml = KML("custom", customDataFinal);
+                          for (int i = 0; i < 12; i++)
+                            customDataFinal += kmltext[i];
+                          kml = KML("custom", customDataFinal);
 
-                      LGConnection()
-                          .sendToLG(kml.mount(), "custom")
-                          .then((value) {
-                        _showToast(translate('Track.Visualize'));
-                        //LGConnection().buildOrbit(kml.mount());
-                        setState(() {
-                          isOpen = true;
-                        });
-                      }).catchError((onError) {
-                        print('oh no $onError');
-                        if (onError == 'nogeodata') {
-                          showAlertDialog(translate('Track.alert'),
-                              translate('Track.alert2'));
-                        }
-                        showAlertDialog(translate('Track.alert3'),
-                            translate('Track.alert4'));
-                      });
-                    }),
+                          LGConnection()
+                              .sendToLG(kml.mount(), "custom")
+                              .then((value) {
+                            _showToast(translate('Track.Visualize'));
+                            //LGConnection().buildOrbit(kml.mount());
+                            setState(() {
+                              isOpen = true;
+                            });
+                          }).catchError((onError) {
+                            print('oh no $onError');
+                            if (onError == 'nogeodata') {
+                              showAlertDialog(translate('Track.alert'),
+                                  translate('Track.alert2'));
+                            }
+                            showAlertDialog(translate('Track.alert3'),
+                                translate('Track.alert4'));
+                          });
+                        }),
+                  ),
+                  Padding(
+                    padding: new EdgeInsets.only(
+                      left: 20.0,
+                      right: 10.0,
+                    ),
+                    child: Container(
+                      color: Color.fromARGB(255, 204, 204, 204),
+                      child: Builder(
+                        builder: (context) => IconButton(
+                          icon: Image.asset('assets/icons/download.png'),
+                          iconSize: 55,
+                          onPressed: () async {
+                            String customDataFinal = '''<TimeSpan>
+        <begin>${start.toString().split(" ")[0]}</begin>
+         <end>${end.toString().split(" ")[0]}</end>
+</TimeSpan>
+      ''';
+                            for (int i = 0; i < 12; i++)
+                              customDataFinal += kmltext[i];
+                            kml = KML("custom", customDataFinal);
+
+                            var status = await Permission.storage.status;
+
+                            if (status.isGranted && "custom" != "") {
+                              try {
+                                await KMLGenerator.generateKML(
+                                    kml.mount(), "custom");
+                                showAlertDialog(translate("Tasks.alert"),
+                                    translate("Tasks.alert2"));
+                              } catch (e) {
+                                print('error $e');
+                                showAlertDialog(translate("Tasks.alert3"),
+                                    translate("Tasks.alert4"));
+                              }
+                            } else {
+                              var isGranted =
+                                  await Permission.storage.request().isGranted;
+                              if (isGranted && "custom" != "") {
+                                // download kml
+                                try {
+                                  await KMLGenerator.generateKML(
+                                      kml.mount(), "custom");
+                                  showAlertDialog(translate("Tasks.alert"),
+                                      translate("Tasks.alert2"));
+                                } catch (e) {
+                                  print('error $e');
+                                  showAlertDialog(translate("Tasks.alert3"),
+                                      translate("Tasks.alert4"));
+                                }
+                              } else {
+                                showAlertDialog(translate("Tasks.alert3"),
+                                    translate("Tasks.alert4"));
+                              }
+                            }
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -790,7 +873,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onventsActive(bool? newValue) => setState(() {
         vents = newValue!;
         if (vents == true) {
-          kmltext[4] == Vents().generateTag();
+          kmltext[4] = Vents().generateTag();
           _showToast(translate('Track.ready'));
         } else {
           kmltext[4] = "";
@@ -799,7 +882,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onhydrographyActive(bool? newValue) => setState(() {
         hydrography = newValue!;
         if (hydrography == true) {
-          kmltext[5] == Hydrography().generateTag();
+          kmltext[5] = Hydrography().generateTag();
           _showToast(translate('Track.ready'));
         } else {
           kmltext[5] == "";
@@ -861,6 +944,21 @@ class _CustomBuilderState extends State<CustomBuilder> {
           kmltext[11] = "";
         }
       });
+  void resetchecks() {
+    tremor = false;
+    lavaflow = false;
+    buildings = false;
+    roads = false;
+    vents = false;
+    hydrography = false;
+    closedroads = false;
+    municipalities = false;
+    maritime = false;
+    maineruptive = false;
+    naturalland = false;
+    physiography = false;
+    for (int i = 0; i < 12; i++) kmltext[i] = "";
+  }
 }
 
 class LGConnection {

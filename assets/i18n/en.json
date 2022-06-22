@@ -185,6 +185,7 @@
 	},
 	"custombuilder": {
 		"range": "Start with selecting Date Range:",
+		"after": "After selecting the Date Range, now check the data you want to build:",
 		"tremor": "Tremor Data",
 		"buildings": "Buildings Destroyed & Possibly Destroyed",
 		"roads": "Roads Destroyed & Possibly Destroyed",

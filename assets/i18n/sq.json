@@ -185,6 +185,7 @@
 	},
 	"custombuilder": {
 		"range": "Filloni me zgjedhjen e intervalit të datave:",
+		"after": "Pasi të keni zgjedhur diapazonin e datave, tani kontrolloni të dhënat që dëshironi të ndërtoni:",
 		"tremor": "Të dhënat e dridhjes",
 		"buildings": "Ndërtesat e shkatërruara dhe \nndoshta të shkatërruara",
 		"roads": "Rrugë të shkatërruara dhe \nndoshta të shkatërruara",
