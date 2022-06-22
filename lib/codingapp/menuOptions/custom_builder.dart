@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -749,17 +750,16 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         ),
                         onPressed: () {
                           // send to LG
-                          String customDataFinal = '''<TimeSpan>
-        <begin>${start.toString().split(" ")[0]}</begin>
-         <end>${end.toString().split(" ")[0]}</end>
-</TimeSpan>
-      ''';
-                          for (int i = 0; i < 12; i++)
-                            customDataFinal += kmltext[i];
-                          kml = KML("custom", customDataFinal);
-
+                          setState(() {
+                            log(start.toString().split(" ")[0]);
+                            String customDataFinal = "";
+                            for (int i = 0; i < 12; i++)
+                              customDataFinal += kmltext[i];
+                            kml = KML("custombuilt", customDataFinal);
+                          });
+                          LGConnection().cleanVisualization();
                           LGConnection()
-                              .sendToLG(kml.mount(), "custom")
+                              .sendToLG(kml.mount(), "custombuilt")
                               .then((value) {
                             _showToast(translate('Track.Visualize'));
                             //LGConnection().buildOrbit(kml.mount());
@@ -789,21 +789,18 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           icon: Image.asset('assets/icons/download.png'),
                           iconSize: 55,
                           onPressed: () async {
-                            String customDataFinal = '''<TimeSpan>
-        <begin>${start.toString().split(" ")[0]}</begin>
-         <end>${end.toString().split(" ")[0]}</end>
-</TimeSpan>
-      ''';
-                            for (int i = 0; i < 12; i++)
-                              customDataFinal += kmltext[i];
-                            kml = KML("custom", customDataFinal);
-
+                            setState(() {
+                              String customDataFinal = "";
+                              for (int i = 0; i < 12; i++)
+                                customDataFinal += kmltext[i];
+                              kml = KML("custombuilt", customDataFinal);
+                            });
                             var status = await Permission.storage.status;
 
-                            if (status.isGranted && "custom" != "") {
+                            if (status.isGranted && "custombuilt" != "") {
                               try {
                                 await KMLGenerator.generateKML(
-                                    kml.mount(), "custom");
+                                    kml.mount(), "custombuilt");
                                 showAlertDialog(translate("Tasks.alert"),
                                     translate("Tasks.alert2"));
                               } catch (e) {
@@ -814,11 +811,11 @@ class _CustomBuilderState extends State<CustomBuilder> {
                             } else {
                               var isGranted =
                                   await Permission.storage.request().isGranted;
-                              if (isGranted && "custom" != "") {
+                              if (isGranted && "custombuilt" != "") {
                                 // download kml
                                 try {
                                   await KMLGenerator.generateKML(
-                                      kml.mount(), "custom");
+                                      kml.mount(), "custombuilt");
                                   showAlertDialog(translate("Tasks.alert"),
                                       translate("Tasks.alert2"));
                                 } catch (e) {
@@ -873,7 +870,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onventsActive(bool? newValue) => setState(() {
         vents = newValue!;
         if (vents == true) {
-          kmltext[4] = Vents().generateTag();
+          kmltext[4] = Vents().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[4] = "";
@@ -882,7 +880,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onhydrographyActive(bool? newValue) => setState(() {
         hydrography = newValue!;
         if (hydrography == true) {
-          kmltext[5] = Hydrography().generateTag();
+          kmltext[5] = Hydrography().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[5] == "";
@@ -892,7 +891,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onmaritimeActive(bool? newValue) => setState(() {
         maritime = newValue!;
         if (maritime == true) {
-          kmltext[6] = Maritime().generateTag();
+          kmltext[6] = Maritime().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[6] = "";
@@ -901,7 +901,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onclosedroadsActive(bool? newValue) => setState(() {
         closedroads = newValue!;
         if (closedroads == true) {
-          kmltext[7] = ClosedRoads().generateTag();
+          kmltext[7] = ClosedRoads().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[7] = "";
@@ -910,7 +911,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onmunicipalitiesActive(bool? newValue) => setState(() {
         municipalities = newValue!;
         if (municipalities == true) {
-          kmltext[8] = Municipalities().generateTag();
+          kmltext[8] = Municipalities().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[8] = "";
@@ -920,7 +922,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onmaineruptiveActive(bool? newValue) => setState(() {
         maineruptive = newValue!;
         if (maineruptive == true) {
-          kmltext[9] = MainEruptive().generateTag();
+          kmltext[9] = MainEruptive().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[9] = "";
@@ -929,7 +932,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onnaturallandActive(bool? newValue) => setState(() {
         naturalland = newValue!;
         if (naturalland == true) {
-          kmltext[10] = NaturalLand().generateTag();
+          kmltext[10] = NaturalLand().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[10] = "";
@@ -938,7 +942,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   void _onphysiographyActive(bool? newValue) => setState(() {
         physiography = newValue!;
         if (physiography == true) {
-          kmltext[11] = Physiography().generateTag();
+          kmltext[11] = Physiography().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[11] = "";

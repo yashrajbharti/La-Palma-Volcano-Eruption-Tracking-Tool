@@ -1,7 +1,7 @@
 class Maritime {
   Maritime();
 
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return ''' 
 	<name>Maritime Exclusion Zone.kml</name>
 	<StyleMap id="__managed_style_0BA2FAA56B22242D9CEB">
@@ -136,8 +136,8 @@ class Maritime {
 	<Placemark id="00596AC3162224119AD8">
 		<name>Maritime Exclusion Zone</name>
 		<TimeSpan>
-			<begin>2021-09-19</begin>
-			<end>2021-09-22</end>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
 		</TimeSpan>
 		<styleUrl>#__managed_style_0BA2FAA56B22242D9CEB</styleUrl>
 		<gx:balloonVisibility>1</gx:balloonVisibility>
@@ -159,7 +159,7 @@ class Maritime {
 
 class MainEruptive {
   MainEruptive();
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return '''
 	<name>Main Eruptive Event</name>
 	<Style id="__managed_style_2AACE7810A22243384C7">
@@ -292,8 +292,8 @@ class MainEruptive {
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
 		<TimeSpan>
-			<begin>2021-09-19</begin>
-			<end>2021-09-22</end>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
 		</TimeSpan>
 		<styleUrl>#__managed_style_096B72317122243384C7</styleUrl>
 		<Point>
@@ -307,7 +307,7 @@ class MainEruptive {
 
 class NaturalLand {
   NaturalLand();
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return '''
 <name>Land Use-Cover - Area Feature.kml</name>
 	<Style id="PolyStyle045">
@@ -569,6 +569,10 @@ class NaturalLand {
 </body>
 
 </html>]]></description>
+	<TimeSpan>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
+		</TimeSpan>
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -8220,7 +8224,7 @@ class NaturalLand {
 
 class Municipalities {
   Municipalities();
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return '''
 <name>Los Llanos de Aridane.kml</name>
 	<Style id="sh_noicon0">
@@ -8264,8 +8268,8 @@ class Municipalities {
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
 		<TimeSpan>
-			<begin>2021-09-19</begin>
-			<end>2021-09-22</end>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
 		</TimeSpan>
 		<styleUrl>#msn_noicon</styleUrl>
 		<Point>
@@ -8314,8 +8318,8 @@ class Municipalities {
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
 		<TimeSpan>
-			<begin>2021-09-19</begin>
-			<end>2021-09-22</end>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
 		</TimeSpan>
 		<styleUrl>#msn_noicon1</styleUrl>
 		<Point>
@@ -8365,8 +8369,8 @@ class Municipalities {
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
 		<TimeSpan>
-			<begin>2021-09-19</begin>
-			<end>2021-09-22</end>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
 		</TimeSpan>
 		<styleUrl>#msn_noicon0</styleUrl>
 		<Point>
@@ -8380,7 +8384,7 @@ class Municipalities {
 
 class ClosedRoads {
   ClosedRoads();
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return '''
 	<name>Closed Roads</name>
 	<Style id="__managed_style_144C88685222242FACB9">
@@ -8634,8 +8638,8 @@ class ClosedRoads {
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
 			<TimeSpan>
-				<begin>2021-09-19</begin>
-				<end>2021-09-22</end>
+				<begin>$Startdate</begin>
+				<end>$Enddate</end>
 			</TimeSpan>
 			<styleUrl>#__managed_style_0D41CE43DD22242FACB9</styleUrl>
 			<Point>
@@ -8654,8 +8658,8 @@ class ClosedRoads {
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
 			<TimeSpan>
-				<begin>2021-09-19</begin>
-				<end>2021-09-22</end>
+				<begin>$Startdate</begin>
+				<end>$Enddate</end>
 			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
@@ -8674,8 +8678,8 @@ class ClosedRoads {
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
 			<TimeSpan>
-				<begin>2021-09-19</begin>
-				<end>2021-09-22</end>
+				<begin>$Startdate</begin>
+				<end>$Enddate</end>
 			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
@@ -8694,8 +8698,8 @@ class ClosedRoads {
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
 			<TimeSpan>
-				<begin>2021-09-19</begin>
-				<end>2021-09-22</end>
+				<begin>$Startdate</begin>
+				<end>$Enddate</end>
 			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
@@ -8714,8 +8718,8 @@ class ClosedRoads {
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
 			<TimeSpan>
-				<begin>2021-09-19</begin>
-				<end>2021-09-22</end>
+				<begin>$Startdate</begin>
+				<end>$Enddate</end>
 			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
@@ -8731,7 +8735,7 @@ class ClosedRoads {
 class Vents {
   Vents();
 
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return '''
 <name>vents.kml</name>
 	<Style id="IconStyle002">
@@ -8842,6 +8846,10 @@ class Vents {
 </body>
 
 </html>]]></description>
+	<TimeSpan>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
+		</TimeSpan>
 			<styleUrl>#IconStyle002</styleUrl>
 			<Point>
 				<coordinates>-17.86411856699994,28.61280666700003,0</coordinates>
@@ -9784,7 +9792,7 @@ class Vents {
 class Physiography {
   Physiography();
 
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return '''
 	<name>Physiography - Line feature.kml</name>
 	<Style id="LineStyle001">
@@ -9886,6 +9894,10 @@ class Physiography {
 </body>
 
 </html>]]></description>
+	<TimeSpan>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
+		</TimeSpan>
 			<styleUrl>#LineStyle001</styleUrl>
 			<MultiGeometry>
 				<LineString>
@@ -11996,7 +12008,7 @@ class Physiography {
 class Hydrography {
   Hydrography();
 
-  generateTag() {
+  generateTag(String Startdate, String Enddate) {
     return '''
 <name>Hydrography - Line feature.kml</name>
 	<Style id="LineStyle0101">
@@ -12111,6 +12123,10 @@ class Hydrography {
 </body>
 
 </html>]]></description>
+	<TimeSpan>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
+		</TimeSpan>
 			<styleUrl>#LineStyle00</styleUrl>
 			<MultiGeometry>
 				<LineString>
