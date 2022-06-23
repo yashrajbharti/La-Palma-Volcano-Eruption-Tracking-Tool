@@ -361,7 +361,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         ),
                         Builder(
                           builder: (context) => IconButton(
-                            icon: Image.asset('assets/icons/Polygon5.png'),
+                            icon: Image.asset('assets/icons/lava_flow.png'),
                             iconSize: 20,
                             onPressed: () => {},
                           ),
@@ -681,7 +681,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         ),
                         Builder(
                           builder: (context) => IconButton(
-                            icon: Image.asset('assets/icons/Polygon8.png'),
+                            icon: Image.asset('assets/icons/natural_land.png'),
                             iconSize: 20,
                             onPressed: () => {},
                           ),
