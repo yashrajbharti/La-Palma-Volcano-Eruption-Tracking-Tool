@@ -843,16 +843,20 @@ class _CustomBuilderState extends State<CustomBuilder> {
     );
   }
 
-  void _onTremorsActive(bool? newValue) => setState(() {
-        tremor = newValue!;
-
-        if (tremor) {
-        } else {}
+  void _onnaturallandActive(bool? newValue) => setState(() {
+        naturalland = newValue!;
+        if (naturalland == true) {
+          kmltext[0] = NaturalLand().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[0] = "";
+        }
       });
-  void _onlavaflowActive(bool? newValue) => setState(() {
-        lavaflow = newValue!;
-        if (lavaflow == true) {
-          kmltext[1] = Lavabuilder().generateTag(
+  void _onmaritimeActive(bool? newValue) => setState(() {
+        maritime = newValue!;
+        if (maritime == true) {
+          kmltext[1] = Maritime().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
@@ -892,17 +896,17 @@ class _CustomBuilderState extends State<CustomBuilder> {
           kmltext[5] == "";
         }
       });
-
-  void _onmaritimeActive(bool? newValue) => setState(() {
-        maritime = newValue!;
-        if (maritime == true) {
-          kmltext[6] = Maritime().generateTag(
+  void _onlavaflowActive(bool? newValue) => setState(() {
+        lavaflow = newValue!;
+        if (lavaflow == true) {
+          kmltext[6] = Lavabuilder().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[6] = "";
         }
       });
+
   void _onclosedroadsActive(bool? newValue) => setState(() {
         closedroads = newValue!;
         if (closedroads == true) {
@@ -934,15 +938,12 @@ class _CustomBuilderState extends State<CustomBuilder> {
           kmltext[9] = "";
         }
       });
-  void _onnaturallandActive(bool? newValue) => setState(() {
-        naturalland = newValue!;
-        if (naturalland == true) {
-          kmltext[10] = NaturalLand().generateTag(
-              start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
-        } else {
-          kmltext[10] = "";
-        }
+
+  void _onTremorsActive(bool? newValue) => setState(() {
+        tremor = newValue!;
+
+        if (tremor) {
+        } else {}
       });
   void _onphysiographyActive(bool? newValue) => setState(() {
         physiography = newValue!;

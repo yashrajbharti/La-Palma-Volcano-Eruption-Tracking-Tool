@@ -193,7 +193,7 @@ class Lavabuilder {
       }
     }
 
-    return Sep24 + Oct8 + Oct21 + Nov4 + Nov14 + Nov21 + Dec1 + Dec18;
+    return Dec18 + Dec1 + Nov21 + Nov14 + Nov4 + Oct21 + Oct8 + Sep24;
   }
 
   September24Tag(String date1, String date2) {
