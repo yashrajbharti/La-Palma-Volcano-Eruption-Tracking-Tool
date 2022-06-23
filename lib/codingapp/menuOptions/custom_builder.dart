@@ -12,6 +12,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/kml/customkml.dart';
+import 'package:webscrapperapp/codingapp/kml/lavabuilder.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -850,9 +851,13 @@ class _CustomBuilderState extends State<CustomBuilder> {
       });
   void _onlavaflowActive(bool? newValue) => setState(() {
         lavaflow = newValue!;
-
-        if (lavaflow) {
-        } else {}
+        if (lavaflow == true) {
+          kmltext[1] = Lavabuilder().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[1] = "";
+        }
       });
 
   void _onbuildingsActive(bool? newValue) => setState(() {
