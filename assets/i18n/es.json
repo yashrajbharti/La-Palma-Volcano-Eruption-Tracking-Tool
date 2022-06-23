@@ -191,6 +191,8 @@
 		"roads": "Carreteras destruidas y \nposiblemente destruidas",
 		"natural": "Tierra Natural",
 		"physiography": "Fisiografía",
-		"closed": "Carreteras \ncerradas"
+		"closed": "Carreteras \ncerradas",
+		"main": "Evento eruptivo",
+		"area": "Area de interes "
 	}
 }

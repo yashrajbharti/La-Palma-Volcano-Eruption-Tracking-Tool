@@ -21421,3 +21421,129 @@ class Hydrography {
     </Folder>''';
   }
 }
+
+class AreaOfInterest {
+  AreaOfInterest();
+  generateTag(String Startdate, String Enddate) {
+    return '''<name>area of interest.kml</name>
+	<Style id="PolyStyle00">
+		<LabelStyle>
+			<color>00000000</color>
+			<scale>0</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff00a838</color>
+			<width>5</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00f0f0f0</color>
+		</PolyStyle>
+	</Style>
+	<Folder id="FeatureLayer0">
+		<name>General Information</name>
+		<open>1</open>
+		<Snippet maxLines="0"></Snippet>
+		<Placemark id="ID_00000">
+			<name>01</name>
+			<Snippet maxLines="0"></Snippet>
+			<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>01</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Activation Identifier</td>
+
+<td>EMSR546</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>GLIDE No</td>
+
+<td>VO-2021-000146-ESP</td>
+
+</tr>
+
+<tr>
+
+<td>Product Id</td>
+
+<td>01</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Locality</td>
+
+<td>La Palma</td>
+
+</tr>
+
+<tr>
+
+<td>Map Type</td>
+
+<td>Grading-Monit63</td>
+
+</tr>
+
+
+
+
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+	<TimeSpan>
+			<begin>$Startdate</begin>
+			<end>$Enddate</end>
+		</TimeSpan>
+			<styleUrl>#PolyStyle00</styleUrl>
+			<MultiGeometry>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-17.88171918699993,28.55378779400007,0 -17.87967363799993,28.55405166600008,0 -17.87634340899996,28.58511397700005,0 -17.86575078399994,28.58613237700007,0 -17.83409330399996,28.58925527800005,0 -17.83265641599996,28.64478641500006,0 -17.84936346099994,28.65611983900004,0 -17.91651588799994,28.65359227100004,0 -17.94828532999998,28.63282369300003,0 -17.93037553999994,28.59456025100008,0 -17.91350904599995,28.58140695900005,0 -17.89258698499998,28.55313230600007,0 -17.89248336799994,28.55203125300005,0 -17.88171918699993,28.55378779400007,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</MultiGeometry>
+		</Placemark>
+	</Folder>''';
+  }
+}

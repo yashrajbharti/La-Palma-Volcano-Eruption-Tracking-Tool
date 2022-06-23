@@ -191,6 +191,8 @@
 		"roads": "Rrugë të shkatërruara dhe \nndoshta të shkatërruara",
 		"natural": "Tokë natyrore",
 		"physiography": "Fiziografi",
-		"closed": "Rruge te \nMbyllura"
+		"closed": "Rruge te \nMbyllura",
+		"main": "Ngjarja kryesore \nshpërthyese",
+		"area": "Zona e interesit"
 	}
 }

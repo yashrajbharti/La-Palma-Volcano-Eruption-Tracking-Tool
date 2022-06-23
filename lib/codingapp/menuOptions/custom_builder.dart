@@ -16,6 +16,8 @@ import 'package:webscrapperapp/codingapp/kml/lavabuilder.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:webscrapperapp/codingapp/kml/roadsbuilder.dart';
+import 'package:webscrapperapp/codingapp/kml/buildingsbuilder.dart';
 import '../kml/kmlgenerator.dart';
 
 class CustomBuilder extends StatefulWidget {
@@ -26,7 +28,7 @@ class CustomBuilder extends StatefulWidget {
 }
 
 class _CustomBuilderState extends State<CustomBuilder> {
-  List<String> kmltext = ['', '', '', '', '', '', '', '', '', '', '', ''];
+  List<String> kmltext = ['', '', '', '', '', '', '', '', '', '', '', '', ''];
   KML kml = KML("", "");
   late final themeData;
   bool tremor = false;
@@ -41,6 +43,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool maineruptive = false;
   bool naturalland = false;
   bool physiography = false;
+  bool areaofinterest = false;
   bool isOpen = false;
   late var start;
   late var end;
@@ -637,7 +640,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           ),
                         ),
                         Text(
-                          translate("info.situation.main"),
+                          translate("custombuilder.main"),
                           style: TextStyle(fontSize: 20.0),
                         ),
                         Opacity(
@@ -718,6 +721,36 @@ class _CustomBuilderState extends State<CustomBuilder> {
                       ],
                     ),
                   ),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Transform.scale(
+                          scale: 1.3,
+                          child: Checkbox(
+                            value: areaofinterest,
+                            onChanged: _onareaofinterestActive,
+                            checkColor: Color.fromARGB(255, 115, 184, 117),
+                            fillColor: MaterialStateProperty.all(
+                                Color.fromARGB(255, 149, 149, 149)),
+                          ),
+                        ),
+                        Text(
+                          translate("custombuilder.area"),
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                        SizedBox(
+                          width: 4,
+                        ),
+                        const Icon(
+                          Icons.rectangle_outlined,
+                          color: Color.fromARGB(255, 72, 188, 26),
+                          size: 46,
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 50),
@@ -754,7 +787,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           setState(() {
                             log(start.toString().split(" ")[0]);
                             String customDataFinal = "";
-                            for (int i = 0; i < 12; i++)
+                            for (int i = 0; i <= 12; i++)
                               customDataFinal += kmltext[i];
                             kml = KML("custombuilt", customDataFinal);
                           });
@@ -792,7 +825,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           onPressed: () async {
                             setState(() {
                               String customDataFinal = "";
-                              for (int i = 0; i < 12; i++)
+                              for (int i = 0; i <= 12; i++)
                                 customDataFinal += kmltext[i];
                               kml = KML("custombuilt", customDataFinal);
                             });
@@ -853,28 +886,35 @@ class _CustomBuilderState extends State<CustomBuilder> {
           kmltext[0] = "";
         }
       });
-  void _onmaritimeActive(bool? newValue) => setState(() {
-        maritime = newValue!;
-        if (maritime == true) {
-          kmltext[1] = Maritime().generateTag(
+  void _onareaofinterestActive(bool? newValue) => setState(() {
+        areaofinterest = newValue!;
+        if (areaofinterest == true) {
+          kmltext[1] = AreaOfInterest().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[1] = "";
         }
       });
-
-  void _onbuildingsActive(bool? newValue) => setState(() {
-        buildings = newValue!;
-
-        if (buildings) {
-        } else {}
+  void _onmaritimeActive(bool? newValue) => setState(() {
+        maritime = newValue!;
+        if (maritime == true) {
+          kmltext[2] = Maritime().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[2] = "";
+        }
       });
   void _onroadsActive(bool? newValue) => setState(() {
         roads = newValue!;
-
-        if (roads) {
-        } else {}
+        if (roads == true) {
+          kmltext[3] = Roadsdestroyed().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[3] = "";
+        }
       });
   void _onventsActive(bool? newValue) => setState(() {
         vents = newValue!;
@@ -955,6 +995,16 @@ class _CustomBuilderState extends State<CustomBuilder> {
           kmltext[11] = "";
         }
       });
+  void _onbuildingsActive(bool? newValue) => setState(() {
+        buildings = newValue!;
+        if (buildings == true) {
+          kmltext[12] = Buildingsdestroyed().generateTag(
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[12] = "";
+        }
+      });
   void resetchecks() {
     tremor = false;
     lavaflow = false;
@@ -968,7 +1018,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
     maineruptive = false;
     naturalland = false;
     physiography = false;
-    for (int i = 0; i < 12; i++) kmltext[i] = "";
+    areaofinterest = false;
+    for (int i = 0; i <= 12; i++) kmltext[i] = "";
   }
 }
 

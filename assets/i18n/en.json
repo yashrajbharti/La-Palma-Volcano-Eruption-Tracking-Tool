@@ -191,6 +191,8 @@
 		"roads": "Roads Destroyed & Possibly Destroyed",
 		"natural": "Natural Land",
 		"physiography": "Physiography",
-		"closed": "Closed Roads"
+		"closed": "Closed Roads",
+		"main": "Main Eruptive Event",
+		"area": "Area of interest"
 	}
 }

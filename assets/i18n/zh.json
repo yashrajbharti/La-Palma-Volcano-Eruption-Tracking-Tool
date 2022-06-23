@@ -191,6 +191,8 @@
 		"roads": "道路被毁和可能被毁",
 		"natural": "自然土地",
 		"physiography": "生理学",
-		"closed": "封闭的道路"
+		"closed": "封闭的道路",
+		"main": "主要喷发事件",
+		"area": "感兴趣的领域 "
 	}
 }

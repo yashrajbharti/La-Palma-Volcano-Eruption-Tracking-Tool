@@ -191,6 +191,8 @@
 		"roads": "Straßen zerstört und \nmöglicherweise zerstört",
 		"natural": "Natürliches Land",
 		"physiography": "Physiographie",
-		"closed": "Gesperrte Straßen"
+		"closed": "Gesperrte Straßen",
+		"main": "Wichtigstes eruptives \nEreignis",
+		"area": "Interessenbereich"
 	}
 }
