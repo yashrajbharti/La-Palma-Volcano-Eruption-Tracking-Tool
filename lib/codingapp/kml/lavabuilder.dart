@@ -2245,9 +2245,7 @@ class Lavabuilder {
 				<coordinates>-17.92391136481098,28.60686630907811,0</coordinates>
 			</Point>
 		</Placemark>
-	</Folder>
-</Document>
-</kml>''';
+	</Folder>''';
   }
 
   November21Tag(String date1, String date2) {
@@ -2818,10 +2816,7 @@ class Lavabuilder {
   }
 
   December18Tag(String date1, String date2) {
-    return '''<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-<Document>
-	<name>$date2</name>
+    return '''<name>$date2</name>
 	<Style id="__managed_style_28BA44A725220960AEC9">
 		<IconStyle>
 			<scale>1.2</scale>
@@ -3118,8 +3113,6 @@ class Lavabuilder {
 				<coordinates>-17.90568754168596,28.60632035884035,0</coordinates>
 			</Point>
 		</Placemark>
-	</Folder>
-</Document>
-</kml>''';
+	</Folder>''';
   }
 }
