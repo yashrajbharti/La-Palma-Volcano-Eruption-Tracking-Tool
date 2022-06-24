@@ -1,6 +1,6 @@
-import 'dart:developer';
 import 'dart:io';
-
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
@@ -18,6 +18,7 @@ import 'package:webscrapperapp/codingapp/kml/buildingsbuilder.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:webscrapperapp/codingapp/kml/tremorbuilder.dart';
 import '../kml/kmlgenerator.dart';
 
 class CustomBuilder extends StatefulWidget {
@@ -47,6 +48,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool isOpen = false;
   late var start;
   late var end;
+  late Map<String, dynamic> dmap;
 
   Future dateTimeRangePicker() async {
     DateTimeRange? newDateRange = await showDateRangePicker(
@@ -96,6 +98,20 @@ class _CustomBuilderState extends State<CustomBuilder> {
     setState(() {
       dateRange = newDateRange ?? dateRange;
       resetchecks();
+    });
+  }
+
+  parseJsonFromAssets() async {
+    dmap = await rootBundle
+        .loadString("assets/kml_files/tremor.geojson")
+        .then((jsonStr) => jsonDecode(jsonStr));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+      await parseJsonFromAssets();
     });
   }
 
@@ -863,7 +879,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         onPressed: () {
                           // send to LG
                           setState(() {
-                            log(start.toString().split(" ")[0]);
                             String customDataFinal = "";
                             for (int i = 0; i <= 12; i++)
                               customDataFinal += kmltext[i];
@@ -1059,9 +1074,15 @@ class _CustomBuilderState extends State<CustomBuilder> {
 
   void _onTremorsActive(bool? newValue) => setState(() {
         tremor = newValue!;
-
-        if (tremor) {
-        } else {}
+        if (tremor == true) {
+          kmltext[10] = TremorBuilder().generateTag(
+              start.toString().split(" ")[0],
+              end.toString().split(" ")[0],
+              dmap);
+          _showToast(translate('Track.ready'));
+        } else {
+          kmltext[10] = "";
+        }
       });
   void _onphysiographyActive(bool? newValue) => setState(() {
         physiography = newValue!;

@@ -3039,7 +3039,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           color: Color.fromARGB(255, 247, 184, 68),
                           size: 20,
                         ),
-                        Text(" 2 - 4 mbLg   ",
+                        Text(" 2 - 3 mbLg   ",
                             style: TextStyle(
                                 fontSize: 18.5,
                                 color: Colors.white70,
@@ -3058,7 +3058,29 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                           color: Color.fromARGB(255, 239, 99, 55),
                           size: 20,
                         ),
-                        Text(" 4 - 6 mbLg   ",
+                        Text(" 3 - 4 mbLg   ",
+                            style: TextStyle(
+                                fontSize: 18.5,
+                                color: Colors.white70,
+                                fontFamily: "OldStandard")),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    new Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Transform.rotate(
+                          angle: 23.55,
+                          child: const Icon(
+                            Icons.play_arrow,
+                            color: Color.fromARGB(255, 141, 199, 255),
+                            size: 30,
+                          ),
+                        ),
+                        Text("5 - 6 mbLg   ",
                             style: TextStyle(
                                 fontSize: 18.5,
                                 color: Colors.white70,
