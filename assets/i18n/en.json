@@ -193,6 +193,7 @@
 		"physiography": "Physiography",
 		"closed": "Closed Roads",
 		"main": "Main Eruptive Event",
-		"area": "Area of interest"
+		"area": "Area of interest",
+		"maritime": "Maritime Exclusion Zone  "
 	}
 }

@@ -192,7 +192,8 @@
 		"natural": "Natürliches Land",
 		"physiography": "Physiographie",
 		"closed": "Gesperrte Straßen",
-		"main": "Wichtigstes eruptives \nEreignis",
-		"area": "Interessenbereich"
+		"main": "Wichtigstes \neruptives Ereignis",
+		"area": "Interessenbereich",
+		"maritime": "Maritime Sperrzone  "
 	}
 }
