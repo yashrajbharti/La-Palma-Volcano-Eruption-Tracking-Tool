@@ -28,7 +28,7 @@ class _SplashState extends State<Splash> {
         ),
       ),
       image: Image.asset("assets/volcano.png"),
-      backgroundColor: const Color.fromARGB(255, 43, 43, 43),
+      backgroundColor: const Color.fromARGB(255, 30, 30, 30),
       photoSize: 100.0,
       loaderColor: const Color.fromARGB(255, 204, 204, 204),
     );
