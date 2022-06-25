@@ -1,6 +1,4 @@
 import 'dart:io';
-import 'dart:convert';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
@@ -19,7 +17,7 @@ import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:webscrapperapp/codingapp/kml/tremorbuilder.dart';
-import '../kml/kmlgenerator.dart';
+import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
 
 class CustomBuilder extends StatefulWidget {
   CustomBuilder({Key? key}) : super(key: key);
@@ -48,7 +46,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool isOpen = false;
   late var start;
   late var end;
-  late Map<String, dynamic> dmap;
 
   Future dateTimeRangePicker() async {
     DateTimeRange? newDateRange = await showDateRangePicker(
@@ -98,20 +95,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
     setState(() {
       dateRange = newDateRange ?? dateRange;
       resetchecks();
-    });
-  }
-
-  parseJsonFromAssets() async {
-    dmap = await rootBundle
-        .loadString("assets/kml_files/tremor.geojson")
-        .then((jsonStr) => jsonDecode(jsonStr));
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback((_) async {
-      await parseJsonFromAssets();
     });
   }
 
@@ -1076,9 +1059,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
         tremor = newValue!;
         if (tremor == true) {
           kmltext[10] = TremorBuilder().generateTag(
-              start.toString().split(" ")[0],
-              end.toString().split(" ")[0],
-              dmap);
+              start.toString().split(" ")[0], end.toString().split(" ")[0]);
           _showToast(translate('Track.ready'));
         } else {
           kmltext[10] = "";
