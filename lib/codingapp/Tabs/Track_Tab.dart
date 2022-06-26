@@ -169,11 +169,14 @@ class _SendtoLGState extends State<SendtoLG> {
                     ),
                     Text(translate('Track.hist'),
                         style: TextStyle(fontSize: 40)),
-                    Icon(
-                      Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 228, 6, 9),
-                      size: 45.0,
-                    ),
+                    Transform.scale(
+                        scale: 1.5,
+                        child: Builder(
+                          builder: (context) => IconButton(
+                            icon: Image.asset('assets/icons/historic.png'),
+                            onPressed: () => {},
+                          ),
+                        )),
                   ],
                 ),
               ),
@@ -200,11 +203,14 @@ class _SendtoLGState extends State<SendtoLG> {
                     ),
                     Text(translate('Track.lava'),
                         style: TextStyle(fontSize: 40)),
-                    Icon(
-                      Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 228, 6, 9),
-                      size: 45.0,
-                    ),
+                    Transform.scale(
+                        scale: 1.5,
+                        child: Builder(
+                          builder: (context) => IconButton(
+                            icon: Image.asset('assets/icons/lavaflow.png'),
+                            onPressed: () => {},
+                          ),
+                        )),
                   ],
                 ),
               ),
@@ -235,11 +241,14 @@ class _SendtoLGState extends State<SendtoLG> {
                       ),
                       Text(translate('Track.prehistoric'),
                           style: TextStyle(fontSize: 40)),
-                      Icon(
-                        Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 228, 6, 9),
-                        size: 45.0,
-                      ),
+                      Transform.scale(
+                          scale: 1.5,
+                          child: Builder(
+                            builder: (context) => IconButton(
+                              icon: Image.asset('assets/icons/prehistoric.png'),
+                              onPressed: () => {},
+                            ),
+                          )),
                     ],
                   ),
                 ),
@@ -265,11 +274,15 @@ class _SendtoLGState extends State<SendtoLG> {
                       ),
                       Text(translate('Track.aff'),
                           style: TextStyle(fontSize: 40)),
-                      Icon(
-                        Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 228, 6, 9),
-                        size: 45.0,
-                      ),
+                      Transform.scale(
+                          scale: 1.5,
+                          child: Builder(
+                            builder: (context) => IconButton(
+                              icon:
+                                  Image.asset('assets/icons/affectedareas.png'),
+                              onPressed: () => {},
+                            ),
+                          )),
                     ],
                   ),
                 ),
@@ -300,11 +313,14 @@ class _SendtoLGState extends State<SendtoLG> {
                     ),
                     Text(translate('Track.land'),
                         style: TextStyle(fontSize: 40)),
-                    Icon(
-                      Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 228, 6, 9),
-                      size: 45.0,
-                    ),
+                    Transform.scale(
+                        scale: 1.9,
+                        child: Builder(
+                          builder: (context) => IconButton(
+                            icon: Image.asset('assets/icons/landscape.png'),
+                            onPressed: () => {},
+                          ),
+                        )),
                   ],
                 ),
               ),
@@ -331,11 +347,14 @@ class _SendtoLGState extends State<SendtoLG> {
                     ),
                     Text(translate('Track.So2'),
                         style: TextStyle(fontSize: 40)),
-                    Icon(
-                      Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 228, 6, 9),
-                      size: 45.0,
-                    ),
+                    Transform.scale(
+                        scale: 1.5,
+                        child: Builder(
+                          builder: (context) => IconButton(
+                            icon: Image.asset('assets/icons/so2emissions.png'),
+                            onPressed: () => {},
+                          ),
+                        )),
                   ],
                 ),
               ),
@@ -366,11 +385,14 @@ class _SendtoLGState extends State<SendtoLG> {
                       ),
                       Text(translate('Track.situation'),
                           style: TextStyle(fontSize: 40)),
-                      Icon(
-                        Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 228, 6, 9),
-                        size: 45.0,
-                      ),
+                      Transform.scale(
+                          scale: 1.5,
+                          child: Builder(
+                            builder: (context) => IconButton(
+                              icon: Image.asset('assets/icons/situation.png'),
+                              onPressed: () => {},
+                            ),
+                          )),
                     ],
                   ),
                 ),
@@ -396,11 +418,15 @@ class _SendtoLGState extends State<SendtoLG> {
                       ),
                       Text(translate('Track.located'),
                           style: TextStyle(fontSize: 40)),
-                      Icon(
-                        Icons.location_on_sharp,
-                        color: ui.Color.fromARGB(255, 228, 6, 9),
-                        size: 45.0,
-                      ),
+                      Transform.scale(
+                          scale: 1.5,
+                          child: Builder(
+                            builder: (context) => IconButton(
+                              icon:
+                                  Image.asset('assets/icons/locatedevents.png'),
+                              onPressed: () => {},
+                            ),
+                          )),
                     ],
                   ),
                 ),
