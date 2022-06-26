@@ -57,36 +57,39 @@ class _CustomBuilderState extends State<CustomBuilder> {
       lastDate: DateTime(2021, 12, 15),
       builder: (context, Widget? child) => Column(
         children: [
-          ConstrainedBox(
-            constraints: BoxConstraints(
-              maxWidth: 400.0,
-            ),
-            child: Theme(
-              data: ThemeData.light().copyWith(
-                //Header background color
-                primaryColor: Color.fromARGB(255, 125, 164, 243),
-                //Background color
-                scaffoldBackgroundColor: Color.fromARGB(255, 204, 204, 204),
-                //Divider color
-                dividerColor: Colors.grey,
-                //Non selected days of the month color
-                textTheme: TextTheme(
-                  bodyText2: TextStyle(color: Colors.black),
-                  button: TextStyle(fontSize: 18),
-                ),
-                colorScheme: ColorScheme.fromSwatch().copyWith(
-                  //Selected dates background color
-                  primary: Color.fromARGB(255, 125, 164, 243),
-                  //Month title and week days color
-                  onSurface: Colors.black,
-                  //Header elements and selected dates text color
-                  //onPrimary: Colors.white,
-                ),
-                iconTheme: IconThemeData(
-                  size: 30.0,
-                ),
+          BackdropFilter(
+            filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                maxWidth: 400.0,
               ),
-              child: child!,
+              child: Theme(
+                data: ThemeData.light().copyWith(
+                  //Header background color
+                  primaryColor: Color.fromARGB(255, 125, 164, 243),
+                  //Background color
+                  scaffoldBackgroundColor: Color.fromARGB(255, 204, 204, 204),
+                  //Divider color
+                  dividerColor: Colors.grey,
+                  //Non selected days of the month color
+                  textTheme: TextTheme(
+                    bodyText2: TextStyle(color: Colors.black),
+                    button: TextStyle(fontSize: 18),
+                  ),
+                  colorScheme: ColorScheme.fromSwatch().copyWith(
+                    //Selected dates background color
+                    primary: Color.fromARGB(255, 125, 164, 243),
+                    //Month title and week days color
+                    onSurface: Colors.black,
+                    //Header elements and selected dates text color
+                    //onPrimary: Colors.white,
+                  ),
+                  iconTheme: IconThemeData(
+                    size: 30.0,
+                  ),
+                ),
+                child: child!,
+              ),
             ),
           ),
         ],
