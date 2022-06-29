@@ -174,7 +174,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         child: Builder(
                           builder: (context) => IconButton(
                             icon: Image.asset('assets/icons/historic.png'),
-                            onPressed: () => {},
+                            onPressed: null,
                           ),
                         )),
                   ],
@@ -208,7 +208,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         child: Builder(
                           builder: (context) => IconButton(
                             icon: Image.asset('assets/icons/lavaflow.png'),
-                            onPressed: () => {},
+                            onPressed: null,
                           ),
                         )),
                   ],
@@ -246,7 +246,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           child: Builder(
                             builder: (context) => IconButton(
                               icon: Image.asset('assets/icons/prehistoric.png'),
-                              onPressed: () => {},
+                              onPressed: null,
                             ),
                           )),
                     ],
@@ -280,7 +280,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             builder: (context) => IconButton(
                               icon:
                                   Image.asset('assets/icons/affectedareas.png'),
-                              onPressed: () => {},
+                              onPressed: null,
                             ),
                           )),
                     ],
@@ -318,7 +318,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         child: Builder(
                           builder: (context) => IconButton(
                             icon: Image.asset('assets/icons/landscape.png'),
-                            onPressed: () => {},
+                            onPressed: null,
                           ),
                         )),
                   ],
@@ -352,7 +352,7 @@ class _SendtoLGState extends State<SendtoLG> {
                         child: Builder(
                           builder: (context) => IconButton(
                             icon: Image.asset('assets/icons/so2emissions.png'),
-                            onPressed: () => {},
+                            onPressed: null,
                           ),
                         )),
                   ],
@@ -390,7 +390,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           child: Builder(
                             builder: (context) => IconButton(
                               icon: Image.asset('assets/icons/situation.png'),
-                              onPressed: () => {},
+                              onPressed: null,
                             ),
                           )),
                     ],
@@ -424,7 +424,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             builder: (context) => IconButton(
                               icon:
                                   Image.asset('assets/icons/locatedevents.png'),
-                              onPressed: () => {},
+                              onPressed: null,
                             ),
                           )),
                     ],
