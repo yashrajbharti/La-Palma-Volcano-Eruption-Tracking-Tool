@@ -89,6 +89,7 @@ class _LGtasksState extends State<LGtasks> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
+          backgroundColor: Color.fromARGB(255, 204, 204, 204),
           elevation: 0,
           leading: IconButton(
             icon: Icon(

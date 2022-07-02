@@ -153,6 +153,7 @@ class _SettingsState extends State<Settings> {
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(50),
           child: AppBar(
+            backgroundColor: Color.fromARGB(255, 204, 204, 204),
             elevation: 0,
             leading: IconButton(
               icon: Icon(
