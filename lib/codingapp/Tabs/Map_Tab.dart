@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +24,11 @@ class _MyMapState extends State<MyMap> {
   GoogleMapController? mapController;
   MapType _currentMapType = MapType.satellite;
 
-  double zoomvalue = 100569.665945696469;
+  double zoomvalue = 110617.84749;
   double latvalue = 28.6599744;
   double longvalue = -17.8984565;
+  double tiltvalue = 0;
+  double bearingvalue = 0; // 2D angle
 
   void _onMapTypeButtonPressed() {
     setState(() {
@@ -39,7 +41,7 @@ class _MyMapState extends State<MyMap> {
   void _ongpsfixedButtonPressed() {
     setState(() {
       _fixposition();
-      zoomvalue = 100569.665945696469;
+      zoomvalue = 110617.84749;
       LatLng newlatlang = _center;
       mapController?.animateCamera(
         CameraUpdate.newCameraPosition(
@@ -52,13 +54,17 @@ class _MyMapState extends State<MyMap> {
     });
   }
 
-  void _controlsbuttonPressed(
-      double updownflag, double rightleftflag, double zoomflag) {
+  void _controlsbuttonPressed(double updownflag, double rightleftflag,
+      double zoomflag, double tiltflag, double bearingflag) {
     setState(() {
       LatLng newlatlang = LatLng(updownflag, rightleftflag);
       mapController?.animateCamera(
         CameraUpdate.newCameraPosition(
-          CameraPosition(target: newlatlang, zoom: zoomflag),
+          CameraPosition(
+              target: newlatlang,
+              zoom: zoomflag,
+              tilt: tiltflag,
+              bearing: bearingflag),
         ),
       );
     });
@@ -92,7 +98,7 @@ class _MyMapState extends State<MyMap> {
     LookAt flyto = LookAt(
       -17.8984565,
       28.6599744,
-      '100569.665945696469',
+      '110617.84749',
       '0',
       '0',
     );
@@ -106,8 +112,8 @@ class _MyMapState extends State<MyMap> {
     }
   }
 
-  motionControls(
-      double updownflag, double rightleftflag, double zoomflag) async {
+  motionControls(double updownflag, double rightleftflag, double zoomflag,
+      double tiltflag, double bearingflag) async {
     dynamic credencials = await _getCredentials();
 
     SSHClient client = SSHClient(
@@ -117,13 +123,8 @@ class _MyMapState extends State<MyMap> {
       passwordOrKey: '${credencials['pass']}',
     );
 
-    LookAt flyto = LookAt(
-      rightleftflag,
-      updownflag,
-      '${zoomflag.toString()}',
-      '0',
-      '0',
-    );
+    LookAt flyto = LookAt(rightleftflag, updownflag, zoomflag.toString(),
+        tiltflag.toString(), bearingflag.toString());
     try {
       await client.connect();
       await client.execute(
@@ -133,9 +134,20 @@ class _MyMapState extends State<MyMap> {
       return Future.error(e);
     }
   }
+
   // position: _lastMapPosition
 
-  void _onCameraMove(CameraPosition position) {}
+  void _onCameraMove(CameraPosition position) {
+    bearingvalue = position.bearing; // 2D angle
+    longvalue = position.target.longitude; // lat lng
+    latvalue = position.target.latitude;
+    tiltvalue = position.tilt; // 3D angle
+    zoomvalue = (591657550.500000 / pow(2, position.zoom)) / 3;
+  }
+
+  void _onCameraIdle() {
+    motionControls(latvalue, longvalue, zoomvalue, tiltvalue, bearingvalue);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -157,6 +169,8 @@ class _MyMapState extends State<MyMap> {
             target: _center,
             zoom: 10.8,
           ),
+          minMaxZoomPreference: MinMaxZoomPreference.unbounded,
+          tiltGesturesEnabled: true,
           zoomControlsEnabled: false,
           zoomGesturesEnabled: true,
           scrollGesturesEnabled: true,
@@ -164,6 +178,7 @@ class _MyMapState extends State<MyMap> {
           mapType: _currentMapType,
           markers: _markers,
           onCameraMove: _onCameraMove,
+          onCameraIdle: _onCameraIdle,
         ),
         Padding(
           padding: const EdgeInsets.all(16.0),
@@ -200,105 +215,6 @@ class _MyMapState extends State<MyMap> {
           ),
         ),
         Positioned(
-          bottom: 70,
-          left: 20,
-          child: Container(
-            child: Stack(children: [
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(0, 10, 16, 14),
-                  child: IconButton(
-                      icon: Icon(
-                        Icons.circle,
-                        color: Colors.transparent,
-                        size: 50,
-                      ),
-                      onPressed: () async {
-                        var currentZoomLevel =
-                            await mapController?.getZoomLevel();
-                        currentZoomLevel = (currentZoomLevel! + 0);
-                        latvalue = latvalue - 0.2;
-                        motionControls(latvalue, longvalue, zoomvalue);
-                        _controlsbuttonPressed(
-                            latvalue, longvalue, currentZoomLevel);
-                      }),
-                ),
-              ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(0, 0, 18, 16),
-                  child: IconButton(
-                      icon: Icon(
-                        Icons.circle,
-                        color: Colors.transparent,
-                        size: 50,
-                      ),
-                      onPressed: () async {
-                        var currentZoomLevel =
-                            await mapController?.getZoomLevel();
-                        currentZoomLevel = (currentZoomLevel! + 0);
-                        latvalue = latvalue + 0.2;
-                        motionControls(latvalue, longvalue, zoomvalue);
-                        _controlsbuttonPressed(
-                            latvalue, longvalue, currentZoomLevel);
-                      }),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(0, 0, 16, 18),
-                  child: IconButton(
-                      icon: Icon(
-                        Icons.circle,
-                        color: Colors.transparent,
-                        size: 50,
-                      ),
-                      onPressed: () async {
-                        var currentZoomLevel =
-                            await mapController?.getZoomLevel();
-                        currentZoomLevel = (currentZoomLevel! + 0);
-                        longvalue = longvalue - 0.2;
-                        motionControls(latvalue, longvalue, zoomvalue);
-                        _controlsbuttonPressed(
-                            latvalue, longvalue, currentZoomLevel);
-                      }),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(10, 0, 14, 16),
-                  child: IconButton(
-                      icon: Icon(
-                        Icons.circle,
-                        color: Colors.transparent,
-                        size: 50,
-                      ),
-                      onPressed: () async {
-                        var currentZoomLevel =
-                            await mapController?.getZoomLevel();
-                        currentZoomLevel = (currentZoomLevel! + 0);
-                        longvalue = longvalue + 0.2;
-                        motionControls(latvalue, longvalue, zoomvalue);
-                        _controlsbuttonPressed(
-                            latvalue, longvalue, currentZoomLevel);
-                      }),
-                ),
-              )
-            ]),
-            height: 150,
-            width: 150,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/icons/controller.png'),
-                  fit: BoxFit.cover),
-            ),
-          ),
-        ),
-        Positioned(
           bottom: 80,
           right: 20,
           child: Card(
@@ -321,23 +237,17 @@ class _MyMapState extends State<MyMap> {
                             await mapController?.getZoomLevel();
 
                         currentZoomLevel = (currentZoomLevel! + 1);
-                        if (zoomvalue > 0) {
-                          zoomvalue = zoomvalue - 60000;
-                          motionControls(latvalue, longvalue, zoomvalue);
-                          _controlsbuttonPressed(
-                              latvalue, longvalue, currentZoomLevel);
-                        } else {
-                          zoomvalue = 100;
-                          motionControls(latvalue, longvalue, zoomvalue);
-                          _controlsbuttonPressed(
-                              latvalue, longvalue, currentZoomLevel);
-                        }
+
+                        _controlsbuttonPressed(latvalue, longvalue,
+                            currentZoomLevel, tiltvalue, bearingvalue);
+
                         mapController?.animateCamera(
                           CameraUpdate.newCameraPosition(
                             CameraPosition(
-                              target: _center,
-                              zoom: currentZoomLevel,
-                            ),
+                                target: LatLng(latvalue, longvalue),
+                                zoom: currentZoomLevel,
+                                bearing: bearingvalue,
+                                tilt: tiltvalue),
                           ),
                         );
                       }),
@@ -352,18 +262,18 @@ class _MyMapState extends State<MyMap> {
                         var currentZoomLevel =
                             await mapController?.getZoomLevel();
                         currentZoomLevel = currentZoomLevel! - 1;
-                        zoomvalue = zoomvalue + 60000;
-                        motionControls(latvalue, longvalue, zoomvalue);
-                        _controlsbuttonPressed(
-                            latvalue, longvalue, currentZoomLevel);
+
+                        _controlsbuttonPressed(latvalue, longvalue,
+                            currentZoomLevel, tiltvalue, bearingvalue);
                         if (currentZoomLevel < 0) currentZoomLevel = 0;
 
                         mapController?.animateCamera(
                           CameraUpdate.newCameraPosition(
                             CameraPosition(
-                              target: _center,
-                              zoom: currentZoomLevel,
-                            ),
+                                target: LatLng(latvalue, longvalue),
+                                zoom: currentZoomLevel,
+                                bearing: bearingvalue,
+                                tilt: tiltvalue),
                           ),
                         );
                       }),
