@@ -86,6 +86,8 @@
 		"label3": "主机端口号",
 		"placeholder4": "例如。我的LG密码",
 		"label4": "主机密码",
+		"placeholder5": "例如。 5",
+		"label5": "LG 钻机中的机器总数",
 		"button": "连接到 LG"
 	},
 	"About": {

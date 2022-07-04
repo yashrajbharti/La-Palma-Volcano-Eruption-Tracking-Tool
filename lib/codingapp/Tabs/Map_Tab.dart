@@ -7,7 +7,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MyMap());
@@ -23,8 +22,8 @@ class _MyMapState extends State<MyMap> {
   final Set<Marker> _markers = {};
   GoogleMapController? mapController;
   MapType _currentMapType = MapType.satellite;
-
-  double zoomvalue = 110617.84749;
+  int rigcount = 5;
+  double zoomvalue = 591657550.500000 / pow(2, 10.8);
   double latvalue = 28.6599744;
   double longvalue = -17.8984565;
   double tiltvalue = 0;
@@ -41,7 +40,7 @@ class _MyMapState extends State<MyMap> {
   void _ongpsfixedButtonPressed() {
     setState(() {
       _fixposition();
-      zoomvalue = 110617.84749;
+      zoomvalue = (591657550.500000 / pow(2, 10.8));
       LatLng newlatlang = _center;
       mapController?.animateCamera(
         CameraUpdate.newCameraPosition(
@@ -76,12 +75,15 @@ class _MyMapState extends State<MyMap> {
     String password = preferences.getString('master_password') ?? '';
     String portNumber = preferences.getString('master_portNumber') ?? '';
     String username = preferences.getString('master_username') ?? '';
+    String numberofrigs = preferences.getString('numberofrigs') ?? '';
+    rigcount = int.parse(numberofrigs);
 
     return {
       "ip": ipAddress,
       "pass": password,
       "port": portNumber,
       "username": username,
+      "numberofrigs": numberofrigs
     };
   }
 
@@ -98,7 +100,7 @@ class _MyMapState extends State<MyMap> {
     LookAt flyto = LookAt(
       -17.8984565,
       28.6599744,
-      '110617.84749',
+      "${zoomvalue / rigcount}",
       '0',
       '0',
     );
@@ -135,18 +137,17 @@ class _MyMapState extends State<MyMap> {
     }
   }
 
-  // position: _lastMapPosition
-
   void _onCameraMove(CameraPosition position) {
     bearingvalue = position.bearing; // 2D angle
     longvalue = position.target.longitude; // lat lng
     latvalue = position.target.latitude;
     tiltvalue = position.tilt; // 3D angle
-    zoomvalue = (591657550.500000 / pow(2, position.zoom)) / 3;
+    zoomvalue = 591657550.500000 / pow(2, position.zoom);
   }
 
   void _onCameraIdle() {
-    motionControls(latvalue, longvalue, zoomvalue, tiltvalue, bearingvalue);
+    motionControls(
+        latvalue, longvalue, zoomvalue / rigcount, tiltvalue, bearingvalue);
   }
 
   @override

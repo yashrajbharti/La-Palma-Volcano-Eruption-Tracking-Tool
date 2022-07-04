@@ -86,6 +86,8 @@
 		"label3": "Número de puerto de la máquina maestra",
 		"placeholder4": "p.ej. la-contraseña-de-mi-LG",
 		"label4": "Contraseña de la máquina maestra",
+		"placeholder5": "p.ej. 5",
+		"label5": "Máquinas totales en la plataforma LG",
 		"button": "Conectar a LG"
 	},
 	"About": {

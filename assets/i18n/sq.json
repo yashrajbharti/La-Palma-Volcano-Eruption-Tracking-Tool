@@ -86,6 +86,8 @@
 		"label3": "Numri i portës së makinës kryesore",
 		"placeholder4": "p.sh. fjalëkalimi-i-LG-së-sime",
 		"label4": "Fjalëkalimi kryesor i makinës",
+		"placeholder5": "p.sh. 5",
+		"label5": "Total Machines në platformën LG",
 		"button": "Lidhu me LG"
 	},
 	"About": {

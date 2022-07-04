@@ -86,6 +86,8 @@
 		"label3": "Master machine Port Number",
 		"placeholder4": "eg. the-password-of-my-LG",
 		"label4": "Master machine Password",
+		"placeholder5": "eg. 5",
+		"label5": "Total Machines in the LG rig",
 		"button": "Connect To LG"
 	},
 	"About": {

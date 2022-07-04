@@ -86,6 +86,8 @@
 		"label3": "マスターマシンのポート番号",
 		"placeholder4": "例えば。 LGのパスワード",
 		"label4": "マスターマシンのパスワード",
+		"placeholder5": "例えば。 5",
+		"label5": "LGリグの合計マシン",
 		"button": "LGに接続する"
 	},
 	"About": {

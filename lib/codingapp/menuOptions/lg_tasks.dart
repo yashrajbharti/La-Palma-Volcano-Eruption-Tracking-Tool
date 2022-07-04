@@ -86,10 +86,11 @@ class _LGtasksState extends State<LGtasks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
-          backgroundColor: Color.fromARGB(255, 204, 204, 204),
+          backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
             icon: Icon(
@@ -113,13 +114,15 @@ class _LGtasksState extends State<LGtasks> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                translate("Tasks.LG"),
-                style: TextStyle(
-                  fontSize: 42,
-                  color: Color.fromARGB(255, 0, 0, 0),
-                ),
-              ),
+              Padding(
+                  padding: EdgeInsets.only(bottom: 10.0, top: 50),
+                  child: Text(
+                    translate("Tasks.LG"),
+                    style: TextStyle(
+                      fontSize: 42,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  )),
               Container(
                 margin: const EdgeInsets.symmetric(
                     vertical: 30.0, horizontal: 140.0),
@@ -432,12 +435,14 @@ class LGConnection {
     String password = preferences.getString('master_password') ?? '';
     String portNumber = preferences.getString('master_portNumber') ?? '';
     String username = preferences.getString('master_username') ?? '';
+    String numberofrigs = preferences.getString('numberofrigs') ?? '';
 
     return {
       "ip": ipAddress,
       "pass": password,
       "port": portNumber,
       "username": username,
+      "numberofrigs": numberofrigs
     };
   }
 

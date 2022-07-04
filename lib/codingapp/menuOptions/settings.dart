@@ -12,10 +12,10 @@ class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
   @override
-  _SettingsState createState() => _SettingsState();
+  SettingsState createState() => SettingsState();
 }
 
-class _SettingsState extends State<Settings> {
+class SettingsState extends State<Settings> {
   Color _iconColor = Color.fromARGB(255, 74, 74, 74);
   bool isLoggedIn = false;
   bool obscurePassword = true;
@@ -24,6 +24,7 @@ class _SettingsState extends State<Settings> {
   TextEditingController ipAddress = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController portNumber = TextEditingController();
+  TextEditingController numberofrigs = TextEditingController();
 
   bool connectionStatus = false;
 
@@ -33,6 +34,7 @@ class _SettingsState extends State<Settings> {
     await preferences.setString('master_username', username.text);
     await preferences.setString('master_password', password.text);
     await preferences.setString('master_portNumber', portNumber.text);
+    await preferences.setString('numberofrigs', numberofrigs.text);
 
     SSHClient client = SSHClient(
       host: ipAddress.text,
@@ -64,6 +66,7 @@ class _SettingsState extends State<Settings> {
     await preferences.setString('master_ip', ipAddress.text);
     await preferences.setString('master_password', password.text);
     await preferences.setString('master_portNumber', portNumber.text);
+    await preferences.setString('numberofrigs', numberofrigs.text);
 
     SSHClient client = SSHClient(
       host: ipAddress.text,
@@ -137,6 +140,7 @@ class _SettingsState extends State<Settings> {
     username.text = preferences.getString('master_username') ?? '';
     password.text = preferences.getString('master_password') ?? '';
     portNumber.text = preferences.getString('master_portNumber') ?? '';
+    numberofrigs.text = preferences.getString('numberofrigs') ?? '';
 
     await checkConnectionStatus();
 
@@ -149,11 +153,12 @@ class _SettingsState extends State<Settings> {
     var localizationDelegate = LocalizedApp.of(context).delegate;
 
     return Scaffold(
+        extendBodyBehindAppBar: true,
         backgroundColor: Color.fromARGB(255, 204, 204, 204),
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(50),
           child: AppBar(
-            backgroundColor: Color.fromARGB(255, 204, 204, 204),
+            backgroundColor: Colors.transparent,
             elevation: 0,
             leading: IconButton(
               icon: Icon(
@@ -181,7 +186,7 @@ class _SettingsState extends State<Settings> {
                   children: [],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 10.0, top: 10),
+                  padding: EdgeInsets.only(bottom: 10.0, top: 50),
                   child: Text(
                     translate("Settings.title"),
                     textAlign: TextAlign.center,
@@ -189,7 +194,7 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 10.0, top: 10),
+                  padding: EdgeInsets.only(bottom: 10.0),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -285,6 +290,20 @@ class _SettingsState extends State<Settings> {
                           },
                         );
                       },
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 20.0),
+                  child: TextFormField(
+                    controller: numberofrigs,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      filled: true,
+                      hintText: translate("Settings.placeholder5"),
+                      labelText: translate("Settings.label5"),
+                      labelStyle:
+                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),

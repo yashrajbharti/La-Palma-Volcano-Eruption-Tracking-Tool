@@ -558,12 +558,14 @@ class LGConnection {
     String password = preferences.getString('master_password') ?? '';
     String portNumber = preferences.getString('master_portNumber') ?? '';
     String username = preferences.getString('master_username') ?? '';
+    String numberofrigs = preferences.getString('numberofrigs') ?? '';
 
     return {
       "ip": ipAddress,
       "pass": password,
       "port": portNumber,
       "username": username,
+      "numberofrigs": numberofrigs
     };
   }
 
