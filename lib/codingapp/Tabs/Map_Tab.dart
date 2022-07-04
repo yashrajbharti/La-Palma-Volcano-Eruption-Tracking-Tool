@@ -161,6 +161,7 @@ class _MyMapState extends State<MyMap> {
             ),
           ].toSet(),
           onMapCreated: (controller) {
+            _getCredentials();
             //method called when map is created
             setState(() {
               mapController = controller;
