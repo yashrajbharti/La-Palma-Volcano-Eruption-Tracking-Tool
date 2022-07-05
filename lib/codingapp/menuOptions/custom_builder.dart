@@ -1179,8 +1179,8 @@ class LGConnection {
     LookAt flyto = LookAt(
       -17.895486,
       28.610478,
-      '25069.665945696469',
-      '35',
+      '${75208.9978371 / int.parse(credencials['numberofrigs'])}',
+      '45',
       '0',
     );
     try {

@@ -107,6 +107,8 @@
 		"points": "⬧ Së pari, shkoni te \"Menaxheri i lidhjes\", i cili mund të gjendet në meny dhe plotësoni kredencialet. Shembujt përmenden atje si mbajtës të vendeve. Gjithashtu, mund t'i ndërroni gjuhët atje sipas lehtësisë suaj. \n⬧ Më pas shkoni te skeda Track dhe trokitni lehtë mbi gjurmën që dëshironi të vizualizoni. Prisni që të shfaqet mesazhi \"Gati për të vizualizuar\" Toast dhe më pas shtypni butonin \"Visualize in LG\". Ju do të jeni në gjendje të shihni vizualizimin e dëshiruar në pajisjen Liquid Galaxy. \n⬧ Mund të lundroni nëpër LG nga skeda Harta, të mësoni se çfarë përfaqësojnë ikonat dhe poligonet me ngjyra nga \"Skeda e informacionit\" dhe Pastroni ose ruani vizualizimin me ndihmën e \"LG Tasks\" nga menu.",
 		"Troubleshooting": "Zgjidhja e problemeve",
 		"points2": "⬧ Nëse nuk mund të lidheni me pajisjen LG, fillimisht sigurohuni që të dy janë në të njëjtin rrjet; ose mund të lidheni me WiFi të një pajisjeje të tretë ose të lidhni LG-në me pikën kryesore të tabletit. Kontrolloni që kredencialet të jenë plotësuar saktë dhe provoni përsëri. \n⬧ Për të gjetur adresën IP të LG (ose të laptopit pritës në rast të konfigurimit të VM), shkruani \"ifconfig\" në terminal nëse jeni në Mac ose Linux dhe \"ipconfig\" për Windows.\n⬧ Për pajisjet e nivelit të ulët LG, ndonjëherë vizualizimi nuk shfaqet herën e parë. Klikoni edhe një herë butonin \"Vizualizo në LG\" për ta zgjidhur këtë.",
+		"mapcontrols": "Kontrollet e hartës",
+		"points3": "⬧ Për të lundruar në pajisjen LG, mund të përdorni ndërfaqen e ekranit të Hartës në mënyrat e mëposhtme: \n⬧ Për të tërhequr, mund të përdorim lëvizjen e një gishti në çdo drejtim në ekranin e Hartës. \n⬧ Për të përdredhur në një kënd, mund të përdorni dy gishta dhe të jepni një lëvizje vidë në ekranin e Hartës. \n⬧ Për të zmadhuar, mund të kapni ekranin dhe të lëvizni gishtat nga jashtë ose brenda për të zmadhuar dhe zmadhuar, përkatësisht. Mund të zmadhojmë gjithashtu duke shtypur ikonat + dhe - të ofruara në ekranin e Hartës. \n⬧ Për të anuar, mund të përdorni dy gishta dhe t'i jepni lëvizje lineare në drejtim lart.",
 		"support": "Merrni mbështetje",
 		"check": "Për të marrë më shumë mbështetje për Projektet Liquid Galaxy, kontrolloni këto lidhje.",
 		"website": "Faqja e internetit e Galaxy Liquid",
@@ -114,7 +116,11 @@
 		"icons": "Kuptimi i ikonave",
 		"meanings": "Disa ikona së bashku me kuptimet e tyre janë renditur më poshtë.",
 		"switch": "Kalo midis Pamjes Satelitore dhe Parazgjedhjes",
-		"origin": "Kthehu në vendndodhjen origjinale"
+		"origin": "Kthehu në vendndodhjen origjinale",
+		"demo": "Ofron vizualizim Demo",
+		"orbit": "Orbitë rreth një pike",
+		"queries": "Për çdo pyetje në lidhje me instalimin e pajisjes LG, kontrolloni dokumentacionin zyrtar.",
+		"install": "Instalimi i PC dhe Virtual Box LG"
 	},
 	"info": {
 		"description": "Përshkrim:",

@@ -114,7 +114,31 @@ class _HelpScreenState extends State<HelpScreen> {
               ),
               Container(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      translate("help.mapcontrols"),
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0),
+                child: Text(
+                  translate("help.points3"),
+                  style: TextStyle(fontSize: 18),
+                  textAlign: TextAlign.start,
+                ),
+              ),
+              Container(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width * 0.40,
@@ -164,11 +188,32 @@ class _HelpScreenState extends State<HelpScreen> {
                                   color: Color.fromARGB(255, 97, 146, 245)),
                             ),
                           ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(vertical: 15.0),
+                            child: Text(
+                              translate("help.queries"),
+                              style: TextStyle(fontSize: 18),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              _launchURL(
+                                  'https://docs.google.com/document/d/18LrXheBrTomnfIfisKMORKP8TekAua6o-AtD1po8sX0/edit');
+                            },
+                            child: Text(
+                              translate("help.install"),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Color.fromARGB(255, 97, 146, 245)),
+                            ),
+                          ),
                         ],
                       ),
                     ),
                     Container(
-                      height: 180,
+                      height: 300,
                       child: VerticalDivider(
                         color: Color.fromARGB(120, 74, 74, 74),
                         thickness: 1,
@@ -226,7 +271,7 @@ class _HelpScreenState extends State<HelpScreen> {
                             ],
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 15,
                           ),
                           new Row(
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -257,7 +302,75 @@ class _HelpScreenState extends State<HelpScreen> {
                                       color: Colors.black,
                                       fontFamily: "OldStandard"),
                                 ),
-                              )
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          new Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Transform.scale(
+                                  scale: 1.24,
+                                  child: Builder(
+                                    builder: (context) => IconButton(
+                                      icon:
+                                          Image.asset('assets/icons/demo.png'),
+                                      onPressed: null,
+                                    ),
+                                  )),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.34,
+                                child: Text(
+                                  translate("help.demo"),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                      fontFamily: "OldStandard"),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          new Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Transform.scale(
+                                  scale: 1.24,
+                                  child: Builder(
+                                    builder: (context) => IconButton(
+                                      icon:
+                                          Image.asset('assets/icons/orbit.png'),
+                                      onPressed: null,
+                                    ),
+                                  )),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.34,
+                                child: Text(
+                                  translate("help.orbit"),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                      fontFamily: "OldStandard"),
+                                ),
+                              ),
                             ],
                           ),
                         ],

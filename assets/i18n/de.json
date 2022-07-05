@@ -107,6 +107,8 @@
 		"points": "⬧ Gehen Sie zuerst zum Connection Manager, der im Menü zu finden ist, und geben Sie die Anmeldeinformationen ein. Die Beispiele werden dort als Platzhalter genannt. Außerdem können Sie dort nach Belieben die Sprache wechseln. \n⬧ Gehen Sie dann zur Registerkarte Strecke und tippen Sie auf die Strecke, die Sie anzeigen möchten. Warten Sie, bis die Toast-Meldung \"Bereit zur Visualisierung\" erscheint, und klicken Sie dann auf die Schaltfläche \"Visualize in LG\". Sie können die gewünschte Visualisierung im Liquid Galaxy Rig sehen. \n⬧ Sie können auf der Registerkarte „Karte“ durch das LG navigieren, auf der Registerkarte „Info“ erfahren, wofür die Symbole und farbigen Polygone stehen, und die Visualisierung mit Hilfe von „LG-Aufgaben“ bereinigen oder speichern Speisekarte.",
 		"Troubleshooting": "Fehlerbehebung",
 		"points2": "⬧ Wenn Sie keine Verbindung zum LG-Rig herstellen können, stellen Sie zunächst sicher, dass sich beide im selben Netzwerk befinden. Entweder Sie können sich mit dem WLAN eines dritten Geräts verbinden oder LG mit dem Hotspot des Tablets verbinden. Überprüfen Sie, ob die Anmeldeinformationen korrekt ausgefüllt sind, und versuchen Sie es erneut. \n⬧ Um die IP-Adresse des LG (oder des Host-Laptops im Falle einer VM-Einrichtung) zu finden, geben Sie \"ifconfig\" in das Terminal ein, wenn Sie einen Mac oder Linux verwenden, und \"ipconfig\" für Windows.\n⬧ Bei Low-End-LG-Rigs erscheint die Visualisierung manchmal nicht beim ersten Mal. Klicken Sie erneut auf die Schaltfläche \"Visualize in LG\", um dieses Problem zu lösen.",
+		"mapcontrols": "Kartensteuerung",
+		"points3": "⬧ Zum Navigieren im LG-Rig kann man die Benutzeroberfläche des Kartenbildschirms auf folgende Weise verwenden: \n⬧ Zum Ziehen können wir auf dem Kartenbildschirm eine Fingerbewegung in eine beliebige Richtung verwenden. \n⬧ Um in einem Winkel zu drehen, kann man zwei Finger verwenden und auf dem Kartenbildschirm eine Schraubenbewegung ausführen. \n⬧ Zum Zoomen kann man den Bildschirm kneifen und die Finger nach außen oder innen bewegen, um hinein- bzw. herauszuzoomen. Wir können auch zoomen, indem wir die Symbole + und - auf dem Kartenbildschirm drücken. \n⬧ Zum Neigen kann man zwei Finger verwenden und ihm eine lineare Bewegung nach oben geben.",
 		"support": "Hole dir Unterstützung",
 		"check": "Um mehr Unterstützung für Liquid Galaxy Projects zu erhalten, überprüfen Sie diese Links.",
 		"website": "Liquid Galaxy-Website",
@@ -114,7 +116,11 @@
 		"icons": "Bedeutung von Symbolen",
 		"meanings": "Einige Symbole zusammen mit ihrer Bedeutung sind unten aufgeführt.",
 		"switch": "Wechseln Sie zwischen Satelliten- und Standardansicht",
-		"origin": "Kehren Sie zum ursprünglichen Ort zurück"
+		"origin": "Kehren Sie zum ursprünglichen Ort zurück",
+		"demo": "Bietet Demo-Visualisierung",
+		"orbit": "Orbit um einen Punkt",
+		"queries": "Bei Fragen zur Installation des LG-Rigs lesen Sie die offizielle Dokumentation.",
+		"install": "Installation von PC und Virtual Box LG"
 	},
 	"info": {
 		"description": "Beschreibung:",

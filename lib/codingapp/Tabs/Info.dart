@@ -3015,6 +3015,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                        SizedBox(
+                          width: 5,
+                        ),
                         const Icon(
                           Icons.circle_rounded,
                           color: Color.fromARGB(255, 255, 248, 82),
@@ -3028,12 +3031,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       ],
                     ),
                     SizedBox(
-                      height: 8,
+                      height: 5,
                     ),
                     new Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                        SizedBox(
+                          width: 5,
+                        ),
                         const Icon(
                           Icons.circle_rounded,
                           color: Color.fromARGB(255, 247, 184, 68),
@@ -3047,12 +3053,15 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       ],
                     ),
                     SizedBox(
-                      height: 8,
+                      height: 5,
                     ),
                     new Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                        SizedBox(
+                          width: 5,
+                        ),
                         const Icon(
                           Icons.circle_rounded,
                           color: Color.fromARGB(255, 239, 99, 55),
@@ -3066,20 +3075,22 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                       ],
                     ),
                     SizedBox(
-                      height: 8,
+                      height: 5,
                     ),
                     new Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                        Transform.rotate(
-                          angle: 23.55,
-                          child: const Icon(
-                            Icons.play_arrow,
-                            color: Color.fromARGB(255, 141, 199, 255),
-                            size: 30,
-                          ),
-                        ),
+                        Transform.scale(
+                            scale: 1.2,
+                            child: Transform.rotate(
+                              angle: 23.55,
+                              child: const Icon(
+                                Icons.play_arrow,
+                                color: Color.fromARGB(255, 141, 199, 255),
+                                size: 30,
+                              ),
+                            )),
                         Text("5 - 6 mbLg   ",
                             style: TextStyle(
                                 fontSize: 18.5,

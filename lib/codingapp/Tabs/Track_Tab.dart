@@ -462,7 +462,7 @@ class _SendtoLGState extends State<SendtoLG> {
                   // send to LG
                   LGConnection().sendToLG(kml.mount(), finalname).then((value) {
                     _showToast(translate('Track.Visualize'));
-                    //LGConnection().buildOrbit(kml.mount());
+
                     setState(() {
                       isOpen = true;
                     });
@@ -485,46 +485,6 @@ class _SendtoLGState extends State<SendtoLG> {
 }
 
 class LGConnection {
-  openDemoLogos() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    String openLogoKML = '''
-<?xml version="1.0" encoding="UTF-8"?>
-  <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-    <Document>
-      <name>Ras-logos</name>
-        <Folder>
-        <name>Logos</name>
-        <ScreenOverlay>
-        <name>Logo</name>
-        <Icon>
-        <href>https://i.imgur.com/sDsdizm.png</href>
-        </Icon>
-        <overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
-        <screenXY x="0.02" y="0.95" xunits="fraction" yunits="fraction"/>
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
-        <size x="0.4" y="0.2" xunits="fraction" yunits="fraction"/>
-        </ScreenOverlay>
-        </Folder>
-    </Document>
-  </kml>
-    ''';
-    try {
-      await client.connect();
-      await client
-          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_4.kml");
-    } catch (e) {
-      print(e);
-    }
-  }
-
   Future sendToLG(String kml, String projectname) async {
     if (kml.isNotEmpty) {
       return _createLocalFile(kml, projectname);
@@ -634,29 +594,29 @@ class LGConnection {
                                       ? 28.616354
                                       : 28.610478,
       projectname == "Located_Events"
-          ? '20569.665945696469'
+          ? '${61708.9978371 / int.parse(credencials['numberofrigs'])}'
           : projectname == "Lava_Flow"
-              ? '6069.665945696469'
+              ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
               : projectname == "Landscape"
-                  ? '45069.665945696469'
+                  ? '${135208.997837 / int.parse(credencials['numberofrigs'])}'
                   : projectname == "Affected_Areas"
-                      ? '6069.665945696469'
+                      ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
                       : projectname == "Situation"
-                          ? '25069.665945696469'
+                          ? '${75208.9978371 / int.parse(credencials['numberofrigs'])}'
                           : projectname == "Historic_Track"
-                              ? '50569.665945696469'
+                              ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
                               : projectname == "SO2_Emission"
-                                  ? '3500000.665945696469'
+                                  ? '${10500001.9978 / int.parse(credencials['numberofrigs'])}'
                                   : projectname == "Prehistoric_Track"
-                                      ? '50569.665945696469'
-                                      : '30569.665945696469',
+                                      ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
+                                      : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
       projectname == "Historic_Track"
           ? '15'
           : projectname == "SO2_Emission"
               ? '25'
               : projectname == "Prehistoric_Track"
                   ? '15'
-                  : '35',
+                  : '45',
       '0',
     );
     try {
@@ -683,61 +643,6 @@ class LGConnection {
 
       return await client.execute(
           'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  buildOrbit(String content) async {
-    dynamic credencials = await _getCredentials();
-
-    String localPath = await _localPath;
-    File localFile = File('$localPath/Orbit.kml');
-    localFile.writeAsString(content);
-
-    String filePath = '$localPath/Orbit.kml';
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-
-      await client.connectSFTP();
-      await client.sftpUpload(
-        path: filePath,
-        toPath: '/var/www/html',
-        callback: (progress) {
-          print('Sent $progress');
-        },
-      );
-
-      return await client.execute(
-          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  startOrbit() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);

@@ -183,7 +183,7 @@ class _AboutScreenState extends State<AboutScreen> {
                               _launchURL('https://www.flaticon.com');
                             },
                             child: Text(
-                              translate("Flaticon"),
+                              translate("Flaticon | Freepik"),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontSize: 20,
