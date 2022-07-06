@@ -38,7 +38,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     _rotationiconcontroller = AnimationController(
-      duration: const Duration(seconds: 44),
+      duration: const Duration(milliseconds: 5000),
       vsync: this,
     );
     super.initState();
@@ -363,7 +363,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                         }),
               ),
               RotationTransition(
-                turns: Tween(begin: 0.0, end: 9.0)
+                turns: Tween(begin: 0.0, end: 1.0)
                     .animate(_rotationiconcontroller),
                 child: Builder(
                   builder: (context) => IconButton(
@@ -382,7 +382,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                         (value) {
                           isOrbiting = !isOrbiting;
                           if (isOrbiting == true) {
-                            _rotationiconcontroller.forward();
+                            _rotationiconcontroller.repeat();
                             playOrbit();
                           } else {
                             _rotationiconcontroller.stop();
@@ -460,12 +460,9 @@ class LGConnection {
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
-
-    String closeLogoKML = '''''';
     try {
       await client.connect();
-      await client
-          .execute("echo '$closeLogoKML' > /var/www/html/kml/slave_4.kml");
+      await client.execute("> /var/www/html/kml/slave_4.kml");
     } catch (e) {
       print(e);
     }
