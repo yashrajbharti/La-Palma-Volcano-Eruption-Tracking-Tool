@@ -27,7 +27,6 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   MapType _currentMapType = MapType.satellite;
   bool isOrbiting = false;
   bool isDemoActive = false;
-  bool isClean = false;
   int rigcount = 5;
   double zoomvalue = 591657550.500000 / pow(2, 10.8);
   double latvalue = 28.6599744;
@@ -360,7 +359,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                           if (isDemoActive == true)
                             {LGConnection().openDemoLogos()}
                           else
-                            {LGConnection().closeDemoLogos()}
+                            {LGConnection().cleanVisualization()}
                         }),
               ),
               RotationTransition(
@@ -371,11 +370,6 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     icon: Image.asset('assets/icons/orbit.png'),
                     iconSize: 57,
                     onPressed: () => {
-                      isClean = !isClean,
-                      if (isClean == true)
-                        {
-                          LGConnection().cleanVisualization(),
-                        },
                       LGConnection()
                           .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
                               LookAt(
@@ -392,7 +386,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                             playOrbit();
                           } else {
                             _rotationiconcontroller.stop();
-                            stopOrbit();
+                            LGConnection().cleanVisualization();
                           }
                         },
                       ),
@@ -410,15 +404,6 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
 
 class LGConnection {
   openDemoLogos() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
     String openLogoKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -448,15 +433,19 @@ class LGConnection {
 	</Folder>
 </Document>
 </kml>''';
-    try {
-      await client.connect();
-      await client.execute("echo '$openLogoKML' > /var/www/html/kmls.txt");
-    } catch (e) {
-      print(e);
-    }
+    return _createLocalFile(openLogoKML, "logo");
   }
 
-  closeDemoLogos() async {
+  _createLocalFile(String kml, String projectname) async {
+    String localPath = await _localPath;
+    File localFile = File('$localPath/$projectname.kml');
+    localFile.writeAsString(kml);
+    File localFile2 = File('$localPath/kmls.txt');
+    localFile2.writeAsString(kml);
+    return _uploadToLG('$localPath/$projectname.kml', projectname);
+  }
+
+  _uploadToLG(String localPath, String projectname) async {
     dynamic credencials = await _getCredentials();
 
     SSHClient client = SSHClient(
@@ -465,11 +454,35 @@ class LGConnection {
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
+
+    LookAt flyto = LookAt(
+      -17.895486,
+      28.610478,
+      '${75208.9978371 / int.parse(credencials['numberofrigs'])}',
+      '45',
+      '0',
+    );
     try {
       await client.connect();
-      await client.execute("> /var/www/html/kmls.txt");
+      await client.execute('> /var/www/html/kmls.txt');
+
+      // upload kml
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: localPath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+      await client.execute(
+          'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
+
+      return await client.execute(
+          'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
     } catch (e) {
-      print(e);
+      print('Could not connect to host LG');
+      return Future.error(e);
     }
   }
 

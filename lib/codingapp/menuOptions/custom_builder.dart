@@ -870,23 +870,24 @@ class _CustomBuilderState extends State<CustomBuilder> {
                               customDataFinal += kmltext[i];
                             kml = KML("custombuilt", customDataFinal);
                           });
-                          LGConnection().cleanVisualization();
-                          LGConnection()
-                              .sendToLG(kml.mount(), "custombuilt")
-                              .then((value) {
-                            _showToast(translate('Track.Visualize'));
-                            //LGConnection().buildOrbit(kml.mount());
-                            setState(() {
-                              isOpen = true;
+                          LGConnection().cleanVisualization().then((value) {
+                            LGConnection()
+                                .sendToLG(kml.mount(), "custombuilt")
+                                .then((value) {
+                              _showToast(translate('Track.Visualize'));
+                              //LGConnection().buildOrbit(kml.mount());
+                              setState(() {
+                                isOpen = true;
+                              });
+                            }).catchError((onError) {
+                              print('oh no $onError');
+                              if (onError == 'nogeodata') {
+                                showAlertDialog(translate('Track.alert'),
+                                    translate('Track.alert2'));
+                              }
+                              showAlertDialog(translate('Track.alert3'),
+                                  translate('Track.alert4'));
                             });
-                          }).catchError((onError) {
-                            print('oh no $onError');
-                            if (onError == 'nogeodata') {
-                              showAlertDialog(translate('Track.alert'),
-                                  translate('Track.alert2'));
-                            }
-                            showAlertDialog(translate('Track.alert3'),
-                                translate('Track.alert4'));
                           });
                         }),
                   ),
@@ -1201,61 +1202,6 @@ class LGConnection {
 
       return await client.execute(
           'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  buildOrbit(String content) async {
-    dynamic credencials = await _getCredentials();
-
-    String localPath = await _localPath;
-    File localFile = File('$localPath/Orbit.kml');
-    localFile.writeAsString(content);
-
-    String filePath = '$localPath/Orbit.kml';
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-
-      await client.connectSFTP();
-      await client.sftpUpload(
-        path: filePath,
-        toPath: '/var/www/html',
-        callback: (progress) {
-          print('Sent $progress');
-        },
-      );
-
-      return await client.execute(
-          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  startOrbit() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
