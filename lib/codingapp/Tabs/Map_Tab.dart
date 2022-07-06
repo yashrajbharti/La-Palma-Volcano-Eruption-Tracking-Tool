@@ -26,7 +26,6 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   GoogleMapController? mapController;
   MapType _currentMapType = MapType.satellite;
   bool isOrbiting = false;
-  String content = '';
   int rigcount = 5;
   double zoomvalue = 591657550.500000 / pow(2, 10.8);
   double latvalue = 28.6599744;
@@ -87,6 +86,20 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
               bearing: bearingflag),
         ),
       );
+    });
+  }
+
+  playOrbit() async {
+    await LGConnection().startOrbit();
+    setState(() {
+      isOrbiting = true;
+    });
+  }
+
+  stopOrbit() async {
+    await LGConnection().stopOrbit();
+    setState(() {
+      isOrbiting = false;
     });
   }
 
@@ -351,27 +364,26 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     icon: Image.asset('assets/icons/orbit.png'),
                     iconSize: 57,
                     onPressed: () => {
-                      content = Orbit.generateOrbitTag(LookAt(
-                          longvalue,
-                          latvalue,
-                          "${zoomvalue / rigcount}",
-                          "$tiltvalue",
-                          "$bearingvalue")),
-                      setState(() {
-                        isOrbiting = !isOrbiting;
-                      }),
-                      if (isOrbiting == true)
-                        {
-                          LGConnection().cleanVisualization(),
-                          LGConnection().buildOrbit(Orbit.buildOrbit(content)),
-                          _rotationiconcontroller.repeat(),
-                          LGConnection().startOrbit(),
-                        }
-                      else
-                        {
-                          _rotationiconcontroller.stop(),
-                          LGConnection().stopOrbit(),
-                        }
+                      LGConnection()
+                          .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
+                              LookAt(
+                                  longvalue,
+                                  latvalue,
+                                  "${zoomvalue / rigcount}",
+                                  "$tiltvalue",
+                                  "$bearingvalue"))))
+                          .then(
+                        (value) {
+                          isOrbiting = !isOrbiting;
+                          if (isOrbiting == true) {
+                            _rotationiconcontroller.repeat();
+                            playOrbit();
+                          } else {
+                            _rotationiconcontroller.stop();
+                            stopOrbit();
+                          }
+                        },
+                      ),
                     },
                   ),
                 ),
@@ -427,29 +439,9 @@ class LGConnection {
     try {
       await client.connect();
       await client
-          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_2.kml");
+          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_4.kml");
     } catch (e) {
       print(e);
-    }
-  }
-
-  Future cleanVisualization() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-      stopOrbit();
-      return await client.execute('> /var/www/html/kmls.txt');
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
     }
   }
 
