@@ -19,9 +19,9 @@ class MyMap extends StatefulWidget {
   _MyMapState createState() => _MyMapState();
 }
 
-class _MyMapState extends State<MyMap> {
+class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   static LatLng _center = const LatLng(28.6599744, -17.8984565);
-
+  late AnimationController _rotationiconcontroller;
   final Set<Marker> _markers = {};
   GoogleMapController? mapController;
   MapType _currentMapType = MapType.satellite;
@@ -34,6 +34,21 @@ class _MyMapState extends State<MyMap> {
   double tiltvalue = 0;
   double bearingvalue = 0; // 2D angle
   double _currentSliderValue = 100;
+
+  @override
+  void initState() {
+    _rotationiconcontroller = AnimationController(
+      duration: const Duration(milliseconds: 5000),
+      vsync: this,
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _rotationiconcontroller.dispose();
+    super.dispose();
+  }
 
   void _onMapTypeButtonPressed() {
     setState(() {
@@ -328,29 +343,36 @@ class _MyMapState extends State<MyMap> {
                   onPressed: () => {LGConnection().openDemoLogos()},
                 ),
               ),
-              Builder(
-                builder: (context) => IconButton(
-                  icon: Image.asset('assets/icons/orbit.png'),
-                  iconSize: 57,
-                  onPressed: () async => {
-                    content = Orbit.generateOrbitTag(LookAt(
-                        longvalue,
-                        latvalue,
-                        "${zoomvalue / rigcount}",
-                        "$tiltvalue",
-                        "$bearingvalue")),
-                    await LGConnection().buildOrbit(Orbit.buildOrbit(content)),
-                    setState(
-                      () async {
-                        isOrbiting = !isOrbiting;
-                        if (isOrbiting == true) {
-                          await LGConnection().startOrbit();
-                        } else {
-                          await LGConnection().stopOrbit();
-                        }
-                      },
-                    )
-                  },
+              RotationTransition(
+                turns: Tween(begin: 0.0, end: 1.0)
+                    .animate(_rotationiconcontroller),
+                child: Builder(
+                  builder: (context) => IconButton(
+                    icon: Image.asset('assets/icons/orbit.png'),
+                    iconSize: 57,
+                    onPressed: () => {
+                      content = Orbit.generateOrbitTag(LookAt(
+                          longvalue,
+                          latvalue,
+                          "${zoomvalue / rigcount}",
+                          "$tiltvalue",
+                          "$bearingvalue")),
+                      setState(
+                        () async {
+                          await LGConnection()
+                              .buildOrbit(Orbit.buildOrbit(content));
+                          isOrbiting = !isOrbiting;
+                          if (isOrbiting == true) {
+                            _rotationiconcontroller.forward();
+                            await LGConnection().startOrbit();
+                          } else {
+                            _rotationiconcontroller.reset();
+                            await LGConnection().stopOrbit();
+                          }
+                        },
+                      )
+                    },
+                  ),
                 ),
               ),
             ],
