@@ -350,27 +350,28 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                   builder: (context) => IconButton(
                     icon: Image.asset('assets/icons/orbit.png'),
                     iconSize: 57,
-                    onPressed: () async => {
+                    onPressed: () => {
                       content = Orbit.generateOrbitTag(LookAt(
                           longvalue,
                           latvalue,
                           "${zoomvalue / rigcount}",
                           "$tiltvalue",
                           "$bearingvalue")),
-                      await LGConnection()
-                          .buildOrbit(Orbit.buildOrbit(content)),
-                      setState(
-                        () async {
-                          isOrbiting = !isOrbiting;
-                          if (isOrbiting == true) {
-                            _rotationiconcontroller.forward();
-                            await LGConnection().startOrbit();
-                          } else {
-                            _rotationiconcontroller.reset();
-                            await LGConnection().stopOrbit();
-                          }
-                        },
-                      )
+                      setState(() {
+                        isOrbiting = !isOrbiting;
+                      }),
+                      if (isOrbiting == true)
+                        {
+                          LGConnection().cleanVisualization(),
+                          LGConnection().buildOrbit(Orbit.buildOrbit(content)),
+                          _rotationiconcontroller.repeat(),
+                          LGConnection().startOrbit(),
+                        }
+                      else
+                        {
+                          _rotationiconcontroller.stop(),
+                          LGConnection().stopOrbit(),
+                        }
                     },
                   ),
                 ),
@@ -397,28 +398,58 @@ class LGConnection {
     String openLogoKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-<GroundOverlay>
+<Document>
 	<name>VolTrac</name>
-	<Icon>
-		<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
-		<viewBoundScale>0.75</viewBoundScale>
-	</Icon>
-	<altitude>800000</altitude>
-	<altitudeMode>absolute</altitudeMode>
-	<LatLonBox>
-		<north>74.92993380637989</north>
-		<south>-33.17826279567191</south>
-		<east>42.06001532462307</east>
-		<west>-96.92799532317687</west>
-	</LatLonBox>
-</GroundOverlay>
+	<open>1</open>
+	<description>The logo it located in the bottom left hand corner</description>
+	<Folder>
+		<name>tags</name>
+		<Style>
+			<ListStyle>
+				<listItemType>checkHideChildren</listItemType>
+				<bgColor>00ffffff</bgColor>
+				<maxSnippetLines>2</maxSnippetLines>
+			</ListStyle>
+		</Style>
+		<ScreenOverlay id="abc">
+			<name>VolTrac</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
+			</Icon>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0.02" y="0.98" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
+		</ScreenOverlay>
+	</Folder>
+</Document>
 </kml>''';
     try {
       await client.connect();
       await client
-          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_4.kml");
+          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_2.kml");
     } catch (e) {
       print(e);
+    }
+  }
+
+  Future cleanVisualization() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      stopOrbit();
+      return await client.execute('> /var/www/html/kmls.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
     }
   }
 
