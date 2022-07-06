@@ -879,15 +879,15 @@ class _CustomBuilderState extends State<CustomBuilder> {
                               setState(() {
                                 isOpen = true;
                               });
-                            }).catchError((onError) {
-                              print('oh no $onError');
-                              if (onError == 'nogeodata') {
-                                showAlertDialog(translate('Track.alert'),
-                                    translate('Track.alert2'));
-                              }
-                              showAlertDialog(translate('Track.alert3'),
-                                  translate('Track.alert4'));
                             });
+                          }).catchError((onError) {
+                            print('oh no $onError');
+                            if (onError == 'nogeodata') {
+                              showAlertDialog(translate('Track.alert'),
+                                  translate('Track.alert2'));
+                            }
+                            showAlertDialog(translate('Track.alert3'),
+                                translate('Track.alert4'));
                           });
                         }),
                   ),

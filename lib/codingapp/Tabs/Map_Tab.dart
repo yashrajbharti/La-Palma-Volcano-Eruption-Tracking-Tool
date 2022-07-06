@@ -370,24 +370,26 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     icon: Image.asset('assets/icons/orbit.png'),
                     iconSize: 57,
                     onPressed: () => {
-                      LGConnection()
-                          .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-                              LookAt(
-                                  longvalue,
-                                  latvalue,
-                                  "${zoomvalue / rigcount}",
-                                  "$tiltvalue",
-                                  "$bearingvalue"))))
-                          .then(
+                      LGConnection().cleanVisualization().then(
                         (value) {
-                          isOrbiting = !isOrbiting;
-                          if (isOrbiting == true) {
-                            _rotationiconcontroller.repeat();
-                            playOrbit();
-                          } else {
-                            _rotationiconcontroller.stop();
-                            LGConnection().cleanVisualization();
-                          }
+                          LGConnection()
+                              .buildOrbit(Orbit.buildOrbit(
+                                  Orbit.generateOrbitTag(LookAt(
+                                      longvalue,
+                                      latvalue,
+                                      "${zoomvalue / rigcount}",
+                                      "$tiltvalue",
+                                      "$bearingvalue"))))
+                              .then((value) {
+                            isOrbiting = !isOrbiting;
+                            if (isOrbiting == true) {
+                              _rotationiconcontroller.repeat();
+                              playOrbit();
+                            } else {
+                              _rotationiconcontroller.stop();
+                              stopOrbit();
+                            }
+                          });
                         },
                       ),
                     },
