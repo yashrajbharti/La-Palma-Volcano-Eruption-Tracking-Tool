@@ -387,7 +387,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                               playOrbit();
                             } else {
                               _rotationiconcontroller.reset();
-                              stopOrbit();
+                              // stopOrbit();
                             }
                           });
                         },
