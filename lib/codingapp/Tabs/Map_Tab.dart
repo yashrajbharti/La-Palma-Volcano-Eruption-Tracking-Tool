@@ -396,28 +396,26 @@ class LGConnection {
 
     String openLogoKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
-  <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-    <Document>
-      <name>VolTrac</name>
-        <Folder>
-        <name>Logos</name>
-        <ScreenOverlay>
-        <name>Logo</name>
-        <Icon>
-        <href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
-        </Icon>
-        <overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
-        <screenXY x="0.02" y="0.95" xunits="fraction" yunits="fraction"/>
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
-        <size x="0.4" y="0.2" xunits="fraction" yunits="fraction"/>
-        </ScreenOverlay>
-        </Folder>
-    </Document>
-  </kml>''';
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<GroundOverlay>
+	<name>VolTrac</name>
+	<Icon>
+		<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
+		<viewBoundScale>0.75</viewBoundScale>
+	</Icon>
+	<altitude>800000</altitude>
+	<altitudeMode>absolute</altitudeMode>
+	<LatLonBox>
+		<north>74.92993380637989</north>
+		<south>-33.17826279567191</south>
+		<east>42.06001532462307</east>
+		<west>-96.92799532317687</west>
+	</LatLonBox>
+</GroundOverlay>
+</kml>''';
     try {
       await client.connect();
-      await client
-          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_4.kml");
+      await client.execute("echo '$openLogoKML' > /var/www/html/kmls.txt");
     } catch (e) {
       print(e);
     }
