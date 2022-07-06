@@ -38,7 +38,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     _rotationiconcontroller = AnimationController(
-      duration: const Duration(milliseconds: 5000),
+      duration: const Duration(seconds: 44),
       vsync: this,
     );
     super.initState();
@@ -363,7 +363,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                         }),
               ),
               RotationTransition(
-                turns: Tween(begin: 0.0, end: 1.0)
+                turns: Tween(begin: 0.0, end: 9.0)
                     .animate(_rotationiconcontroller),
                 child: Builder(
                   builder: (context) => IconButton(
@@ -383,10 +383,10 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                               .then((value) {
                             isOrbiting = !isOrbiting;
                             if (isOrbiting == true) {
-                              _rotationiconcontroller.repeat();
+                              _rotationiconcontroller.forward();
                               playOrbit();
                             } else {
-                              _rotationiconcontroller.stop();
+                              _rotationiconcontroller.reset();
                               stopOrbit();
                             }
                           });
