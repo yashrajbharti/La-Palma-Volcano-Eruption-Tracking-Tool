@@ -26,6 +26,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   GoogleMapController? mapController;
   MapType _currentMapType = MapType.satellite;
   bool isOrbiting = false;
+  bool isDemoActive = false;
   int rigcount = 5;
   double zoomvalue = 591657550.500000 / pow(2, 10.8);
   double latvalue = 28.6599744;
@@ -37,7 +38,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     _rotationiconcontroller = AnimationController(
-      duration: const Duration(milliseconds: 5000),
+      duration: const Duration(seconds: 44),
       vsync: this,
     );
     super.initState();
@@ -351,13 +352,18 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
               SizedBox(height: 6),
               Builder(
                 builder: (context) => IconButton(
-                  icon: Image.asset('assets/icons/demo.png'),
-                  iconSize: 57,
-                  onPressed: () => {LGConnection().openDemoLogos()},
-                ),
+                    icon: Image.asset('assets/icons/demo.png'),
+                    iconSize: 57,
+                    onPressed: () => {
+                          isDemoActive = !isDemoActive,
+                          if (isDemoActive == true)
+                            {LGConnection().openDemoLogos()}
+                          else
+                            {LGConnection().closeDemoLogos()}
+                        }),
               ),
               RotationTransition(
-                turns: Tween(begin: 0.0, end: 1.0)
+                turns: Tween(begin: 0.0, end: 9.0)
                     .animate(_rotationiconcontroller),
                 child: Builder(
                   builder: (context) => IconButton(
@@ -376,7 +382,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                         (value) {
                           isOrbiting = !isOrbiting;
                           if (isOrbiting == true) {
-                            _rotationiconcontroller.repeat();
+                            _rotationiconcontroller.forward();
                             playOrbit();
                           } else {
                             _rotationiconcontroller.stop();
@@ -440,6 +446,26 @@ class LGConnection {
       await client.connect();
       await client
           .execute("echo '$openLogoKML' > /var/www/html/kml/slave_4.kml");
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  closeDemoLogos() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    String closeLogoKML = '''''';
+    try {
+      await client.connect();
+      await client
+          .execute("echo '$closeLogoKML' > /var/www/html/kml/slave_4.kml");
     } catch (e) {
       print(e);
     }
