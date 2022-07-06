@@ -27,6 +27,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   MapType _currentMapType = MapType.satellite;
   bool isOrbiting = false;
   bool isDemoActive = false;
+  bool isClean = false;
   int rigcount = 5;
   double zoomvalue = 591657550.500000 / pow(2, 10.8);
   double latvalue = 28.6599744;
@@ -370,6 +371,11 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     icon: Image.asset('assets/icons/orbit.png'),
                     iconSize: 57,
                     onPressed: () => {
+                      isClean = !isClean,
+                      if (isClean == true)
+                        {
+                          LGConnection().cleanVisualization(),
+                        },
                       LGConnection()
                           .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
                               LookAt(
@@ -444,8 +450,7 @@ class LGConnection {
 </kml>''';
     try {
       await client.connect();
-      await client
-          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_4.kml");
+      await client.execute("echo '$openLogoKML' > /var/www/html/kmls.txt");
     } catch (e) {
       print(e);
     }
@@ -462,9 +467,29 @@ class LGConnection {
     );
     try {
       await client.connect();
-      await client.execute("> /var/www/html/kml/slave_4.kml");
+      await client.execute("> /var/www/html/kmls.txt");
     } catch (e) {
       print(e);
+    }
+  }
+
+  Future cleanVisualization() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      stopOrbit();
+      return await client.execute('> /var/www/html/kmls.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
     }
   }
 
