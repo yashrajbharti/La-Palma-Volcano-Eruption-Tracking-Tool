@@ -350,17 +350,17 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                   builder: (context) => IconButton(
                     icon: Image.asset('assets/icons/orbit.png'),
                     iconSize: 57,
-                    onPressed: () => {
+                    onPressed: () async => {
                       content = Orbit.generateOrbitTag(LookAt(
                           longvalue,
                           latvalue,
                           "${zoomvalue / rigcount}",
                           "$tiltvalue",
                           "$bearingvalue")),
+                      await LGConnection()
+                          .buildOrbit(Orbit.buildOrbit(content)),
                       setState(
                         () async {
-                          await LGConnection()
-                              .buildOrbit(Orbit.buildOrbit(content));
                           isOrbiting = !isOrbiting;
                           if (isOrbiting == true) {
                             _rotationiconcontroller.forward();
@@ -415,7 +415,8 @@ class LGConnection {
 </kml>''';
     try {
       await client.connect();
-      await client.execute("echo '$openLogoKML' > /var/www/html/kmls.txt");
+      await client
+          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_4.kml");
     } catch (e) {
       print(e);
     }
