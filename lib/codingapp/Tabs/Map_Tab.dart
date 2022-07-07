@@ -372,24 +372,24 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     onPressed: () => {
                       LGConnection().cleanVisualization().then(
                         (value) {
-                          LGConnection()
-                              .buildOrbit(Orbit.buildOrbit(
-                                  Orbit.generateOrbitTag(LookAt(
-                                      longvalue,
-                                      latvalue,
-                                      "${zoomvalue / rigcount}",
-                                      "$tiltvalue",
-                                      "$bearingvalue"))))
-                              .then((value) {
-                            isOrbiting = !isOrbiting;
-                            if (isOrbiting == true) {
-                              _rotationiconcontroller.forward();
+                          isOrbiting = !isOrbiting;
+                          if (isOrbiting == true) {
+                            _rotationiconcontroller.forward();
+                            LGConnection()
+                                .buildOrbit(Orbit.buildOrbit(
+                                    Orbit.generateOrbitTag(LookAt(
+                                        longvalue,
+                                        latvalue,
+                                        "${zoomvalue / rigcount}",
+                                        "$tiltvalue",
+                                        "$bearingvalue"))))
+                                .then((value) {
                               playOrbit();
-                            } else {
-                              _rotationiconcontroller.reset();
-                              // stopOrbit();
-                            }
-                          });
+                            });
+                          } else {
+                            _rotationiconcontroller.reset();
+                            // stopOrbit();
+                          }
                         },
                       ),
                     },
