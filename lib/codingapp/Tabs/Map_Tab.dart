@@ -432,6 +432,75 @@ class LGConnection {
 			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
 			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
 		</ScreenOverlay>
+    <GroundOverlay>
+			<name>la palma map</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalmamap.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.8870042553608</north>
+				<south>28.40912829496716</south>
+				<east>-17.57873634021623</east>
+				<west>-18.08819223363864</west>
+				<rotation>1.062017917633057</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>la palma text</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalma.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.52252385807398</north>
+				<south>28.44456085195286</south>
+				<east>-17.59700656934779</east>
+				<west>-17.77481317561376</west>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>liquid galaxy</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/liquidgalaxy.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.69142438238073</north>
+				<south>28.62818579232439</south>
+				<east>-17.98593493888748</east>
+				<west>-18.07865569375839</west>
+				<rotation>3.219670295715332</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>summer of code</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodelogo.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.50474467934734</north>
+				<south>28.45647880492179</south>
+				<east>-17.97117321011799</east>
+				<west>-18.02808983602195</west>
+				<rotation>1.852455482014185</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>summer of code text</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodetext.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.45765069582156</north>
+				<south>28.42737297924874</south>
+				<east>-17.95280851216312</east>
+				<west>-18.0438498095042</west>
+				<rotation>1.264564394950867</rotation>
+			</LatLonBox>
+		</GroundOverlay>
 	</Folder>
 </Document>
 </kml>''';
