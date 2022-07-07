@@ -92,16 +92,16 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
 
   playOrbit() async {
     await LGConnection().startOrbit();
-    setState(() {
-      isOrbiting = true;
-    });
+    // setState(() {
+    //   isOrbiting = true;
+    // });
   }
 
   stopOrbit() async {
     await LGConnection().stopOrbit();
-    setState(() {
-      isOrbiting = false;
-    });
+    // setState(() {
+    //   isOrbiting = false;
+    // });
   }
 
   _getCredentials() async {
@@ -372,7 +372,9 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     onPressed: () => {
                       LGConnection().cleanVisualization().then(
                         (value) {
-                          isOrbiting = !isOrbiting;
+                          setState(() {
+                            isOrbiting = !isOrbiting;
+                          });
                           if (isOrbiting == true) {
                             _rotationiconcontroller.forward();
                             LGConnection()
@@ -388,7 +390,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                             });
                           } else {
                             _rotationiconcontroller.reset();
-                            // stopOrbit();
+                            stopOrbit();
                           }
                         },
                       ),
