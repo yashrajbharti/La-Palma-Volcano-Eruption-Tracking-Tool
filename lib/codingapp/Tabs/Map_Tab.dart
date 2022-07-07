@@ -91,17 +91,20 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   }
 
   playOrbit() async {
+    await LGConnection().buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
+        LookAt(longvalue, latvalue, "${zoomvalue / rigcount}", "$tiltvalue",
+            "$bearingvalue"))));
     await LGConnection().startOrbit();
-    // setState(() {
-    //   isOrbiting = true;
-    // });
+    setState(() {
+      isOrbiting = true;
+    });
   }
 
   stopOrbit() async {
     await LGConnection().stopOrbit();
-    // setState(() {
-    //   isOrbiting = false;
-    // });
+    setState(() {
+      isOrbiting = false;
+    });
   }
 
   _getCredentials() async {
@@ -372,22 +375,10 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     onPressed: () => {
                       LGConnection().cleanVisualization().then(
                         (value) {
-                          setState(() {
-                            isOrbiting = !isOrbiting;
-                          });
+                          isOrbiting = !isOrbiting;
                           if (isOrbiting == true) {
                             _rotationiconcontroller.forward();
-                            LGConnection()
-                                .buildOrbit(Orbit.buildOrbit(
-                                    Orbit.generateOrbitTag(LookAt(
-                                        longvalue,
-                                        latvalue,
-                                        "${zoomvalue / rigcount}",
-                                        "$tiltvalue",
-                                        "$bearingvalue"))))
-                                .then((value) {
-                              playOrbit();
-                            });
+                            playOrbit();
                           } else {
                             _rotationiconcontroller.reset();
                             stopOrbit();
