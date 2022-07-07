@@ -101,7 +101,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   }
 
   stopOrbit() async {
-    await LGConnection().stopOrbit();
+    await LGConnection().cleanVisualization();
     setState(() {
       isOrbiting = false;
     });
@@ -373,18 +373,17 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     icon: Image.asset('assets/icons/orbit.png'),
                     iconSize: 57,
                     onPressed: () => {
-                      LGConnection().cleanVisualization().then(
-                        (value) {
-                          isOrbiting = !isOrbiting;
-                          if (isOrbiting == true) {
-                            _rotationiconcontroller.forward();
-                            playOrbit();
-                          } else {
-                            _rotationiconcontroller.reset();
-                            stopOrbit();
-                          }
-                        },
-                      ),
+                      isOrbiting = !isOrbiting,
+                      if (isOrbiting == true)
+                        {
+                          _rotationiconcontroller.forward(),
+                          playOrbit(),
+                        }
+                      else
+                        {
+                          _rotationiconcontroller.reset(),
+                          stopOrbit(),
+                        }
                     },
                   ),
                 ),
