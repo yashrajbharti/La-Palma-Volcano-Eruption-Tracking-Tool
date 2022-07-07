@@ -95,16 +95,16 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
         LookAt(longvalue, latvalue, "${zoomvalue / rigcount}", "$tiltvalue",
             "$bearingvalue"))));
     await LGConnection().startOrbit();
-    setState(() {
-      isOrbiting = true;
-    });
+    // setState(() {
+    //   isOrbiting = true;
+    // });
   }
 
   stopOrbit() async {
     await LGConnection().cleanVisualization();
-    setState(() {
-      isOrbiting = false;
-    });
+    // setState(() {
+    //   isOrbiting = false;
+    // });
   }
 
   _getCredentials() async {
