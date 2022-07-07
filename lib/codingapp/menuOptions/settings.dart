@@ -323,6 +323,7 @@ class SettingsState extends State<Settings> {
                       ),
                       onPressed: () {
                         connect();
+                        FocusManager.instance.primaryFocus?.unfocus();
                       },
                       style: ElevatedButton.styleFrom(
                         elevation: 0.0,
