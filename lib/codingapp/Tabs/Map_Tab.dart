@@ -1,12 +1,15 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:math';
+import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_translate/flutter_translate.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -123,6 +126,82 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
       "username": username,
       "numberofrigs": numberofrigs
     };
+  }
+
+  void _showToast(String x) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          "$x",
+          style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.normal,
+              fontFamily: "OldStandard"),
+        ),
+        duration: Duration(seconds: 3),
+        backgroundColor: Color.fromARGB(250, 43, 43, 43),
+        width: 500.0,
+        padding: const EdgeInsets.fromLTRB(
+          35,
+          20,
+          15,
+          20,
+        ),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        action: SnackBarAction(
+          textColor: Color.fromARGB(255, 125, 164, 243),
+          label: translate('Track.close'),
+          onPressed: () {},
+        ),
+      ),
+    );
+  }
+
+  showAlertDialog(String title, String msg) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+          child: AlertDialog(
+            backgroundColor: Color.fromARGB(255, 33, 33, 33),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '$title',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Color.fromARGB(255, 204, 204, 204),
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(
+                    Icons.clear_rounded,
+                    color: Color.fromARGB(255, 125, 164, 243),
+                    size: 32,
+                  ),
+                  padding: EdgeInsets.only(bottom: 10),
+                ),
+              ],
+            ),
+            content: Text(
+              '$msg',
+              style: TextStyle(
+                fontSize: 18,
+                color: Color.fromARGB(255, 204, 204, 204),
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 
   _fixposition() async {
@@ -360,9 +439,33 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     onPressed: () => {
                           isDemoActive = !isDemoActive,
                           if (isDemoActive == true)
-                            {LGConnection().openDemoLogos()}
+                            {
+                              LGConnection().openDemoLogos().then((value) {
+                                _showToast(translate('map.demostart'));
+                              }).catchError((onError) {
+                                print('oh no $onError');
+                                if (onError == 'nogeodata') {
+                                  showAlertDialog(translate('Track.alert'),
+                                      translate('Track.alert2'));
+                                }
+                                showAlertDialog(translate('Track.alert3'),
+                                    translate('Track.alert4'));
+                              }),
+                            }
                           else
-                            {LGConnection().cleanVisualization()}
+                            {
+                              LGConnection().cleanVisualization().then((value) {
+                                _showToast(translate('map.demostop'));
+                              }).catchError((onError) {
+                                print('oh no $onError');
+                                if (onError == 'nogeodata') {
+                                  showAlertDialog(translate('Track.alert'),
+                                      translate('Track.alert2'));
+                                }
+                                showAlertDialog(translate('Track.alert3'),
+                                    translate('Track.alert4'));
+                              }),
+                            }
                         }),
               ),
               RotationTransition(
@@ -378,14 +481,34 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                         {
                           _rotationiconcontroller.forward(),
                           LGConnection().cleanVisualization().then((value) {
+                            _showToast(translate('map.buildorbit'));
                             playOrbit();
+                            _showToast(translate('map.playorbit'));
+                          }).catchError((onError) {
+                            _rotationiconcontroller.stop();
+                            print('oh no $onError');
+                            if (onError == 'nogeodata') {
+                              showAlertDialog(translate('Track.alert'),
+                                  translate('Track.alert2'));
+                            }
+                            showAlertDialog(translate('Track.alert3'),
+                                translate('Track.alert4'));
                           }),
                         }
                       else
                         {
                           _rotationiconcontroller.reset(),
                           stopOrbit().then((value) {
+                            _showToast(translate('map.stoporbit'));
                             LGConnection().cleanVisualization();
+                          }).catchError((onError) {
+                            print('oh no $onError');
+                            if (onError == 'nogeodata') {
+                              showAlertDialog(translate('Track.alert'),
+                                  translate('Track.alert2'));
+                            }
+                            showAlertDialog(translate('Track.alert3'),
+                                translate('Track.alert4'));
                           }),
                         }
                     },

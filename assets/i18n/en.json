@@ -203,5 +203,12 @@
 		"main": "Main Eruptive Event",
 		"area": "Area of interest",
 		"maritime": "Maritime Exclusion Zone  "
+	},
+	"map": {
+		"buildorbit": "Building Orbit",
+		"stoporbit": "Stopping Orbit",
+		"demostart": "Opening Demo KML",
+		"demostop": "Closing Demo KML",
+		"playorbit": "Playing Orbit"
 	}
 }
