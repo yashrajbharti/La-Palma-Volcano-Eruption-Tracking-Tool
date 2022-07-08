@@ -94,12 +94,12 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     await LGConnection().buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
         LookAt(longvalue, latvalue, "${zoomvalue / rigcount}", "$tiltvalue",
             "$bearingvalue"))));
-    // await LGConnection().startOrbit();
+    await LGConnection().startOrbit();
   }
 
   stopOrbit() async {
-    await LGConnection().startOrbit();
-    // await LGConnection().cleanVisualization();
+    await LGConnection().stopOrbit();
+    await LGConnection().cleanVisualization();
   }
 
   _getCredentials() async {
@@ -605,7 +605,7 @@ class LGConnection {
 
     try {
       await client.connect();
-
+      await client.execute('> /var/www/html/kmls.txt');
       await client.connectSFTP();
       await client.sftpUpload(
         path: filePath,
@@ -615,8 +615,8 @@ class LGConnection {
         },
       );
 
-      return await client.execute(
-          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+      return await client
+          .execute("echo 'http://lg1:81/Orbit.kml' > /var/www/html/kmls.txt");
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
