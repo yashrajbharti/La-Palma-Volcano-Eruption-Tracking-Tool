@@ -505,6 +505,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                           stopOrbit().then((value) {
                             _showToast(translate('map.stoporbit'));
                             LGConnection().cleanOrbit();
+                            LGConnection().cleanVisualization();
                           }).catchError((onError) {
                             print('oh no $onError');
                             if (onError == 'nogeodata') {
