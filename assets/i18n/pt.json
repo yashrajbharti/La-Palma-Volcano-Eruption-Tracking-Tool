@@ -1,0 +1,214 @@
+{
+	"button": {
+		"cancel": "Cancelar"
+	},
+	"language": {
+		"name": {
+			"en": "Inglês (EUA)",
+			"es": "Espanhol",
+			"hi": "Hindi",
+			"ar": "Árabe",
+			"ru": "Russo",
+			"ja": "Japonês",
+			"zh": "Chinês (Simplificado)",
+			"sq": "Albanês",
+			"de": "Alemão",
+            "pt": "Português"
+		},
+		"flag": "🇵🇹",
+		"selected_message": "O idioma atualmente selecionado é {language}",
+		"selection": {
+			"message": "Selecione um idioma da lista",
+			"title": "Seleção de idioma"
+		}
+	},
+	"Track": {
+		"hist": " Mapa Histórico ",
+		"lava": "Mapa de fluxo de lava",
+		"situation": " Mapa de Situação ",
+		"aff": " Áreas afetadas ",
+		"land": " Mapa de paisagem ",
+		"So2": "Mapa de Emissões SO\u2082",
+		"prehistoric": " Mapa Pré-Histórico ",
+		"located": " Eventos localizados ",
+		"visual": "Visualize na LG",
+		"ready": "Pronto para visualizar!",
+		"Visualize": "Visualizando KML",
+		"alert": "Sem dados geográficos",
+		"alert2": "Parece que você não adicionou dados geográficos a este projeto.",
+		"alert3": "Erro ao iniciar!",
+		"alert4": "Ocorreu um erro ao tentar se conectar ao LG",
+		"close": "Perto"
+	},
+	"title": {
+		"name": "Rastreador do Vulcão La Palma"
+	},
+	"tabs": {
+		"track": "Acompanhar",
+		"map": " Mapa ",
+		"info": "Informações"
+	},
+	"drawer": {
+		"menu": "Menu Galáxia Líquida",
+		"help": "Ajuda",
+		"about": "Sobre",
+		"custom": "Construtor personalizado",
+		"task": "Tarefas LG",
+		"settings": "Gerenciador de conexões"
+	},
+	"Tasks": {
+		"LG": "Tarefas do Liquid Galaxy",
+		"Relaunch": "Reiniciar \n    LG",
+		"Shutdown": "Desligar \n    LG",
+		"Reboot": "Reinicie \n    LG",
+		"Save": "Salvar \n KML",
+		"Clean": "Limpar \n  KML",
+		"alert": "Sucesso!",
+		"alert2": "Você pode encontrar um KML contendo os dados do mapa do projeto em sua pasta Downloads",
+		"alert3": "Ops!",
+		"alert4": "Certifique-se de ativar as permissões de gerenciamento de armazenamento para baixar o KML do projeto. Verifique também se você leu os dados KML",
+		"alert5": "Erro ao iniciar!",
+		"alert6": "Ocorreu um erro ao tentar se conectar ao LG"
+	},
+	"Settings": {
+		"alert": "Conectado!",
+		"alert2": "O host está acessível",
+		"alert3": "Ops!",
+		"alert4": "O host não está acessível. Verifique se as informações fornecidas estão corretas e se o host pode ser contatado",
+		"title": "Gerenciador de conexões",
+		"Status": "Status: ",
+		"connect": "CONECTADO ",
+		"disconnect": "DESLIGADO ",
+		"placeholder": "por exemplo. lg",
+		"label": "Nome de usuário da máquina mestre",
+		"placeholder2": "por exemplo. 192.168.0.115",
+		"label2": "Endereço IP da máquina mestre",
+		"placeholder3": "por exemplo. 22",
+		"label3": "Número da porta da máquina principal",
+		"placeholder4": "por exemplo. a-senha-da-meu-LG",
+		"label4": "Senha da máquina mestre",
+		"placeholder5": "por exemplo. 5",
+		"label5": "Total de máquinas na plataforma LG",
+		"button": "Conecte-se à LG"
+	},
+	"About": {
+		"aboutpage": "Sobre a página \n Ferramenta de rastreamento de erupções do vulcão La Palma ",
+		"all": "Tudo sobre o aplicativo VolTrac:",
+		"points": "⬧ Este projeto foi criado durante o Google Summer of Code 2022 junto com a organização Liquid Galaxy. \n⬧ Este aplicativo foi desenvolvido por Yash Raj Bharti (e-mail: yashrajbharti.met18@itbhu.ac.in) sob Liquid Galaxy, graças ao Programa Google Summer of Code 2022. \n⬧ O aplicativo VolTrac serve como uma ferramenta de rastreamento para visualização das várias trilhas baseadas nas atividades vulcânicas de La Palma e as exibe lindamente com KML colorido. \n⬧ Voltrac não só funciona como um guia, mas também podemos usar nosso aplicativo para fins educacionais e de pesquisa, como estudar desastres naturais, atividades vulcânicas e catástrofes causadas pela destruição causada pelo vulcão La Palma. \n⬧ Várias trilhas de diferentes dados do mapa, como mapa de trilha histórica, mapa de fluxo de lava, mapa de trilha pré-histórica, mapa de áreas afetadas, mapa de paisagem, mapa de emissões SO\u2082, mapa de situação e eventos localizados são possíveis, graças aos vários fontes mencionadas na guia Informações. \n⬧ Além do inglês, este aplicativo também suporta oito idiomas, ou seja, espanhol, hindi, alemão, árabe, russo, japonês, chinês (simplificado) e albanês, que podem ser alterados na opção de menu Gerenciador de conexões. \n⬧ Desenvolvido graças aos Laboratórios TIC do Parque Científico de Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Escola Politécnica de Lleida, End Point Corp (NY), Wonderama LAB da Western University (Sydney), Gigabyte, Benq, HP, Corsair e Hemav Academics.",
+		"learn": "Saber mais",
+		"check": "Para saber mais sobre o aplicativo confira esses links.",
+		"github": "VolTrac GitHub",
+		"privacy": "Política de Privacidade",
+		"attribute": "Atribuição de imagem",
+		"resource": "Os seguintes recursos foram usados ​​para os ícones."
+	},
+	"help": {
+		"helppage": "Página de ajuda",
+		"instruction": "Instruções para configurar a visualização:",
+		"points": "⬧ Primeiro, acesse o Gerenciador de Conexões, que pode ser encontrado no menu, e preencha as credenciais. Os exemplos são mencionados lá como espaços reservados. Além disso, você pode alternar idiomas quando quiser. \n⬧ Em seguida, vá para a guia Faixa e toque na Faixa que deseja visualizar. Aguarde a mensagem \"Pronto para visualizar\" Toast aparecer e, em seguida, pressione o botão \"Visualize in LG\". Você poderá ver a visualização desejada no equipamento Liquid Galaxy. \n⬧ Você pode navegar pelo LG na guia Mapa, aprender o que significam os ícones e polígonos coloridos na \"Aba Informações\" e Limpar ou Salvar a visualização com a ajuda de \"LG Tasks\" na cardápio.",
+		"Troubleshooting": "Solução de problemas",
+		"points2": "⬧ Caso não consiga se conectar ao equipamento LG, primeiro verifique se ambos estão na mesma rede; ou você pode se conectar ao WiFi de um terceiro dispositivo ou conectar o LG ao hotspot do Tablet. Verifique se as credenciais estão preenchidas corretamente e tente novamente. \n⬧ Para encontrar o endereço IP do LG (ou do Laptop host no caso de configuração da VM), digite \"ifconfig\" no terminal se estiver no Mac ou Linux e \"ipconfig\" no Windows.\n⬧ Para equipamentos LG de baixo custo, às vezes a visualização não aparece na primeira vez. Aperte o botão \"Visualizar na LG\" mais uma vez para resolver isso.",
+		"mapcontrols": "Controles de mapa",
+		"points3": "⬧ Para Navegar no equipamento LG, pode-se usar a interface da tela Mapa das seguintes formas: \n⬧ Para Arrastar, podemos usar um movimento do dedo em qualquer direção na tela Mapa. \n⬧ Para torcer em ângulo, pode-se usar dois dedos e dar um movimento de parafuso na tela do Mapa. \n⬧ Para ampliar, pode-se beliscar a tela e mover os dedos para fora ou para dentro para aumentar e diminuir o zoom, respectivamente. Também podemos ampliar pressionando os ícones + e - fornecidos na tela do Mapa. \n⬧ Para Inclinar, pode-se usar dois dedos e dar-lhe um movimento linear no sentido ascendente.",
+		"support": "Obter suporte",
+		"check": "Para obter mais suporte no Liquid Galaxy Projects, verifique estes links.",
+		"website": "Site da Liquid Galaxy",
+		"github": "Liquid Galaxy GitHub",
+		"icons": "Significado dos ícones",
+		"meanings": "Alguns ícones junto com seus significados estão listados abaixo.",
+		"switch": "Alternar entre visualização de satélite e padrão",
+		"origin": "Retornar ao local original",
+		"demo": "Fornece visualização de demonstração",
+		"orbit": "Orbitar em torno de um ponto",
+		"queries": "Para quaisquer dúvidas sobre a instalação do equipamento LG, verifique a documentação oficial.",
+		"install": "Instalação de PC e Virtual Box LG"
+	},
+	"info": {
+		"description": "Descrição:",
+		"date": "Data do evento:",
+		"legend": "Lenda:",
+		"sources": "Fontes:",
+		"hist": {
+			"description": "Esta trilha representa o fluxo de lava ao longo dos anos na ilha de La Palma. A história registrada confirma esses eventos, com a primeira atividade vulcânica em 1480 dC até a última erupção do Cumbre Vieja em 2021. A maioria deles tem um Índice de Explosividade Vulcânica (VEI) de 2, mas o último surto em 2021 teve um VEI de 3 .",
+			"date": "Vários anos entre 1480 e 2021",
+			"legend": "Dados históricos de fluxo de lava dos seguintes anos:",
+			"and": "1677 e 1971",
+			"lava": "Símbolo de lava"
+		},
+		"lava": {
+			"description": "O mapa de fluxo de lava representa os dados de fluxo de lava a cada 10-15 dias. Esses dados mostram a evolução do fluxo de lava, seu efeito no terreno e as temperaturas do fluxo de lava à medida que se espalha na região de La Palma e finalmente atinge o mar. A taxa de fluxo de lava foi de 10 m/s, e a temperatura mais alta de Lava foi em torno de 1270°C.",
+			"date": "24 de setembro a 18 de dezembro de 2021",
+			"legend": "Legenda para a evolução dos dados do Lava Flow de setembro de 2021 a dezembro de 2021:",
+			"vents": "Aberturas"
+		},
+		"prehistoric": {
+			"description": "Essas atividades vulcânicas são do tempo da história antes que a humanidade escrevesse os eventos. A maioria deles é evidente a partir de testes de Radiocarbono (não corrigidos) e Potássio-Argônio. Os dados estão em Ka, que significa kiloannus ou kiloannum (ka), uma unidade de tempo igual a mil (10\u00B3) anos.",
+			"date": "Vários anos na faixa de 6050 aC ± 1500 anos a 1480 ± 10 anos",
+			"legend": "Dados de fluxo de lava pré-histórico dos seguintes anos de calendário:",
+			"lava": "Símbolo de lava"
+		},
+		"aff": {
+			"description": "Esta trilha visualiza os dados das instalações de transporte, casas e edifícios destruídos e possivelmente danificados e o efeito nocivo da lava nas terras naturais e fazendas da região de La Palma.",
+			"date": "24 de setembro a 15 de dezembro de 2021",
+			"legend": "Dados de áreas afetadas de transporte, construção e classificação de instalações:",
+			"destroyed": "Edifícios e casas destruídos  ",
+			"possible": "Possivelmente Destruído  ",
+			"novisible": "Nenhum dano visível",
+			"lava": "Fluxo de lava ",
+			"vents": "Aberturas ",
+			"area": "Área de interesse  ",
+			"hydro": "Hidrografia",
+			"roads": "Estradas destruídas  "
+		},
+		"land": {
+			"description": "A atividade vulcânica de Cumbre Vieja de 2021 deixou uma marca na região de La Palma. O Operational Land Imager (OLI) no Landsat 8 capturou esta imagem em cores naturais mostrando como as áreas de Todoque e El Paraíso mudaram drasticamente a partir de 15 de dezembro de 2021.",
+			"date": "20 de setembro a 15 de dezembro de 2021",
+			"legend": "Legenda da paisagem alterada de La Palma devido ao fluxo de lava:",
+			"landscape": "Paisagem devido ao fluxo de lava  ",
+			"infoicon": "Ícone de informações para a paisagem alterada de La Palma  "
+		},
+		"So2": {
+			"description": "O Serviço de Monitoramento Atmosférico rastreia plumas de dióxido de enxofre da erupção vulcânica em La Palma. O vulcão La Palma expele cerca de 250.000 toneladas de Dióxido de Enxofre (dados da INVOLCAN) que viajou por Marrocos e Espanha e chegou à França periodicamente, trazendo plumas para nordeste em direção à Europa.",
+			"date": "20 de setembro a 27 de setembro de 2021",
+			"legend": "Dados de emissões SO\u2082 com medidas em mol por metro quadrado (mol/m\u00B2):",
+			"volcano": "Vulcão Cumbre Vieja"
+		},
+		"situation": {
+			"description": "Esta trilha fornece uma análise situacional do início da erupção vulcânica em La Palma. A Proteção Civil Espanhola evacuou mais de 6.000 pessoas em 19 de setembro. O fluxo de lava começou em 20 de setembro às 18:50 UTC, e o IGN relatou 180 casas danificadas.",
+			"date": "19 de setembro de 2021 às 14h10 UTC (e tremores entre 11 e 21 de setembro)",
+			"legend": "Legenda para a Visão Geral Situacional:",
+			"main": "Evento Eruptivo Principal   ",
+			"orange": "Alerta laranja  ",
+			"maritime": "Zona de Exclusão Marítima ",
+			"closed": "Estradas Fechadas  ",
+			"lava": "Fluxo de lava ",
+			"Text": "  Texto  ",
+			"municipality": "Municípios sob evacuação ordem\n/declaração de emergência",
+			"data": " 21 de setembro (Tremor)"
+		},
+		"located": {
+			"description": "Esta trilha mostra os dados de terremotos dos tremores que ocorreram ao longo do período de atividade vulcânica, ou seja, de setembro a dezembro. O terremoto é medido em unidades mbLg, que é a magnitude da onda corporal usando a onda Lg. Os terremotos que acontecem ao longo da atividade vulcânica e o fluxo de lava são responsáveis ​​pela evolução do terreno.",
+			"date": "12 de setembro a 15 de dezembro de 2021",
+			"legend": "Legenda para Categorização dos Dados Sísmicos com base na magnitude:"
+		}
+	},
+	"custombuilder": {
+		"range": "Comece selecionando o intervalo de datas:",
+		"after": "Após selecionar o intervalo de datas, verifique agora os dados que deseja construir:",
+		"tremor": "Dados de tremor",
+		"buildings": "Edifícios Destruídos e \nPossivelmente Destruídos",
+		"roads": "Estradas Destruídas e \nPossivelmente Destruídas",
+		"natural": "Terra Natural",
+		"physiography": "Fisiografia",
+		"closed": "Estradas Fechadas",
+		"main": "Evento Eruptivo \nPrincipal",
+		"area": "Área de interesse",
+		"maritime": "Zona de Exclusão \nMarítima "
+	},
+	"map": {
+		"buildorbit": "Órbita inicial",
+		"stoporbit": "Parando a órbita",
+		"demostart": "Abrindo o KML de demo",
+		"demostop": "Encerramento do KML de demo"
+	}
+}

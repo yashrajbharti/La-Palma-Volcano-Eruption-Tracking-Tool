@@ -1,9 +1,9 @@
 # VolTrac
 ![Build](https://github.com/yashrajbharti/Volcano-Tracker-Web-Scraper-demo/actions/workflows/main.yml/badge.svg)  
   
-Allows Visualization of various Tracks such as Historic, Lava Flow, Affected Areas Maps for La Palmas onto the Liquid Galaxy. 
-  
-Supports 8 Languages: Arabic, English, Spanish, Hindi, Japanese, Russian, Albanian, and Chinese (Simplified).
+Allows Visualization of various Tracks such as Historic, Lava Flow, Affected Areas, etc for La Palmas onto the Liquid Galaxy. One can also visualize Custom KML by providing start and end dates with the help of calender widget. The Map screen UI allows us to Control the LG and send Orbit movements and various other controls. The app shows a significant amount of information about the La Palma Volcanic activity in an elegant and user-friendly way.
+    
+Supports 10 Languages: Arabic, German, English, Spanish, Hindi, Japanese, Portuguese, Russian, Albanian, and Chinese (Simplified).
 
 ## Guide for Open Source Contributors to add more languages or correct translation in a particular language.
 

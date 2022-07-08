@@ -12,7 +12,8 @@
 			"ja": "Japanese",
 			"zh": "Chinese (Simplified)",
 			"sq": "Albanian",
-			"de": "German"
+			"de": "German",
+			"pt": "Portuguese"
 		},
 		"flag": "🇺🇸",
 		"selected_message": "Currently selected language is {language}",

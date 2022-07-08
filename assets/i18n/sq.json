@@ -12,7 +12,8 @@
 			"ja": "Japoneze",
 			"zh": "Kineze (e thjeshtuar)",
 			"sq": "Shqip",
-			"de": "Gjermanisht"
+			"de": "Gjermanisht",
+			"pt": "Portugeze"
 		},
 		"flag": "🇦🇱",
 		"selected_message": "Gjuha e zgjedhur aktualisht është {language}",
@@ -207,7 +208,7 @@
 	"map": {
 		"buildorbit": "Orbita e fillimit",
 		"stoporbit": "Ndalimi i Orbitës",
-		"demostart": "Hapja e demonstrimit të KML",
-		"demostop": "Mbyllja e demonstrimit të KML"
+		"demostart": "Hapja e demo të KML",
+		"demostop": "Mbyllja e demo të KML"
 	}
 }

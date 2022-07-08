@@ -30,7 +30,10 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.en') + " 🇺🇸",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "en");
               Navigator.of(context, rootNavigator: true).pop("en");
@@ -38,7 +41,10 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.es') + " 🇪🇸",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "es");
               Navigator.of(context, rootNavigator: true).pop("es");
@@ -46,7 +52,10 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.hi') + " 🇮🇳",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "hi");
               Navigator.of(context, rootNavigator: true).pop("hi");
@@ -54,7 +63,10 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.de') + " 🇩🇪",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "de");
               Navigator.of(context, rootNavigator: true).pop("de");
@@ -62,7 +74,10 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.ar') + " 🇦🇪",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "ar");
               Navigator.of(context, rootNavigator: true).pop("ar");
@@ -70,7 +85,10 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.ru') + " 🇷🇺",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "ru");
               Navigator.of(context, rootNavigator: true).pop("ru");
@@ -78,7 +96,10 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.ja') + " 🇯🇵",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "ja");
               Navigator.of(context, rootNavigator: true).pop("ja");
@@ -86,15 +107,32 @@ void onActionSheetPress(BuildContext context) {
         CupertinoActionSheetAction(
             child: Text(translate('language.name.zh') + " 🇨🇳",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "zh");
               Navigator.of(context, rootNavigator: true).pop("zh");
             }),
         CupertinoActionSheetAction(
+            child: Text(translate('language.name.pt') + " 🇵🇹",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
+            onPressed: () {
+              changeLocale(context, "pt");
+              Navigator.of(context, rootNavigator: true).pop("pt");
+            }),
+        CupertinoActionSheetAction(
             child: Text(translate('language.name.sq') + " 🇦🇱",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                  fontWeight: FontWeight.normal,
+                  fontFamily: "OldStandard",
+                  fontSize: 18.0,
+                )),
             onPressed: () {
               changeLocale(context, "sq");
               Navigator.of(context, rootNavigator: true).pop("sq");

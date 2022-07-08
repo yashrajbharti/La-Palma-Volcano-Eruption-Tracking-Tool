@@ -16,7 +16,8 @@ main() async {
         'ru',
         'ja',
         'zh',
-        'sq'
+        'sq',
+        'pt'
       ]);
 
   runApp(LocalizedApp(delegate, MyApp()));
