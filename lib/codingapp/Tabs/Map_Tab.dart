@@ -41,7 +41,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     _rotationiconcontroller = AnimationController(
-      duration: const Duration(seconds: 44),
+      duration: const Duration(seconds: 50),
       vsync: this,
     );
     super.initState();
@@ -469,7 +469,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                         }),
               ),
               RotationTransition(
-                turns: Tween(begin: 0.0, end: 9.0)
+                turns: Tween(begin: 0.0, end: 10.0)
                     .animate(_rotationiconcontroller),
                 child: Builder(
                   builder: (context) => IconButton(
@@ -483,7 +483,6 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                           LGConnection().cleanVisualization().then((value) {
                             _showToast(translate('map.buildorbit'));
                             playOrbit();
-                            _showToast(translate('map.playorbit'));
                           }).catchError((onError) {
                             _rotationiconcontroller.stop();
                             print('oh no $onError');

@@ -205,10 +205,9 @@
 		"maritime": "Maritime Exclusion Zone  "
 	},
 	"map": {
-		"buildorbit": "Building Orbit",
+		"buildorbit": "Starting Orbit",
 		"stoporbit": "Stopping Orbit",
 		"demostart": "Opening Demo KML",
-		"demostop": "Closing Demo KML",
-		"playorbit": "Playing Orbit"
+		"demostop": "Closing Demo KML"
 	}
 }
