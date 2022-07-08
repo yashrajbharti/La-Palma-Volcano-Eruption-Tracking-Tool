@@ -384,7 +384,9 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                       else
                         {
                           _rotationiconcontroller.reset(),
-                          stopOrbit(),
+                          stopOrbit().then((value) {
+                            LGConnection().cleanVisualization();
+                          }),
                         }
                     },
                   ),
