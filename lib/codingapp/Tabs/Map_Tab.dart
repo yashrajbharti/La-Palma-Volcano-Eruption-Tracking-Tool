@@ -103,11 +103,17 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
             "$bearingvalue"))))
         .then((value) async {
       await LGConnection().startOrbit();
+      setState(() {
+        isOrbiting = true;
+      });
     });
   }
 
   stopOrbit() async {
     await LGConnection().stopOrbit();
+    setState(() {
+      isOrbiting = false;
+    });
   }
 
   _getCredentials() async {
