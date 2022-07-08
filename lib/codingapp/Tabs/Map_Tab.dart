@@ -94,18 +94,12 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   }
 
   playOrbit() async {
-    await LGConnection()
-        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(LookAt(
-            longvalue,
-            latvalue,
-            "${zoomvalue / rigcount}",
-            "$tiltvalue",
-            "$bearingvalue"))))
-        .then((value) async {
-      await LGConnection().startOrbit();
-      setState(() {
-        isOrbiting = true;
-      });
+    await LGConnection().buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
+        LookAt(longvalue, latvalue, "${zoomvalue / rigcount}", "$tiltvalue",
+            "$bearingvalue"))));
+
+    setState(() {
+      isOrbiting = true;
     });
   }
 
@@ -486,8 +480,9 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                       if (isOrbiting == true)
                         {
                           _rotationiconcontroller.forward(),
-                          playOrbit().then((value) {
+                          LGConnection().cleanVisualization().then((value) {
                             _showToast(translate('map.buildorbit'));
+                            playOrbit();
                           }).catchError((onError) {
                             _rotationiconcontroller.stop();
                             print('oh no $onError');
@@ -750,26 +745,8 @@ class LGConnection {
         },
       );
 
-      return await client.execute(
-          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  startOrbit() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
+      await client
+          .execute("echo 'http://lg1:81/Orbit.kml' > /var/www/html/kmls.txt");
       return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
