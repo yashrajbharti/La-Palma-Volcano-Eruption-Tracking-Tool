@@ -746,7 +746,7 @@ class LGConnection {
       );
 
       await client
-          .execute("echo 'http://lg1:81/Orbit.kml' > /var/www/html/kmls.txt");
+          .execute("echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
       return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
