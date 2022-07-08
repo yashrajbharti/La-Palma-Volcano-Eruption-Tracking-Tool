@@ -94,10 +94,16 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   }
 
   playOrbit() async {
-    await LGConnection().buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-        LookAt(longvalue, latvalue, "${zoomvalue / rigcount}", "$tiltvalue",
-            "$bearingvalue"))));
-
+    await LGConnection()
+        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(LookAt(
+            longvalue,
+            latvalue,
+            "${zoomvalue / rigcount}",
+            "$tiltvalue",
+            "$bearingvalue"))))
+        .then((value) async {
+      await LGConnection().startOrbit();
+    });
     setState(() {
       isOrbiting = true;
     });
@@ -744,9 +750,26 @@ class LGConnection {
           print('Sent $progress');
         },
       );
+      return await client.execute(
+          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
 
-      await client
-          .execute("echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+  startOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
       return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
