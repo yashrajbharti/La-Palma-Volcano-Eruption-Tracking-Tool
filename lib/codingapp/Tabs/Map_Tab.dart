@@ -94,11 +94,12 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     await LGConnection().buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
         LookAt(longvalue, latvalue, "${zoomvalue / rigcount}", "$tiltvalue",
             "$bearingvalue"))));
-    await LGConnection().startOrbit();
+    // await LGConnection().startOrbit();
   }
 
   stopOrbit() async {
-    await LGConnection().cleanVisualization();
+    await LGConnection().startOrbit();
+    // await LGConnection().cleanVisualization();
   }
 
   _getCredentials() async {
