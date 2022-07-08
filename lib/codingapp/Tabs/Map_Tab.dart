@@ -98,14 +98,13 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
             "${zoomvalue / rigcount}",
             "$tiltvalue",
             "$bearingvalue"))))
-        .then((value) {
-      LGConnection().startOrbit();
+        .then((value) async {
+      await LGConnection().startOrbit();
     });
   }
 
   stopOrbit() async {
     await LGConnection().stopOrbit();
-    await LGConnection().cleanVisualization();
   }
 
   _getCredentials() async {
@@ -378,7 +377,9 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                       if (isOrbiting == true)
                         {
                           _rotationiconcontroller.forward(),
-                          playOrbit(),
+                          LGConnection().cleanVisualization().then((value) {
+                            playOrbit();
+                          }),
                         }
                       else
                         {
