@@ -486,9 +486,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                       if (isOrbiting == true)
                         {
                           _rotationiconcontroller.forward(),
-                          LGConnection().cleanVisualization().then((value) {
+                          playOrbit().then((value) {
                             _showToast(translate('map.buildorbit'));
-                            playOrbit();
                           }).catchError((onError) {
                             _rotationiconcontroller.stop();
                             print('oh no $onError');
@@ -505,7 +504,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                           _rotationiconcontroller.reset(),
                           stopOrbit().then((value) {
                             _showToast(translate('map.stoporbit'));
-                            LGConnection().cleanVisualization();
+                            LGConnection().cleanOrbit();
                           }).catchError((onError) {
                             print('oh no $onError');
                             if (onError == 'nogeodata') {
@@ -791,6 +790,25 @@ class LGConnection {
     try {
       await client.connect();
       return await client.execute('echo "exittour=true" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  cleanOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
