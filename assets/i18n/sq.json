@@ -203,5 +203,11 @@
 		"main": "Ngjarja kryesore \nshpërthyese",
 		"area": "Zona e interesit",
 		"maritime": "Zona e \nPërjashtimit Detare  "
+	},
+	"map": {
+		"buildorbit": "Orbita e fillimit",
+		"stoporbit": "Ndalimi i Orbitës",
+		"demostart": "Hapja e demonstrimit të KML",
+		"demostop": "Mbyllja e demonstrimit të KML"
 	}
 }

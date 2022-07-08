@@ -203,5 +203,11 @@
 		"main": "Wichtigstes \neruptives Ereignis",
 		"area": "Interessenbereich",
 		"maritime": "Maritime Sperrzone  "
+	},
+	"map": {
+		"buildorbit": "Startorbit",
+		"stoporbit": "Orbit stoppen",
+		"demostart": "Eröffnung Demo KML",
+		"demostop": "Abschließende Demo-KML"
 	}
 }

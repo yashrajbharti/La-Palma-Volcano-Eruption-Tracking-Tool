@@ -203,5 +203,11 @@
 		"main": "主要喷发事件",
 		"area": "感兴趣的领域 ",
 		"maritime": "海洋禁区  "
+	},
+	"map": {
+		"buildorbit": "起始轨道",
+		"stoporbit": "停止轨道",
+		"demostart": "打开演示 KML",
+		"demostop": "关闭演示 KML"
 	}
 }

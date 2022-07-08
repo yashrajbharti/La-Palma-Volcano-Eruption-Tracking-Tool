@@ -107,7 +107,7 @@
 		"points": "⬧ Primero, vaya a Connection Manager, que se puede encontrar en el menú, y complete las credenciales. Los ejemplos se mencionan allí como marcadores de posición. Además, puede cambiar de idioma allí a su conveniencia. \n⬧ Luego, ve a la pestaña Pista y toca la Pista que deseas visualizar. Espera a que aparezca el mensaje Toast \"Listo para visualizar\", luego presiona el botón \"Visualizar en LG\". Podrá ver la visualización deseada en la plataforma Liquid Galaxy. \n⬧ Puede navegar por el LG desde la pestaña Mapa, conocer el significado de los íconos y los polígonos de colores desde la \"Pestaña de información\" y Limpiar o guardar la visualización con la ayuda de \"LG Tasks\" desde la menú.",
 		"Troubleshooting": "Solución de problemas",
 		"points2": "⬧ Si no puede conectarse a la plataforma LG, primero asegúrese de que ambos estén en la misma red; o puede conectarse al WiFi de un tercer dispositivo o conectar LG al punto de acceso de la tableta. Compruebe que las credenciales estén correctamente cumplimentadas y vuelva a intentarlo. \n⬧ Para encontrar la dirección IP del LG (o la computadora portátil host en caso de configuración de VM), escriba \"ifconfig\" en la terminal si está en Mac o Linux e \"ipconfig\" para Windows.\n⬧ Para equipos LG de gama baja, a veces la visualización no aparece la primera vez. Presiona el botón \"Visualizar en LG\" una vez más para resolver esto.",
-		"mapcontrols":"Controles de mapa",
+		"mapcontrols": "Controles de mapa",
 		"points3": "⬧ Para navegar en el equipo LG, se puede usar la interfaz de la pantalla Mapa de las siguientes maneras: \n⬧ Para arrastrar, podemos usar el movimiento de un dedo en cualquier dirección en la pantalla Mapa. \n⬧ Para girar en ángulo, uno puede usar dos dedos y dar un movimiento de tornillo en la pantalla del Mapa. \n⬧ Para hacer zoom, se puede pellizcar la pantalla y mover los dedos hacia afuera o hacia adentro para acercar y alejar, respectivamente. También podemos hacer zoom presionando los íconos + y - provistos en la pantalla del Mapa. \n⬧ Para Tilt, uno puede usar dos dedos y darle un movimiento lineal hacia arriba.",
 		"support": "Obtener apoyo",
 		"check": "Para obtener más soporte en Liquid Galaxy Projects, consulte estos enlaces.",
@@ -203,5 +203,11 @@
 		"main": "Evento eruptivo",
 		"area": "Area de interes ",
 		"maritime": "Zona de Exclusión \nMarítima  "
+	},
+	"map": {
+		"buildorbit": "Órbita de inicio",
+		"stoporbit": "Detener la órbita",
+		"demostart": "Apertura de Demo KML",
+		"demostop": "Demostración de cierre kmL"
 	}
 }
