@@ -486,9 +486,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                       if (isOrbiting == true)
                         {
                           _rotationiconcontroller.forward(),
-                          LGConnection().cleanVisualization().then((value) {
+                          playOrbit().then((value) {
                             _showToast(translate('map.buildorbit'));
-                            playOrbit();
                           }).catchError((onError) {
                             _rotationiconcontroller.stop();
                             print('oh no $onError');
