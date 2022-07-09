@@ -246,8 +246,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         width: 200,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            elevation: 0.0,
-                            shadowColor: Colors.transparent,
+                            elevation: 2,
+                            shadowColor: Colors.grey.withOpacity(0.5),
                             primary: Color.fromARGB(255, 125, 164, 243),
                             padding: EdgeInsets.all(15),
                             shape: StadiumBorder(),
@@ -265,8 +265,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         width: 200,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            elevation: 0.0,
-                            shadowColor: Colors.transparent,
+                            elevation: 2,
+                            shadowColor: Colors.grey.withOpacity(0.5),
                             primary: Color.fromARGB(255, 232, 108, 99),
                             padding: EdgeInsets.all(15),
                             shape: StadiumBorder(),
@@ -825,7 +825,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                   borderRadius: BorderRadius.circular(40),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.0),
+                      color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: Offset(0, 3), // changes position of shadow
@@ -842,8 +842,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
                     width: 300,
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
-                          shadowColor: Colors.transparent,
+                          elevation: 2,
+                          shadowColor: Colors.grey.withOpacity(0.5),
                           primary: Colors.white,
                           padding: EdgeInsets.all(15),
                           shape: StadiumBorder(),

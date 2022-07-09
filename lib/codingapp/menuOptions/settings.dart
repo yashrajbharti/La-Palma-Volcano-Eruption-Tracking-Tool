@@ -326,8 +326,8 @@ class SettingsState extends State<Settings> {
                         FocusManager.instance.primaryFocus?.unfocus();
                       },
                       style: ElevatedButton.styleFrom(
-                        elevation: 0.0,
-                        shadowColor: Colors.transparent,
+                        elevation: 2,
+                        shadowColor: Colors.grey.withOpacity(0.5),
                         primary: Colors.white,
                         padding: EdgeInsets.all(15),
                         shape: StadiumBorder(),

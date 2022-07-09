@@ -151,8 +151,8 @@ class _SendtoLGState extends State<SendtoLG> {
               width: 500,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
+                  elevation: 2,
+                  shadowColor: Colors.grey.withOpacity(0.5),
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
@@ -185,8 +185,8 @@ class _SendtoLGState extends State<SendtoLG> {
               width: 500,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
+                  elevation: 2,
+                  shadowColor: Colors.grey.withOpacity(0.5),
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
@@ -224,8 +224,8 @@ class _SendtoLGState extends State<SendtoLG> {
                 width: 500,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      shadowColor: Colors.transparent,
+                      elevation: 2,
+                      shadowColor: Colors.grey.withOpacity(0.5),
                       primary: ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
@@ -257,8 +257,8 @@ class _SendtoLGState extends State<SendtoLG> {
                 width: 500,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      shadowColor: Colors.transparent,
+                      elevation: 2,
+                      shadowColor: Colors.grey.withOpacity(0.5),
                       primary: ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
@@ -295,8 +295,8 @@ class _SendtoLGState extends State<SendtoLG> {
               width: 500,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
+                  elevation: 2,
+                  shadowColor: Colors.grey.withOpacity(0.5),
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
@@ -329,8 +329,8 @@ class _SendtoLGState extends State<SendtoLG> {
               width: 500,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
+                  elevation: 2,
+                  shadowColor: Colors.grey.withOpacity(0.5),
                   primary: ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
@@ -368,8 +368,8 @@ class _SendtoLGState extends State<SendtoLG> {
                 width: 500,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      shadowColor: Colors.transparent,
+                      elevation: 2,
+                      shadowColor: Colors.grey.withOpacity(0.5),
                       primary: ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
@@ -401,8 +401,8 @@ class _SendtoLGState extends State<SendtoLG> {
                 width: 500,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      shadowColor: Colors.transparent,
+                      elevation: 2,
+                      shadowColor: Colors.grey.withOpacity(0.5),
                       primary: ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
@@ -438,8 +438,8 @@ class _SendtoLGState extends State<SendtoLG> {
             width: 360,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  elevation: 0.0,
-                  shadowColor: Colors.transparent,
+                  elevation: 2,
+                  shadowColor: Colors.grey.withOpacity(0.5),
                   primary: Colors.white,
                   padding: EdgeInsets.all(15),
                   shape: StadiumBorder(),
