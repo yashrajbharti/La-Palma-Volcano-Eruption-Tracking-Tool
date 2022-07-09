@@ -142,7 +142,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
           style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.normal,
-              fontFamily: "OldStandard"),
+              fontFamily: "OldStandard",
+              color: Colors.white),
         ),
         duration: Duration(seconds: 3),
         backgroundColor: Color.fromARGB(250, 43, 43, 43),

@@ -24,8 +24,8 @@ class _AboutScreenState extends State<AboutScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Size screenSize = MediaQuery.of(context).size;
-
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
@@ -48,7 +48,9 @@ class _AboutScreenState extends State<AboutScreen> {
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 204, 204, 204),
+      backgroundColor: isDarkTheme
+          ? Color.fromARGB(255, 16, 16, 16)
+          : Color.fromARGB(255, 204, 204, 204),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 0),
@@ -64,7 +66,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: Colors.black),
+                      color: isDarkTheme ? Colors.white : Colors.black),
                 ),
               ),
               Container(
@@ -88,10 +90,12 @@ class _AboutScreenState extends State<AboutScreen> {
                   onOpen: _onOpen,
                   text: translate("About.points"),
                   style: TextStyle(
-                    color: Colors.black,
+                    color: isDarkTheme ? Colors.white : Colors.black,
                     fontSize: 18,
                   ),
-                  linkStyle: TextStyle(color: Colors.black, fontSize: 18),
+                  linkStyle: TextStyle(
+                      color: isDarkTheme ? Colors.white : Colors.black,
+                      fontSize: 18),
                   textAlign: TextAlign.start,
                 ),
               ),

@@ -149,12 +149,16 @@ class SettingsState extends State<Settings> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     if (!loaded) init();
     var localizationDelegate = LocalizedApp.of(context).delegate;
 
     return Scaffold(
         extendBodyBehindAppBar: true,
-        backgroundColor: Color.fromARGB(255, 204, 204, 204),
+        backgroundColor: isDarkTheme
+            ? Color.fromARGB(255, 16, 16, 16)
+            : Color.fromARGB(255, 204, 204, 204),
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(50),
           child: AppBar(
@@ -234,8 +238,10 @@ class SettingsState extends State<Settings> {
                       filled: true,
                       hintText: translate("Settings.placeholder"),
                       labelText: translate("Settings.label"),
-                      labelStyle:
-                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
+                      labelStyle: TextStyle(
+                          color: isDarkTheme
+                              ? Color.fromARGB(255, 204, 204, 204)
+                              : Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),
@@ -248,8 +254,10 @@ class SettingsState extends State<Settings> {
                       filled: true,
                       hintText: translate("Settings.placeholder2"),
                       labelText: translate("Settings.label2"),
-                      labelStyle:
-                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
+                      labelStyle: TextStyle(
+                          color: isDarkTheme
+                              ? Color.fromARGB(255, 204, 204, 204)
+                              : Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),
@@ -262,8 +270,10 @@ class SettingsState extends State<Settings> {
                       filled: true,
                       hintText: translate("Settings.placeholder3"),
                       labelText: translate("Settings.label3"),
-                      labelStyle:
-                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
+                      labelStyle: TextStyle(
+                          color: isDarkTheme
+                              ? Color.fromARGB(255, 204, 204, 204)
+                              : Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),
@@ -274,8 +284,10 @@ class SettingsState extends State<Settings> {
                     filled: true,
                     hintText: translate("Settings.placeholder4"),
                     labelText: translate("Settings.label4"),
-                    labelStyle:
-                        TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
+                    labelStyle: TextStyle(
+                        color: isDarkTheme
+                            ? Color.fromARGB(255, 204, 204, 204)
+                            : Color.fromARGB(255, 74, 74, 74)),
                     suffixIcon: IconButton(
                       icon: Icon(Icons.remove_red_eye, color: _iconColor),
                       onPressed: () {
@@ -302,8 +314,10 @@ class SettingsState extends State<Settings> {
                       filled: true,
                       hintText: translate("Settings.placeholder5"),
                       labelText: translate("Settings.label5"),
-                      labelStyle:
-                          TextStyle(color: Color.fromARGB(255, 74, 74, 74)),
+                      labelStyle: TextStyle(
+                          color: isDarkTheme
+                              ? Color.fromARGB(255, 204, 204, 204)
+                              : Color.fromARGB(255, 74, 74, 74)),
                     ),
                   ),
                 ),
@@ -327,16 +341,22 @@ class SettingsState extends State<Settings> {
                       },
                       style: ElevatedButton.styleFrom(
                         elevation: 2,
-                        shadowColor: Colors.grey.withOpacity(0.5),
-                        primary: Colors.white,
+                        shadowColor: isDarkTheme
+                            ? Colors.transparent
+                            : Colors.grey.withOpacity(0.5),
+                        primary: isDarkTheme
+                            ? ui.Color.fromARGB(255, 30, 30, 30)
+                            : Colors.white,
                         padding: EdgeInsets.all(15),
                         shape: StadiumBorder(),
                       ),
                     ),
                   ),
                 ),
-                const Divider(
-                  color: Color.fromARGB(255, 74, 74, 74),
+                Divider(
+                  color: isDarkTheme
+                      ? Color.fromARGB(255, 204, 204, 204)
+                      : Color.fromARGB(255, 74, 74, 74),
                   thickness: 1,
                 ),
                 ListTile(
@@ -350,15 +370,19 @@ class SettingsState extends State<Settings> {
                   })),
                   trailing: IconButton(
                     onPressed: () => onActionSheetPress(context),
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.translate_rounded,
                       size: 32,
-                      color: Color.fromARGB(255, 74, 74, 74),
+                      color: isDarkTheme
+                          ? Color.fromARGB(255, 204, 204, 204)
+                          : Color.fromARGB(255, 74, 74, 74),
                     ),
                   ),
                 ),
-                const Divider(
-                  color: Color.fromARGB(255, 74, 74, 74),
+                Divider(
+                  color: isDarkTheme
+                      ? Color.fromARGB(255, 204, 204, 204)
+                      : Color.fromARGB(255, 74, 74, 74),
                   thickness: 1,
                 ),
               ],

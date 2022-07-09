@@ -23,8 +23,8 @@ class _HelpScreenState extends State<HelpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Size screenSize = MediaQuery.of(context).size;
-
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
@@ -47,7 +47,9 @@ class _HelpScreenState extends State<HelpScreen> {
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 204, 204, 204),
+      backgroundColor: isDarkTheme
+          ? Color.fromARGB(255, 16, 16, 16)
+          : Color.fromARGB(255, 204, 204, 204),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 0),
@@ -63,7 +65,7 @@ class _HelpScreenState extends State<HelpScreen> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: Colors.black),
+                      color: isDarkTheme ? Colors.white : Colors.black),
                 ),
               ),
               Container(
@@ -264,7 +266,9 @@ class _HelpScreenState extends State<HelpScreen> {
                                   translate("help.switch"),
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.black,
+                                      color: isDarkTheme
+                                          ? Colors.white
+                                          : Colors.black,
                                       fontFamily: "OldStandard"),
                                 ),
                               )
@@ -299,7 +303,9 @@ class _HelpScreenState extends State<HelpScreen> {
                                   translate("help.origin"),
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.black,
+                                      color: isDarkTheme
+                                          ? Colors.white
+                                          : Colors.black,
                                       fontFamily: "OldStandard"),
                                 ),
                               ),
@@ -333,7 +339,9 @@ class _HelpScreenState extends State<HelpScreen> {
                                   translate("help.demo"),
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.black,
+                                      color: isDarkTheme
+                                          ? Colors.white
+                                          : Colors.black,
                                       fontFamily: "OldStandard"),
                                 ),
                               ),
@@ -367,7 +375,9 @@ class _HelpScreenState extends State<HelpScreen> {
                                   translate("help.orbit"),
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.black,
+                                      color: isDarkTheme
+                                          ? Colors.white
+                                          : Colors.black,
                                       fontFamily: "OldStandard"),
                                 ),
                               ),

@@ -64,30 +64,58 @@ class _CustomBuilderState extends State<CustomBuilder> {
                 maxWidth: 400.0,
               ),
               child: Theme(
-                data: ThemeData.light().copyWith(
-                  //Header background color
-                  primaryColor: Color.fromARGB(255, 125, 164, 243),
-                  //Background color
-                  scaffoldBackgroundColor: Color.fromARGB(255, 204, 204, 204),
-                  //Divider color
-                  dividerColor: Colors.grey,
-                  //Non selected days of the month color
-                  textTheme: TextTheme(
-                    bodyText2: TextStyle(color: Colors.black),
-                    button: TextStyle(fontSize: 18),
-                  ),
-                  colorScheme: ColorScheme.fromSwatch().copyWith(
-                    //Selected dates background color
-                    primary: Color.fromARGB(255, 125, 164, 243),
-                    //Month title and week days color
-                    onSurface: Colors.black,
-                    //Header elements and selected dates text color
-                    //onPrimary: Colors.white,
-                  ),
-                  iconTheme: IconThemeData(
-                    size: 30.0,
-                  ),
-                ),
+                data: (MediaQuery.of(context).platformBrightness ==
+                        Brightness.dark)
+                    ? ThemeData.dark().copyWith(
+                        //Header background color
+                        primaryColor: Color.fromARGB(255, 125, 164, 243),
+                        //Background color
+                        scaffoldBackgroundColor:
+                            Color.fromARGB(255, 16, 16, 16),
+                        //Divider color
+                        dividerColor: Colors.grey,
+                        //Non selected days of the month color
+                        textTheme: TextTheme(
+                          bodyText2: TextStyle(color: Colors.white),
+                          button: TextStyle(fontSize: 18),
+                        ),
+                        colorScheme: ColorScheme.fromSwatch().copyWith(
+                          //Selected dates background color
+                          primary: Color.fromARGB(255, 125, 164, 243),
+                          //Month title and week days color
+                          onSurface: Colors.white,
+                          //Header elements and selected dates text color
+                          //onPrimary: Colors.white,
+                        ),
+                        iconTheme: IconThemeData(
+                          size: 30.0,
+                        ),
+                      )
+                    : ThemeData.light().copyWith(
+                        //Header background color
+                        primaryColor: Color.fromARGB(255, 125, 164, 243),
+                        //Background color
+                        scaffoldBackgroundColor:
+                            Color.fromARGB(255, 204, 204, 204),
+                        //Divider color
+                        dividerColor: Colors.grey,
+                        //Non selected days of the month color
+                        textTheme: TextTheme(
+                          bodyText2: TextStyle(color: Colors.black),
+                          button: TextStyle(fontSize: 18),
+                        ),
+                        colorScheme: ColorScheme.fromSwatch().copyWith(
+                          //Selected dates background color
+                          primary: Color.fromARGB(255, 125, 164, 243),
+                          //Month title and week days color
+                          onSurface: Colors.black,
+                          //Header elements and selected dates text color
+                          //onPrimary: Colors.white,
+                        ),
+                        iconTheme: IconThemeData(
+                          size: 30.0,
+                        ),
+                      ),
                 child: child!,
               ),
             ),
@@ -153,7 +181,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
           style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.normal,
-              fontFamily: "OldStandard"),
+              fontFamily: "OldStandard",
+              color: Colors.white),
         ),
         duration: Duration(seconds: 3),
         backgroundColor: ui.Color.fromARGB(250, 43, 43, 43),
@@ -183,6 +212,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
   );
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     start = dateRange.start;
     end = dateRange.end;
     return Scaffold(
@@ -207,7 +238,9 @@ class _CustomBuilderState extends State<CustomBuilder> {
           ),
         ),
       ),
-      backgroundColor: Color.fromRGBO(204, 204, 204, 1),
+      backgroundColor: isDarkTheme
+          ? Color.fromARGB(255, 16, 16, 16)
+          : Color.fromARGB(255, 204, 204, 204),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 0),
@@ -223,7 +256,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: Colors.black),
+                      color: isDarkTheme ? Colors.white : Colors.black),
                 ),
               ),
               Container(
@@ -247,13 +280,18 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             elevation: 2,
-                            shadowColor: Colors.grey.withOpacity(0.5),
+                            shadowColor: isDarkTheme
+                                ? Colors.transparent
+                                : Colors.grey.withOpacity(0.5),
                             primary: Color.fromARGB(255, 125, 164, 243),
                             padding: EdgeInsets.all(15),
                             shape: StadiumBorder(),
                           ),
                           child: Text(
                             '${start.year}/${start.month}/${start.day}',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
                           ),
                           onPressed: dateTimeRangePicker,
                         ),
@@ -266,13 +304,18 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             elevation: 2,
-                            shadowColor: Colors.grey.withOpacity(0.5),
+                            shadowColor: isDarkTheme
+                                ? Colors.transparent
+                                : Colors.grey.withOpacity(0.5),
                             primary: Color.fromARGB(255, 232, 108, 99),
                             padding: EdgeInsets.all(15),
                             shape: StadiumBorder(),
                           ),
                           child: Text(
                             '${end.year}/${end.month}/${end.day}',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
                           ),
                           onPressed: dateTimeRangePicker,
                         ),
@@ -825,7 +868,9 @@ class _CustomBuilderState extends State<CustomBuilder> {
                   borderRadius: BorderRadius.circular(40),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: isDarkTheme
+                          ? Colors.transparent
+                          : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: Offset(0, 3), // changes position of shadow
@@ -843,8 +888,12 @@ class _CustomBuilderState extends State<CustomBuilder> {
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           elevation: 2,
-                          shadowColor: Colors.grey.withOpacity(0.5),
-                          primary: Colors.white,
+                          shadowColor: isDarkTheme
+                              ? Colors.transparent
+                              : Colors.grey.withOpacity(0.5),
+                          primary: isDarkTheme
+                              ? Color.fromARGB(255, 30, 30, 30)
+                              : Colors.white,
                           padding: EdgeInsets.all(15),
                           shape: StadiumBorder(),
                         ),
@@ -897,7 +946,9 @@ class _CustomBuilderState extends State<CustomBuilder> {
                       right: 10.0,
                     ),
                     child: Container(
-                      color: Color.fromARGB(255, 204, 204, 204),
+                      color: isDarkTheme
+                          ? Color.fromARGB(255, 16, 16, 16)
+                          : Color.fromARGB(255, 204, 204, 204),
                       child: Builder(
                         builder: (context) => IconButton(
                           icon: Image.asset('assets/icons/download.png'),

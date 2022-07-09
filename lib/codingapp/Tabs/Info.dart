@@ -25,6 +25,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     final List<Widget> track_cards = [
       // Historical Track
       Container(
@@ -452,7 +454,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow
@@ -866,7 +870,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow
@@ -1237,7 +1243,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow
@@ -1641,7 +1649,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow
@@ -1977,7 +1987,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow
@@ -2363,7 +2375,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow
@@ -2835,7 +2849,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow
@@ -3177,7 +3193,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: isDarkTheme
+                  ? Colors.transparent
+                  : Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
               offset: Offset(0, 3), // changes position of shadow

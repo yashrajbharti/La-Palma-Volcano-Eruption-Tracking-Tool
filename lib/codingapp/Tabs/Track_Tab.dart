@@ -116,7 +116,8 @@ class _SendtoLGState extends State<SendtoLG> {
           style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.normal,
-              fontFamily: "OldStandard"),
+              fontFamily: "OldStandard",
+              color: Colors.white),
         ),
         duration: Duration(seconds: 3),
         backgroundColor: ui.Color.fromARGB(250, 43, 43, 43),
@@ -142,6 +143,9 @@ class _SendtoLGState extends State<SendtoLG> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
+
     return Container(
       margin: const EdgeInsets.fromLTRB(90, 30, 90, 0),
       child: Column(
@@ -152,8 +156,12 @@ class _SendtoLGState extends State<SendtoLG> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 2,
-                  shadowColor: Colors.grey.withOpacity(0.5),
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  shadowColor: isDarkTheme
+                      ? Colors.transparent
+                      : Colors.grey.withOpacity(0.5),
+                  primary: isDarkTheme
+                      ? ui.Color.fromARGB(255, 43, 43, 43)
+                      : ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
                 onPressed: () async {
@@ -186,8 +194,12 @@ class _SendtoLGState extends State<SendtoLG> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 2,
-                  shadowColor: Colors.grey.withOpacity(0.5),
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  shadowColor: isDarkTheme
+                      ? Colors.transparent
+                      : Colors.grey.withOpacity(0.5),
+                  primary: isDarkTheme
+                      ? ui.Color.fromARGB(255, 43, 43, 43)
+                      : ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
                 onPressed: () async {
@@ -225,8 +237,12 @@ class _SendtoLGState extends State<SendtoLG> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       elevation: 2,
-                      shadowColor: Colors.grey.withOpacity(0.5),
-                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      shadowColor: isDarkTheme
+                          ? Colors.transparent
+                          : Colors.grey.withOpacity(0.5),
+                      primary: isDarkTheme
+                          ? ui.Color.fromARGB(255, 43, 43, 43)
+                          : ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
                     savekml_Task(projectname[2]);
@@ -258,8 +274,12 @@ class _SendtoLGState extends State<SendtoLG> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       elevation: 2,
-                      shadowColor: Colors.grey.withOpacity(0.5),
-                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      shadowColor: isDarkTheme
+                          ? Colors.transparent
+                          : Colors.grey.withOpacity(0.5),
+                      primary: isDarkTheme
+                          ? ui.Color.fromARGB(255, 43, 43, 43)
+                          : ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
                     savekml_Task(projectname[3]);
@@ -296,8 +316,12 @@ class _SendtoLGState extends State<SendtoLG> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 2,
-                  shadowColor: Colors.grey.withOpacity(0.5),
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  shadowColor: isDarkTheme
+                      ? Colors.transparent
+                      : Colors.grey.withOpacity(0.5),
+                  primary: isDarkTheme
+                      ? ui.Color.fromARGB(255, 43, 43, 43)
+                      : ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
                 onPressed: () async {
@@ -330,8 +354,12 @@ class _SendtoLGState extends State<SendtoLG> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 2,
-                  shadowColor: Colors.grey.withOpacity(0.5),
-                  primary: ui.Color.fromARGB(255, 220, 220, 220),
+                  shadowColor: isDarkTheme
+                      ? Colors.transparent
+                      : Colors.grey.withOpacity(0.5),
+                  primary: isDarkTheme
+                      ? ui.Color.fromARGB(255, 43, 43, 43)
+                      : ui.Color.fromARGB(255, 220, 220, 220),
                   padding: EdgeInsets.all(15),
                 ),
                 onPressed: () async {
@@ -369,8 +397,12 @@ class _SendtoLGState extends State<SendtoLG> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       elevation: 2,
-                      shadowColor: Colors.grey.withOpacity(0.5),
-                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      shadowColor: isDarkTheme
+                          ? Colors.transparent
+                          : Colors.grey.withOpacity(0.5),
+                      primary: isDarkTheme
+                          ? ui.Color.fromARGB(255, 43, 43, 43)
+                          : ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
                     savekml_Task(projectname[6]);
@@ -402,8 +434,12 @@ class _SendtoLGState extends State<SendtoLG> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       elevation: 2,
-                      shadowColor: Colors.grey.withOpacity(0.5),
-                      primary: ui.Color.fromARGB(255, 220, 220, 220),
+                      shadowColor: isDarkTheme
+                          ? Colors.transparent
+                          : Colors.grey.withOpacity(0.5),
+                      primary: isDarkTheme
+                          ? ui.Color.fromARGB(255, 43, 43, 43)
+                          : ui.Color.fromARGB(255, 220, 220, 220),
                       padding: EdgeInsets.all(15)),
                   onPressed: () async {
                     savekml_Task(projectname[7]);
@@ -439,8 +475,12 @@ class _SendtoLGState extends State<SendtoLG> {
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 2,
-                  shadowColor: Colors.grey.withOpacity(0.5),
-                  primary: Colors.white,
+                  shadowColor: isDarkTheme
+                      ? Colors.transparent
+                      : Colors.grey.withOpacity(0.5),
+                  primary: isDarkTheme
+                      ? ui.Color.fromARGB(255, 30, 30, 30)
+                      : Colors.white,
                   padding: EdgeInsets.all(15),
                   shape: StadiumBorder(),
                 ),

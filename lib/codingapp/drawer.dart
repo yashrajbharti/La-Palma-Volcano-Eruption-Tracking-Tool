@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
-
 import 'package:webscrapperapp/codingapp/mainpage.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/help.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
@@ -19,11 +18,15 @@ class Drawers extends StatefulWidget {
 class _DrawersState extends State<Drawers> {
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     return SizedBox(
       width: MediaQuery.of(context).size.width * 1.0,
       child: Drawer(
         child: Container(
-          color: Color.fromARGB(255, 204, 204, 204),
+          color: isDarkTheme
+              ? Color.fromARGB(255, 16, 16, 16)
+              : Color.fromARGB(255, 204, 204, 204),
           child: ListView(
             padding: const EdgeInsets.only(left: 100),
             children: [
@@ -35,7 +38,9 @@ class _DrawersState extends State<Drawers> {
                       padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
                       child: Text(
                         translate("drawer.menu"),
-                        style: TextStyle(color: Colors.black, fontSize: 46),
+                        style: TextStyle(
+                            color: isDarkTheme ? Colors.white : Colors.black,
+                            fontSize: 46),
                       ),
                     ),
                     const Spacer(),
@@ -47,11 +52,15 @@ class _DrawersState extends State<Drawers> {
                           style: ElevatedButton.styleFrom(
                               elevation: 0.0,
                               shadowColor: Colors.transparent,
-                              primary: Color.fromARGB(255, 204, 204, 204),
+                              primary: isDarkTheme
+                                  ? Color.fromARGB(255, 16, 16, 16)
+                                  : Color.fromARGB(255, 204, 204, 204),
                               padding: EdgeInsets.all(15)),
-                          child: const Icon(
+                          child: Icon(
                             Icons.clear_rounded,
-                            color: Color.fromARGB(255, 84, 84, 84),
+                            color: isDarkTheme
+                                ? Color.fromARGB(255, 204, 204, 204)
+                                : Color.fromARGB(255, 84, 84, 84),
                             size: 60,
                           ),
                           onPressed: () {
@@ -70,7 +79,9 @@ class _DrawersState extends State<Drawers> {
               ListTile(
                 title: Text(
                   translate("drawer.help"),
-                  style: TextStyle(color: Colors.black, fontSize: 40),
+                  style: TextStyle(
+                      color: isDarkTheme ? Colors.white : Colors.black,
+                      fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
@@ -82,7 +93,9 @@ class _DrawersState extends State<Drawers> {
               ListTile(
                 title: Text(
                   translate("drawer.about"),
-                  style: TextStyle(color: Colors.black, fontSize: 40),
+                  style: TextStyle(
+                      color: isDarkTheme ? Colors.white : Colors.black,
+                      fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
@@ -94,7 +107,9 @@ class _DrawersState extends State<Drawers> {
               ListTile(
                 title: Text(
                   translate("drawer.custom"),
-                  style: TextStyle(color: Colors.black, fontSize: 40),
+                  style: TextStyle(
+                      color: isDarkTheme ? Colors.white : Colors.black,
+                      fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
@@ -106,7 +121,9 @@ class _DrawersState extends State<Drawers> {
               ListTile(
                 title: Text(
                   translate("drawer.task"),
-                  style: TextStyle(color: Colors.black, fontSize: 40),
+                  style: TextStyle(
+                      color: isDarkTheme ? Colors.white : Colors.black,
+                      fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
@@ -118,12 +135,23 @@ class _DrawersState extends State<Drawers> {
               ListTile(
                 title: Text(
                   translate("drawer.settings"),
-                  style: TextStyle(color: Colors.black, fontSize: 40),
+                  style: TextStyle(
+                      color: isDarkTheme ? Colors.white : Colors.black,
+                      fontSize: 40),
                 ),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) => Settings(),
                   ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 100),
+                padding: EdgeInsets.only(top: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [],
                 ),
               ),
             ],

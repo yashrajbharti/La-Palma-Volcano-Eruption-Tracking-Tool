@@ -85,6 +85,8 @@ class _LGtasksState extends State<LGtasks> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
@@ -107,7 +109,9 @@ class _LGtasksState extends State<LGtasks> {
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 204, 204, 204),
+      backgroundColor: isDarkTheme
+          ? Color.fromARGB(255, 16, 16, 16)
+          : Color.fromARGB(255, 204, 204, 204),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -120,7 +124,9 @@ class _LGtasksState extends State<LGtasks> {
                     translate("Tasks.LG"),
                     style: TextStyle(
                       fontSize: 42,
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: isDarkTheme
+                          ? Colors.white
+                          : Color.fromARGB(255, 0, 0, 0),
                     ),
                   )),
               Container(
@@ -135,8 +141,10 @@ class _LGtasksState extends State<LGtasks> {
                           height: 180,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              elevation: 0.0,
-                              shadowColor: Colors.transparent,
+                              elevation: 2,
+                              shadowColor: isDarkTheme
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
                               primary: Color.fromARGB(255, 115, 184, 117),
                               padding: EdgeInsets.all(15),
                               shape: StadiumBorder(),
@@ -146,8 +154,12 @@ class _LGtasksState extends State<LGtasks> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate("Tasks.Relaunch"),
-                                    style: TextStyle(fontSize: 42)),
+                                Text(
+                                  translate("Tasks.Relaunch"),
+                                  style: TextStyle(
+                                      fontSize: 42,
+                                      color: Color.fromARGB(255, 0, 0, 0)),
+                                ),
                               ],
                             ),
                             onPressed: () {
@@ -170,8 +182,10 @@ class _LGtasksState extends State<LGtasks> {
                           height: 180,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                elevation: 0.0,
-                                shadowColor: Colors.transparent,
+                                elevation: 2,
+                                shadowColor: isDarkTheme
+                                    ? Colors.transparent
+                                    : Colors.grey.withOpacity(0.5),
                                 primary: Color.fromARGB(255, 232, 108, 99),
                                 padding: EdgeInsets.all(15),
                                 shape: StadiumBorder(),
@@ -182,7 +196,9 @@ class _LGtasksState extends State<LGtasks> {
                                     width: 10,
                                   ),
                                   Text(translate("Tasks.Shutdown"),
-                                      style: TextStyle(fontSize: 42)),
+                                      style: TextStyle(
+                                          fontSize: 42,
+                                          color: Color.fromARGB(255, 0, 0, 0))),
                                 ],
                               ),
                               onPressed: () {
@@ -208,8 +224,10 @@ class _LGtasksState extends State<LGtasks> {
                             height: 180,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                elevation: 0.0,
-                                shadowColor: Colors.transparent,
+                                elevation: 2,
+                                shadowColor: isDarkTheme
+                                    ? Colors.transparent
+                                    : Colors.grey.withOpacity(0.5),
                                 primary: Color.fromARGB(255, 125, 164, 243),
                                 padding: EdgeInsets.all(15),
                                 shape: StadiumBorder(),
@@ -220,7 +238,9 @@ class _LGtasksState extends State<LGtasks> {
                                     width: 10,
                                   ),
                                   Text(translate("Tasks.Save"),
-                                      style: TextStyle(fontSize: 42)),
+                                      style: TextStyle(
+                                          fontSize: 42,
+                                          color: Color.fromARGB(255, 0, 0, 0))),
                                 ],
                               ),
                               onPressed: () async {
@@ -271,8 +291,10 @@ class _LGtasksState extends State<LGtasks> {
                           height: 180,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                elevation: 0.0,
-                                shadowColor: Colors.transparent,
+                                elevation: 2,
+                                shadowColor: isDarkTheme
+                                    ? Colors.transparent
+                                    : Colors.grey.withOpacity(0.5),
                                 primary: Color.fromARGB(255, 240, 226, 103),
                                 padding: EdgeInsets.all(15),
                                 shape: StadiumBorder(),
@@ -283,7 +305,9 @@ class _LGtasksState extends State<LGtasks> {
                                     width: 10,
                                   ),
                                   Text(translate("Tasks.Reboot"),
-                                      style: TextStyle(fontSize: 42)),
+                                      style: TextStyle(
+                                          fontSize: 42,
+                                          color: Color.fromARGB(255, 0, 0, 0))),
                                 ],
                               ),
                               onPressed: () {
@@ -305,8 +329,10 @@ class _LGtasksState extends State<LGtasks> {
                           height: 180,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                elevation: 0.0,
-                                shadowColor: Colors.transparent,
+                                elevation: 2,
+                                shadowColor: isDarkTheme
+                                    ? Colors.transparent
+                                    : Colors.grey.withOpacity(0.5),
                                 primary: Color.fromARGB(255, 229, 102, 229),
                                 padding: EdgeInsets.all(15),
                                 shape: StadiumBorder(),
@@ -317,7 +343,9 @@ class _LGtasksState extends State<LGtasks> {
                                     width: 10,
                                   ),
                                   Text(translate("Tasks.Clean"),
-                                      style: TextStyle(fontSize: 42)),
+                                      style: TextStyle(
+                                          fontSize: 42,
+                                          color: Color.fromARGB(255, 0, 0, 0))),
                                 ],
                               ),
                               onPressed: () {

@@ -15,11 +15,15 @@ class Mainpage extends StatefulWidget {
 class _MainpageState extends State<Mainpage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(100.0),
         child: Container(
-          color: Color.fromARGB(255, 204, 204, 204),
+          color: isDarkTheme
+              ? Color.fromARGB(255, 16, 16, 16)
+              : Color.fromARGB(255, 204, 204, 204),
           child: Padding(
             padding: EdgeInsets.only(top: 30),
 
@@ -33,7 +37,9 @@ class _MainpageState extends State<Mainpage> {
                   translate('title.name'),
                   style: TextStyle(
                     fontSize: 48,
-                    color: Color.fromARGB(255, 0, 0, 0),
+                    color: isDarkTheme
+                        ? Color.fromARGB(255, 204, 204, 204)
+                        : Color.fromARGB(255, 16, 16, 16),
                   ),
                 ),
               ),
@@ -43,7 +49,9 @@ class _MainpageState extends State<Mainpage> {
                     // change left :
                     padding: const EdgeInsets.only(right: 30),
                     child: IconButton(
-                      icon: Image.asset('assets/menu.png'),
+                      icon: Image.asset(isDarkTheme
+                          ? 'assets/menu-white.png'
+                          : 'assets/menu.png'),
                       iconSize: 120,
                       onPressed: () => Scaffold.of(context).openEndDrawer(),
                     ),
@@ -67,8 +75,20 @@ class First extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        brightness: Brightness.light,
+        appBarTheme: AppBarTheme(color: myColour),
         scaffoldBackgroundColor: myColour,
         primarySwatch: myColour,
+        fontFamily: 'OldStandard',
+        textTheme: TextTheme(
+          button: TextStyle(fontSize: 24.0),
+        ),
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        appBarTheme: AppBarTheme(color: yourColour),
+        scaffoldBackgroundColor: yourColour,
+        primarySwatch: yourColour,
         fontFamily: 'OldStandard',
         textTheme: TextTheme(
           button: TextStyle(fontSize: 24.0),
@@ -92,5 +112,20 @@ const MaterialColor myColour = const MaterialColor(
     700: Color.fromARGB(255, 204, 204, 204),
     800: Color.fromARGB(255, 204, 204, 204),
     900: Color.fromARGB(255, 204, 204, 204),
+  },
+);
+const MaterialColor yourColour = const MaterialColor(
+  0xFF101010,
+  const <int, Color>{
+    50: Color.fromARGB(255, 16, 16, 16),
+    100: Color.fromARGB(255, 16, 16, 16),
+    200: Color.fromARGB(255, 16, 16, 16),
+    300: Color.fromARGB(255, 16, 16, 16),
+    400: Color.fromARGB(255, 16, 16, 16),
+    500: Color.fromARGB(255, 16, 16, 16),
+    600: Color.fromARGB(255, 16, 16, 16),
+    700: Color.fromARGB(255, 16, 16, 16),
+    800: Color.fromARGB(255, 16, 16, 16),
+    900: Color.fromARGB(255, 16, 16, 16),
   },
 );
