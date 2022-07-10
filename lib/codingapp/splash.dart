@@ -16,6 +16,8 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
+    final isDarkTheme =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
     return SplashScreen(
       seconds: 3,
       navigateAfterSeconds: First(),
@@ -28,7 +30,9 @@ class _SplashState extends State<Splash> {
         ),
       ),
       image: Image.asset("assets/volcano.png"),
-      backgroundColor: const Color.fromARGB(255, 30, 30, 30),
+      backgroundColor: isDarkTheme
+          ? Color.fromARGB(255, 16, 16, 16)
+          : Color.fromARGB(255, 30, 30, 30),
       photoSize: 100.0,
       loaderColor: const Color.fromARGB(255, 204, 204, 204),
     );

@@ -5,6 +5,7 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:webscrapperapp/codingapp/splash.dart';
 
 main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   var delegate = await LocalizationDelegate.create(
       fallbackLocale: 'en_US',
       supportedLocales: [
@@ -28,7 +29,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var localizationDelegate = LocalizedApp.of(context).delegate;
-
     return LocalizationProvider(
       state: LocalizationProvider.of(context).state,
       child: MaterialApp(

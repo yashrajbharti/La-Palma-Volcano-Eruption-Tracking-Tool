@@ -33,7 +33,7 @@ class _LayoutState extends State<Layout> {
                 width: MediaQuery.of(context).size.width * 0.82,
                 child: Container(
                   color: isDarkTheme
-                      ? Color.fromARGB(255, 43, 43, 43)
+                      ? Color.fromARGB(255, 30, 30, 30)
                       : Color.fromARGB(255, 149, 149, 149),
                   padding: const EdgeInsets.symmetric(vertical: 50.0),
                   child: TabBar(
