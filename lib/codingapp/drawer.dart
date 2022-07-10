@@ -159,7 +159,7 @@ class _DrawersState extends State<Drawers> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       DayNightSwitch(
-                        value: val,
+                        value: isDarkTheme ? !val : val,
                         moonImage: AssetImage('assets/moon.png'),
                         sunImage: AssetImage('assets/sun.png'),
                         sunColor: Colors.transparent,
@@ -168,7 +168,7 @@ class _DrawersState extends State<Drawers> {
                         nightColor: nightColor,
                         onChanged: (value) {
                           setState(() {
-                            val = value;
+                            val = isDarkTheme ? !value : value;
                           });
                         },
                       )
