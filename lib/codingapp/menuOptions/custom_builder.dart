@@ -18,6 +18,8 @@ import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:webscrapperapp/codingapp/kml/tremorbuilder.dart';
 import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
+import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/theme-storage.dart';
 
 class CustomBuilder extends StatefulWidget {
   CustomBuilder({Key? key}) : super(key: key);
@@ -46,83 +48,80 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool isOpen = false;
   late var start;
   late var end;
-
-  Future dateTimeRangePicker() async {
+  bool blackandwhite = false;
+  Future dateTimeRangePicker(bool blackandwhite) async {
     DateTimeRange? newDateRange = await showDateRangePicker(
-      context: context,
-      initialDateRange: dateRange,
-      initialEntryMode:
-          DatePickerEntryMode.calendarOnly, // removes the dialog entry mode
-      firstDate: DateTime(2021, 09, 19),
-      lastDate: DateTime(2021, 12, 15),
-      builder: (context, Widget? child) => Column(
-        children: [
-          BackdropFilter(
-            filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                maxWidth: 400.0,
-              ),
-              child: Theme(
-                data: (MediaQuery.of(context).platformBrightness ==
-                        Brightness.dark)
-                    ? ThemeData.dark().copyWith(
-                        //Header background color
-                        primaryColor: Color.fromARGB(255, 125, 164, 243),
-                        //Background color
-                        scaffoldBackgroundColor:
-                            Color.fromARGB(255, 16, 16, 16),
-                        //Divider color
-                        dividerColor: Colors.grey,
-                        //Non selected days of the month color
-                        textTheme: TextTheme(
-                          bodyText2: TextStyle(color: Colors.white),
-                          button: TextStyle(fontSize: 18),
-                        ),
-                        colorScheme: ColorScheme.fromSwatch().copyWith(
-                          //Selected dates background color
-                          primary: Color.fromARGB(255, 125, 164, 243),
-                          //Month title and week days color
-                          onSurface: Colors.white,
-                          //Header elements and selected dates text color
-                          //onPrimary: Colors.white,
-                        ),
-                        iconTheme: IconThemeData(
-                          size: 30.0,
-                        ),
-                      )
-                    : ThemeData.light().copyWith(
-                        //Header background color
-                        primaryColor: Color.fromARGB(255, 125, 164, 243),
-                        //Background color
-                        scaffoldBackgroundColor:
-                            Color.fromARGB(255, 204, 204, 204),
-                        //Divider color
-                        dividerColor: Colors.grey,
-                        //Non selected days of the month color
-                        textTheme: TextTheme(
-                          bodyText2: TextStyle(color: Colors.black),
-                          button: TextStyle(fontSize: 18),
-                        ),
-                        colorScheme: ColorScheme.fromSwatch().copyWith(
-                          //Selected dates background color
-                          primary: Color.fromARGB(255, 125, 164, 243),
-                          //Month title and week days color
-                          onSurface: Colors.black,
-                          //Header elements and selected dates text color
-                          //onPrimary: Colors.white,
-                        ),
-                        iconTheme: IconThemeData(
-                          size: 30.0,
-                        ),
-                      ),
-                child: child!,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+        context: context,
+        initialDateRange: dateRange,
+        initialEntryMode:
+            DatePickerEntryMode.calendarOnly, // removes the dialog entry mode
+        firstDate: DateTime(2021, 09, 19),
+        lastDate: DateTime(2021, 12, 15),
+        builder: (context, Widget? child) => Column(children: [
+              BackdropFilter(
+                filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: 400.0,
+                  ),
+                  child: Theme(
+                    data: (blackandwhite)
+                        ? ThemeData.dark().copyWith(
+                            //Header background color
+                            primaryColor: Color.fromARGB(255, 125, 164, 243),
+                            //Background color
+                            scaffoldBackgroundColor:
+                                Color.fromARGB(255, 16, 16, 16),
+                            //Divider color
+                            dividerColor: Colors.grey,
+                            //Non selected days of the month color
+                            textTheme: TextTheme(
+                              bodyText2: TextStyle(color: Colors.white),
+                              button: TextStyle(fontSize: 18),
+                            ),
+                            colorScheme: ColorScheme.fromSwatch().copyWith(
+                              //Selected dates background color
+                              primary: Color.fromARGB(255, 125, 164, 243),
+                              //Month title and week days color
+                              onSurface: Colors.white,
+                              //Header elements and selected dates text color
+                              //onPrimary: Colors.white,
+                            ),
+                            iconTheme: IconThemeData(
+                              size: 30.0,
+                            ),
+                          )
+                        : ThemeData.light().copyWith(
+                            //Header background color
+                            primaryColor: Color.fromARGB(255, 125, 164, 243),
+                            //Background color
+                            scaffoldBackgroundColor:
+                                Color.fromARGB(255, 204, 204, 204),
+                            //Divider color
+                            dividerColor: Colors.grey,
+                            //Non selected days of the month color
+                            textTheme: TextTheme(
+                              bodyText2: TextStyle(color: Colors.black),
+                              button: TextStyle(fontSize: 18),
+                            ),
+                            colorScheme: ColorScheme.fromSwatch().copyWith(
+                              //Selected dates background color
+                              primary: Color.fromARGB(255, 125, 164, 243),
+                              //Month title and week days color
+                              onSurface: Colors.black,
+                              //Header elements and selected dates text color
+                              //onPrimary: Colors.white,
+                            ),
+                            iconTheme: IconThemeData(
+                              size: 30.0,
+                            ),
+                          ),
+                    child: child!,
+                  ),
+                ),
+              )
+            ]));
+
     setState(() {
       dateRange = newDateRange ?? dateRange;
       resetchecks();
@@ -212,799 +211,851 @@ class _CustomBuilderState extends State<CustomBuilder> {
   );
   @override
   Widget build(BuildContext context) {
-    final isDarkTheme =
-        MediaQuery.of(context).platformBrightness == Brightness.dark;
     start = dateRange.start;
     end = dateRange.end;
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(50),
-        child: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              size: 50.0,
-            ),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => Drawers(),
-                ),
-              );
-            },
-          ),
-        ),
-      ),
-      backgroundColor: isDarkTheme
-          ? Color.fromARGB(255, 16, 16, 16)
-          : Color.fromARGB(255, 204, 204, 204),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 120.0, vertical: 0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20.0, right: 20.0, bottom: 20, top: 50),
-                child: Text(
-                  translate("drawer.custom"),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 40,
-                      color: isDarkTheme ? Colors.white : Colors.black),
-                ),
-              ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      translate("custombuilder.range"),
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
-                      textAlign: TextAlign.start,
+    return Consumer<ThemeModel>(
+        builder: (context, ThemeModel themeNotifier, child) => Scaffold(
+              extendBodyBehindAppBar: true,
+              appBar: PreferredSize(
+                preferredSize: const Size.fromHeight(50),
+                child: AppBar(
+                  elevation: 0,
+                  backgroundColor: Colors.transparent,
+                  leading: IconButton(
+                    icon: Icon(
+                      Icons.arrow_back,
+                      size: 50.0,
                     ),
-                    SizedBox(
-                      width: 69,
-                    ),
-                    Container(
-                      child: SizedBox(
-                        width: 200,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            elevation: 2,
-                            shadowColor: isDarkTheme
-                                ? Colors.transparent
-                                : Colors.grey.withOpacity(0.5),
-                            primary: Color.fromARGB(255, 125, 164, 243),
-                            padding: EdgeInsets.all(15),
-                            shape: StadiumBorder(),
-                          ),
-                          child: Text(
-                            '${start.year}/${start.month}/${start.day}',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                          onPressed: dateTimeRangePicker,
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Drawers(),
                         ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 20),
-                      child: SizedBox(
-                        width: 200,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            elevation: 2,
-                            shadowColor: isDarkTheme
-                                ? Colors.transparent
-                                : Colors.grey.withOpacity(0.5),
-                            primary: Color.fromARGB(255, 232, 108, 99),
-                            padding: EdgeInsets.all(15),
-                            shape: StadiumBorder(),
-                          ),
-                          child: Text(
-                            '${end.year}/${end.month}/${end.day}',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                          onPressed: dateTimeRangePicker,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Container(
-                padding:
-                    EdgeInsets.only(bottom: 55, left: 50, right: 50, top: 45),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          translate("custombuilder.after"),
-                          style: TextStyle(fontSize: 22, color: Colors.white),
-                          textAlign: TextAlign.start,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: tremor,
-                                  onChanged: _onTremorsActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.tremor"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 8,
-                              ),
-                              const Icon(
-                                Icons.circle_rounded,
-                                color: Color.fromARGB(255, 255, 248, 82),
-                                size: 20,
-                              ),
-                              const Icon(
-                                Icons.circle_rounded,
-                                color: Color.fromARGB(255, 247, 184, 68),
-                                size: 20,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: lavaflow,
-                                  onChanged: _onlavaflowActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("info.aff.lava"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Builder(
-                                builder: (context) => IconButton(
-                                  icon:
-                                      Image.asset('assets/icons/lava_flow.png'),
-                                  iconSize: 20,
-                                  onPressed: () => {},
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: vents,
-                                  onChanged: _onventsActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("info.aff.vents"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Builder(
-                                builder: (context) => IconButton(
-                                  icon: Image.asset('assets/icons/vent.png'),
-                                  iconSize: 36,
-                                  onPressed: () => {},
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: hydrography,
-                                  onChanged: _onhydrographyActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("info.aff.hydro"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                "▬▬",
-                                style: TextStyle(
-                                    fontSize: 18.5,
-                                    color: Color.fromARGB(255, 3, 95, 171),
-                                    fontFamily: "OldStandard"),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: buildings,
-                                  onChanged: _onbuildingsActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.buildings"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              const Icon(
-                                Icons.square_rounded,
-                                color: Color.fromARGB(255, 237, 56, 51),
-                                size: 30,
-                              ),
-                              const Icon(
-                                Icons.square_rounded,
-                                color: Color.fromARGB(255, 253, 230, 125),
-                                size: 30,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: roads,
-                                  onChanged: _onroadsActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.roads"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              Text(
-                                "▬▬  ",
-                                style: TextStyle(
-                                    fontSize: 18.5,
-                                    color: Colors.red,
-                                    fontFamily: "OldStandard"),
-                              ),
-                              Text(
-                                "▬▬  ",
-                                style: TextStyle(
-                                    fontSize: 18.5,
-                                    color: Color.fromARGB(255, 249, 233, 82),
-                                    fontFamily: "OldStandard"),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: maritime,
-                                  onChanged: _onmaritimeActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.maritime"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Builder(
-                                builder: (context) => IconButton(
-                                  icon:
-                                      Image.asset('assets/icons/Polygon6.png'),
-                                  iconSize: 20,
-                                  onPressed: () => {},
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: closedroads,
-                                  onChanged: _onclosedroadsActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.closed"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              Builder(
-                                builder: (context) => IconButton(
-                                  icon: Image.asset('assets/icons/close.png'),
-                                  iconSize: 20,
-                                  onPressed: () => {},
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: municipalities,
-                                  onChanged: _onmunicipalitiesActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("info.situation.municipality"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                translate("info.situation.Text"),
-                                style: TextStyle(
-                                    fontSize: 23.0,
-                                    color: Color.fromARGB(255, 132, 95, 55),
-                                    fontFamily: "OldStandard"),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: maineruptive,
-                                  onChanged: _onmaineruptiveActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.main"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Opacity(
-                                opacity: 0.7,
-                                child: Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/main_eruptive_event.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: naturalland,
-                                  onChanged: _onnaturallandActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.natural"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              Builder(
-                                builder: (context) => IconButton(
-                                  icon: Image.asset(
-                                      'assets/icons/natural_land.png'),
-                                  iconSize: 20,
-                                  onPressed: () => {},
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: physiography,
-                                  onChanged: _onphysiographyActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.physiography"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              Builder(
-                                builder: (context) => IconButton(
-                                  icon: Image.asset(
-                                      'assets/icons/physiography.png'),
-                                  iconSize: 20,
-                                  onPressed: () => {},
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Transform.scale(
-                                scale: 1.3,
-                                child: Checkbox(
-                                  value: areaofinterest,
-                                  onChanged: _onareaofinterestActive,
-                                  checkColor:
-                                      Color.fromARGB(255, 115, 184, 117),
-                                  fillColor: MaterialStateProperty.all(
-                                      Color.fromARGB(250, 43, 43, 43)),
-                                ),
-                              ),
-                              Text(
-                                translate("custombuilder.area"),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 4,
-                              ),
-                              const Icon(
-                                Icons.rectangle_outlined,
-                                color: Color.fromARGB(255, 72, 188, 26),
-                                size: 46,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 125, 164, 243),
-                  border: Border.all(
-                    color: Colors.transparent,
-                    width: 2,
+                      );
+                    },
                   ),
-                  borderRadius: BorderRadius.circular(40),
-                  boxShadow: [
-                    BoxShadow(
-                      color: isDarkTheme
-                          ? Colors.transparent
-                          : Colors.grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
                 ),
               ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 300,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          elevation: 2,
-                          shadowColor: isDarkTheme
-                              ? Colors.transparent
-                              : Colors.grey.withOpacity(0.5),
-                          primary: isDarkTheme
-                              ? Color.fromARGB(255, 30, 30, 30)
-                              : Colors.white,
-                          padding: EdgeInsets.all(15),
-                          shape: StadiumBorder(),
+              backgroundColor: themeNotifier.isDark
+                  ? Color.fromARGB(255, 16, 16, 16)
+                  : Color.fromARGB(255, 204, 204, 204),
+              body: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 120.0, vertical: 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 20.0, right: 20.0, bottom: 20, top: 50),
+                        child: Text(
+                          translate("drawer.custom"),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 40,
+                              color: themeNotifier.isDark
+                                  ? Colors.white
+                                  : Colors.black),
                         ),
-                        child: Wrap(
-                          children: <Widget>[
-                            SizedBox(
-                              width: 7,
+                      ),
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              translate("custombuilder.range"),
+                              style: TextStyle(
+                                fontSize: 22,
+                              ),
+                              textAlign: TextAlign.start,
                             ),
-                            Text(translate('Track.visual'),
-                                style: TextStyle(fontSize: 26)),
-                            Icon(
-                              Icons.location_on_sharp,
-                              color: Color.fromARGB(255, 228, 6, 9),
-                              size: 30.0,
+                            SizedBox(
+                              width: 69,
+                            ),
+                            Container(
+                              child: SizedBox(
+                                width: 200,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 2,
+                                    shadowColor: themeNotifier.isDark
+                                        ? Colors.transparent
+                                        : Colors.grey.withOpacity(0.5),
+                                    primary: Color.fromARGB(255, 125, 164, 243),
+                                    padding: EdgeInsets.all(15),
+                                    shape: StadiumBorder(),
+                                  ),
+                                  child: Text(
+                                    '${start.year}/${start.month}/${start.day}',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  onPressed: () =>
+                                      dateTimeRangePicker(themeNotifier.isDark),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 20),
+                              child: SizedBox(
+                                width: 200,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 2,
+                                    shadowColor: themeNotifier.isDark
+                                        ? Colors.transparent
+                                        : Colors.grey.withOpacity(0.5),
+                                    primary: Color.fromARGB(255, 232, 108, 99),
+                                    padding: EdgeInsets.all(15),
+                                    shape: StadiumBorder(),
+                                  ),
+                                  child: Text(
+                                    '${end.year}/${end.month}/${end.day}',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  onPressed: () =>
+                                      dateTimeRangePicker(themeNotifier.isDark),
+                                ),
+                              ),
                             ),
                           ],
                         ),
-                        onPressed: () {
-                          // send to LG
-                          setState(() {
-                            String customDataFinal = "";
-                            for (int i = 0; i <= 12; i++)
-                              customDataFinal += kmltext[i];
-                            kml = KML("custombuilt", customDataFinal);
-                          });
-                          LGConnection().cleanVisualization().then((value) {
-                            LGConnection()
-                                .sendToLG(kml.mount(), "custombuilt")
-                                .then((value) {
-                              _showToast(translate('Track.Visualize'));
-                              //LGConnection().buildOrbit(kml.mount());
-                              setState(() {
-                                isOpen = true;
-                              });
-                            });
-                          }).catchError((onError) {
-                            print('oh no $onError');
-                            if (onError == 'nogeodata') {
-                              showAlertDialog(translate('Track.alert'),
-                                  translate('Track.alert2'));
-                            }
-                            showAlertDialog(translate('Track.alert3'),
-                                translate('Track.alert4'));
-                          });
-                        }),
-                  ),
-                  Padding(
-                    padding: new EdgeInsets.only(
-                      left: 20.0,
-                      right: 10.0,
-                    ),
-                    child: Container(
-                      color: isDarkTheme
-                          ? Color.fromARGB(255, 16, 16, 16)
-                          : Color.fromARGB(255, 204, 204, 204),
-                      child: Builder(
-                        builder: (context) => IconButton(
-                          icon: Image.asset('assets/icons/download.png'),
-                          iconSize: 55,
-                          onPressed: () async {
-                            setState(() {
-                              String customDataFinal = "";
-                              for (int i = 0; i <= 12; i++)
-                                customDataFinal += kmltext[i];
-                              kml = KML("custombuilt", customDataFinal);
-                            });
-                            var status = await Permission.storage.status;
-
-                            if (status.isGranted && "custombuilt" != "") {
-                              try {
-                                await KMLGenerator.generateKML(
-                                    kml.mount(), "custombuilt");
-                                showAlertDialog(translate("Tasks.alert"),
-                                    translate("Tasks.alert2"));
-                              } catch (e) {
-                                print('error $e');
-                                showAlertDialog(translate("Tasks.alert3"),
-                                    translate("Tasks.alert4"));
-                              }
-                            } else {
-                              var isGranted =
-                                  await Permission.storage.request().isGranted;
-                              if (isGranted && "custombuilt" != "") {
-                                // download kml
-                                try {
-                                  await KMLGenerator.generateKML(
-                                      kml.mount(), "custombuilt");
-                                  showAlertDialog(translate("Tasks.alert"),
-                                      translate("Tasks.alert2"));
-                                } catch (e) {
-                                  print('error $e');
-                                  showAlertDialog(translate("Tasks.alert3"),
-                                      translate("Tasks.alert4"));
-                                }
-                              } else {
-                                showAlertDialog(translate("Tasks.alert3"),
-                                    translate("Tasks.alert4"));
-                              }
-                            }
-                          },
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(
+                            bottom: 55, left: 50, right: 50, top: 45),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  translate("custombuilder.after"),
+                                  style: TextStyle(
+                                      fontSize: 22, color: Colors.white),
+                                  textAlign: TextAlign.start,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: tremor,
+                                          onChanged: _onTremorsActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.tremor"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      const Icon(
+                                        Icons.circle_rounded,
+                                        color:
+                                            Color.fromARGB(255, 255, 248, 82),
+                                        size: 20,
+                                      ),
+                                      const Icon(
+                                        Icons.circle_rounded,
+                                        color:
+                                            Color.fromARGB(255, 247, 184, 68),
+                                        size: 20,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: lavaflow,
+                                          onChanged: _onlavaflowActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("info.aff.lava"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 2,
+                                      ),
+                                      Builder(
+                                        builder: (context) => IconButton(
+                                          icon: Image.asset(
+                                              'assets/icons/lava_flow.png'),
+                                          iconSize: 20,
+                                          onPressed: () => {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: vents,
+                                          onChanged: _onventsActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("info.aff.vents"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Builder(
+                                        builder: (context) => IconButton(
+                                          icon: Image.asset(
+                                              'assets/icons/vent.png'),
+                                          iconSize: 36,
+                                          onPressed: () => {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: hydrography,
+                                          onChanged: _onhydrographyActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("info.aff.hydro"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        "▬▬",
+                                        style: TextStyle(
+                                            fontSize: 18.5,
+                                            color:
+                                                Color.fromARGB(255, 3, 95, 171),
+                                            fontFamily: "OldStandard"),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: buildings,
+                                          onChanged: _onbuildingsActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.buildings"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      const Icon(
+                                        Icons.square_rounded,
+                                        color: Color.fromARGB(255, 237, 56, 51),
+                                        size: 30,
+                                      ),
+                                      const Icon(
+                                        Icons.square_rounded,
+                                        color:
+                                            Color.fromARGB(255, 253, 230, 125),
+                                        size: 30,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: roads,
+                                          onChanged: _onroadsActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.roads"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "▬▬  ",
+                                        style: TextStyle(
+                                            fontSize: 18.5,
+                                            color: Colors.red,
+                                            fontFamily: "OldStandard"),
+                                      ),
+                                      Text(
+                                        "▬▬  ",
+                                        style: TextStyle(
+                                            fontSize: 18.5,
+                                            color: Color.fromARGB(
+                                                255, 249, 233, 82),
+                                            fontFamily: "OldStandard"),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: maritime,
+                                          onChanged: _onmaritimeActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.maritime"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 2,
+                                      ),
+                                      Builder(
+                                        builder: (context) => IconButton(
+                                          icon: Image.asset(
+                                              'assets/icons/Polygon6.png'),
+                                          iconSize: 20,
+                                          onPressed: () => {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: closedroads,
+                                          onChanged: _onclosedroadsActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.closed"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Builder(
+                                        builder: (context) => IconButton(
+                                          icon: Image.asset(
+                                              'assets/icons/close.png'),
+                                          iconSize: 20,
+                                          onPressed: () => {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: municipalities,
+                                          onChanged: _onmunicipalitiesActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate(
+                                            "info.situation.municipality"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("info.situation.Text"),
+                                        style: TextStyle(
+                                            fontSize: 23.0,
+                                            color: Color.fromARGB(
+                                                255, 132, 95, 55),
+                                            fontFamily: "OldStandard"),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: maineruptive,
+                                          onChanged: _onmaineruptiveActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.main"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Opacity(
+                                        opacity: 0.7,
+                                        child: Builder(
+                                          builder: (context) => IconButton(
+                                            icon: Image.asset(
+                                                'assets/icons/main_eruptive_event.png'),
+                                            iconSize: 20,
+                                            onPressed: () => {},
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: naturalland,
+                                          onChanged: _onnaturallandActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.natural"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Builder(
+                                        builder: (context) => IconButton(
+                                          icon: Image.asset(
+                                              'assets/icons/natural_land.png'),
+                                          iconSize: 20,
+                                          onPressed: () => {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: physiography,
+                                          onChanged: _onphysiographyActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.physiography"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Builder(
+                                        builder: (context) => IconButton(
+                                          icon: Image.asset(
+                                              'assets/icons/physiography.png'),
+                                          iconSize: 20,
+                                          onPressed: () => {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Transform.scale(
+                                        scale: 1.3,
+                                        child: Checkbox(
+                                          value: areaofinterest,
+                                          onChanged: _onareaofinterestActive,
+                                          checkColor: Color.fromARGB(
+                                              255, 115, 184, 117),
+                                          fillColor: MaterialStateProperty.all(
+                                              Color.fromARGB(250, 43, 43, 43)),
+                                        ),
+                                      ),
+                                      Text(
+                                        translate("custombuilder.area"),
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      const Icon(
+                                        Icons.rectangle_outlined,
+                                        color: Color.fromARGB(255, 72, 188, 26),
+                                        size: 46,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 125, 164, 243),
+                          border: Border.all(
+                            color: Colors.transparent,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(40),
+                          boxShadow: [
+                            BoxShadow(
+                              color: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset:
+                                  Offset(0, 3), // changes position of shadow
+                            ),
+                          ],
                         ),
                       ),
-                    ),
+                      SizedBox(height: 30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 300,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 2,
+                                  shadowColor: themeNotifier.isDark
+                                      ? Colors.transparent
+                                      : Colors.grey.withOpacity(0.5),
+                                  primary: themeNotifier.isDark
+                                      ? Color.fromARGB(255, 30, 30, 30)
+                                      : Colors.white,
+                                  padding: EdgeInsets.all(15),
+                                  shape: StadiumBorder(),
+                                ),
+                                child: Wrap(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      width: 7,
+                                    ),
+                                    Text(translate('Track.visual'),
+                                        style: TextStyle(fontSize: 26)),
+                                    Icon(
+                                      Icons.location_on_sharp,
+                                      color: Color.fromARGB(255, 228, 6, 9),
+                                      size: 30.0,
+                                    ),
+                                  ],
+                                ),
+                                onPressed: () {
+                                  // send to LG
+                                  setState(() {
+                                    String customDataFinal = "";
+                                    for (int i = 0; i <= 12; i++)
+                                      customDataFinal += kmltext[i];
+                                    kml = KML("custombuilt", customDataFinal);
+                                  });
+                                  LGConnection()
+                                      .cleanVisualization()
+                                      .then((value) {
+                                    LGConnection()
+                                        .sendToLG(kml.mount(), "custombuilt")
+                                        .then((value) {
+                                      _showToast(translate('Track.Visualize'));
+                                      //LGConnection().buildOrbit(kml.mount());
+                                      setState(() {
+                                        isOpen = true;
+                                      });
+                                    });
+                                  }).catchError((onError) {
+                                    print('oh no $onError');
+                                    if (onError == 'nogeodata') {
+                                      showAlertDialog(translate('Track.alert'),
+                                          translate('Track.alert2'));
+                                    }
+                                    showAlertDialog(translate('Track.alert3'),
+                                        translate('Track.alert4'));
+                                  });
+                                }),
+                          ),
+                          Padding(
+                            padding: new EdgeInsets.only(
+                              left: 20.0,
+                              right: 10.0,
+                            ),
+                            child: Container(
+                              color: themeNotifier.isDark
+                                  ? Color.fromARGB(255, 16, 16, 16)
+                                  : Color.fromARGB(255, 204, 204, 204),
+                              child: Builder(
+                                builder: (context) => IconButton(
+                                  icon:
+                                      Image.asset('assets/icons/download.png'),
+                                  iconSize: 55,
+                                  onPressed: () async {
+                                    setState(() {
+                                      String customDataFinal = "";
+                                      for (int i = 0; i <= 12; i++)
+                                        customDataFinal += kmltext[i];
+                                      kml = KML("custombuilt", customDataFinal);
+                                    });
+                                    var status =
+                                        await Permission.storage.status;
+
+                                    if (status.isGranted &&
+                                        "custombuilt" != "") {
+                                      try {
+                                        await KMLGenerator.generateKML(
+                                            kml.mount(), "custombuilt");
+                                        showAlertDialog(
+                                            translate("Tasks.alert"),
+                                            translate("Tasks.alert2"));
+                                      } catch (e) {
+                                        print('error $e');
+                                        showAlertDialog(
+                                            translate("Tasks.alert3"),
+                                            translate("Tasks.alert4"));
+                                      }
+                                    } else {
+                                      var isGranted = await Permission.storage
+                                          .request()
+                                          .isGranted;
+                                      if (isGranted && "custombuilt" != "") {
+                                        // download kml
+                                        try {
+                                          await KMLGenerator.generateKML(
+                                              kml.mount(), "custombuilt");
+                                          showAlertDialog(
+                                              translate("Tasks.alert"),
+                                              translate("Tasks.alert2"));
+                                        } catch (e) {
+                                          print('error $e');
+                                          showAlertDialog(
+                                              translate("Tasks.alert3"),
+                                              translate("Tasks.alert4"));
+                                        }
+                                      } else {
+                                        showAlertDialog(
+                                            translate("Tasks.alert3"),
+                                            translate("Tasks.alert4"));
+                                      }
+                                    }
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ],
-          ),
-        ),
-      ),
-    );
+            ));
   }
 
   void _onnaturallandActive(bool? newValue) => setState(() {

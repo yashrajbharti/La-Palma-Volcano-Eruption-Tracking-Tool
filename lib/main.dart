@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:webscrapperapp/codingapp/splash.dart';
+import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/theme-storage.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,17 +33,24 @@ class MyApp extends StatelessWidget {
     var localizationDelegate = LocalizedApp.of(context).delegate;
     return LocalizationProvider(
       state: LocalizationProvider.of(context).state,
-      child: MaterialApp(
-        title: "VolTrac",
-        localizationsDelegates: [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          localizationDelegate
-        ],
-        supportedLocales: localizationDelegate.supportedLocales,
-        locale: localizationDelegate.currentLocale,
-        home: Splash(),
-      ),
+      child: ChangeNotifierProvider(
+          create: (_) => ThemeModel(),
+          child: Consumer<ThemeModel>(
+              builder: (context, ThemeModel themeNotifier, child) {
+            return MaterialApp(
+              title: "VolTrac",
+              theme:
+                  themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
+              localizationsDelegates: [
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                localizationDelegate
+              ],
+              supportedLocales: localizationDelegate.supportedLocales,
+              locale: localizationDelegate.currentLocale,
+              home: Splash(),
+            );
+          })),
     );
   }
 }

@@ -7,6 +7,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:ui' as ui;
 import 'package:webscrapperapp/codingapp/drawer.dart';
 import 'package:webscrapperapp/codingapp/translate.dart';
+import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/theme-storage.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -20,6 +22,7 @@ class SettingsState extends State<Settings> {
   bool isLoggedIn = false;
   bool obscurePassword = true;
   bool loaded = false;
+
   TextEditingController username = TextEditingController();
   TextEditingController ipAddress = TextEditingController();
   TextEditingController password = TextEditingController();
@@ -141,253 +144,254 @@ class SettingsState extends State<Settings> {
     password.text = preferences.getString('master_password') ?? '';
     portNumber.text = preferences.getString('master_portNumber') ?? '';
     numberofrigs.text = preferences.getString('numberofrigs') ?? '';
-
     await checkConnectionStatus();
-
     loaded = true;
   }
 
   @override
   Widget build(BuildContext context) {
-    final isDarkTheme =
-        MediaQuery.of(context).platformBrightness == Brightness.dark;
     if (!loaded) init();
     var localizationDelegate = LocalizedApp.of(context).delegate;
 
-    return Scaffold(
-        extendBodyBehindAppBar: true,
-        backgroundColor: isDarkTheme
-            ? Color.fromARGB(255, 16, 16, 16)
-            : Color.fromARGB(255, 204, 204, 204),
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50),
-          child: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            leading: IconButton(
-              icon: Icon(
-                Icons.arrow_back,
-                size: 50.0,
+    return Consumer<ThemeModel>(
+        builder: (context, ThemeModel themeNotifier, child) => Scaffold(
+            extendBodyBehindAppBar: true,
+            backgroundColor: themeNotifier.isDark
+                ? Color.fromARGB(255, 16, 16, 16)
+                : Color.fromARGB(255, 204, 204, 204),
+            appBar: PreferredSize(
+              preferredSize: Size.fromHeight(50),
+              child: AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                leading: IconButton(
+                  icon: Icon(
+                    Icons.arrow_back,
+                    size: 50.0,
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => Drawers(),
+                      ),
+                    );
+                  },
+                ),
               ),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) => Drawers(),
-                  ),
-                );
-              },
             ),
-          ),
-        ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 120.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Column(
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 120.0),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [],
-                ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 10.0, top: 50),
-                  child: Text(
-                    translate("Settings.title"),
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 10.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        translate("Settings.Status"),
-                        textAlign: TextAlign.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 10.0, top: 50),
+                      child: Text(
+                        translate("Settings.title"),
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                            fontSize: 40, fontWeight: FontWeight.bold),
                       ),
-                      Text(
-                        connectionStatus
-                            ? translate("Settings.connect")
-                            : translate("Settings.disconnect"),
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      connectionStatus
-                          ? Icon(
-                              Icons.check_circle,
-                              color: Colors.green,
-                              size: 20,
-                            )
-                          : Icon(
-                              Icons.cancel,
-                              color: Colors.red,
-                              size: 20,
-                            ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 0.0),
-                  child: TextFormField(
-                    controller: username,
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                      filled: true,
-                      hintText: translate("Settings.placeholder"),
-                      labelText: translate("Settings.label"),
-                      labelStyle: TextStyle(
-                          color: isDarkTheme
-                              ? Color.fromARGB(255, 204, 204, 204)
-                              : Color.fromARGB(255, 74, 74, 74)),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  child: TextFormField(
-                    controller: ipAddress,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      filled: true,
-                      hintText: translate("Settings.placeholder2"),
-                      labelText: translate("Settings.label2"),
-                      labelStyle: TextStyle(
-                          color: isDarkTheme
-                              ? Color.fromARGB(255, 204, 204, 204)
-                              : Color.fromARGB(255, 74, 74, 74)),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 20.0),
-                  child: TextFormField(
-                    controller: portNumber,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      filled: true,
-                      hintText: translate("Settings.placeholder3"),
-                      labelText: translate("Settings.label3"),
-                      labelStyle: TextStyle(
-                          color: isDarkTheme
-                              ? Color.fromARGB(255, 204, 204, 204)
-                              : Color.fromARGB(255, 74, 74, 74)),
-                    ),
-                  ),
-                ),
-                TextFormField(
-                  controller: password,
-                  obscureText: obscurePassword,
-                  decoration: InputDecoration(
-                    filled: true,
-                    hintText: translate("Settings.placeholder4"),
-                    labelText: translate("Settings.label4"),
-                    labelStyle: TextStyle(
-                        color: isDarkTheme
-                            ? Color.fromARGB(255, 204, 204, 204)
-                            : Color.fromARGB(255, 74, 74, 74)),
-                    suffixIcon: IconButton(
-                      icon: Icon(Icons.remove_red_eye, color: _iconColor),
-                      onPressed: () {
-                        setState(
-                          () {
-                            obscurePassword = !obscurePassword;
-                            if (_iconColor == Color.fromARGB(255, 74, 74, 74)) {
-                              _iconColor = Color(0xFF3E87F5);
-                            } else {
-                              _iconColor = Color.fromARGB(255, 74, 74, 74);
-                            }
-                          },
-                        );
-                      },
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 20.0),
-                  child: TextFormField(
-                    controller: numberofrigs,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      filled: true,
-                      hintText: translate("Settings.placeholder5"),
-                      labelText: translate("Settings.label5"),
-                      labelStyle: TextStyle(
-                          color: isDarkTheme
-                              ? Color.fromARGB(255, 204, 204, 204)
-                              : Color.fromARGB(255, 74, 74, 74)),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  child: SizedBox(
-                    width: 100,
-                    child: ElevatedButton(
-                      child: Wrap(
-                        children: <Widget>[
-                          SizedBox(
-                            width: 10,
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 10.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            translate("Settings.Status"),
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
                           ),
-                          Text(translate("Settings.button"),
-                              style: TextStyle(fontSize: 25)),
+                          Text(
+                            connectionStatus
+                                ? translate("Settings.connect")
+                                : translate("Settings.disconnect"),
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          connectionStatus
+                              ? Icon(
+                                  Icons.check_circle,
+                                  color: Colors.green,
+                                  size: 20,
+                                )
+                              : Icon(
+                                  Icons.cancel,
+                                  color: Colors.red,
+                                  size: 20,
+                                ),
                         ],
                       ),
-                      onPressed: () {
-                        connect();
-                        FocusManager.instance.primaryFocus?.unfocus();
-                      },
-                      style: ElevatedButton.styleFrom(
-                        elevation: 2,
-                        shadowColor: isDarkTheme
-                            ? Colors.transparent
-                            : Colors.grey.withOpacity(0.5),
-                        primary: isDarkTheme
-                            ? ui.Color.fromARGB(255, 30, 30, 30)
-                            : Colors.white,
-                        padding: EdgeInsets.all(15),
-                        shape: StadiumBorder(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 0.0),
+                      child: TextFormField(
+                        controller: username,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          filled: true,
+                          hintText: translate("Settings.placeholder"),
+                          labelText: translate("Settings.label"),
+                          labelStyle: TextStyle(
+                              color: themeNotifier.isDark
+                                  ? Color.fromARGB(255, 204, 204, 204)
+                                  : Color.fromARGB(255, 74, 74, 74)),
+                        ),
                       ),
                     ),
-                  ),
-                ),
-                Divider(
-                  color: isDarkTheme
-                      ? Color.fromARGB(255, 204, 204, 204)
-                      : Color.fromARGB(255, 74, 74, 74),
-                  thickness: 1,
-                ),
-                ListTile(
-                  leading: Text(
-                    translate('language.flag'),
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  title: Text(translate('language.selected_message', args: {
-                    'language': translate(
-                        'language.name.${localizationDelegate.currentLocale.languageCode}')
-                  })),
-                  trailing: IconButton(
-                    onPressed: () => onActionSheetPress(context),
-                    icon: Icon(
-                      Icons.translate_rounded,
-                      size: 32,
-                      color: isDarkTheme
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20.0),
+                      child: TextFormField(
+                        controller: ipAddress,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          filled: true,
+                          hintText: translate("Settings.placeholder2"),
+                          labelText: translate("Settings.label2"),
+                          labelStyle: TextStyle(
+                              color: themeNotifier.isDark
+                                  ? Color.fromARGB(255, 204, 204, 204)
+                                  : Color.fromARGB(255, 74, 74, 74)),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 20.0),
+                      child: TextFormField(
+                        controller: portNumber,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          filled: true,
+                          hintText: translate("Settings.placeholder3"),
+                          labelText: translate("Settings.label3"),
+                          labelStyle: TextStyle(
+                              color: themeNotifier.isDark
+                                  ? Color.fromARGB(255, 204, 204, 204)
+                                  : Color.fromARGB(255, 74, 74, 74)),
+                        ),
+                      ),
+                    ),
+                    TextFormField(
+                      controller: password,
+                      obscureText: obscurePassword,
+                      decoration: InputDecoration(
+                        filled: true,
+                        hintText: translate("Settings.placeholder4"),
+                        labelText: translate("Settings.label4"),
+                        labelStyle: TextStyle(
+                            color: themeNotifier.isDark
+                                ? Color.fromARGB(255, 204, 204, 204)
+                                : Color.fromARGB(255, 74, 74, 74)),
+                        suffixIcon: IconButton(
+                          icon: Icon(Icons.remove_red_eye, color: _iconColor),
+                          onPressed: () {
+                            setState(
+                              () {
+                                obscurePassword = !obscurePassword;
+                                if (_iconColor ==
+                                    Color.fromARGB(255, 74, 74, 74)) {
+                                  _iconColor = Color(0xFF3E87F5);
+                                } else {
+                                  _iconColor = Color.fromARGB(255, 74, 74, 74);
+                                }
+                              },
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 20.0),
+                      child: TextFormField(
+                        controller: numberofrigs,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          filled: true,
+                          hintText: translate("Settings.placeholder5"),
+                          labelText: translate("Settings.label5"),
+                          labelStyle: TextStyle(
+                              color: themeNotifier.isDark
+                                  ? Color.fromARGB(255, 204, 204, 204)
+                                  : Color.fromARGB(255, 74, 74, 74)),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20.0),
+                      child: SizedBox(
+                        width: 100,
+                        child: ElevatedButton(
+                          child: Wrap(
+                            children: <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(translate("Settings.button"),
+                                  style: TextStyle(fontSize: 25)),
+                            ],
+                          ),
+                          onPressed: () {
+                            connect();
+                            FocusManager.instance.primaryFocus?.unfocus();
+                          },
+                          style: ElevatedButton.styleFrom(
+                            elevation: 2,
+                            shadowColor: themeNotifier.isDark
+                                ? Colors.transparent
+                                : Colors.grey.withOpacity(0.5),
+                            primary: themeNotifier.isDark
+                                ? ui.Color.fromARGB(255, 30, 30, 30)
+                                : Colors.white,
+                            padding: EdgeInsets.all(15),
+                            shape: StadiumBorder(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: themeNotifier.isDark
                           ? Color.fromARGB(255, 204, 204, 204)
                           : Color.fromARGB(255, 74, 74, 74),
+                      thickness: 1,
                     ),
-                  ),
+                    ListTile(
+                      leading: Text(
+                        translate('language.flag'),
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      title: Text(translate('language.selected_message', args: {
+                        'language': translate(
+                            'language.name.${localizationDelegate.currentLocale.languageCode}')
+                      })),
+                      trailing: IconButton(
+                        onPressed: () {
+                          onActionSheetPress(context, themeNotifier.isDark);
+                        },
+                        icon: Icon(
+                          Icons.translate_rounded,
+                          size: 32,
+                          color: themeNotifier.isDark
+                              ? Color.fromARGB(255, 204, 204, 204)
+                              : Color.fromARGB(255, 74, 74, 74),
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: themeNotifier.isDark
+                          ? Color.fromARGB(255, 204, 204, 204)
+                          : Color.fromARGB(255, 74, 74, 74),
+                      thickness: 1,
+                    ),
+                  ],
                 ),
-                Divider(
-                  color: isDarkTheme
-                      ? Color.fromARGB(255, 204, 204, 204)
-                      : Color.fromARGB(255, 74, 74, 74),
-                  thickness: 1,
-                ),
-              ],
-            ),
-          ),
-        ));
+              ),
+            )));
   }
 }

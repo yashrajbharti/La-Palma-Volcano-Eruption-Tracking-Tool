@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:splashscreen/splashscreen.dart';
-
+import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/theme-storage.dart';
 import 'package:webscrapperapp/codingapp/mainpage.dart';
 
 class Splash extends StatefulWidget {
@@ -16,25 +17,24 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
-    final isDarkTheme =
-        MediaQuery.of(context).platformBrightness == Brightness.dark;
-    return SplashScreen(
-      seconds: 3,
-      navigateAfterSeconds: First(),
-      title: Text(
-        translate('title.name'),
-        style: TextStyle(
-          fontFamily: 'OldStandard',
-          fontSize: 55,
-          color: Color.fromARGB(255, 204, 204, 204),
-        ),
-      ),
-      image: Image.asset("assets/volcano.png"),
-      backgroundColor: isDarkTheme
-          ? Color.fromARGB(255, 16, 16, 16)
-          : Color.fromARGB(255, 30, 30, 30),
-      photoSize: 100.0,
-      loaderColor: const Color.fromARGB(255, 204, 204, 204),
-    );
+    return Consumer<ThemeModel>(
+        builder: (context, ThemeModel themeNotifier, child) => SplashScreen(
+              seconds: 3,
+              navigateAfterSeconds: First(),
+              title: Text(
+                translate('title.name'),
+                style: TextStyle(
+                  fontFamily: 'OldStandard',
+                  fontSize: 55,
+                  color: Color.fromARGB(255, 204, 204, 204),
+                ),
+              ),
+              image: Image.asset("assets/volcano.png"),
+              backgroundColor: themeNotifier.isDark
+                  ? Color.fromARGB(255, 16, 16, 16)
+                  : Color.fromARGB(255, 30, 30, 30),
+              photoSize: 100.0,
+              loaderColor: const Color.fromARGB(255, 204, 204, 204),
+            ));
   }
 }

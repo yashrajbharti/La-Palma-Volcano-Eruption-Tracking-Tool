@@ -11,13 +11,11 @@ void showDemoActionSheet(
       context: context, builder: (BuildContext context) => child);
 }
 
-void onActionSheetPress(BuildContext context) {
-  final isDarkTheme =
-      MediaQuery.of(context).platformBrightness == Brightness.dark;
+void onActionSheetPress(BuildContext context, bool blackandwhite) {
   showDemoActionSheet(
       context: context,
       child: Theme(
-        data: isDarkTheme ? ThemeData.dark() : ThemeData.light(),
+        data: blackandwhite ? ThemeData.dark() : ThemeData.light(),
         child: CupertinoActionSheet(
           title: Text(translate('language.selection.title'),
               style: TextStyle(

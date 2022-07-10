@@ -10,7 +10,8 @@ import 'dart:developer';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/theme-storage.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
@@ -143,384 +144,394 @@ class _SendtoLGState extends State<SendtoLG> {
 
   @override
   Widget build(BuildContext context) {
-    final isDarkTheme =
-        MediaQuery.of(context).platformBrightness == Brightness.dark;
+    return Consumer<ThemeModel>(
+        builder: (context, ThemeModel themeNotifier, child) => Container(
+              margin: const EdgeInsets.fromLTRB(90, 30, 90, 0),
+              child: Column(
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(
+                          width: 500,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15),
+                            ),
+                            onPressed: () async {
+                              savekml_Task(projectname[0]);
+                              await _read(0);
+                              jumpToPage(0);
+                              _showToast(translate('Track.ready'));
+                            },
+                            child: Wrap(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(translate('Track.hist'),
+                                    style: TextStyle(fontSize: 40)),
+                                Transform.scale(
+                                    scale: 1.5,
+                                    child: Builder(
+                                      builder: (context) => IconButton(
+                                        icon: Image.asset(
+                                            'assets/icons/historic.png'),
+                                        onPressed: null,
+                                      ),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 500,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15),
+                            ),
+                            onPressed: () async {
+                              savekml_Task(projectname[1]);
+                              await _read(1);
+                              jumpToPage(1);
+                              _showToast(translate('Track.ready'));
+                            },
+                            child: Wrap(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(translate('Track.lava'),
+                                    style: TextStyle(fontSize: 40)),
+                                Transform.scale(
+                                    scale: 1.5,
+                                    child: Builder(
+                                      builder: (context) => IconButton(
+                                        icon: Image.asset(
+                                            'assets/icons/lavaflow.png'),
+                                        onPressed: null,
+                                      ),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        )
+                      ]),
+                  SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        width: 500,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15)),
+                          onPressed: () async {
+                            savekml_Task(projectname[2]);
+                            await _read(2);
+                            jumpToPage(2);
+                            _showToast(translate('Track.ready'));
+                          },
+                          child: Wrap(
+                            children: <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(translate('Track.prehistoric'),
+                                  style: TextStyle(fontSize: 40)),
+                              Transform.scale(
+                                  scale: 1.5,
+                                  child: Builder(
+                                    builder: (context) => IconButton(
+                                      icon: Image.asset(
+                                          'assets/icons/prehistoric.png'),
+                                      onPressed: null,
+                                    ),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 500,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15)),
+                          onPressed: () async {
+                            savekml_Task(projectname[3]);
+                            await _read(3);
+                            jumpToPage(3);
+                            _showToast(translate('Track.ready'));
+                          },
+                          child: Wrap(
+                            children: <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(translate('Track.aff'),
+                                  style: TextStyle(fontSize: 40)),
+                              Transform.scale(
+                                  scale: 1.5,
+                                  child: Builder(
+                                    builder: (context) => IconButton(
+                                      icon: Image.asset(
+                                          'assets/icons/affectedareas.png'),
+                                      onPressed: null,
+                                    ),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 16),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(
+                          width: 500,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15),
+                            ),
+                            onPressed: () async {
+                              savekml_Task(projectname[4]);
+                              await _read(4);
+                              jumpToPage(4);
+                              _showToast(translate('Track.ready'));
+                            },
+                            child: Wrap(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(translate('Track.land'),
+                                    style: TextStyle(fontSize: 40)),
+                                Transform.scale(
+                                    scale: 1.9,
+                                    child: Builder(
+                                      builder: (context) => IconButton(
+                                        icon: Image.asset(
+                                            'assets/icons/landscape.png'),
+                                        onPressed: null,
+                                      ),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 500,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15),
+                            ),
+                            onPressed: () async {
+                              savekml_Task(projectname[5]);
+                              await _read(5);
+                              jumpToPage(5);
+                              _showToast(translate('Track.ready'));
+                            },
+                            child: Wrap(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(translate('Track.So2'),
+                                    style: TextStyle(fontSize: 40)),
+                                Transform.scale(
+                                    scale: 1.5,
+                                    child: Builder(
+                                      builder: (context) => IconButton(
+                                        icon: Image.asset(
+                                            'assets/icons/so2emissions.png'),
+                                        onPressed: null,
+                                      ),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        )
+                      ]),
+                  SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        width: 500,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15)),
+                          onPressed: () async {
+                            savekml_Task(projectname[6]);
+                            await _read(6);
+                            jumpToPage(6);
+                            _showToast(translate('Track.ready'));
+                          },
+                          child: Wrap(
+                            children: <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(translate('Track.situation'),
+                                  style: TextStyle(fontSize: 40)),
+                              Transform.scale(
+                                  scale: 1.5,
+                                  child: Builder(
+                                    builder: (context) => IconButton(
+                                      icon: Image.asset(
+                                          'assets/icons/situation.png'),
+                                      onPressed: null,
+                                    ),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 500,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 2,
+                              shadowColor: themeNotifier.isDark
+                                  ? Colors.transparent
+                                  : Colors.grey.withOpacity(0.5),
+                              primary: themeNotifier.isDark
+                                  ? ui.Color.fromARGB(255, 43, 43, 43)
+                                  : ui.Color.fromARGB(255, 220, 220, 220),
+                              padding: EdgeInsets.all(15)),
+                          onPressed: () async {
+                            savekml_Task(projectname[7]);
+                            await _read(7);
+                            jumpToPage(7);
+                            _showToast(translate('Track.ready'));
+                          },
+                          child: Wrap(
+                            children: <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(translate('Track.located'),
+                                  style: TextStyle(fontSize: 40)),
+                              Transform.scale(
+                                  scale: 1.5,
+                                  child: Builder(
+                                    builder: (context) => IconButton(
+                                      icon: Image.asset(
+                                          'assets/icons/locatedevents.png'),
+                                      onPressed: null,
+                                    ),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    width: 360,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          elevation: 2,
+                          shadowColor: themeNotifier.isDark
+                              ? Colors.transparent
+                              : Colors.grey.withOpacity(0.5),
+                          primary: themeNotifier.isDark
+                              ? ui.Color.fromARGB(255, 30, 30, 30)
+                              : Colors.white,
+                          padding: EdgeInsets.all(15),
+                          shape: StadiumBorder(),
+                        ),
+                        child: Wrap(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(translate('Track.visual'),
+                                style: TextStyle(fontSize: 35)),
+                            Icon(
+                              Icons.location_on_sharp,
+                              color: ui.Color.fromARGB(255, 228, 6, 9),
+                              size: 45.0,
+                            ),
+                          ],
+                        ),
+                        onPressed: () {
+                          // send to LG
+                          LGConnection()
+                              .sendToLG(kml.mount(), finalname)
+                              .then((value) {
+                            _showToast(translate('Track.Visualize'));
 
-    return Container(
-      margin: const EdgeInsets.fromLTRB(90, 30, 90, 0),
-      child: Column(
-        children: [
-          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            SizedBox(
-              width: 500,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  elevation: 2,
-                  shadowColor: isDarkTheme
-                      ? Colors.transparent
-                      : Colors.grey.withOpacity(0.5),
-                  primary: isDarkTheme
-                      ? ui.Color.fromARGB(255, 43, 43, 43)
-                      : ui.Color.fromARGB(255, 220, 220, 220),
-                  padding: EdgeInsets.all(15),
-                ),
-                onPressed: () async {
-                  savekml_Task(projectname[0]);
-                  await _read(0);
-                  jumpToPage(0);
-                  _showToast(translate('Track.ready'));
-                },
-                child: Wrap(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(translate('Track.hist'),
-                        style: TextStyle(fontSize: 40)),
-                    Transform.scale(
-                        scale: 1.5,
-                        child: Builder(
-                          builder: (context) => IconButton(
-                            icon: Image.asset('assets/icons/historic.png'),
-                            onPressed: null,
-                          ),
-                        )),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 500,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  elevation: 2,
-                  shadowColor: isDarkTheme
-                      ? Colors.transparent
-                      : Colors.grey.withOpacity(0.5),
-                  primary: isDarkTheme
-                      ? ui.Color.fromARGB(255, 43, 43, 43)
-                      : ui.Color.fromARGB(255, 220, 220, 220),
-                  padding: EdgeInsets.all(15),
-                ),
-                onPressed: () async {
-                  savekml_Task(projectname[1]);
-                  await _read(1);
-                  jumpToPage(1);
-                  _showToast(translate('Track.ready'));
-                },
-                child: Wrap(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(translate('Track.lava'),
-                        style: TextStyle(fontSize: 40)),
-                    Transform.scale(
-                        scale: 1.5,
-                        child: Builder(
-                          builder: (context) => IconButton(
-                            icon: Image.asset('assets/icons/lavaflow.png'),
-                            onPressed: null,
-                          ),
-                        )),
-                  ],
-                ),
-              ),
-            )
-          ]),
-          SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(
-                width: 500,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      elevation: 2,
-                      shadowColor: isDarkTheme
-                          ? Colors.transparent
-                          : Colors.grey.withOpacity(0.5),
-                      primary: isDarkTheme
-                          ? ui.Color.fromARGB(255, 43, 43, 43)
-                          : ui.Color.fromARGB(255, 220, 220, 220),
-                      padding: EdgeInsets.all(15)),
-                  onPressed: () async {
-                    savekml_Task(projectname[2]);
-                    await _read(2);
-                    jumpToPage(2);
-                    _showToast(translate('Track.ready'));
-                  },
-                  child: Wrap(
-                    children: <Widget>[
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(translate('Track.prehistoric'),
-                          style: TextStyle(fontSize: 40)),
-                      Transform.scale(
-                          scale: 1.5,
-                          child: Builder(
-                            builder: (context) => IconButton(
-                              icon: Image.asset('assets/icons/prehistoric.png'),
-                              onPressed: null,
-                            ),
-                          )),
-                    ],
+                            setState(() {
+                              isOpen = true;
+                            });
+                            DefaultTabController.of(context)?.animateTo(2);
+                          }).catchError((onError) {
+                            print('oh no $onError');
+                            if (onError == 'nogeodata') {
+                              showAlertDialog(translate('Track.alert'),
+                                  translate('Track.alert2'));
+                            }
+                            showAlertDialog(translate('Track.alert3'),
+                                translate('Track.alert4'));
+                          });
+                        }),
                   ),
-                ),
+                ],
               ),
-              SizedBox(
-                width: 500,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      elevation: 2,
-                      shadowColor: isDarkTheme
-                          ? Colors.transparent
-                          : Colors.grey.withOpacity(0.5),
-                      primary: isDarkTheme
-                          ? ui.Color.fromARGB(255, 43, 43, 43)
-                          : ui.Color.fromARGB(255, 220, 220, 220),
-                      padding: EdgeInsets.all(15)),
-                  onPressed: () async {
-                    savekml_Task(projectname[3]);
-                    await _read(3);
-                    jumpToPage(3);
-                    _showToast(translate('Track.ready'));
-                  },
-                  child: Wrap(
-                    children: <Widget>[
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(translate('Track.aff'),
-                          style: TextStyle(fontSize: 40)),
-                      Transform.scale(
-                          scale: 1.5,
-                          child: Builder(
-                            builder: (context) => IconButton(
-                              icon:
-                                  Image.asset('assets/icons/affectedareas.png'),
-                              onPressed: null,
-                            ),
-                          )),
-                    ],
-                  ),
-                ),
-              )
-            ],
-          ),
-          SizedBox(height: 16),
-          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            SizedBox(
-              width: 500,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  elevation: 2,
-                  shadowColor: isDarkTheme
-                      ? Colors.transparent
-                      : Colors.grey.withOpacity(0.5),
-                  primary: isDarkTheme
-                      ? ui.Color.fromARGB(255, 43, 43, 43)
-                      : ui.Color.fromARGB(255, 220, 220, 220),
-                  padding: EdgeInsets.all(15),
-                ),
-                onPressed: () async {
-                  savekml_Task(projectname[4]);
-                  await _read(4);
-                  jumpToPage(4);
-                  _showToast(translate('Track.ready'));
-                },
-                child: Wrap(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(translate('Track.land'),
-                        style: TextStyle(fontSize: 40)),
-                    Transform.scale(
-                        scale: 1.9,
-                        child: Builder(
-                          builder: (context) => IconButton(
-                            icon: Image.asset('assets/icons/landscape.png'),
-                            onPressed: null,
-                          ),
-                        )),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 500,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  elevation: 2,
-                  shadowColor: isDarkTheme
-                      ? Colors.transparent
-                      : Colors.grey.withOpacity(0.5),
-                  primary: isDarkTheme
-                      ? ui.Color.fromARGB(255, 43, 43, 43)
-                      : ui.Color.fromARGB(255, 220, 220, 220),
-                  padding: EdgeInsets.all(15),
-                ),
-                onPressed: () async {
-                  savekml_Task(projectname[5]);
-                  await _read(5);
-                  jumpToPage(5);
-                  _showToast(translate('Track.ready'));
-                },
-                child: Wrap(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(translate('Track.So2'),
-                        style: TextStyle(fontSize: 40)),
-                    Transform.scale(
-                        scale: 1.5,
-                        child: Builder(
-                          builder: (context) => IconButton(
-                            icon: Image.asset('assets/icons/so2emissions.png'),
-                            onPressed: null,
-                          ),
-                        )),
-                  ],
-                ),
-              ),
-            )
-          ]),
-          SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(
-                width: 500,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      elevation: 2,
-                      shadowColor: isDarkTheme
-                          ? Colors.transparent
-                          : Colors.grey.withOpacity(0.5),
-                      primary: isDarkTheme
-                          ? ui.Color.fromARGB(255, 43, 43, 43)
-                          : ui.Color.fromARGB(255, 220, 220, 220),
-                      padding: EdgeInsets.all(15)),
-                  onPressed: () async {
-                    savekml_Task(projectname[6]);
-                    await _read(6);
-                    jumpToPage(6);
-                    _showToast(translate('Track.ready'));
-                  },
-                  child: Wrap(
-                    children: <Widget>[
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(translate('Track.situation'),
-                          style: TextStyle(fontSize: 40)),
-                      Transform.scale(
-                          scale: 1.5,
-                          child: Builder(
-                            builder: (context) => IconButton(
-                              icon: Image.asset('assets/icons/situation.png'),
-                              onPressed: null,
-                            ),
-                          )),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 500,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      elevation: 2,
-                      shadowColor: isDarkTheme
-                          ? Colors.transparent
-                          : Colors.grey.withOpacity(0.5),
-                      primary: isDarkTheme
-                          ? ui.Color.fromARGB(255, 43, 43, 43)
-                          : ui.Color.fromARGB(255, 220, 220, 220),
-                      padding: EdgeInsets.all(15)),
-                  onPressed: () async {
-                    savekml_Task(projectname[7]);
-                    await _read(7);
-                    jumpToPage(7);
-                    _showToast(translate('Track.ready'));
-                  },
-                  child: Wrap(
-                    children: <Widget>[
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(translate('Track.located'),
-                          style: TextStyle(fontSize: 40)),
-                      Transform.scale(
-                          scale: 1.5,
-                          child: Builder(
-                            builder: (context) => IconButton(
-                              icon:
-                                  Image.asset('assets/icons/locatedevents.png'),
-                              onPressed: null,
-                            ),
-                          )),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 20),
-          SizedBox(
-            width: 360,
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  elevation: 2,
-                  shadowColor: isDarkTheme
-                      ? Colors.transparent
-                      : Colors.grey.withOpacity(0.5),
-                  primary: isDarkTheme
-                      ? ui.Color.fromARGB(255, 30, 30, 30)
-                      : Colors.white,
-                  padding: EdgeInsets.all(15),
-                  shape: StadiumBorder(),
-                ),
-                child: Wrap(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(translate('Track.visual'),
-                        style: TextStyle(fontSize: 35)),
-                    Icon(
-                      Icons.location_on_sharp,
-                      color: ui.Color.fromARGB(255, 228, 6, 9),
-                      size: 45.0,
-                    ),
-                  ],
-                ),
-                onPressed: () {
-                  // send to LG
-                  LGConnection().sendToLG(kml.mount(), finalname).then((value) {
-                    _showToast(translate('Track.Visualize'));
-
-                    setState(() {
-                      isOpen = true;
-                    });
-                    DefaultTabController.of(context)?.animateTo(2);
-                  }).catchError((onError) {
-                    print('oh no $onError');
-                    if (onError == 'nogeodata') {
-                      showAlertDialog(
-                          translate('Track.alert'), translate('Track.alert2'));
-                    }
-                    showAlertDialog(
-                        translate('Track.alert3'), translate('Track.alert4'));
-                  });
-                }),
-          ),
-        ],
-      ),
-    );
+            ));
   }
 }
 
