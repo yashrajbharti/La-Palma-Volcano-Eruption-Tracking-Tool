@@ -20,7 +20,7 @@ class Drawers extends StatefulWidget {
 }
 
 const dayColor = Color(0xFFd56352);
-const nightColor = Color(0xFF1e2230);
+const nightColor = Color(0xFF181D26);
 
 class _DrawersState extends State<Drawers> {
   bool val = false;

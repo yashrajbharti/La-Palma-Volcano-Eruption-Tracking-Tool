@@ -21,13 +21,17 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
               style: TextStyle(
                   fontWeight: FontWeight.normal,
                   fontSize: 20.0,
-                  color: Color.fromARGB(255, 90, 90, 90),
+                  color: blackandwhite
+                      ? Color.fromARGB(255, 204, 204, 204)
+                      : Color.fromARGB(255, 90, 90, 90),
                   fontFamily: "OldStandard")),
           message: Text(translate('language.selection.message'),
               style: TextStyle(
                   fontWeight: FontWeight.normal,
                   fontSize: 16.0,
-                  color: Color.fromARGB(255, 90, 90, 90),
+                  color: blackandwhite
+                      ? Color.fromARGB(255, 204, 204, 204)
+                      : Color.fromARGB(255, 90, 90, 90),
                   fontFamily: "OldStandard")),
           actions: <Widget>[
             CupertinoActionSheetAction(
