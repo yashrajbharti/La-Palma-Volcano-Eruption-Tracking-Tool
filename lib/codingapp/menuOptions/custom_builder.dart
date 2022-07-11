@@ -282,7 +282,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                   style: ElevatedButton.styleFrom(
                                     elevation: 2,
                                     shadowColor: themeNotifier.isDark
-                                        ? Colors.transparent
+                                        ? Colors.black
                                         : Colors.grey.withOpacity(0.5),
                                     primary: Color.fromARGB(255, 125, 164, 243),
                                     padding: EdgeInsets.all(15),
@@ -307,7 +307,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                   style: ElevatedButton.styleFrom(
                                     elevation: 2,
                                     shadowColor: themeNotifier.isDark
-                                        ? Colors.transparent
+                                        ? Colors.black
                                         : Colors.grey.withOpacity(0.5),
                                     primary: Color.fromARGB(255, 232, 108, 99),
                                     padding: EdgeInsets.all(15),
@@ -908,7 +908,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                           boxShadow: [
                             BoxShadow(
                               color: themeNotifier.isDark
-                                  ? Colors.transparent
+                                  ? Colors.black
                                   : Colors.grey.withOpacity(0.5),
                               spreadRadius: 5,
                               blurRadius: 7,
@@ -929,7 +929,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                 style: ElevatedButton.styleFrom(
                                   elevation: 2,
                                   shadowColor: themeNotifier.isDark
-                                      ? Colors.transparent
+                                      ? Colors.black
                                       : Colors.grey.withOpacity(0.5),
                                   primary: themeNotifier.isDark
                                       ? Color.fromARGB(255, 30, 30, 30)

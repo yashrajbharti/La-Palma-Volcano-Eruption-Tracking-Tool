@@ -466,7 +466,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
@@ -892,7 +892,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
@@ -1273,7 +1273,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
@@ -1683,7 +1683,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
@@ -2024,7 +2024,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
@@ -2414,7 +2414,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
@@ -2892,7 +2892,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
@@ -3239,7 +3239,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                   boxShadow: [
                     BoxShadow(
                       color: themeNotifier.isDark
-                          ? Colors.transparent
+                          ? Colors.black
                           : Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,

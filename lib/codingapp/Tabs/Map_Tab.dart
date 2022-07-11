@@ -476,7 +476,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                         }),
               ),
               RotationTransition(
-                turns: Tween(begin: 0.0, end: 10.0)
+                turns: Tween(begin: 0.0, end: 25.0)
                     .animate(_rotationiconcontroller),
                 child: Builder(
                   builder: (context) => IconButton(

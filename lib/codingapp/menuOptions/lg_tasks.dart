@@ -144,7 +144,7 @@ class _LGtasksState extends State<LGtasks> {
                                     style: ElevatedButton.styleFrom(
                                       elevation: 2,
                                       shadowColor: themeNotifier.isDark
-                                          ? Colors.transparent
+                                          ? Colors.black
                                           : Colors.grey.withOpacity(0.5),
                                       primary:
                                           Color.fromARGB(255, 115, 184, 117),
@@ -188,7 +188,7 @@ class _LGtasksState extends State<LGtasks> {
                                       style: ElevatedButton.styleFrom(
                                         elevation: 2,
                                         shadowColor: themeNotifier.isDark
-                                            ? Colors.transparent
+                                            ? Colors.black
                                             : Colors.grey.withOpacity(0.5),
                                         primary:
                                             Color.fromARGB(255, 232, 108, 99),
@@ -235,7 +235,7 @@ class _LGtasksState extends State<LGtasks> {
                                       style: ElevatedButton.styleFrom(
                                         elevation: 2,
                                         shadowColor: themeNotifier.isDark
-                                            ? Colors.transparent
+                                            ? Colors.black
                                             : Colors.grey.withOpacity(0.5),
                                         primary:
                                             Color.fromARGB(255, 125, 164, 243),
@@ -312,7 +312,7 @@ class _LGtasksState extends State<LGtasks> {
                                       style: ElevatedButton.styleFrom(
                                         elevation: 2,
                                         shadowColor: themeNotifier.isDark
-                                            ? Colors.transparent
+                                            ? Colors.black
                                             : Colors.grey.withOpacity(0.5),
                                         primary:
                                             Color.fromARGB(255, 240, 226, 103),
@@ -353,7 +353,7 @@ class _LGtasksState extends State<LGtasks> {
                                       style: ElevatedButton.styleFrom(
                                         elevation: 2,
                                         shadowColor: themeNotifier.isDark
-                                            ? Colors.transparent
+                                            ? Colors.black
                                             : Colors.grey.withOpacity(0.5),
                                         primary:
                                             Color.fromARGB(255, 229, 102, 229),

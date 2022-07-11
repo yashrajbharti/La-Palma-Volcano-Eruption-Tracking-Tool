@@ -175,7 +175,9 @@ class _DrawersState extends State<Drawers> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               DayNightSwitch(
-                                value: themeNotifier.isDark ? !val : val,
+                                value: themeNotifier.isDark
+                                    ? val = true
+                                    : val = false,
                                 moonImage: AssetImage('assets/moon.png'),
                                 sunImage: AssetImage('assets/sun.png'),
                                 sunColor: Colors.transparent,

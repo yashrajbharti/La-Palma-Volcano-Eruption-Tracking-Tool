@@ -344,7 +344,7 @@ class SettingsState extends State<Settings> {
                           style: ElevatedButton.styleFrom(
                             elevation: 2,
                             shadowColor: themeNotifier.isDark
-                                ? Colors.transparent
+                                ? Colors.black
                                 : Colors.grey.withOpacity(0.5),
                             primary: themeNotifier.isDark
                                 ? ui.Color.fromARGB(255, 30, 30, 30)
