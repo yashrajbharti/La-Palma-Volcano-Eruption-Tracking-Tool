@@ -144,7 +144,7 @@ class _SendtoLGState extends State<SendtoLG> {
     );
   }
 
-  void _showToast(String x) {
+  void _showToast(String x, bool blackandwhite) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
@@ -156,7 +156,9 @@ class _SendtoLGState extends State<SendtoLG> {
               color: Colors.white),
         ),
         duration: Duration(seconds: 3),
-        backgroundColor: ui.Color.fromARGB(250, 43, 43, 43),
+        backgroundColor: blackandwhite
+            ? ui.Color.fromARGB(255, 22, 22, 22)
+            : ui.Color.fromARGB(250, 43, 43, 43),
         width: 500.0,
         padding: const EdgeInsets.fromLTRB(
           35,
@@ -204,7 +206,8 @@ class _SendtoLGState extends State<SendtoLG> {
                               savekml_Task(projectname[0]);
                               await _read(0);
                               jumpToPage(0);
-                              _showToast(translate('Track.ready'));
+                              _showToast(translate('Track.ready'),
+                                  themeNotifier.isDark);
                             },
                             child: Wrap(
                               children: <Widget>[
@@ -243,7 +246,8 @@ class _SendtoLGState extends State<SendtoLG> {
                               savekml_Task(projectname[1]);
                               await _read(1);
                               jumpToPage(1);
-                              _showToast(translate('Track.ready'));
+                              _showToast(translate('Track.ready'),
+                                  themeNotifier.isDark);
                             },
                             child: Wrap(
                               children: <Widget>[
@@ -286,7 +290,8 @@ class _SendtoLGState extends State<SendtoLG> {
                             savekml_Task(projectname[2]);
                             await _read(2);
                             jumpToPage(2);
-                            _showToast(translate('Track.ready'));
+                            _showToast(
+                                translate('Track.ready'), themeNotifier.isDark);
                           },
                           child: Wrap(
                             children: <Widget>[
@@ -324,7 +329,8 @@ class _SendtoLGState extends State<SendtoLG> {
                             savekml_Task(projectname[3]);
                             await _read(3);
                             jumpToPage(3);
-                            _showToast(translate('Track.ready'));
+                            _showToast(
+                                translate('Track.ready'), themeNotifier.isDark);
                           },
                           child: Wrap(
                             children: <Widget>[
@@ -369,7 +375,8 @@ class _SendtoLGState extends State<SendtoLG> {
                               savekml_Task(projectname[4]);
                               await _read(4);
                               jumpToPage(4);
-                              _showToast(translate('Track.ready'));
+                              _showToast(translate('Track.ready'),
+                                  themeNotifier.isDark);
                             },
                             child: Wrap(
                               children: <Widget>[
@@ -408,7 +415,8 @@ class _SendtoLGState extends State<SendtoLG> {
                               savekml_Task(projectname[5]);
                               await _read(5);
                               jumpToPage(5);
-                              _showToast(translate('Track.ready'));
+                              _showToast(translate('Track.ready'),
+                                  themeNotifier.isDark);
                             },
                             child: Wrap(
                               children: <Widget>[
@@ -451,7 +459,8 @@ class _SendtoLGState extends State<SendtoLG> {
                             savekml_Task(projectname[6]);
                             await _read(6);
                             jumpToPage(6);
-                            _showToast(translate('Track.ready'));
+                            _showToast(
+                                translate('Track.ready'), themeNotifier.isDark);
                           },
                           child: Wrap(
                             children: <Widget>[
@@ -489,7 +498,8 @@ class _SendtoLGState extends State<SendtoLG> {
                             savekml_Task(projectname[7]);
                             await _read(7);
                             jumpToPage(7);
-                            _showToast(translate('Track.ready'));
+                            _showToast(
+                                translate('Track.ready'), themeNotifier.isDark);
                           },
                           child: Wrap(
                             children: <Widget>[
@@ -547,7 +557,8 @@ class _SendtoLGState extends State<SendtoLG> {
                           LGConnection()
                               .sendToLG(kml.mount(), finalname)
                               .then((value) {
-                            _showToast(translate('Track.Visualize'));
+                            _showToast(translate('Track.Visualize'),
+                                themeNotifier.isDark);
 
                             setState(() {
                               isOpen = true;

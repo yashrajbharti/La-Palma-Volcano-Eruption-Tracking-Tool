@@ -138,7 +138,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     };
   }
 
-  void _showToast(String x) {
+  void _showToast(String x, bool blackandwhite) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
@@ -150,7 +150,9 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
               color: Colors.white),
         ),
         duration: Duration(seconds: 3),
-        backgroundColor: Color.fromARGB(250, 43, 43, 43),
+        backgroundColor: blackandwhite
+            ? Color.fromARGB(255, 22, 22, 22)
+            : Color.fromARGB(250, 43, 43, 43),
         width: 500.0,
         padding: const EdgeInsets.fromLTRB(
           35,
@@ -487,7 +489,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                             if (isDemoActive == true)
                               {
                                 LGConnection().openDemoLogos().then((value) {
-                                  _showToast(translate('map.demostart'));
+                                  _showToast(translate('map.demostart'),
+                                      themeNotifier.isDark);
                                 }).catchError((onError) {
                                   print('oh no $onError');
                                   if (onError == 'nogeodata') {
@@ -507,7 +510,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                                 LGConnection()
                                     .cleanVisualization()
                                     .then((value) {
-                                  _showToast(translate('map.demostop'));
+                                  _showToast(translate('map.demostop'),
+                                      themeNotifier.isDark);
                                 }).catchError((onError) {
                                   print('oh no $onError');
                                   if (onError == 'nogeodata') {
@@ -537,7 +541,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                           {
                             _rotationiconcontroller.forward(),
                             playOrbit().then((value) {
-                              _showToast(translate('map.buildorbit'));
+                              _showToast(translate('map.buildorbit'),
+                                  themeNotifier.isDark);
                             }).catchError((onError) {
                               _rotationiconcontroller.stop();
                               print('oh no $onError');
@@ -557,7 +562,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                           {
                             _rotationiconcontroller.reset(),
                             stopOrbit().then((value) {
-                              _showToast(translate('map.stoporbit'));
+                              _showToast(translate('map.stoporbit'),
+                                  themeNotifier.isDark);
                               LGConnection().cleanOrbit();
                               LGConnection().cleanVisualization();
                             }).catchError((onError) {

@@ -46,6 +46,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool physiography = false;
   bool areaofinterest = false;
   bool isOpen = false;
+  bool isSuccess = false;
   late var start;
   late var end;
   bool blackandwhite = false;
@@ -128,7 +129,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
     });
   }
 
-  showAlertDialog(String title, String msg, bool blackandwhite) {
+  showAlertDialog(
+      String title, String msg, bool blackandwhite, bool isSuccess) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -145,7 +147,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                   Padding(
                       padding: EdgeInsets.only(left: 15),
                       child: Image.asset(
-                        "assets/sad.png",
+                        isSuccess ? "assets/happy.png" : "assets/sad.png",
                         width: 250,
                         height: 250,
                       )),
@@ -194,7 +196,10 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                 },
                                 child: Wrap(
                                   children: <Widget>[
-                                    Text(translate('dismiss'),
+                                    Text(
+                                        isSuccess
+                                            ? translate('continue')
+                                            : translate('dismiss'),
                                         style: TextStyle(
                                             fontSize: 20, color: Colors.black)),
                                   ],
@@ -207,7 +212,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
     );
   }
 
-  void _showToast(String x) {
+  void _showToast(String x, bool blackandwhite) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
@@ -219,7 +224,9 @@ class _CustomBuilderState extends State<CustomBuilder> {
               color: Colors.white),
         ),
         duration: Duration(seconds: 3),
-        backgroundColor: ui.Color.fromARGB(250, 43, 43, 43),
+        backgroundColor: blackandwhite
+            ? ui.Color.fromARGB(255, 22, 22, 22)
+            : ui.Color.fromARGB(250, 43, 43, 43),
         width: 500.0,
         padding: const EdgeInsets.fromLTRB(
           35,
@@ -1000,7 +1007,8 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                     LGConnection()
                                         .sendToLG(kml.mount(), "custombuilt")
                                         .then((value) {
-                                      _showToast(translate('Track.Visualize'));
+                                      _showToast(translate('Track.Visualize'),
+                                          themeNotifier.isDark);
                                       //LGConnection().buildOrbit(kml.mount());
                                       setState(() {
                                         isOpen = true;
@@ -1012,12 +1020,14 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                       showAlertDialog(
                                           translate('Track.alert'),
                                           translate('Track.alert2'),
-                                          themeNotifier.isDark);
+                                          themeNotifier.isDark,
+                                          false);
                                     }
                                     showAlertDialog(
                                         translate('Track.alert3'),
                                         translate('Track.alert4'),
-                                        themeNotifier.isDark);
+                                        themeNotifier.isDark,
+                                        false);
                                   });
                                 }),
                           ),
@@ -1027,9 +1037,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                               right: 10.0,
                             ),
                             child: Container(
-                              color: themeNotifier.isDark
-                                  ? Color.fromARGB(255, 16, 16, 16)
-                                  : Color.fromARGB(255, 204, 204, 204),
+                              color: Colors.transparent,
                               child: Builder(
                                 builder: (context) => IconButton(
                                   icon:
@@ -1053,13 +1061,15 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                         showAlertDialog(
                                             translate("Tasks.alert"),
                                             translate("Tasks.alert2"),
-                                            themeNotifier.isDark);
+                                            themeNotifier.isDark,
+                                            true);
                                       } catch (e) {
                                         print('error $e');
                                         showAlertDialog(
                                             translate("Tasks.alert3"),
                                             translate("Tasks.alert4"),
-                                            themeNotifier.isDark);
+                                            themeNotifier.isDark,
+                                            false);
                                       }
                                     } else {
                                       var isGranted = await Permission.storage
@@ -1073,19 +1083,22 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                           showAlertDialog(
                                               translate("Tasks.alert"),
                                               translate("Tasks.alert2"),
-                                              themeNotifier.isDark);
+                                              themeNotifier.isDark,
+                                              true);
                                         } catch (e) {
                                           print('error $e');
                                           showAlertDialog(
                                               translate("Tasks.alert3"),
                                               translate("Tasks.alert4"),
-                                              themeNotifier.isDark);
+                                              themeNotifier.isDark,
+                                              false);
                                         }
                                       } else {
                                         showAlertDialog(
                                             translate("Tasks.alert3"),
                                             translate("Tasks.alert4"),
-                                            themeNotifier.isDark);
+                                            themeNotifier.isDark,
+                                            false);
                                       }
                                     }
                                   },
@@ -1107,7 +1120,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (naturalland == true) {
           kmltext[0] = NaturalLand().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[0] = "";
         }
@@ -1117,7 +1129,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (areaofinterest == true) {
           kmltext[1] = AreaOfInterest().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[1] = "";
         }
@@ -1127,7 +1138,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (maritime == true) {
           kmltext[2] = Maritime().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[2] = "";
         }
@@ -1137,7 +1147,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (roads == true) {
           kmltext[3] = Roadsdestroyed().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[3] = "";
         }
@@ -1147,7 +1156,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (vents == true) {
           kmltext[4] = Vents().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[4] = "";
         }
@@ -1157,7 +1165,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (hydrography == true) {
           kmltext[5] = Hydrography().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[5] == "";
         }
@@ -1167,7 +1174,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (lavaflow == true) {
           kmltext[6] = Lavabuilder().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[6] = "";
         }
@@ -1178,7 +1184,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (closedroads == true) {
           kmltext[7] = ClosedRoads().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[7] = "";
         }
@@ -1188,7 +1193,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (municipalities == true) {
           kmltext[8] = Municipalities().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[8] = "";
         }
@@ -1199,7 +1203,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (maineruptive == true) {
           kmltext[9] = MainEruptive().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[9] = "";
         }
@@ -1210,7 +1213,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (tremor == true) {
           kmltext[10] = TremorBuilder().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[10] = "";
         }
@@ -1220,7 +1222,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (physiography == true) {
           kmltext[11] = Physiography().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[11] = "";
         }
@@ -1230,7 +1231,6 @@ class _CustomBuilderState extends State<CustomBuilder> {
         if (buildings == true) {
           kmltext[12] = Buildingsdestroyed().generateTag(
               start.toString().split(" ")[0], end.toString().split(" ")[0]);
-          _showToast(translate('Track.ready'));
         } else {
           kmltext[12] = "";
         }
