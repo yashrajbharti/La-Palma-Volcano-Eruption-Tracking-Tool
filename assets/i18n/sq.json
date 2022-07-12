@@ -210,5 +210,7 @@
 		"stoporbit": "Ndalimi i Orbitës",
 		"demostart": "Hapja e demo të KML",
 		"demostop": "Mbyllja e demo të KML"
-	}
+	},
+	"dismiss": "Largoje",
+	"continue": "Vazhdoni"
 }

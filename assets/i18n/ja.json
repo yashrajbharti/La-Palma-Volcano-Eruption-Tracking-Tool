@@ -210,5 +210,7 @@
 		"stoporbit": "軌道停止",
 		"demostart": "オープニングデモKML",
 		"demostop": "デモ KML の終了"
-	}
+	},
+	"dismiss": "解散",
+	"continue": "継続する"
 }

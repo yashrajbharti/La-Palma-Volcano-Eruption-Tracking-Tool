@@ -210,5 +210,7 @@
 		"stoporbit": "إيقاف المدار",
 		"demostart": "افتتاح العرض التوضيحي KML",
 		"demostop": "إغلاق العرض التوضيحي KML"
-	}
+	},
+	"dismiss": "رفض",
+	"continue": "يكمل"
 }

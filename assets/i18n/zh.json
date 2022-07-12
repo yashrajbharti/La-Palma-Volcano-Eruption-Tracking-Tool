@@ -210,5 +210,7 @@
 		"stoporbit": "停止轨道",
 		"demostart": "打开演示 KML",
 		"demostop": "关闭演示 KML"
-	}
+	},
+	"dismiss": "解雇",
+	"continue": "继续"
 }

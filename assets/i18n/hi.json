@@ -210,5 +210,7 @@
 		"stoporbit": "कक्षा रोकना",
 		"demostart": "डेमो KML खोलना",
 		"demostop": "समापन डेमो KML"
-	}
+	},
+	"dismiss": "नकार देना",
+	"continue": "जारी रखना"
 }
