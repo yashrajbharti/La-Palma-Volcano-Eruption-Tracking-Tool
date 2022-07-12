@@ -210,5 +210,7 @@
 		"stoporbit": "Stopping Orbit",
 		"demostart": "Opening Demo KML",
 		"demostop": "Closing Demo KML"
-	}
+	},
+	"dismiss": "Dismiss",
+	"continue": "Continue"
 }

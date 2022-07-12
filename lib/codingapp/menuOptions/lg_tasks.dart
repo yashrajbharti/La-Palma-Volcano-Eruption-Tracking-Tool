@@ -25,6 +25,7 @@ class LGtasks extends StatefulWidget {
 String kmltext = "";
 String localpath = "";
 bool isOpen = false;
+bool isSuccess = false;
 String projectname = "";
 KML kml = KML("", "");
 Future savekml_Task(String kmlname) async {
@@ -41,46 +42,82 @@ Future savekml_Task(String kmlname) async {
 }
 
 class _LGtasksState extends State<LGtasks> {
-  showAlertDialog(String title, String msg) {
+  showAlertDialog(String title, String msg, bool isSuccess) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return BackdropFilter(
-          filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
-          child: AlertDialog(
-            backgroundColor: Color.fromARGB(255, 33, 33, 33),
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  '$title',
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Color.fromARGB(255, 204, 204, 204),
+            filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+            child: AlertDialog(
+              backgroundColor: Color.fromARGB(255, 33, 33, 33),
+              title: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                      padding: EdgeInsets.only(left: 15),
+                      child: Image.asset(
+                        isSuccess ? "assets/happy.png" : "assets/sad.png",
+                        width: 250,
+                        height: 250,
+                      )),
+                  Text(
+                    '$title',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Color.fromARGB(255, 204, 204, 204),
+                    ),
                   ),
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  icon: Icon(
-                    Icons.clear_rounded,
-                    color: Color.fromARGB(255, 125, 164, 243),
-                    size: 32,
-                  ),
-                  padding: EdgeInsets.only(bottom: 10),
-                ),
-              ],
-            ),
-            content: Text(
-              '$msg',
-              style: TextStyle(
-                fontSize: 18,
-                color: Color.fromARGB(255, 204, 204, 204),
+                ],
               ),
-            ),
-          ),
-        );
+              content: SizedBox(
+                width: 320,
+                height: 180,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text('$msg',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(
+                              255,
+                              204,
+                              204,
+                              204,
+                            ),
+                          ),
+                          textAlign: TextAlign.center),
+                      SizedBox(
+                          width: 300,
+                          child: Padding(
+                              padding: EdgeInsets.only(top: 10),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 2,
+                                  shadowColor: Colors.black,
+                                  primary:
+                                      ui.Color.fromARGB(255, 220, 220, 220),
+                                  padding: EdgeInsets.all(15),
+                                  shape: StadiumBorder(),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: Wrap(
+                                  children: <Widget>[
+                                    Text(
+                                        isSuccess
+                                            ? translate('continue')
+                                            : translate('dismiss'),
+                                        style: TextStyle(
+                                            fontSize: 20, color: Colors.black)),
+                                  ],
+                                ),
+                              ))),
+                    ]),
+              ),
+            ));
       },
     );
   }
@@ -175,7 +212,8 @@ class _LGtasksState extends State<LGtasks> {
                                         print('oh no $onError');
                                         showAlertDialog(
                                             translate("Tasks.alert5"),
-                                            translate("Tasks.alert6"));
+                                            translate("Tasks.alert6"),
+                                            false);
                                       });
                                     },
                                   ),
@@ -219,7 +257,8 @@ class _LGtasksState extends State<LGtasks> {
                                           print('oh no $onError');
                                           showAlertDialog(
                                               translate("Tasks.alert5"),
-                                              translate("Tasks.alert6"));
+                                              translate("Tasks.alert6"),
+                                              false);
                                         });
                                       }),
                                 ),
@@ -265,12 +304,14 @@ class _LGtasksState extends State<LGtasks> {
                                                 kml.mount(), projectname);
                                             showAlertDialog(
                                                 translate("Tasks.alert"),
-                                                translate("Tasks.alert2"));
+                                                translate("Tasks.alert2"),
+                                                true);
                                           } catch (e) {
                                             print('error $e');
                                             showAlertDialog(
                                                 translate("Tasks.alert3"),
-                                                translate("Tasks.alert4"));
+                                                translate("Tasks.alert4"),
+                                                false);
                                           }
                                         } else {
                                           var isGranted = await Permission
@@ -284,17 +325,20 @@ class _LGtasksState extends State<LGtasks> {
                                                   kml.mount(), projectname);
                                               showAlertDialog(
                                                   translate("Tasks.alert"),
-                                                  translate("Tasks.alert2"));
+                                                  translate("Tasks.alert2"),
+                                                  true);
                                             } catch (e) {
                                               print('error $e');
                                               showAlertDialog(
                                                   translate("Tasks.alert3"),
-                                                  translate("Tasks.alert4"));
+                                                  translate("Tasks.alert4"),
+                                                  false);
                                             }
                                           } else {
                                             showAlertDialog(
                                                 translate("Tasks.alert3"),
-                                                translate("Tasks.alert4"));
+                                                translate("Tasks.alert4"),
+                                                false);
                                           }
                                         }
                                       },
@@ -341,7 +385,8 @@ class _LGtasksState extends State<LGtasks> {
                                           print('oh no $onError');
                                           showAlertDialog(
                                               translate("Tasks.alert5"),
-                                              translate("Tasks.alert6"));
+                                              translate("Tasks.alert6"),
+                                              false);
                                         });
                                       }),
                                 ),
@@ -384,7 +429,8 @@ class _LGtasksState extends State<LGtasks> {
                                           print('oh no $onError');
                                           showAlertDialog(
                                               translate("Tasks.alert5"),
-                                              translate("Tasks.alert6"));
+                                              translate("Tasks.alert6"),
+                                              false);
                                         });
                                       }),
                                 ),
