@@ -43,7 +43,7 @@ List<String> projectname = [
 //   "yellow_sq.png",
 //   "black_sq.png"
 // ];
-
+bool blackandwhite = false;
 String finalname = "";
 String finaltext = "";
 KML kml = KML("", "");
@@ -65,14 +65,16 @@ Future<String> _read(int i) async {
 }
 
 class _SendtoLGState extends State<SendtoLG> {
-  showAlertDialog(String title, String msg) {
+  showAlertDialog(String title, String msg, bool blackandwhite) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return BackdropFilter(
             filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
             child: AlertDialog(
-              backgroundColor: Color.fromARGB(255, 33, 33, 33),
+              backgroundColor: blackandwhite
+                  ? Color.fromARGB(255, 16, 16, 16)
+                  : Color.fromARGB(255, 33, 33, 33),
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -554,11 +556,15 @@ class _SendtoLGState extends State<SendtoLG> {
                           }).catchError((onError) {
                             print('oh no $onError');
                             if (onError == 'nogeodata') {
-                              showAlertDialog(translate('Track.alert'),
-                                  translate('Track.alert2'));
+                              showAlertDialog(
+                                  translate('Track.alert'),
+                                  translate('Track.alert2'),
+                                  themeNotifier.isDark);
                             }
-                            showAlertDialog(translate('Track.alert3'),
-                                translate('Track.alert4'));
+                            showAlertDialog(
+                                translate('Track.alert3'),
+                                translate('Track.alert4'),
+                                themeNotifier.isDark);
                           });
                         }),
                   ),

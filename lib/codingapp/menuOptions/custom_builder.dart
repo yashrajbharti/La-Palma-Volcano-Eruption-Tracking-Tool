@@ -128,14 +128,16 @@ class _CustomBuilderState extends State<CustomBuilder> {
     });
   }
 
-  showAlertDialog(String title, String msg) {
+  showAlertDialog(String title, String msg, bool blackandwhite) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return BackdropFilter(
             filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
             child: AlertDialog(
-              backgroundColor: Color.fromARGB(255, 33, 33, 33),
+              backgroundColor: blackandwhite
+                  ? Color.fromARGB(255, 16, 16, 16)
+                  : Color.fromARGB(255, 33, 33, 33),
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -1007,11 +1009,15 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                   }).catchError((onError) {
                                     print('oh no $onError');
                                     if (onError == 'nogeodata') {
-                                      showAlertDialog(translate('Track.alert'),
-                                          translate('Track.alert2'));
+                                      showAlertDialog(
+                                          translate('Track.alert'),
+                                          translate('Track.alert2'),
+                                          themeNotifier.isDark);
                                     }
-                                    showAlertDialog(translate('Track.alert3'),
-                                        translate('Track.alert4'));
+                                    showAlertDialog(
+                                        translate('Track.alert3'),
+                                        translate('Track.alert4'),
+                                        themeNotifier.isDark);
                                   });
                                 }),
                           ),
@@ -1046,12 +1052,14 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                             kml.mount(), "custombuilt");
                                         showAlertDialog(
                                             translate("Tasks.alert"),
-                                            translate("Tasks.alert2"));
+                                            translate("Tasks.alert2"),
+                                            themeNotifier.isDark);
                                       } catch (e) {
                                         print('error $e');
                                         showAlertDialog(
                                             translate("Tasks.alert3"),
-                                            translate("Tasks.alert4"));
+                                            translate("Tasks.alert4"),
+                                            themeNotifier.isDark);
                                       }
                                     } else {
                                       var isGranted = await Permission.storage
@@ -1064,17 +1072,20 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                               kml.mount(), "custombuilt");
                                           showAlertDialog(
                                               translate("Tasks.alert"),
-                                              translate("Tasks.alert2"));
+                                              translate("Tasks.alert2"),
+                                              themeNotifier.isDark);
                                         } catch (e) {
                                           print('error $e');
                                           showAlertDialog(
                                               translate("Tasks.alert3"),
-                                              translate("Tasks.alert4"));
+                                              translate("Tasks.alert4"),
+                                              themeNotifier.isDark);
                                         }
                                       } else {
                                         showAlertDialog(
                                             translate("Tasks.alert3"),
-                                            translate("Tasks.alert4"));
+                                            translate("Tasks.alert4"),
+                                            themeNotifier.isDark);
                                       }
                                     }
                                   },

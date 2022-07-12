@@ -27,6 +27,7 @@ String localpath = "";
 bool isOpen = false;
 bool isSuccess = false;
 String projectname = "";
+bool blackandwhite = false;
 KML kml = KML("", "");
 Future savekml_Task(String kmlname) async {
   try {
@@ -42,14 +43,17 @@ Future savekml_Task(String kmlname) async {
 }
 
 class _LGtasksState extends State<LGtasks> {
-  showAlertDialog(String title, String msg, bool isSuccess) {
+  showAlertDialog(
+      String title, String msg, bool isSuccess, bool blackandwhite) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return BackdropFilter(
             filter: ui.ImageFilter.blur(sigmaX: 4, sigmaY: 3),
             child: AlertDialog(
-              backgroundColor: Color.fromARGB(255, 33, 33, 33),
+              backgroundColor: blackandwhite
+                  ? Color.fromARGB(255, 16, 16, 16)
+                  : Color.fromARGB(255, 33, 33, 33),
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -213,7 +217,8 @@ class _LGtasksState extends State<LGtasks> {
                                         showAlertDialog(
                                             translate("Tasks.alert5"),
                                             translate("Tasks.alert6"),
-                                            false);
+                                            false,
+                                            themeNotifier.isDark);
                                       });
                                     },
                                   ),
@@ -258,7 +263,8 @@ class _LGtasksState extends State<LGtasks> {
                                           showAlertDialog(
                                               translate("Tasks.alert5"),
                                               translate("Tasks.alert6"),
-                                              false);
+                                              false,
+                                              themeNotifier.isDark);
                                         });
                                       }),
                                 ),
@@ -305,13 +311,15 @@ class _LGtasksState extends State<LGtasks> {
                                             showAlertDialog(
                                                 translate("Tasks.alert"),
                                                 translate("Tasks.alert2"),
-                                                true);
+                                                true,
+                                                themeNotifier.isDark);
                                           } catch (e) {
                                             print('error $e');
                                             showAlertDialog(
                                                 translate("Tasks.alert3"),
                                                 translate("Tasks.alert4"),
-                                                false);
+                                                false,
+                                                themeNotifier.isDark);
                                           }
                                         } else {
                                           var isGranted = await Permission
@@ -326,19 +334,22 @@ class _LGtasksState extends State<LGtasks> {
                                               showAlertDialog(
                                                   translate("Tasks.alert"),
                                                   translate("Tasks.alert2"),
-                                                  true);
+                                                  true,
+                                                  themeNotifier.isDark);
                                             } catch (e) {
                                               print('error $e');
                                               showAlertDialog(
                                                   translate("Tasks.alert3"),
                                                   translate("Tasks.alert4"),
-                                                  false);
+                                                  false,
+                                                  themeNotifier.isDark);
                                             }
                                           } else {
                                             showAlertDialog(
                                                 translate("Tasks.alert3"),
                                                 translate("Tasks.alert4"),
-                                                false);
+                                                false,
+                                                themeNotifier.isDark);
                                           }
                                         }
                                       },
@@ -386,7 +397,8 @@ class _LGtasksState extends State<LGtasks> {
                                           showAlertDialog(
                                               translate("Tasks.alert5"),
                                               translate("Tasks.alert6"),
-                                              false);
+                                              false,
+                                              themeNotifier.isDark);
                                         });
                                       }),
                                 ),
@@ -430,7 +442,8 @@ class _LGtasksState extends State<LGtasks> {
                                           showAlertDialog(
                                               translate("Tasks.alert5"),
                                               translate("Tasks.alert6"),
-                                              false);
+                                              false,
+                                              themeNotifier.isDark);
                                         });
                                       }),
                                 ),

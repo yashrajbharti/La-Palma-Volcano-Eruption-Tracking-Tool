@@ -5,15 +5,18 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webscrapperapp/codingapp/kml/orbit.dart';
+import 'package:webscrapperapp/codingapp/theme-storage.dart';
 
 void main() => runApp(MyMap());
 
@@ -37,6 +40,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   double tiltvalue = 0;
   double bearingvalue = 0; // 2D angle
   double _currentSliderValue = 100;
+  bool blackandwhite = false;
 
   @override
   void initState() {
@@ -167,14 +171,16 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     );
   }
 
-  showAlertDialog(String title, String msg) {
+  showAlertDialog(String title, String msg, bool blackandwhite) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 4, sigmaY: 3),
             child: AlertDialog(
-              backgroundColor: Color.fromARGB(255, 33, 33, 33),
+              backgroundColor: blackandwhite
+                  ? Color.fromARGB(255, 16, 16, 16)
+                  : Color.fromARGB(255, 33, 33, 33),
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -465,97 +471,117 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
                     },
                   ))),
         ),
-        Positioned(
-          top: 58,
-          left: 7,
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 6),
-              Builder(
-                builder: (context) => IconButton(
-                    icon: Image.asset('assets/icons/demo.png'),
-                    iconSize: 57,
-                    onPressed: () => {
-                          isDemoActive = !isDemoActive,
-                          if (isDemoActive == true)
-                            {
-                              LGConnection().openDemoLogos().then((value) {
-                                _showToast(translate('map.demostart'));
-                              }).catchError((onError) {
-                                print('oh no $onError');
-                                if (onError == 'nogeodata') {
-                                  showAlertDialog(translate('Track.alert'),
-                                      translate('Track.alert2'));
-                                }
-                                showAlertDialog(translate('Track.alert3'),
-                                    translate('Track.alert4'));
-                              }),
-                            }
-                          else
-                            {
-                              LGConnection().cleanVisualization().then((value) {
-                                _showToast(translate('map.demostop'));
-                              }).catchError((onError) {
-                                print('oh no $onError');
-                                if (onError == 'nogeodata') {
-                                  showAlertDialog(translate('Track.alert'),
-                                      translate('Track.alert2'));
-                                }
-                                showAlertDialog(translate('Track.alert3'),
-                                    translate('Track.alert4'));
-                              }),
-                            }
-                        }),
-              ),
-              RotationTransition(
-                turns: Tween(begin: 0.0, end: 25.0)
-                    .animate(_rotationiconcontroller),
-                child: Builder(
+        Consumer<ThemeModel>(
+          builder: (context, ThemeModel themeNotifier, child) => Positioned(
+            top: 58,
+            left: 7,
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 6),
+                Builder(
                   builder: (context) => IconButton(
-                    icon: Image.asset('assets/icons/orbit.png'),
-                    iconSize: 57,
-                    onPressed: () => {
-                      isOrbiting = !isOrbiting,
-                      if (isOrbiting == true)
-                        {
-                          _rotationiconcontroller.forward(),
-                          playOrbit().then((value) {
-                            _showToast(translate('map.buildorbit'));
-                          }).catchError((onError) {
-                            _rotationiconcontroller.stop();
-                            print('oh no $onError');
-                            if (onError == 'nogeodata') {
-                              showAlertDialog(translate('Track.alert'),
-                                  translate('Track.alert2'));
-                            }
-                            showAlertDialog(translate('Track.alert3'),
-                                translate('Track.alert4'));
+                      icon: Image.asset('assets/icons/demo.png'),
+                      iconSize: 57,
+                      onPressed: () => {
+                            isDemoActive = !isDemoActive,
+                            if (isDemoActive == true)
+                              {
+                                LGConnection().openDemoLogos().then((value) {
+                                  _showToast(translate('map.demostart'));
+                                }).catchError((onError) {
+                                  print('oh no $onError');
+                                  if (onError == 'nogeodata') {
+                                    showAlertDialog(
+                                        translate('Track.alert'),
+                                        translate('Track.alert2'),
+                                        themeNotifier.isDark);
+                                  }
+                                  showAlertDialog(
+                                      translate('Track.alert3'),
+                                      translate('Track.alert4'),
+                                      themeNotifier.isDark);
+                                }),
+                              }
+                            else
+                              {
+                                LGConnection()
+                                    .cleanVisualization()
+                                    .then((value) {
+                                  _showToast(translate('map.demostop'));
+                                }).catchError((onError) {
+                                  print('oh no $onError');
+                                  if (onError == 'nogeodata') {
+                                    showAlertDialog(
+                                        translate('Track.alert'),
+                                        translate('Track.alert2'),
+                                        themeNotifier.isDark);
+                                  }
+                                  showAlertDialog(
+                                      translate('Track.alert3'),
+                                      translate('Track.alert4'),
+                                      themeNotifier.isDark);
+                                }),
+                              }
                           }),
-                        }
-                      else
-                        {
-                          _rotationiconcontroller.reset(),
-                          stopOrbit().then((value) {
-                            _showToast(translate('map.stoporbit'));
-                            LGConnection().cleanOrbit();
-                            LGConnection().cleanVisualization();
-                          }).catchError((onError) {
-                            print('oh no $onError');
-                            if (onError == 'nogeodata') {
-                              showAlertDialog(translate('Track.alert'),
-                                  translate('Track.alert2'));
-                            }
-                            showAlertDialog(translate('Track.alert3'),
-                                translate('Track.alert4'));
-                          }),
-                        }
-                    },
+                ),
+                RotationTransition(
+                  turns: Tween(begin: 0.0, end: 25.0)
+                      .animate(_rotationiconcontroller),
+                  child: Builder(
+                    builder: (context) => IconButton(
+                      icon: Image.asset('assets/icons/orbit.png'),
+                      iconSize: 57,
+                      onPressed: () => {
+                        isOrbiting = !isOrbiting,
+                        if (isOrbiting == true)
+                          {
+                            _rotationiconcontroller.forward(),
+                            playOrbit().then((value) {
+                              _showToast(translate('map.buildorbit'));
+                            }).catchError((onError) {
+                              _rotationiconcontroller.stop();
+                              print('oh no $onError');
+                              if (onError == 'nogeodata') {
+                                showAlertDialog(
+                                    translate('Track.alert'),
+                                    translate('Track.alert2'),
+                                    themeNotifier.isDark);
+                              }
+                              showAlertDialog(
+                                  translate('Track.alert3'),
+                                  translate('Track.alert4'),
+                                  themeNotifier.isDark);
+                            }),
+                          }
+                        else
+                          {
+                            _rotationiconcontroller.reset(),
+                            stopOrbit().then((value) {
+                              _showToast(translate('map.stoporbit'));
+                              LGConnection().cleanOrbit();
+                              LGConnection().cleanVisualization();
+                            }).catchError((onError) {
+                              print('oh no $onError');
+                              if (onError == 'nogeodata') {
+                                showAlertDialog(
+                                    translate('Track.alert'),
+                                    translate('Track.alert2'),
+                                    themeNotifier.isDark);
+                              }
+                              showAlertDialog(
+                                  translate('Track.alert3'),
+                                  translate('Track.alert4'),
+                                  themeNotifier.isDark);
+                            }),
+                          }
+                      },
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
+        )
       ],
     );
   }
