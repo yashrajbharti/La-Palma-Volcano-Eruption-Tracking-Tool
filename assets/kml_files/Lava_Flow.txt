@@ -7,7 +7,7 @@
 			<scale>0</scale>
 		</LabelStyle>
 		<PolyStyle>
-			<color>ff828282</color>
+			<color>7f828282</color>
 			<outline>0</outline>
 		</PolyStyle>
 	</Style>
@@ -21,7 +21,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff4da6f2</color>
+			<color>7f4da6f2</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle026">
@@ -34,7 +34,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff00a600</color>
+			<color>7f00a600</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle045">
@@ -47,7 +47,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ffa8ffff</color>
+			<color>7fa8ffff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle024">
@@ -60,7 +60,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff4df2cc</color>
+			<color>7f4df2cc</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle043">
@@ -73,7 +73,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff0080e6</color>
+			<color>7f0080e6</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle023">
@@ -86,7 +86,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff80ffa6</color>
+			<color>7f80ffa6</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle010">
@@ -99,7 +99,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff4de6a6</color>
+			<color>7f4de6a6</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle029">
@@ -112,7 +112,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff4dcce6</color>
+			<color>7f4dcce6</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle02">
@@ -125,7 +125,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ffcccccc</color>
+			<color>7fcccccc</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle00">
@@ -138,7 +138,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ffccffcc</color>
+			<color>7fccffcc</color>
 		</PolyStyle>
 	</Style>
 	<Folder id="FeatureLayer0">
@@ -19592,7 +19592,7 @@
 			<width>0.6</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff6abb66</color>
+			<color>bf6abb66</color>
 		</PolyStyle>
 	</Style>
 	<Style id="__managed_style_1661E98FD8220940F631">
@@ -19611,7 +19611,7 @@
 			<width>0.6</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff26a7ff</color>
+			<color>bf26a7ff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="s_ylw-pushpin">
@@ -19699,7 +19699,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>fff5a542</color>
+			<color>bff5a542</color>
 		</PolyStyle>
 	</Style>
 	<Style id="s_ylw-pushpin2">
@@ -19762,7 +19762,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff9aa626</color>
+			<color>bf9aa626</color>
 		</PolyStyle>
 	</Style>
 	<Style id="s_ylw-pushpin4">
@@ -19793,7 +19793,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff4b4bd2</color>
+			<color>bf4b4bd2</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="m_ylw-pushpin1">
@@ -19842,7 +19842,7 @@
 			<width>0.6</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>fff5a542</color>
+			<color>bff5a542</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="m_ylw-pushpin3">
@@ -19896,7 +19896,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ffa21f7b</color>
+			<color>bfa21f7b</color>
 		</PolyStyle>
 	</Style>
 	<Style id="s_ylw-pushpin_hl3">
@@ -19923,7 +19923,7 @@
 			<width>0.6</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff9aa626</color>
+			<color>bf9aa626</color>
 		</PolyStyle>
 	</Style>
 	<Style id="__managed_style_10AFAC0BF3220959E272">
@@ -19976,7 +19976,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff58eeff</color>
+			<color>bf58eeff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="s_ylw-pushpin_hl5">
@@ -20003,7 +20003,7 @@
 			<width>0.6</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff58eeff</color>
+			<color>bf58eeff</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="m_ylw-pushpin5">
@@ -20031,7 +20031,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff26a7ff</color>
+			<color>bf26a7ff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="s_ylw-pushpin_hl6">
@@ -20068,7 +20068,7 @@
 			<width>0.6</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ffa21f7b</color>
+			<color>bfa21f7b</color>
 		</PolyStyle>
 	</Style>
 	<Style id="__managed_style_1B93A9258D22094F5E49">
@@ -20086,7 +20086,7 @@
 			<width>0.4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>ff6abb66</color>
+			<color>bf6abb66</color>
 		</PolyStyle>
 	</Style>
 	<NetworkLink>
