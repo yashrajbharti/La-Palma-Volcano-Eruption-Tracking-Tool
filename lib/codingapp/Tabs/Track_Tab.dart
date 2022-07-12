@@ -80,7 +80,7 @@ class _SendtoLGState extends State<SendtoLG> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                      padding: EdgeInsets.only(left: 15),
+                      padding: EdgeInsets.only(left: 10),
                       child: Image.asset(
                         "assets/sad.png",
                         width: 250,
