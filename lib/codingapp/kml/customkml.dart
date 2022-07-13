@@ -142,7 +142,7 @@ class Maritime {
 		<styleUrl>#__managed_style_0BA2FAA56B22242D9CEB</styleUrl>
 		<gx:balloonVisibility>1</gx:balloonVisibility>
 		<Polygon>
-			<altitudeMode>relativeToGround</altitudeMode>
+			<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 				<LinearRing>
 					<coordinates>
@@ -577,7 +577,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -707,7 +707,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -717,7 +717,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -727,7 +727,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -737,7 +737,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -867,7 +867,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -997,7 +997,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1127,7 +1127,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1257,7 +1257,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1267,7 +1267,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1397,7 +1397,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1407,7 +1407,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1537,7 +1537,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1667,7 +1667,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1797,7 +1797,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle02</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1927,7 +1927,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2057,7 +2057,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2187,7 +2187,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2317,7 +2317,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2447,7 +2447,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2577,7 +2577,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2707,7 +2707,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2837,7 +2837,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2967,7 +2967,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3097,7 +3097,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3227,7 +3227,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3357,7 +3357,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3494,7 +3494,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle010</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3624,7 +3624,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle023</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3634,7 +3634,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3764,7 +3764,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle024</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3894,7 +3894,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle024</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4024,7 +4024,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle026</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4154,7 +4154,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle026</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4284,7 +4284,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle026</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4294,7 +4294,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4431,7 +4431,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4561,7 +4561,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4691,7 +4691,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4821,7 +4821,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -4951,7 +4951,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5081,7 +5081,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5211,7 +5211,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5341,7 +5341,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5471,7 +5471,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5481,7 +5481,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5611,7 +5611,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle029</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5621,7 +5621,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5631,7 +5631,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5761,7 +5761,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle039</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -5891,7 +5891,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle039</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6021,7 +6021,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle039</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6151,7 +6151,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle039</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6161,7 +6161,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6171,7 +6171,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6181,7 +6181,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6311,7 +6311,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle043</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6441,7 +6441,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle043</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6571,7 +6571,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle045</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6581,7 +6581,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6711,7 +6711,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6841,7 +6841,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -6971,7 +6971,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7101,7 +7101,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7231,7 +7231,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7361,7 +7361,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7491,7 +7491,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7501,7 +7501,7 @@ class NaturalLand {
 					</outerBoundaryIs>
 				</Polygon>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7631,7 +7631,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7761,7 +7761,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -7891,7 +7891,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -8021,7 +8021,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -8151,7 +8151,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -8281,7 +8281,7 @@ class NaturalLand {
 			<styleUrl>#PolyStyle046</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -21609,7 +21609,7 @@ class AreaOfInterest {
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>

@@ -324,7 +324,7 @@ class Lavabuilder {
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -533,7 +533,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -683,7 +683,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -781,7 +781,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -879,7 +879,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -977,7 +977,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1182,7 +1182,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1345,7 +1345,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1451,7 +1451,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1557,7 +1557,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1663,7 +1663,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -1867,7 +1867,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_02AA2DC0A6220959E272</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2149,7 +2149,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_08BA236C6022094F5E49</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2431,7 +2431,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_04FB1FE3BC2209522C0D</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -2708,7 +2708,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_0A0411237322095632FB</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -3000,7 +3000,7 @@ class Lavabuilder {
 			<styleUrl>#__managed_style_05E8399EA9220960AEC9</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>

@@ -450,7 +450,7 @@
 			<styleUrl>#__managed_style_046F7AAF602212CC63BA</styleUrl>
 			<MultiGeometry>
 				<Polygon>
-					<altitudeMode>relativeToGround</altitudeMode>
+					<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>
 							<coordinates>
@@ -601,7 +601,7 @@
 
             <tilt>0</tilt>
 
-            <altitudeMode>relativeToGround</altitudeMode>
+            <tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 
         </LookAt>
       </GroundOverlay>
@@ -632,7 +632,7 @@
 
             <tilt>0</tilt>
 
-            <altitudeMode>relativeToGround</altitudeMode>
+            <tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 
         </LookAt>
       </GroundOverlay>
@@ -663,7 +663,7 @@
 
             <tilt>0</tilt>
 
-            <altitudeMode>relativeToGround</altitudeMode>
+            <tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 
         </LookAt>
       </GroundOverlay>
@@ -694,7 +694,7 @@
 
             <tilt>0</tilt>
 
-            <altitudeMode>relativeToGround</altitudeMode>
+            <tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 
         </LookAt>
       </GroundOverlay>
@@ -725,7 +725,7 @@
 
             <tilt>0</tilt>
 
-            <altitudeMode>relativeToGround</altitudeMode>
+            <tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 
         </LookAt>
       </GroundOverlay>
@@ -756,7 +756,7 @@
 
             <tilt>0</tilt>
 
-            <altitudeMode>relativeToGround</altitudeMode>
+            <tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 
         </LookAt>
       </GroundOverlay>
@@ -787,7 +787,7 @@
 
             <tilt>0</tilt>
 
-            <altitudeMode>relativeToGround</altitudeMode>
+            <tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 
         </LookAt>
       </GroundOverlay>

@@ -3611,7 +3611,7 @@
       </TimeSpan>
 			<styleUrl>#__managed_style_0D3B68AAFC2212DE7481</styleUrl>
 			<Polygon>
-				<altitudeMode>relativeToGround</altitudeMode>
+				<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
@@ -3682,7 +3682,7 @@
         <begin>1646</begin>
       </TimeSpan>
 			<Polygon>
-				<altitudeMode>relativeToGround</altitudeMode>
+				<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
@@ -3737,6 +3737,7 @@
       </TimeSpan>
 			<MultiGeometry>
 				<Polygon>
+				<tessellate>1</tessellate>
 					<altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 						<LinearRing>

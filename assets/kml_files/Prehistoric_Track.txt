@@ -1992,6 +1992,7 @@
         <begin>1480</begin>
       </TimeSpan>
 			<Polygon>
+			<tessellate>1</tessellate>
 				<altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
 					<LinearRing>
