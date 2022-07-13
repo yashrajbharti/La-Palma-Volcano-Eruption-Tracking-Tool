@@ -20267,6 +20267,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86411856699994,28.61280666700003,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -20360,6 +20361,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86486461699997,28.61328397600005,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -20453,6 +20455,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86545868199994,28.61267593100007,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -20546,6 +20549,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86863751299995,28.61484385800003,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -20639,6 +20643,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86784594099993,28.61428297600003,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -20732,6 +20737,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.87063044999997,28.61610634500005,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -20825,6 +20831,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86767269299998,28.61512003400003,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -20918,6 +20925,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.87012834999996,28.61575603800003,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -21011,6 +21019,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86491351899997,28.61455626100008,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -21104,6 +21113,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86664228899997,28.61175332700003,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -21197,6 +21207,7 @@
 </html>]]></description>
 			<styleUrl>#IconStyle00</styleUrl>
 			<Point>
+				<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.86647561599995,28.61349084200003,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -21424,6 +21435,7 @@
 			<styleUrl>#m_ylw-pushpin4</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.90568754168596,28.60632035884035,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -21641,6 +21653,7 @@
 			<styleUrl>#m_ylw-pushpin5</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.93415455077271,28.62415555613668,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -21843,6 +21856,7 @@
 			<styleUrl>#m_ylw-pushpin0</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.92361353044547,28.60253847298274,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -22050,6 +22064,7 @@
 			<styleUrl>#m_ylw-pushpin6</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.92391136481098,28.60686630907811,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -22257,6 +22272,7 @@
 			<styleUrl>#m_ylw-pushpin2</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.90200585962767,28.61281653896654,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -22864,6 +22880,7 @@
 			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.89554340106804,28.62570497291193,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -23425,6 +23442,7 @@
 			<styleUrl>#m_ylw-pushpin1</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.90728883753009,28.6158821828412,490</coordinates> 
 			</Point>
 		</Placemark>
@@ -23559,6 +23577,7 @@
 			<styleUrl>#m_ylw-pushpin3</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
+					<altitudeMode>relativeToGround</altitudeMode>
 				<coordinates>-17.89316041544648,28.61851012362132,490</coordinates> 
 			</Point>
 		</Placemark>

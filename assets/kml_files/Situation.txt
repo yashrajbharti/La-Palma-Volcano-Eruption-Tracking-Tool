@@ -8934,7 +8934,8 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>-17.90918315085846,28.6173950317354,1</coordinates>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>-17.90918315085846,28.6173950317354,280</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark id="0685D2B70E2224119ADE">
@@ -8954,7 +8955,8 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>-17.93706670068562,28.64591953320307,1</coordinates>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>-17.93706670068562,28.64591953320307,280</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark id="0B1E130FF22224119ADF">
@@ -8974,7 +8976,8 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>-17.88185341341207,28.65600145453834,1</coordinates>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>-17.88185341341207,28.65600145453834,280</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark id="0CEEB114F42224119AE1">
@@ -8994,7 +8997,8 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>-17.87244137103556,28.63584461183963,1</coordinates>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>-17.87244137103556,28.63584461183963,280</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark id="032BA0E5222224119AE2">
@@ -9032,7 +9036,8 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 			<styleUrl>#__managed_style_096B72317122243384C7</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>-17.8655717677112,28.61317147858117,1</coordinates>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>-17.8655717677112,28.61317147858117,280</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark id="00412ED4A52224119AE8">
@@ -9052,7 +9057,8 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				</TimeSpan>
 			<styleUrl>#__managed_style_01A3ACC0FC222439546D</styleUrl>
 			<Point>
-				<coordinates>-17.86357866683818,28.61863679618941,1</coordinates>
+			<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>-17.86357866683818,28.61863679618941,280</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark id="0F6D59172A2224119AE9">
