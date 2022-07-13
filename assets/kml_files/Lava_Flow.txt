@@ -21337,7 +21337,7 @@
 			<LookAt>
 				<longitude>-17.9050083095601</longitude>
 				<latitude>28.62128142770052</latitude>
-				<altitude>0</altitude>
+				<altitude>1</altitude>
 				<heading>-0.5163508012410233</heading>
 				<tilt>17.26237475955921</tilt>
 				<range>7546.803760853749</range>
@@ -21553,7 +21553,7 @@
 			<LookAt>
 				<longitude>-17.92777441576069</longitude>
 				<latitude>28.61987046857281</latitude>
-				<altitude>0</altitude>
+				<altitude>1</altitude>
 				<heading>-0.5289454078737675</heading>
 				<tilt>13.14155958655332</tilt>
 				<range>4207.643555561785</range>
@@ -21754,7 +21754,7 @@
 			<LookAt>
 				<longitude>-17.9113353539202</longitude>
 				<latitude>28.6116742817232</latitude>
-				<altitude>0</altitude>
+				<altitude>1</altitude>
 				<heading>-0.5194715507300307</heading>
 				<tilt>17.0984406594315</tilt>
 				<range>4840.091846005608</range>
@@ -21960,7 +21960,7 @@
 			<LookAt>
 				<longitude>-17.90497311216184</longitude>
 				<latitude>28.61849874203702</latitude>
-				<altitude>0</altitude>
+				<altitude>1</altitude>
 				<heading>-0.5166396391007094</heading>
 				<tilt>16.16238353317823</tilt>
 				<range>5765.06651339543</range>
@@ -22166,7 +22166,7 @@
 			<LookAt>
 				<longitude>-17.90895317440415</longitude>
 				<latitude>28.62328403549398</latitude>
-				<altitude>0</altitude>
+				<altitude>1</altitude>
 				<heading>-0.5197429134027015</heading>
 				<tilt>13.51144650937619</tilt>
 				<range>6731.543478427959</range>
@@ -22768,7 +22768,7 @@
 			<LookAt>
 				<longitude>-17.90452945276184</longitude>
 				<latitude>28.61876376310034</latitude>
-				<altitude>0</altitude>
+				<altitude>1</altitude>
 				<heading>-0.5198440108133912</heading>
 				<tilt>7.964292222503658</tilt>
 				<range>5636.629514592285</range>
@@ -23324,7 +23324,7 @@
 			<LookAt>
 				<longitude>-17.90452945276187</longitude>
 				<latitude>28.61876376310034</latitude>
-				<altitude>0</altitude>
+				<altitude>1</altitude>
 				<heading>-0.5198440108139972</heading>
 				<tilt>7.964292222503704</tilt>
 				<range>5636.62951459463</range>
