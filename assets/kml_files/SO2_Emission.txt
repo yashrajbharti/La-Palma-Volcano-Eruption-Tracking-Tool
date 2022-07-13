@@ -297,6 +297,6 @@
 			<styleUrl>#__managed_style_011DEA39E4222E98BB64</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>-17.82113826289215,28.73510021618486,0</coordinates>
+				<coordinates>-17.82113826289215,28.73510021618486,1</coordinates>
 			</Point>
 		</Placemark>
