@@ -448,31 +448,37 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
             ),
           ),
         ),
-        Positioned(
-          bottom: 88,
-          left: 20,
-          height: 300,
-          child: RotatedBox(
-              quarterTurns: 1,
-              child: SliderTheme(
-                  data: SliderTheme.of(context).copyWith(
-                    trackShape: RectangularSliderTrackShape(),
-                  ),
-                  child: Slider(
-                    value: _currentSliderValue,
-                    max: 100,
-                    inactiveColor: Color.fromARGB(255, 75, 127, 82),
-                    thumbColor: Color.fromARGB(55, 68, 68, 68),
-                    activeColor: Color.fromARGB(255, 24, 24, 24),
-                    divisions: 100,
-                    label: (100 - _currentSliderValue.round()).toString() + "%",
-                    onChanged: (double value) {
-                      setState(() {
-                        _currentSliderValue = value;
-                      });
-                    },
-                  ))),
-        ),
+        Consumer<ThemeModel>(
+            builder: (context, ThemeModel themeNotifier, child) => Positioned(
+                  bottom: 88,
+                  left: 20,
+                  height: 300,
+                  child: RotatedBox(
+                      quarterTurns: 1,
+                      child: SliderTheme(
+                          data: SliderTheme.of(context).copyWith(
+                            trackShape: RectangularSliderTrackShape(),
+                            valueIndicatorColor: themeNotifier.isDark
+                                ? Color.fromARGB(255, 24, 24, 24)
+                                : Color.fromARGB(255, 104, 104, 104),
+                          ),
+                          child: Slider(
+                            value: _currentSliderValue,
+                            max: 100,
+                            inactiveColor: Color.fromARGB(255, 75, 127, 82),
+                            thumbColor: Color.fromARGB(55, 68, 68, 68),
+                            activeColor: Color.fromARGB(255, 24, 24, 24),
+                            divisions: 100,
+                            label:
+                                (100 - _currentSliderValue.round()).toString() +
+                                    "% \u{1f554}",
+                            onChanged: (double value) {
+                              setState(() {
+                                _currentSliderValue = value;
+                              });
+                            },
+                          ))),
+                )),
         Consumer<ThemeModel>(
           builder: (context, ThemeModel themeNotifier, child) => Positioned(
             top: 58,
