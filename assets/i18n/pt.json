@@ -31,14 +31,14 @@
 		"So2": "Mapa de Emissões SO\u2082",
 		"prehistoric": " Mapa Pré-Histórico ",
 		"located": " Eventos localizados ",
-		"visual": "Visualize na LG",
+		"visual": "Visualize no LG",
 		"ready": "Pronto para visualizar!",
 		"Visualize": "Visualizando KML",
 		"alert": "Sem dados geográficos",
 		"alert2": "Parece que você não adicionou dados geográficos a este projeto.",
 		"alert3": "Erro ao iniciar!",
 		"alert4": "Ocorreu um erro ao tentar se conectar ao LG",
-		"close": "Perto"
+		"close": "Fechar"
 	},
 	"title": {
 		"name": "Rastreador do Vulcão La Palma"
@@ -49,7 +49,7 @@
 		"info": "Informações"
 	},
 	"drawer": {
-		"menu": "Menu Galáxia Líquida",
+		"menu": "Menu Liquid Galaxy",
 		"help": "Ajuda",
 		"about": "Sobre",
 		"custom": "Construtor personalizado",
@@ -58,9 +58,9 @@
 	},
 	"Tasks": {
 		"LG": "Tarefas do Liquid Galaxy",
-		"Relaunch": "Reiniciar \n    LG",
+		"Relaunch": "Relançar \n   LG",
 		"Shutdown": "Desligar \n    LG",
-		"Reboot": "Reinicie \n    LG",
+		"Reboot": "Reiniciar \n     LG",
 		"Save": "Salvar \n KML",
 		"Clean": "Limpar \n  KML",
 		"alert": "Sucesso!",
@@ -89,10 +89,10 @@
 		"label4": "Senha da máquina mestre",
 		"placeholder5": "por exemplo. 5",
 		"label5": "Total de máquinas na plataforma LG",
-		"button": "Conecte-se à LG"
+		"button": "Conecte-se ao LG"
 	},
 	"About": {
-		"aboutpage": "Sobre a página \n Ferramenta de rastreamento de erupções do vulcão La Palma ",
+		"aboutpage": "Página sobre \n Ferramenta de rastreamento de erupções do vulcão La Palma ",
 		"all": "Tudo sobre o aplicativo VolTrac:",
 		"points": "⬧ Este projeto foi criado durante o Google Summer of Code 2022 junto com a organização Liquid Galaxy. \n⬧ Este aplicativo foi desenvolvido por Yash Raj Bharti (e-mail: yashrajbharti.met18@itbhu.ac.in) sob Liquid Galaxy, graças ao Programa Google Summer of Code 2022. \n⬧ O aplicativo VolTrac serve como uma ferramenta de rastreamento para visualização das várias trilhas baseadas nas atividades vulcânicas de La Palma e as exibe lindamente com KML colorido. \n⬧ Voltrac não só funciona como um guia, mas também podemos usar nosso aplicativo para fins educacionais e de pesquisa, como estudar desastres naturais, atividades vulcânicas e catástrofes causadas pela destruição causada pelo vulcão La Palma. \n⬧ Várias trilhas de diferentes dados do mapa, como mapa de trilha histórica, mapa de fluxo de lava, mapa de trilha pré-histórica, mapa de áreas afetadas, mapa de paisagem, mapa de emissões SO\u2082, mapa de situação e eventos localizados são possíveis, graças aos vários fontes mencionadas na guia Informações. \n⬧ Além do inglês, este aplicativo também suporta oito idiomas, ou seja, espanhol, hindi, alemão, árabe, russo, japonês, chinês (simplificado) e albanês, que podem ser alterados na opção de menu Gerenciador de conexões. \n⬧ Desenvolvido graças aos Laboratórios TIC do Parque Científico de Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Escola Politécnica de Lleida, End Point Corp (NY), Wonderama LAB da Western University (Sydney), Gigabyte, Benq, HP, Corsair e Hemav Academics.",
 		"learn": "Saber mais",
@@ -112,7 +112,7 @@
 		"points3": "⬧ Para Navegar no equipamento LG, pode-se usar a interface da tela Mapa das seguintes formas: \n⬧ Para Arrastar, podemos usar um movimento do dedo em qualquer direção na tela Mapa. \n⬧ Para torcer em ângulo, pode-se usar dois dedos e dar um movimento de parafuso na tela do Mapa. \n⬧ Para ampliar, pode-se beliscar a tela e mover os dedos para fora ou para dentro para aumentar e diminuir o zoom, respectivamente. Também podemos ampliar pressionando os ícones + e - fornecidos na tela do Mapa. \n⬧ Para Inclinar, pode-se usar dois dedos e dar-lhe um movimento linear no sentido ascendente.",
 		"support": "Obter suporte",
 		"check": "Para obter mais suporte no Liquid Galaxy Projects, verifique estes links.",
-		"website": "Site da Liquid Galaxy",
+		"website": "Site do Liquid Galaxy",
 		"github": "Liquid Galaxy GitHub",
 		"icons": "Significado dos ícones",
 		"meanings": "Alguns ícones junto com seus significados estão listados abaixo.",
@@ -126,7 +126,7 @@
 	"info": {
 		"description": "Descrição:",
 		"date": "Data do evento:",
-		"legend": "Lenda:",
+		"legend": "Legenda:",
 		"sources": "Fontes:",
 		"hist": {
 			"description": "Esta trilha representa o fluxo de lava ao longo dos anos na ilha de La Palma. A história registrada confirma esses eventos, com a primeira atividade vulcânica em 1480 dC até a última erupção do Cumbre Vieja em 2021. A maioria deles tem um Índice de Explosividade Vulcânica (VEI) de 2, mas o último surto em 2021 teve um VEI de 3 .",
