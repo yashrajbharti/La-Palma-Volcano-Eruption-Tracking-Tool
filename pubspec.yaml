@@ -50,6 +50,7 @@ dependencies:
 
 
 
+
   
 
 
@@ -66,6 +67,7 @@ dev_dependencies:
   flutter_linkify: ^5.0.2
   day_night_switch:
   provider: ^6.0.3 
+  showcaseview: ^1.1.7
   
 flutter_icons:
   android: "launcher_icon"
