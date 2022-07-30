@@ -11,20 +11,13 @@ import 'package:webscrapperapp/codingapp/menuOptions/about.dart';
 import 'package:webscrapperapp/codingapp/day_night_switch.dart';
 import 'package:provider/provider.dart';
 import 'package:webscrapperapp/codingapp/theme-storage.dart';
-import 'package:showcaseview/showcaseview.dart';
 
 class Drawers extends StatefulWidget {
-  const Drawers({Key? key}) : super(key: key);
+  Drawers({Key? key}) : super(key: key);
 
   @override
   State<Drawers> createState() => _DrawersState();
 }
-
-final GlobalKey _helpKey = GlobalKey();
-final GlobalKey _aboutKey = GlobalKey();
-final GlobalKey _customKey = GlobalKey();
-final GlobalKey _taskKey = GlobalKey();
-final GlobalKey _connectionKey = GlobalKey();
 
 const dayColor = Color(0xFFd56352);
 const nightColor = Color(0xFF1b1e23);
@@ -42,7 +35,10 @@ class _DrawersState extends State<Drawers> {
                     color: themeNotifier.isDark
                         ? Color.fromARGB(255, 16, 16, 16)
                         : Color.fromARGB(255, 204, 204, 204),
+                    width: MediaQuery.of(context).size.width * 1.0,
+                    height: MediaQuery.of(context).size.height * 1.0,
                     child: ListView(
+                      shrinkWrap: true,
                       padding: const EdgeInsets.only(left: 100),
                       children: [
                         DrawerHeader(
@@ -96,135 +92,86 @@ class _DrawersState extends State<Drawers> {
                           ),
                         ),
                         ListTile(
-                          title:
-                              // Showcase(
-                              //     key: _helpKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_counterT extDescri ption",
-                              //     child:
-                              Text(
-                            translate("drawer.help"),
-                            style: TextStyle(
-                                color: themeNotifier.isDark
-                                    ? Colors.white
-                                    : Colors.black,
-                                fontSize: 40),
-                            // )
-                          ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (BuildContext context) => HelpScreen(),
+                            title: Text(
+                              translate("drawer.help"),
+                              style: TextStyle(
+                                  color: themeNotifier.isDark
+                                      ? Colors.white
+                                      : Colors.black,
+                                  fontSize: 40),
+                              // )
                             ),
-                          ),
-                        ),
+                            onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        HelpScreen(),
+                                  ),
+                                )),
                         SizedBox(height: 24),
                         ListTile(
-                          title:
-                              //  Showcase(
-                              //     key: _aboutKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_count erTextDes cription",
-                              //     child:
-                              Text(
-                            translate("drawer.about"),
-                            style: TextStyle(
-                                color: themeNotifier.isDark
-                                    ? Colors.white
-                                    : Colors.black,
-                                fontSize: 40),
-                            // )
-                          ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (BuildContext context) => AboutScreen(),
+                            title: Text(
+                              translate("drawer.about"),
+                              style: TextStyle(
+                                  color: themeNotifier.isDark
+                                      ? Colors.white
+                                      : Colors.black,
+                                  fontSize: 40),
+                              // )
                             ),
-                          ),
-                        ),
+                            onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        AboutScreen(),
+                                  ),
+                                )),
                         SizedBox(height: 24),
                         ListTile(
-                          title:
-                              // Showcase(
-                              //     key: _customKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_counte rTextDescr iption",
-                              //     child:
-                              Text(
-                            translate("drawer.custom"),
-                            style: TextStyle(
-                                color: themeNotifier.isDark
-                                    ? Colors.white
-                                    : Colors.black,
-                                fontSize: 40),
-                            //)
-                          ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  CustomBuilder(),
+                            title: Text(
+                              translate("drawer.custom"),
+                              style: TextStyle(
+                                  color: themeNotifier.isDark
+                                      ? Colors.white
+                                      : Colors.black,
+                                  fontSize: 40),
                             ),
-                          ),
-                        ),
+                            onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CustomBuilder(),
+                                  ),
+                                )),
                         SizedBox(height: 24),
                         ListTile(
-                          title:
-                              // Showcase(
-                              //     key: _taskKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_counte rTextDesc ription",
-                              //     child:
-                              Text(
-                            translate("drawer.task"),
-                            style: TextStyle(
-                                color: themeNotifier.isDark
-                                    ? Colors.white
-                                    : Colors.black,
-                                fontSize: 40),
-                            //)
-                          ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (BuildContext context) => LGtasks(),
+                            title: Text(
+                              translate("drawer.task"),
+                              style: TextStyle(
+                                  color: themeNotifier.isDark
+                                      ? Colors.white
+                                      : Colors.black,
+                                  fontSize: 40),
                             ),
-                          ),
-                        ),
+                            onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        LGtasks(),
+                                  ),
+                                )),
                         SizedBox(height: 24),
                         ListTile(
-                          title:
-                              //  Showcase(
-                              //     key: _connectionKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_counte rTextDes crip tion",
-                              //     child:
-                              Text(
-                            translate("drawer.settings"),
-                            style: TextStyle(
-                                color: themeNotifier.isDark
-                                    ? Colors.white
-                                    : Colors.black,
-                                fontSize: 40),
-                            //)
-                          ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (BuildContext context) => Settings(),
+                            title: Text(
+                              translate("drawer.settings"),
+                              style: TextStyle(
+                                  color: themeNotifier.isDark
+                                      ? Colors.white
+                                      : Colors.black,
+                                  fontSize: 40),
                             ),
-                          ),
-                        ),
+                            onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Settings(),
+                                  ),
+                                )),
                         Container(
                           margin: EdgeInsets.only(right: 100),
                           padding: EdgeInsets.only(top: 30),
@@ -258,10 +205,5 @@ class _DrawersState extends State<Drawers> {
                     ),
                   ),
                 )));
-  }
-
-  void startTutorialdrawer() {
-    ShowCaseWidget.of(context).startShowCase(
-        [_helpKey, _aboutKey, _customKey, _taskKey, _connectionKey]);
   }
 }

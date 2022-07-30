@@ -5,10 +5,12 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:webscrapperapp/codingapp/splash.dart';
 import 'package:provider/provider.dart';
 import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   var delegate = await LocalizationDelegate.create(
+      preferences: TranslatePreferences(),
       fallbackLocale: 'en_US',
       supportedLocales: [
         'en_US',
@@ -52,5 +54,27 @@ class MyApp extends StatelessWidget {
             );
           })),
     );
+  }
+}
+
+class TranslatePreferences implements ITranslatePreferences {
+  static const String _selectedLocaleKey = 'selected_locale';
+
+  @override
+  Future<Locale?> getPreferredLocale() async {
+    final preferences = await SharedPreferences.getInstance();
+
+    if (!preferences.containsKey(_selectedLocaleKey)) return null;
+
+    var locale = preferences.getString(_selectedLocaleKey);
+
+    return localeFromString(locale);
+  }
+
+  @override
+  Future savePreferredLocale(Locale locale) async {
+    final preferences = await SharedPreferences.getInstance();
+
+    await preferences.setString(_selectedLocaleKey, localeToString(locale));
   }
 }

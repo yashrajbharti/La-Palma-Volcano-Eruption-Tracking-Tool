@@ -7,7 +7,6 @@ import 'package:webscrapperapp/codingapp/layout.dart';
 import 'package:webscrapperapp/codingapp/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:webscrapperapp/codingapp/theme-storage.dart';
-import 'package:showcaseview/showcaseview.dart';
 
 class Mainpage extends StatefulWidget {
   Mainpage({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class Mainpage extends StatefulWidget {
   _MainpageState createState() => _MainpageState();
 }
 
-final GlobalKey _menuKey = GlobalKey();
+GlobalKey _menuKey = GlobalKey();
 
 class _MainpageState extends State<Mainpage> {
   @override
@@ -53,25 +52,15 @@ class _MainpageState extends State<Mainpage> {
                           builder: (context) => Padding(
                               // change left :
                               padding: const EdgeInsets.only(right: 30),
-                              // child: Showcase(
-                              //     key: _menuKey,
-                              //     shapeBorder: CircleBorder(),
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_counterTextDescription",
-                              //
                               child: IconButton(
-                                icon: Image.asset(themeNotifier.isDark
-                                    ? 'assets/menu-white.png'
-                                    : 'assets/menu.png'),
-                                iconSize: 120,
-                                onPressed: () =>
-                                    Scaffold.of(context).openEndDrawer(),
-                              )),
-                        ),
-                        // )
+                                  icon: Image.asset(themeNotifier.isDark
+                                      ? 'assets/menu-white.png'
+                                      : 'assets/menu.png'),
+                                  iconSize: 120,
+                                  onPressed: () {
+                                    Scaffold.of(context).openEndDrawer();
+                                  })),
+                        )
                       ],
                     ),
                   ),
@@ -80,10 +69,6 @@ class _MainpageState extends State<Mainpage> {
       endDrawer: Drawers(),
       body: Layout(),
     );
-  }
-
-  void startTutorialmenu() {
-    ShowCaseWidget.of(context).startShowCase([_menuKey]);
   }
 }
 

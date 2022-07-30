@@ -6,7 +6,6 @@ import 'package:webscrapperapp/codingapp/theme-storage.dart';
 import 'package:webscrapperapp/codingapp/Tabs/Info.dart';
 import 'package:webscrapperapp/codingapp/Tabs/Track_Tab.dart';
 import 'package:webscrapperapp/codingapp/Tabs/Map_Tab.dart';
-import 'package:showcaseview/showcaseview.dart';
 
 class Layout extends StatefulWidget {
   Layout({Key? key}) : super(key: key);
@@ -14,10 +13,6 @@ class Layout extends StatefulWidget {
   @override
   State<Layout> createState() => _LayoutState();
 }
-
-final GlobalKey _trackKey = GlobalKey();
-final GlobalKey _mapKey = GlobalKey();
-final GlobalKey _infoKey = GlobalKey();
 
 class _LayoutState extends State<Layout> {
   @override
@@ -44,45 +39,22 @@ class _LayoutState extends State<Layout> {
                       child: TabBar(
                         tabs: <Widget>[
                           Tab(
-                              // child: Showcase(
-                              //     key: _trackKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_counterTextDescription",
                               child: Text(
                             translate('tabs.track'),
                             style: TextStyle(fontSize: 40),
                           )),
-                          // ),
                           Tab(
-                              // child: Showcase(
-                              //     key: _mapKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description: "_counterTextDescription",
-                              child: Text(
-                            translate('tabs.map'),
-                            style: TextStyle(fontSize: 40),
-                          )),
-                          // ),
+                            child: Text(
+                              translate('tabs.map'),
+                              style: TextStyle(fontSize: 40),
+                            ),
+                          ),
                           Tab(
-                              // child: Showcase(
-                              //     key: _infoKey,
-                              //     showcaseBackgroundColor:
-                              //         Color.fromARGB(255, 125, 164, 243),
-                              //     overlayPadding: EdgeInsets.all(8),
-                              //     contentPadding: EdgeInsets.all(20),
-                              //     description:
-                              //         "_counte rText Descri ption bjjdbwjbd jwbdjwb wdwk",
-                              child: Text(
-                            translate('tabs.info'),
-                            style: TextStyle(fontSize: 40),
-                          )),
-                          //  ),
+                            child: Text(
+                              translate('tabs.info'),
+                              style: TextStyle(fontSize: 40),
+                            ),
+                          ),
                         ],
                         indicatorColor: Colors.white,
                         indicatorSize: TabBarIndicatorSize.label,
@@ -103,9 +75,5 @@ class _LayoutState extends State<Layout> {
         ),
       ),
     );
-  }
-
-  void startTutorialtab() {
-    ShowCaseWidget.of(context).startShowCase([_trackKey, _mapKey, _infoKey]);
   }
 }
