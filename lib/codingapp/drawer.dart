@@ -101,9 +101,21 @@ class _DrawersState extends State<Drawers> {
                                     Icons.help,
                                     size: 60,
                                   ), // The widget that will be displayed as the tap target.
-                                  title: Text('Add item'),
-                                  description: Text(
-                                      'Tap the plus icon to add an item to your list.'),
+                                  title: Text(
+                                    translate("drawer.help"),
+                                    style: TextStyle(
+                                        color: themeNotifier.isDark
+                                            ? Colors.white
+                                            : Colors.black,
+                                        fontSize: 30),
+                                    // )
+                                  ),
+                                  description: Text(translate("tour.help"),
+                                      style: TextStyle(
+                                          color: themeNotifier.isDark
+                                              ? Colors.white
+                                              : Colors.black,
+                                          fontSize: 18)),
                                   backgroundColor:
                                       Color.fromARGB(255, 125, 164, 243),
                                   targetColor: themeNotifier.isDark
@@ -136,9 +148,21 @@ class _DrawersState extends State<Drawers> {
                                     Icons.info_rounded,
                                     size: 60,
                                   ), // The widget that will be displayed as the tap target.
-                                  title: Text('Add item'),
-                                  description: Text(
-                                      'Tap the plus icon to add an item to your list.'),
+                                  title: Text(
+                                    translate("drawer.about"),
+                                    style: TextStyle(
+                                        color: themeNotifier.isDark
+                                            ? Colors.white
+                                            : Colors.black,
+                                        fontSize: 30),
+                                    // )
+                                  ),
+                                  description: Text(translate("tour.about"),
+                                      style: TextStyle(
+                                          color: themeNotifier.isDark
+                                              ? Colors.white
+                                              : Colors.black,
+                                          fontSize: 18)),
                                   backgroundColor:
                                       Color.fromARGB(255, 125, 164, 243),
                                   targetColor: themeNotifier.isDark
@@ -171,9 +195,20 @@ class _DrawersState extends State<Drawers> {
                                     Icons.calendar_month_rounded,
                                     size: 60,
                                   ), // The widget that will be displayed as the tap target.
-                                  title: Text('Add item'),
-                                  description: Text(
-                                      'Tap the plus icon to add an item to your list.'),
+                                  title: Text(
+                                    translate("drawer.custom"),
+                                    style: TextStyle(
+                                        color: themeNotifier.isDark
+                                            ? Colors.white
+                                            : Colors.black,
+                                        fontSize: 30),
+                                  ),
+                                  description: Text(translate("tour.custom"),
+                                      style: TextStyle(
+                                          color: themeNotifier.isDark
+                                              ? Colors.white
+                                              : Colors.black,
+                                          fontSize: 18)),
                                   backgroundColor:
                                       Color.fromARGB(255, 125, 164, 243),
                                   targetColor: themeNotifier.isDark
@@ -205,9 +240,20 @@ class _DrawersState extends State<Drawers> {
                                     Icons.construction_rounded,
                                     size: 60,
                                   ), // The widget that will be displayed as the tap target.
-                                  title: Text('Add item'),
-                                  description: Text(
-                                      'Tap the plus icon to add an item to your list.'),
+                                  title: Text(
+                                    translate("drawer.task"),
+                                    style: TextStyle(
+                                        color: themeNotifier.isDark
+                                            ? Colors.white
+                                            : Colors.black,
+                                        fontSize: 30),
+                                  ),
+                                  description: Text(translate("tour.task"),
+                                      style: TextStyle(
+                                          color: themeNotifier.isDark
+                                              ? Colors.white
+                                              : Colors.black,
+                                          fontSize: 18)),
                                   backgroundColor:
                                       Color.fromARGB(255, 125, 164, 243),
                                   targetColor: themeNotifier.isDark
@@ -239,9 +285,20 @@ class _DrawersState extends State<Drawers> {
                                     Icons.settings,
                                     size: 60,
                                   ), // The widget that will be displayed as the tap target.
-                                  title: Text('Add item'),
-                                  description: Text(
-                                      'Tap the plus icon to add an item to your list.'),
+                                  title: Text(
+                                    translate("drawer.settings"),
+                                    style: TextStyle(
+                                        color: themeNotifier.isDark
+                                            ? Colors.white
+                                            : Colors.black,
+                                        fontSize: 30),
+                                  ),
+                                  description: Text(translate("tour.settings"),
+                                      style: TextStyle(
+                                          color: themeNotifier.isDark
+                                              ? Colors.white
+                                              : Colors.black,
+                                          fontSize: 18)),
                                   backgroundColor:
                                       Color.fromARGB(255, 125, 164, 243),
                                   targetColor: themeNotifier.isDark
