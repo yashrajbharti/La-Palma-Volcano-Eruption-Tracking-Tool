@@ -15,8 +15,6 @@ class Mainpage extends StatefulWidget {
   _MainpageState createState() => _MainpageState();
 }
 
-GlobalKey _menuKey = GlobalKey();
-
 class _MainpageState extends State<Mainpage> {
   @override
   Widget build(BuildContext context) {
