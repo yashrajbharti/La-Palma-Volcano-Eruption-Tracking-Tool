@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 
@@ -7,6 +8,7 @@ import 'package:webscrapperapp/codingapp/layout.dart';
 import 'package:webscrapperapp/codingapp/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:feature_discovery/feature_discovery.dart';
 
 class Mainpage extends StatefulWidget {
   Mainpage({Key? key}) : super(key: key);
@@ -50,23 +52,64 @@ class _MainpageState extends State<Mainpage> {
                           builder: (context) => Padding(
                               // change left :
                               padding: const EdgeInsets.only(right: 30),
-                              child: IconButton(
-                                  icon: Image.asset(themeNotifier.isDark
-                                      ? 'assets/menu-white.png'
-                                      : 'assets/menu.png'),
-                                  iconSize: 120,
-                                  onPressed: () {
-                                    Scaffold.of(context).openEndDrawer();
-                                  })),
+                              child: DescribedFeatureOverlay(
+                                  featureId:
+                                      'feature12', // Unique id that identifies this overlay.
+                                  tapTarget: Image.asset(
+                                    themeNotifier.isDark
+                                        ? 'assets/menu-white.png'
+                                        : 'assets/menu.png',
+                                    height: 36,
+                                  ), // The widget that will be displayed as the tap target.
+                                  overflowMode: OverflowMode.extendBackground,
+                                  title: Text(
+                                    translate("tour.app"),
+                                    style: TextStyle(fontSize: 24),
+                                  ),
+                                  description: Text(translate("tour.desc"),
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                      )),
+                                  backgroundColor:
+                                      Theme.of(context).primaryColor,
+                                  targetColor: themeNotifier.isDark
+                                      ? Color.fromARGB(255, 30, 30, 30)
+                                      : Colors.white,
+                                  textColor: themeNotifier.isDark
+                                      ? Colors.white
+                                      : Colors.black,
+                                  child: IconButton(
+                                      icon: Image.asset(themeNotifier.isDark
+                                          ? 'assets/menu-white.png'
+                                          : 'assets/menu.png'),
+                                      iconSize: 120,
+                                      onPressed: () {
+                                        Scaffold.of(context).openEndDrawer();
+                                      }))),
                         )
                       ],
                     ),
                   ),
                 )),
       ),
-      endDrawer: Drawers(),
+      endDrawer: FeatureDiscovery(child: Drawers()),
       body: Layout(),
     );
+  }
+
+  @override
+  void initState() {
+    // ...
+    SchedulerBinding.instance?.addPostFrameCallback((Duration duration) {
+      FeatureDiscovery.discoverFeatures(
+        context,
+        const <String>{
+          // Feature ids for every feature that you want to showcase in order.
+          'feature12',
+        },
+      );
+    });
+    super.initState();
   }
 }
 
@@ -76,8 +119,9 @@ class First extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeModel>(
-        builder: (context, ThemeModel themeNotifier, child) => MaterialApp(
-            home: Mainpage(),
-            theme: themeNotifier.isDark ? isDarkTheme : isLightTheme));
+        builder: (context, ThemeModel themeNotifier, child) => FeatureDiscovery(
+            child: MaterialApp(
+                home: Mainpage(),
+                theme: themeNotifier.isDark ? isDarkTheme : isLightTheme)));
   }
 }

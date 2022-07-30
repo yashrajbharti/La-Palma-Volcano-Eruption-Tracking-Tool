@@ -212,5 +212,10 @@
 		"demostop": "Encerramento do KML de demo"
 	},
 	"dismiss": "Dispensar",
-	"continue": "Continuar"
+	"continue": "Continuar",
+	"tour": {
+		"take": "Faça um passeio",
+		"app": "Aplicativo VolTrac",
+		"desc": "⬧ A primeira tela do VolTrac App é dividida em três abas principais: Track, Map e Info. \n⬧ A guia Track nos ajuda a visualizar as várias trilhas, como Lava Flow, Áreas Afetadas, Situação, etc. \n⬧ A guia Map nos permite controlar o Liquid Galaxy realizando movimentos de toque simples no Google Map Flutter. Pode-se encontrar várias outras opções para exibir e gerenciar os dados KML na guia Mapa. \n⬧ A guia Informações fornece informações detalhadas das várias faixas que estamos visualizando. \n⬧ Toque no ícone de menu destacado para verificar as várias opções de menu disponíveis na gaveta de aplicativos."
+	}
 }
