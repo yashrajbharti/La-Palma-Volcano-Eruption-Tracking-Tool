@@ -1,126 +1,676 @@
 	<open>1</open>
+	<gx:Tour>
+	<name>Orbit</name>
+	<gx:Playlist>
+	<gx:AnimatedUpdate>
+		<gx:duration>0</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_29D8FEC24C2212EB67D5">   			
+				<LineStyle>
+					<color>003c8e38</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>003c8e38</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_1A5AD720BE2212EB67D5">   			
+				<LineStyle>
+					<color>003c8e38</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>003c8e38</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2B3E05444E2212EBB687">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1E518C841E2212EBB687">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1338E82A832212DE7482">   			
+				<LineStyle>
+					<color>009aa626</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>009aa626</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_0C18F2B52C2212DE7482">   			
+				<LineStyle>
+					<color>009aa626</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>009aa626</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_1A100606692212DF0141">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_21677EF3972212DF0141">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1AA1D8B2922212EA572E">   			
+				<LineStyle>
+					<color>0058eeff</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>0058eeff</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_018236A99B2212EA572F">   			
+				<LineStyle>
+					<color>0058eeff</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>0058eeff</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2E42218FB82212EA9B90">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1D573AE4102212EA9B90">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_18CE40A2192212DE7483">   			
+				<LineStyle>
+					<color>005053ef</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>005053ef</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_0C33CBAF352212DE7484">   			
+				<LineStyle>
+					<color>005053ef</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>005053ef</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2A3AE554972212DFB818">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_194F10563A2212DFB818">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1BFD824C332212DE7485">   			
+				<LineStyle>
+					<color>00c06b5c</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>00c06b5c</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_225E4C74772212DE7485">   			
+				<LineStyle>
+					<color>00c06b5c</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>00c06b5c</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_1073D317A42212EAC696">   			
+				<LineStyle>
+					<color>00d27619</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>00d27619</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2877CE79802212EAC696">   			
+				<LineStyle>
+					<color>00d27619</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>00d27619</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_14A2EE11572212EB01FC">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_04CFBFB72E2212EB01FD">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1D2D0070592212E04297">   			
+				<LineStyle>
+					<color>00007cf5</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>000051f5</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2557C964262212E04297">   			
+				<LineStyle>
+					<color>00007cf5</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>000051f5</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2F6FBC52112212EA260B">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1E6393D7432212EA260B">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1694AC2A922212E8ED77">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_27308D9BFA2212E8ED77">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_11DA10F4892212DE748D">   			
+				<PolyStyle>
+					<color>002f2fd3</color>	
+				</PolyStyle>
+				<LineStyle>
+					<color>002f2fd3</color>
+				</LineStyle>
+				</Style>
+				<Style targetId="__managed_style_231346B6FD2212DE748D">   				
+				<PolyStyle>
+					<color>002f2fd3</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_12295C2FF92212EC1E54">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_2052EF54062212EC1E54">
+				<IconStyle>
+					<color>00ffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>00ffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>1</gx:duration></gx:Wait>	
+		 <gx:FlyTo>
+  <gx:duration>4.0</gx:duration>
+  <gx:flyToMode>smooth</gx:flyToMode>
+  <LookAt>
+    <longitude>-17.95388889</longitude>
+    <latitude>28.57722222</latitude>
+    <altitude>15341.7995674</altitude>
+    <heading>61.403038024902344</heading>
+    <tilt>41.82725143432617</tilt>
+    <range>22570.546801</range>
+    <altitudeMode>relativeToGround</altitudeMode>
+  </LookAt>
+</gx:FlyTo>
+ 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_29D8FEC24C2212EB67D5">   			
+				<LineStyle>
+					<color>ff3c8e38</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>c03c8e38</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_1A5AD720BE2212EB67D5">   			
+				<LineStyle>
+					<color>ff3c8e38</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>c03c8e38</color>		
+				</PolyStyle>
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate>          		 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_2B3E05444E2212EBB687">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1E518C841E2212EBB687">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>3</gx:duration></gx:Wait>
+		         <gx:Wait> <gx:duration>1</gx:duration></gx:Wait>	 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_1338E82A832212DE7482">   			
+				<LineStyle>
+					<color>ff9aa626</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>c09aa626</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_0C18F2B52C2212DE7482">   			
+				<LineStyle>
+					<color>ff9aa626</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>c09aa626</color>		
+				</PolyStyle>
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate>          		 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_1A100606692212DF0141">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_21677EF3972212DF0141">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>3</gx:duration></gx:Wait>
+		 <gx:Wait> <gx:duration>1</gx:duration></gx:Wait>	 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_1AA1D8B2922212EA572E">   			
+				<LineStyle>
+					<color>ff58eeff</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>c058eeff</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_018236A99B2212EA572F">   			
+				<LineStyle>
+					<color>ff58eeff</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>c058eeff</color>		
+				</PolyStyle>
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate>          		 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_2E42218FB82212EA9B90">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1D573AE4102212EA9B90">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>3</gx:duration></gx:Wait>
+		  <gx:Wait> <gx:duration>1</gx:duration></gx:Wait>	 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_18CE40A2192212DE7483">   			
+				<LineStyle>
+					<color>ff5053ef</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>c05053ef</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_0C33CBAF352212DE7484">   			
+				<LineStyle>
+					<color>ff5053ef</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>c05053ef</color>		
+				</PolyStyle>
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate>          		 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_2A3AE554972212DFB818">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_194F10563A2212DFB818">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>3</gx:duration></gx:Wait>
+		 <gx:Wait> <gx:duration>1</gx:duration></gx:Wait>	 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_1BFD824C332212DE7485">   			
+				<LineStyle>
+					<color>ffc06b5c</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>c0c06b5c</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_225E4C74772212DE7485">   			
+				<LineStyle>
+					<color>ffc06b5c</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>c0c06b5c</color>		
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_1073D317A42212EAC696">   			
+				<LineStyle>
+					<color>ffd27619</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>c0d27619</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2877CE79802212EAC696">   			
+				<LineStyle>
+					<color>ffd27619</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>c0d27619</color>		
+				</PolyStyle>
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate>          		 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_14A2EE11572212EB01FC">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_04CFBFB72E2212EB01FD">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>3</gx:duration></gx:Wait>
+		  <gx:Wait> <gx:duration>1</gx:duration></gx:Wait>	 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_1D2D0070592212E04297">   			
+				<LineStyle>
+					<color>ff007cf5</color>	
+				</LineStyle>
+				<PolyStyle>
+					<color>c00051f5</color>	
+				</PolyStyle>
+				</Style>
+				<Style targetId="__managed_style_2557C964262212E04297">   			
+				<LineStyle>
+					<color>ff007cf5</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>c00051f5</color>		
+				</PolyStyle>
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate>          		 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_2F6FBC52112212EA260B">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1E6393D7432212EA260B">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_1694AC2A922212E8ED77">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_27308D9BFA2212E8ED77">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>3</gx:duration></gx:Wait>
+		   <gx:Wait> <gx:duration>1</gx:duration></gx:Wait>	 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_11DA10F4892212DE748D">   			
+				<PolyStyle>
+					<color>c02f2fd3</color>	
+				</PolyStyle>
+				<LineStyle>
+					<color>ff2f2fd3</color>
+				</LineStyle>
+				</Style>
+				<Style targetId="__managed_style_231346B6FD2212DE748D">   				
+				<PolyStyle>
+					<color>c02f2fd3</color>		
+				</PolyStyle>
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate>          		 
+		<gx:AnimatedUpdate>
+		<gx:duration>3</gx:duration> 	
+			<Update>
+				<targetHref></targetHref>
+				<Change>
+				<Style targetId="__managed_style_12295C2FF92212EC1E54">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>	
+				</LabelStyle>				
+				</Style>
+				<Style targetId="__managed_style_2052EF54062212EC1E54">
+				<IconStyle>
+					<color>ffffffff</color>	
+				</IconStyle>
+				<LabelStyle>
+					<color>ffffffff</color>
+				</LabelStyle>				
+				</Style>
+				</Change>				
+			</Update>
+		</gx:AnimatedUpdate> 
+         <gx:Wait> <gx:duration>3</gx:duration></gx:Wait>
+	</gx:Playlist>	
+</gx:Tour>
+<Folder>
 	<Snippet maxLines="0"></Snippet>
-	<Style id="__managed_style_1BFD824C332212DE7485">
-			<IconStyle>
-				<scale>1.3</scale>
-				<Icon>
-					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-				</Icon>
-			</IconStyle>
-			<LabelStyle>
-			</LabelStyle>
-			<LineStyle>
-				<color>ffc06b5c</color>
-			</LineStyle>
-			<PolyStyle>
-				<color>c0c06b5c</color>
-			</PolyStyle>
-			<BalloonStyle>
-				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 
-<head>
-
-<META http-equiv="Content-Type" content="text/html">
-
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-</head>
-
-<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
-
-<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
-
-<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
-
-<td>1949</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
-
-<tr>
-
-<td>Start Date</td>
-
-<td>1949 Jun 24</td>
-
-</tr>
-
-<tr bgcolor="#D4E4F3">
-
-<td>Stop Date</td>
-
-<td>1949 Jul 30</td>
-
-</tr>
-
-<tr>
-
-<td>Eruption Certainty</td>
-
-<td>Confirmed</td>
-
-</tr>
-
-<tr bgcolor="#D4E4F3">
-
-<td> VEI </td>
-
-<td>2</td>
-
-</tr>
-
-<tr>
-
-<td>Evidence</td>
-
-<td>Historical Observations</td>
-
-</tr>
-
-<tr bgcolor="#D4E4F3">
-
-<td> Activity Area or Unit </td>
-
-<td>San Juan <br> Llano del Banco <br> Hoyo Negro</td>
-
-</tr>
-
-</table>
-
-</td>
-
-</tr>
-
-</table>
-
-</body>
-
-</html>]]></text>
-			</BalloonStyle>
-	</Style>
-	<StyleMap id="__managed_style_020C0ED2B92212DF0141">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1A100606692212DF0141</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_21677EF3972212DF0141</styleUrl>
-		</Pair>
-	</StyleMap>
 	<Style id="__managed_style_04CFBFB72E2212EB01FD">
 			<IconStyle>
+			<color>ffffffff</color>
 				<scale>1.2</scale>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -221,11 +771,13 @@
 	<Style id="__managed_style_14A2EE11572212EB01FC">
 
 			<IconStyle>
+			<color>ffffffff</color>	
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>	
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -322,24 +874,17 @@
 </html>]]></text>
 			</BalloonStyle>
 	</Style>
-	<StyleMap id="__managed_style_052299217D2212EA9B90">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1D573AE4102212EA9B90</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_2E42218FB82212EA9B90</styleUrl>
-		</Pair>
-	</StyleMap>
+
 	<Style id="__managed_style_2A3AE554972212DFB818">
 			<IconStyle>
 				<scale>1.2</scale>
+				<color>ffffffff</color>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -439,11 +984,13 @@
 	<Style id="__managed_style_2E42218FB82212EA9B90">
 			<IconStyle>
 				<scale>1.2</scale>
+				<color>ffffffff</color>	
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>	
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -540,16 +1087,7 @@
 </html>]]></text>
 			</BalloonStyle>
 	</Style>
-	<StyleMap id="__managed_style_0ACE8156212212E8ED77">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1694AC2A922212E8ED77</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_27308D9BFA2212E8ED77</styleUrl>
-		</Pair>
-	</StyleMap>
+
 	<StyleMap id="__managed_style_048CFE9EA42212EB01FC">
 		<Pair>
 			<key>normal</key>
@@ -562,11 +1100,13 @@
 	</StyleMap>
 	<Style id="__managed_style_194F10563A2212DFB818">
 			<IconStyle>
+			<color>ffffffff</color>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -829,12 +1369,14 @@
 	</Style>
 	<Style id="__managed_style_2F6FBC52112212EA260B">
 			<IconStyle>
+			<color>ffffffff</color>
 				<scale>1.2</scale>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -943,11 +1485,13 @@
 	</StyleMap>
 	<Style id="__managed_style_1E518C841E2212EBB687">
 			<IconStyle>
+			<color>ffffffff</color>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+				<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -1044,26 +1588,7 @@
 </html>]]></text>
 			</BalloonStyle>
 	</Style>
-	<StyleMap id="__managed_style_004913DB562212EBB687">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1E518C841E2212EBB687</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_2B3E05444E2212EBB687</styleUrl>
-		</Pair>
-	</StyleMap>
-	<StyleMap id="__managed_style_0D815160742212EC1E54">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_12295C2FF92212EC1E54</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_2052EF54062212EC1E54</styleUrl>
-		</Pair>
-	</StyleMap>
+	
 	<Style id="__managed_style_231346B6FD2212DE748D">
 			<IconStyle>
 				<scale>1.2</scale>
@@ -1076,7 +1601,7 @@
 				<scale>0</scale>
 			</LabelStyle>
 			<LineStyle>
-				<color>002f2fd3</color>
+				<color>ff2f2fd3</color>
 				<width>1.5</width>
 			</LineStyle>
 			<PolyStyle>
@@ -1170,16 +1695,7 @@
 </html>]]></text>
 			</BalloonStyle>
 	</Style>
-	<StyleMap id="__managed_style_09B07E14FE2212DE748D">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_11DA10F4892212DE748D</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_231346B6FD2212DE748D</styleUrl>
-		</Pair>
-	</StyleMap>
+	
 	<Style id="__managed_style_29D8FEC24C2212EB67D5">
 			<IconStyle>
 				<scale>1.56</scale>
@@ -1408,7 +1924,7 @@
 				<scale>0</scale>
 			</LabelStyle>
 			<LineStyle>
-				<color>002f2fd3</color>
+				<color>ff2f2fd3</color>
 			</LineStyle>
 			<PolyStyle>
 				<color>c02f2fd3</color>
@@ -1503,12 +2019,14 @@
 	</Style>
 	<Style id="__managed_style_2B3E05444E2212EBB687">
 			<IconStyle>
+				<color>ffffffff</color>
 				<scale>1.2</scale>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -1814,16 +2332,7 @@
 			</BalloonStyle>
 
 	</Style>
-	<StyleMap id="__managed_style_084A6145802212DE7485">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1BFD824C332212DE7485</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_225E4C74772212DE7485</styleUrl>
-		</Pair>
-	</StyleMap>
+	
 	<Style id="__managed_style_1AA1D8B2922212EA572E">
 			<IconStyle>
 				<scale>1.3</scale>
@@ -2033,11 +2542,13 @@
 	</Style>
 	<Style id="__managed_style_1E6393D7432212EA260B">
 			<IconStyle>
+			<color>ffffffff</color>	
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>	
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -2134,16 +2645,7 @@
 </html>]]></text>
 			</BalloonStyle>
 	</Style>
-	<StyleMap id="__managed_style_065808C85F2212EA572E">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1AA1D8B2922212EA572E</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_018236A99B2212EA572F</styleUrl>
-		</Pair>
-	</StyleMap>
+
 	<StyleMap id="__managed_style_0FA98564542212EA260B">
 		<Pair>
 			<key>normal</key>
@@ -2156,12 +2658,14 @@
 	</StyleMap>
 	<Style id="__managed_style_21677EF3972212DF0141">
 			<IconStyle>
+			<color>ffffffff</color>
 				<scale>1.2</scale>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -2632,11 +3136,13 @@
 	</Style>
 	<Style id="__managed_style_1694AC2A922212E8ED77">
 			<IconStyle>
+			<color>ffffffff</color>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -2838,11 +3344,13 @@
 	</Style>
 	<Style id="__managed_style_12295C2FF92212EC1E54">
 			<IconStyle>
+			<color>ffffffff</color>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>c0ffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -2939,24 +3447,17 @@
 </html>]]></text>
 			</BalloonStyle>
 	</Style>
-	<StyleMap id="__managed_style_075513BACF2212E04297">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_1D2D0070592212E04297</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_2557C964262212E04297</styleUrl>
-		</Pair>
-	</StyleMap>
+
 	<Style id="__managed_style_27308D9BFA2212E8ED77">
 			<IconStyle>
+			<color>ffffffff</color>
 				<scale>1.2</scale>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -3156,16 +3657,7 @@
 </html>]]></text>
 			</BalloonStyle>
 	</Style>
-	<StyleMap id="__managed_style_0349CF93362212DE7483">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#__managed_style_18CE40A2192212DE7483</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#__managed_style_0C33CBAF352212DE7484</styleUrl>
-		</Pair>
-	</StyleMap>
+	
 	<Style id="__managed_style_0C33CBAF352212DE7484">
 			<IconStyle>
 				<scale>1.56</scale>
@@ -3272,11 +3764,13 @@
 	</Style>
 	<Style id="__managed_style_1D573AE4102212EA9B90">
 			<IconStyle>
+			<color>ffffffff</color>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -3375,11 +3869,13 @@
 	</Style>
 	<Style id="__managed_style_1A100606692212DF0141">
 			<IconStyle>
+			<color>ffffffff</color>	
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>	
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -3479,11 +3975,13 @@
 	<Style id="__managed_style_2052EF54062212EC1E54">
 			<IconStyle>
 				<scale>1.2</scale>
+				<color>ffffffff</color>
 				<Icon>
 					<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
 				</Icon>
 			</IconStyle>
 			<LabelStyle>
+			<color>ffffffff</color>
 			</LabelStyle>
 			<LineStyle>
 				<color>ff2dc0fb</color>
@@ -3606,9 +4104,6 @@
 		<Snippet maxLines="0"></Snippet>
 		<Placemark id="05F7EF4B472211F03148">
 			<name>1585</name>
-			  <TimeSpan>
-        <begin>1585</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0D3B68AAFC2212DE7481</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
@@ -3621,11 +4116,18 @@
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
+		<StyleMap id="__managed_style_0349CF93362212DE7483">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_18CE40A2192212DE7483</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0C33CBAF352212DE7484</styleUrl>
+		</Pair>
+	</StyleMap>
 		<Placemark id="032713CA022211F03154">
 			<name>1712</name>
-			  <TimeSpan>
-        <begin>1712</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0349CF93362212DE7483</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -3639,11 +4141,122 @@
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
+	
 		<Placemark id="01FCCA26E12211F0315A">
+			<StyleMap id="__managed_style_084A6145802212DE7485">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1BFD824C332212DE7485</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_225E4C74772212DE7485</styleUrl>
+		</Pair>
+	</StyleMap>
+		<Style id="__managed_style_1BFD824C332212DE7485">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffc06b5c</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>c0c06b5c</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>1949</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Start Date</td>
+
+<td>1949 Jun 24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Stop Date</td>
+
+<td>1949 Jul 30</td>
+
+</tr>
+
+<tr>
+
+<td>Eruption Certainty</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> VEI </td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Evidence</td>
+
+<td>Historical Observations</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td> Activity Area or Unit </td>
+
+<td>San Juan <br> Llano del Banco <br> Hoyo Negro</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></text>
+			</BalloonStyle>
+	</Style>
 			<name>1949</name>
-			      <TimeSpan>
-        <begin>1949</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_084A6145802212DE7485</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -3657,12 +4270,19 @@
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
+			<StyleMap id="__managed_style_075513BACF2212E04297">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1D2D0070592212E04297</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2557C964262212E04297</styleUrl>
+		</Pair>
+	</StyleMap>
 		<Placemark id="053DBD3EEB2211F03151">
 			<name>1677 and 1971</name>
 			<styleUrl>#__managed_style_075513BACF2212E04297</styleUrl>
-			      <TimeSpan>
-        <begin>1677</begin>
-      </TimeSpan>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<altitudeMode>relativeToGround</altitudeMode>
@@ -3675,12 +4295,19 @@
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
+			<StyleMap id="__managed_style_065808C85F2212EA572E">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1AA1D8B2922212EA572E</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_018236A99B2212EA572F</styleUrl>
+		</Pair>
+	</StyleMap>
 		<Placemark id="0B5220B1042211F0314B">
 			<name>1646</name>
 			<styleUrl>#__managed_style_065808C85F2212EA572E</styleUrl>
-			      <TimeSpan>
-        <begin>1646</begin>
-      </TimeSpan>
 			<Polygon>
 				<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
 			<outerBoundaryIs>
@@ -3692,11 +4319,18 @@
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
+			<StyleMap id="__managed_style_0B06DD00E12212EAC696">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1073D317A42212EAC696</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2877CE79802212EAC696</styleUrl>
+		</Pair>
+	</StyleMap>
 		<Placemark id="08B1CC4D372211F03145">
 			<name>1949</name>
-			      <TimeSpan>
-        <begin>1949</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0B06DD00E12212EAC696</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
@@ -3713,9 +4347,6 @@
 		<Placemark id="0A8A7AB43E2211F03142">
 			<name>1480</name>
 			<styleUrl>#__managed_style_0C0D6A96362212EB67D5</styleUrl>
-			<TimeSpan>
-        <begin>1480</begin>
-      </TimeSpan>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<altitudeMode>relativeToGround</altitudeMode>
@@ -3729,12 +4360,19 @@
 			</Polygon>
 		</Placemark>
 		<Placemark id="ID_00000">
+		<StyleMap id="__managed_style_09B07E14FE2212DE748D">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_11DA10F4892212DE748D</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_231346B6FD2212DE748D</styleUrl>
+		</Pair>
+	</StyleMap>
 			<name>2021</name>
 			<Snippet maxLines="0"></Snippet>
 			<styleUrl>#__managed_style_09B07E14FE2212DE748D</styleUrl>
-			<TimeSpan>
-        <begin>2021</begin>
-      </TimeSpan>
 			<MultiGeometry>
 				<Polygon>
 				<tessellate>1</tessellate>
@@ -3817,6 +4455,16 @@
 			</MultiGeometry>
 		</Placemark>
 	</Folder>
+		<StyleMap id="__managed_style_0D815160742212EC1E54">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_12295C2FF92212EC1E54</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2052EF54062212EC1E54</styleUrl>
+		</Pair>
+	</StyleMap>
 	<Placemark id="0431A5F1A02212327AFD">
 		<name>2021</name>
 		<LookAt>
@@ -3829,14 +4477,21 @@
 			<range>27112.44519857224</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		<TimeSpan>
-        <begin>2021</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_0D815160742212EC1E54</styleUrl>
 		<Point>
 			<coordinates>-17.89581103886936,28.61780811761596,1</coordinates>
 		</Point>
 	</Placemark>
+	<StyleMap id="__managed_style_004913DB562212EBB687">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1E518C841E2212EBB687</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2B3E05444E2212EBB687</styleUrl>
+		</Pair>
+	</StyleMap>
 	<Placemark id="026A1661C02212349496">
 		<name>1480</name>
 		<LookAt>
@@ -3849,9 +4504,6 @@
 			<range>28283.98124833591</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-			<TimeSpan>
-        <begin>1480</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_004913DB562212EBB687</styleUrl>
 		<Point>
 			<coordinates>-17.87644842162196,28.64233498449954,698.7999552155746</coordinates>
@@ -3869,14 +4521,21 @@
 			<range>25942.61502012145</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		  <TimeSpan>
-        <begin>1712</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_050095B0432212DFB818</styleUrl>
 		<Point>
 			<coordinates>-17.88302880093448,28.55602488205319,1</coordinates>
 		</Point>
 	</Placemark>
+		<StyleMap id="__managed_style_052299217D2212EA9B90">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1D573AE4102212EA9B90</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2E42218FB82212EA9B90</styleUrl>
+		</Pair>
+	</StyleMap>
 	<Placemark id="00A122AA6D2212361956">
 		<name>1646</name>
 		<LookAt>
@@ -3889,9 +4548,6 @@
 			<range>22879.68451032182</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		      <TimeSpan>
-        <begin>1646</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_052299217D2212EA9B90</styleUrl>
 		<Point>
 			<coordinates>-17.81686972964243,28.5284579621545,804.419018388809</coordinates>
@@ -3910,14 +4566,21 @@
 			<range>37199.10800152459</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		      <TimeSpan>
-        <begin>1949</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_048CFE9EA42212EB01FC</styleUrl>
 		<Point>
 			<coordinates>-17.80624716300208,28.56976486208636,1000.859870126408</coordinates>
 		</Point>
 	</Placemark>
+		<StyleMap id="__managed_style_0ACE8156212212E8ED77">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1694AC2A922212E8ED77</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_27308D9BFA2212E8ED77</styleUrl>
+		</Pair>
+	</StyleMap>
 	<Placemark id="0AFC17076D221237770E">
 		<name>1677</name>
 		<LookAt>
@@ -3930,9 +4593,6 @@
 			<range>37317.63490707614</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		      <TimeSpan>
-        <begin>1677</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_0ACE8156212212E8ED77</styleUrl>
 		<Point>
 			<coordinates>-17.86084276412824,28.47811761133854,103.8992570024309</coordinates>
@@ -3950,14 +4610,21 @@
 			<range>37317.63490707614</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		      <TimeSpan>
-        <begin>1971</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_0FA98564542212EA260B</styleUrl>
 		<Point>
 			<coordinates>-17.8362393419824,28.45559341440788,-8.276668289944368</coordinates>
 		</Point>
 	</Placemark>
+		<StyleMap id="__managed_style_020C0ED2B92212DF0141">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1A100606692212DF0141</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_21677EF3972212DF0141</styleUrl>
+		</Pair>
+	</StyleMap>
 	<Placemark id="06B14565E522123847DC">
 		<name>1585</name>
 		<LookAt>
@@ -3970,9 +4637,7 @@
 			<range>42014.15377044585</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		  <TimeSpan>
-        <begin>1585</begin>
-      </TimeSpan>
+
 		<styleUrl>#__managed_style_020C0ED2B92212DF0141</styleUrl>
 		<Point>
 			<coordinates>-17.90024251708221,28.57720356766007,543.8459442828797</coordinates>
@@ -3990,11 +4655,9 @@
 			<range>38799.71073736902</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		      <TimeSpan>
-        <begin>1949</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_048CFE9EA42212EB01FC</styleUrl>
 		<Point>
 			<coordinates>-17.85774236995162,28.6005073237975,18.18462187069778</coordinates>
 		</Point>
 	</Placemark>
+	</Folder>

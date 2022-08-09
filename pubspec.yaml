@@ -47,11 +47,10 @@ dependencies:
     sdk: flutter
     version: ^0.0.0
 
-
-
-
-
   
+
+
+
 
 
 dev_dependencies:
@@ -68,8 +67,8 @@ dev_dependencies:
   day_night_switch:
   provider: ^6.0.3 
   feature_discovery: ^0.14.1
+  percent_indicator: 4.0.1
 
-  
 flutter_icons:
   android: "launcher_icon"
   ios: true
@@ -116,9 +115,22 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: OldStandard
+    - family: GoogleSans
       fonts:
-        - asset: assets/fonts/OldStandardTT-Bold.ttf
+        - asset: assets/fonts/ProductSans-Black.ttf
+        - asset: assets/fonts/ProductSans-BlackItalic.ttf
+        - asset: assets/fonts/ProductSans-Bold.ttf
+        - asset: assets/fonts/ProductSans-BoldItalic.ttf
+        - asset: assets/fonts/ProductSans-Italic.ttf
+        - asset: assets/fonts/ProductSans-Light.ttf
+        - asset: assets/fonts/ProductSans-LightItalic.ttf
+        - asset: assets/fonts/ProductSans-Medium.ttf
+        - asset: assets/fonts/ProductSans-MediumItalic.ttf
+        - asset: assets/fonts/ProductSans-Regular.ttf
+        - asset: assets/fonts/ProductSans-Thin.ttf
+        - asset: assets/fonts/ProductSans-ThinItalic.ttf
+
+
 
   
   # For details regarding fonts from package dependencies,

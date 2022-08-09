@@ -24,7 +24,7 @@ Supports 10 Languages: Arabic, German, English, Spanish, Hindi, Japanese, Portug
    CupertinoActionSheetAction(
             child: Text(translate('language.name.en') + " 🇺🇸",
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                    fontWeight: FontWeight.normal, fontFamily: "GoogleSans")),
             onPressed: () {
               changeLocale(context, "en");
               Navigator.of(context, rootNavigator: true).pop("en");

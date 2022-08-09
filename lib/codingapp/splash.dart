@@ -24,16 +24,16 @@ class _SplashState extends State<Splash> {
               title: Text(
                 translate('title.name'),
                 style: TextStyle(
-                  fontFamily: 'OldStandard',
+                  fontFamily: 'GoogleSans',
                   fontSize: 55,
                   color: Color.fromARGB(255, 204, 204, 204),
                 ),
               ),
-              image: Image.asset("assets/volcano.png"),
+              image: Image.asset("assets/icons/volcanoandlogo.png"),
               backgroundColor: themeNotifier.isDark
                   ? Color.fromARGB(255, 16, 16, 16)
                   : Color.fromARGB(255, 30, 30, 30),
-              photoSize: 100.0,
+              photoSize: 150.0,
               loaderColor: const Color.fromARGB(255, 204, 204, 204),
             ));
   }

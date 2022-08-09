@@ -58,11 +58,11 @@
 	},
 	"Tasks": {
 		"LG": "Liquid Galaxy-Aufgaben",
-		"Relaunch": "Neustart \n    LG",
-		"Reboot": "Reboot \n   LG",
-		"Shutdown": "Abschalten \n      LG",
-		"Save": "Speichern \n   KML",
-		"Clean": "Löschen \n  KML",
+		"Relaunch": "Neustart \n     LG",
+		"Reboot": "Reboot \n    LG",
+		"Shutdown": "Abschalten \n       LG",
+		"Save": "Speichern \n    KML",
+		"Clean": "Löschen \n   KML",
 		"alert": "Erfolg!",
 		"alert2": "In Ihrem Download-Ordner finden Sie eine KML-Datei mit den Kartendaten des Projekts",
 		"alert3": "Hoppla!",
@@ -100,7 +100,8 @@
 		"github": "VolTrac-GitHub",
 		"privacy": "Datenschutz-Bestimmungen",
 		"attribute": "Bildzuordnung",
-		"resource": "Die folgenden Ressourcen wurden für die Symbole verwendet."
+		"resource": "Die folgenden Ressourcen wurden für die Symbole verwendet.",
+		"author": "Name des Autors - Yash Raj Bharti \n Name des Mentors - Iván Josa Llovera \n Kontaktinformationen des Autors - yashrajbharti.met18@itbhu.ac.in"
 	},
 	"help": {
 		"helppage": "Hilfeseite",
@@ -209,7 +210,9 @@
 		"buildorbit": "Startorbit",
 		"stoporbit": "Orbit stoppen",
 		"demostart": "Eröffnung Demo KML",
-		"demostop": "Abschließende Demo-KML"
+		"demostop": "Abschließende Demo-KML",
+		"logo": "Logo anzeigen",
+		"clean": "Reinigungslogo"
 	},
 	"dismiss": "Zurückweisen",
 	"continue": "Fortsetzen",

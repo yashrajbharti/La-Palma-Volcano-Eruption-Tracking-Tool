@@ -1,20 +1,33 @@
+import 'dart:io';
+import 'dart:ui';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:webscrapperapp/codingapp/kml/orbit.dart';
+import 'package:path_provider/path_provider.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:ssh/ssh.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class VerticalCardPagerDemo extends StatefulWidget {
   @override
   _VerticalCardPagerDemoState createState() => _VerticalCardPagerDemoState();
 }
 
+bool isOrbiting = false;
 int x = 0;
 void jumpToPage(int page) {
   x = page;
 }
+
+double latvalue = 28.65665656297236;
+double longvalue = -17.885454520583153;
 
 class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
   _launchURL(String url) async {
@@ -23,6 +36,138 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
     } else {
       throw 'Could not launch $url';
     }
+  }
+
+  playOrbit() async {
+    await LGConnection()
+        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
+            LookAt(longvalue, latvalue, "30492.665945696469", "0", "0"))))
+        .then((value) async {
+      await LGConnection().startOrbit();
+    });
+    setState(() {
+      isOrbiting = true;
+    });
+  }
+
+  stopOrbit() async {
+    await LGConnection().stopOrbit();
+    setState(() {
+      isOrbiting = false;
+    });
+  }
+
+  void _showToast(String x, bool blackandwhite) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          "$x",
+          style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.normal,
+              fontFamily: "GoogleSans",
+              color: Colors.white),
+        ),
+        duration: Duration(seconds: 3),
+        backgroundColor: blackandwhite
+            ? Color.fromARGB(255, 22, 22, 22)
+            : Color.fromARGB(250, 43, 43, 43),
+        width: 500.0,
+        padding: const EdgeInsets.fromLTRB(
+          35,
+          20,
+          15,
+          20,
+        ),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        action: SnackBarAction(
+          textColor: Color.fromARGB(255, 125, 164, 243),
+          label: translate('Track.close'),
+          onPressed: () {},
+        ),
+      ),
+    );
+  }
+
+  showAlertDialog(String title, String msg, bool blackandwhite) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 4, sigmaY: 3),
+            child: AlertDialog(
+              backgroundColor: blackandwhite
+                  ? Color.fromARGB(255, 16, 16, 16)
+                  : Color.fromARGB(255, 33, 33, 33),
+              title: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child: Image.asset(
+                        "assets/sad.png",
+                        width: 250,
+                        height: 250,
+                      )),
+                  Text(
+                    '$title',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Color.fromARGB(255, 204, 204, 204),
+                    ),
+                  ),
+                ],
+              ),
+              content: SizedBox(
+                width: 320,
+                height: 180,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text('$msg',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(
+                              255,
+                              204,
+                              204,
+                              204,
+                            ),
+                          ),
+                          textAlign: TextAlign.center),
+                      SizedBox(
+                          width: 300,
+                          child: Padding(
+                              padding: EdgeInsets.only(top: 10),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 2,
+                                  shadowColor: Colors.black,
+                                  primary: Color.fromARGB(255, 220, 220, 220),
+                                  padding: EdgeInsets.all(15),
+                                  shape: StadiumBorder(),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: Wrap(
+                                  children: <Widget>[
+                                    Text(translate('dismiss'),
+                                        style: TextStyle(
+                                            fontSize: 20, color: Colors.black)),
+                                  ],
+                                ),
+                              ))),
+                    ]),
+              ),
+            ));
+      },
+    );
   }
 
   @override
@@ -193,7 +338,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
                             ),
@@ -213,7 +358,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset(
@@ -227,7 +372,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -242,7 +387,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -257,7 +402,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -280,7 +425,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset(
@@ -294,7 +439,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -309,7 +454,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -324,7 +469,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -339,7 +484,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -641,7 +786,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
                             ),
@@ -661,7 +806,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset(
@@ -675,7 +820,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -690,7 +835,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -705,7 +850,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -728,7 +873,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset(
@@ -742,7 +887,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -757,7 +902,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -772,7 +917,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -786,7 +931,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -1066,7 +1211,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
                             ),
@@ -1086,7 +1231,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset(
@@ -1100,7 +1245,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -1115,7 +1260,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -1138,7 +1283,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset(
@@ -1152,7 +1297,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -1167,7 +1312,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -1447,7 +1592,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
                             ),
@@ -1467,7 +1612,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -1482,7 +1627,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -1505,7 +1650,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset('assets/icons/vent.png'),
@@ -1518,7 +1663,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 const Icon(
                                   Icons.rectangle_outlined,
@@ -1530,21 +1675,21 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   "▬▬  ",
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Color.fromARGB(255, 3, 95, 171),
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   translate("info.aff.hydro"),
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -1560,42 +1705,42 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.red,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   translate("info.aff.roads"),
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   "▬▬  ",
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Color.fromARGB(255, 249, 233, 82),
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   translate("info.aff.possible"),
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   "▬▬  ",
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Color.fromARGB(255, 0, 0, 0),
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   translate("info.aff.novisible"),
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -1857,7 +2002,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
                             ),
@@ -1877,7 +2022,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                             SizedBox(
@@ -1898,7 +2043,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                           ],
@@ -2198,7 +2343,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 10,
                             ),
@@ -2215,7 +2360,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.rectangle_rounded,
                                   color: Color.fromARGB(255, 235, 56, 50),
@@ -2225,7 +2370,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.rectangle_rounded,
                                   color: Color.fromARGB(255, 251, 248, 81),
@@ -2235,7 +2380,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.rectangle_rounded,
                                   color: Color.fromARGB(255, 107, 248, 251),
@@ -2245,7 +2390,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                             SizedBox(
@@ -2264,7 +2409,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.rectangle_rounded,
                                   color: Color.fromARGB(255, 9, 35, 135),
@@ -2274,7 +2419,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset('assets/icons/VO.png'),
@@ -2287,7 +2432,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -2588,7 +2733,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 5,
                             ),
@@ -2609,7 +2754,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -2623,7 +2768,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Builder(
                                   builder: (context) => IconButton(
@@ -2637,7 +2782,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                             SizedBox(
@@ -2658,7 +2803,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 Builder(
                                   builder: (context) => IconButton(
                                     icon: Image.asset(
@@ -2672,21 +2817,21 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   translate("info.situation.Text"),
                                   style: TextStyle(
                                       fontSize: 23.0,
                                       color: Color.fromARGB(255, 132, 95, 55),
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                                 Text(
                                   translate("info.situation.municipality"),
                                   style: TextStyle(
                                       fontSize: 18.5,
                                       color: Colors.white70,
-                                      fontFamily: "OldStandard"),
+                                      fontFamily: "GoogleSans"),
                                 ),
                               ],
                             ),
@@ -2706,7 +2851,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.circle_rounded,
                                   color: Color.fromARGB(255, 247, 184, 68),
@@ -2716,7 +2861,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.circle_rounded,
                                   color: Color.fromARGB(255, 239, 99, 55),
@@ -2726,7 +2871,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.circle_rounded,
                                   color: Color.fromARGB(255, 167, 36, 33),
@@ -2736,7 +2881,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.circle_rounded,
                                   color: Color.fromARGB(255, 98, 17, 15),
@@ -2746,7 +2891,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.circle_rounded,
                                   color: Color.fromARGB(255, 124, 93, 30),
@@ -2756,7 +2901,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                                 const Icon(
                                   Icons.circle_rounded,
                                   color: Color.fromARGB(255, 0, 0, 0),
@@ -2766,7 +2911,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                           ],
@@ -3066,7 +3211,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
-                                    fontFamily: "OldStandard")),
+                                    fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
                             ),
@@ -3086,7 +3231,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                             SizedBox(
@@ -3108,7 +3253,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                             SizedBox(
@@ -3130,7 +3275,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                             SizedBox(
@@ -3155,7 +3300,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
                                     style: TextStyle(
                                         fontSize: 18.5,
                                         color: Colors.white70,
-                                        fontFamily: "OldStandard")),
+                                        fontFamily: "GoogleSans")),
                               ],
                             ),
                           ],
@@ -3251,7 +3396,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
     ];
 
     return Scaffold(
-      body: Container(
+        body: Stack(children: <Widget>[
+      Container(
           child: CarouselSlider(
         options: CarouselOptions(
           enlargeCenterPage: true,
@@ -3263,6 +3409,190 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
         ),
         items: track_cards,
       )),
+      Consumer<ThemeModel>(
+        builder: (context, ThemeModel themeNotifier, child) => Positioned(
+          top: 200,
+          right: 0,
+          child: Card(
+            elevation: 0,
+            child: Container(
+              color: themeNotifier.isDark
+                  ? Color.fromARGB(255, 30, 30, 30)
+                  : Color.fromARGB(255, 68, 68, 68),
+              width: 59.5,
+              height: 124.25,
+              child: Column(
+                children: <Widget>[
+                  SizedBox(height: 6),
+                  IconButton(
+                      icon: Icon(
+                        Icons.replay_rounded,
+                        color: Color.fromARGB(255, 135, 205, 131),
+                        size: 32,
+                      ),
+                      onPressed: () async {
+                        LGConnection().cleanOrbit().then((value) {
+                          playOrbit();
+                          _showToast(translate('map.buildorbit'),
+                              themeNotifier.isDark);
+                        }).catchError((onError) {
+                          print('oh no $onError');
+                          if (onError == 'nogeodata') {
+                            showAlertDialog(
+                                translate('Track.alert'),
+                                translate('Track.alert2'),
+                                themeNotifier.isDark);
+                          }
+                          showAlertDialog(translate('Track.alert3'),
+                              translate('Track.alert4'), themeNotifier.isDark);
+                        });
+                      }),
+                  Divider(),
+                  IconButton(
+                      icon: Icon(
+                        Icons.crop_square_rounded,
+                        size: 32,
+                        color: Color.fromARGB(255, 239, 133, 112),
+                      ),
+                      onPressed: () async {
+                        stopOrbit().then((value) {
+                          _showToast(
+                              translate('map.stoporbit'), themeNotifier.isDark);
+                          LGConnection().cleanOrbit();
+                        }).catchError((onError) {
+                          print('oh no $onError');
+                          if (onError == 'nogeodata') {
+                            showAlertDialog(
+                                translate('Track.alert'),
+                                translate('Track.alert2'),
+                                themeNotifier.isDark);
+                          }
+                          showAlertDialog(translate('Track.alert3'),
+                              translate('Track.alert4'), themeNotifier.isDark);
+                        });
+                      }),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    ]));
+  }
+}
+
+class LGConnection {
+  _getCredentials() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String ipAddress = preferences.getString('master_ip') ?? '';
+    String password = preferences.getString('master_password') ?? '';
+    String portNumber = preferences.getString('master_portNumber') ?? '';
+    String username = preferences.getString('master_username') ?? '';
+    String numberofrigs = preferences.getString('numberofrigs') ?? '';
+
+    return {
+      "ip": ipAddress,
+      "pass": password,
+      "port": portNumber,
+      "username": username,
+      "numberofrigs": numberofrigs
+    };
+  }
+
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
+
+    return directory.path;
+  }
+
+  buildOrbit(String content) async {
+    dynamic credencials = await _getCredentials();
+
+    String localPath = await _localPath;
+    File localFile = File('$localPath/Orbit.kml');
+    localFile.writeAsString(content);
+
+    String filePath = '$localPath/Orbit.kml';
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
     );
+
+    try {
+      await client.connect();
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: filePath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+      return await client.execute(
+          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  startOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  stopOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "exittour=true" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  cleanOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
   }
 }

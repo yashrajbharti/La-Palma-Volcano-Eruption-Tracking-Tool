@@ -138,7 +138,7 @@ class _LGtasksState extends State<LGtasks> {
                   elevation: 0,
                   leading: IconButton(
                     icon: Icon(
-                      Icons.arrow_back,
+                      Icons.arrow_back_rounded,
                       size: 50.0,
                     ),
                     onPressed: () {
@@ -166,6 +166,7 @@ class _LGtasksState extends State<LGtasks> {
                             translate("Tasks.LG"),
                             style: TextStyle(
                               fontSize: 42,
+                              fontWeight: FontWeight.bold,
                               color: themeNotifier.isDark
                                   ? Colors.white
                                   : Color.fromARGB(255, 0, 0, 0),

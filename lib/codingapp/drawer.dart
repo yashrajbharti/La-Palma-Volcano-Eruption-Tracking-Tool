@@ -357,8 +357,17 @@ class _DrawersState extends State<Drawers> {
           builder: (context, ThemeModel themeNotifier, child) => Positioned(
               bottom: 30,
               right: 30,
-              child: GestureDetector(
-                  onTap: () {
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    elevation: 2,
+                    shadowColor: themeNotifier.isDark
+                        ? Colors.black
+                        : Colors.grey.withOpacity(0.5),
+                    primary: Color.fromARGB(255, 125, 164, 243),
+                    padding: EdgeInsets.all(15),
+                    shape: StadiumBorder(),
+                  ),
+                  onPressed: () {
                     FeatureDiscovery.clearPreferences(
                       context,
                       const <String>{
@@ -368,17 +377,16 @@ class _DrawersState extends State<Drawers> {
                         'feature6',
                         'feature7'
                       },
-                    );
-                    FeatureDiscovery.discoverFeatures(
-                      context,
-                      const <String>{
-                        'feature3',
-                        'feature4',
-                        'feature5',
-                        'feature6',
-                        'feature7'
-                      },
-                    );
+                    ).then((value) => FeatureDiscovery.discoverFeatures(
+                          context,
+                          const <String>{
+                            'feature3',
+                            'feature4',
+                            'feature5',
+                            'feature6',
+                            'feature7'
+                          },
+                        ));
                   },
                   child: DefaultTextStyle(
                       style: TextStyle(
@@ -386,7 +394,7 @@ class _DrawersState extends State<Drawers> {
                           color: themeNotifier.isDark
                               ? Colors.white
                               : Colors.black,
-                          fontFamily: "OldStandard"),
+                          fontFamily: "GoogleSans"),
                       child: Text(translate("tour.take")))))),
     ]);
   }

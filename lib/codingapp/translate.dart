@@ -24,7 +24,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                   color: blackandwhite
                       ? Color.fromARGB(255, 204, 204, 204)
                       : Color.fromARGB(255, 90, 90, 90),
-                  fontFamily: "OldStandard")),
+                  fontFamily: "GoogleSans")),
           message: Text(translate('language.selection.message'),
               style: TextStyle(
                   fontWeight: FontWeight.normal,
@@ -32,13 +32,13 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                   color: blackandwhite
                       ? Color.fromARGB(255, 204, 204, 204)
                       : Color.fromARGB(255, 90, 90, 90),
-                  fontFamily: "OldStandard")),
+                  fontFamily: "GoogleSans")),
           actions: <Widget>[
             CupertinoActionSheetAction(
                 child: Text(translate('language.name.en') + " 🇺🇸",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -49,7 +49,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.es') + " 🇪🇸",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -60,7 +60,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.hi') + " 🇮🇳",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -71,7 +71,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.de') + " 🇩🇪",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -82,7 +82,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.ar') + " 🇦🇪",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -93,7 +93,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.ru') + " 🇷🇺",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -104,7 +104,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.ja') + " 🇯🇵",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -115,7 +115,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.zh') + " 🇨🇳",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -126,7 +126,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.pt') + " 🇵🇹",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -137,7 +137,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
                 child: Text(translate('language.name.sq') + " 🇦🇱",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontFamily: "OldStandard",
+                      fontFamily: "GoogleSans",
                       fontSize: 18.0,
                     )),
                 onPressed: () {
@@ -148,7 +148,7 @@ void onActionSheetPress(BuildContext context, bool blackandwhite) {
           cancelButton: CupertinoActionSheetAction(
             child: Text(translate('button.cancel'),
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, fontFamily: "OldStandard")),
+                    fontWeight: FontWeight.normal, fontFamily: "GoogleSans")),
             isDefaultAction: true,
             onPressed: () =>
                 Navigator.of(context, rootNavigator: true).pop("Cancel"),

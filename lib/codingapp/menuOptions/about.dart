@@ -35,7 +35,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   backgroundColor: Colors.transparent,
                   leading: IconButton(
                     icon: Icon(
-                      Icons.arrow_back,
+                      Icons.arrow_back_rounded,
                       size: 50.0,
                     ),
                     onPressed: () {
@@ -72,6 +72,92 @@ class _AboutScreenState extends State<AboutScreen> {
                                   : Colors.black),
                         ),
                       ),
+                      Builder(
+                          builder: (context) => IconButton(
+                              icon: Image.asset('assets/volcano.png'),
+                              iconSize: 65,
+                              onPressed: null)),
+                      Linkify(
+                        onOpen: _onOpen,
+                        text: translate("About.author"),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 24,
+                            color: themeNotifier.isDark
+                                ? Colors.white
+                                : Colors.black),
+                        linkStyle: TextStyle(
+                          color: themeNotifier.isDark
+                              ? Colors.white
+                              : Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 24,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            GestureDetector(
+                                onTap: () {
+                                  _launchURL(
+                                      'https://www.linkedin.com/in/yash-raj-bharti-5693b6183/');
+                                },
+                                child: Text(
+                                  "LinkedIn",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 24,
+                                      color: Color.fromARGB(255, 97, 146, 245)),
+                                )),
+                            GestureDetector(
+                                onTap: () {
+                                  _launchURL(
+                                      'https://twitter.com/YashRaj49744398');
+                                },
+                                child: Text(
+                                  ", Twitter",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 24,
+                                      color: Color.fromARGB(255, 97, 146, 245)),
+                                )),
+                            GestureDetector(
+                                onTap: () {
+                                  _launchURL(
+                                      'https://github.com/yashrajbharti');
+                                },
+                                child: Text(
+                                  ", Github",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 24,
+                                      color: Color.fromARGB(255, 97, 146, 245)),
+                                )),
+                            GestureDetector(
+                                onTap: () {
+                                  _launchURL(
+                                      'https://yashrajbharti.github.io/portfolio/');
+                                },
+                                child: Text(
+                                  ", Portfolio",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 24,
+                                      color: Color.fromARGB(255, 97, 146, 245)),
+                                )),
+                          ]),
+                      Transform.scale(
+                          scale: 1.6,
+                          child: Builder(
+                              builder: (context) => IconButton(
+                                  icon: Image.asset('assets/icons/logos.png'),
+                                  iconSize: 450,
+                                  onPressed: null))),
                       Container(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,

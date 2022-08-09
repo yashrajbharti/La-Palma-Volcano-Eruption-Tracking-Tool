@@ -58,11 +58,11 @@
 	},
 	"Tasks": {
 		"LG": "Detyrat e Liquid Galaxy",
-		"Relaunch": "Rinis \n LG",
-		"Reboot": "Rindizni \n    LG",
-		"Shutdown": "Mbyllja e \n     LG",
-		"Save": "Ruaj \nKML",
-		"Clean": "Pastroni \n   KML",
+		"Relaunch": "Rinis \n  LG",
+		"Reboot": "Rindizni \n     LG",
+		"Shutdown": "Mbyllja e \n      LG",
+		"Save": "Ruaj \n KML",
+		"Clean": "Pastroni \n    KML",
 		"alert": "Sukses!",
 		"alert2": "Mund të gjeni një KML që përmban të dhënat e hartës së projektit në dosjen tuaj Shkarkime",
 		"alert3": "Oops!",
@@ -100,7 +100,8 @@
 		"github": "VolTrac GitHub",
 		"privacy": "Politika e privatësisë",
 		"attribute": "Atribuimi i imazhit",
-		"resource": "Burimet e mëposhtme janë përdorur për ikonat."
+		"resource": "Burimet e mëposhtme janë përdorur për ikonat.",
+		"author": "Emri i autorit - Yash Raj Bharti \n Emri i Mentorit - Iván Josa Llovera \n Informacioni i Kontaktit të Autorit - yashrajbharti.met18@itbhu.ac.in"
 	},
 	"help": {
 		"helppage": "Faqja e Ndihmës",
@@ -209,7 +210,9 @@
 		"buildorbit": "Orbita e fillimit",
 		"stoporbit": "Ndalimi i Orbitës",
 		"demostart": "Hapja e demo të KML",
-		"demostop": "Mbyllja e demo të KML"
+		"demostop": "Mbyllja e demo të KML",
+		"logo": "Shfaqja e logos",
+		"clean": "Logo e pastrimit"
 	},
 	"dismiss": "Largoje",
 	"continue": "Vazhdoni",

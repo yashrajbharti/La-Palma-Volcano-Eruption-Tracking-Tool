@@ -220,7 +220,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
           style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.normal,
-              fontFamily: "OldStandard",
+              fontFamily: "GoogleSans",
               color: Colors.white),
         ),
         duration: Duration(seconds: 3),
@@ -265,7 +265,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                   backgroundColor: Colors.transparent,
                   leading: IconButton(
                     icon: Icon(
-                      Icons.arrow_back,
+                      Icons.arrow_back_rounded,
                       size: 50.0,
                     ),
                     onPressed: () {
@@ -548,7 +548,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                             fontSize: 18.5,
                                             color:
                                                 Color.fromARGB(255, 3, 95, 171),
-                                            fontFamily: "OldStandard"),
+                                            fontFamily: "GoogleSans"),
                                       ),
                                     ],
                                   ),
@@ -637,7 +637,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                         style: TextStyle(
                                             fontSize: 18.5,
                                             color: Colors.red,
-                                            fontFamily: "OldStandard"),
+                                            fontFamily: "GoogleSans"),
                                       ),
                                       Text(
                                         "▬▬  ",
@@ -645,7 +645,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                             fontSize: 18.5,
                                             color: Color.fromARGB(
                                                 255, 249, 233, 82),
-                                            fontFamily: "OldStandard"),
+                                            fontFamily: "GoogleSans"),
                                       ),
                                     ],
                                   ),
@@ -769,7 +769,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                             fontSize: 23.0,
                                             color: Color.fromARGB(
                                                 255, 132, 95, 55),
-                                            fontFamily: "OldStandard"),
+                                            fontFamily: "GoogleSans"),
                                       ),
                                     ],
                                   ),

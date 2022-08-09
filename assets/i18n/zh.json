@@ -58,11 +58,11 @@
 	},
 	"Tasks": {
 		"LG": "液态银河任务",
-		"Relaunch": "重新启动 \n     LG",
-		"Reboot": "重启 \n LG",
-		"Shutdown": "关闭 \n LG",
-		"Save": "保存 \nKML",
-		"Clean": "清洁 \nKML",
+		"Relaunch": "重新启动 \n      LG",
+		"Reboot": "重启 \n  LG",
+		"Shutdown": "关闭 \n  LG",
+		"Save": "保存 \n KML",
+		"Clean": "清洁 \n KML",
 		"alert": "成功!",
 		"alert2": "您可以在“下载”文件夹中找到包含项目地图数据的 KML",
 		"alert3": "哎呀!",
@@ -100,7 +100,8 @@
 		"github": "VolTrac GitHub",
 		"privacy": "隐私政策",
 		"attribute": "图片归属地",
-		"resource": "以下资源用于图标。"
+		"resource": "以下资源用于图标。",
+		"author": "作者姓名 - Yash Raj Bharti \n 导师姓名 - Iván Josa Llovera \n 作者联系信息 - yashrajbharti.met18@itbhu.ac.in"
 	},
 	"help": {
 		"helppage": "帮助页面",
@@ -209,7 +210,9 @@
 		"buildorbit": "起始轨道",
 		"stoporbit": "停止轨道",
 		"demostart": "打开演示 KML",
-		"demostop": "关闭演示 KML"
+		"demostop": "关闭演示 KML",
+		"logo": "显示标志",
+		"clean": "清洁标志"
 	},
 	"dismiss": "解雇",
 	"continue": "继续",

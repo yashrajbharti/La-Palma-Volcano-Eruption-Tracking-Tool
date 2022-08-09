@@ -18,6 +18,7 @@ class Orbit {
                   <latitude>${marker.lat}</latitude>
                   <heading>$heading</heading>
                   <tilt>60</tilt>
+                  <altitude>3341.7995674</altitude>
                   <gx:fovy>35</gx:fovy>
                   <range>${range}</range>
                   <gx:altitudeMode>absolute</gx:altitudeMode>

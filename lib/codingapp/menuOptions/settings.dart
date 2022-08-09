@@ -210,7 +210,7 @@ class SettingsState extends State<Settings> {
                 elevation: 0,
                 leading: IconButton(
                   icon: Icon(
-                    Icons.arrow_back,
+                    Icons.arrow_back_rounded,
                     size: 50.0,
                   ),
                   onPressed: () {

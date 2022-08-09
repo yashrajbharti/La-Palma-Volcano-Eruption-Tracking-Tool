@@ -23,6 +23,7 @@ class _LayoutState extends State<Layout> {
         appBar: PreferredSize(
             preferredSize: const Size.fromHeight(50.0),
             child: AppBar(
+              automaticallyImplyLeading: false,
               elevation: 0,
               actions: const <Widget>[],
               title: Container(

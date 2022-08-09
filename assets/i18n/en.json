@@ -58,11 +58,11 @@
 	},
 	"Tasks": {
 		"LG": "Liquid Galaxy Tasks",
-		"Relaunch": "Relaunch \n     LG",
-		"Shutdown": "Shutdown \n     LG",
-		"Reboot": "Reboot \n   LG",
-		"Save": "Save \nKML",
-		"Clean": "Clean \nKML",
+		"Relaunch": "Relaunch \n      LG",
+		"Shutdown": "Shutdown \n      LG",
+		"Reboot": "Reboot \n    LG",
+		"Save": "Save \n KML",
+		"Clean": "Clean \n KML",
 		"alert": "Success!",
 		"alert2": "You can find a KML containing the map data of the project in your Downloads folder",
 		"alert3": "Oops!",
@@ -100,7 +100,8 @@
 		"github": "VolTrac GitHub",
 		"privacy": "Privacy Policy",
 		"attribute": "Image Attribution",
-		"resource": "The following resources were used for the icons."
+		"resource": "The following resources were used for the icons.",
+		"author": "Author Name - Yash Raj Bharti \n Mentor Name - Iván Josa Llovera \n Author Contact Info - yashrajbharti.met18@itbhu.ac.in"
 	},
 	"help": {
 		"helppage": "Help Page",
@@ -209,7 +210,9 @@
 		"buildorbit": "Starting Orbit",
 		"stoporbit": "Stopping Orbit",
 		"demostart": "Opening Demo KML",
-		"demostop": "Closing Demo KML"
+		"demostop": "Closing Demo KML",
+		"logo": "Displaying Logo",
+		"clean": "Cleaning Logo"
 	},
 	"dismiss": "Dismiss",
 	"continue": "Continue",

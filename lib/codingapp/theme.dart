@@ -35,7 +35,7 @@ final isLightTheme = ThemeData(
   appBarTheme: AppBarTheme(color: myColour),
   scaffoldBackgroundColor: myColour,
   primarySwatch: myColour,
-  fontFamily: 'OldStandard',
+  fontFamily: 'GoogleSans',
   textTheme: TextTheme(
     button: TextStyle(fontSize: 24.0),
   ),
@@ -45,7 +45,7 @@ final isDarkTheme = ThemeData(
   appBarTheme: AppBarTheme(color: yourColour),
   scaffoldBackgroundColor: yourColour,
   primarySwatch: yourColour,
-  fontFamily: 'OldStandard',
+  fontFamily: 'GoogleSans',
   textTheme: TextTheme(
     button: TextStyle(fontSize: 24.0),
   ),

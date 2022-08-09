@@ -7,13 +7,16 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'dart:async' show Future;
 import 'dart:developer';
+
+import 'package:percent_indicator/percent_indicator.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
+import 'package:webscrapperapp/codingapp/menuOptions/custom_builder.dart';
 import 'package:webscrapperapp/codingapp/theme-storage.dart';
 import 'package:webscrapperapp/codingapp/kml/kml.dart';
-import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
 import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
 import 'package:webscrapperapp/codingapp/Tabs/Info.dart';
 
@@ -27,6 +30,7 @@ class SendtoLG extends StatefulWidget {
 List<String> kmltext = ['', '', '', '', '', '', '', ''];
 String localpath = "";
 bool isOpen = false;
+bool loading = false;
 List<String> projectname = [
   "Historic_Track",
   "Lava_Flow",
@@ -37,12 +41,14 @@ List<String> projectname = [
   "Situation",
   "Located_Events"
 ];
+var _duration = 3000;
 // List<String> localimages = [
 //   "vent.png",
 //   "red_sq.png",
 //   "yellow_sq.png",
 //   "black_sq.png"
 // ];
+bool isLogo = false;
 bool blackandwhite = false;
 String finalname = "";
 String finaltext = "";
@@ -152,7 +158,7 @@ class _SendtoLGState extends State<SendtoLG> {
           style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.normal,
-              fontFamily: "OldStandard",
+              fontFamily: "GoogleSans",
               color: Colors.white),
         ),
         duration: Duration(seconds: 3),
@@ -205,6 +211,9 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[0]);
                               await _read(0);
+                              setState(() {
+                                _duration = 2290;
+                              });
                               jumpToPage(0);
                               _showToast(translate('Track.ready'),
                                   themeNotifier.isDark);
@@ -245,6 +254,9 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[1]);
                               await _read(1);
+                              setState(() {
+                                _duration = 4000;
+                              });
                               jumpToPage(1);
                               _showToast(translate('Track.ready'),
                                   themeNotifier.isDark);
@@ -289,6 +301,9 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[2]);
                             await _read(2);
+                            setState(() {
+                              _duration = 2080;
+                            });
                             jumpToPage(2);
                             _showToast(
                                 translate('Track.ready'), themeNotifier.isDark);
@@ -328,6 +343,9 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[3]);
                             await _read(3);
+                            setState(() {
+                              _duration = 56040;
+                            });
                             jumpToPage(3);
                             _showToast(
                                 translate('Track.ready'), themeNotifier.isDark);
@@ -374,6 +392,9 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[4]);
                               await _read(4);
+                              setState(() {
+                                _duration = 4000;
+                              });
                               jumpToPage(4);
                               _showToast(translate('Track.ready'),
                                   themeNotifier.isDark);
@@ -414,6 +435,9 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[5]);
                               await _read(5);
+                              setState(() {
+                                _duration = 3710;
+                              });
                               jumpToPage(5);
                               _showToast(translate('Track.ready'),
                                   themeNotifier.isDark);
@@ -458,6 +482,9 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[6]);
                             await _read(6);
+                            setState(() {
+                              _duration = 5250;
+                            });
                             jumpToPage(6);
                             _showToast(
                                 translate('Track.ready'), themeNotifier.isDark);
@@ -497,6 +524,9 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[7]);
                             await _read(7);
+                            setState(() {
+                              _duration = 8710;
+                            });
                             jumpToPage(7);
                             _showToast(
                                 translate('Track.ready'), themeNotifier.isDark);
@@ -524,60 +554,181 @@ class _SendtoLGState extends State<SendtoLG> {
                     ],
                   ),
                   SizedBox(height: 20),
-                  SizedBox(
-                    width: 360,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          elevation: 2,
-                          shadowColor: themeNotifier.isDark
-                              ? Colors.black
-                              : Colors.grey.withOpacity(0.5),
-                          primary: themeNotifier.isDark
-                              ? ui.Color.fromARGB(255, 30, 30, 30)
-                              : Colors.white,
-                          padding: EdgeInsets.all(15),
-                          shape: StadiumBorder(),
-                        ),
-                        child: Wrap(
-                          children: <Widget>[
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text(translate('Track.visual'),
-                                style: TextStyle(fontSize: 35)),
-                            Icon(
-                              Icons.location_on_sharp,
-                              color: ui.Color.fromARGB(255, 228, 6, 9),
-                              size: 45.0,
-                            ),
-                          ],
-                        ),
-                        onPressed: () {
-                          // send to LG
-                          LGConnection()
-                              .sendToLG(kml.mount(), finalname)
-                              .then((value) {
-                            _showToast(translate('Track.Visualize'),
-                                themeNotifier.isDark);
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Builder(
+                          builder: (context) => IconButton(
+                              icon: themeNotifier.isDark
+                                  ? Image.asset(
+                                      'assets/icons/calendar_dark.png')
+                                  : Image.asset('assets/icons/calendar.png'),
+                              iconSize: 65,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CustomBuilder(),
+                                  ),
+                                );
+                              })),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      SizedBox(
+                        width: 360,
+                        child: loading
+                            ? LinearPercentIndicator(
+                                animation: true,
+                                width: 360,
+                                lineHeight: 76.0,
+                                backgroundColor: themeNotifier.isDark
+                                    ? ui.Color.fromARGB(205, 42, 47, 48)
+                                    : ui.Color.fromARGB(205, 180, 199, 206),
+                                percent: 1.0,
+                                padding: EdgeInsets.all(0),
+                                animationDuration: _duration,
+                                center: Wrap(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(translate('Track.visual'),
+                                        style: TextStyle(
+                                            fontSize: 35,
+                                            fontWeight: ui.FontWeight.w500)),
+                                    Icon(
+                                      Icons.location_on_sharp,
+                                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                                      size: 45.0,
+                                    ),
+                                  ],
+                                ),
+                                barRadius: ui.Radius.circular(50),
+                                progressColor: Colors.greenAccent,
+                              )
+                            : ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 2,
+                                  shadowColor: themeNotifier.isDark
+                                      ? Colors.black
+                                      : Colors.grey.withOpacity(0.5),
+                                  primary: themeNotifier.isDark
+                                      ? ui.Color.fromARGB(255, 30, 30, 30)
+                                      : Colors.white,
+                                  padding: EdgeInsets.all(15),
+                                  shape: StadiumBorder(),
+                                ),
+                                child: Wrap(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(translate('Track.visual'),
+                                        style: TextStyle(fontSize: 35)),
+                                    Icon(
+                                      Icons.location_on_sharp,
+                                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                                      size: 45.0,
+                                    ),
+                                  ],
+                                ),
+                                onPressed: () {
+                                  // send to LG
+                                  setState(() {
+                                    loading = true;
+                                  });
 
-                            setState(() {
-                              isOpen = true;
-                            });
-                            DefaultTabController.of(context)?.animateTo(2);
-                          }).catchError((onError) {
-                            print('oh no $onError');
-                            if (onError == 'nogeodata') {
-                              showAlertDialog(
-                                  translate('Track.alert'),
-                                  translate('Track.alert2'),
-                                  themeNotifier.isDark);
-                            }
-                            showAlertDialog(
-                                translate('Track.alert3'),
-                                translate('Track.alert4'),
-                                themeNotifier.isDark);
-                          });
-                        }),
+                                  LGConnection()
+                                      .sendToLG(kml.mount(), finalname)
+                                      .then((value) {
+                                    LGConnection().startOrbit();
+
+                                    _showToast(translate('Track.Visualize'),
+                                        themeNotifier.isDark);
+
+                                    setState(() {
+                                      isOpen = true;
+                                      loading = false;
+                                    });
+                                    DefaultTabController.of(context)
+                                        ?.animateTo(2);
+                                  }).catchError((onError) {
+                                    print('oh no $onError');
+                                    setState(() {
+                                      loading = false;
+                                    });
+                                    if (onError == 'nogeodata') {
+                                      showAlertDialog(
+                                          translate('Track.alert'),
+                                          translate('Track.alert2'),
+                                          themeNotifier.isDark);
+                                    }
+                                    showAlertDialog(
+                                        translate('Track.alert3'),
+                                        translate('Track.alert4'),
+                                        themeNotifier.isDark);
+                                  });
+                                }),
+                      ),
+                      SizedBox(
+                        width: 18,
+                      ),
+                      Transform.scale(
+                          scale: 1.25,
+                          child: Builder(
+                              builder: (context) => IconButton(
+                                  icon: themeNotifier.isDark
+                                      ? Image.asset(
+                                          'assets/icons/logo_dark.png')
+                                      : Image.asset('assets/icons/logo.png'),
+                                  iconSize: 70,
+                                  onPressed: () => {
+                                        isLogo = !isLogo,
+                                        if (isLogo == true)
+                                          {
+                                            LGConnection()
+                                                .openDemoLogos()
+                                                .then((value) {
+                                              _showToast(translate('map.logo'),
+                                                  themeNotifier.isDark);
+                                            }).catchError((onError) {
+                                              print('oh no $onError');
+                                              if (onError == 'nogeodata') {
+                                                showAlertDialog(
+                                                    translate('Track.alert'),
+                                                    translate('Track.alert2'),
+                                                    themeNotifier.isDark);
+                                              }
+                                              showAlertDialog(
+                                                  translate('Track.alert3'),
+                                                  translate('Track.alert4'),
+                                                  themeNotifier.isDark);
+                                            }),
+                                          }
+                                        else
+                                          {
+                                            LGConnection()
+                                                .deletelogos()
+                                                .then((value) {
+                                              _showToast(translate('map.clean'),
+                                                  themeNotifier.isDark);
+                                            }).catchError((onError) {
+                                              print('oh no $onError');
+                                              if (onError == 'nogeodata') {
+                                                showAlertDialog(
+                                                    translate('Track.alert'),
+                                                    translate('Track.alert2'),
+                                                    themeNotifier.isDark);
+                                              }
+                                              showAlertDialog(
+                                                  translate('Track.alert3'),
+                                                  translate('Track.alert4'),
+                                                  themeNotifier.isDark);
+                                            }),
+                                          }
+                                      })))
+                    ],
                   ),
                 ],
               ),
@@ -586,6 +737,86 @@ class _SendtoLGState extends State<SendtoLG> {
 }
 
 class LGConnection {
+  Future openDemoLogos() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+    String rigs = "4";
+    rigs = credencials['numberofrigs'] == 5 ? "4" : "2";
+    String openLogoKML = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>VolTrac</name>
+	<open>1</open>
+	<description>The logo it located in the bottom left hand corner</description>
+	<Folder>
+		<name>tags</name>
+		<Style>
+			<ListStyle>
+				<listItemType>checkHideChildren</listItemType>
+				<bgColor>00ffffff</bgColor>
+				<maxSnippetLines>2</maxSnippetLines>
+			</ListStyle>
+		</Style>
+		<ScreenOverlay id="abc">
+			<name>VolTrac</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
+			</Icon>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0.2" y="0.98" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
+		</ScreenOverlay>
+    <ScreenOverlay id="def">
+			<name>Logos</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/logos.png</href>
+			</Icon>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0" y="0.75" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
+		</ScreenOverlay>
+	</Folder>
+</Document>
+</kml>
+    ''';
+    try {
+      await client.connect();
+      return await client
+          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_$rigs.kml");
+    } catch (e) {
+      return Future.error(e);
+    }
+  }
+
+  Future deletelogos() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+    String rigs = "4";
+    rigs = credencials['numberofrigs'] == 5 ? "4" : "2";
+    try {
+      await client.connect();
+      return await client
+          .execute("echo '' > /var/www/html/kml/slave_$rigs.kml");
+    } catch (e) {
+      return Future.error(e);
+    }
+  }
+
   Future sendToLG(String kml, String projectname) async {
     if (kml.isNotEmpty) {
       return _createLocalFile(kml, projectname);
@@ -744,6 +975,59 @@ class LGConnection {
 
       return await client.execute(
           'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  buildOrbit(String content) async {
+    dynamic credencials = await _getCredentials();
+
+    String localPath = await _localPath;
+    File localFile = File('$localPath/Orbit.kml');
+    localFile.writeAsString(content);
+
+    String filePath = '$localPath/Orbit.kml';
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: filePath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+      return await client.execute(
+          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  startOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);

@@ -35,7 +35,7 @@ class _HelpScreenState extends State<HelpScreen> {
                   backgroundColor: Colors.transparent,
                   leading: IconButton(
                     icon: Icon(
-                      Icons.arrow_back,
+                      Icons.arrow_back_rounded,
                       size: 50.0,
                     ),
                     onPressed: () {
@@ -287,7 +287,7 @@ class _HelpScreenState extends State<HelpScreen> {
                                               color: themeNotifier.isDark
                                                   ? Colors.white
                                                   : Colors.black,
-                                              fontFamily: "OldStandard"),
+                                              fontFamily: "GoogleSans"),
                                         ),
                                       )
                                     ],
@@ -328,7 +328,7 @@ class _HelpScreenState extends State<HelpScreen> {
                                               color: themeNotifier.isDark
                                                   ? Colors.white
                                                   : Colors.black,
-                                              fontFamily: "OldStandard"),
+                                              fontFamily: "GoogleSans"),
                                         ),
                                       ),
                                     ],
@@ -367,7 +367,7 @@ class _HelpScreenState extends State<HelpScreen> {
                                               color: themeNotifier.isDark
                                                   ? Colors.white
                                                   : Colors.black,
-                                              fontFamily: "OldStandard"),
+                                              fontFamily: "GoogleSans"),
                                         ),
                                       ),
                                     ],
@@ -406,7 +406,7 @@ class _HelpScreenState extends State<HelpScreen> {
                                               color: themeNotifier.isDark
                                                   ? Colors.white
                                                   : Colors.black,
-                                              fontFamily: "OldStandard"),
+                                              fontFamily: "GoogleSans"),
                                         ),
                                       ),
                                     ],

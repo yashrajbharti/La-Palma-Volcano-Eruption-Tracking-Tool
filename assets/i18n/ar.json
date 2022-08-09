@@ -58,11 +58,11 @@
 	},
 	"Tasks": {
 		"LG": "مهام جالاكسي السائل",
-		"Relaunch": "أعد تشغيل \n    LG",
-		"Reboot": "اعادة التشغيل \n      LG",
-		"Shutdown": "اغلاق \n LG",
-		"Save": "احفظ ملف \n  KML",
-		"Clean": "ينظف \nKML",
+		"Relaunch": "أعد تشغيل \n     LG",
+		"Reboot": "اعادة التشغيل \n       LG",
+		"Shutdown": "اغلاق \n  LG",
+		"Save": "احفظ ملف \n   KML",
+		"Clean": "ينظف \n KML",
 		"alert": "نجاح!",
 		"alert2": "يمكنك العثور على ملف KML يحتوي على بيانات الخريطة الخاصة بالمشروع في مجلد التنزيلات",
 		"alert3": "أُووبس!",
@@ -100,7 +100,8 @@
 		"github": "فولتراك جيثب",
 		"privacy": "سياسة الخصوصية",
 		"attribute": "إسناد الصورة",
-		"resource": "تم استخدام الموارد التالية للرموز."
+		"resource": "تم استخدام الموارد التالية للرموز.",
+		"author": "اسم المؤلف - Yash Raj Bharti \n اسم المرشد - Iván Josa Llovera \n معلومات اتصال المؤلف - yashrajbharti.met18@itbhu.ac.in"
 	},
 	"help": {
 		"helppage": "صفحة المساعدة",
@@ -209,7 +210,9 @@
 		"buildorbit": "بدء المدار",
 		"stoporbit": "إيقاف المدار",
 		"demostart": "افتتاح العرض التوضيحي KML",
-		"demostop": "إغلاق العرض التوضيحي KML"
+		"demostop": "إغلاق العرض التوضيحي KML",
+		"logo": "عرض الشعار",
+		"clean": "شعار التنظيف"
 	},
 	"dismiss": "رفض",
 	"continue": "يكمل",

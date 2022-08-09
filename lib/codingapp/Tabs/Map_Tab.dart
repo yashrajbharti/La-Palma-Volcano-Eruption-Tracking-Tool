@@ -26,7 +26,7 @@ class MyMap extends StatefulWidget {
 }
 
 class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
-  static LatLng _center = const LatLng(28.6599744, -17.8984565);
+  static LatLng _center = const LatLng(28.65665656297236, -17.885454520583153);
   late AnimationController _rotationiconcontroller;
   final Set<Marker> _markers = {};
   GoogleMapController? mapController;
@@ -34,12 +34,12 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   bool isOrbiting = false;
   bool isDemoActive = false;
   int rigcount = 5;
-  double zoomvalue = 591657550.500000 / pow(2, 10.8);
-  double latvalue = 28.6599744;
-  double longvalue = -17.8984565;
-  double tiltvalue = 0;
-  double bearingvalue = 0; // 2D angle
-  double _currentSliderValue = 100;
+  double zoomvalue = 591657550.500000 / pow(2, 13.15393352508545);
+  double latvalue = 28.65665656297236;
+  double longvalue = -17.885454520583153;
+  double tiltvalue = 41.82725143432617;
+  double bearingvalue = 61.403038024902344; // 2D angle
+
   bool blackandwhite = false;
 
   @override
@@ -68,14 +68,15 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   void _ongpsfixedButtonPressed() {
     setState(() {
       _fixposition();
-      zoomvalue = (591657550.500000 / pow(2, 10.8));
+      zoomvalue = (591657550.500000 / pow(2, 13.15393352508545));
       LatLng newlatlang = _center;
       mapController?.animateCamera(
         CameraUpdate.newCameraPosition(
           CameraPosition(
-            target: newlatlang,
-            zoom: 10.8,
-          ),
+              target: newlatlang,
+              zoom: 13.15393352508545,
+              tilt: 41.82725143432617,
+              bearing: 61.403038024902344),
         ),
       );
     });
@@ -100,7 +101,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   playOrbit() async {
     await LGConnection()
         .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-            LookAt(longvalue, latvalue, "1492.665945696469", "0", "0"))))
+            LookAt(longvalue, latvalue, "30492.665945696469", "0", "0"))))
         .then((value) async {
       await LGConnection().startOrbit();
     });
@@ -142,7 +143,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
           style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.normal,
-              fontFamily: "OldStandard",
+              fontFamily: "GoogleSans",
               color: Colors.white),
         ),
         duration: Duration(seconds: 3),
@@ -258,11 +259,11 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     );
 
     LookAt flyto = LookAt(
-      -17.8984565,
-      28.6599744,
+      -17.885454520583153,
+      28.65665656297236,
       "${zoomvalue / rigcount}",
-      '0',
-      '0',
+      "41.82725143432617",
+      "61.403038024902344",
     );
     try {
       await client.connect();
@@ -328,9 +329,10 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
             });
           },
           initialCameraPosition: CameraPosition(
-            target: _center,
-            zoom: 10.8,
-          ),
+              target: _center,
+              zoom: 13.15393352508545,
+              bearing: bearingvalue,
+              tilt: tiltvalue),
           minMaxZoomPreference: MinMaxZoomPreference.unbounded,
           tiltGesturesEnabled: true,
           zoomControlsEnabled: false,
@@ -444,37 +446,37 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
             ),
           ),
         ),
-        Consumer<ThemeModel>(
-            builder: (context, ThemeModel themeNotifier, child) => Positioned(
-                  bottom: 88,
-                  left: 20,
-                  height: 300,
-                  child: RotatedBox(
-                      quarterTurns: 1,
-                      child: SliderTheme(
-                          data: SliderTheme.of(context).copyWith(
-                            trackShape: RectangularSliderTrackShape(),
-                            valueIndicatorColor: themeNotifier.isDark
-                                ? Color.fromARGB(255, 24, 24, 24)
-                                : Color.fromARGB(255, 104, 104, 104),
-                          ),
-                          child: Slider(
-                            value: _currentSliderValue,
-                            max: 100,
-                            inactiveColor: Color.fromARGB(255, 75, 127, 82),
-                            thumbColor: Color.fromARGB(55, 68, 68, 68),
-                            activeColor: Color.fromARGB(255, 24, 24, 24),
-                            divisions: 100,
-                            label:
-                                (100 - _currentSliderValue.round()).toString() +
-                                    "% \u{1f554}",
-                            onChanged: (double value) {
-                              setState(() {
-                                _currentSliderValue = value;
-                              });
-                            },
-                          ))),
-                )),
+        // Consumer<ThemeModel>(
+        //     builder: (context, ThemeModel themeNotifier, child) => Positioned(
+        //           bottom: 88,
+        //           left: 20,
+        //           height: 300,
+        //           child: RotatedBox(
+        //               quarterTurns: 1,
+        //               child: SliderTheme(
+        //                   data: SliderTheme.of(context).copyWith(
+        //                     trackShape: RectangularSliderTrackShape(),
+        //                     valueIndicatorColor: themeNotifier.isDark
+        //                         ? Color.fromARGB(255, 24, 24, 24)
+        //                         : Color.fromARGB(255, 104, 104, 104),
+        //                   ),
+        //                   child: Slider(
+        //                     value: _currentSliderValue,
+        //                     max: 100,
+        //                     inactiveColor: Color.fromARGB(255, 75, 127, 82),
+        //                     thumbColor: Color.fromARGB(55, 68, 68, 68),
+        //                     activeColor: Color.fromARGB(255, 24, 24, 24),
+        //                     divisions: 100,
+        //                     label:
+        //                         (100 - _currentSliderValue.round()).toString() +
+        //                             "% \u{1f554}",
+        //                     onChanged: (double value) {
+        //                       setState(() {
+        //                         _currentSliderValue = value;
+        //                       });
+        //                     },
+        //                   ))),
+        //         )),
         Consumer<ThemeModel>(
           builder: (context, ThemeModel themeNotifier, child) => Positioned(
             top: 58,
