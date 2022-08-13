@@ -134,10 +134,6 @@ class Maritime {
 	</Style>
 	<Placemark id="00596AC3162224119AD8">
 		<name>Maritime Exclusion Zone</name>
-		<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 		<styleUrl>#__managed_style_0BA2FAA56B22242D9CEB</styleUrl>
 		<gx:balloonVisibility>1</gx:balloonVisibility>
 		<Polygon>
@@ -289,10 +285,6 @@ class MainEruptive {
 			<range>24328.99211275216</range>
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
-		<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 		<styleUrl>#__managed_style_096B72317122243384C7</styleUrl>
 		<Point>
 			<gx:drawOrder>1</gx:drawOrder>
@@ -568,10 +560,6 @@ class NaturalLand {
 </body>
 
 </html>]]></description>
-	<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -8340,10 +8328,6 @@ class Municipalities {
 			<range>19893.17136944269</range>
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
-		<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 		<styleUrl>#msn_noicon</styleUrl>
 		<Point>
 			<gx:drawOrder>1</gx:drawOrder>
@@ -8390,10 +8374,6 @@ class Municipalities {
 			<range>19893.17136944269</range>
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
-		<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 		<styleUrl>#msn_noicon1</styleUrl>
 		<Point>
 			<gx:drawOrder>1</gx:drawOrder>
@@ -8441,10 +8421,6 @@ class Municipalities {
 			<range>19893.17136944493</range>
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</LookAt>
-		<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 		<styleUrl>#msn_noicon0</styleUrl>
 		<Point>
 			<gx:drawOrder>1</gx:drawOrder>
@@ -8710,10 +8686,6 @@ class ClosedRoads {
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$Startdate</begin>
-				<end>$Enddate</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0D41CE43DD22242FACB9</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8731,10 +8703,6 @@ class ClosedRoads {
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$Startdate</begin>
-				<end>$Enddate</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8752,10 +8720,6 @@ class ClosedRoads {
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$Startdate</begin>
-				<end>$Enddate</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8773,10 +8737,6 @@ class ClosedRoads {
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$Startdate</begin>
-				<end>$Enddate</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8794,10 +8754,6 @@ class ClosedRoads {
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$Startdate</begin>
-				<end>$Enddate</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8924,10 +8880,6 @@ class Vents {
 </body>
 
 </html>]]></description>
-	<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 			<styleUrl>#IconStyle002</styleUrl>
 			<Point>
       <altitudeMode>relativeToGround</altitudeMode>
@@ -9983,10 +9935,6 @@ class Physiography {
 </body>
 
 </html>]]></description>
-	<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 			<styleUrl>#LineStyle001</styleUrl>
 			<MultiGeometry>
 				<LineString>
@@ -12212,10 +12160,6 @@ class Hydrography {
 </body>
 
 </html>]]></description>
-	<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 			<styleUrl>#LineStyle00</styleUrl>
 			<MultiGeometry>
 				<LineString>
@@ -21616,10 +21560,6 @@ class AreaOfInterest {
 </body>
 
 </html>]]></description>
-	<TimeSpan>
-			<begin>$Startdate</begin>
-			<end>$Enddate</end>
-		</TimeSpan>
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>

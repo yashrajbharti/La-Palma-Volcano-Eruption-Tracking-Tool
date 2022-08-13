@@ -21304,9 +21304,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-12-18</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_05E8399EA9220960AEC9</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -21429,9 +21426,6 @@
 				<range>7546.803760853749</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-        <begin>2021-12-18</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin4</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -21532,9 +21526,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-12-01</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0A0411237322095632FB</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -21647,9 +21638,6 @@
 				<range>4207.643555561785</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-        <begin>2021-12-01</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin5</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -21750,9 +21738,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-11-21</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_04FB1FE3BC2209522C0D</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -21850,9 +21835,6 @@
 				<range>4840.091846005608</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-        <begin>2021-11-21</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin0</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -21953,9 +21935,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-11-14</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_08BA236C6022094F5E49</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -22058,9 +22037,6 @@
 				<range>5765.06651339543</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-        <begin>2021-11-14</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin6</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -22161,9 +22137,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-11-04</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_02AA2DC0A6220959E272</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -22266,9 +22239,6 @@
 				<range>6731.543478427959</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-        <begin>2021-11-04</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin2</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -22369,9 +22339,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-21</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -22531,9 +22498,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-21</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -22636,9 +22600,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-21</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -22741,9 +22702,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-21</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -22846,9 +22804,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-21</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -22874,9 +22829,6 @@
 				<range>5636.629514592285</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-        <begin>2021-10-21</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -22968,9 +22920,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-08</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -23117,9 +23066,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-08</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -23214,9 +23160,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-08</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -23311,9 +23254,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-08</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -23408,9 +23348,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-10-08</begin>
-      </TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -23436,9 +23373,6 @@
 				<range>5636.62951459463</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-        <begin>2021-10-08</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin1</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -23531,9 +23465,6 @@
 </body>
 
 </html>]]></description>
-<TimeSpan>
-        <begin>2021-09-24</begin>
-      </TimeSpan>
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -23571,9 +23502,6 @@
 				<roll>-0.7069982837687819</roll>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</Camera>
-			  <TimeSpan>
-        <begin>2021-09-24</begin>
-      </TimeSpan>
 			<styleUrl>#m_ylw-pushpin3</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>

@@ -432,9 +432,11 @@ class _LGtasksState extends State<LGtasks> {
                                       ),
                                       onPressed: () {
                                         // send to LG
+
                                         LGConnection()
                                             .cleanVisualization()
                                             .then((value) {
+                                          LGConnection().cleanBalloon();
                                           setState(() {
                                             isOpen = false;
                                           });
@@ -574,6 +576,26 @@ class LGConnection {
       return await client.execute('echo "exittour=true" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  Future cleanBalloon() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+    String rigs = "2";
+    rigs = credencials['numberofrigs'] == 5 ? "2" : "1";
+    try {
+      await client.connect();
+      return await client
+          .execute("echo '' > /var/www/html/kml/slave_$rigs.kml");
+    } catch (e) {
       return Future.error(e);
     }
   }

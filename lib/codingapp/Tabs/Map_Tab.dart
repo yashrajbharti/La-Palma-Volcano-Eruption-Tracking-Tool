@@ -100,8 +100,12 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
 
   playOrbit() async {
     await LGConnection()
-        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-            LookAt(longvalue, latvalue, "30492.665945696469", "0", "0"))))
+        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(LookAt(
+            double.parse((await longvalue).toStringAsFixed(2)),
+            double.parse((await latvalue).toStringAsFixed(2)),
+            "30492.665945696469",
+            "0",
+            "0"))))
         .then((value) async {
       await LGConnection().startOrbit();
     });

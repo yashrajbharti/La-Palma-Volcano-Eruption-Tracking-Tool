@@ -16,46 +16,46 @@ class Lavabuilder {
       if (end.compareTo(DateTime.parse("2021-09-24")) <= 0) {
         Sep24 = September24Tag(Startdate, Enddate);
       } else if (end.compareTo(DateTime.parse("2021-10-08")) <= 0) {
-        Sep24 = September24Tag(Startdate, "2021-09-24");
+        // Sep24 = September24Tag(Startdate, "2021-09-24");
         Oct8 = October8Tag("2021-09-24", Enddate);
       } else if (end.compareTo(DateTime.parse("2021-10-21")) <= 0) {
-        Sep24 = September24Tag(Startdate, "2021-09-24");
-        Oct8 = October8Tag("2021-09-24", "2021-10-08");
+        // Sep24 = September24Tag(Startdate, "2021-09-24");
+        //Oct8 = October8Tag("2021-09-24", "2021-10-08");
         Oct21 = October21Tag("2021-10-08", Enddate);
       } else if (end.compareTo(DateTime.parse("2021-11-04")) <= 0) {
-        Sep24 = September24Tag(Startdate, "2021-09-24");
-        Oct8 = October8Tag("2021-09-24", "2021-10-08");
-        Oct21 = October21Tag("2021-10-08", "2021-10-21");
+        // Sep24 = September24Tag(Startdate, "2021-09-24");
+        // Oct8 = October8Tag("2021-09-24", "2021-10-08");
+        // Oct21 = October21Tag("2021-10-08", "2021-10-21");
         Nov4 = November4Tag("2021-10-21", Enddate);
       } else if (end.compareTo(DateTime.parse("2021-11-14")) <= 0) {
-        Sep24 = September24Tag(Startdate, "2021-09-24");
-        Oct8 = October8Tag("2021-09-24", "2021-10-08");
-        Oct21 = October21Tag("2021-10-08", "2021-10-21");
-        Nov4 = November4Tag("2021-10-21", "2021-11-04");
+        //  Sep24 = September24Tag(Startdate, "2021-09-24");
+        // Oct8 = October8Tag("2021-09-24", "2021-10-08");
+        // Oct21 = October21Tag("2021-10-08", "2021-10-21");
+        // Nov4 = November4Tag("2021-10-21", "2021-11-04");
         Nov14 = November14Tag("2021-11-04", Enddate);
       } else if (end.compareTo(DateTime.parse("2021-11-21")) <= 0) {
-        Sep24 = September24Tag(Startdate, "2021-09-24");
-        Oct8 = October8Tag("2021-09-24", "2021-10-08");
-        Oct21 = October21Tag("2021-10-08", "2021-10-21");
-        Nov4 = November4Tag("2021-10-21", "2021-11-04");
-        Nov14 = November14Tag("2021-11-04", "2021-11-14");
+        // Sep24 = September24Tag(Startdate, "2021-09-24");
+        //  Oct8 = October8Tag("2021-09-24", "2021-10-08");
+        //  Oct21 = October21Tag("2021-10-08", "2021-10-21");
+        //  Nov4 = November4Tag("2021-10-21", "2021-11-04");
+        //  Nov14 = November14Tag("2021-11-04", "2021-11-14");
         Nov21 = November21Tag("2021-11-14", Enddate);
       } else if (end.compareTo(DateTime.parse("2021-12-01")) <= 0) {
-        Sep24 = September24Tag(Startdate, "2021-09-24");
-        Oct8 = October8Tag("2021-09-24", "2021-10-08");
-        Oct21 = October21Tag("2021-10-08", "2021-10-21");
-        Nov4 = November4Tag("2021-10-21", "2021-11-04");
-        Nov14 = November14Tag("2021-11-04", "2021-11-14");
-        Nov21 = November21Tag("2021-11-14", "2021-11-21");
+        // Sep24 = September24Tag(Startdate, "2021-09-24");
+        // Oct8 = October8Tag("2021-09-24", "2021-10-08");
+        // Oct21 = October21Tag("2021-10-08", "2021-10-21");
+        // Nov4 = November4Tag("2021-10-21", "2021-11-04");
+        // Nov14 = November14Tag("2021-11-04", "2021-11-14");
+        // Nov21 = November21Tag("2021-11-14", "2021-11-21");
         Dec1 = December1Tag("2021-11-21", Enddate);
       } else if (end.compareTo(DateTime.parse("2021-12-15")) <= 0) {
-        Sep24 = September24Tag(Startdate, "2021-09-24");
-        Oct8 = October8Tag("2021-09-24", "2021-10-08");
-        Oct21 = October21Tag("2021-10-08", "2021-10-21");
-        Nov4 = November4Tag("2021-10-21", "2021-11-04");
-        Nov14 = November14Tag("2021-11-04", "2021-11-14");
-        Nov21 = November21Tag("2021-11-14", "2021-11-21");
-        Dec1 = December1Tag("2021-11-21", "2021-12-01");
+        // Sep24 = September24Tag(Startdate, "2021-09-24");
+        // Oct8 = October8Tag("2021-09-24", "2021-10-08");
+        // Oct21 = October21Tag("2021-10-08", "2021-10-21");
+        // Nov4 = November4Tag("2021-10-21", "2021-11-04");
+        // Nov14 = November14Tag("2021-11-04", "2021-11-14");
+        // Nov21 = November21Tag("2021-11-14", "2021-11-21");
+        // Dec1 = December1Tag("2021-11-21", "2021-12-01");
         Dec18 = December18Tag("2021-12-01", Enddate);
       }
     } else if (start.compareTo(DateTime.parse("2021-10-08")) <= 0 &&
@@ -317,10 +317,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#PolyStyle00</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -358,10 +354,6 @@ class Lavabuilder {
 				<roll>-0.7069982837687819</roll>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</Camera>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin3</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -526,10 +518,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -676,10 +664,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -774,10 +758,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -872,10 +852,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -970,10 +946,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_04B5FEE24A2209336174</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -999,10 +971,6 @@ class Lavabuilder {
 				<range>5636.62951459463</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin1</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -1175,10 +1143,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -1338,10 +1302,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -1444,10 +1404,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -1550,10 +1506,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -1656,10 +1608,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0F67AA4933220940F630</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -1685,10 +1633,6 @@ class Lavabuilder {
 				<range>5636.629514592285</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -1860,10 +1804,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_02AA2DC0A6220959E272</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -1966,10 +1906,6 @@ class Lavabuilder {
 				<range>6731.543478427959</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin2</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -2142,10 +2078,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_08BA236C6022094F5E49</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -2248,10 +2180,6 @@ class Lavabuilder {
 				<range>5765.06651339543</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin6</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -2424,10 +2352,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_04FB1FE3BC2209522C0D</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -2525,10 +2449,6 @@ class Lavabuilder {
 				<range>4840.091846005608</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin0</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -2701,10 +2621,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_0A0411237322095632FB</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -2817,10 +2733,6 @@ class Lavabuilder {
 				<range>4207.643555561785</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin5</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -2993,10 +2905,6 @@ class Lavabuilder {
 </body>
 
 </html>]]></description>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#__managed_style_05E8399EA9220960AEC9</styleUrl>
 			<MultiGeometry>
 				<Polygon>
@@ -3119,10 +3027,6 @@ class Lavabuilder {
 				<range>7546.803760853749</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-				<begin>$date1</begin>
-				<end>$date2</end>
-			</TimeSpan>
 			<styleUrl>#m_ylw-pushpin4</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>

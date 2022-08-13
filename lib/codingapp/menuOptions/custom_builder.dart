@@ -19,6 +19,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:webscrapperapp/codingapp/kml/tremorbuilder.dart';
 import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
 import 'package:provider/provider.dart';
+import 'package:webscrapperapp/codingapp/kml/orbit.dart';
 import 'package:webscrapperapp/codingapp/theme-storage.dart';
 
 class CustomBuilder extends StatefulWidget {
@@ -32,7 +33,10 @@ class _CustomBuilderState extends State<CustomBuilder> {
   List<String> kmltext = ['', '', '', '', '', '', '', '', '', '', '', '', ''];
   KML kml = KML("", "");
   late final themeData;
+  double latvalue = 28.65665656297236;
+  double longvalue = -17.885454520583153;
   bool tremor = false;
+  bool isOrbiting = false;
   bool lavaflow = false;
   bool buildings = false;
   bool roads = false;
@@ -126,6 +130,12 @@ class _CustomBuilderState extends State<CustomBuilder> {
     setState(() {
       dateRange = newDateRange ?? dateRange;
       resetchecks();
+      LGConnection().openBalloon(
+          translate("drawer.custom"),
+          '${start.year}/${start.month}/${start.day} - ${end.year}/${end.month}/${end.day}',
+          translate("info.description") + " " + translate("tour.custom"),
+          "COPERNICUS, Instituto Geográfico Nacional, Global Volcanism Program",
+          translate('title.name'));
     });
   }
 
@@ -212,6 +222,25 @@ class _CustomBuilderState extends State<CustomBuilder> {
     );
   }
 
+  playOrbit() async {
+    await LGConnection()
+        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
+            LookAt(longvalue, latvalue, "30492.665945696469", "0", "0"))))
+        .then((value) async {
+      await LGConnection().startOrbit();
+    });
+    setState(() {
+      isOrbiting = true;
+    });
+  }
+
+  stopOrbit() async {
+    await LGConnection().stopOrbit();
+    setState(() {
+      isOrbiting = false;
+    });
+  }
+
   void _showToast(String x, bool blackandwhite) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -257,34 +286,36 @@ class _CustomBuilderState extends State<CustomBuilder> {
     end = dateRange.end;
     return Consumer<ThemeModel>(
         builder: (context, ThemeModel themeNotifier, child) => Scaffold(
-              extendBodyBehindAppBar: true,
-              appBar: PreferredSize(
-                preferredSize: const Size.fromHeight(50),
-                child: AppBar(
-                  elevation: 0,
-                  backgroundColor: Colors.transparent,
-                  leading: IconButton(
-                    icon: Icon(
-                      Icons.arrow_back_rounded,
-                      size: 50.0,
-                    ),
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => Drawers(),
-                        ),
-                      );
-                    },
+            extendBodyBehindAppBar: true,
+            appBar: PreferredSize(
+              preferredSize: const Size.fromHeight(50),
+              child: AppBar(
+                elevation: 0,
+                backgroundColor: Colors.transparent,
+                leading: IconButton(
+                  icon: Icon(
+                    Icons.arrow_back_rounded,
+                    size: 50.0,
                   ),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => Drawers(),
+                      ),
+                    );
+                  },
                 ),
               ),
-              backgroundColor: themeNotifier.isDark
-                  ? Color.fromARGB(255, 16, 16, 16)
-                  : Color.fromARGB(255, 204, 204, 204),
-              body: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 120.0, vertical: 0),
+            ),
+            backgroundColor: themeNotifier.isDark
+                ? Color.fromARGB(255, 16, 16, 16)
+                : Color.fromARGB(255, 204, 204, 204),
+            body: Stack(children: <Widget>[
+              SingleChildScrollView(
+                  child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 120.0, vertical: 0),
+                child: Container(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -1111,8 +1142,85 @@ class _CustomBuilderState extends State<CustomBuilder> {
                     ],
                   ),
                 ),
+              )),
+              Consumer<ThemeModel>(
+                builder: (context, ThemeModel themeNotifier, child) =>
+                    Positioned(
+                  top: 300,
+                  right: 0,
+                  child: Card(
+                    elevation: 0,
+                    child: Container(
+                      color: themeNotifier.isDark
+                          ? Color.fromARGB(255, 30, 30, 30)
+                          : Color.fromARGB(255, 68, 68, 68),
+                      width: 59.5,
+                      height: 124.25,
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(height: 6),
+                          IconButton(
+                              icon: Icon(
+                                Icons.replay_rounded,
+                                color: Color.fromARGB(255, 135, 205, 131),
+                                size: 32,
+                              ),
+                              onPressed: () async {
+                                LGConnection().cleanOrbit().then((value) {
+                                  playOrbit();
+                                  _showToast(translate('map.buildorbit'),
+                                      themeNotifier.isDark);
+                                }).catchError((onError) {
+                                  print('oh no $onError');
+                                  if (onError == 'nogeodata') {
+                                    showAlertDialog(
+                                        translate('Track.alert'),
+                                        translate('Track.alert2'),
+                                        themeNotifier.isDark,
+                                        false);
+                                  }
+                                  showAlertDialog(
+                                      translate('Track.alert3'),
+                                      translate('Track.alert4'),
+                                      themeNotifier.isDark,
+                                      false);
+                                });
+                              }),
+                          Divider(),
+                          IconButton(
+                              icon: Icon(
+                                Icons.crop_square_rounded,
+                                size: 32,
+                                color: Color.fromARGB(255, 239, 133, 112),
+                              ),
+                              onPressed: () async {
+                                stopOrbit().then((value) {
+                                  _showToast(translate('map.stoporbit'),
+                                      themeNotifier.isDark);
+                                  LGConnection().cleanOrbit();
+                                }).catchError((onError) {
+                                  print('oh no $onError');
+                                  if (onError == 'nogeodata') {
+                                    showAlertDialog(
+                                        translate('Track.alert'),
+                                        translate('Track.alert2'),
+                                        themeNotifier.isDark,
+                                        false);
+                                  }
+                                  showAlertDialog(
+                                      translate('Track.alert3'),
+                                      translate('Track.alert4'),
+                                      themeNotifier.isDark,
+                                      false);
+                                });
+                              }),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ),
-            ));
+            ])));
   }
 
   void _onnaturallandActive(bool? newValue) => setState(() {
@@ -1354,6 +1462,59 @@ class LGConnection {
     }
   }
 
+  buildOrbit(String content) async {
+    dynamic credencials = await _getCredentials();
+
+    String localPath = await _localPath;
+    File localFile = File('$localPath/Orbit.kml');
+    localFile.writeAsString(content);
+
+    String filePath = '$localPath/Orbit.kml';
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: filePath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+      return await client.execute(
+          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  startOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
   stopOrbit() async {
     dynamic credencials = await _getCredentials();
 
@@ -1369,6 +1530,120 @@ class LGConnection {
       return await client.execute('echo "exittour=true" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  cleanOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  Future openBalloon(String custom, String date, String description,
+      String source, String appname) async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+    String rigs = "2";
+    rigs = credencials['numberofrigs'] == 5 ? "2" : "1";
+    String openBalloonKML = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>$custom.kml</name>
+	<Style id="purple_paddle">
+		<IconStyle>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text>\$[description]</text>
+      <bgColor>ff1e1e1e</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Placemark id="0A7ACC68BF23CB81B354">
+		<name>$custom</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<!-- BalloonStyle background color:
+ffffffff
+ -->
+<!-- Icon URL:
+http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
+ -->
+<table width="400" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png" alt="picture" width="150" height="150" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <h2><font color='#00CC99'>$custom</font></h2>
+      <h3><font color='#00CC99'>$date</font></h3>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/custom_infographic.jpg" alt="picture" width="400" height="240" />    </td>
+  </tr>  
+  <tr>
+    <td colspan="2">
+      <p><font color="#3399CC">$description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#">$source</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <font color="#999999">@$appname 2022</font>
+    </td>
+  </tr>
+</table>]]></description>
+		<LookAt>
+			<longitude>-17.841486</longitude>
+			<latitude>28.638478</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<range>24000</range>
+		</LookAt>
+		<styleUrl>#purple_paddle</styleUrl>
+		<gx:balloonVisibility>1</gx:balloonVisibility>
+		<Point>
+			<coordinates>-17.841486,28.638478,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
+  ''';
+    try {
+      await client.connect();
+      return await client.execute(
+          "echo '$openBalloonKML' > /var/www/html/kml/slave_$rigs.kml");
+    } catch (e) {
       return Future.error(e);
     }
   }

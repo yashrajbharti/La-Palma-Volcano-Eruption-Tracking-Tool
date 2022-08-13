@@ -8881,10 +8881,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 		<open>1</open>
 		<Placemark id="00596AC3162224119AD8">
 			<name>Maritime Exclusion Zone</name>
-			<TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#__managed_style_0BA2FAA56B22242D9CEB</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
@@ -8907,10 +8903,7 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
+
 			<styleUrl>#__managed_style_0D41CE43DD22242FACB9</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8927,10 +8920,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8948,10 +8937,7 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
+
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8969,10 +8955,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -8990,10 +8972,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19988.10287229624</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			<TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#__managed_style_0A3309683E2224300B16</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -9003,10 +8981,7 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 		</Placemark>
 		<Placemark id="032BA0E5222224119AE2">
 			<name>Lava Flow on 19th September</name>
-			 <TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
+
 			<styleUrl>#__managed_style_07CA7A5E13222431ADDB</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode>
@@ -9029,10 +9004,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>24328.99211275216</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			 <TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#__managed_style_096B72317122243384C7</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -9051,10 +9022,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>24328.99211275216</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			 <TimeSpan>
-					<begin>2021-09-22</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#__managed_style_01A3ACC0FC222439546D</styleUrl>
 			<Point>
 			<altitudeMode>relativeToGround</altitudeMode>
@@ -9072,10 +9039,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19893.17136944493</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			 <TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#msn_noicon0</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -9093,10 +9056,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19893.17136944269</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			 <TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#msn_noicon1</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -9114,10 +9073,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 				<range>19893.17136944269</range>
 				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 			</LookAt>
-			 <TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
 			<styleUrl>#msn_noicon</styleUrl>
 			<Point>
 				<gx:drawOrder>1</gx:drawOrder>
@@ -9126,10 +9081,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
 		</Placemark>
 	</Folder>
  <Folder id="11-12">
- <TimeSpan>
-					<begin>2021-09-11</begin>
-					<end>2021-09-13</end>
-				</TimeSpan>
             <Style id="sismo4">
                 <IconStyle id="sismoIcon4">
                     <scale>0.25</scale>
@@ -9463,10 +9414,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
             </Placemark>
         </Folder>
         <Folder>
-		 <TimeSpan>
-					<begin>2021-09-13</begin>
-					<end>2021-09-15</end>
-				</TimeSpan>
             <Style id="sismo4">
                 <IconStyle id="sismoIcon4">
                     <scale>0.25</scale>
@@ -10641,10 +10588,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
             </Placemark>
         </Folder>
         <Folder>
-		 <TimeSpan>
-					<begin>2021-09-15</begin>
-					<end>2021-09-17</end>
-				</TimeSpan>
             <Style id="sismo4">
                 <IconStyle id="sismoIcon4">
                     <scale>0.25</scale>
@@ -10859,10 +10802,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
             </Placemark>
         </Folder>
         <Folder>
-		 <TimeSpan>
-					<begin>2021-09-17</begin>
-					<end>2021-09-19</end>
-				</TimeSpan>
             <Style id="sismo4">
                 <IconStyle id="sismoIcon4">
                     <scale>0.25</scale>
@@ -11013,10 +10952,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
             </Placemark>
         </Folder>
         <Folder>
-		 <TimeSpan>
-					<begin>2021-09-19</begin>
-					<end>2021-09-20</end>
-				</TimeSpan>
             <Style id="sismo4">
                 <IconStyle id="sismoIcon4">
                     <scale>0.25</scale>
@@ -11271,10 +11206,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
             </Placemark>
         </Folder>
         <Folder>
-		<TimeSpan>
-					<begin>2021-09-20</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
             <Style id="sismo4">
                 <IconStyle id="sismoIcon4">
                     <scale>0.25</scale>
@@ -11377,10 +11308,6 @@ western slope of Cumbre Vieja. Volcanic ash is falling in the vicinity of the vo
             </Placemark>
         </Folder>
         <Folder>
-		<TimeSpan>
-					<begin>2021-09-22</begin>
-					<end>2021-09-22</end>
-				</TimeSpan>
             <Style id="sismo4">
                 <IconStyle id="sismoIcon4">
                     <scale>0.25</scale>

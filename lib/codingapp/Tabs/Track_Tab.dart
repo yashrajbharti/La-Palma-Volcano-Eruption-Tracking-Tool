@@ -211,6 +211,17 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[0]);
                               await _read(0);
+                              LGConnection().openBalloon(
+                                  projectname[0],
+                                  translate('Track.hist'),
+                                  translate("info.hist.date"),
+                                  240,
+                                  translate("info.description") +
+                                      " " +
+                                      translate("info.hist.description"),
+                                  "COPERNICUS, ResearchGate, Global Volcanism Program",
+                                  translate('title.name'),
+                                  "historic_infographic.png");
                               setState(() {
                                 _duration = 2290;
                               });
@@ -254,6 +265,17 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[1]);
                               await _read(1);
+                              LGConnection().openBalloon(
+                                  projectname[1],
+                                  translate('Track.lava'),
+                                  translate("info.lava.date"),
+                                  240,
+                                  translate("info.description") +
+                                      " " +
+                                      translate("info.lava.description"),
+                                  "COPERNICUS, Wikipedia | Cumbre Vieja",
+                                  translate('title.name'),
+                                  "lavaflow_infographic.jpg");
                               setState(() {
                                 _duration = 4000;
                               });
@@ -301,6 +323,17 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[2]);
                             await _read(2);
+                            LGConnection().openBalloon(
+                                projectname[2],
+                                translate('Track.prehistoric'),
+                                translate("info.prehistoric.date"),
+                                270,
+                                translate("info.description") +
+                                    " " +
+                                    translate("info.prehistoric.description"),
+                                "ResearchGate, Global Volcanism Program",
+                                translate('title.name'),
+                                "prehistoric_infographic.png");
                             setState(() {
                               _duration = 2080;
                             });
@@ -343,6 +376,17 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[3]);
                             await _read(3);
+                            LGConnection().openBalloon(
+                                projectname[3],
+                                translate('Track.aff'),
+                                translate("info.aff.date"),
+                                240,
+                                translate("info.description") +
+                                    " " +
+                                    translate("info.aff.description"),
+                                "COPERNICUS",
+                                translate('title.name'),
+                                "affectedareas_infographic.jpg");
                             setState(() {
                               _duration = 56040;
                             });
@@ -392,6 +436,17 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[4]);
                               await _read(4);
+                              LGConnection().openBalloon(
+                                  projectname[4],
+                                  translate('Track.land'),
+                                  translate("info.land.date"),
+                                  240,
+                                  translate("info.description") +
+                                      " " +
+                                      translate("info.land.description"),
+                                  "NASA Earth Observatory , Sentinel Playground, COPERNICUS",
+                                  translate('title.name'),
+                                  "landscape_infographic.jpg");
                               setState(() {
                                 _duration = 4000;
                               });
@@ -435,6 +490,17 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[5]);
                               await _read(5);
+                              LGConnection().openBalloon(
+                                  projectname[5],
+                                  translate('Track.So2'),
+                                  translate("info.So2.date"),
+                                  240,
+                                  translate("info.description") +
+                                      " " +
+                                      translate("info.So2.description"),
+                                  "Sentinel EO Browser, GDACS, Twitter | Platform ADAM",
+                                  translate('title.name'),
+                                  "so2_infographic.gif");
                               setState(() {
                                 _duration = 3710;
                               });
@@ -482,6 +548,17 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[6]);
                             await _read(6);
+                            LGConnection().openBalloon(
+                                projectname[6],
+                                translate('Track.situation'),
+                                translate("info.situation.date"),
+                                270,
+                                translate("info.description") +
+                                    " " +
+                                    translate("info.situation.description"),
+                                "Instituto Geográfico Nacional, GDACS, ERCC Portal",
+                                translate('title.name'),
+                                "situation_infographic.png");
                             setState(() {
                               _duration = 5250;
                             });
@@ -524,6 +601,17 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[7]);
                             await _read(7);
+                            LGConnection().openBalloon(
+                                projectname[7],
+                                translate('Track.located'),
+                                translate("info.located.date"),
+                                230,
+                                translate("info.description") +
+                                    " " +
+                                    translate("info.located.description"),
+                                "Instituto Geográfico Nacional",
+                                translate('title.name'),
+                                "locatedevents_infographic.jpg");
                             setState(() {
                               _duration = 8710;
                             });
@@ -642,8 +730,6 @@ class _SendtoLGState extends State<SendtoLG> {
                                   LGConnection()
                                       .sendToLG(kml.mount(), finalname)
                                       .then((value) {
-                                    LGConnection().startOrbit();
-
                                     _showToast(translate('Track.Visualize'),
                                         themeNotifier.isDark);
 
@@ -792,6 +878,108 @@ class LGConnection {
       await client.connect();
       return await client
           .execute("echo '$openLogoKML' > /var/www/html/kml/slave_$rigs.kml");
+    } catch (e) {
+      return Future.error(e);
+    }
+  }
+
+  Future openBalloon(
+      String name,
+      String track,
+      String time,
+      int height,
+      String description,
+      String sources,
+      String appname,
+      String imagename) async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+    String rigs = "2";
+    rigs = credencials['numberofrigs'] == 5 ? "2" : "1";
+    String openBalloonKML = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>$name.kml</name>
+	<Style id="purple_paddle">
+		<IconStyle>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text>\$[description]</text>
+      <bgColor>ff1e1e1e</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Placemark id="0A7ACC68BF23CB81B354">
+		<name>$track</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<!-- BalloonStyle background color:
+ffffffff
+ -->
+<!-- Icon URL:
+http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
+ -->
+<table width="400" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png" alt="picture" width="150" height="150" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <h2><font color='#00CC99'>$track</font></h2>
+      <h3><font color='#00CC99'>$time</font></h3>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/$imagename" alt="picture" width="400" height="$height" />    </td>
+  </tr>  
+  <tr>
+    <td colspan="2">
+      <p><font color="#3399CC">$description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#">$sources</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <font color="#999999">@$appname 2022</font>
+    </td>
+  </tr>
+</table>]]></description>
+		<LookAt>
+			<longitude>-17.841486</longitude>
+			<latitude>28.638478</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<range>24000</range>
+		</LookAt>
+		<styleUrl>#purple_paddle</styleUrl>
+		<gx:balloonVisibility>1</gx:balloonVisibility>
+		<Point>
+			<coordinates>-17.841486,28.638478,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
+    ''';
+    try {
+      await client.connect();
+      return await client.execute(
+          "echo '$openBalloonKML' > /var/www/html/kml/slave_$rigs.kml");
     } catch (e) {
       return Future.error(e);
     }
@@ -975,59 +1163,6 @@ class LGConnection {
 
       return await client.execute(
           'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  buildOrbit(String content) async {
-    dynamic credencials = await _getCredentials();
-
-    String localPath = await _localPath;
-    File localFile = File('$localPath/Orbit.kml');
-    localFile.writeAsString(content);
-
-    String filePath = '$localPath/Orbit.kml';
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-      await client.connectSFTP();
-      await client.sftpUpload(
-        path: filePath,
-        toPath: '/var/www/html',
-        callback: (progress) {
-          print('Sent $progress');
-        },
-      );
-      return await client.execute(
-          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
-
-  startOrbit() async {
-    dynamic credencials = await _getCredentials();
-
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
-
-    try {
-      await client.connect();
-      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
