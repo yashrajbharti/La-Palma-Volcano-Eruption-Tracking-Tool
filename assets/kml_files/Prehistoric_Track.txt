@@ -2138,9 +2138,6 @@
 			<range>40511.9338249974</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		<TimeSpan>
-        <begin>-1320</begin>
-      </TimeSpan>
 		<styleUrl>#__managed_style_0DD7D5122122233C9122</styleUrl>
 		<Point>
 			<coordinates>-17.84784672182913,28.5046862629819,855.0147092114038</coordinates>
