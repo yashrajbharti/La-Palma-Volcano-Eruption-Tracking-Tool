@@ -589,8 +589,8 @@ class LGConnection {
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
-    String rigs = "2";
-    rigs = credencials['numberofrigs'] == 5 ? "2" : "1";
+    String rigs = "3";
+    rigs = ((int.parse(credencials['numberofrigs']) + 1) / 2).toString();
     try {
       await client.connect();
       return await client

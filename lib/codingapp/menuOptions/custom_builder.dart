@@ -33,7 +33,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   List<String> kmltext = ['', '', '', '', '', '', '', '', '', '', '', '', ''];
   KML kml = KML("", "");
   late final themeData;
-  double latvalue = 28.65665656297236;
+  double latvalue = 28.55665656297236;
   double longvalue = -17.885454520583153;
   bool tremor = false;
   bool isOrbiting = false;
@@ -225,7 +225,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   playOrbit() async {
     await LGConnection()
         .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-            LookAt(longvalue, latvalue, "30492.665945696469", "0", "0"))))
+            LookAt(longvalue, latvalue, "60492.665945696469", "0", "0"))))
         .then((value) async {
       await LGConnection().startOrbit();
     });
@@ -1563,8 +1563,8 @@ class LGConnection {
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
-    String rigs = "2";
-    rigs = credencials['numberofrigs'] == 5 ? "2" : "1";
+    String rigs = "3";
+    rigs = ((int.parse(credencials['numberofrigs']) + 1) / 2).toString();
     String openBalloonKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">

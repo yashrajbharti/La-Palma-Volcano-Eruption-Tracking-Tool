@@ -26,7 +26,7 @@ void jumpToPage(int page) {
   x = page;
 }
 
-double latvalue = 28.65665656297236;
+double latvalue = 28.55665656297236;
 double longvalue = -17.885454520583153;
 
 class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
@@ -41,7 +41,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
   playOrbit() async {
     await LGConnection()
         .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-            LookAt(longvalue, latvalue, "30492.665945696469", "0", "0"))))
+            LookAt(longvalue, latvalue, "60492.665945696469", "0", "0"))))
         .then((value) async {
       await LGConnection().startOrbit();
     });

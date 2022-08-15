@@ -833,7 +833,7 @@ class LGConnection {
       passwordOrKey: '${credencials['pass']}',
     );
     String rigs = "4";
-    rigs = credencials['numberofrigs'] == 5 ? "4" : "2";
+    rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1).toString();
     String openLogoKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -900,8 +900,8 @@ class LGConnection {
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
-    String rigs = "2";
-    rigs = credencials['numberofrigs'] == 5 ? "2" : "1";
+    String rigs = "3";
+    rigs = ((int.parse(credencials['numberofrigs']) + 1) / 2).toString();
     String openBalloonKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -995,7 +995,7 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
       passwordOrKey: '${credencials['pass']}',
     );
     String rigs = "4";
-    rigs = credencials['numberofrigs'] == 5 ? "4" : "2";
+    rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1).toString();
     try {
       await client.connect();
       return await client
@@ -1086,24 +1086,24 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
 
     LookAt flyto = LookAt(
       projectname == "Historic_Track"
-          ? -17.841486
+          ? -17.885454
           : projectname == "Located_Events"
               ? -17.834886
               : projectname == "SO2_Emission"
                   ? -7.561565
                   : projectname == "Prehistoric_Track"
-                      ? -17.841486
+                      ? -17.885454
                       : projectname == "Lava_Flow"
                           ? -17.892286
                           : -17.895486,
       projectname == "Historic_Track"
-          ? 28.548478
+          ? 28.556656
           : projectname == "Located_Events"
               ? 28.564986
               : projectname == "SO2_Emission"
                   ? 33.561245
                   : projectname == "Prehistoric_Track"
-                      ? 28.548478
+                      ? 28.556656
                       : projectname == "Lava_Flow"
                           ? 28.616354
                           : projectname == "Affected_Areas"
@@ -1118,7 +1118,7 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
           : projectname == "Lava_Flow"
               ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
               : projectname == "Landscape"
-                  ? '${135208.997837 / int.parse(credencials['numberofrigs'])}'
+                  ? '${65208.997837 / int.parse(credencials['numberofrigs'])}'
                   : projectname == "Affected_Areas"
                       ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
                       : projectname == "Situation"
@@ -1131,13 +1131,17 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
                                       ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
                                       : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
       projectname == "Historic_Track"
-          ? '15'
+          ? '41.82725143432617'
           : projectname == "SO2_Emission"
               ? '25'
               : projectname == "Prehistoric_Track"
-                  ? '15'
+                  ? '41.82725143432617'
                   : '45',
-      '0',
+      projectname == "Historic_Track"
+          ? ' 61.403038024902344'
+          : projectname == "Prehistoric_Track"
+              ? ' 61.403038024902344'
+              : '0',
     );
     try {
       await client.connect();
