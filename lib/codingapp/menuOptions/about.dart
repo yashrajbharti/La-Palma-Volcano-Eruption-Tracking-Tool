@@ -151,6 +151,16 @@ class _AboutScreenState extends State<AboutScreen> {
                                       color: Color.fromARGB(255, 97, 146, 245)),
                                 )),
                           ]),
+                      Text(
+                        translate("About.lab"),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 24,
+                            color: themeNotifier.isDark
+                                ? Colors.white
+                                : Colors.black),
+                        textAlign: TextAlign.start,
+                      ),
                       Transform.scale(
                           scale: 1.6,
                           child: Builder(

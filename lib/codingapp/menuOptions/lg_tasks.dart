@@ -496,8 +496,24 @@ class LGConnection {
 
     try {
       await client.connect();
-      await client.execute(
-          "'/home/${credencials['username']}/bin/lg-relaunch' > /home/${credencials['username']}/log.txt");
+      for (var i = int.parse(credencials['numberofrigs']); i >= 1; i--) {
+        await client.execute(
+            //"'/home/${credencials['username']}/bin/lg-relaunch' > /home/${credencials['username']}/log.txt"
+            """RELAUNCH_CMD="\\
+if [ -f /etc/init/lxdm.conf ]; then
+  export SERVICE=lxdm
+elif [ -f /etc/init/lightdm.conf ]; then
+  export SERVICE=lightdm
+else
+  exit 1
+fi
+if  [[ \\\$(service \\\$SERVICE status) =~ 'stop' ]]; then
+  service \\\${SERVICE} start
+else
+  echo lq | sudo -S service \\\${SERVICE} restart
+fi
+" && sshpass -p ${credencials['pass']} ssh -x -t lg@lg$i "\$RELAUNCH_CMD\"""");
+      }
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
@@ -516,8 +532,10 @@ class LGConnection {
 
     try {
       await client.connect();
-      await client.execute(
-          "'/home/${credencials['username']}/bin/lg-poweroff' > /home/${credencials['username']}/log.txt");
+      for (var i = int.parse(credencials['numberofrigs']); i >= 1; i--) {
+        await client.execute(
+            'sshpass -p ${credencials['pass']} ssh -t lg$i "echo ${credencials['pass']} | sudo -S poweroff"');
+      }
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
@@ -536,8 +554,12 @@ class LGConnection {
 
     try {
       await client.connect();
-      await client.execute(
-          "'/home/${credencials['username']}/bin/lg-reboot' > /home/${credencials['username']}/log.txt");
+      for (var i = int.parse(credencials['numberofrigs']); i >= 1; i--) {
+        await client.execute(
+            'sshpass -p ${credencials['pass']} ssh -t lg$i "echo ${credencials['pass']} | sudo -S reboot"'
+            // "'/home/${credencials['username']}/bin/lg-reboot' > /home/${credencials['username']}/log.txt"
+            );
+      }
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
