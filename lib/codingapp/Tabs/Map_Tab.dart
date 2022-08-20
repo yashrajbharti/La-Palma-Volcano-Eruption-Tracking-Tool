@@ -13,10 +13,10 @@ import 'package:ssh/ssh.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/LookAt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:webscrapperapp/codingapp/kml/orbit.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/orbit.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
 
 void main() => runApp(MyMap());
 

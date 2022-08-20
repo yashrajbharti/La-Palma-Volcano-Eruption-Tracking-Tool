@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(webscrapperapp LANGUAGES CXX)
+project(LaPalmaVolcanoEruptionTrackingTool LANGUAGES CXX)
 
-set(BINARY_NAME "webscrapperapp")
+set(BINARY_NAME "LaPalmaVolcanoEruptionTrackingTool")
 
 cmake_policy(SET CMP0063 NEW)
 

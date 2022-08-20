@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
-import 'package:webscrapperapp/codingapp/kml/orbit.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/LookAt.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/orbit.dart';
 import 'package:path_provider/path_provider.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:ssh/ssh.dart';

@@ -5,10 +5,10 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:ui' as ui;
-import 'package:webscrapperapp/codingapp/drawer.dart';
-import 'package:webscrapperapp/codingapp/translate.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/drawer.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/translate.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);

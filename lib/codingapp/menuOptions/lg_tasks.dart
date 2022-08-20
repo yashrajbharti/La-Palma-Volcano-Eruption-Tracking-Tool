@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:webscrapperapp/codingapp/drawer.dart';
-import 'package:webscrapperapp/codingapp/kml/kml.dart';
-import 'package:webscrapperapp/codingapp/kml/kmlgenerator.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/drawer.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/kml.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/kmlgenerator.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'dart:ui' as ui;
@@ -13,7 +13,7 @@ import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
 
 class LGtasks extends StatefulWidget {
   LGtasks({Key? key}) : super(key: key);

@@ -3,11 +3,11 @@ import 'package:flutter/scheduler.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 
-import 'package:webscrapperapp/codingapp/drawer.dart';
-import 'package:webscrapperapp/codingapp/layout.dart';
-import 'package:webscrapperapp/codingapp/theme.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/drawer.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/layout.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
 import 'package:feature_discovery/feature_discovery.dart';
 
 class Mainpage extends StatefulWidget {

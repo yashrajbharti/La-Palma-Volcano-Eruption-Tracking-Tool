@@ -13,12 +13,12 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:ssh/ssh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/kml/LookAt.dart';
-import 'package:webscrapperapp/codingapp/menuOptions/custom_builder.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
-import 'package:webscrapperapp/codingapp/kml/kml.dart';
-import 'package:webscrapperapp/codingapp/menuOptions/lg_tasks.dart';
-import 'package:webscrapperapp/codingapp/Tabs/Info.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/LookAt.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/menuOptions/custom_builder.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/kml.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/menuOptions/lg_tasks.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/Tabs/Info.dart';
 
 class SendtoLG extends StatefulWidget {
   SendtoLG({Key? key}) : super(key: key);

@@ -4,8 +4,8 @@ import 'package:flutter_translate/flutter_translate.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:splashscreen/splashscreen.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
-import 'package:webscrapperapp/codingapp/mainpage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/mainpage.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);

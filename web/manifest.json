@@ -1,6 +1,6 @@
 {
-    "name": "webscrapperapp",
-    "short_name": "webscrapperapp",
+    "name": "LaPalmaVolcanoEruptionTrackingTool",
+    "short_name": "LaPalmaVolcanoEruptionTrackingTool",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

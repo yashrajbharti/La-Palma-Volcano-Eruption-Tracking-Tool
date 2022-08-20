@@ -1,4 +1,4 @@
-package com.example.webscrapperapp
+package com.example.LaPalmaVolcanoEruptionTrackingTool
 
 import io.flutter.embedding.android.FlutterActivity
 

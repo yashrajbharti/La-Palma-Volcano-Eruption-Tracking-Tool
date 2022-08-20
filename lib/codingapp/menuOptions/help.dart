@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
 import 'package:url_launcher/url_launcher.dart';
-import 'package:webscrapperapp/codingapp/drawer.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/drawer.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
 
 class HelpScreen extends StatefulWidget {
   HelpScreen({Key? key}) : super(key: key);

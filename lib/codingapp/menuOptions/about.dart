@@ -3,9 +3,9 @@ import 'package:flutter_linkify/flutter_linkify.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:provider/provider.dart';
-import 'package:webscrapperapp/codingapp/theme-storage.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:webscrapperapp/codingapp/drawer.dart';
+import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/drawer.dart';
 
 class AboutScreen extends StatefulWidget {
   AboutScreen({Key? key}) : super(key: key);
