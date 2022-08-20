@@ -1,4 +1,4 @@
-package com.example.LaPalmaVolcanoEruptionTrackingTool
+package com.example.voltrac
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,10 +1,10 @@
+// ignore_for_file: import_of_legacy_library_into_null_safe
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/splash.dart';
+import 'package:voltrac/codingapp/splash.dart';
 import 'package:provider/provider.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
+import 'package:voltrac/codingapp/theme-storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 main() async {

@@ -1,13 +1,13 @@
 import 'dart:io';
 
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:downloads_path_provider/downloads_path_provider.dart';
+import 'package:downloads_path_provider_28/downloads_path_provider_28.dart';
 
 class KMLGenerator {
   static generateKML(data, filename) async {
     try {
       final downloadsDirectory = await DownloadsPathProvider.downloadsDirectory;
-      var savePath = downloadsDirectory.path;
+      // Directory dir = Directory('/storage/emulated/0/Download');
+      var savePath = downloadsDirectory?.path;
       final file = File("$savePath/$filename.kml");
       await file.writeAsString(data);
       return Future.value(file);

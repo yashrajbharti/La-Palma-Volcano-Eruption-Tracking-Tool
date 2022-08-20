@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/mainpage.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/menuOptions/help.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/menuOptions/lg_tasks.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/menuOptions/custom_builder.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/menuOptions/settings.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/menuOptions/about.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/day_night_switch.dart';
+import 'package:voltrac/codingapp/mainpage.dart';
+import 'package:voltrac/codingapp/menuOptions/help.dart';
+import 'package:voltrac/codingapp/menuOptions/lg_tasks.dart';
+import 'package:voltrac/codingapp/menuOptions/custom_builder.dart';
+import 'package:voltrac/codingapp/menuOptions/settings.dart';
+import 'package:voltrac/codingapp/menuOptions/about.dart';
+import 'package:voltrac/codingapp/day_night_switch.dart';
 import 'package:provider/provider.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
+import 'package:voltrac/codingapp/theme-storage.dart';
 import 'package:feature_discovery/feature_discovery.dart';
 
 class Drawers extends StatefulWidget {

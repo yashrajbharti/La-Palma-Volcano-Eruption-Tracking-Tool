@@ -7,16 +7,15 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:ssh/ssh.dart';
+import 'package:ssh2/ssh2.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/LookAt.dart';
+import 'package:voltrac/codingapp/kml/LookAt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/orbit.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
+import 'package:voltrac/codingapp/kml/orbit.dart';
+import 'package:voltrac/codingapp/theme-storage.dart';
 
 void main() => runApp(MyMap());
 

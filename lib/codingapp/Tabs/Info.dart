@@ -7,12 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:provider/provider.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/LookAt.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/orbit.dart';
+import 'package:voltrac/codingapp/kml/LookAt.dart';
+import 'package:voltrac/codingapp/theme-storage.dart';
+import 'package:voltrac/codingapp/kml/orbit.dart';
 import 'package:path_provider/path_provider.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:ssh/ssh.dart';
+import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class VerticalCardPagerDemo extends StatefulWidget {

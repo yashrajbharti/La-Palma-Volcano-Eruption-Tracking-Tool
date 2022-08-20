@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:ssh/ssh.dart';
+import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:ui' as ui;
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/drawer.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/translate.dart';
+import 'package:voltrac/codingapp/drawer.dart';
+import 'package:voltrac/codingapp/translate.dart';
 import 'package:provider/provider.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
+import 'package:voltrac/codingapp/theme-storage.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -40,14 +39,13 @@ class SettingsState extends State<Settings> {
     await preferences.setString('master_portNumber', portNumber.text);
     await preferences.setString('numberofrigs', numberofrigs.text);
 
-    SSHClient client = SSHClient(
-      host: ipAddress.text,
-      port: int.parse(portNumber.text),
-      username: username.text,
-      passwordOrKey: password.text,
-    );
-
     try {
+      SSHClient client = SSHClient(
+        host: ipAddress.text,
+        port: int.tryParse(portNumber.text)!.toInt(),
+        username: username.text,
+        passwordOrKey: password.text,
+      );
       await client.connect();
       showAlertDialog(translate("Settings.alert"),
           '${ipAddress.text} ' + translate("Settings.alert2"), true);
@@ -72,14 +70,13 @@ class SettingsState extends State<Settings> {
     await preferences.setString('master_portNumber', portNumber.text);
     await preferences.setString('numberofrigs', numberofrigs.text);
 
-    SSHClient client = SSHClient(
-      host: ipAddress.text,
-      port: int.tryParse(portNumber.text),
-      username: username.text,
-      passwordOrKey: password.text,
-    );
-
     try {
+      SSHClient client = SSHClient(
+        host: ipAddress.text,
+        port: int.tryParse(portNumber.text)!.toInt(),
+        username: username.text,
+        passwordOrKey: password.text,
+      );
       await client.connect();
       setState(() {
         connectionStatus = true;

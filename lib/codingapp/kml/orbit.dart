@@ -1,4 +1,4 @@
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/kml/LookAt.dart';
+import 'package:voltrac/codingapp/kml/LookAt.dart';
 
 class Orbit {
   static generateOrbitTag(LookAt marker) {

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:provider/provider.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/theme-storage.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/Tabs/Info.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/Tabs/Track_Tab.dart';
-import 'package:LaPalmaVolcanoEruptionTrackingTool/codingapp/Tabs/Map_Tab.dart';
+import 'package:voltrac/codingapp/theme-storage.dart';
+import 'package:voltrac/codingapp/Tabs/Info.dart';
+import 'package:voltrac/codingapp/Tabs/Track_Tab.dart';
+import 'package:voltrac/codingapp/Tabs/Map_Tab.dart';
 
 class Layout extends StatefulWidget {
   Layout({Key? key}) : super(key: key);

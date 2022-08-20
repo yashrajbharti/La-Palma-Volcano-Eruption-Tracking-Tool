@@ -1,6 +1,6 @@
 {
-    "name": "LaPalmaVolcanoEruptionTrackingTool",
-    "short_name": "LaPalmaVolcanoEruptionTrackingTool",
+    "name": "voltrac",
+    "short_name": "voltrac",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
