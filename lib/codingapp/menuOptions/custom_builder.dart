@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
@@ -39,6 +40,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool lavaflow = false;
   bool buildings = false;
   bool roads = false;
+  bool isloading = false;
   bool vents = false;
   bool hydrography = false;
   bool closedroads = false;
@@ -995,6 +997,17 @@ class _CustomBuilderState extends State<CustomBuilder> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          isloading
+                              ? CupertinoActivityIndicator(
+                                  animating: true,
+                                  radius: 20,
+                                )
+                              : SizedBox(
+                                  width: 40,
+                                ),
+                          SizedBox(
+                            width: 25,
+                          ),
                           SizedBox(
                             width: 300,
                             child: ElevatedButton(
@@ -1026,6 +1039,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                 onPressed: () {
                                   // send to LG
                                   setState(() {
+                                    isloading = true;
                                     String customDataFinal = "";
                                     for (int i = 0; i <= 12; i++)
                                       customDataFinal += kmltext[i];
@@ -1042,10 +1056,14 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                       //LGConnection().buildOrbit(kml.mount());
                                       setState(() {
                                         isOpen = true;
+                                        isloading = false;
                                       });
                                     });
                                   }).catchError((onError) {
                                     print('oh no $onError');
+                                    setState(() {
+                                      isloading = false;
+                                    });
                                     if (onError == 'nogeodata') {
                                       showAlertDialog(
                                           translate('Track.alert'),
