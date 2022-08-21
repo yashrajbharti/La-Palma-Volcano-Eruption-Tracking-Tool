@@ -1,4 +1,4 @@
-package com.example.voltrac
+package lapalma.voltrac
 
 import io.flutter.embedding.android.FlutterActivity
 

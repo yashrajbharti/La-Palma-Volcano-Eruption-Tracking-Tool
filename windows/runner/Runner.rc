@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
+            VALUE "CompanyName", "lapalma" "\0"
             VALUE "FileDescription", "voltrac" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "voltrac" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 lapalma. All rights reserved." "\0"
             VALUE "OriginalFilename", "voltrac.exe" "\0"
             VALUE "ProductName", "voltrac" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
