@@ -75,7 +75,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       Builder(
                           builder: (context) => IconButton(
                               icon: Image.asset('assets/volcano.png'),
-                              iconSize: 65,
+                              iconSize: 150,
                               onPressed: null)),
                       Linkify(
                         onOpen: _onOpen,
@@ -166,7 +166,7 @@ class _AboutScreenState extends State<AboutScreen> {
                           child: Builder(
                               builder: (context) => IconButton(
                                   icon: Image.asset('assets/icons/logos.png'),
-                                  iconSize: 450,
+                                  iconSize: 580,
                                   onPressed: null))),
                       Container(
                         child: Row(
