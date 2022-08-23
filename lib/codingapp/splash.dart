@@ -17,9 +17,10 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return Consumer<ThemeModel>(
         builder: (context, ThemeModel themeNotifier, child) => SplashScreenView(
-              duration: 3000,
+              duration: 5000,
               navigateRoute: First(),
               text: translate('title.name'),
+              textType: TextType.TyperAnimatedText,
               textStyle: TextStyle(
                 fontFamily: 'GoogleSans',
                 fontSize: 55,

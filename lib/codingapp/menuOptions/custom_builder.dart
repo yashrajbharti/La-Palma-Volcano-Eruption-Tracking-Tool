@@ -28,7 +28,8 @@ class CustomBuilder extends StatefulWidget {
   _CustomBuilderState createState() => _CustomBuilderState();
 }
 
-class _CustomBuilderState extends State<CustomBuilder> {
+class _CustomBuilderState extends State<CustomBuilder>
+    with SingleTickerProviderStateMixin {
   List<String> kmltext = ['', '', '', '', '', '', '', '', '', '', '', '', ''];
   KML kml = KML("", "");
   late final themeData;
@@ -51,9 +52,27 @@ class _CustomBuilderState extends State<CustomBuilder> {
   bool areaofinterest = false;
   bool isOpen = false;
   bool isSuccess = false;
+  bool isDataKMLActive = false;
   late var start;
   late var end;
   bool blackandwhite = false;
+  late AnimationController _rotationiconcontroller;
+
+  @override
+  void initState() {
+    _rotationiconcontroller = AnimationController(
+      duration: const Duration(seconds: 50),
+      vsync: this,
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _rotationiconcontroller.dispose();
+    super.dispose();
+  }
+
   Future dateTimeRangePicker(bool blackandwhite) async {
     DateTimeRange? newDateRange = await showDateRangePicker(
         context: context,
@@ -298,7 +317,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
                     size: 50.0,
                   ),
                   onPressed: () {
-                    Navigator.of(context).push(
+                    Navigator.of(context).pop(
                       MaterialPageRoute(
                         builder: (BuildContext context) => Drawers(),
                       ),
@@ -346,36 +365,36 @@ class _CustomBuilderState extends State<CustomBuilder> {
                               textAlign: TextAlign.start,
                             ),
                             SizedBox(
-                              width: 69,
+                              width: 20,
                             ),
+                            // Container(
+                            //   child: SizedBox(
+                            //     width: 200,
+                            //     child: ElevatedButton(
+                            //       style: ElevatedButton.styleFrom(
+                            //         elevation: 2,
+                            //         shadowColor: themeNotifier.isDark
+                            //             ? Colors.black
+                            //             : Colors.grey.withOpacity(0.5),
+                            //         primary: Color.fromARGB(255, 125, 164, 243),
+                            //         padding: EdgeInsets.all(15),
+                            //         shape: StadiumBorder(),
+                            //       ),
+                            //       child: Text(
+                            //         '${start.year}/${start.month}/${start.day}',
+                            //         style: TextStyle(
+                            //           color: Colors.black,
+                            //         ),
+                            //       ),
+                            //       onPressed: () =>
+                            //           dateTimeRangePicker(themeNotifier.isDark),
+                            //     ),
+                            //   ),
+                            // ),
                             Container(
+                              margin: EdgeInsets.only(left: 10),
                               child: SizedBox(
-                                width: 200,
-                                child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    elevation: 2,
-                                    shadowColor: themeNotifier.isDark
-                                        ? Colors.black
-                                        : Colors.grey.withOpacity(0.5),
-                                    primary: Color.fromARGB(255, 125, 164, 243),
-                                    padding: EdgeInsets.all(15),
-                                    shape: StadiumBorder(),
-                                  ),
-                                  child: Text(
-                                    '${start.year}/${start.month}/${start.day}',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  onPressed: () =>
-                                      dateTimeRangePicker(themeNotifier.isDark),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(left: 20),
-                              child: SizedBox(
-                                width: 200,
+                                width: 380,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     elevation: 2,
@@ -383,15 +402,42 @@ class _CustomBuilderState extends State<CustomBuilder> {
                                         ? Colors.black
                                         : Colors.grey.withOpacity(0.5),
                                     primary: Color.fromARGB(255, 232, 108, 99),
-                                    padding: EdgeInsets.all(15),
+                                    padding: EdgeInsets.all(10),
                                     shape: StadiumBorder(),
                                   ),
-                                  child: Text(
-                                    '${end.year}/${end.month}/${end.day}',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                    ),
-                                  ),
+                                  child: Wrap(
+                                      crossAxisAlignment:
+                                          WrapCrossAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          '${start.year}/${start.month}/${start.day}',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Transform.scale(
+                                            scale: 1.5,
+                                            child: Builder(
+                                              builder: (context) => IconButton(
+                                                icon: Image.asset(
+                                                  'assets/icons/timeline.png',
+                                                ),
+                                                onPressed: null,
+                                              ),
+                                            )),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          '${end.year}/${end.month}/${end.day}',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )
+                                      ]),
                                   onPressed: () =>
                                       dateTimeRangePicker(themeNotifier.isDark),
                                 ),
@@ -1162,7 +1208,7 @@ class _CustomBuilderState extends State<CustomBuilder> {
               Consumer<ThemeModel>(
                 builder: (context, ThemeModel themeNotifier, child) =>
                     Positioned(
-                  top: 300,
+                  top: 310,
                   right: 0,
                   child: Card(
                     elevation: 0,
@@ -1170,66 +1216,127 @@ class _CustomBuilderState extends State<CustomBuilder> {
                       color: themeNotifier.isDark
                           ? Color.fromARGB(255, 30, 30, 30)
                           : Color.fromARGB(255, 68, 68, 68),
-                      width: 59.5,
-                      height: 124.25,
+                      width: 69.5,
+                      height: 175,
                       child: Column(
                         children: <Widget>[
                           SizedBox(height: 6),
-                          IconButton(
-                              icon: Icon(
-                                Icons.replay_rounded,
-                                color: Color.fromARGB(255, 135, 205, 131),
-                                size: 32,
+                          RotationTransition(
+                            turns: Tween(begin: 0.0, end: 25.0)
+                                .animate(_rotationiconcontroller),
+                            child: Builder(
+                              builder: (context) => IconButton(
+                                icon: Image.asset('assets/icons/orbit.png'),
+                                iconSize: 57,
+                                onPressed: () => {
+                                  isOrbiting = !isOrbiting,
+                                  if (isOrbiting == true)
+                                    {
+                                      _rotationiconcontroller.forward(),
+                                      playOrbit().then((value) {
+                                        _showToast(translate('map.buildorbit'),
+                                            themeNotifier.isDark);
+                                      }).catchError((onError) {
+                                        _rotationiconcontroller.stop();
+                                        print('oh no $onError');
+                                        if (onError == 'nogeodata') {
+                                          showAlertDialog(
+                                              translate('Track.alert'),
+                                              translate('Track.alert2'),
+                                              themeNotifier.isDark,
+                                              false);
+                                        }
+                                        showAlertDialog(
+                                            translate('Track.alert3'),
+                                            translate('Track.alert4'),
+                                            themeNotifier.isDark,
+                                            false);
+                                      }),
+                                    }
+                                  else
+                                    {
+                                      _rotationiconcontroller.reset(),
+                                      stopOrbit().then((value) {
+                                        _showToast(translate('map.stoporbit'),
+                                            themeNotifier.isDark);
+                                        LGConnection().cleanOrbit();
+                                      }).catchError((onError) {
+                                        print('oh no $onError');
+                                        if (onError == 'nogeodata') {
+                                          showAlertDialog(
+                                              translate('Track.alert'),
+                                              translate('Track.alert2'),
+                                              themeNotifier.isDark,
+                                              false);
+                                        }
+                                        showAlertDialog(
+                                            translate('Track.alert3'),
+                                            translate('Track.alert4'),
+                                            themeNotifier.isDark,
+                                            false);
+                                      }),
+                                    }
+                                },
                               ),
-                              onPressed: () async {
-                                LGConnection().cleanOrbit().then((value) {
-                                  playOrbit();
-                                  _showToast(translate('map.buildorbit'),
-                                      themeNotifier.isDark);
-                                }).catchError((onError) {
-                                  print('oh no $onError');
-                                  if (onError == 'nogeodata') {
-                                    showAlertDialog(
-                                        translate('Track.alert'),
-                                        translate('Track.alert2'),
-                                        themeNotifier.isDark,
-                                        false);
-                                  }
-                                  showAlertDialog(
-                                      translate('Track.alert3'),
-                                      translate('Track.alert4'),
-                                      themeNotifier.isDark,
-                                      false);
-                                });
-                              }),
+                            ),
+                          ),
                           Divider(),
-                          IconButton(
-                              icon: Icon(
-                                Icons.crop_square_rounded,
-                                size: 32,
-                                color: Color.fromARGB(255, 239, 133, 112),
-                              ),
-                              onPressed: () async {
-                                stopOrbit().then((value) {
-                                  _showToast(translate('map.stoporbit'),
-                                      themeNotifier.isDark);
-                                  LGConnection().cleanOrbit();
-                                }).catchError((onError) {
-                                  print('oh no $onError');
-                                  if (onError == 'nogeodata') {
-                                    showAlertDialog(
-                                        translate('Track.alert'),
-                                        translate('Track.alert2'),
-                                        themeNotifier.isDark,
-                                        false);
-                                  }
-                                  showAlertDialog(
-                                      translate('Track.alert3'),
-                                      translate('Track.alert4'),
-                                      themeNotifier.isDark,
-                                      false);
-                                });
-                              }),
+                          Builder(
+                            builder: (context) => IconButton(
+                                icon: Image.asset('assets/icons/DataKML.png'),
+                                iconSize: 57,
+                                onPressed: () => {
+                                      isDataKMLActive = !isDataKMLActive,
+                                      if (isDataKMLActive == true)
+                                        {
+                                          LGConnection()
+                                              .openDataKMLLogos()
+                                              .then((value) {
+                                            _showToast(
+                                                translate('map.DataKMLstart'),
+                                                themeNotifier.isDark);
+                                          }).catchError((onError) {
+                                            print('oh no $onError');
+                                            if (onError == 'nogeodata') {
+                                              showAlertDialog(
+                                                  translate('Track.alert'),
+                                                  translate('Track.alert2'),
+                                                  themeNotifier.isDark,
+                                                  false);
+                                            }
+                                            showAlertDialog(
+                                                translate('Track.alert3'),
+                                                translate('Track.alert4'),
+                                                themeNotifier.isDark,
+                                                false);
+                                          }),
+                                        }
+                                      else
+                                        {
+                                          LGConnection()
+                                              .cleanVisualization()
+                                              .then((value) {
+                                            _showToast(
+                                                translate('map.DataKMLstop'),
+                                                themeNotifier.isDark);
+                                          }).catchError((onError) {
+                                            print('oh no $onError');
+                                            if (onError == 'nogeodata') {
+                                              showAlertDialog(
+                                                  translate('Track.alert'),
+                                                  translate('Track.alert2'),
+                                                  themeNotifier.isDark,
+                                                  false);
+                                            }
+                                            showAlertDialog(
+                                                translate('Track.alert3'),
+                                                translate('Track.alert4'),
+                                                themeNotifier.isDark,
+                                                false);
+                                          }),
+                                        }
+                                    }),
+                          ),
                         ],
                       ),
                     ),
@@ -1378,6 +1485,98 @@ class _CustomBuilderState extends State<CustomBuilder> {
 }
 
 class LGConnection {
+  openDataKMLLogos() async {
+    String openLogoKML = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>VolTrac</name>
+	<open>1</open>
+	<description>The logo is located in the bottom left hand corner</description>
+	<Folder>
+		<name>tags</name>
+		<Style>
+			<ListStyle>
+				<listItemType>checkHideChildren</listItemType>
+				<bgColor>00ffffff</bgColor>
+				<maxSnippetLines>2</maxSnippetLines>
+			</ListStyle>
+		</Style>
+    <GroundOverlay>
+			<name>la palma map</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalmamap.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.8870042553608</north>
+				<south>28.40912829496716</south>
+				<east>-17.57873634021623</east>
+				<west>-18.08819223363864</west>
+				<rotation>1.062017917633057</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>la palma text</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalma.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.52252385807398</north>
+				<south>28.44456085195286</south>
+				<east>-17.59700656934779</east>
+				<west>-17.77481317561376</west>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>liquid galaxy</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/liquidgalaxy.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.69142438238073</north>
+				<south>28.62818579232439</south>
+				<east>-17.98593493888748</east>
+				<west>-18.07865569375839</west>
+				<rotation>3.219670295715332</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>summer of code</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodelogo.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.50474467934734</north>
+				<south>28.45647880492179</south>
+				<east>-17.97117321011799</east>
+				<west>-18.02808983602195</west>
+				<rotation>1.852455482014185</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+		<GroundOverlay>
+			<name>summer of code text</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodetext.png</href>
+				<viewBoundScale>0.75</viewBoundScale>
+			</Icon>
+			<LatLonBox>
+				<north>28.45765069582156</north>
+				<south>28.42737297924874</south>
+				<east>-17.95280851216312</east>
+				<west>-18.0438498095042</west>
+				<rotation>1.264564394950867</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+	</Folder>
+</Document>
+</kml>''';
+    return _createLocalFile(openLogoKML, "logo");
+  }
+
   Future sendToLG(String kml, String projectname) async {
     if (kml.isNotEmpty) {
       return _createLocalFile(kml, projectname);

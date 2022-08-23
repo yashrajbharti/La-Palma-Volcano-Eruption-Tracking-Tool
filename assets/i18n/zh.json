@@ -61,6 +61,7 @@
 		"Relaunch": "重新启动 \n      LG",
 		"Reboot": "重启 \n  LG",
 		"Shutdown": "关闭 \n  LG",
+		"Logo": "清洁 \n 徽标",
 		"Save": "保存 \n KML",
 		"Clean": "清洁 \n KML",
 		"alert": "成功!",
@@ -68,7 +69,13 @@
 		"alert3": "哎呀!",
 		"alert4": "确保启用存储管理权限以下载项目 KML。还要检查您是否已阅读 KML 数据",
 		"alert5": "启动错误!",
-		"alert6": "尝试连接 LG 时出错"
+		"alert6": "尝试连接 LG 时出错",
+		"LGRelaunch": "重新启动 LG",
+		"LGReboot": "重启 LG",
+		"LGShutdown": "关闭 LG",
+		"sure": "您确定要执行此任务吗？",
+		"Yes": "是的",
+		"No": "不"
 	},
 	"Settings": {
 		"alert": "连接的!",
@@ -94,7 +101,7 @@
 	"About": {
 		"aboutpage": "关于页面 \n 拉帕尔马火山喷发跟踪工具 ",
 		"all": "关于 VolTrac 应用程序的所有信息：",
-		"points": "⬧ 该项目是在 2022 年 Google Summer of Code 期间与 Liquid Galaxy 组织一起创建的。 \n⬧ 此应用由 Yash Raj Bharti（电子邮件：yashrajbharti.met18@itbhu.ac.in）在 Liquid Galaxy 下开发，感谢 Google Summer of Code 2022 计划。 \n⬧ VolTrac 应用程序用作跟踪工具，用于可视化基于拉帕尔马火山活动的各种轨迹，并用彩色 KML 精美地显示它们。 \n⬧ Voltrac 不仅可以作为指南，我们还可以将我们的应用程序用于教育和研究目的，例如研究自然灾害、火山活动以及拉帕尔马火山造成的破坏造成的灾难。 \n⬧ 不同地图数据的多个轨迹，例如历史轨迹图、熔岩流图、史前轨迹图、受影响区域图、景观图、SO\u2082 排放图、情况图和定位事件，这要归功于各种信息选项卡中提到的来源。 \n⬧ 该应用程序支持十种语言，即英语、西班牙语、印地语、德语、葡萄牙语、阿拉伯语、俄语、日语、中文（简体）和阿尔巴尼亚语，可以从连接管理器菜单选项中更改其中一种语言。 \n⬧ 开发感谢 Lleida 科学园的 TIC 实验室、Liquid Galaxy LAB 和 LleidaDrone LAB、Lleida 理工学院、End Point Corp (NY)、Western University (Sydney) 的 Wonderama LAB、Gigabyte、Benq、HP、海盗船和 Hemav 学者。",
+		"points": "⬧ 该项目是在 2022 年 Google Summer of Code 期间与 Liquid Galaxy 组织一起创建的。 \n⬧ 此应用由 Yash Raj Bharti（电子邮件：yashrajbharti.met18@itbhu.ac.in）在 Liquid Galaxy 下开发，感谢 Google Summer of Code 2022 计划。 \n⬧ VolTrac 应用程序用作跟踪工具，用于可视化基于拉帕尔马火山活动的各种轨迹，并用彩色 KML 精美地显示它们。 \n⬧ Voltrac 不仅可以作为指南，我们还可以将我们的应用程序用于教育和研究目的，例如研究自然灾害、火山活动以及拉帕尔马火山造成的破坏造成的灾难。 \n⬧ 不同地图数据的多个轨迹，例如历史轨迹图、熔岩流图、史前轨迹图、受影响区域图、景观图、SO\u2082 排放图、情况图和定位事件，这要归功于各种信息选项卡中提到的来源。 \n⬧ 该应用程序支持十种语言，即英语、西班牙语、印地语、德语、葡萄牙语、阿拉伯语、俄语、日语、中文（简体）和阿尔巴尼亚语，可以从连接管理器菜单选项中更改其中一种语言。 \n⬧ 得益于莱里达科学园的 TIC 实验室、Liquid Galaxy LAB 和 LleidaDrone LAB、莱里达理工学院、End Point Corp (NY)、西方大学（悉尼）的 Wonderama LAB、技嘉、Benq、HP 和 Corsair。",
 		"learn": "学到更多",
 		"check": "要了解有关该应用程序的更多信息，请查看这些链接。",
 		"github": "VolTrac GitHub",
@@ -123,7 +130,8 @@
 		"demo": "提供演示可视化",
 		"orbit": "围绕一个点运行",
 		"queries": "有关 LG 钻机安装的任何疑问，请查看官方文档。",
-		"install": "PC 和 Virtual Box LG 安装"
+		"install": "PC 和 Virtual Box LG 安装",
+		"DataKML": "可视化示例 KML 数据"
 	},
 	"info": {
 		"description": "描述：",
@@ -212,13 +220,15 @@
 		"stoporbit": "停止轨道",
 		"demostart": "打开演示 KML",
 		"demostop": "关闭演示 KML",
+		"DataKMLstart": "打开示例 KML",
+		"DataKMLstop": "关闭示例 KML",
 		"logo": "显示标志",
 		"clean": "清洁标志"
 	},
 	"dismiss": "解雇",
 	"continue": "继续",
 	"tour": {
-		"take": "逛一圈",
+		"take": "参加 App 之旅",
 		"app": "VolTrac 应用程序",
 		"desc": "⬧ VolTrac 应用程序的第一个屏幕分为三个主要选项卡：跟踪、地图和信息。 \n⬧ Track 选项卡帮助我们可视化各种轨迹，例如熔岩流、受影响区域、情况等。\n⬧ Map Tab 允许我们通过在 Google Map Flutter 中执行简单的触摸动作来控制 Liquid Galaxy。您可以在地图选项卡中找到各种其他选项来显示和管理 KML 数据。 \n⬧ 信息选项卡提供了我们正在可视化的各种曲目的详细信息。 \n⬧ 点击突出显示的菜单图标以检查应用程序抽屉中可用的各种菜单选项。",
 		"help": "帮助页面包含设置可视化的说明、所有图标的含义以及排除可能错误的指南。",

@@ -18,22 +18,47 @@ class VerticalCardPagerDemo extends StatefulWidget {
   _VerticalCardPagerDemoState createState() => _VerticalCardPagerDemoState();
 }
 
-bool isOrbiting = false;
 int x = 0;
 void jumpToPage(int page) {
   x = page;
 }
 
-double latvalue = 28.55665656297236;
-double longvalue = -17.885454520583153;
+late String retrykml;
+late String retryname;
+Future retryButton(String KML, String name) async {
+  retrykml = await KML;
+  retryname = await name;
+}
 
-class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
+class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _rotationiconcontroller;
+
+  bool isOrbiting = false;
+  double latvalue = 28.55665656297236;
+  double longvalue = -17.885454520583153;
+
   _launchURL(String url) async {
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     } else {
       throw 'Could not launch $url';
     }
+  }
+
+  @override
+  void initState() {
+    _rotationiconcontroller = AnimationController(
+      duration: const Duration(seconds: 50),
+      vsync: this,
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _rotationiconcontroller.dispose();
+    super.dispose();
   }
 
   playOrbit() async {
@@ -3417,58 +3442,79 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
               color: themeNotifier.isDark
                   ? Color.fromARGB(255, 30, 30, 30)
                   : Color.fromARGB(255, 68, 68, 68),
-              width: 59.5,
-              height: 124.25,
+              width: 69.5,
+              height: 175,
               child: Column(
                 children: <Widget>[
                   SizedBox(height: 6),
-                  IconButton(
-                      icon: Icon(
-                        Icons.replay_rounded,
-                        color: Color.fromARGB(255, 135, 205, 131),
-                        size: 32,
+                  RotationTransition(
+                    turns: Tween(begin: 0.0, end: 25.0)
+                        .animate(_rotationiconcontroller),
+                    child: Builder(
+                      builder: (context) => IconButton(
+                        icon: Image.asset('assets/icons/orbit.png'),
+                        iconSize: 57,
+                        onPressed: () => {
+                          isOrbiting = !isOrbiting,
+                          if (isOrbiting == true)
+                            {
+                              _rotationiconcontroller.forward(),
+                              playOrbit().then((value) {
+                                _showToast(translate('map.buildorbit'),
+                                    themeNotifier.isDark);
+                              }).catchError((onError) {
+                                _rotationiconcontroller.stop();
+                                print('oh no $onError');
+                                if (onError == 'nogeodata') {
+                                  showAlertDialog(
+                                      translate('Track.alert'),
+                                      translate('Track.alert2'),
+                                      themeNotifier.isDark);
+                                }
+                                showAlertDialog(
+                                    translate('Track.alert3'),
+                                    translate('Track.alert4'),
+                                    themeNotifier.isDark);
+                              }),
+                            }
+                          else
+                            {
+                              _rotationiconcontroller.reset(),
+                              stopOrbit().then((value) {
+                                _showToast(translate('map.stoporbit'),
+                                    themeNotifier.isDark);
+                                LGConnection().cleanOrbit();
+                              }).catchError((onError) {
+                                print('oh no $onError');
+                                if (onError == 'nogeodata') {
+                                  showAlertDialog(
+                                      translate('Track.alert'),
+                                      translate('Track.alert2'),
+                                      themeNotifier.isDark);
+                                }
+                                showAlertDialog(
+                                    translate('Track.alert3'),
+                                    translate('Track.alert4'),
+                                    themeNotifier.isDark);
+                              }),
+                            }
+                        },
                       ),
-                      onPressed: () async {
-                        LGConnection().cleanOrbit().then((value) {
-                          playOrbit();
-                          _showToast(translate('map.buildorbit'),
-                              themeNotifier.isDark);
-                        }).catchError((onError) {
-                          print('oh no $onError');
-                          if (onError == 'nogeodata') {
-                            showAlertDialog(
-                                translate('Track.alert'),
-                                translate('Track.alert2'),
-                                themeNotifier.isDark);
-                          }
-                          showAlertDialog(translate('Track.alert3'),
-                              translate('Track.alert4'), themeNotifier.isDark);
-                        });
-                      }),
+                    ),
+                  ),
                   Divider(),
-                  IconButton(
-                      icon: Icon(
-                        Icons.crop_square_rounded,
-                        size: 32,
-                        color: Color.fromARGB(255, 239, 133, 112),
-                      ),
-                      onPressed: () async {
-                        stopOrbit().then((value) {
-                          _showToast(
-                              translate('map.stoporbit'), themeNotifier.isDark);
-                          LGConnection().cleanOrbit();
-                        }).catchError((onError) {
-                          print('oh no $onError');
-                          if (onError == 'nogeodata') {
-                            showAlertDialog(
-                                translate('Track.alert'),
-                                translate('Track.alert2'),
-                                themeNotifier.isDark);
-                          }
-                          showAlertDialog(translate('Track.alert3'),
-                              translate('Track.alert4'), themeNotifier.isDark);
-                        });
-                      }),
+                  Builder(
+                      builder: (context) => IconButton(
+                          icon: Image.asset('assets/icons/lg.png'),
+                          iconSize: 57,
+                          onPressed: () async {
+                            LGConnection()
+                                .sendToLG(retrykml, retryname)
+                                .then((value) {
+                              _showToast(translate('Track.Visualize'),
+                                  themeNotifier.isDark);
+                            });
+                          })),
                 ],
               ),
             ),
@@ -3480,6 +3526,121 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo> {
 }
 
 class LGConnection {
+  Future sendToLG(String kml, String projectname) async {
+    if (kml.isNotEmpty) {
+      return _createLocalFile(kml, projectname);
+    }
+    return Future.error('nogeodata');
+  }
+
+  _createLocalFile(String kml, String projectname) async {
+    String localPath = await _localPath;
+    File localFile = File('$localPath/$projectname.kml');
+    localFile.writeAsString(kml);
+    File localFile2 = File('$localPath/kmls.txt');
+    localFile2.writeAsString(kml);
+    return _uploadToLG('$localPath/$projectname.kml', projectname);
+  }
+
+  _uploadToLG(String localPath, String projectname) async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    LookAt flyto = LookAt(
+      projectname == "Historic_Track"
+          ? -17.885454
+          : projectname == "Located_Events"
+              ? -17.834886
+              : projectname == "SO2_Emission"
+                  ? -7.561565
+                  : projectname == "Prehistoric_Track"
+                      ? -17.885454
+                      : projectname == "Lava_Flow"
+                          ? -17.892286
+                          : -17.895486,
+      projectname == "Historic_Track"
+          ? 28.556656
+          : projectname == "Located_Events"
+              ? 28.564986
+              : projectname == "SO2_Emission"
+                  ? 33.561245
+                  : projectname == "Prehistoric_Track"
+                      ? 28.556656
+                      : projectname == "Lava_Flow"
+                          ? 28.616354
+                          : projectname == "Affected_Areas"
+                              ? 28.616354
+                              : projectname == "Situation"
+                                  ? 28.597354
+                                  : projectname == "Landscape"
+                                      ? 28.616354
+                                      : 28.610478,
+      projectname == "Located_Events"
+          ? '${61708.9978371 / int.parse(credencials['numberofrigs'])}'
+          : projectname == "Lava_Flow"
+              ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
+              : projectname == "Landscape"
+                  ? '${65208.997837 / int.parse(credencials['numberofrigs'])}'
+                  : projectname == "Affected_Areas"
+                      ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
+                      : projectname == "Situation"
+                          ? '${75208.9978371 / int.parse(credencials['numberofrigs'])}'
+                          : projectname == "Historic_Track"
+                              ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
+                              : projectname == "SO2_Emission"
+                                  ? '${10500001.9978 / int.parse(credencials['numberofrigs'])}'
+                                  : projectname == "Prehistoric_Track"
+                                      ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
+                                      : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
+      projectname == "Historic_Track"
+          ? '41.82725143432617'
+          : projectname == "SO2_Emission"
+              ? '25'
+              : projectname == "Prehistoric_Track"
+                  ? '41.82725143432617'
+                  : '45',
+      projectname == "Historic_Track"
+          ? ' 61.403038024902344'
+          : projectname == "Prehistoric_Track"
+              ? ' 61.403038024902344'
+              : '0',
+    );
+    try {
+      await client.connect();
+      await client.execute('> /var/www/html/kmls.txt');
+
+      // upload kml
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: localPath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+
+      // for (int k = 0; k < localimages.length; k++) {
+      //   String imgPath = await _createLocalImage(
+      //       localimages[k], "assets/icons/${localimages[k]}");
+      //   await client.sftpUpload(path: imgPath, toPath: '/var/www/html');
+      // }
+      await client.execute(
+          'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
+
+      return await client.execute(
+          'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
   _getCredentials() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     String ipAddress = preferences.getString('master_ip') ?? '';

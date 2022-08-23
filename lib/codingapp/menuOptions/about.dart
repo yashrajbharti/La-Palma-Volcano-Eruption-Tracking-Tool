@@ -38,7 +38,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       size: 50.0,
                     ),
                     onPressed: () {
-                      Navigator.of(context).push(
+                      Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) => Drawers(),
                         ),
@@ -74,7 +74,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       Builder(
                           builder: (context) => IconButton(
                               icon: Image.asset('assets/volcano.png'),
-                              iconSize: 150,
+                              iconSize: 410,
                               onPressed: null)),
                       Linkify(
                         onOpen: _onOpen,

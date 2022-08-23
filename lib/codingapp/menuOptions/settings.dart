@@ -380,6 +380,7 @@ class SettingsState extends State<Settings> {
                           onPressed: () {
                             connect();
                             FocusManager.instance.primaryFocus?.unfocus();
+                            LGConnection().openDemoLogos();
                           },
                           style: ElevatedButton.styleFrom(
                             elevation: 2,
@@ -433,5 +434,84 @@ class SettingsState extends State<Settings> {
                 ),
               ),
             )));
+  }
+}
+
+class LGConnection {
+  _getCredentials() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String ipAddress = preferences.getString('master_ip') ?? '';
+    String password = preferences.getString('master_password') ?? '';
+    String portNumber = preferences.getString('master_portNumber') ?? '';
+    String username = preferences.getString('master_username') ?? '';
+    String numberofrigs = preferences.getString('numberofrigs') ?? '';
+
+    return {
+      "ip": ipAddress,
+      "pass": password,
+      "port": portNumber,
+      "username": username,
+      "numberofrigs": numberofrigs
+    };
+  }
+
+  Future openDemoLogos() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+    String rigs = "4";
+    rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1).toString();
+    String openLogoKML = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>VolTrac</name>
+	<open>1</open>
+	<description>The logo it located in the bottom left hand corner</description>
+	<Folder>
+		<name>tags</name>
+		<Style>
+			<ListStyle>
+				<listItemType>checkHideChildren</listItemType>
+				<bgColor>00ffffff</bgColor>
+				<maxSnippetLines>2</maxSnippetLines>
+			</ListStyle>
+		</Style>
+		<ScreenOverlay id="abc">
+			<name>VolTrac</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
+			</Icon>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0.2" y="0.98" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
+		</ScreenOverlay>
+    <ScreenOverlay id="def">
+			<name>Logos</name>
+			<Icon>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/logos.png</href>
+			</Icon>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0" y="0.75" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
+		</ScreenOverlay>
+	</Folder>
+</Document>
+</kml>
+    ''';
+    try {
+      await client.connect();
+      return await client
+          .execute("echo '$openLogoKML' > /var/www/html/kml/slave_$rigs.kml");
+    } catch (e) {
+      return Future.error(e);
+    }
   }
 }

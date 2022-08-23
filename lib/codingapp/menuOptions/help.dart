@@ -38,7 +38,7 @@ class _HelpScreenState extends State<HelpScreen> {
                       size: 50.0,
                     ),
                     onPressed: () {
-                      Navigator.of(context).push(
+                      Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) => Drawers(),
                         ),
@@ -348,7 +348,7 @@ class _HelpScreenState extends State<HelpScreen> {
                                           child: Builder(
                                             builder: (context) => IconButton(
                                               icon: Image.asset(
-                                                  'assets/icons/demo.png'),
+                                                  'assets/icons/DataKML.png'),
                                               onPressed: null,
                                             ),
                                           )),
@@ -360,7 +360,7 @@ class _HelpScreenState extends State<HelpScreen> {
                                             MediaQuery.of(context).size.width *
                                                 0.34,
                                         child: Text(
-                                          translate("help.demo"),
+                                          translate("help.DataKML"),
                                           style: TextStyle(
                                               fontSize: 20,
                                               color: themeNotifier.isDark

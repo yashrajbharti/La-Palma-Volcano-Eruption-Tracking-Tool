@@ -61,6 +61,7 @@
 		"Relaunch": "再起動 \n    LG",
 		"Reboot": "リブート \n     LG",
 		"Shutdown": "シャットダウン \n           LG",
+		"Logo": "きれいな \n ロゴ",
 		"Save": "保存する \n    KML",
 		"Clean": "綺麗 \n KML",
 		"alert": "成功!",
@@ -68,7 +69,13 @@
 		"alert3": "おっと!",
 		"alert4": "プロジェクトKMLをダウンロードするためのストレージ管理権限を必ず有効にしてください。また、KMLデータを読んだことを確認してください",
 		"alert5": "起動エラー!",
-		"alert6": "LGに接続しようとしたときにエラーが発生しました"
+		"alert6": "LGに接続しようとしたときにエラーが発生しました",
+		"LGRelaunch": "LGを再起動",
+		"LGReboot": "LGを再起動する",
+		"LGShutdown": "シャットダウンLG",
+		"sure": "このタスクを実行してもよろしいですか?",
+		"Yes": "はい",
+		"No": "いいえ"
 	},
 	"Settings": {
 		"alert": "接続済み!",
@@ -94,7 +101,7 @@
 	"About": {
 		"aboutpage": "ページについて\nラパルマ火山噴火追跡ツール ",
 		"all": "VolTracアプリのすべて：",
-		"points": "⬧このプロジェクトは、Google Summer ofCode2022の間にLiquidGalaxy組織と一緒に作成されました。 \n⬧このアプリは、Google Summer of Code 2022プログラムのおかげで、LiquidGalaxyの下でYashRaj Bharti（メール：yashrajbharti.met18@itbhu.ac.in）によって開発されました。 \n⬧VolTracアプリは、ラパルマの火山活動に基づいてさまざまなトラックを視覚化するための追跡ツールとして機能し、色付きのKMLで美しく表示します。 \n⬧Voltracはガイドとして機能するだけでなく、ラパルマ火山による破壊による自然災害、火山活動、大災害の調査など、教育や研究の目的でアプリケーションを使用することもできます。 \n⬧歴史的トラックマップ、溶岩流マップ、先史時代のトラックマップ、影響を受ける地域のマップ、景観マップ、SO\u2082排出量マップ、状況マップ、特定のイベントなど、さまざまなマップデータのいくつかのトラックが可能です。 [情報]タブに記載されている情報源。 \n⬧このアプリは、英語、スペイン語、ヒンディー語、ドイツ語、ポルトガル語、アラビア語、ロシア語、日本語、中国語（簡易）、アルバニア語の10の言語をサポートしており、接続マネージャーのメニューオプションから変更できます。 \n⬧LleidaのScientificParkのTICLaboratories、Liquid GalaxyLABおよびLleidaDroneLAB、LleidaのPolytechnic Sc​​hool、End Point Corp（NY）、Western University（Sydney）のWonderama LAB、Gigabyte、Benq、HPのおかげで開発されました。 Corsair、およびHemavAcademics。",
+		"points": "⬧このプロジェクトは、Google Summer ofCode2022の間にLiquidGalaxy組織と一緒に作成されました。 \n⬧このアプリは、Google Summer of Code 2022プログラムのおかげで、LiquidGalaxyの下でYashRaj Bharti（メール：yashrajbharti.met18@itbhu.ac.in）によって開発されました。 \n⬧VolTracアプリは、ラパルマの火山活動に基づいてさまざまなトラックを視覚化するための追跡ツールとして機能し、色付きのKMLで美しく表示します。 \n⬧Voltracはガイドとして機能するだけでなく、ラパルマ火山による破壊による自然災害、火山活動、大災害の調査など、教育や研究の目的でアプリケーションを使用することもできます。 \n⬧歴史的トラックマップ、溶岩流マップ、先史時代のトラックマップ、影響を受ける地域のマップ、景観マップ、SO\u2082排出量マップ、状況マップ、特定のイベントなど、さまざまなマップデータのいくつかのトラックが可能です。 [情報]タブに記載されている情報源。 \n⬧このアプリは、英語、スペイン語、ヒンディー語、ドイツ語、ポルトガル語、アラビア語、ロシア語、日本語、中国語（簡易）、アルバニア語の10の言語をサポートしており、接続マネージャーのメニューオプションから変更できます。 \n⬧ Lleida の Scientific Park の TIC Laboratories、Liquid Galaxy LAB & LleidaDrone LAB、Polytechnic Sc​​hool of Lleida、End Point Corp (NY)、Western University (Sydney) の Wonderama LAB、Gigabyte、Benq、HP、Corsair の協力により開発されました。",
 		"learn": "もっと詳しく知る",
 		"check": "アプリの詳細については、リンクを確認してください。",
 		"github": "VolTrac GitHub",
@@ -123,7 +130,8 @@
 		"demo": "デモの視覚化を提供します",
 		"orbit": "ポイントの周りを周回する",
 		"queries": "LGリグの設置に関する質問については、公式ドキュメントを確認してください。",
-		"install": "PCとVirtualBoxLGのインストール"
+		"install": "PCとVirtualBoxLGのインストール",
+		"DataKML": "サンプル KML データを視覚化します"
 	},
 	"info": {
 		"description": "説明：",
@@ -212,13 +220,15 @@
 		"stoporbit": "軌道停止",
 		"demostart": "オープニングデモKML",
 		"demostop": "デモ KML の終了",
+		"DataKMLstart": "サンプル KML を開く",
+		"DataKMLstop": "サンプル KML を閉じる",
 		"logo": "ロゴの表示",
 		"clean": "クリーニングのロゴ"
 	},
 	"dismiss": "解散",
 	"continue": "継続する",
 	"tour": {
-		"take": "ツアーに参加します",
+		"take": "アプリツアーを見る",
 		"app": "VolTracアプリ",
 		"desc": "⬧ VolTrac アプリの最初の画面は、トラック、マップ、情報という 3 つのメイン タブに分かれています。 \n⬧ [トラック] タブでは、溶岩流、影響を受ける地域、状況などのさまざまなトラックを視覚化できます。\n⬧ [マップ] タブでは、Google マップ フラッターで簡単なタッチ操作を実行して液体銀河を制御できます。 [マップ] タブで KML データを表示および管理するためのさまざまなオプションを見つけることができます。 \n⬧ 情報タブには、視覚化されているさまざまなトラックの詳細情報が表示されます。 \n⬧ 強調表示されたメニュー アイコンをタップして、アプリ ドロワーで利用できるさまざまなメニュー オプションを確認します。",
 		"help": "ヘルプページには、視覚化を設定するための手順、すべてのアイコンの意味、および考えられるエラーのトラブルシューティングのためのガイドがあります。",

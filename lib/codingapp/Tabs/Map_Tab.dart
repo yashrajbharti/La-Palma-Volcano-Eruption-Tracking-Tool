@@ -10,11 +10,11 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:ssh2/ssh2.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 import 'package:voltrac/codingapp/kml/LookAt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:voltrac/codingapp/kml/orbit.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
+// import 'package:voltrac/codingapp/theme-storage.dart';
 
 void main() => runApp(MyMap());
 
@@ -25,12 +25,12 @@ class MyMap extends StatefulWidget {
 
 class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   static LatLng _center = const LatLng(28.65665656297236, -17.885454520583153);
-  late AnimationController _rotationiconcontroller;
+  // late AnimationController _rotationiconcontroller;
   final Set<Marker> _markers = {};
   GoogleMapController? mapController;
   MapType _currentMapType = MapType.satellite;
   bool isOrbiting = false;
-  bool isDemoActive = false;
+  // bool isDemoActive = false;
   int rigcount = 5;
   double zoomvalue = 591657550.500000 / pow(2, 13.15393352508545);
   double latvalue = 28.65665656297236;
@@ -40,20 +40,20 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
 
   bool blackandwhite = false;
 
-  @override
-  void initState() {
-    _rotationiconcontroller = AnimationController(
-      duration: const Duration(seconds: 50),
-      vsync: this,
-    );
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   _rotationiconcontroller = AnimationController(
+  //     duration: const Duration(seconds: 50),
+  //     vsync: this,
+  //   );
+  //   super.initState();
+  // }
 
-  @override
-  void dispose() {
-    _rotationiconcontroller.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   _rotationiconcontroller.dispose();
+  //   super.dispose();
+  // }
 
   void _onMapTypeButtonPressed() {
     setState(() {
@@ -137,40 +137,40 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     };
   }
 
-  void _showToast(String x, bool blackandwhite) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          "$x",
-          style: TextStyle(
-              fontSize: 24.0,
-              fontWeight: FontWeight.normal,
-              fontFamily: "GoogleSans",
-              color: Colors.white),
-        ),
-        duration: Duration(seconds: 3),
-        backgroundColor: blackandwhite
-            ? Color.fromARGB(255, 22, 22, 22)
-            : Color.fromARGB(250, 43, 43, 43),
-        width: 500.0,
-        padding: const EdgeInsets.fromLTRB(
-          35,
-          20,
-          15,
-          20,
-        ),
-        behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        action: SnackBarAction(
-          textColor: Color.fromARGB(255, 125, 164, 243),
-          label: translate('Track.close'),
-          onPressed: () {},
-        ),
-      ),
-    );
-  }
+  // void _showToast(String x, bool blackandwhite) {
+  //   ScaffoldMessenger.of(context).showSnackBar(
+  //     SnackBar(
+  //       content: Text(
+  //         "$x",
+  //         style: TextStyle(
+  //             fontSize: 24.0,
+  //             fontWeight: FontWeight.normal,
+  //             fontFamily: "GoogleSans",
+  //             color: Colors.white),
+  //       ),
+  //       duration: Duration(seconds: 3),
+  //       backgroundColor: blackandwhite
+  //           ? Color.fromARGB(255, 22, 22, 22)
+  //           : Color.fromARGB(250, 43, 43, 43),
+  //       width: 500.0,
+  //       padding: const EdgeInsets.fromLTRB(
+  //         35,
+  //         20,
+  //         15,
+  //         20,
+  //       ),
+  //       behavior: SnackBarBehavior.floating,
+  //       shape: RoundedRectangleBorder(
+  //         borderRadius: BorderRadius.circular(10.0),
+  //       ),
+  //       action: SnackBarAction(
+  //         textColor: Color.fromARGB(255, 125, 164, 243),
+  //         label: translate('Track.close'),
+  //         onPressed: () {},
+  //       ),
+  //     ),
+  //   );
+  // }
 
   showAlertDialog(String title, String msg, bool blackandwhite) {
     showDialog(
@@ -479,278 +479,268 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
         //                     },
         //                   ))),
         //         )),
-        Consumer<ThemeModel>(
-          builder: (context, ThemeModel themeNotifier, child) => Positioned(
-            top: 58,
-            left: 7,
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 6),
-                Builder(
-                  builder: (context) => IconButton(
-                      icon: Image.asset('assets/icons/demo.png'),
-                      iconSize: 57,
-                      onPressed: () => {
-                            isDemoActive = !isDemoActive,
-                            if (isDemoActive == true)
-                              {
-                                LGConnection().openDemoLogos().then((value) {
-                                  _showToast(translate('map.demostart'),
-                                      themeNotifier.isDark);
-                                }).catchError((onError) {
-                                  print('oh no $onError');
-                                  if (onError == 'nogeodata') {
-                                    showAlertDialog(
-                                        translate('Track.alert'),
-                                        translate('Track.alert2'),
-                                        themeNotifier.isDark);
-                                  }
-                                  showAlertDialog(
-                                      translate('Track.alert3'),
-                                      translate('Track.alert4'),
-                                      themeNotifier.isDark);
-                                }),
-                              }
-                            else
-                              {
-                                LGConnection()
-                                    .cleanVisualization()
-                                    .then((value) {
-                                  _showToast(translate('map.demostop'),
-                                      themeNotifier.isDark);
-                                }).catchError((onError) {
-                                  print('oh no $onError');
-                                  if (onError == 'nogeodata') {
-                                    showAlertDialog(
-                                        translate('Track.alert'),
-                                        translate('Track.alert2'),
-                                        themeNotifier.isDark);
-                                  }
-                                  showAlertDialog(
-                                      translate('Track.alert3'),
-                                      translate('Track.alert4'),
-                                      themeNotifier.isDark);
-                                }),
-                              }
-                          }),
-                ),
-                RotationTransition(
-                  turns: Tween(begin: 0.0, end: 25.0)
-                      .animate(_rotationiconcontroller),
-                  child: Builder(
-                    builder: (context) => IconButton(
-                      icon: Image.asset('assets/icons/orbit.png'),
-                      iconSize: 57,
-                      onPressed: () => {
-                        isOrbiting = !isOrbiting,
-                        if (isOrbiting == true)
-                          {
-                            _rotationiconcontroller.forward(),
-                            playOrbit().then((value) {
-                              _showToast(translate('map.buildorbit'),
-                                  themeNotifier.isDark);
-                            }).catchError((onError) {
-                              _rotationiconcontroller.stop();
-                              print('oh no $onError');
-                              if (onError == 'nogeodata') {
-                                showAlertDialog(
-                                    translate('Track.alert'),
-                                    translate('Track.alert2'),
-                                    themeNotifier.isDark);
-                              }
-                              showAlertDialog(
-                                  translate('Track.alert3'),
-                                  translate('Track.alert4'),
-                                  themeNotifier.isDark);
-                            }),
-                          }
-                        else
-                          {
-                            _rotationiconcontroller.reset(),
-                            stopOrbit().then((value) {
-                              _showToast(translate('map.stoporbit'),
-                                  themeNotifier.isDark);
-                              LGConnection().cleanOrbit();
-                              LGConnection().cleanVisualization();
-                            }).catchError((onError) {
-                              print('oh no $onError');
-                              if (onError == 'nogeodata') {
-                                showAlertDialog(
-                                    translate('Track.alert'),
-                                    translate('Track.alert2'),
-                                    themeNotifier.isDark);
-                              }
-                              showAlertDialog(
-                                  translate('Track.alert3'),
-                                  translate('Track.alert4'),
-                                  themeNotifier.isDark);
-                            }),
-                          }
-                      },
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        )
+        // Consumer<ThemeModel>(
+        //   builder: (context, ThemeModel themeNotifier, child) => Positioned(
+        //     top: 58,
+        //     left: 7,
+        //     child: Column(
+        //       children: <Widget>[
+        //         SizedBox(height: 6),
+        //         Builder(
+        //           builder: (context) => IconButton(
+        //               icon: Image.asset('assets/icons/DataKML.png'),
+        //               iconSize: 57,
+        //               onPressed: () => {
+        //                     isDemoActive = !isDemoActive,
+        //                     if (isDemoActive == true)
+        //                       {
+        //                         LGConnection().openDemoLogos().then((value) {
+        //                           _showToast(translate('map.demostart'),
+        //                               themeNotifier.isDark);
+        //                         }).catchError((onError) {
+        //                           print('oh no $onError');
+        //                           if (onError == 'nogeodata') {
+        //                             showAlertDialog(
+        //                                 translate('Track.alert'),
+        //                                 translate('Track.alert2'),
+        //                                 themeNotifier.isDark);
+        //                           }
+        //                           showAlertDialog(
+        //                               translate('Track.alert3'),
+        //                               translate('Track.alert4'),
+        //                               themeNotifier.isDark);
+        //                         }),
+        //                       }
+        //                     else
+        //                       {
+        //                         LGConnection()
+        //                             .cleanVisualization()
+        //                             .then((value) {
+        //                           _showToast(translate('map.demostop'),
+        //                               themeNotifier.isDark);
+        //                         }).catchError((onError) {
+        //                           print('oh no $onError');
+        //                           if (onError == 'nogeodata') {
+        //                             showAlertDialog(
+        //                                 translate('Track.alert'),
+        //                                 translate('Track.alert2'),
+        //                                 themeNotifier.isDark);
+        //                           }
+        //                           showAlertDialog(
+        //                               translate('Track.alert3'),
+        //                               translate('Track.alert4'),
+        //                               themeNotifier.isDark);
+        //                         }),
+        //                       }
+        //                   }),
+        //         ),
+        //         RotationTransition(
+        //           turns: Tween(begin: 0.0, end: 25.0)
+        //               .animate(_rotationiconcontroller),
+        //           child: Builder(
+        //             builder: (context) => IconButton(
+        //               icon: Image.asset('assets/icons/orbit.png'),
+        //               iconSize: 57,
+        //               onPressed: () => {
+        //                 isOrbiting = !isOrbiting,
+        //                 if (isOrbiting == true)
+        //                   {
+        //                     _rotationiconcontroller.forward(),
+        //                     playOrbit().then((value) {
+        //                       _showToast(translate('map.buildorbit'),
+        //                           themeNotifier.isDark);
+        //                     }).catchError((onError) {
+        //                       _rotationiconcontroller.stop();
+        //                       print('oh no $onError');
+        //                       if (onError == 'nogeodata') {
+        //                         showAlertDialog(
+        //                             translate('Track.alert'),
+        //                             translate('Track.alert2'),
+        //                             themeNotifier.isDark);
+        //                       }
+        //                       showAlertDialog(
+        //                           translate('Track.alert3'),
+        //                           translate('Track.alert4'),
+        //                           themeNotifier.isDark);
+        //                     }),
+        //                   }
+        //                 else
+        //                   {
+        //                     _rotationiconcontroller.reset(),
+        //                     stopOrbit().then((value) {
+        //                       _showToast(translate('map.stoporbit'),
+        //                           themeNotifier.isDark);
+        //                       LGConnection().cleanOrbit();
+        //                       LGConnection().cleanVisualization();
+        //                     }).catchError((onError) {
+        //                       print('oh no $onError');
+        //                       if (onError == 'nogeodata') {
+        //                         showAlertDialog(
+        //                             translate('Track.alert'),
+        //                             translate('Track.alert2'),
+        //                             themeNotifier.isDark);
+        //                       }
+        //                       showAlertDialog(
+        //                           translate('Track.alert3'),
+        //                           translate('Track.alert4'),
+        //                           themeNotifier.isDark);
+        //                     }),
+        //                   }
+        //               },
+        //             ),
+        //           ),
+        //         ),
+        //       ],
+        //     ),
+        //   ),
+        // )
       ],
     );
   }
 }
 
 class LGConnection {
-  openDemoLogos() async {
-    String openLogoKML = '''
-<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-<Document>
-	<name>VolTrac</name>
-	<open>1</open>
-	<description>The logo it located in the bottom left hand corner</description>
-	<Folder>
-		<name>tags</name>
-		<Style>
-			<ListStyle>
-				<listItemType>checkHideChildren</listItemType>
-				<bgColor>00ffffff</bgColor>
-				<maxSnippetLines>2</maxSnippetLines>
-			</ListStyle>
-		</Style>
-		<ScreenOverlay id="abc">
-			<name>VolTrac</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
-			</Icon>
-			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
-			<screenXY x="0.02" y="0.98" xunits="fraction" yunits="fraction"/>
-			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
-			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
-		</ScreenOverlay>
-    <GroundOverlay>
-			<name>la palma map</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalmamap.png</href>
-				<viewBoundScale>0.75</viewBoundScale>
-			</Icon>
-			<LatLonBox>
-				<north>28.8870042553608</north>
-				<south>28.40912829496716</south>
-				<east>-17.57873634021623</east>
-				<west>-18.08819223363864</west>
-				<rotation>1.062017917633057</rotation>
-			</LatLonBox>
-		</GroundOverlay>
-		<GroundOverlay>
-			<name>la palma text</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalma.png</href>
-				<viewBoundScale>0.75</viewBoundScale>
-			</Icon>
-			<LatLonBox>
-				<north>28.52252385807398</north>
-				<south>28.44456085195286</south>
-				<east>-17.59700656934779</east>
-				<west>-17.77481317561376</west>
-			</LatLonBox>
-		</GroundOverlay>
-		<GroundOverlay>
-			<name>liquid galaxy</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/liquidgalaxy.png</href>
-				<viewBoundScale>0.75</viewBoundScale>
-			</Icon>
-			<LatLonBox>
-				<north>28.69142438238073</north>
-				<south>28.62818579232439</south>
-				<east>-17.98593493888748</east>
-				<west>-18.07865569375839</west>
-				<rotation>3.219670295715332</rotation>
-			</LatLonBox>
-		</GroundOverlay>
-		<GroundOverlay>
-			<name>summer of code</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodelogo.png</href>
-				<viewBoundScale>0.75</viewBoundScale>
-			</Icon>
-			<LatLonBox>
-				<north>28.50474467934734</north>
-				<south>28.45647880492179</south>
-				<east>-17.97117321011799</east>
-				<west>-18.02808983602195</west>
-				<rotation>1.852455482014185</rotation>
-			</LatLonBox>
-		</GroundOverlay>
-		<GroundOverlay>
-			<name>summer of code text</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodetext.png</href>
-				<viewBoundScale>0.75</viewBoundScale>
-			</Icon>
-			<LatLonBox>
-				<north>28.45765069582156</north>
-				<south>28.42737297924874</south>
-				<east>-17.95280851216312</east>
-				<west>-18.0438498095042</west>
-				<rotation>1.264564394950867</rotation>
-			</LatLonBox>
-		</GroundOverlay>
-	</Folder>
-</Document>
-</kml>''';
-    return _createLocalFile(openLogoKML, "logo");
-  }
+//   openDemoLogos() async {
+//     String openLogoKML = '''
+// <?xml version="1.0" encoding="UTF-8"?>
+// <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+// <Document>
+// 	<name>VolTrac</name>
+// 	<open>1</open>
+// 	<description>The logo is located in the bottom left hand corner</description>
+// 	<Folder>
+// 		<name>tags</name>
+// 		<Style>
+// 			<ListStyle>
+// 				<listItemType>checkHideChildren</listItemType>
+// 				<bgColor>00ffffff</bgColor>
+// 				<maxSnippetLines>2</maxSnippetLines>
+// 			</ListStyle>
+// 		</Style>
+//     <GroundOverlay>
+// 			<name>la palma map</name>
+// 			<Icon>
+// 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalmamap.png</href>
+// 				<viewBoundScale>0.75</viewBoundScale>
+// 			</Icon>
+// 			<LatLonBox>
+// 				<north>28.8870042553608</north>
+// 				<south>28.40912829496716</south>
+// 				<east>-17.57873634021623</east>
+// 				<west>-18.08819223363864</west>
+// 				<rotation>1.062017917633057</rotation>
+// 			</LatLonBox>
+// 		</GroundOverlay>
+// 		<GroundOverlay>
+// 			<name>la palma text</name>
+// 			<Icon>
+// 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalma.png</href>
+// 				<viewBoundScale>0.75</viewBoundScale>
+// 			</Icon>
+// 			<LatLonBox>
+// 				<north>28.52252385807398</north>
+// 				<south>28.44456085195286</south>
+// 				<east>-17.59700656934779</east>
+// 				<west>-17.77481317561376</west>
+// 			</LatLonBox>
+// 		</GroundOverlay>
+// 		<GroundOverlay>
+// 			<name>liquid galaxy</name>
+// 			<Icon>
+// 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/liquidgalaxy.png</href>
+// 				<viewBoundScale>0.75</viewBoundScale>
+// 			</Icon>
+// 			<LatLonBox>
+// 				<north>28.69142438238073</north>
+// 				<south>28.62818579232439</south>
+// 				<east>-17.98593493888748</east>
+// 				<west>-18.07865569375839</west>
+// 				<rotation>3.219670295715332</rotation>
+// 			</LatLonBox>
+// 		</GroundOverlay>
+// 		<GroundOverlay>
+// 			<name>summer of code</name>
+// 			<Icon>
+// 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodelogo.png</href>
+// 				<viewBoundScale>0.75</viewBoundScale>
+// 			</Icon>
+// 			<LatLonBox>
+// 				<north>28.50474467934734</north>
+// 				<south>28.45647880492179</south>
+// 				<east>-17.97117321011799</east>
+// 				<west>-18.02808983602195</west>
+// 				<rotation>1.852455482014185</rotation>
+// 			</LatLonBox>
+// 		</GroundOverlay>
+// 		<GroundOverlay>
+// 			<name>summer of code text</name>
+// 			<Icon>
+// 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/summerofcodetext.png</href>
+// 				<viewBoundScale>0.75</viewBoundScale>
+// 			</Icon>
+// 			<LatLonBox>
+// 				<north>28.45765069582156</north>
+// 				<south>28.42737297924874</south>
+// 				<east>-17.95280851216312</east>
+// 				<west>-18.0438498095042</west>
+// 				<rotation>1.264564394950867</rotation>
+// 			</LatLonBox>
+// 		</GroundOverlay>
+// 	</Folder>
+// </Document>
+// </kml>''';
+//     return _createLocalFile(openLogoKML, "logo");
+//   }
 
-  _createLocalFile(String kml, String projectname) async {
-    String localPath = await _localPath;
-    File localFile = File('$localPath/$projectname.kml');
-    localFile.writeAsString(kml);
-    File localFile2 = File('$localPath/kmls.txt');
-    localFile2.writeAsString(kml);
-    return _uploadToLG('$localPath/$projectname.kml', projectname);
-  }
+//   _createLocalFile(String kml, String projectname) async {
+//     String localPath = await _localPath;
+//     File localFile = File('$localPath/$projectname.kml');
+//     localFile.writeAsString(kml);
+//     File localFile2 = File('$localPath/kmls.txt');
+//     localFile2.writeAsString(kml);
+//     return _uploadToLG('$localPath/$projectname.kml', projectname);
+//   }
 
-  _uploadToLG(String localPath, String projectname) async {
-    dynamic credencials = await _getCredentials();
+//   _uploadToLG(String localPath, String projectname) async {
+//     dynamic credencials = await _getCredentials();
 
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
+//     SSHClient client = SSHClient(
+//       host: '${credencials['ip']}',
+//       port: int.parse('${credencials['port']}'),
+//       username: '${credencials['username']}',
+//       passwordOrKey: '${credencials['pass']}',
+//     );
 
-    LookAt flyto = LookAt(
-      -17.895486,
-      28.610478,
-      '${75208.9978371 / int.parse(credencials['numberofrigs'])}',
-      '45',
-      '0',
-    );
-    try {
-      await client.connect();
-      await client.execute('> /var/www/html/kmls.txt');
+//     LookAt flyto = LookAt(
+//       -17.895486,
+//       28.610478,
+//       '${75208.9978371 / int.parse(credencials['numberofrigs'])}',
+//       '45',
+//       '0',
+//     );
+//     try {
+//       await client.connect();
+//       await client.execute('> /var/www/html/kmls.txt');
 
-      // upload kml
-      await client.connectSFTP();
-      await client.sftpUpload(
-        path: localPath,
-        toPath: '/var/www/html',
-        callback: (progress) {
-          print('Sent $progress');
-        },
-      );
-      await client.execute(
-          'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
+//       // upload kml
+//       await client.connectSFTP();
+//       await client.sftpUpload(
+//         path: localPath,
+//         toPath: '/var/www/html',
+//         callback: (progress) {
+//           print('Sent $progress');
+//         },
+//       );
+//       await client.execute(
+//           'echo "http://lg1:81/$projectname.kml" > /var/www/html/kmls.txt');
 
-      return await client.execute(
-          'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
+//       return await client.execute(
+//           'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
+//     } catch (e) {
+//       print('Could not connect to host LG');
+//       return Future.error(e);
+//     }
+//   }
 
   Future cleanVisualization() async {
     dynamic credencials = await _getCredentials();

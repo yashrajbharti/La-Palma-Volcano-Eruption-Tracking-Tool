@@ -61,6 +61,7 @@
 		"Relaunch": "Relançar \n    LG",
 		"Shutdown": "Desligar \n     LG",
 		"Reboot": "Reiniciar \n      LG",
+		"Logo": "Limpar  \n Logotipo",
 		"Save": "Salvar \n  KML",
 		"Clean": "Limpar \n   KML",
 		"alert": "Sucesso!",
@@ -68,7 +69,13 @@
 		"alert3": "Ops!",
 		"alert4": "Certifique-se de ativar as permissões de gerenciamento de armazenamento para baixar o KML do projeto. Verifique também se você leu os dados KML",
 		"alert5": "Erro ao iniciar!",
-		"alert6": "Ocorreu um erro ao tentar se conectar ao LG"
+		"alert6": "Ocorreu um erro ao tentar se conectar ao LG",
+		"LGRelaunch": "Reiniciar LG",
+		"LGReboot": "Reinicializar LG",
+		"LGShutdown": "Desligar LG",
+		"sure": "Tem certeza de que deseja realizar esta tarefa?",
+		"Yes": "Sim",
+		"No": "Não"
 	},
 	"Settings": {
 		"alert": "Conectado!",
@@ -94,7 +101,7 @@
 	"About": {
 		"aboutpage": "Página sobre \n Ferramenta de rastreamento de erupções do vulcão La Palma ",
 		"all": "Tudo sobre o aplicativo VolTrac:",
-		"points": "⬧ Este projeto foi criado durante o Google Summer of Code 2022 junto com a organização Liquid Galaxy. \n⬧ Este aplicativo foi desenvolvido por Yash Raj Bharti (e-mail: yashrajbharti.met18@itbhu.ac.in) sob Liquid Galaxy, graças ao Programa Google Summer of Code 2022. \n⬧ O aplicativo VolTrac serve como uma ferramenta de rastreamento para visualização das várias trilhas baseadas nas atividades vulcânicas de La Palma e as exibe lindamente com KML colorido. \n⬧ Voltrac não só funciona como um guia, mas também podemos usar nosso aplicativo para fins educacionais e de pesquisa, como estudar desastres naturais, atividades vulcânicas e catástrofes causadas pela destruição causada pelo vulcão La Palma. \n⬧ Várias trilhas de diferentes dados do mapa, como mapa de trilha histórica, mapa de fluxo de lava, mapa de trilha pré-histórica, mapa de áreas afetadas, mapa de paisagem, mapa de emissões SO\u2082, mapa de situação e eventos localizados são possíveis, graças aos vários fontes mencionadas na guia Informações. \n⬧ O aplicativo suporta dez idiomas, ou seja, inglês, espanhol, hindi, alemão, português, árabe, russo, japonês, chinês (simplificado) e albanês, que pode ser alterado na opção de menu Gerenciador de conexões. \n⬧ Desenvolvido graças aos Laboratórios TIC do Parque Científico de Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Escola Politécnica de Lleida, End Point Corp (NY), Wonderama LAB da Western University (Sydney), Gigabyte, Benq, HP, Corsair e Hemav Academics.",
+		"points": "⬧ Este projeto foi criado durante o Google Summer of Code 2022 junto com a organização Liquid Galaxy. \n⬧ Este aplicativo foi desenvolvido por Yash Raj Bharti (e-mail: yashrajbharti.met18@itbhu.ac.in) sob Liquid Galaxy, graças ao Programa Google Summer of Code 2022. \n⬧ O aplicativo VolTrac serve como uma ferramenta de rastreamento para visualização das várias trilhas baseadas nas atividades vulcânicas de La Palma e as exibe lindamente com KML colorido. \n⬧ Voltrac não só funciona como um guia, mas também podemos usar nosso aplicativo para fins educacionais e de pesquisa, como estudar desastres naturais, atividades vulcânicas e catástrofes causadas pela destruição causada pelo vulcão La Palma. \n⬧ Várias trilhas de diferentes dados do mapa, como mapa de trilha histórica, mapa de fluxo de lava, mapa de trilha pré-histórica, mapa de áreas afetadas, mapa de paisagem, mapa de emissões SO\u2082, mapa de situação e eventos localizados são possíveis, graças aos vários fontes mencionadas na guia Informações. \n⬧ O aplicativo suporta dez idiomas, ou seja, inglês, espanhol, hindi, alemão, português, árabe, russo, japonês, chinês (simplificado) e albanês, que pode ser alterado na opção de menu Gerenciador de conexões. \n⬧ Desenvolvido graças aos Laboratórios TIC do Parque Científico de Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Escola Politécnica de Lleida, End Point Corp (NY), Wonderama LAB da Western University (Sydney), Gigabyte, Benq, HP e Corsair.",
 		"learn": "Saber mais",
 		"check": "Para saber mais sobre o aplicativo confira esses links.",
 		"github": "VolTrac GitHub",
@@ -123,7 +130,8 @@
 		"demo": "Fornece visualização de demonstração",
 		"orbit": "Orbitar em torno de um ponto",
 		"queries": "Para quaisquer dúvidas sobre a instalação do equipamento LG, verifique a documentação oficial.",
-		"install": "Instalação de PC e Virtual Box LG"
+		"install": "Instalação de PC e Virtual Box LG",
+		"DataKML": "Visualiza uma amostra de dados KML"
 	},
 	"info": {
 		"description": "Descrição:",
@@ -211,6 +219,8 @@
 		"buildorbit": "Órbita inicial",
 		"stoporbit": "Parando a órbita",
 		"demostart": "Abrindo o KML de demo",
+		"DataKMLstart": "Abrindo KML de amostra",
+		"DataKMLstop": "Fechando KML de amostra",
 		"demostop": "Encerramento do KML de demo",
 		"logo": "Exibindo logotipo",
 		"clean": "Logotipo de limpeza"
@@ -218,7 +228,7 @@
 	"dismiss": "Dispensar",
 	"continue": "Continuar",
 	"tour": {
-		"take": "Faça um passeio",
+		"take": "Faça um tour pelo aplicativo",
 		"app": "Aplicativo VolTrac",
 		"desc": "⬧ A primeira tela do VolTrac App é dividida em três abas principais: Track, Map e Info. \n⬧ A guia Track nos ajuda a visualizar as várias trilhas, como Lava Flow, Áreas Afetadas, Situação, etc. \n⬧ A guia Map nos permite controlar o Liquid Galaxy realizando movimentos de toque simples no Google Map Flutter. Pode-se encontrar várias outras opções para exibir e gerenciar os dados KML na guia Mapa. \n⬧ A guia Informações fornece informações detalhadas das várias faixas que estamos visualizando. \n⬧ Toque no ícone de menu destacado para verificar as várias opções de menu disponíveis na gaveta de aplicativos.",
 		"help": "A Página de Ajuda contém instruções para configurar a visualização, significado de todos os ícones e guia para solucionar os possíveis erros.",

@@ -223,12 +223,14 @@ class _DrawersState extends State<Drawers> {
                                             : Colors.black,
                                         fontSize: 40),
                                   )),
-                              onTap: () => Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          CustomBuilder(),
-                                    ),
-                                  )),
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CustomBuilder(),
+                                  ),
+                                );
+                              }),
                           SizedBox(height: 24),
                           ListTile(
                               title: DescribedFeatureOverlay(

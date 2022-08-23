@@ -61,6 +61,7 @@
 		"Relaunch": "Rinis \n  LG",
 		"Reboot": "Rindizni \n     LG",
 		"Shutdown": "Mbyllja e \n      LG",
+		"Logo": "Pastroni \n  Logon",
 		"Save": "Ruaj \n KML",
 		"Clean": "Pastroni \n    KML",
 		"alert": "Sukses!",
@@ -68,7 +69,13 @@
 		"alert3": "Oops!",
 		"alert4": "Sigurohuni që të aktivizoni lejet e menaxhimit të hapësirës për të shkarkuar projektin KML. Kontrolloni gjithashtu që të keni lexuar të dhënat KML",
 		"alert5": "Gabim në nisje!",
-		"alert6": "Ndodhi një gabim gjatë përpjekjes për t'u lidhur me LG"
+		"alert6": "Ndodhi një gabim gjatë përpjekjes për t'u lidhur me LG",
+		"LGRelaunch": "Rinis LG",
+		"LGReboot": "Rinisni LG",
+		"LGShutdown": "Mbyllja e LG",
+		"sure": "Jeni i sigurt që dëshironi ta kryeni këtë detyrë?",
+		"Yes": "Po",
+		"No": "Nr"
 	},
 	"Settings": {
 		"alert": "Lidhur!",
@@ -94,7 +101,7 @@
 	"About": {
 		"aboutpage": "Rreth faqes \n Mjeti i gjurmimit të shpërthimeve të vullkanit La Palma ",
 		"all": "Gjithçka rreth aplikacionit VolTrac:",
-		"points": "⬧ Ky projekt u krijua gjatë verës së kodit të Google 2022 së bashku me organizatën Liquid Galaxy. \n⬧ Ky aplikacion është zhvilluar nga Yash Raj Bharti (email: yashrajbharti.met18@itbhu.ac.in) nën Liquid Galaxy, falë Programit Google Summer of Code 2022. \n⬧ Aplikacioni VolTrac shërben si një mjet gjurmimi për vizualizimin e gjurmëve të ndryshme bazuar në aktivitetet vullkanike të La Palma dhe i shfaq ato bukur me KML me ngjyra. \n⬧ Voltrac jo vetëm që vepron si një udhëzues, por ne mund ta përdorim aplikacionin tonë edhe për qëllime edukative dhe kërkimore, të tilla si studimi i fatkeqësive natyrore, aktiviteteve vullkanike dhe katastrofave nga shkatërrimi i shkaktuar nga vullkani La Palma. \n⬧ Disa gjurmë të të dhënave të ndryshme të hartës, si Harta Historike e Gjurmëve, Harta e Rrjedhjes së Lavës, Harta Parahistorike e Gjurmëve, Harta e Zonave të Ndikuara, Harta e Peizazhit, Harta e Emetimeve SO\u2082, Harta e Situatës dhe Ngjarjet e Vendndodhja janë të mundshme, falë të ndryshmeve burimet e përmendura në skedën Info. \n⬧ Aplikacioni mbështet dhjetë gjuhë, përkatësisht anglisht, spanjisht, hindisht, gjermanisht, portugalisht, arabisht, rusisht, japonisht, kinezisht (të thjeshtuar) dhe shqip, të cilat mund të ndryshohen nga opsioni i menusë \"Menaxheri i lidhjes\". \n⬧ Zhvilluar falë laboratorëve TIC të Parkut Shkencor të Lleidës, Liquid Galaxy LAB & LleidaDrone LAB, Shkollës Politeknike të Lleida, End Point Corp (NY), Wonderama LAB nga Western University (Sydney), Gigabyte, Benq, HP, Corsair, dhe Hemav Academics.",
+		"points": "⬧ Ky projekt u krijua gjatë verës së kodit të Google 2022 së bashku me organizatën Liquid Galaxy. \n⬧ Ky aplikacion është zhvilluar nga Yash Raj Bharti (email: yashrajbharti.met18@itbhu.ac.in) nën Liquid Galaxy, falë Programit Google Summer of Code 2022. \n⬧ Aplikacioni VolTrac shërben si një mjet gjurmimi për vizualizimin e gjurmëve të ndryshme bazuar në aktivitetet vullkanike të La Palma dhe i shfaq ato bukur me KML me ngjyra. \n⬧ Voltrac jo vetëm që vepron si një udhëzues, por ne mund ta përdorim aplikacionin tonë edhe për qëllime edukative dhe kërkimore, të tilla si studimi i fatkeqësive natyrore, aktiviteteve vullkanike dhe katastrofave nga shkatërrimi i shkaktuar nga vullkani La Palma. \n⬧ Disa gjurmë të të dhënave të ndryshme të hartës, si Harta Historike e Gjurmëve, Harta e Rrjedhjes së Lavës, Harta Parahistorike e Gjurmëve, Harta e Zonave të Ndikuara, Harta e Peizazhit, Harta e Emetimeve SO\u2082, Harta e Situatës dhe Ngjarjet e Vendndodhja janë të mundshme, falë të ndryshmeve burimet e përmendura në skedën Info. \n⬧ Aplikacioni mbështet dhjetë gjuhë, përkatësisht anglisht, spanjisht, hindisht, gjermanisht, portugalisht, arabisht, rusisht, japonisht, kinezisht (të thjeshtuar) dhe shqip, të cilat mund të ndryshohen nga opsioni i menusë \"Menaxheri i lidhjes\". \n⬧ Zhvilluar falë laboratorëve TIC të Parkut Shkencor të Lleida, Liquid Galaxy LAB & LleidaDrone LAB, Shkollës Politeknike të Lleida, End Point Corp (NY), Wonderama LAB nga Western University (Sydney), Gigabyte, Benq, HP dhe Corsair.",
 		"learn": "Mëso më shumë",
 		"check": "Për të ditur më shumë rreth aplikacionit, kontrolloni lidhjet.",
 		"github": "VolTrac GitHub",
@@ -123,7 +130,8 @@
 		"demo": "Ofron vizualizim Demo",
 		"orbit": "Orbitë rreth një pike",
 		"queries": "Për çdo pyetje në lidhje me instalimin e pajisjes LG, kontrolloni dokumentacionin zyrtar.",
-		"install": "Instalimi i PC dhe Virtual Box LG"
+		"install": "Instalimi i PC dhe Virtual Box LG",
+		"DataKML": "Vizualizon një mostër të të dhënave KML"
 	},
 	"info": {
 		"description": "Përshkrim:",
@@ -212,13 +220,15 @@
 		"stoporbit": "Ndalimi i Orbitës",
 		"demostart": "Hapja e demo të KML",
 		"demostop": "Mbyllja e demo të KML",
+		"DataKMLstart": "Hapja e mostrës KML",
+		"DataKMLstop": "Mbyllja e mostrës KML",
 		"logo": "Shfaqja e logos",
 		"clean": "Logo e pastrimit"
 	},
 	"dismiss": "Largoje",
 	"continue": "Vazhdoni",
 	"tour": {
-		"take": "Merr nje tur",
+		"take": "Merrni turneun e aplikacionit",
 		"app": "Aplikacioni VolTrac",
 		"desc": "⬧ Ekrani i parë i aplikacionit VolTrac është i ndarë në tre skeda kryesore: Gjurma, Harta dhe Informacioni. \n⬧ Skeda \"Gjurma\" na ndihmon të vizualizojmë gjurmët e ndryshme si Rrjedha e Lavës, Zonat e prekura, Situata, etj. \n⬧ Skeda e Hartës na lejon të kontrollojmë Galaxy Liquid duke kryer lëvizje të thjeshta me prekje në Flutterin e Hartës së Google. Mund të gjeni opsione të tjera të ndryshme për të shfaqur dhe menaxhuar të dhënat KML në skedën e Hartës. \n⬧ Skeda \"Info\" jep informacion të detajuar për Pjesët e ndryshme që po vizualizojmë. \n⬧ Trokit në ikonën e theksuar të menysë për të kontrolluar opsionet e ndryshme të menysë të disponueshme në sirtarin e aplikacionit.",
 		"help": "Faqja e Ndihmës ka udhëzime për konfigurimin e vizualizimit, kuptimin e të gjitha ikonave dhe udhëzues për zgjidhjen e gabimeve të mundshme.",
