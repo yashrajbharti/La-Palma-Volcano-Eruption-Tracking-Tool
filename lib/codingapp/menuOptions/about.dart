@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:provider/provider.dart';
 import 'package:voltrac/codingapp/theme-storage.dart';
@@ -15,9 +14,9 @@ class AboutScreen extends StatefulWidget {
 }
 
 class _AboutScreenState extends State<AboutScreen> {
-  _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+  _launchURL(Uri url) async {
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw 'Could not launch $url';
     }
@@ -100,8 +99,8 @@ class _AboutScreenState extends State<AboutScreen> {
                           children: [
                             GestureDetector(
                                 onTap: () {
-                                  _launchURL(
-                                      'https://www.linkedin.com/in/yash-raj-bharti-5693b6183/');
+                                  _launchURL(Uri.parse(
+                                      'https://www.linkedin.com/in/yash-raj-bharti-5693b6183/'));
                                 },
                                 child: Text(
                                   "LinkedIn",
@@ -113,8 +112,8 @@ class _AboutScreenState extends State<AboutScreen> {
                                 )),
                             GestureDetector(
                                 onTap: () {
-                                  _launchURL(
-                                      'https://twitter.com/YashRaj49744398');
+                                  _launchURL(Uri.parse(
+                                      'https://twitter.com/YashRaj49744398'));
                                 },
                                 child: Text(
                                   ", Twitter",
@@ -126,8 +125,8 @@ class _AboutScreenState extends State<AboutScreen> {
                                 )),
                             GestureDetector(
                                 onTap: () {
-                                  _launchURL(
-                                      'https://github.com/yashrajbharti');
+                                  _launchURL(Uri.parse(
+                                      'https://github.com/yashrajbharti'));
                                 },
                                 child: Text(
                                   ", Github",
@@ -139,8 +138,8 @@ class _AboutScreenState extends State<AboutScreen> {
                                 )),
                             GestureDetector(
                                 onTap: () {
-                                  _launchURL(
-                                      'https://yashrajbharti.github.io/portfolio/');
+                                  _launchURL(Uri.parse(
+                                      'https://yashrajbharti.github.io/portfolio/'));
                                 },
                                 child: Text(
                                   ", Portfolio",
@@ -229,8 +228,8 @@ class _AboutScreenState extends State<AboutScreen> {
                                   ),
                                   GestureDetector(
                                     onTap: () {
-                                      _launchURL(
-                                          'https://github.com/LiquidGalaxyLAB/VolTrac');
+                                      _launchURL(Uri.parse(
+                                          'https://github.com/LiquidGalaxyLAB/VolTrac'));
                                     },
                                     child: Text(
                                       translate("About.github"),
@@ -248,8 +247,8 @@ class _AboutScreenState extends State<AboutScreen> {
                                   ),
                                   GestureDetector(
                                     onTap: () {
-                                      _launchURL(
-                                          'https://github.com/LiquidGalaxyLAB/VolTrac/Privacy_Policy.md');
+                                      _launchURL(Uri.parse(
+                                          'https://github.com/LiquidGalaxyLAB/VolTrac/Privacy_Policy.md'));
                                     },
                                     child: Text(
                                       translate("About.privacy"),
@@ -293,7 +292,8 @@ class _AboutScreenState extends State<AboutScreen> {
                                   ),
                                   GestureDetector(
                                     onTap: () {
-                                      _launchURL('https://www.flaticon.com');
+                                      _launchURL(Uri.parse(
+                                          'https://www.flaticon.com'));
                                     },
                                     child: Text(
                                       translate("Flaticon | Freepik"),
@@ -311,8 +311,8 @@ class _AboutScreenState extends State<AboutScreen> {
                                   ),
                                   GestureDetector(
                                     onTap: () {
-                                      _launchURL(
-                                          'https://iconarchive.com/show/noto-emoji-travel-places-icons-by-google/42463-volcano-icon.html');
+                                      _launchURL(Uri.parse(
+                                          'https://iconarchive.com/show/noto-emoji-travel-places-icons-by-google/42463-volcano-icon.html'));
                                     },
                                     child: Text(
                                       translate("Icon Archive"),
@@ -340,8 +340,8 @@ class _AboutScreenState extends State<AboutScreen> {
   }
 
   Future<void> _onOpen(LinkableElement link) async {
-    if (await canLaunch(link.url)) {
-      await launch(link.url);
+    if (await canLaunchUrl(Uri.parse(link.url))) {
+      await launchUrl(Uri.parse(link.url));
     } else {
       throw 'Could not launch $link';
     }

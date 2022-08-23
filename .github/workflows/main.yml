@@ -19,7 +19,7 @@ jobs:
       with:
         flutter-version: '2.10.4'
     - run: flutter pub get
-    - run: flutter build apk --split-per-abi --no-sound-null-safety
+    - run: flutter build apk --split-per-abi
     - name: Create a Release APK
       uses: actions/upload-artifact@v1
       with:

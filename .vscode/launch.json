@@ -7,7 +7,7 @@
                 "request": "launch",
                 "type": "dart",
                 "args": [
-                        "--no-sound-null-safety"
+                        ""
                     ]
         }
 ]

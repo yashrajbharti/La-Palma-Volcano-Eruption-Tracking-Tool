@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';

@@ -68,7 +68,7 @@ class TranslatePreferences implements ITranslatePreferences {
 
     var locale = preferences.getString(_selectedLocaleKey);
 
-    return localeFromString(locale);
+    return localeFromString(locale.toString());
   }
 
   @override

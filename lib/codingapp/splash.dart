@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_translate/flutter_translate.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:splashscreen/splashscreen.dart';
+import 'package:splash_screen_view/SplashScreenView.dart';
 import 'package:provider/provider.dart';
 import 'package:voltrac/codingapp/theme-storage.dart';
 import 'package:voltrac/codingapp/mainpage.dart';
@@ -18,23 +16,21 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeModel>(
-        builder: (context, ThemeModel themeNotifier, child) => SplashScreen(
-              seconds: 3,
-              navigateAfterSeconds: First(),
-              title: Text(
-                translate('title.name'),
-                style: TextStyle(
-                  fontFamily: 'GoogleSans',
-                  fontSize: 55,
-                  color: Color.fromARGB(255, 204, 204, 204),
-                ),
+        builder: (context, ThemeModel themeNotifier, child) => SplashScreenView(
+              duration: 3000,
+              navigateRoute: First(),
+              text: translate('title.name'),
+              textStyle: TextStyle(
+                fontFamily: 'GoogleSans',
+                fontSize: 55,
+                color: Color.fromARGB(255, 204, 204, 204),
               ),
-              image: Image.asset("assets/icons/volcanoandlogo.png"),
+              imageSrc: "assets/icons/volcanoandlogo.png",
               backgroundColor: themeNotifier.isDark
                   ? Color.fromARGB(255, 16, 16, 16)
                   : Color.fromARGB(255, 30, 30, 30),
-              photoSize: 150.0,
-              loaderColor: const Color.fromARGB(255, 204, 204, 204),
+              imageSize: 650,
+              // loaderColor: const Color.fromARGB(255, 204, 204, 204),
             ));
   }
 }
