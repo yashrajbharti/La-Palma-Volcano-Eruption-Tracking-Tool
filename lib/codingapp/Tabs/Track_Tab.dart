@@ -766,8 +766,8 @@ class _SendtoLGState extends State<SendtoLG> {
                               builder: (context) => IconButton(
                                     icon: themeNotifier.isDark
                                         ? Image.asset(
-                                            'assets/icons/logo_dark.png')
-                                        : Image.asset('assets/icons/logo.png'),
+                                            'assets/icons/demo_dark.png')
+                                        : Image.asset('assets/icons/demo.png'),
                                     iconSize: 70,
                                     onPressed: () => {},
                                   )))
