@@ -244,7 +244,7 @@ class _CustomBuilderState extends State<CustomBuilder>
   playOrbit() async {
     await LGConnection()
         .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-            LookAt(longvalue, latvalue, "60492.665945696469", "0", "0"))))
+            LookAt(longvalue, latvalue, "6341.7995674", "0", "0"))))
         .then((value) async {
       await LGConnection().startOrbit();
     });

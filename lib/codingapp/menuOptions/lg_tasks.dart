@@ -225,6 +225,28 @@ class _LGtasksState extends State<LGtasks> {
                                           false,
                                           blackandwhite);
                                     });
+                                  } else if (operation == "Reset") {
+                                    LGConnection()
+                                        .resetRefresh()
+                                        .catchError((onError) {
+                                      print('oh no $onError');
+                                      showAlertDialog(
+                                          translate("Tasks.alert5"),
+                                          translate("Tasks.alert6"),
+                                          false,
+                                          blackandwhite);
+                                    });
+                                  } else if (operation == "Set") {
+                                    LGConnection()
+                                        .setRefresh()
+                                        .catchError((onError) {
+                                      print('oh no $onError');
+                                      showAlertDialog(
+                                          translate("Tasks.alert5"),
+                                          translate("Tasks.alert6"),
+                                          false,
+                                          blackandwhite);
+                                    });
                                   }
                                   Navigator.of(context).pop();
                                 },
@@ -322,14 +344,14 @@ class _LGtasksState extends State<LGtasks> {
                           )),
                       Container(
                         margin: const EdgeInsets.symmetric(
-                            vertical: 60.0, horizontal: 60.0),
+                            vertical: 20.0, horizontal: 60.0),
                         child: Column(
                           children: [
                             Row(
                               children: [
                                 SizedBox(
-                                  width: 340,
-                                  height: 180,
+                                  width: 335,
+                                  height: 175,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       elevation: 2,
@@ -348,7 +370,7 @@ class _LGtasksState extends State<LGtasks> {
                                         ),
                                         Text(translate("Tasks.Logo"),
                                             style: TextStyle(
-                                                fontSize: 42,
+                                                fontSize: 39,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0))),
                                       ],
@@ -376,8 +398,8 @@ class _LGtasksState extends State<LGtasks> {
                                 ),
                                 Spacer(),
                                 SizedBox(
-                                  width: 340,
-                                  height: 180,
+                                  width: 335,
+                                  height: 175,
                                   child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         elevation: 2,
@@ -396,7 +418,7 @@ class _LGtasksState extends State<LGtasks> {
                                           ),
                                           Text(translate("Tasks.Clean"),
                                               style: TextStyle(
-                                                  fontSize: 42,
+                                                  fontSize: 39,
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0))),
                                         ],
@@ -423,8 +445,8 @@ class _LGtasksState extends State<LGtasks> {
                                 ),
                                 Spacer(),
                                 SizedBox(
-                                  width: 340,
-                                  height: 180,
+                                  width: 335,
+                                  height: 175,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       elevation: 2,
@@ -443,7 +465,7 @@ class _LGtasksState extends State<LGtasks> {
                                         ),
                                         Text(translate("Tasks.Save"),
                                             style: TextStyle(
-                                                fontSize: 42,
+                                                fontSize: 39,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0))),
                                       ],
@@ -506,13 +528,90 @@ class _LGtasksState extends State<LGtasks> {
                               ],
                             ),
                             SizedBox(
-                              height: 100,
+                              height: 30,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SizedBox(
+                                  width: 335,
+                                  height: 175,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      elevation: 2,
+                                      shadowColor: themeNotifier.isDark
+                                          ? Colors.black
+                                          : Colors.grey.withOpacity(0.5),
+                                      primary: Color.fromARGB(255, 3, 200, 196),
+                                      padding: EdgeInsets.all(15),
+                                      shape: StadiumBorder(),
+                                    ),
+                                    child: Wrap(
+                                      children: <Widget>[
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(translate("Tasks.set"),
+                                            style: TextStyle(
+                                                fontSize: 39,
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0))),
+                                      ],
+                                    ),
+                                    onPressed: () async {
+                                      showThinkDialog(
+                                          translate("Tasks.LGset"),
+                                          translate("Tasks.sure"),
+                                          themeNotifier.isDark,
+                                          "Set");
+                                    },
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 335,
+                                  height: 175,
+                                  child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        elevation: 2,
+                                        shadowColor: themeNotifier.isDark
+                                            ? Colors.black
+                                            : Colors.grey.withOpacity(0.5),
+                                        primary:
+                                            Color.fromARGB(255, 238, 163, 123),
+                                        padding: EdgeInsets.all(15),
+                                        shape: StadiumBorder(),
+                                      ),
+                                      child: Wrap(
+                                        children: <Widget>[
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Text(translate("Tasks.reset"),
+                                              style: TextStyle(
+                                                  fontSize: 39,
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0))),
+                                        ],
+                                      ),
+                                      onPressed: () {
+                                        // send to LG
+                                        showThinkDialog(
+                                            translate("Tasks.LGreset"),
+                                            translate("Tasks.sure"),
+                                            themeNotifier.isDark,
+                                            "Reset");
+                                      }),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 30,
                             ),
                             Row(
                               children: [
                                 SizedBox(
-                                  width: 340,
-                                  height: 180,
+                                  width: 335,
+                                  height: 175,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       elevation: 2,
@@ -532,7 +631,7 @@ class _LGtasksState extends State<LGtasks> {
                                         Text(
                                           translate("Tasks.Relaunch"),
                                           style: TextStyle(
-                                              fontSize: 42,
+                                              fontSize: 39,
                                               color:
                                                   Color.fromARGB(255, 0, 0, 0)),
                                         ),
@@ -550,8 +649,8 @@ class _LGtasksState extends State<LGtasks> {
                                 ),
                                 Spacer(),
                                 SizedBox(
-                                  width: 340,
-                                  height: 180,
+                                  width: 335,
+                                  height: 175,
                                   child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         elevation: 2,
@@ -570,7 +669,7 @@ class _LGtasksState extends State<LGtasks> {
                                           ),
                                           Text(translate("Tasks.Reboot"),
                                               style: TextStyle(
-                                                  fontSize: 42,
+                                                  fontSize: 39,
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0))),
                                         ],
@@ -586,8 +685,8 @@ class _LGtasksState extends State<LGtasks> {
                                 ),
                                 Spacer(),
                                 SizedBox(
-                                  width: 340,
-                                  height: 180,
+                                  width: 335,
+                                  height: 175,
                                   child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         elevation: 2,
@@ -606,7 +705,7 @@ class _LGtasksState extends State<LGtasks> {
                                           ),
                                           Text(translate("Tasks.Shutdown"),
                                               style: TextStyle(
-                                                  fontSize: 42,
+                                                  fontSize: 39,
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0))),
                                         ],
@@ -664,11 +763,17 @@ class LGConnection {
       passwordOrKey: '${credencials['pass']}',
     );
     String rigs = "4";
+    String blank = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+  </Document>
+</kml>''';
     rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1).toString();
     try {
       await client.connect();
       return await client
-          .execute("echo '' > /var/www/html/kml/slave_$rigs.kml");
+          .execute("echo '$blank' > /var/www/html/kml/slave_$rigs.kml");
     } catch (e) {
       return Future.error(e);
     }
@@ -685,11 +790,9 @@ class LGConnection {
     );
 
     try {
-      await client.connect();
       for (var i = int.parse(credencials['numberofrigs']); i >= 1; i--) {
-        await client.execute(
-            //"'/home/${credencials['username']}/bin/lg-relaunch' > /home/${credencials['username']}/log.txt"
-            """RELAUNCH_CMD="\\
+        await client.connect();
+        final relaunchCommand = """RELAUNCH_CMD="\\
 if [ -f /etc/init/lxdm.conf ]; then
   export SERVICE=lxdm
 elif [ -f /etc/init/lightdm.conf ]; then
@@ -698,11 +801,14 @@ else
   exit 1
 fi
 if  [[ \\\$(service \\\$SERVICE status) =~ 'stop' ]]; then
-  service \\\${SERVICE} start
+  echo ${credencials['pass']} | sudo -S service \\\${SERVICE} start
 else
-  echo lq | sudo -S service \\\${SERVICE} restart
+  echo ${credencials['pass']} | sudo -S service \\\${SERVICE} restart
 fi
-" && sshpass -p ${credencials['pass']} ssh -x -t lg@lg$i "\$RELAUNCH_CMD\"""");
+" && sshpass -p ${credencials['pass']} ssh -x -t lg@lg$i "\$RELAUNCH_CMD\"""";
+        await client.execute(
+            '"/home/${credencials['username']}/bin/lg-relaunch" > /home/${credencials['username']}/log.txt');
+        await client.execute(relaunchCommand);
       }
     } catch (e) {
       print('Could not connect to host LG');
@@ -721,8 +827,8 @@ fi
     );
 
     try {
-      await client.connect();
       for (var i = int.parse(credencials['numberofrigs']); i >= 1; i--) {
+        await client.connect();
         await client.execute(
             'sshpass -p ${credencials['pass']} ssh -t lg$i "echo ${credencials['pass']} | sudo -S poweroff"');
       }
@@ -810,5 +916,78 @@ fi
     } catch (e) {
       return Future.error(e);
     }
+  }
+
+  Future<void> setRefresh() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    final pw = credencials['pass'];
+
+    const search = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
+    const replace =
+        '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
+    final command =
+        'echo $pw | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
+
+    final clear =
+        'echo $pw | sudo -S sed -i "s/$replace/$search/" ~/earth/kml/slave/myplaces.kml';
+
+    for (var i = 2; i <= credencials['numberofrigs']; i++) {
+      final clearCmd = clear.replaceAll('{{slave}}', i.toString());
+      final cmd = command.replaceAll('{{slave}}', i.toString());
+      String query = 'sshpass -p $pw ssh -t lg$i \'{{cmd}}\'';
+
+      try {
+        await client.connect();
+        await client.execute(query.replaceAll('{{cmd}}', clearCmd));
+        await client.execute(query.replaceAll('{{cmd}}', cmd));
+      } catch (e) {
+        // ignore: avoid_print
+        print(e);
+      }
+    }
+
+    await rebootLG();
+  }
+
+  Future<void> resetRefresh() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+    final pw = credencials['pass'];
+
+    const search =
+        '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
+    const replace = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
+
+    final clear =
+        'echo $pw | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
+
+    for (var i = 2; i <= credencials['numberofrigs']; i++) {
+      final cmd = clear.replaceAll('{{slave}}', i.toString());
+      String query = 'sshpass -p $pw ssh -t lg$i \'$cmd\'';
+
+      try {
+        await client.connect();
+        await client.execute(query);
+      } catch (e) {
+        // ignore: avoid_print
+        print(e);
+      }
+    }
+
+    await rebootLG();
   }
 }

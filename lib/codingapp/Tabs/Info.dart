@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:ui';
-
+import 'package:percent_indicator/percent_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
@@ -23,11 +23,14 @@ void jumpToPage(int page) {
   x = page;
 }
 
-late String retrykml;
-late String retryname;
-Future retryButton(String KML, String name) async {
+var _duration = 3000;
+bool loading = false;
+String retrykml = "";
+String retryname = "";
+Future retryButton(String KML, String name, dynamic duration) async {
   retrykml = await KML;
   retryname = await name;
+  _duration = await duration;
 }
 
 class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
@@ -64,7 +67,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
   playOrbit() async {
     await LGConnection()
         .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(
-            LookAt(longvalue, latvalue, "60492.665945696469", "0", "0"))))
+            LookAt(longvalue, latvalue, "6341.7995674", "0", "0"))))
         .then((value) async {
       await LGConnection().startOrbit();
     });
@@ -3503,18 +3506,79 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                     ),
                   ),
                   Divider(),
-                  Builder(
-                      builder: (context) => IconButton(
-                          icon: Image.asset('assets/icons/lg.png'),
-                          iconSize: 57,
-                          onPressed: () async {
-                            LGConnection()
-                                .sendToLG(retrykml, retryname)
-                                .then((value) {
-                              _showToast(translate('Track.Visualize'),
-                                  themeNotifier.isDark);
-                            });
-                          })),
+                  loading
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                              SizedBox(
+                                height: 10,
+                              ),
+                              RotatedBox(
+                                  quarterTurns: -1,
+                                  child: LinearPercentIndicator(
+                                    animation: true,
+                                    width: 51,
+                                    lineHeight: 51,
+                                    alignment: MainAxisAlignment.center,
+                                    backgroundColor: themeNotifier.isDark
+                                        ? Color.fromARGB(205, 42, 47, 48)
+                                        : Color.fromARGB(205, 180, 199, 206),
+                                    percent: 1.0,
+                                    padding: EdgeInsets.all(0),
+                                    animationDuration: _duration,
+                                    center: Wrap(
+                                      children: <Widget>[
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        RotatedBox(
+                                            quarterTurns: 1,
+                                            child: Icon(
+                                              Icons.location_on_sharp,
+                                              color: Color.fromARGB(
+                                                  255, 228, 6, 9),
+                                              size: 45.0,
+                                            )),
+                                      ],
+                                    ),
+                                    barRadius: Radius.circular(50),
+                                    progressColor: Colors.greenAccent,
+                                  ))
+                            ])
+                      : Builder(
+                          builder: (context) => IconButton(
+                              icon: Image.asset('assets/icons/lg.png'),
+                              iconSize: 57,
+                              onPressed: () async {
+                                setState(() {
+                                  loading = true;
+                                });
+                                LGConnection()
+                                    .sendToLG(retrykml, retryname)
+                                    .then((value) {
+                                  _showToast(translate('Track.Visualize'),
+                                      themeNotifier.isDark);
+                                  setState(() {
+                                    loading = false;
+                                  });
+                                }).catchError((onError) {
+                                  print('oh no $onError');
+                                  setState(() {
+                                    loading = false;
+                                  });
+                                  if (onError == 'nogeodata') {
+                                    showAlertDialog(
+                                        translate('Track.alert'),
+                                        translate('Track.alert2'),
+                                        themeNotifier.isDark);
+                                  }
+                                  showAlertDialog(
+                                      translate('Track.alert3'),
+                                      translate('Track.alert4'),
+                                      themeNotifier.isDark);
+                                });
+                              })),
                 ],
               ),
             ),

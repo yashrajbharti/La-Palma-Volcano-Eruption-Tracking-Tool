@@ -73,6 +73,10 @@
 		"LGRelaunch": "Rinis LG",
 		"LGReboot": "Rinisni LG",
 		"LGShutdown": "Mbyllja e LG",
+		"set": "  Cakto \nRifreskim",
+		"reset": " Rivendos\nRifreskimin",
+		"LGset": "Cakto Rifreskim",
+		"LGreset": "Rivendos Rifreskimin",
 		"sure": "Jeni i sigurt që dëshironi ta kryeni këtë detyrë?",
 		"Yes": "Po",
 		"No": "Nr"

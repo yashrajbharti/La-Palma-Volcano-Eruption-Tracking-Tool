@@ -73,6 +73,10 @@
 		"LGRelaunch": "Relanzamiento de LG",
 		"LGReboot": "Reinicia LG",
 		"LGShutdown": "Apaga LG",
+		"set": "Establecer\n Actualizar",
+		"reset": "Restablecer\n Actualizar",
+		"LGset": "Establecer Actualizar",
+		"LGreset": "Restablecer Actualizar",
 		"sure": "¿Estás seguro de que quieres realizar esta tarea?",
 		"Yes": "Sí",
 		"No": "No"

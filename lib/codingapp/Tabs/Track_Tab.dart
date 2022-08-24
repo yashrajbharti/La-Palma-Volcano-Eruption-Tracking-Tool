@@ -735,7 +735,8 @@ class _SendtoLGState extends State<SendtoLG> {
                                       isOpen = true;
                                       loading = false;
                                     });
-                                    retryButton(kml.mount(), finalname);
+                                    retryButton(
+                                        kml.mount(), finalname, _duration);
                                     DefaultTabController.of(context)
                                         ?.animateTo(2);
                                   }).catchError((onError) {

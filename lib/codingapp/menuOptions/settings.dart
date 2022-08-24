@@ -378,9 +378,10 @@ class SettingsState extends State<Settings> {
                             ],
                           ),
                           onPressed: () {
-                            connect();
-                            FocusManager.instance.primaryFocus?.unfocus();
-                            LGConnection().openDemoLogos();
+                            connect().then((value) {
+                              FocusManager.instance.primaryFocus?.unfocus();
+                              LGConnection().openDemoLogos();
+                            });
                           },
                           style: ElevatedButton.styleFrom(
                             elevation: 2,

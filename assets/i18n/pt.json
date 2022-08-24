@@ -58,10 +58,10 @@
 	},
 	"Tasks": {
 		"LG": "Tarefas do Liquid Galaxy",
-		"Relaunch": "Relançar \n    LG",
+		"Relaunch": "Relançar \n     LG",
 		"Shutdown": "Desligar \n     LG",
 		"Reboot": "Reiniciar \n      LG",
-		"Logo": "Limpar  \n Logotipo",
+		"Logo": " Limpar\n Logotipo",
 		"Save": "Salvar \n  KML",
 		"Clean": "Limpar \n   KML",
 		"alert": "Sucesso!",
@@ -73,6 +73,10 @@
 		"LGRelaunch": "Reiniciar LG",
 		"LGReboot": "Reinicializar LG",
 		"LGShutdown": "Desligar LG",
+		"set": "   Definir\natualização",
+		"reset": "Redefinir\natualização",
+		"LGset": "Definir atualização",
+		"LGreset": "Redefinir atualização",
 		"sure": "Tem certeza de que deseja realizar esta tarefa?",
 		"Yes": "Sim",
 		"No": "Não"

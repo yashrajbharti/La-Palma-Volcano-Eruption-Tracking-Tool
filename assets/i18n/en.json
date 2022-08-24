@@ -59,7 +59,7 @@
 	"Tasks": {
 		"LG": "Liquid Galaxy Tasks",
 		"Relaunch": "Relaunch \n      LG",
-		"Shutdown": "Shutdown \n      LG",
+		"Shutdown": "Shutdown \n       LG",
 		"Reboot": "Reboot \n    LG",
 		"Logo": "Clean \n Logo",
 		"Save": "Save \n KML",
@@ -73,6 +73,10 @@
 		"LGRelaunch": "Relaunch LG",
 		"LGReboot": "Reboot LG",
 		"LGShutdown": "Shutdown LG",
+		"set": "     Set\n Refresh",
+		"reset": "   Reset\n Refresh",
+		"LGset": "Set Refresh",
+		"LGreset": "Reset Refresh",
 		"sure": "Are you sure you want to perform this task?",
 		"Yes": "Yes",
 		"No": "No"
