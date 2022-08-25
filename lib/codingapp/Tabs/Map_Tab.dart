@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:io';
+// import 'dart:io';
 import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/foundation.dart';
@@ -9,11 +9,11 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:ssh2/ssh2.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:path_provider/path_provider.dart';
+// import 'package:path_provider/path_provider.dart';
 // import 'package:provider/provider.dart';
 import 'package:voltrac/codingapp/kml/LookAt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:voltrac/codingapp/kml/orbit.dart';
+// import 'package:voltrac/codingapp/kml/orbit.dart';
 // import 'package:voltrac/codingapp/theme-storage.dart';
 
 void main() => runApp(MyMap());
@@ -29,7 +29,7 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   final Set<Marker> _markers = {};
   GoogleMapController? mapController;
   MapType _currentMapType = MapType.satellite;
-  bool isOrbiting = false;
+  // bool isOrbiting = false;
   // bool isDemoActive = false;
   int rigcount = 5;
   double zoomvalue = 591657550.500000 / pow(2, 13.15393352508545);
@@ -96,28 +96,28 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     });
   }
 
-  playOrbit() async {
-    await LGConnection()
-        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(LookAt(
-            double.parse((await longvalue).toStringAsFixed(2)),
-            double.parse((await latvalue).toStringAsFixed(2)),
-            "30492.665945696469",
-            "0",
-            "0"))))
-        .then((value) async {
-      await LGConnection().startOrbit();
-    });
-    setState(() {
-      isOrbiting = true;
-    });
-  }
+  // playOrbit() async {
+  //   await LGConnection()
+  //       .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(LookAt(
+  //           double.parse((await longvalue).toStringAsFixed(2)),
+  //           double.parse((await latvalue).toStringAsFixed(2)),
+  //           "30492.665945696469",
+  //           "0",
+  //           "0"))))
+  //       .then((value) async {
+  //     await LGConnection().startOrbit();
+  //   });
+  //   setState(() {
+  //     isOrbiting = true;
+  //   });
+  // }
 
-  stopOrbit() async {
-    await LGConnection().stopOrbit();
-    setState(() {
-      isOrbiting = false;
-    });
-  }
+  // stopOrbit() async {
+  //   await LGConnection().stopOrbit();
+  //   setState(() {
+  //     isOrbiting = false;
+  //   });
+  // }
 
   _getCredentials() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
@@ -779,64 +779,64 @@ class LGConnection {
     };
   }
 
-  Future<String> get _localPath async {
-    final directory = await getApplicationDocumentsDirectory();
+  // Future<String> get _localPath async {
+  //   final directory = await getApplicationDocumentsDirectory();
 
-    return directory.path;
-  }
+  //   return directory.path;
+  // }
 
-  buildOrbit(String content) async {
-    dynamic credencials = await _getCredentials();
+  // buildOrbit(String content) async {
+  //   dynamic credencials = await _getCredentials();
 
-    String localPath = await _localPath;
-    File localFile = File('$localPath/Orbit.kml');
-    localFile.writeAsString(content);
+  //   String localPath = await _localPath;
+  //   File localFile = File('$localPath/Orbit.kml');
+  //   localFile.writeAsString(content);
 
-    String filePath = '$localPath/Orbit.kml';
+  //   String filePath = '$localPath/Orbit.kml';
 
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
+  //   SSHClient client = SSHClient(
+  //     host: '${credencials['ip']}',
+  //     port: int.parse('${credencials['port']}'),
+  //     username: '${credencials['username']}',
+  //     passwordOrKey: '${credencials['pass']}',
+  //   );
 
-    try {
-      await client.connect();
-      await client.connectSFTP();
-      await client.sftpUpload(
-        path: filePath,
-        toPath: '/var/www/html',
-        callback: (progress) {
-          print('Sent $progress');
-        },
-      );
-      return await client.execute(
-          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
+  //   try {
+  //     await client.connect();
+  //     await client.connectSFTP();
+  //     await client.sftpUpload(
+  //       path: filePath,
+  //       toPath: '/var/www/html',
+  //       callback: (progress) {
+  //         print('Sent $progress');
+  //       },
+  //     );
+  //     return await client.execute(
+  //         "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+  //   } catch (e) {
+  //     print('Could not connect to host LG');
+  //     return Future.error(e);
+  //   }
+  // }
 
-  startOrbit() async {
-    dynamic credencials = await _getCredentials();
+  // startOrbit() async {
+  //   dynamic credencials = await _getCredentials();
 
-    SSHClient client = SSHClient(
-      host: '${credencials['ip']}',
-      port: int.parse('${credencials['port']}'),
-      username: '${credencials['username']}',
-      passwordOrKey: '${credencials['pass']}',
-    );
+  //   SSHClient client = SSHClient(
+  //     host: '${credencials['ip']}',
+  //     port: int.parse('${credencials['port']}'),
+  //     username: '${credencials['username']}',
+  //     passwordOrKey: '${credencials['pass']}',
+  //   );
 
-    try {
-      await client.connect();
-      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
-    } catch (e) {
-      print('Could not connect to host LG');
-      return Future.error(e);
-    }
-  }
+  //   try {
+  //     await client.connect();
+  //     return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
+  //   } catch (e) {
+  //     print('Could not connect to host LG');
+  //     return Future.error(e);
+  //   }
+  // }
 
   stopOrbit() async {
     dynamic credencials = await _getCredentials();

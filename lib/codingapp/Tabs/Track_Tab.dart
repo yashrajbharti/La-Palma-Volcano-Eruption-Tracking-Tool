@@ -12,6 +12,7 @@ import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
 import 'package:voltrac/codingapp/kml/LookAt.dart';
+import 'package:voltrac/codingapp/kml/orbit.dart';
 import 'package:voltrac/codingapp/menuOptions/custom_builder.dart';
 import 'package:voltrac/codingapp/theme-storage.dart';
 import 'package:voltrac/codingapp/kml/kml.dart';
@@ -29,6 +30,8 @@ List<String> kmltext = ['', '', '', '', '', '', '', ''];
 String localpath = "";
 bool isOpen = false;
 bool loading = false;
+double latvalue = 28.65665656297236;
+double longvalue = -17.885454520583153;
 List<String> projectname = [
   "Historic_Track",
   "Lava_Flow",
@@ -146,6 +149,163 @@ class _SendtoLGState extends State<SendtoLG> {
             ));
       },
     );
+  }
+
+  _One(bool isDark) async {
+    await _read(0);
+    LGConnection().openBalloon(
+        projectname[0],
+        translate('Track.hist'),
+        translate("info.hist.date"),
+        240,
+        translate("info.description") +
+            " " +
+            translate("info.hist.description"),
+        "COPERNICUS, ResearchGate, Global Volcanism Program",
+        translate('title.name'),
+        "historic_infographic.png");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.hist'), isDark);
+    });
+  }
+
+  _Two(bool isDark) async {
+    await _read(1);
+    LGConnection().openBalloon(
+        projectname[1],
+        translate('Track.lava'),
+        translate("info.lava.date"),
+        240,
+        translate("info.description") +
+            " " +
+            translate("info.lava.description"),
+        "COPERNICUS, Wikipedia | Cumbre Vieja",
+        translate('title.name'),
+        "lavaflow_infographic.jpg");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.lava'), isDark);
+    });
+  }
+
+  _Three(bool isDark) async {
+    await _read(2);
+    LGConnection().openBalloon(
+        projectname[2],
+        translate('Track.prehistoric'),
+        translate("info.prehistoric.date"),
+        270,
+        translate("info.description") +
+            " " +
+            translate("info.prehistoric.description"),
+        "ResearchGate, Global Volcanism Program",
+        translate('title.name'),
+        "prehistoric_infographic.png");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.prehistoric'), isDark);
+    });
+  }
+
+  _Four(bool isDark) async {
+    await _read(3);
+    LGConnection().openBalloon(
+        projectname[3],
+        translate('Track.aff'),
+        translate("info.aff.date"),
+        240,
+        translate("info.description") + " " + translate("info.aff.description"),
+        "COPERNICUS",
+        translate('title.name'),
+        "affectedareas_infographic.jpg");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.aff'), isDark);
+    });
+  }
+
+  _Five(bool isDark) async {
+    await _read(4);
+    LGConnection().openBalloon(
+        projectname[4],
+        translate('Track.land'),
+        translate("info.land.date"),
+        240,
+        translate("info.description") +
+            " " +
+            translate("info.land.description"),
+        "NASA Earth Observatory , Sentinel Playground, COPERNICUS",
+        translate('title.name'),
+        "landscape_infographic.jpg");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.land'), isDark);
+    });
+  }
+
+  _Six(bool isDark) async {
+    await _read(5);
+    LGConnection().openBalloon(
+        projectname[5],
+        translate('Track.So2'),
+        translate("info.So2.date"),
+        240,
+        translate("info.description") + " " + translate("info.So2.description"),
+        "Sentinel EO Browser, GDACS, Twitter | Platform ADAM",
+        translate('title.name'),
+        "so2_infographic.gif");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.So2'), isDark);
+    });
+  }
+
+  _Seven(bool isDark) async {
+    await _read(6);
+    LGConnection().openBalloon(
+        projectname[6],
+        translate('Track.situation'),
+        translate("info.situation.date"),
+        270,
+        translate("info.description") +
+            " " +
+            translate("info.situation.description"),
+        "Instituto Geográfico Nacional, GDACS, ERCC Portal",
+        translate('title.name'),
+        "situation_infographic.png");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.situation'), isDark);
+    });
+  }
+
+  _Eight(bool isDark) async {
+    await _read(7);
+    LGConnection().openBalloon(
+        projectname[7],
+        translate('Track.located'),
+        translate("info.located.date"),
+        230,
+        translate("info.description") +
+            " " +
+            translate("info.located.description"),
+        "Instituto Geográfico Nacional",
+        translate('title.name'),
+        "locatedevents_infographic.jpg");
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+      _showToast(translate('Track.located'), isDark);
+    });
+  }
+
+  playOrbit() async {
+    await LGConnection()
+        .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(LookAt(
+            double.parse((await longvalue).toStringAsFixed(2)),
+            double.parse((await latvalue).toStringAsFixed(2)),
+            "30492.665945696469",
+            "0",
+            "0"))))
+        .then((value) async {
+      await LGConnection().startOrbit();
+    });
+  }
+
+  stopOrbit() async {
+    await LGConnection().stopOrbit();
   }
 
   void _showToast(String x, bool blackandwhite) {
@@ -769,7 +929,41 @@ class _SendtoLGState extends State<SendtoLG> {
                                             'assets/icons/demo_dark.png')
                                         : Image.asset('assets/icons/demo.png'),
                                     iconSize: 70,
-                                    onPressed: () => {},
+                                    onPressed: () async {
+                                      // A demo of all buttons
+                                      _One(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                      _Two(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                      _Three(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                      _Four(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                      _Five(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                      _Six(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                      _Seven(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                      _Eight(themeNotifier.isDark).then(
+                                          (value) => playOrbit(),
+                                          await Future.delayed(
+                                              Duration(seconds: 50)));
+                                    },
                                   )))
                     ],
                   ),
@@ -1044,6 +1238,59 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
 
       return await client.execute(
           'echo "flytoview=${flyto.generateLinearString()}" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  buildOrbit(String content) async {
+    dynamic credencials = await _getCredentials();
+
+    String localPath = await _localPath;
+    File localFile = File('$localPath/Orbit.kml');
+    localFile.writeAsString(content);
+
+    String filePath = '$localPath/Orbit.kml';
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      await client.connectSFTP();
+      await client.sftpUpload(
+        path: filePath,
+        toPath: '/var/www/html',
+        callback: (progress) {
+          print('Sent $progress');
+        },
+      );
+      return await client.execute(
+          "echo '\nhttp://lg1:81/Orbit.kml' >> /var/www/html/kmls.txt");
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  startOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
