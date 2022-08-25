@@ -153,7 +153,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _One(bool isDark) async {
     await _read(0);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[0],
         translate('Track.hist'),
         translate("info.hist.date"),
@@ -191,7 +191,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _Two(bool isDark) async {
     await _read(1);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[1],
         translate('Track.lava'),
         translate("info.lava.date"),
@@ -217,7 +217,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _Three(bool isDark) async {
     await _read(2);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[2],
         translate('Track.prehistoric'),
         translate("info.prehistoric.date"),
@@ -243,7 +243,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _Four(bool isDark) async {
     await _read(3);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[3],
         translate('Track.aff'),
         translate("info.aff.date"),
@@ -267,7 +267,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _Five(bool isDark) async {
     await _read(4);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[4],
         translate('Track.land'),
         translate("info.land.date"),
@@ -293,7 +293,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _Six(bool isDark) async {
     await _read(5);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[5],
         translate('Track.So2'),
         translate("info.So2.date"),
@@ -317,7 +317,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _Seven(bool isDark) async {
     await _read(6);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[6],
         translate('Track.situation'),
         translate("info.situation.date"),
@@ -343,7 +343,7 @@ class _SendtoLGState extends State<SendtoLG> {
 
   _Eight(bool isDark) async {
     await _read(7);
-    LGConnection().openBalloon(
+    await LGConnection().openBalloon(
         projectname[7],
         translate('Track.located'),
         translate("info.located.date"),
@@ -442,7 +442,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[0]);
                               await _read(0);
-                              LGConnection().openBalloon(
+                              await LGConnection().openBalloon(
                                   projectname[0],
                                   translate('Track.hist'),
                                   translate("info.hist.date"),
@@ -496,7 +496,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[1]);
                               await _read(1);
-                              LGConnection().openBalloon(
+                              await LGConnection().openBalloon(
                                   projectname[1],
                                   translate('Track.lava'),
                                   translate("info.lava.date"),
@@ -554,7 +554,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[2]);
                             await _read(2);
-                            LGConnection().openBalloon(
+                            await LGConnection().openBalloon(
                                 projectname[2],
                                 translate('Track.prehistoric'),
                                 translate("info.prehistoric.date"),
@@ -607,7 +607,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[3]);
                             await _read(3);
-                            LGConnection().openBalloon(
+                            await LGConnection().openBalloon(
                                 projectname[3],
                                 translate('Track.aff'),
                                 translate("info.aff.date"),
@@ -667,7 +667,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[4]);
                               await _read(4);
-                              LGConnection().openBalloon(
+                              await LGConnection().openBalloon(
                                   projectname[4],
                                   translate('Track.land'),
                                   translate("info.land.date"),
@@ -721,7 +721,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             onPressed: () async {
                               savekml_Task(projectname[5]);
                               await _read(5);
-                              LGConnection().openBalloon(
+                              await LGConnection().openBalloon(
                                   projectname[5],
                                   translate('Track.So2'),
                                   translate("info.So2.date"),
@@ -779,7 +779,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[6]);
                             await _read(6);
-                            LGConnection().openBalloon(
+                            await LGConnection().openBalloon(
                                 projectname[6],
                                 translate('Track.situation'),
                                 translate("info.situation.date"),
@@ -832,7 +832,7 @@ class _SendtoLGState extends State<SendtoLG> {
                           onPressed: () async {
                             savekml_Task(projectname[7]);
                             await _read(7);
-                            LGConnection().openBalloon(
+                            await LGConnection().openBalloon(
                                 projectname[7],
                                 translate('Track.located'),
                                 translate("info.located.date"),

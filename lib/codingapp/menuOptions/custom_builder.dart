@@ -146,10 +146,10 @@ class _CustomBuilderState extends State<CustomBuilder>
               )
             ]));
 
-    setState(() {
+    setState(() async {
       dateRange = newDateRange ?? dateRange;
       resetchecks();
-      LGConnection().openBalloon(
+      await LGConnection().openBalloon(
           translate("drawer.custom"),
           '${start.year}/${start.month}/${start.day} - ${end.year}/${end.month}/${end.day}',
           translate("info.description") + " " + translate("tour.custom"),
