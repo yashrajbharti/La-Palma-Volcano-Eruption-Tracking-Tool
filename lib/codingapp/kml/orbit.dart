@@ -20,7 +20,7 @@ class Orbit {
                   <tilt>60</tilt>
                   <range>${range}</range>
                   <gx:fovy>60</gx:fovy> 
-                  <altitude>6341.7995674</altitude> 
+                  <altitude>3341.7995674</altitude> 
                   <gx:altitudeMode>absolute</gx:altitudeMode>
               </LookAt>
             </gx:FlyTo>

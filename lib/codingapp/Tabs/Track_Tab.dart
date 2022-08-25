@@ -166,7 +166,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "historic_infographic.png");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.hist'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Two(isDark);
       });
@@ -188,7 +192,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "lavaflow_infographic.jpg");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.lava'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Three(isDark);
       });
@@ -210,7 +218,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "prehistoric_infographic.png");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.prehistoric'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Four(isDark);
       });
@@ -230,7 +242,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "affectedareas_infographic.jpg");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.aff'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Five(isDark);
       });
@@ -252,7 +268,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "landscape_infographic.jpg");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.land'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Six(isDark);
       });
@@ -272,7 +292,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "so2_infographic.gif");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.So2'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Seven(isDark);
       });
@@ -294,7 +318,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "situation_infographic.png");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.situation'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Eight(isDark);
       });
@@ -316,7 +344,11 @@ class _SendtoLGState extends State<SendtoLG> {
         "locatedevents_infographic.jpg");
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.located'), isDark);
-      await playOrbit();
+      await LGConnection().cleanOrbit();
+      await Future.delayed(Duration(seconds: 6)).then((value) {
+        _showToast(translate('map.buildorbit'), isDark);
+        playOrbit();
+      });
     });
   }
 
@@ -1289,6 +1321,25 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
     try {
       await client.connect();
       return await client.execute('echo "playtour=Orbit" > /tmp/query.txt');
+    } catch (e) {
+      print('Could not connect to host LG');
+      return Future.error(e);
+    }
+  }
+
+  cleanOrbit() async {
+    dynamic credencials = await _getCredentials();
+
+    SSHClient client = SSHClient(
+      host: '${credencials['ip']}',
+      port: int.parse('${credencials['port']}'),
+      username: '${credencials['username']}',
+      passwordOrKey: '${credencials['pass']}',
+    );
+
+    try {
+      await client.connect();
+      return await client.execute('echo "" > /tmp/query.txt');
     } catch (e) {
       print('Could not connect to host LG');
       return Future.error(e);
