@@ -52,6 +52,7 @@ class SettingsState extends State<Settings> {
         connectionStatus = true;
       });
       // open logos
+      await LGConnection().openDemoLogos();
       await client.disconnect();
     } catch (e) {
       showAlertDialog(translate("Settings.alert3"),
@@ -378,10 +379,8 @@ class SettingsState extends State<Settings> {
                             ],
                           ),
                           onPressed: () {
-                            connect().then((value) {
-                              FocusManager.instance.primaryFocus?.unfocus();
-                              LGConnection().openDemoLogos();
-                            });
+                            connect();
+                            FocusManager.instance.primaryFocus?.unfocus();
                           },
                           style: ElevatedButton.styleFrom(
                             elevation: 2,
