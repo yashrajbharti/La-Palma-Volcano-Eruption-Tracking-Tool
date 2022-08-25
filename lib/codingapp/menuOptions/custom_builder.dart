@@ -1233,9 +1233,12 @@ class _CustomBuilderState extends State<CustomBuilder>
                                   if (isOrbiting == true)
                                     {
                                       _rotationiconcontroller.forward(),
-                                      playOrbit().then((value) {
-                                        _showToast(translate('map.buildorbit'),
-                                            themeNotifier.isDark);
+                                      LGConnection().cleanOrbit().then((value) {
+                                        playOrbit().then((value) {
+                                          _showToast(
+                                              translate('map.buildorbit'),
+                                              themeNotifier.isDark);
+                                        });
                                       }).catchError((onError) {
                                         _rotationiconcontroller.stop();
                                         print('oh no $onError');
