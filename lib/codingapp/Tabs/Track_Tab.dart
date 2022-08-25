@@ -174,7 +174,19 @@ class _SendtoLGState extends State<SendtoLG> {
       await Future.delayed(Duration(seconds: 50)).then((value) {
         _Two(isDark);
       });
+    }).catchError((onError) {
+      print('oh no $onError');
+      setState(() {
+        loading = false;
+      });
+      if (onError == 'nogeodata') {
+        showAlertDialog(
+            translate('Track.alert'), translate('Track.alert2'), isDark);
+      }
+      showAlertDialog(
+          translate('Track.alert3'), translate('Track.alert4'), isDark);
     });
+    ;
   }
 
   _Two(bool isDark) async {
