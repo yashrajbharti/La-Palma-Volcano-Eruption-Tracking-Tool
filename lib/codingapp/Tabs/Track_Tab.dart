@@ -164,8 +164,12 @@ class _SendtoLGState extends State<SendtoLG> {
         "COPERNICUS, ResearchGate, Global Volcanism Program",
         translate('title.name'),
         "historic_infographic.png");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.hist'), isDark);
+      await playOrbit();
+      await Future.delayed(Duration(seconds: 50)).then((value) {
+        _Two(isDark);
+      });
     });
   }
 
@@ -182,8 +186,12 @@ class _SendtoLGState extends State<SendtoLG> {
         "COPERNICUS, Wikipedia | Cumbre Vieja",
         translate('title.name'),
         "lavaflow_infographic.jpg");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.lava'), isDark);
+      await playOrbit();
+      await Future.delayed(Duration(seconds: 50)).then((value) {
+        _Three(isDark);
+      });
     });
   }
 
@@ -200,8 +208,12 @@ class _SendtoLGState extends State<SendtoLG> {
         "ResearchGate, Global Volcanism Program",
         translate('title.name'),
         "prehistoric_infographic.png");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.prehistoric'), isDark);
+      await playOrbit();
+      await Future.delayed(Duration(seconds: 50)).then((value) {
+        _Four(isDark);
+      });
     });
   }
 
@@ -216,8 +228,12 @@ class _SendtoLGState extends State<SendtoLG> {
         "COPERNICUS",
         translate('title.name'),
         "affectedareas_infographic.jpg");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.aff'), isDark);
+      await playOrbit();
+      await Future.delayed(Duration(seconds: 50)).then((value) {
+        _Five(isDark);
+      });
     });
   }
 
@@ -234,8 +250,12 @@ class _SendtoLGState extends State<SendtoLG> {
         "NASA Earth Observatory , Sentinel Playground, COPERNICUS",
         translate('title.name'),
         "landscape_infographic.jpg");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.land'), isDark);
+      await playOrbit();
+      await Future.delayed(Duration(seconds: 50)).then((value) {
+        _Six(isDark);
+      });
     });
   }
 
@@ -250,8 +270,12 @@ class _SendtoLGState extends State<SendtoLG> {
         "Sentinel EO Browser, GDACS, Twitter | Platform ADAM",
         translate('title.name'),
         "so2_infographic.gif");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.So2'), isDark);
+      await playOrbit();
+      await Future.delayed(Duration(seconds: 50)).then((value) {
+        _Seven(isDark);
+      });
     });
   }
 
@@ -268,8 +292,12 @@ class _SendtoLGState extends State<SendtoLG> {
         "Instituto Geográfico Nacional, GDACS, ERCC Portal",
         translate('title.name'),
         "situation_infographic.png");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.situation'), isDark);
+      await playOrbit();
+      await Future.delayed(Duration(seconds: 50)).then((value) {
+        _Eight(isDark);
+      });
     });
   }
 
@@ -286,8 +314,9 @@ class _SendtoLGState extends State<SendtoLG> {
         "Instituto Geográfico Nacional",
         translate('title.name'),
         "locatedevents_infographic.jpg");
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) {
+    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
       _showToast(translate('Track.located'), isDark);
+      await playOrbit();
     });
   }
 
@@ -929,31 +958,9 @@ class _SendtoLGState extends State<SendtoLG> {
                                             'assets/icons/demo_dark.png')
                                         : Image.asset('assets/icons/demo.png'),
                                     iconSize: 70,
-                                    onPressed: () async {
+                                    onPressed: () {
                                       // A demo of all buttons
-                                      _One(themeNotifier.isDark)
-                                          .then(
-                                              (value) => playOrbit(),
-                                              await Future.delayed(
-                                                  Duration(seconds: 50)))
-                                          .then((value) async =>
-                                              _Two(themeNotifier.isDark).then(
-                                                  (value) => playOrbit(),
-                                                  await Future.delayed(
-                                                      Duration(seconds: 50))))
-                                          .then((value) async =>
-                                              _Three(themeNotifier.isDark).then(
-                                                  (value) => playOrbit(),
-                                                  await Future.delayed(
-                                                      Duration(seconds: 50))))
-                                          .then((value) async =>
-                                              _Four(themeNotifier.isDark).then(
-                                                  (value) => playOrbit(),
-                                                  await Future.delayed(Duration(seconds: 50))))
-                                          .then((value) async => _Five(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))))
-                                          .then((value) async => _Six(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))))
-                                          .then((value) async => _Seven(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))))
-                                          .then((value) async => _Eight(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))));
+                                      _One(themeNotifier.isDark);
                                     },
                                   )))
                     ],
