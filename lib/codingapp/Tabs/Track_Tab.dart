@@ -896,7 +896,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                       loading = false;
                                     });
                                     retryButton(
-                                        kml.mount(), finalname, _duration);
+                                        kml.mount(), finalname, _duration / 2);
                                     DefaultTabController.of(context)
                                         ?.animateTo(2);
                                   }).catchError((onError) {
@@ -931,38 +931,29 @@ class _SendtoLGState extends State<SendtoLG> {
                                     iconSize: 70,
                                     onPressed: () async {
                                       // A demo of all buttons
-                                      _One(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
-                                      _Two(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
-                                      _Three(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
-                                      _Four(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
-                                      _Five(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
-                                      _Six(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
-                                      _Seven(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
-                                      _Eight(themeNotifier.isDark).then(
-                                          (value) => playOrbit(),
-                                          await Future.delayed(
-                                              Duration(seconds: 50)));
+                                      _One(themeNotifier.isDark)
+                                          .then(
+                                              (value) => playOrbit(),
+                                              await Future.delayed(
+                                                  Duration(seconds: 50)))
+                                          .then((value) async =>
+                                              _Two(themeNotifier.isDark).then(
+                                                  (value) => playOrbit(),
+                                                  await Future.delayed(
+                                                      Duration(seconds: 50))))
+                                          .then((value) async =>
+                                              _Three(themeNotifier.isDark).then(
+                                                  (value) => playOrbit(),
+                                                  await Future.delayed(
+                                                      Duration(seconds: 50))))
+                                          .then((value) async =>
+                                              _Four(themeNotifier.isDark).then(
+                                                  (value) => playOrbit(),
+                                                  await Future.delayed(Duration(seconds: 50))))
+                                          .then((value) async => _Five(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))))
+                                          .then((value) async => _Six(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))))
+                                          .then((value) async => _Seven(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))))
+                                          .then((value) async => _Eight(themeNotifier.isDark).then((value) => playOrbit(), await Future.delayed(Duration(seconds: 50))));
                                     },
                                   )))
                     ],
