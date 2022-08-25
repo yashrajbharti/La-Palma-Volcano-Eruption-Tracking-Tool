@@ -5,7 +5,7 @@ class Orbit {
     double heading = double.parse(marker.heading);
     int orbit = 0;
     String content = '';
-    String range = '80000';
+    String range = '40000';
 
     while (orbit <= 36) {
       if (heading >= 360) heading -= 360;

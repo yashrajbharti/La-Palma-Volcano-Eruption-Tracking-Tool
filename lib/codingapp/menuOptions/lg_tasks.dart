@@ -377,7 +377,7 @@ class _LGtasksState extends State<LGtasks> {
                                     ),
                                     onPressed: () async {
                                       LGConnection()
-                                          .deletelogos()
+                                          .cleanlogos()
                                           .catchError((onError) {
                                         print('oh no $onError');
                                         if (onError == 'nogeodata') {
@@ -753,7 +753,7 @@ class LGConnection {
     }
   }
 
-  Future deletelogos() async {
+  Future cleanlogos() async {
     dynamic credencials = await _getCredentials();
 
     SSHClient client = SSHClient(

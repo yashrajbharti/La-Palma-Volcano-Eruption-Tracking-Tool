@@ -506,7 +506,7 @@ class LGConnection {
 	</Folder>
 </Document>
 </kml>
-    ''';
+''';
     try {
       await client.connect();
       return await client
