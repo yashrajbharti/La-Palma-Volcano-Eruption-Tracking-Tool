@@ -498,7 +498,7 @@ class LGConnection {
   ''';
     try {
       await client.connect();
-      await client
+      return await client
           .execute("echo '$openLogoKML' > /var/www/html/kml/slave_$rigs.kml");
     } catch (e) {
       return Future.error(e);
