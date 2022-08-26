@@ -485,27 +485,17 @@ class LGConnection {
 		<ScreenOverlay id="abc">
 			<name>VolTrac</name>
 			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/alllogos.jpg</href>
 			</Icon>
 			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
-			<screenXY x="0.2" y="0.98" xunits="fraction" yunits="fraction"/>
-			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
-			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
-		</ScreenOverlay>
-    <ScreenOverlay id="def">
-			<name>Logos</name>
-			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/logos.png</href>
-			</Icon>
-			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
-			<screenXY x="0" y="0.75" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0" y="0.98" xunits="fraction" yunits="fraction"/>
 			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
 			<size x="0" y="0" xunits="pixels" yunits="fraction"/>
 		</ScreenOverlay>
 	</Folder>
 </Document>
 </kml>
-''';
+  ''';
     try {
       await client.connect();
       await client
