@@ -1034,7 +1034,7 @@ class LGConnection {
       passwordOrKey: '${credencials['pass']}',
     );
     int rigs = 3;
-    rigs = ((int.parse(credencials['numberofrigs']) + 1) / 2) as int;
+    rigs = (int.parse(credencials['numberofrigs']) / 2).floor() + 1;
     String openBalloonKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">

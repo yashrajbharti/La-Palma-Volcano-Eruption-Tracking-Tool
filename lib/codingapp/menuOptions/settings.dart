@@ -465,7 +465,7 @@ class LGConnection {
       passwordOrKey: '${credencials['pass']}',
     );
     int rigs = 4;
-    rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1) as int;
+    rigs = (int.parse(credencials['numberofrigs']) / 2).floor() + 2;
     String openLogoKML = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -498,7 +498,7 @@ class LGConnection {
   ''';
     try {
       await client.connect();
-      return await client
+      await client
           .execute("echo '$openLogoKML' > /var/www/html/kml/slave_$rigs.kml");
     } catch (e) {
       return Future.error(e);

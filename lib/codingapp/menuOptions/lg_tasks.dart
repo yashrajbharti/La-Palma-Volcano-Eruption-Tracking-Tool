@@ -769,7 +769,7 @@ class LGConnection {
   <Document>
   </Document>
 </kml>''';
-    rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1) as int;
+    rigs = (int.parse(credencials['numberofrigs']) / 2).floor() + 2;
     try {
       await client.connect();
       return await client
@@ -908,7 +908,7 @@ fi
       passwordOrKey: '${credencials['pass']}',
     );
     int rigs = 3;
-    rigs = ((int.parse(credencials['numberofrigs']) + 1) / 2) as int;
+    rigs = (int.parse(credencials['numberofrigs']) / 2).floor() + 1;
     try {
       await client.connect();
       return await client
