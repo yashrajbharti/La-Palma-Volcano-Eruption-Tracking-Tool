@@ -762,14 +762,14 @@ class LGConnection {
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
-    String rigs = "4";
+    int rigs = 4;
     String blank = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
   <Document>
   </Document>
 </kml>''';
-    rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1).toString();
+    rigs = (((int.parse(credencials['numberofrigs']) + 1) / 2) + 1) as int;
     try {
       await client.connect();
       return await client
@@ -907,8 +907,8 @@ fi
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
-    String rigs = "3";
-    rigs = ((int.parse(credencials['numberofrigs']) + 1) / 2).toString();
+    int rigs = 3;
+    rigs = ((int.parse(credencials['numberofrigs']) + 1) / 2) as int;
     try {
       await client.connect();
       return await client
