@@ -55,10 +55,10 @@ android {
     }
 signingConfigs {
     release {
-        keyAlias ${{ secrets.RELEASE_KEY_ALIAS }}
-        keyPassword ${{ secrets.RELEASE_KEY_PASSWORD }}
-        storeFile ${{ secrets.RELEASE_KEYSTORE_PATH }}   
-        storePassword ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+        keyAlias secrets.RELEASE_KEY_ALIAS
+        keyPassword secrets.RELEASE_KEY_PASSWORD
+        storeFile secrets.RELEASE_KEYSTORE_PATH   
+        storePassword secrets.RELEASE_KEYSTORE_PASSWORD
     }
 }
 buildTypes {
