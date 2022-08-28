@@ -1,5 +1,5 @@
 on: push
-name: VolTrac APK (unsigned)
+name: Build
 jobs:
   build:
     name: Build APK
