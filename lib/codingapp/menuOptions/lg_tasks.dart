@@ -226,9 +226,9 @@ class _LGtasksState extends State<LGtasks> {
                                           blackandwhite);
                                     });
                                   } else if (operation == "Reset") {
-                                    LGConnection()
-                                        .resetRefresh()
-                                        .catchError((onError) {
+                                    LGConnection().resetRefresh().then((value) {
+                                      LGConnection().rebootLG();
+                                    }).catchError((onError) {
                                       print('oh no $onError');
                                       showAlertDialog(
                                           translate("Tasks.alert5"),
@@ -237,9 +237,9 @@ class _LGtasksState extends State<LGtasks> {
                                           blackandwhite);
                                     });
                                   } else if (operation == "Set") {
-                                    LGConnection()
-                                        .setRefresh()
-                                        .catchError((onError) {
+                                    LGConnection().setRefresh().then((value) {
+                                      LGConnection().rebootLG();
+                                    }).catchError((onError) {
                                       print('oh no $onError');
                                       showAlertDialog(
                                           translate("Tasks.alert5"),
@@ -849,8 +849,8 @@ fi
     );
 
     try {
-      await client.connect();
       for (var i = int.parse(credencials['numberofrigs']); i >= 1; i--) {
+        await client.connect();
         await client.execute(
             'sshpass -p ${credencials['pass']} ssh -t lg$i "echo ${credencials['pass']} | sudo -S reboot"'
             // "'/home/${credencials['username']}/bin/lg-reboot' > /home/${credencials['username']}/log.txt"
@@ -927,33 +927,28 @@ fi
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
+    try {
+      const search = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
+      const replace =
+          '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
+      final command =
+          'echo ${credencials['pass']} | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
 
-    const search = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
-    const replace =
-        '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
-    final command =
-        'echo ${credencials['pass']} | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
+      final clear =
+          'echo ${credencials['pass']} | sudo -S sed -i "s/$replace/$search/" ~/earth/kml/slave/myplaces.kml';
+      await client.connect();
+      for (var i = 2; i <= credencials['numberofrigs']; i++) {
+        final clearCmd = clear.replaceAll('{{slave}}', i.toString());
+        final cmd = command.replaceAll('{{slave}}', i.toString());
+        String query =
+            'sshpass -p ${credencials['pass']} ssh -t lg$i \'{{cmd}}\'';
 
-    final clear =
-        'echo ${credencials['pass']} | sudo -S sed -i "s/$replace/$search/" ~/earth/kml/slave/myplaces.kml';
-
-    for (var i = 2; i <= credencials['numberofrigs']; i++) {
-      final clearCmd = clear.replaceAll('{{slave}}', i.toString());
-      final cmd = command.replaceAll('{{slave}}', i.toString());
-      String query =
-          'sshpass -p ${credencials['pass']} ssh -t lg$i \'{{cmd}}\'';
-
-      try {
-        await client.connect();
         await client.execute(query.replaceAll('{{cmd}}', clearCmd));
-        return await client.execute(query.replaceAll('{{cmd}}', cmd));
-      } catch (e) {
-        // ignore: avoid_print
-        return Future.error(e);
+        await client.execute(query.replaceAll('{{cmd}}', cmd));
       }
+    } catch (e) {
+      return Future.error(e);
     }
-
-    await rebootLG();
   }
 
   Future resetRefresh() async {
@@ -965,27 +960,22 @@ fi
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
+    try {
+      const search =
+          '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
+      const replace = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
 
-    const search =
-        '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
-    const replace = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
+      final clear =
+          'echo ${credencials['pass']} | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
+      await client.connect();
+      for (var i = 2; i <= credencials['numberofrigs']; i++) {
+        final cmd = clear.replaceAll('{{slave}}', i.toString());
+        String query = 'sshpass -p ${credencials['pass']} ssh -t lg$i \'$cmd\'';
 
-    final clear =
-        'echo ${credencials['pass']} | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
-
-    for (var i = 2; i <= credencials['numberofrigs']; i++) {
-      final cmd = clear.replaceAll('{{slave}}', i.toString());
-      String query = 'sshpass -p ${credencials['pass']} ssh -t lg$i \'$cmd\'';
-
-      try {
-        await client.connect();
-        return await client.execute(query);
-      } catch (e) {
-        // ignore: avoid_print
-        return Future.error(e);
+        await client.execute(query);
       }
+    } catch (e) {
+      return Future.error(e);
     }
-
-    await rebootLG();
   }
 }

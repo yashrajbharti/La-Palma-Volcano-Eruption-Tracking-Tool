@@ -151,7 +151,7 @@ class _CustomBuilderState extends State<CustomBuilder>
       resetchecks();
       await LGConnection().openBalloon(
           translate("drawer.custom"),
-          '${start.year}/${start.month}/${start.day} - ${end.year}/${end.month}/${end.day}',
+          '${newDateRange!.start.year}/${newDateRange.start.month}/${newDateRange.start.day} - ${newDateRange.end.year}/${newDateRange.end.month}/${newDateRange.end.day}',
           translate("info.description") + " " + translate("tour.custom"),
           "COPERNICUS, Instituto Geográfico Nacional, Global Volcanism Program",
           translate('title.name'));
