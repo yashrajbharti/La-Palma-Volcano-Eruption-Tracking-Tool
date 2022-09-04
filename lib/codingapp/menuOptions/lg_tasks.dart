@@ -918,7 +918,7 @@ fi
     }
   }
 
-  Future<void> setRefresh() async {
+  Future setRefresh() async {
     dynamic credencials = await _getCredentials();
 
     SSHClient client = SSHClient(
@@ -928,36 +928,35 @@ fi
       passwordOrKey: '${credencials['pass']}',
     );
 
-    final pw = credencials['pass'];
-
     const search = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
     const replace =
         '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
     final command =
-        'echo $pw | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
+        'echo ${credencials['pass']} | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
 
     final clear =
-        'echo $pw | sudo -S sed -i "s/$replace/$search/" ~/earth/kml/slave/myplaces.kml';
+        'echo ${credencials['pass']} | sudo -S sed -i "s/$replace/$search/" ~/earth/kml/slave/myplaces.kml';
 
     for (var i = 2; i <= credencials['numberofrigs']; i++) {
       final clearCmd = clear.replaceAll('{{slave}}', i.toString());
       final cmd = command.replaceAll('{{slave}}', i.toString());
-      String query = 'sshpass -p $pw ssh -t lg$i \'{{cmd}}\'';
+      String query =
+          'sshpass -p ${credencials['pass']} ssh -t lg$i \'{{cmd}}\'';
 
       try {
         await client.connect();
         await client.execute(query.replaceAll('{{cmd}}', clearCmd));
-        await client.execute(query.replaceAll('{{cmd}}', cmd));
+        return await client.execute(query.replaceAll('{{cmd}}', cmd));
       } catch (e) {
         // ignore: avoid_print
-        print(e);
+        return Future.error(e);
       }
     }
 
     await rebootLG();
   }
 
-  Future<void> resetRefresh() async {
+  Future resetRefresh() async {
     dynamic credencials = await _getCredentials();
 
     SSHClient client = SSHClient(
@@ -966,25 +965,24 @@ fi
       username: '${credencials['username']}',
       passwordOrKey: '${credencials['pass']}',
     );
-    final pw = credencials['pass'];
 
     const search =
         '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href><refreshMode>onInterval<\\/refreshMode><refreshInterval>2<\\/refreshInterval>';
     const replace = '<href>##LG_PHPIFACE##kml\\/slave_{{slave}}.kml<\\/href>';
 
     final clear =
-        'echo $pw | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
+        'echo ${credencials['pass']} | sudo -S sed -i "s/$search/$replace/" ~/earth/kml/slave/myplaces.kml';
 
     for (var i = 2; i <= credencials['numberofrigs']; i++) {
       final cmd = clear.replaceAll('{{slave}}', i.toString());
-      String query = 'sshpass -p $pw ssh -t lg$i \'$cmd\'';
+      String query = 'sshpass -p ${credencials['pass']} ssh -t lg$i \'$cmd\'';
 
       try {
         await client.connect();
-        await client.execute(query);
+        return await client.execute(query);
       } catch (e) {
         // ignore: avoid_print
-        print(e);
+        return Future.error(e);
       }
     }
 
