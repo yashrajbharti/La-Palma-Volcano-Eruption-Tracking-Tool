@@ -1057,7 +1057,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                             stopdemo = false;
                                             isdemoactive = true;
                                           });
-                                          //  _One(themeNotifier.isDark);
+                                          _One(themeNotifier.isDark);
                                         },
                                       )))
                     ],
