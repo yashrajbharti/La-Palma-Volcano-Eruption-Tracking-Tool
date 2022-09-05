@@ -135,7 +135,10 @@
 		"orbit": "ポイントの周りを周回する",
 		"queries": "LGリグの設置に関する質問については、公式ドキュメントを確認してください。",
 		"install": "PCとVirtualBoxLGのインストール",
-		"DataKML": "サンプル KML データを視覚化します"
+		"DataKML": "サンプル KML データを視覚化します",
+		"land": "さまざまな土地タイプを表示します",
+		"SSH": "一般的な SSH コマンドとその背後にあるソース コードについては、次のドキュメントを参照してください。",
+		"SSHlink": "Liquid Galaxy SSH コマンド"
 	},
 	"info": {
 		"description": "説明：",
@@ -226,6 +229,8 @@
 		"demostop": "デモ KML の終了",
 		"DataKMLstart": "サンプル KML を開く",
 		"DataKMLstop": "サンプル KML を閉じる",
+		"Landstart": "ランドタイプの KML を開く",
+		"Landstop": "土地タイプの KML を閉じる",
 		"logo": "ロゴの表示",
 		"clean": "クリーニングのロゴ"
 	},

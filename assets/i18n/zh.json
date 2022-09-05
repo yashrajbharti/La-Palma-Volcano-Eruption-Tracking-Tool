@@ -135,7 +135,10 @@
 		"orbit": "围绕一个点运行",
 		"queries": "有关 LG 钻机安装的任何疑问，请查看官方文档。",
 		"install": "PC 和 Virtual Box LG 安装",
-		"DataKML": "可视化示例 KML 数据"
+		"DataKML": "可视化示例 KML 数据",
+		"land": "显示各种土地类型",
+		"SSH": "要了解常见的 SSH 命令及其背后的源代码，请查看以下文档。",
+		"SSHlink": "Liquid Galaxy SSH 命令"
 	},
 	"info": {
 		"description": "描述：",
@@ -226,6 +229,8 @@
 		"demostop": "关闭演示 KML",
 		"DataKMLstart": "打开示例 KML",
 		"DataKMLstop": "关闭示例 KML",
+		"Landstart": "打开土地类型 KML",
+		"Landstop": "关闭土地类型 KML",
 		"logo": "显示标志",
 		"clean": "清洁标志"
 	},

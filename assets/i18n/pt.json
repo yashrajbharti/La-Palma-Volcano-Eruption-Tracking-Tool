@@ -135,7 +135,10 @@
 		"orbit": "Orbitar em torno de um ponto",
 		"queries": "Para quaisquer dúvidas sobre a instalação do equipamento LG, verifique a documentação oficial.",
 		"install": "Instalação de PC e Virtual Box LG",
-		"DataKML": "Visualiza uma amostra de dados KML"
+		"DataKML": "Visualiza uma amostra de dados KML",
+		"land": "Exibe os vários tipos de terreno",
+		"SSH": "Para saber sobre os comandos SSH comuns e o código-fonte por trás deles, consulte a documentação a seguir.",
+		"SSHlink": "Comandos SSH Liquid Galaxy"
 	},
 	"info": {
 		"description": "Descrição:",
@@ -226,6 +229,8 @@
 		"DataKMLstart": "Abrindo KML de amostra",
 		"DataKMLstop": "Fechando KML de amostra",
 		"demostop": "Encerramento do KML de demo",
+		"Landstart": "Abrindo KML de tipos de terreno",
+		"Landstop": "Fechando KML de tipos de terreno",
 		"logo": "Exibindo logotipo",
 		"clean": "Logotipo de limpeza"
 	},

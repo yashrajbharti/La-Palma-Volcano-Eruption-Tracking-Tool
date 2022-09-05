@@ -135,7 +135,10 @@
 		"orbit": "Orbitë rreth një pike",
 		"queries": "Për çdo pyetje në lidhje me instalimin e pajisjes LG, kontrolloni dokumentacionin zyrtar.",
 		"install": "Instalimi i PC dhe Virtual Box LG",
-		"DataKML": "Vizualizon një mostër të të dhënave KML"
+		"DataKML": "Vizualizon një mostër të të dhënave KML",
+		"land": "Shfaq llojet e ndryshme të tokës",
+		"SSH": "Për të ditur për komandat e zakonshme SSH dhe kodin burimor pas tyre, kontrolloni dokumentacionin e mëposhtëm.",
+		"SSHlink": "Komandat e lëngshme Galaxy SSH"
 	},
 	"info": {
 		"description": "Përshkrim:",
@@ -226,6 +229,8 @@
 		"demostop": "Mbyllja e demo të KML",
 		"DataKMLstart": "Hapja e mostrës KML",
 		"DataKMLstop": "Mbyllja e mostrës KML",
+		"Landstart": "Hapja e llojeve të tokës KML",
+		"Landstop": "Mbyllja e llojeve të tokës KML",
 		"logo": "Shfaqja e logos",
 		"clean": "Logo e pastrimit"
 	},

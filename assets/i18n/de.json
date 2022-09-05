@@ -135,7 +135,10 @@
 		"orbit": "Orbit um einen Punkt",
 		"queries": "Bei Fragen zur Installation des LG-Rigs lesen Sie die offizielle Dokumentation.",
 		"install": "Installation von PC und Virtual Box LG",
-		"DataKML": "Visualisiert ein Beispiel für KML-Daten"
+		"DataKML": "Visualisiert ein Beispiel für KML-Daten",
+		"land": "Zeigt die verschiedenen Landtypen an",
+		"SSH": "Informationen zu den gängigen SSH-Befehlen und dem dahinter stehenden Quellcode finden Sie in der folgenden Dokumentation.",
+		"SSHlink": "Liquid Galaxy SSH-Befehle"
 	},
 	"info": {
 		"description": "Beschreibung:",
@@ -226,6 +229,8 @@
 		"demostop": "Abschließende Demo-KML",
 		"DataKMLstart": "Beispiel-KML öffnen",
 		"DataKMLstop": "Schließendes Beispiel-KML",
+		"Landstart": "Landtypen-KML öffnen",
+		"Landstop": "Schließen von Landtypen KML",
 		"logo": "Logo anzeigen",
 		"clean": "Reinigungslogo"
 	},

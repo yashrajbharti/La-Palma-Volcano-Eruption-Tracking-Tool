@@ -222,11 +222,34 @@ class _HelpScreenState extends State<HelpScreen> {
                                               255, 97, 146, 245)),
                                     ),
                                   ),
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 15.0),
+                                    child: Text(
+                                      translate("help.SSH"),
+                                      style: TextStyle(fontSize: 18),
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      _launchURL(
+                                          'https://docs.google.com/document/d/1JhzdPDLyUH4i99DmL367KoKxZhhigDLOoKHPurltgvo/edit?usp=sharing');
+                                    },
+                                    child: Text(
+                                      translate("help.SSHlink"),
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color: Color.fromARGB(
+                                              255, 97, 146, 245)),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                             Container(
-                              height: 300,
+                              height: 360,
                               child: VerticalDivider(
                                 color: Color.fromARGB(120, 74, 74, 74),
                                 thickness: 1,
@@ -400,6 +423,45 @@ class _HelpScreenState extends State<HelpScreen> {
                                                 0.34,
                                         child: Text(
                                           translate("help.orbit"),
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: themeNotifier.isDark
+                                                  ? Colors.white
+                                                  : Colors.black,
+                                              fontFamily: "GoogleSans"),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  new Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      SizedBox(
+                                        width: 12,
+                                      ),
+                                      Transform.scale(
+                                          scale: 1.24,
+                                          child: Builder(
+                                            builder: (context) => IconButton(
+                                              icon: Image.asset(
+                                                  'assets/icons/land.png'),
+                                              onPressed: null,
+                                            ),
+                                          )),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.34,
+                                        child: Text(
+                                          translate("help.land"),
                                           style: TextStyle(
                                               fontSize: 20,
                                               color: themeNotifier.isDark

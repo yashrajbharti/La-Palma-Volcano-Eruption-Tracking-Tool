@@ -36,6 +36,7 @@ class _CustomBuilderState extends State<CustomBuilder>
   double latvalue = 28.55665656297236;
   double longvalue = -17.885454520583153;
   bool tremor = false;
+  bool islandtype = false;
   bool isOrbiting = false;
   bool lavaflow = false;
   bool buildings = false;
@@ -1208,7 +1209,7 @@ class _CustomBuilderState extends State<CustomBuilder>
               Consumer<ThemeModel>(
                 builder: (context, ThemeModel themeNotifier, child) =>
                     Positioned(
-                  top: 310,
+                  top: 288.5,
                   right: 0,
                   child: Card(
                     elevation: 0,
@@ -1217,7 +1218,7 @@ class _CustomBuilderState extends State<CustomBuilder>
                           ? Color.fromARGB(255, 30, 30, 30)
                           : Color.fromARGB(255, 68, 68, 68),
                       width: 69.5,
-                      height: 175,
+                      height: 262.5,
                       child: Column(
                         children: <Widget>[
                           SizedBox(height: 6),
@@ -1321,6 +1322,63 @@ class _CustomBuilderState extends State<CustomBuilder>
                                               .then((value) {
                                             _showToast(
                                                 translate('map.DataKMLstop'),
+                                                themeNotifier.isDark);
+                                          }).catchError((onError) {
+                                            print('oh no $onError');
+                                            if (onError == 'nogeodata') {
+                                              showAlertDialog(
+                                                  translate('Track.alert'),
+                                                  translate('Track.alert2'),
+                                                  themeNotifier.isDark,
+                                                  false);
+                                            }
+                                            showAlertDialog(
+                                                translate('Track.alert3'),
+                                                translate('Track.alert4'),
+                                                themeNotifier.isDark,
+                                                false);
+                                          }),
+                                        }
+                                    }),
+                          ),
+                          Divider(),
+                          Builder(
+                            builder: (context) => IconButton(
+                                icon: Image.asset('assets/icons/land.png'),
+                                iconSize: 57,
+                                onPressed: () => {
+                                      islandtype = !islandtype,
+                                      if (islandtype == true)
+                                        {
+                                          LGConnection()
+                                              .openLandTypes()
+                                              .then((value) {
+                                            _showToast(
+                                                translate('map.Landstart'),
+                                                themeNotifier.isDark);
+                                          }).catchError((onError) {
+                                            print('oh no $onError');
+                                            if (onError == 'nogeodata') {
+                                              showAlertDialog(
+                                                  translate('Track.alert'),
+                                                  translate('Track.alert2'),
+                                                  themeNotifier.isDark,
+                                                  false);
+                                            }
+                                            showAlertDialog(
+                                                translate('Track.alert3'),
+                                                translate('Track.alert4'),
+                                                themeNotifier.isDark,
+                                                false);
+                                          }),
+                                        }
+                                      else
+                                        {
+                                          LGConnection()
+                                              .cleanVisualization()
+                                              .then((value) {
+                                            _showToast(
+                                                translate('map.Landstop'),
                                                 themeNotifier.isDark);
                                           }).catchError((onError) {
                                             print('oh no $onError');
@@ -1578,6 +1636,45 @@ class LGConnection {
 </Document>
 </kml>''';
     return _createLocalFile(openLogoKML, "logo");
+  }
+
+  openLandTypes() async {
+    String openLandKML = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>dynamic world</name>
+	<open>1</open>
+	<GroundOverlay>
+		<name>land</name>
+		<Icon>
+			<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/land_types.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>28.85947318730249</north>
+			<south>28.45139977031334</south>
+			<east>-17.72049100775194</east>
+			<west>-18.01119479632906</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>legend</name>
+		<Icon>
+			<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/landlengend.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>28.57415202750893</north>
+			<south>28.50271860516366</south>
+			<east>-17.94408307826315</east>
+			<west>-18.03214619175156</west>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>
+''';
+    return _createLocalFile(openLandKML, "land");
   }
 
   Future sendToLG(String kml, String projectname) async {

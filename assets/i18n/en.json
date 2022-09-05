@@ -135,7 +135,10 @@
 		"orbit": "Orbit around a point",
 		"queries": "For any queries regarding LG rig installation check the official documentation.",
 		"install": "PC and Virtual Box LG Installation",
-		"DataKML": "Visualizes a sample KML data"
+		"DataKML": "Visualizes a sample KML data",
+		"land": "Displays the various Land-Types",
+		"SSH": "To know about the common SSH commands and the source code behind them, check the following documentation.",
+		"SSHlink": "Liquid Galaxy SSH Commands"
 	},
 	"info": {
 		"description": "Description:",
@@ -226,6 +229,8 @@
 		"demostop": "Closing Demo KML",
 		"DataKMLstart": "Opening Sample KML",
 		"DataKMLstop": "Closing Sample KML",
+		"Landstart": "Opening Land-types KML",
+		"Landstop": "Closing Land-types KML",
 		"logo": "Displaying Logo",
 		"clean": "Cleaning Logo"
 	},
