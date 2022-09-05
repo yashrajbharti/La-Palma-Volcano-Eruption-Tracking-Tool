@@ -1024,7 +1024,7 @@ class _SendtoLGState extends State<SendtoLG> {
                       ),
                       isdemoactive
                           ? Transform.scale(
-                              scale: 0.95,
+                              scale: 0.925,
                               child: Builder(
                                   builder: (context) => IconButton(
                                         icon: themeNotifier.isDark
@@ -1057,7 +1057,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                             stopdemo = false;
                                             isdemoactive = true;
                                           });
-                                          _One(themeNotifier.isDark);
+                                          //  _One(themeNotifier.isDark);
                                         },
                                       )))
                     ],
