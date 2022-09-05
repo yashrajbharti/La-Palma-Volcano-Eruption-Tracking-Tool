@@ -49,7 +49,8 @@ var _duration = 3000;
 //   "yellow_sq.png",
 //   "black_sq.png"
 // ];
-
+bool stopdemo = false;
+bool isdemoactive = false;
 bool blackandwhite = false;
 String finalname = "";
 String finaltext = "";
@@ -171,9 +172,13 @@ class _SendtoLGState extends State<SendtoLG> {
         _showToast(translate('map.buildorbit'), isDark);
         playOrbit();
       });
-      await Future.delayed(Duration(seconds: 50)).then((value) {
-        _Two(isDark);
-      });
+      if (stopdemo == false) {
+        await Future.delayed(Duration(seconds: 50)).then((value) {
+          _Two(isDark);
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     }).catchError((onError) {
       print('oh no $onError');
       setState(() {
@@ -209,9 +214,13 @@ class _SendtoLGState extends State<SendtoLG> {
         _showToast(translate('map.buildorbit'), isDark);
         playOrbit();
       });
-      await Future.delayed(Duration(seconds: 50)).then((value) {
-        _Three(isDark);
-      });
+      if (stopdemo == false) {
+        await Future.delayed(Duration(seconds: 50)).then((value) {
+          _Three(isDark);
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     });
   }
 
@@ -235,9 +244,13 @@ class _SendtoLGState extends State<SendtoLG> {
         _showToast(translate('map.buildorbit'), isDark);
         playOrbit();
       });
-      await Future.delayed(Duration(seconds: 50)).then((value) {
-        _Four(isDark);
-      });
+      if (stopdemo == false) {
+        await Future.delayed(Duration(seconds: 50)).then((value) {
+          _Four(isDark);
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     });
   }
 
@@ -259,9 +272,13 @@ class _SendtoLGState extends State<SendtoLG> {
         _showToast(translate('map.buildorbit'), isDark);
         playOrbit();
       });
-      await Future.delayed(Duration(seconds: 50)).then((value) {
-        _Five(isDark);
-      });
+      if (stopdemo == false) {
+        await Future.delayed(Duration(seconds: 50)).then((value) {
+          _Five(isDark);
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     });
   }
 
@@ -285,9 +302,13 @@ class _SendtoLGState extends State<SendtoLG> {
         _showToast(translate('map.buildorbit'), isDark);
         playOrbit();
       });
-      await Future.delayed(Duration(seconds: 50)).then((value) {
-        _Six(isDark);
-      });
+      if (stopdemo == false) {
+        await Future.delayed(Duration(seconds: 50)).then((value) {
+          _Six(isDark);
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     });
   }
 
@@ -309,9 +330,13 @@ class _SendtoLGState extends State<SendtoLG> {
         _showToast(translate('map.buildorbit'), isDark);
         playOrbit();
       });
-      await Future.delayed(Duration(seconds: 50)).then((value) {
-        _Seven(isDark);
-      });
+      if (stopdemo == false) {
+        await Future.delayed(Duration(seconds: 50)).then((value) {
+          _Seven(isDark);
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     });
   }
 
@@ -335,9 +360,13 @@ class _SendtoLGState extends State<SendtoLG> {
         _showToast(translate('map.buildorbit'), isDark);
         playOrbit();
       });
-      await Future.delayed(Duration(seconds: 50)).then((value) {
-        _Eight(isDark);
-      });
+      if (stopdemo == false) {
+        await Future.delayed(Duration(seconds: 50)).then((value) {
+          _Eight(isDark);
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     });
   }
 
@@ -433,7 +462,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -487,7 +516,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -546,7 +575,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -599,7 +628,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -658,7 +687,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -712,7 +741,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -771,7 +800,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -824,7 +853,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               elevation: 2,
                               shadowColor: themeNotifier.isDark
                                   ? Colors.black
-                                  : Colors.grey.withOpacity(0.5),
+                                  : Colors.grey.withOpacity(0.3),
                               primary: themeNotifier.isDark
                                   ? ui.Color.fromARGB(255, 43, 43, 43)
                                   : ui.Color.fromARGB(255, 220, 220, 220),
@@ -931,7 +960,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                   elevation: 2,
                                   shadowColor: themeNotifier.isDark
                                       ? Colors.black
-                                      : Colors.grey.withOpacity(0.5),
+                                      : Colors.grey.withOpacity(0.3),
                                   primary: themeNotifier.isDark
                                       ? ui.Color.fromARGB(255, 30, 30, 30)
                                       : Colors.white,
@@ -993,20 +1022,44 @@ class _SendtoLGState extends State<SendtoLG> {
                       SizedBox(
                         width: 18,
                       ),
-                      Transform.scale(
-                          scale: 1.25,
-                          child: Builder(
-                              builder: (context) => IconButton(
-                                    icon: themeNotifier.isDark
-                                        ? Image.asset(
-                                            'assets/icons/demo_dark.png')
-                                        : Image.asset('assets/icons/demo.png'),
-                                    iconSize: 70,
-                                    onPressed: () {
-                                      // A demo of all buttons
-                                      _One(themeNotifier.isDark);
-                                    },
-                                  )))
+                      isdemoactive
+                          ? Transform.scale(
+                              scale: 0.95,
+                              child: Builder(
+                                  builder: (context) => IconButton(
+                                        icon: themeNotifier.isDark
+                                            ? Image.asset(
+                                                'assets/icons/stop-button-black.png')
+                                            : Image.asset(
+                                                'assets/icons/stop-button.png'),
+                                        iconSize: 70,
+                                        onPressed: () {
+                                          // A demo of all buttons
+                                          setState(() {
+                                            stopdemo = true;
+                                            isdemoactive = false;
+                                          });
+                                        },
+                                      )))
+                          : Transform.scale(
+                              scale: 1.25,
+                              child: Builder(
+                                  builder: (context) => IconButton(
+                                        icon: themeNotifier.isDark
+                                            ? Image.asset(
+                                                'assets/icons/demo_dark.png')
+                                            : Image.asset(
+                                                'assets/icons/demo.png'),
+                                        iconSize: 70,
+                                        onPressed: () {
+                                          // A demo of all buttons
+                                          setState(() {
+                                            stopdemo = false;
+                                            isdemoactive = true;
+                                          });
+                                          _One(themeNotifier.isDark);
+                                        },
+                                      )))
                     ],
                   ),
                 ],
