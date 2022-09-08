@@ -191,5 +191,5 @@ The La Palma Volcano Eruption Tracking Tool is licensed under the [MIT license](
 Check out our [Privacy Policy](https://github.com/Alexevers/Alejandro-Android-Application-Refurbishment/blob/GSOC-2022-Apps/La%20Palma%20Volcano%20Tracking%20Tool/PrivacyPolicy.md) to get more information about the application.
       
 <p align="center">
-  Copyright © 2022 [Yash Raj Bharti](https://yashrajbharti.github.io/portfolio/)
+  Copyright © 2022 <a href="https://yashrajbharti.github.io/portfolio/" target="_blank">Yash Raj Bharti</a>
 </p>
