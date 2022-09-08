@@ -19,7 +19,7 @@
   <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/qr-code.png" height="350px">
 </p>
   
-## Summary
+## Table of Contents
 
 - **[About VolTrac](#about-voltrac)**
 - **[App Features](#app-features)**
@@ -60,7 +60,7 @@ Lastly, the app has an info tab that lists helpful information along with the so
 
 #### Steps:
 * Download and install the app using this [Play Store link](https://play.google.com/store/apps/details?id=lapalma.voltrac). Alternatively, you can scan the QR code showcased at top to download and install the app.
-
+* To connect to the Liquid Galaxy, tap on menu icon and go to Connection Manager; then fill the details similar to below:
 
 
 ## Guide for Open Source Contributors
