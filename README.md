@@ -34,7 +34,7 @@
     
 ## About VolTrac
 
-* The La Palma Volcano Eruption Tracking Tool is being started as a Google Summer of Code 2022 project with the Liquid Galaxy Organization. Details can be viewed [here](https://summerofcode.withgoogle.com/programs/2022/projects/YsfWtGqw).
+* The La Palma Volcano Eruption Tracking Tool is being started as a **Google Summer of Code 2022 project with the Liquid Galaxy Organization**. Details can be viewed [here](https://summerofcode.withgoogle.com/programs/2022/projects/YsfWtGqw).
 * La Palma VolTrac is an app built on the Flutter framework that allows the Visualization of various Tracks, such as Historic, Lava Flow, Affected Areas, Pre-historic, Landscape, Sulphur Dioxide Emissions, Situation, and Located Events map, for La Palmas onto the Liquid Galaxy. 
 The project presents multiple layers of information on the events that occurred in the eruption of the Cumbre Vieja volcano in La Palma during the fall of 2021. 
 * Data such as the evolution of lava flows and many more are presented in a graphical and interactive way on the Liquid Galaxy platform, a visualization cluster based on Google Earth.
