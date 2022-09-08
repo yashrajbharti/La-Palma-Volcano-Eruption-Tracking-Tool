@@ -23,8 +23,8 @@
 
 - **[About VolTrac](#about-voltrac)**
 - **[App Features](#app-features)**
-- **[Running the app](#running-the-app)**
-- **[Connecting to the Liquid Galaxy](#connecting-to-the-liquid-galaxy)**
+- **[Running Play Store app](#running-play-store-app)**
+- **[Building from source](#building-from-source)**
 - **[Setting up the rig](#setting-up-the-rig)**
 - **[Guide for Open Source Contributors](#guide-for-open-source-contributors)**
 - **[License](#license)**
@@ -52,17 +52,104 @@ Lastly, the app has an info tab that lists helpful information along with the so
 * Comes with Day and Night theme switch.  
 * One can seemlessly control the Google Earth of the Liquid Galaxy by performing touch interactions on the Google Maps of the VolTrac app.
   
-## Running the app
+## Running Play Store app
   
-#### Prerequisites
+#### Prerequisites:
   
 * 10-inch Android Tablet
 
 #### Steps:
 * Download and install the app using this [Play Store link](https://play.google.com/store/apps/details?id=lapalma.voltrac). Alternatively, you can scan the QR code showcased at top to download and install the app.
 * To connect to the Liquid Galaxy, tap on menu icon and go to Connection Manager; then fill the details similar to below:
+<p align="center">
+  <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/connect.jpeg" height="350px">
+  </p>
+    
+* Now simply explore the wide variety of KML visualizations possible through the Track tab and the Custom Builder.
+  
+## Building from source
 
+#### Prerequisites:
 
+* Android Studio, Visual Studio Code or another IDE that supports Flutter development
+* Flutter SDK
+* Android SDK
+* Android device or emulator
+* Git
+  
+Documentation on how to set up Flutter SDK and its environment can be found [here](https://flutter.dev/docs/get-started/install). Make sure to have [Git](https://git-scm.com/) and [Flutter](https://flutter.dev) installed in your machine before proceeding.
+    
+#### Steps:
+  
+* Clone the repository via the following terminal command:
+  
+```bash
+$ git clone https://github.com/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-Tool.git
+$ cd La-Palma-Volcano-Eruption-Tracking-Tool
+```
+  
+* After you have successfully cloned the project, set up Google Maps API Key as La Palma VolTrac uses [Google Maps Android API](https://developers.google.com/maps/documentation/android-sdk/overview?hl=pt-br) as the map service. To use Google Maps you required an **API KEY**. To get this key you need to:
+
+1. Have a Google Account
+2. Create a Google Cloud Project
+3. Open Google Cloud Console
+4. Enable Maps Android SDK
+5. Generate an API KEY
+
+With the key in hands, the next step is placing the key inside the app. Go to *android/app/main* and edit the **AndroidManifest.xml**.
+
+Replace the **PLACE_HERE_YOUR_API_KEY** with the key you just created.
+
+```XML
+<application
+        android:label="lapalmavoltrac"
+        android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="PLACE_HERE_YOUR_API_KEY"/>
+        
+```  
+    
+* To run the code, ppen a terminal and navigate to the project root directory. First you need to install the packages by running:
+  
+```bash
+$ flutter pub get
+```
+  
+* Now we check if our devices are connected and if all the environment is correct by the following terminal command:
+  
+```bash
+$ flutter doctor
+```
+ 
+  
+*  After this, we run our app by using the following command:
+
+> ❗ Remember that you must have a tablet device connected or an android tablet emulator running in order to run the app.
+
+```bash
+$ flutter run
+```
+   
+* To build the APK, use the follwoing terminal command:
+  
+```bash
+$ flutter build apk
+```
+   
+> ⓘ  Once done, the APK file may be found into the `/build/app/outputs/flutter-apk/` directory, named `app-release.apk`.
+    
+* Finally setup the connection with the Liquid Galaxy in the same way as we did previously.  
+   
+## Setting up the rig
+
+An important step to take is configure the slave screens for refreshing when setting solo KMLs.
+
+To set it up, head to the LG Tasks screen by pressing the menu icon.
+
+In the many buttons present on the LG Tasks screen, you shall see the buttons `SET SLAVES REFRESH` and `RESET SLAVES REFRESH`. The first one will setup your slave screens to refresh its solo KML every 2 seconds. The second one will make your slaves stop refreshing.
+  
+> ❗ _Both actions will **reboot** your Liquid Galaxy, so the changes may be applied._
+      
 ## Guide for Open Source Contributors
 
 #### To Edit a particular translation
@@ -89,3 +176,9 @@ Lastly, the app has an info tab that lists helpful information along with the so
             }),
 ```
 * Make sure to change "en" (present at three places) and flag to the language code and flag of the language you're adding.
+    
+### License
+
+The La Palma Volcano Eruption Tracking Tool is licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    
+Copyright © 2022 [Yash Raj Bharti]([https://www.linkedin.com/in/karine-pistili](https://yashrajbharti.github.io/portfolio/)
