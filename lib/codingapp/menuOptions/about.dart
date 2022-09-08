@@ -229,7 +229,7 @@ class _AboutScreenState extends State<AboutScreen> {
                                   GestureDetector(
                                     onTap: () {
                                       _launchURL(Uri.parse(
-                                          'https://github.com/LiquidGalaxyLAB/VolTrac'));
+                                          'https://github.com/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-Tool'));
                                     },
                                     child: Text(
                                       translate("About.github"),
@@ -248,7 +248,7 @@ class _AboutScreenState extends State<AboutScreen> {
                                   GestureDetector(
                                     onTap: () {
                                       _launchURL(Uri.parse(
-                                          'https://github.com/LiquidGalaxyLAB/VolTrac/Privacy_Policy.md'));
+                                          'https://github.com/Alexevers/Alejandro-Android-Application-Refurbishment/blob/GSOC-2022-Apps/La%20Palma%20Volcano%20Tracking%20Tool/PrivacyPolicy.md'));
                                     },
                                     child: Text(
                                       translate("About.privacy"),
