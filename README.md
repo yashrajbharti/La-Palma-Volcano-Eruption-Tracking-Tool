@@ -56,7 +56,7 @@ Lastly, the app has an info tab that lists helpful information along with the so
   
 #### Prerequisites
   
-* 10 inch Android Tablet
+* 10-inch Android Tablet
 
 #### Steps:
 * Download and install the app using this [Play Store link](https://play.google.com/store/apps/details?id=lapalma.voltrac). Alternatively, you can scan the QR code showcased at top to download and install the app.
