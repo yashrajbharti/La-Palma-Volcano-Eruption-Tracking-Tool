@@ -27,8 +27,9 @@
 - **[Building from source](#building-from-source)**
 - **[Setting up the rig](#setting-up-the-rig)**
 - **[Guide for Open Source Contributors](#guide-for-open-source-contributors)**
+- **[Contributing](#contributing)**
 - **[License](#license)**
-- **[Privacy Policy and Terms & Conditions](#privacy-policy-and-terms--conditions)**
+- **[Privacy Policy](#privacy-policy)**
 
     
 ## About VolTrac
@@ -74,7 +75,7 @@ Lastly, the app has an info tab that lists helpful information along with the so
 * Android Studio, Visual Studio Code or another IDE that supports Flutter development
 * Flutter SDK
 * Android SDK
-* Android device or emulator
+* Android tablet device or emulator
 * Git
   
 Documentation on how to set up Flutter SDK and its environment can be found [here](https://flutter.dev/docs/get-started/install). Make sure to have [Git](https://git-scm.com/) and [Flutter](https://flutter.dev) installed in your machine before proceeding.
@@ -176,9 +177,19 @@ In the many buttons present on the LG Tasks screen, you shall see the buttons `S
             }),
 ```
 * Make sure to change "en" (present at three places) and flag to the language code and flag of the language you're adding.
+  
+## Contributing 
+
+Fill up issues, bugs or feature requests in our issue tracker. Please be very descriptive and clear so it is easier to help you. If you want to contribute to this project you can open a pull request at time you like. 
     
 ### License
 
 The La Palma Volcano Eruption Tracking Tool is licensed under the [MIT license](https://opensource.org/licenses/MIT).
-    
-Copyright © 2022 [Yash Raj Bharti]([https://www.linkedin.com/in/karine-pistili](https://yashrajbharti.github.io/portfolio/)
+          
+### Privacy Policy and Terms & Conditions
+  
+Check out our [Privacy Policy](https://github.com/LiquidGalaxyLAB/SatNOGS-Visualization-Tool/blob/main/PRIVACY_POLICY.md) to get more information about the application.
+      
+<p align="center">
+  Copyright © 2022 [Yash Raj Bharti](https://yashrajbharti.github.io/portfolio/)
+</p>
