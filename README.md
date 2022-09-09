@@ -16,7 +16,7 @@
 
 <h2 align="center">Scan the QR code to Install VolTrac<h2>
 <p align="center">
-  <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/qr-code.png" height="350px">
+  <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/qr-code.png" max-height="350px">
 </p>
   
 ## Table of Contents
