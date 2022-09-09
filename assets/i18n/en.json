@@ -38,7 +38,9 @@
 		"alert2": "It looks like you haven't added any geodata to this project.",
 		"alert3": "Error launching!",
 		"alert4": "An error occurred while trying to connect to LG",
-		"close": "Close"
+		"close": "Close",
+		"loading": "Loading KML",
+		"sending": "Sending KML"
 	},
 	"title": {
 		"name": "La Palma Volcano Tracker"

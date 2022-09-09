@@ -908,11 +908,17 @@ fi
       passwordOrKey: '${credencials['pass']}',
     );
     int rigs = 3;
+    String blank = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+  </Document>
+</kml>''';
     rigs = (int.parse(credencials['numberofrigs']) / 2).floor() + 1;
     try {
       await client.connect();
       return await client
-          .execute("echo '' > /var/www/html/kml/slave_$rigs.kml");
+          .execute("echo '$blank' > /var/www/html/kml/slave_$rigs.kml");
     } catch (e) {
       return Future.error(e);
     }

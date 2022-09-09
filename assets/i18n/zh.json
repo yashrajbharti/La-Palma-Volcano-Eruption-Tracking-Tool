@@ -38,7 +38,9 @@
 		"alert2": "您似乎尚未向此项目添加任何地理数据。",
 		"alert3": "启动出错！",
 		"alert4": "尝试连接 LG 时出错",
-		"close": "关闭"
+		"close": "关闭",
+		"loading": "加载 KML",
+		"sending": "发送 KML"
 	},
 	"title": {
 		"name": "拉帕尔马火山追踪器"

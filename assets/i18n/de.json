@@ -38,7 +38,9 @@
 		"alert2": "Anscheinend haben Sie diesem Projekt noch keine Geodaten hinzugefügt.",
 		"alert3": "Fehler beim Starten!",
 		"alert4": "Beim Versuch, eine Verbindung zu LG herzustellen, ist ein Fehler aufgetreten",
-		"close": "Schließen"
+		"close": "Schließen",
+		"loading": "KML wird geladen",
+		"sending": "KML senden"
 	},
 	"title": {
 		"name": "La Palma Vulkan Tracker"

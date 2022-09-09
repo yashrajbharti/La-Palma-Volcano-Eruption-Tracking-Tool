@@ -38,7 +38,9 @@
 		"alert2": "Parece que você não adicionou dados geográficos a este projeto.",
 		"alert3": "Erro ao iniciar!",
 		"alert4": "Ocorreu um erro ao tentar se conectar ao LG",
-		"close": "Fechar"
+		"close": "Fechar",
+		"loading": "Carregando KML",
+		"sending": "Enviando KML"
 	},
 	"title": {
 		"name": "Rastreador do Vulcão La Palma"

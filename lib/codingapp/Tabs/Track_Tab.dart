@@ -153,10 +153,13 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _One(bool isDark) async {
+    _showToast(
+        translate("Track.loading") + "(" + translate('Track.hist').trim() + ")",
+        isDark);
     await _read(0);
     await LGConnection().openBalloon(
         projectname[0],
-        translate('Track.hist'),
+        translate('Track.hist').trim(),
         translate("info.hist.date"),
         240,
         translate("info.description") +
@@ -165,14 +168,28 @@ class _SendtoLGState extends State<SendtoLG> {
         "COPERNICUS, ResearchGate, Global Volcanism Program",
         translate('title.name'),
         "historic_infographic.png");
+    _showToast(
+        translate("Track.sending") + "(" + translate('Track.hist').trim() + ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.hist'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
       if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.hist').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.hist').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+
         await Future.delayed(Duration(seconds: 50)).then((value) {
           _Two(isDark);
         });
@@ -195,10 +212,13 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _Two(bool isDark) async {
+    _showToast(
+        translate("Track.loading") + "(" + translate('Track.lava').trim() + ")",
+        isDark);
     await _read(1);
     await LGConnection().openBalloon(
         projectname[1],
-        translate('Track.lava'),
+        translate('Track.lava').trim(),
         translate("info.lava.date"),
         240,
         translate("info.description") +
@@ -207,14 +227,28 @@ class _SendtoLGState extends State<SendtoLG> {
         "COPERNICUS, Wikipedia | Cumbre Vieja",
         translate('title.name'),
         "lavaflow_infographic.jpg");
+    _showToast(
+        translate("Track.sending") + "(" + translate('Track.lava').trim() + ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.lava'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
       if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.lava').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.lava').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+
         await Future.delayed(Duration(seconds: 50)).then((value) {
           _Three(isDark);
         });
@@ -225,10 +259,16 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _Three(bool isDark) async {
+    _showToast(
+        translate("Track.loading") +
+            "(" +
+            translate('Track.prehistoric').trim() +
+            ")",
+        isDark);
     await _read(2);
     await LGConnection().openBalloon(
         projectname[2],
-        translate('Track.prehistoric'),
+        translate('Track.prehistoric').trim(),
         translate("info.prehistoric.date"),
         270,
         translate("info.description") +
@@ -237,14 +277,31 @@ class _SendtoLGState extends State<SendtoLG> {
         "ResearchGate, Global Volcanism Program",
         translate('title.name'),
         "prehistoric_infographic.png");
+    _showToast(
+        translate("Track.sending") +
+            "(" +
+            translate('Track.prehistoric').trim() +
+            ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.prehistoric'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
       if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.prehistoric').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.prehistoric').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+
         await Future.delayed(Duration(seconds: 50)).then((value) {
           _Four(isDark);
         });
@@ -255,24 +312,41 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _Four(bool isDark) async {
+    _showToast(
+        translate("Track.loading") + "(" + translate('Track.aff').trim() + ")",
+        isDark);
     await _read(3);
     await LGConnection().openBalloon(
         projectname[3],
-        translate('Track.aff'),
+        translate('Track.aff').trim(),
         translate("info.aff.date"),
         240,
         translate("info.description") + " " + translate("info.aff.description"),
         "COPERNICUS",
         translate('title.name'),
         "affectedareas_infographic.jpg");
+    _showToast(
+        translate("Track.sending") + "(" + translate('Track.aff').trim() + ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.aff'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
       if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.aff').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.aff').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+
         await Future.delayed(Duration(seconds: 50)).then((value) {
           _Five(isDark);
         });
@@ -283,10 +357,13 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _Five(bool isDark) async {
+    _showToast(
+        translate("Track.loading") + "(" + translate('Track.land').trim() + ")",
+        isDark);
     await _read(4);
     await LGConnection().openBalloon(
         projectname[4],
-        translate('Track.land'),
+        translate('Track.land').trim(),
         translate("info.land.date"),
         240,
         translate("info.description") +
@@ -295,14 +372,28 @@ class _SendtoLGState extends State<SendtoLG> {
         "NASA Earth Observatory , Sentinel Playground, COPERNICUS",
         translate('title.name'),
         "landscape_infographic.jpg");
+    _showToast(
+        translate("Track.sending") + "(" + translate('Track.land').trim() + ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.land'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
       if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.land').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.land').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+
         await Future.delayed(Duration(seconds: 50)).then((value) {
           _Six(isDark);
         });
@@ -313,24 +404,41 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _Six(bool isDark) async {
+    _showToast(
+        translate("Track.loading") + "(" + translate('Track.So2').trim() + ")",
+        isDark);
     await _read(5);
     await LGConnection().openBalloon(
         projectname[5],
-        translate('Track.So2'),
+        translate('Track.So2').trim(),
         translate("info.So2.date"),
         240,
         translate("info.description") + " " + translate("info.So2.description"),
         "Sentinel EO Browser, GDACS, Twitter | Platform ADAM",
         translate('title.name'),
         "so2_infographic.gif");
+    _showToast(
+        translate("Track.sending") + "(" + translate('Track.So2').trim() + ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.So2'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
       if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.So2').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.So2').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+
         await Future.delayed(Duration(seconds: 50)).then((value) {
           _Seven(isDark);
         });
@@ -341,10 +449,16 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _Seven(bool isDark) async {
+    _showToast(
+        translate("Track.loading") +
+            "(" +
+            translate('Track.situation').trim() +
+            ")",
+        isDark);
     await _read(6);
     await LGConnection().openBalloon(
         projectname[6],
-        translate('Track.situation'),
+        translate('Track.situation').trim(),
         translate("info.situation.date"),
         270,
         translate("info.description") +
@@ -353,14 +467,31 @@ class _SendtoLGState extends State<SendtoLG> {
         "Instituto Geográfico Nacional, GDACS, ERCC Portal",
         translate('title.name'),
         "situation_infographic.png");
+    _showToast(
+        translate("Track.sending") +
+            "(" +
+            translate('Track.situation').trim() +
+            ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.situation'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
       if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.situation').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.situation').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+
         await Future.delayed(Duration(seconds: 50)).then((value) {
           _Eight(isDark);
         });
@@ -371,10 +502,16 @@ class _SendtoLGState extends State<SendtoLG> {
   }
 
   _Eight(bool isDark) async {
+    _showToast(
+        translate("Track.loading") +
+            "(" +
+            translate('Track.located').trim() +
+            ")",
+        isDark);
     await _read(7);
     await LGConnection().openBalloon(
         projectname[7],
-        translate('Track.located'),
+        translate('Track.located').trim(),
         translate("info.located.date"),
         230,
         translate("info.description") +
@@ -383,13 +520,33 @@ class _SendtoLGState extends State<SendtoLG> {
         "Instituto Geográfico Nacional",
         translate('title.name'),
         "locatedevents_infographic.jpg");
+    _showToast(
+        translate("Track.sending") +
+            "(" +
+            translate('Track.located').trim() +
+            ")",
+        isDark);
     LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      _showToast(translate('Track.located'), isDark);
-      await LGConnection().cleanOrbit();
-      await Future.delayed(Duration(seconds: 6)).then((value) {
-        _showToast(translate('map.buildorbit'), isDark);
-        playOrbit();
-      });
+      if (stopdemo == false) {
+        _showToast(
+            translate('Track.Visualize') +
+                "(" +
+                translate('Track.located').trim() +
+                ")",
+            isDark);
+        await LGConnection().cleanOrbit();
+        await Future.delayed(Duration(seconds: 6)).then((value) {
+          _showToast(
+              translate('map.buildorbit') +
+                  "(" +
+                  translate('Track.located').trim() +
+                  ")",
+              isDark);
+          playOrbit();
+        });
+      } else {
+        LGConnection().cleanVisualization();
+      }
     });
   }
 
@@ -473,7 +630,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               await _read(0);
                               await LGConnection().openBalloon(
                                   projectname[0],
-                                  translate('Track.hist'),
+                                  translate('Track.hist').trim(),
                                   translate("info.hist.date"),
                                   240,
                                   translate("info.description") +
@@ -494,7 +651,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.hist'),
+                                Text(translate('Track.hist').trim(),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -527,7 +684,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               await _read(1);
                               await LGConnection().openBalloon(
                                   projectname[1],
-                                  translate('Track.lava'),
+                                  translate('Track.lava').trim(),
                                   translate("info.lava.date"),
                                   240,
                                   translate("info.description") +
@@ -548,7 +705,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.lava'),
+                                Text(translate('Track.lava').trim(),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -585,7 +742,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             await _read(2);
                             await LGConnection().openBalloon(
                                 projectname[2],
-                                translate('Track.prehistoric'),
+                                translate('Track.prehistoric').trim(),
                                 translate("info.prehistoric.date"),
                                 270,
                                 translate("info.description") +
@@ -606,7 +763,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.prehistoric'),
+                              Text(translate('Track.prehistoric').trim(),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -638,7 +795,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             await _read(3);
                             await LGConnection().openBalloon(
                                 projectname[3],
-                                translate('Track.aff'),
+                                translate('Track.aff').trim(),
                                 translate("info.aff.date"),
                                 240,
                                 translate("info.description") +
@@ -659,7 +816,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.aff'),
+                              Text(translate('Track.aff').trim(),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -698,7 +855,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               await _read(4);
                               await LGConnection().openBalloon(
                                   projectname[4],
-                                  translate('Track.land'),
+                                  translate('Track.land').trim(),
                                   translate("info.land.date"),
                                   240,
                                   translate("info.description") +
@@ -719,7 +876,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.land'),
+                                Text(translate('Track.land').trim(),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.9,
@@ -752,7 +909,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               await _read(5);
                               await LGConnection().openBalloon(
                                   projectname[5],
-                                  translate('Track.So2'),
+                                  translate('Track.So2').trim(),
                                   translate("info.So2.date"),
                                   240,
                                   translate("info.description") +
@@ -773,7 +930,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.So2'),
+                                Text(translate('Track.So2').trim(),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -810,7 +967,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             await _read(6);
                             await LGConnection().openBalloon(
                                 projectname[6],
-                                translate('Track.situation'),
+                                translate('Track.situation').trim(),
                                 translate("info.situation.date"),
                                 270,
                                 translate("info.description") +
@@ -831,7 +988,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.situation'),
+                              Text(translate('Track.situation').trim(),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -863,7 +1020,7 @@ class _SendtoLGState extends State<SendtoLG> {
                             await _read(7);
                             await LGConnection().openBalloon(
                                 projectname[7],
-                                translate('Track.located'),
+                                translate('Track.located').trim(),
                                 translate("info.located.date"),
                                 230,
                                 translate("info.description") +
@@ -884,7 +1041,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.located'),
+                              Text(translate('Track.located').trim(),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,

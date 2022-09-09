@@ -38,7 +38,9 @@
 		"alert2": "Me sa duket nuk ke shtuar asnjë të dhënë gjeografike në këtë projekt.",
 		"alert3": "Gabim në nisje!",
 		"alert4": "Ndodhi një gabim gjatë përpjekjes për t'u lidhur me LG",
-		"close": "Mbylle"
+		"close": "Mbylle",
+		"loading": "Po ngarkohet KML",
+		"sending": "Dërgimi i KML"
 	},
 	"title": {
 		"name": "Gjurmuesi i vullkanit La Palma"
