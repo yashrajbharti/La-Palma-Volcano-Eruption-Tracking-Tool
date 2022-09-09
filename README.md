@@ -63,7 +63,7 @@ Lastly, the app has an info tab that lists helpful information along with the so
 * Download and install the app using this [Play Store link](https://play.google.com/store/apps/details?id=lapalma.voltrac). Alternatively, you can scan the QR code showcased at top to download and install the app.
 * To connect to the Liquid Galaxy, tap on menu icon and go to Connection Manager; then fill the details similar to below:
 <p align="center">
-  <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/connect.jpeg" height="350px">
+  <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/connect.jpeg" width="700px">
   </p>
     
 * Now simply explore the wide variety of KML visualizations possible through the Track tab and the Custom Builder.
