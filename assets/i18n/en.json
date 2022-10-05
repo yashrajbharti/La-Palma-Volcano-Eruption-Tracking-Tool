@@ -241,7 +241,7 @@
 	"tour": {
 		"take": "Take App tour",
 		"app": "VolTrac App",
-		"desc": "⬧ The VolTrac App's first screen is divided into Three main tabs: Track, Map and Info. \n⬧ Track tab helps us visualize the various tracks such as Lava Flow, Affected Areas, Situation, etc. \n⬧ Map Tab allows us to control the Liquid Galaxy by performing simple touch movements in the Huawei map Flutter. One can find various other options to display and manage the KML data in the Map Tab. \n⬧ Info Tab gives detailed info of the Various Tracks we are visualizing. \n⬧ Tap on the highlighted menu icon to check the various menu options available in the App drawer.",
+		"desc": "⬧ The VolTrac App's first screen is divided into Three main tabs: Track, Map and Info. \n⬧ Track tab helps us visualize the various tracks such as Lava Flow, Affected Areas, Situation, etc. \n⬧ Map Tab allows us to control the Liquid Galaxy by performing simple touch movements in the Google map Flutter. One can find various other options to display and manage the KML data in the Map Tab. \n⬧ Info Tab gives detailed info of the Various Tracks we are visualizing. \n⬧ Tap on the highlighted menu icon to check the various menu options available in the App drawer.",
 		"help": "The Help Page has instructions for setting up the visualization, meaning of all the icons, and guide for troubleshooting the possible errors.",
 		"about": "The About Page informs about the app, what are some of it features and development credits.",
 		"custom": "The Custom Builder allows us to pick any two dates and get the colored KML visualization as per our want.",
