@@ -651,7 +651,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.hist').trim(),
+                                Text(translate('Track.hist'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -705,7 +705,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.lava').trim(),
+                                Text(translate('Track.lava'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -763,7 +763,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.prehistoric').trim(),
+                              Text(translate('Track.prehistoric'),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -816,7 +816,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.aff').trim(),
+                              Text(translate('Track.aff'),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -876,7 +876,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.land').trim(),
+                                Text(translate('Track.land'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.9,
@@ -930,7 +930,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.So2').trim(),
+                                Text(translate('Track.So2'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -988,7 +988,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.situation').trim(),
+                              Text(translate('Track.situation'),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -1041,7 +1041,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.located').trim(),
+                              Text(translate('Track.located'),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,

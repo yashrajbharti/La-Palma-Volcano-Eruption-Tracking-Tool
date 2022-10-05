@@ -241,7 +241,7 @@
 	"tour": {
 		"take": "Faça um tour pelo aplicativo",
 		"app": "Aplicativo VolTrac",
-		"desc": "⬧ A primeira tela do VolTrac App é dividida em três abas principais: Track, Map e Info. \n⬧ A guia Track nos ajuda a visualizar as várias trilhas, como Lava Flow, Áreas Afetadas, Situação, etc. \n⬧ A guia Map nos permite controlar o Liquid Galaxy realizando movimentos de toque simples no Google Map Flutter. Pode-se encontrar várias outras opções para exibir e gerenciar os dados KML na guia Mapa. \n⬧ A guia Informações fornece informações detalhadas das várias faixas que estamos visualizando. \n⬧ Toque no ícone de menu destacado para verificar as várias opções de menu disponíveis na gaveta de aplicativos.",
+		"desc": "⬧ A primeira tela do VolTrac App é dividida em três abas principais: Track, Map e Info. \n⬧ A guia Track nos ajuda a visualizar as várias trilhas, como Lava Flow, Áreas Afetadas, Situação, etc. \n⬧ A guia Map nos permite controlar o Liquid Galaxy realizando movimentos de toque simples no Huawei map Flutter. Pode-se encontrar várias outras opções para exibir e gerenciar os dados KML na guia Mapa. \n⬧ A guia Informações fornece informações detalhadas das várias faixas que estamos visualizando. \n⬧ Toque no ícone de menu destacado para verificar as várias opções de menu disponíveis na gaveta de aplicativos.",
 		"help": "A Página de Ajuda contém instruções para configurar a visualização, significado de todos os ícones e guia para solucionar os possíveis erros.",
 		"about": "A página Sobre informa sobre o aplicativo, quais são alguns de seus recursos e créditos de desenvolvimento.",
 		"custom": "O Custom Builder nos permite escolher duas datas e obter a visualização KML colorida conforme nosso desejo.",
