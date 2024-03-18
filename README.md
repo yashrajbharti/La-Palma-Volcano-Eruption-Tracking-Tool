@@ -131,7 +131,7 @@ $ flutter doctor
 $ flutter run
 ```
    
-* To build the APK, use the follwoing terminal command:
+* To build the APK, use the following terminal command:
   
 ```bash
 $ flutter build apk
