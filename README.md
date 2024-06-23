@@ -48,7 +48,7 @@ Lastly, the app has an info tab that lists helpful information along with the so
   
 ## App Features
   
-* Allows Visualization of various Tracks such as Historic, Lava Flow, Affected Areas, etc for La Palmas onto the Liquid Galaxy. One can also visualize Custom KML by providing start and end dates with the help of calender widget. The Map screen UI allows us to Control the LG and send Orbit movements and various other controls. The app shows a significant amount of information about the La Palma Volcanic activity in an elegant and user-friendly way.     
+* Allows Visualization (visual documentation) of various Tracks such as Historic, Lava Flow, Affected Areas, etc for La Palmas onto the Liquid Galaxy. One can also visualize Custom KML by providing start and end dates with the help of calender widget. The Map screen UI allows us to Control the LG and send Orbit movements and various other controls. The app shows a significant amount of information about the La Palma Volcanic activity in an elegant and user-friendly way.     
 * Supports 10 Languages: 🇦🇪 Arabic, 🇩🇪 German, 🇺🇸 English, 🇪🇸 Spanish, 🇮🇳 Hindi, 🇯🇵 Japanese, 🇵🇹 Portuguese, 🇷🇺 Russian, 🇦🇱 Albanian, and 🇨🇳 Chinese (Simplified).  
 * Comes with Day and Night theme switch.  
 * One can seemlessly control the Google Earth of the Liquid Galaxy by performing touch interactions on the Google maps of the VolTrac app.
