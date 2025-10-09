@@ -13,11 +13,6 @@
   <img alt="" src="https://img.shields.io/badge/Languages-10-important">
   <img alt="" src="https://img.shields.io/github/repo-size/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-Tool?color=cyan&label=Repo%20Size">
 </p>
-
-<h2 align="center">Scan the QR code to Install VolTrac<h2>
-<p align="center">
-  <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/qr-code.png" height="350px">
-</p>
     
 <p align="center">
 <a href='https://drive.google.com/file/u/1/d/1uOh2NWqeLodkJPRrUhrzOZ7X2FXgjSQS/view?usp=drivesdk'>Download La Palma VolTrac using the Google Drive Link</a>  
